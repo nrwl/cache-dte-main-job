@@ -30,8 +30,17 @@ jobs:
           node-version: 24
           cache: 'npm'
       - run: npm ci
+      - run: npx playwright install
       - uses: nrwl/nx-set-shas@v4
       - run: npx nx-cloud start-nx-agents
+      - name: Start worker
+        run: |
+          npx nx-cloud start-worker --background --cpu=4 --memory=12GiB || {
+            find /home/runner/.nx \
+              -path '*/main-job-workers/*/worker.log' \
+              -exec tail -n 100 {} \;
+            exit 1
+          }
       - name: Buffer time # this is only needed cause we are running in a dedicated cluster with no activity. This is not needed in a normal scenario.
         run: sleep 120
       - name: Run all checks concurrently
