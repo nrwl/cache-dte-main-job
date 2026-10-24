@@ -30,6 +30,7 @@ jobs:
           node-version: 24
           cache: 'npm'
       - run: npm ci
+      - run: npx playwright install
       - uses: nrwl/nx-set-shas@v4
       - run: npx nx-cloud start-nx-agents
       - name: Start worker
