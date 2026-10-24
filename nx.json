@@ -94,7 +94,7 @@
     }
   },
   "analytics": false,
-  "bust": 60,
+  "bust": 62,
   "nxCloudId": "6adcc2a44edf795c703948e7",
   "nxCloudUrl": "https://snapshot.nx.app"
 }
