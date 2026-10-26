@@ -1,5 +1,8 @@
 dte:
-  distribute-on: 6 linux-large-js
+  distribute-on: manual
+  main-job-worker:
+    cpu: 4
+    memory: 12GiB
   scheduling-constraints:
     - targets: ['e2e*']
       cannot-run-with:

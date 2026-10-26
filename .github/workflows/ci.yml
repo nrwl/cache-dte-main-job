@@ -7,11 +7,10 @@ on:
   pull_request:
 
 env:
-  NX_CLOUD_CONTINUOUS_ASSIGNMENT: true
-  NX_CLOUD_AUTO_TASK_PACKING: true
+  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+  NX_BRANCH: ${{ github.event.pull_request.number || github.ref_name }}
+  NX_CI_EXECUTION_ID: ${{ github.run_id }}-${{ github.run_attempt }}
   NX_CLOUD_USE_IO_SNAPSHOTS: true
-  NX_CLOUD_BUFFER_TASK_COMPLETIONS: false
-  NX_CLOUD_AGENT_TASK_QUEUE: true
   NX_CLOUD_AGENT_PREFETCH_SECONDS: 60
 permissions:
   actions: read
@@ -20,6 +19,7 @@ permissions:
 jobs:
   main:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v5
         with:
@@ -30,10 +30,10 @@ jobs:
           node-version: 24
           cache: 'npm'
       - run: npm ci
+      - run: npx playwright install --with-deps chromium
       - uses: nrwl/nx-set-shas@v4
-      - run: npx nx-cloud start-nx-agents
-      - name: Buffer time # this is only needed cause we are running in a dedicated cluster with no activity. This is not needed in a normal scenario.
-        run: sleep 120
+      - run: npx nx-cloud start-workers
+        id: start_workers
       - name: Run all checks concurrently
         run: |
           pids=()
@@ -47,3 +47,31 @@ jobs:
             wait "$pid" || status=1
           done
           exit $status
+      - name: Stop workers
+        if: ${{ always() && steps.start_workers.outcome == 'success' }}
+        run: npx nx-cloud stop-all-workers
+
+  workers:
+    name: Worker ${{ matrix.worker }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        worker: [1, 2, 3, 4, 5]
+    env:
+      NX_AGENT_NAME: manual-${{ matrix.worker }}
+      # Manual workers need this to select V4; packing and budgets use workspace settings.
+      NX_CLOUD_CONTINUOUS_ASSIGNMENT: 'true'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          filter: tree:0
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: 'npm'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npx nx-cloud start-worker
