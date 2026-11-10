@@ -22,7 +22,7 @@ varies with hardware; test execution and process startup add overhead.
 Each end-to-end test is paced to six seconds with no
 extra CPU burn. The serial browser suite therefore has about 5 minutes of paced
 work, plus per-task and server startup, while the other checks run concurrently.
-Task-cache reads are disabled with `NX_SKIP_NX_CACHE=true` for this comparison.
+Task-cache reads use the default Nx behavior.
 The job times out after 25 minutes to allow for runner
 variation. Measure the GitHub Actions run before treating the target as achieved.
 
