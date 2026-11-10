@@ -21,8 +21,9 @@ per library via Vitest `globalSetup`, not once per spec file. Actual CPU time
 varies with hardware; test execution and process startup add overhead.
 Each end-to-end test is paced to six seconds with no
 extra CPU burn. The serial browser suite therefore has about 5 minutes of paced
-work, plus per-task and server startup, while the other checks run concurrently. Cached runs
-can finish much sooner. The job times out after 25 minutes to allow for runner
+work, plus per-task and server startup, while the other checks run concurrently.
+Task-cache reads are disabled with `NX_SKIP_NX_CACHE=true` for this comparison.
+The job times out after 25 minutes to allow for runner
 variation. Measure the GitHub Actions run before treating the target as achieved.
 
 The comparison and measurements below describe the original distributed benchmark,
