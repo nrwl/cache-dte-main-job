@@ -30,6 +30,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npx playwright install --with-deps chromium
+      - run: npx nx-cloud upload-worker-metrics
       - name: Start main-job worker
         id: start_workers
         run: npx nx-cloud start-workers
@@ -40,7 +41,7 @@ jobs:
           npx nx-cloud record -- nx sync:check & pids+=($!)
           npx nx validate --no-agents & pids+=($!)
           # Submit the same tasks to the worker running in this main job.
-          npx nx run-many -t build typecheck lint test e2e-ci --parallel=3 & pids+=($!)
+          npx nx run-many -t build typecheck lint test e2e-ci & pids+=($!)
 
           status=0
           for pid in "${pids[@]}"; do
