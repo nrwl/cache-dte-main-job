@@ -12,6 +12,7 @@ env:
   NX_CI_EXECUTION_ID: ${{ github.run_id }}-${{ github.run_attempt }}
   NX_CLOUD_USE_IO_SNAPSHOTS: true
   NX_SKIP_NX_CACHE: 'true'
+  NX_CLOUD_DISABLE_BUFFER_TASK_COMPLETIONS: 'true'
 permissions:
   actions: read
   contents: read
