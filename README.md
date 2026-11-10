@@ -3,11 +3,12 @@
 ## Single-runner CI variant
 
 This branch runs every build, typecheck, lint, unit test, and end-to-end test
-in the `main` GitHub Actions job. Distribution is disabled; remote caching is
-still enabled. After building the shop, Nx runs up to three check tasks alongside
-the serial browser suite on that runner. The `e2e`
-target runs 50 Playwright specs with one worker, avoiding the process
-startup overhead of 50 separate `e2e-ci` tasks.
+in the `main` GitHub Actions job. Distribution is enabled through a single Nx Cloud
+worker running inside that job; no additional jobs or managed workers are launched.
+The build, typecheck, lint, test, and `e2e-ci` targets run through the main-job
+worker. Validation still runs locally. The main-job worker is stopped after all
+commands return. The `e2e-ci` target splits the 50 Playwright specs into separate
+tasks; a scheduling constraint runs only one E2E task at a time on the worker.
 
 The target for the checks command after setup is 10–12 minutes on a cold run,
 not a guaranteed duration. Checkout, Node/npm setup, and browser installation
@@ -19,8 +20,8 @@ task adds two calibrated seconds of CPU work and three seconds of waiting, once
 per library via Vitest `globalSetup`, not once per spec file. Actual CPU time
 varies with hardware; test execution and process startup add overhead.
 Each end-to-end test is paced to six seconds with no
-extra CPU burn. The serial browser suite therefore takes about 5 minutes, plus
-server startup, while the other checks run concurrently. Cached runs
+extra CPU burn. The serial browser suite therefore has about 5 minutes of paced
+work, plus per-task and server startup, while the other checks run concurrently. Cached runs
 can finish much sooner. The job times out after 25 minutes to allow for runner
 variation. Measure the GitHub Actions run before treating the target as achieved.
 

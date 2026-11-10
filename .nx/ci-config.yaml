@@ -1,13 +1,8 @@
 dte:
+  enabled-by-default: true
   distribute-on: manual
-  main-job-worker:
-    cpu: 4
-    memory: 12GiB
+  main-job-worker: true
   scheduling-constraints:
     - targets: ['e2e*']
       cannot-run-with:
         - targets: ['e2e*']
-
-lifecycle:
-  stop-after:
-    - test
