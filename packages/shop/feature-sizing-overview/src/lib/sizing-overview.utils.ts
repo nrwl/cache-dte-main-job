@@ -1,5 +1,5 @@
-import { i18nNumber } from '@org/shop-util-i18n-number';
-import { validateNumber } from '@org/shop-util-validate-number';
+import { asyncName } from '@org/shop-util-async-name';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptySizingOverviewTotals,
   type SizingOverviewItem,
@@ -72,13 +72,13 @@ export function sortSizingOverview(
 }
 
 export function describeSizingOverviewItem(item: SizingOverviewItem): string {
-  const amount = i18nNumber(item.amount);
-  const name = validateNumber(item.name);
+  const amount = asyncName(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingOverviewAmount(amount: number): string {
-  return i18nNumber(amount);
+  return asyncName(amount);
 }
 
 export function sizingOverviewStatusTone(

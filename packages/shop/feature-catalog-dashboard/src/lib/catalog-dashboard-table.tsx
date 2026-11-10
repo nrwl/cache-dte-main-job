@@ -1,4 +1,4 @@
-import { MarketingStat } from '@org/shop-ui-marketing-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { CatalogDashboardItem } from './catalog-dashboard.model';
 import { CATALOG_DASHBOARD_FEATURE } from './catalog-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function CatalogDashboardTable({
             <td>{formatCatalogDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingStat
+              <DataPanel
                 label={item.status}
                 tone={catalogDashboardStatusTone(item.status)}
                 size="sm"

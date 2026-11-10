@@ -1,4 +1,5 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
+import { asyncName } from '@org/shop-util-async-name';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyPreordersDashboardTotals,
   type PreordersDashboardItem,
@@ -73,13 +74,13 @@ export function sortPreordersDashboard(
 export function describePreordersDashboardItem(
   item: PreordersDashboardItem,
 ): string {
-  const amount = validateCurrency(item.amount);
-  const name = validateCurrency(item.name);
+  const amount = asyncName(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPreordersDashboardAmount(amount: number): string {
-  return validateCurrency(amount);
+  return asyncName(amount);
 }
 
 export function preordersDashboardStatusTone(

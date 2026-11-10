@@ -1,4 +1,4 @@
-import { NavigationBadge } from '@org/shop-ui-navigation-badge';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import { ORDERS_DASHBOARD_FEATURE } from './orders-dashboard.routes';
 
 export interface OrdersDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function OrdersDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationBadge label="Items" value={count} tone="info" />
-        <NavigationBadge label="Total" value={total} tone="success" />
+        <TypographyBanner label="Items" value={count} tone="info" />
+        <TypographyBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

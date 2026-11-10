@@ -1,4 +1,4 @@
-import { MarketingPanelGroup } from '@org/shop-ui-marketing-panel';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
 import { buildSearchSettingsItems } from './search-settings.model';
 import { SEARCH_SETTINGS_FEATURE } from './search-settings.routes';
 import {
@@ -29,7 +29,7 @@ export function SearchSettingsSummary({
       data-testid={`${SEARCH_SETTINGS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SEARCH_SETTINGS_FEATURE.title}</h3>
-      <MarketingPanelGroup
+      <FormsStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

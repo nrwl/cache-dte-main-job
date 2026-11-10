@@ -1,6 +1,4 @@
-import { storagePhone } from '@org/shop-util-storage-phone';
 import { mathName } from '@org/shop-util-math-name';
-import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyOrdersOverviewTotals,
   type OrdersOverviewItem,
@@ -73,13 +71,13 @@ export function sortOrdersOverview(
 }
 
 export function describeOrdersOverviewItem(item: OrdersOverviewItem): string {
-  const amount = storagePhone(item.amount);
-  const name = i18nNumber(mathName(item.name));
+  const amount = mathName(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersOverviewAmount(amount: number): string {
-  return storagePhone(amount);
+  return mathName(amount);
 }
 
 export function ordersOverviewStatusTone(

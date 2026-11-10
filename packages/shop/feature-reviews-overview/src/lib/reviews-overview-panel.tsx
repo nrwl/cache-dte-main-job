@@ -1,6 +1,4 @@
-import { MediaBannerGroup } from '@org/shop-ui-media-banner';
-import { DataStat } from '@org/shop-ui-data-stat';
-import { ChartsBanner } from '@org/shop-ui-charts-banner';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
 import type { ReviewsOverviewItem } from './reviews-overview.model';
 import { REVIEWS_OVERVIEW_FEATURE } from './reviews-overview.routes';
 import { describeReviewsOverviewItem } from './reviews-overview.utils';
@@ -41,7 +39,7 @@ export function ReviewsOverviewPanel({
       <p className="feature-panel-description">
         {describeReviewsOverviewItem(selected)}
       </p>
-      <MediaBannerGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,14 +49,7 @@ export function ReviewsOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
-        <ChartsBanner
-          label="Charts Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

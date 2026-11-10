@@ -1,4 +1,4 @@
-import { validateNumber } from '@org/shop-util-validate-number';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyOrdersDetailsTotals,
   type OrdersDetailsItem,
@@ -70,13 +70,13 @@ export function sortOrdersDetails(
 }
 
 export function describeOrdersDetailsItem(item: OrdersDetailsItem): string {
-  const amount = validateNumber(item.amount);
-  const name = validateNumber(item.name);
+  const amount = validateText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersDetailsAmount(amount: number): string {
-  return validateNumber(amount);
+  return validateText(amount);
 }
 
 export function ordersDetailsStatusTone(

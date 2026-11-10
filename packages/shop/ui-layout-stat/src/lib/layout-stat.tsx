@@ -1,6 +1,4 @@
-import { mathText } from '@org/shop-util-math-text';
-import { asyncCurrency } from '@org/shop-util-async-currency';
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import type { LayoutStatProps } from './layout-stat.types';
 import { resolveLayoutStatStyle } from './layout-stat-variants';
 
@@ -13,9 +11,9 @@ export function LayoutStat({
   onSelect,
   children,
 }: LayoutStatProps) {
-  const formatted = value === undefined ? '' : mathText(value);
+  const formatted = value === undefined ? '' : i18nNumber(value);
   const style = resolveLayoutStatStyle(tone, size);
-  const ariaLabel = asyncCurrency(label);
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +36,6 @@ export function LayoutStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CorePanel label="Core Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
-import { LayoutPanel } from '@org/shop-ui-layout-panel';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { AnalyticsDashboardItem } from './analytics-dashboard.model';
 import { ANALYTICS_DASHBOARD_FEATURE } from './analytics-dashboard.routes';
 import { describeAnalyticsDashboardItem } from './analytics-dashboard.utils';
@@ -51,8 +51,8 @@ export function AnalyticsDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutPanel
-          label="Layout Panel"
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />

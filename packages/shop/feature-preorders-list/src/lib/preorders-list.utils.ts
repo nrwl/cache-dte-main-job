@@ -1,5 +1,5 @@
 import { formatCurrency } from '@org/shop-util-format-currency';
-import { i18nText } from '@org/shop-util-i18n-text';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyPreordersListTotals,
   type PreordersListItem,
@@ -72,7 +72,7 @@ export function sortPreordersList(
 
 export function describePreordersListItem(item: PreordersListItem): string {
   const amount = formatCurrency(item.amount);
-  const name = i18nText(item.name);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 

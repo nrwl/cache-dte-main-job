@@ -1,4 +1,4 @@
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { ACCOUNT_OVERVIEW_FEATURE } from './account-overview.routes';
 
 export interface AccountOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function AccountOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsBadge label="Items" value={count} tone="info" />
-        <FormsBadge label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

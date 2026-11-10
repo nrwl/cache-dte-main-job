@@ -1,4 +1,4 @@
-import { FormsBadgeGroup } from '@org/shop-ui-forms-badge';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildAccountOverviewItems } from './account-overview.model';
 import { ACCOUNT_OVERVIEW_FEATURE } from './account-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function AccountOverviewSummary({
       <h3 className="feature-summary-title">
         {ACCOUNT_OVERVIEW_FEATURE.title}
       </h3>
-      <FormsBadgeGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

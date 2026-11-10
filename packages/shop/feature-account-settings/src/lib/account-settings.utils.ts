@@ -1,6 +1,6 @@
-import { asyncText } from '@org/shop-util-async-text';
-import { storageName } from '@org/shop-util-storage-name';
-import { validateNumber } from '@org/shop-util-validate-number';
+import { asyncName } from '@org/shop-util-async-name';
+import { collectionText } from '@org/shop-util-collection-text';
+import { storagePhone } from '@org/shop-util-storage-phone';
 import {
   emptyAccountSettingsTotals,
   type AccountSettingsItem,
@@ -73,13 +73,13 @@ export function sortAccountSettings(
 }
 
 export function describeAccountSettingsItem(item: AccountSettingsItem): string {
-  const amount = asyncText(item.amount);
-  const name = validateNumber(storageName(item.name));
+  const amount = asyncName(item.amount);
+  const name = storagePhone(collectionText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAccountSettingsAmount(amount: number): string {
-  return asyncText(amount);
+  return asyncName(amount);
 }
 
 export function accountSettingsStatusTone(

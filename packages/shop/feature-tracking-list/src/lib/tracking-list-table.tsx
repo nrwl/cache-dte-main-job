@@ -1,4 +1,4 @@
-import { FormsStat } from '@org/shop-ui-forms-stat';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { TrackingListItem } from './tracking-list.model';
 import { TRACKING_LIST_FEATURE } from './tracking-list.routes';
 import {
@@ -58,7 +58,7 @@ export function TrackingListTable({
             <td>{formatTrackingListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsStat
+              <ChartsBanner
                 label={item.status}
                 tone={trackingListStatusTone(item.status)}
                 size="sm"

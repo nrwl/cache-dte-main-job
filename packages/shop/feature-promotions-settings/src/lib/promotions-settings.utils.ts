@@ -1,4 +1,6 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
+import { mathName } from '@org/shop-util-math-name';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyPromotionsSettingsTotals,
   type PromotionsSettingsItem,
@@ -73,13 +75,13 @@ export function sortPromotionsSettings(
 export function describePromotionsSettingsItem(
   item: PromotionsSettingsItem,
 ): string {
-  const amount = validateCurrency(item.amount);
-  const name = validateCurrency(item.name);
+  const amount = mathName(item.amount);
+  const name = asyncName(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPromotionsSettingsAmount(amount: number): string {
-  return validateCurrency(amount);
+  return mathName(amount);
 }
 
 export function promotionsSettingsStatusTone(

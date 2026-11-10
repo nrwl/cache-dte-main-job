@@ -1,4 +1,4 @@
-import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { ReviewsOverviewItem } from './reviews-overview.model';
 import { REVIEWS_OVERVIEW_FEATURE } from './reviews-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function ReviewsOverviewTable({
             <td>{formatReviewsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackBadge
+              <NavigationPanel
                 label={item.status}
                 tone={reviewsOverviewStatusTone(item.status)}
                 size="sm"

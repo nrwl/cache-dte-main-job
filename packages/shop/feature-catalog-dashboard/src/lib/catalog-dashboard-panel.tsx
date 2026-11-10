@@ -1,5 +1,4 @@
-import { LayoutBadgeGroup } from '@org/shop-ui-layout-badge';
-import { CoreStat } from '@org/shop-ui-core-stat';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
 import type { CatalogDashboardItem } from './catalog-dashboard.model';
 import { CATALOG_DASHBOARD_FEATURE } from './catalog-dashboard.routes';
 import { describeCatalogDashboardItem } from './catalog-dashboard.utils';
@@ -40,7 +39,7 @@ export function CatalogDashboardPanel({
       <p className="feature-panel-description">
         {describeCatalogDashboardItem(selected)}
       </p>
-      <LayoutBadgeGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,9 +49,7 @@ export function CatalogDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CoreStat label="Core Stat" value={selected.product.rating} size="sm" />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

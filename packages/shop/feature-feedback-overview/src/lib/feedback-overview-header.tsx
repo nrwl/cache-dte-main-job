@@ -1,4 +1,4 @@
-import { MediaBanner } from '@org/shop-ui-media-banner';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import { FEEDBACK_OVERVIEW_FEATURE } from './feedback-overview.routes';
 
 export interface FeedbackOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function FeedbackOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaBanner label="Items" value={count} tone="info" />
-        <MediaBanner label="Total" value={total} tone="success" />
+        <ChartsBanner label="Items" value={count} tone="info" />
+        <ChartsBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

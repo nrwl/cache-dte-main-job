@@ -1,6 +1,6 @@
-import { CorePanelGroup } from '@org/shop-ui-core-panel';
-import { InputsStat } from '@org/shop-ui-inputs-stat';
-import { FormsStat } from '@org/shop-ui-forms-stat';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { PreordersListItem } from './preorders-list.model';
 import { PREORDERS_LIST_FEATURE } from './preorders-list.routes';
 import { describePreordersListItem } from './preorders-list.utils';
@@ -41,7 +41,7 @@ export function PreordersListPanel({
       <p className="feature-panel-description">
         {describePreordersListItem(selected)}
       </p>
-      <CorePanelGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function PreordersListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsStat
-          label="Inputs Stat"
+        <CommerceBadge
+          label="Commerce Badge"
           value={selected.product.rating}
           size="sm"
         />
-        <FormsStat
-          label="Forms Stat"
+        <FeedbackBanner
+          label="Feedback Banner"
           value={selected.product.rating}
           size="sm"
         />

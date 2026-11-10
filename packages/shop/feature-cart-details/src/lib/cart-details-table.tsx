@@ -1,4 +1,4 @@
-import { FormsStat } from '@org/shop-ui-forms-stat';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { CartDetailsItem } from './cart-details.model';
 import { CART_DETAILS_FEATURE } from './cart-details.routes';
 import {
@@ -58,7 +58,7 @@ export function CartDetailsTable({
             <td>{formatCartDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsStat
+              <FeedbackBanner
                 label={item.status}
                 tone={cartDetailsStatusTone(item.status)}
                 size="sm"

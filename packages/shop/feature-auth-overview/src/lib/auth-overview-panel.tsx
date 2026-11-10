@@ -1,4 +1,6 @@
-import { FeedbackToolbarGroup } from '@org/shop-ui-feedback-toolbar';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { AuthOverviewItem } from './auth-overview.model';
 import { AUTH_OVERVIEW_FEATURE } from './auth-overview.routes';
 import { describeAuthOverviewItem } from './auth-overview.utils';
@@ -39,7 +41,7 @@ export function AuthOverviewPanel({
       <p className="feature-panel-description">
         {describeAuthOverviewItem(selected)}
       </p>
-      <FeedbackToolbarGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function AuthOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <TypographyBanner
+          label="Typography Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

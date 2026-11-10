@@ -1,4 +1,4 @@
-import { MarketingBanner } from '@org/shop-ui-marketing-banner';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { REVIEWS_DETAILS_FEATURE } from './reviews-details.routes';
 
 export interface ReviewsDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function ReviewsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingBanner label="Items" value={count} tone="info" />
-        <MarketingBanner label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
+import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
 import { buildTrackingOverviewItems } from './tracking-overview.model';
 import { TRACKING_OVERVIEW_FEATURE } from './tracking-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function TrackingOverviewSummary({
       <h3 className="feature-summary-title">
         {TRACKING_OVERVIEW_FEATURE.title}
       </h3>
-      <TypographyToolbarGroup
+      <TypographyBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

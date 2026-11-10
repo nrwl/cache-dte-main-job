@@ -1,4 +1,4 @@
-import { LayoutPanel } from '@org/shop-ui-layout-panel';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { GiftCardsOverviewItem } from './gift-cards-overview.model';
 import { GIFT_CARDS_OVERVIEW_FEATURE } from './gift-cards-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function GiftCardsOverviewTable({
             <td>{formatGiftCardsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutPanel
+              <LayoutStat
                 label={item.status}
                 tone={giftCardsOverviewStatusTone(item.status)}
                 size="sm"

@@ -1,5 +1,4 @@
-import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
-import { DataBadge } from '@org/shop-ui-data-badge';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import type { SizingListItem } from './sizing-list.model';
 import { SIZING_LIST_FEATURE } from './sizing-list.routes';
 import { describeSizingListItem } from './sizing-list.utils';
@@ -37,7 +36,7 @@ export function SizingListPanel({ selected, onClear }: SizingListPanelProps) {
       <p className="feature-panel-description">
         {describeSizingListItem(selected)}
       </p>
-      <LayoutStatGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -47,13 +46,7 @@ export function SizingListPanel({ selected, onClear }: SizingListPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <DataBadge
-          label="Data Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

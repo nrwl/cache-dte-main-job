@@ -1,4 +1,5 @@
-import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { CheckoutDashboardItem } from './checkout-dashboard.model';
 import { CHECKOUT_DASHBOARD_FEATURE } from './checkout-dashboard.routes';
 import { describeCheckoutDashboardItem } from './checkout-dashboard.utils';
@@ -39,7 +40,7 @@ export function CheckoutDashboardPanel({
       <p className="feature-panel-description">
         {describeCheckoutDashboardItem(selected)}
       </p>
-      <ChartsBadgeGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function CheckoutDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <MediaToolbar
+          label="Media Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

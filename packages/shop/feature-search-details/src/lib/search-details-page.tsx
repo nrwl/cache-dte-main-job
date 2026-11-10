@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { CartListSummary } from '@org/shop-feature-cart-list';
 import { SearchDetailsFilters } from './search-details-filters';
 import { SearchDetailsHeader } from './search-details-header';
 import { SearchDetailsPanel } from './search-details-panel';
@@ -53,6 +54,7 @@ export function SearchDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <CartListSummary compact />
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
-import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
-import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import type { CompareDashboardItem } from './compare-dashboard.model';
 import { COMPARE_DASHBOARD_FEATURE } from './compare-dashboard.routes';
 import { describeCompareDashboardItem } from './compare-dashboard.utils';
@@ -40,7 +41,7 @@ export function CompareDashboardPanel({
       <p className="feature-panel-description">
         {describeCompareDashboardItem(selected)}
       </p>
-      <OverlayStatGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function CompareDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutStat
-          label="Layout Stat"
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CommerceToolbar
+          label="Commerce Toolbar"
           value={selected.product.rating}
           size="sm"
         />

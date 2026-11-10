@@ -1,4 +1,4 @@
-import { DataPanel } from '@org/shop-ui-data-panel';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { AnalyticsDashboardItem } from './analytics-dashboard.model';
 import { ANALYTICS_DASHBOARD_FEATURE } from './analytics-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function AnalyticsDashboardTable({
             <td>{formatAnalyticsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataPanel
+              <CommerceBadge
                 label={item.status}
                 tone={analyticsDashboardStatusTone(item.status)}
                 size="sm"

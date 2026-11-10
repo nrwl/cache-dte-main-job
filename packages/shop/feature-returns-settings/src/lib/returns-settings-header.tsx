@@ -1,4 +1,4 @@
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import { RETURNS_SETTINGS_FEATURE } from './returns-settings.routes';
 
 export interface ReturnsSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function ReturnsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreBanner label="Items" value={count} tone="info" />
-        <CoreBanner label="Total" value={total} tone="success" />
+        <CoreToolbar label="Items" value={count} tone="info" />
+        <CoreToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

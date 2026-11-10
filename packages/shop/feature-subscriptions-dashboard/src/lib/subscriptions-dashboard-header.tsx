@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { SUBSCRIPTIONS_DASHBOARD_FEATURE } from './subscriptions-dashboard.routes';
 
 export interface SubscriptionsDashboardHeaderProps {
@@ -29,8 +29,8 @@ export function SubscriptionsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyToolbar label="Items" value={count} tone="info" />
-        <TypographyToolbar label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

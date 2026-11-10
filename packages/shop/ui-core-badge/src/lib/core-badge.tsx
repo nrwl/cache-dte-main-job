@@ -1,6 +1,6 @@
-import { mathName } from '@org/shop-util-math-name';
-import { validateNumber } from '@org/shop-util-validate-number';
-import { storageText } from '@org/shop-util-storage-text';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import type { CoreBadgeProps } from './core-badge.types';
 import { resolveCoreBadgeStyle } from './core-badge-variants';
 
@@ -13,9 +13,9 @@ export function CoreBadge({
   onSelect,
   children,
 }: CoreBadgeProps) {
-  const formatted = value === undefined ? '' : mathName(value);
+  const formatted = value === undefined ? '' : asyncNumber(value);
   const style = resolveCoreBadgeStyle(tone, size);
-  const ariaLabel = storageText(validateNumber(label));
+  const ariaLabel = mathCurrency(i18nNumber(label));
 
   const handleClick = () => {
     if (onSelect) {

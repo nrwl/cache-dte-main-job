@@ -1,4 +1,4 @@
-import { MediaBanner } from '@org/shop-ui-media-banner';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import { PAYMENTS_SETTINGS_FEATURE } from './payments-settings.routes';
 
 export interface PaymentsSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function PaymentsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaBanner label="Items" value={count} tone="info" />
-        <MediaBanner label="Total" value={total} tone="success" />
+        <MarketingBadge label="Items" value={count} tone="info" />
+        <MarketingBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

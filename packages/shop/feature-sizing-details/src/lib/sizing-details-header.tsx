@@ -1,4 +1,4 @@
-import { MediaBadge } from '@org/shop-ui-media-badge';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { SIZING_DETAILS_FEATURE } from './sizing-details.routes';
 
 export interface SizingDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function SizingDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaBadge label="Items" value={count} tone="info" />
-        <MediaBadge label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

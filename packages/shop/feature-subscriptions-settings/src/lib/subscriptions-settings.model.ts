@@ -21,7 +21,7 @@ export interface SubscriptionsSettingsTotals {
   archived: number;
 }
 
-export const SUBSCRIPTIONS_SETTINGS_ITEM_COUNT = 7;
+export const SUBSCRIPTIONS_SETTINGS_ITEM_COUNT = 12;
 
 export const SUBSCRIPTIONS_SETTINGS_STATUSES: ReadonlyArray<SubscriptionsSettingsStatus> =
   ['active', 'pending', 'archived'];

@@ -1,6 +1,7 @@
-import { collectionText } from '@org/shop-util-collection-text';
-import { storageName } from '@org/shop-util-storage-name';
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { asyncName } from '@org/shop-util-async-name';
+import { validateText } from '@org/shop-util-validate-text';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { FormsStatProps } from './forms-stat.types';
 import { resolveFormsStatStyle } from './forms-stat-variants';
 
@@ -13,9 +14,9 @@ export function FormsStat({
   onSelect,
   children,
 }: FormsStatProps) {
-  const formatted = value === undefined ? '' : collectionText(value);
+  const formatted = value === undefined ? '' : asyncName(value);
   const style = resolveFormsStatStyle(tone, size);
-  const ariaLabel = storageName(label);
+  const ariaLabel = formatPhone(validateText(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +39,7 @@ export function FormsStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreBanner label="Core Banner" value={value} tone={tone} size="sm" />
+      <CoreBadge label="Core Badge" value={value} tone={tone} size="sm" />
     </div>
   );
 }

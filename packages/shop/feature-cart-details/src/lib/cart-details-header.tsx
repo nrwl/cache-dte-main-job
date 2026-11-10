@@ -1,4 +1,4 @@
-import { NavigationPanel } from '@org/shop-ui-navigation-panel';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { CART_DETAILS_FEATURE } from './cart-details.routes';
 
 export interface CartDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function CartDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationPanel label="Items" value={count} tone="info" />
-        <NavigationPanel label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
 import { buildNotificationsDetailsItems } from './notifications-details.model';
 import { NOTIFICATIONS_DETAILS_FEATURE } from './notifications-details.routes';
 import {
@@ -31,7 +31,7 @@ export function NotificationsDetailsSummary({
       <h3 className="feature-summary-title">
         {NOTIFICATIONS_DETAILS_FEATURE.title}
       </h3>
-      <ChartsBadgeGroup
+      <MarketingBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

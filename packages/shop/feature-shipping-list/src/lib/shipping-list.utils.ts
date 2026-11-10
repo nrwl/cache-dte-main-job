@@ -1,4 +1,4 @@
-import { collectionText } from '@org/shop-util-collection-text';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyShippingListTotals,
   type ShippingListItem,
@@ -70,13 +70,13 @@ export function sortShippingList(
 }
 
 export function describeShippingListItem(item: ShippingListItem): string {
-  const amount = collectionText(item.amount);
-  const name = collectionText(item.name);
+  const amount = mathCurrency(item.amount);
+  const name = mathCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatShippingListAmount(amount: number): string {
-  return collectionText(amount);
+  return mathCurrency(amount);
 }
 
 export function shippingListStatusTone(

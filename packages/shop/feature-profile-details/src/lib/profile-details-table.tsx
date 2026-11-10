@@ -1,4 +1,4 @@
-import { LayoutPanel } from '@org/shop-ui-layout-panel';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { ProfileDetailsItem } from './profile-details.model';
 import { PROFILE_DETAILS_FEATURE } from './profile-details.routes';
 import {
@@ -58,7 +58,7 @@ export function ProfileDetailsTable({
             <td>{formatProfileDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutPanel
+              <TypographyBanner
                 label={item.status}
                 tone={profileDetailsStatusTone(item.status)}
                 size="sm"

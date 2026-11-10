@@ -1,4 +1,4 @@
-import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
 import type { AnalyticsDetailsItem } from './analytics-details.model';
 import { ANALYTICS_DETAILS_FEATURE } from './analytics-details.routes';
 import { describeAnalyticsDetailsItem } from './analytics-details.utils';
@@ -39,7 +39,7 @@ export function AnalyticsDetailsPanel({
       <p className="feature-panel-description">
         {describeAnalyticsDetailsItem(selected)}
       </p>
-      <OverlayBannerGroup
+      <ChartsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

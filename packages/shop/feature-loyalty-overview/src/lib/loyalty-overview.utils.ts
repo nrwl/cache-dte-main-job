@@ -1,6 +1,6 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
-import { storageCurrency } from '@org/shop-util-storage-currency';
-import { formatPhone } from '@org/shop-util-format-phone';
+import { mathName } from '@org/shop-util-math-name';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyLoyaltyOverviewTotals,
   type LoyaltyOverviewItem,
@@ -73,13 +73,13 @@ export function sortLoyaltyOverview(
 }
 
 export function describeLoyaltyOverviewItem(item: LoyaltyOverviewItem): string {
-  const amount = validateCurrency(item.amount);
-  const name = formatPhone(storageCurrency(item.name));
+  const amount = mathName(item.amount);
+  const name = validateText(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatLoyaltyOverviewAmount(amount: number): string {
-  return validateCurrency(amount);
+  return mathName(amount);
 }
 
 export function loyaltyOverviewStatusTone(

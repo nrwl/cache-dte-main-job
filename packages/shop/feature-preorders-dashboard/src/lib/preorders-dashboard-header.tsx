@@ -1,4 +1,4 @@
-import { ChartsPanel } from '@org/shop-ui-charts-panel';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { PREORDERS_DASHBOARD_FEATURE } from './preorders-dashboard.routes';
 
 export interface PreordersDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function PreordersDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsPanel label="Items" value={count} tone="info" />
-        <ChartsPanel label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -21,7 +21,7 @@ export interface RecommendationsOverviewTotals {
   archived: number;
 }
 
-export const RECOMMENDATIONS_OVERVIEW_ITEM_COUNT = 7;
+export const RECOMMENDATIONS_OVERVIEW_ITEM_COUNT = 5;
 
 export const RECOMMENDATIONS_OVERVIEW_STATUSES: ReadonlyArray<RecommendationsOverviewStatus> =
   ['active', 'pending', 'archived'];

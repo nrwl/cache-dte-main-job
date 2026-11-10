@@ -1,5 +1,4 @@
-import { mathName } from '@org/shop-util-math-name';
-import { storageText } from '@org/shop-util-storage-text';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyStoreLocatorDashboardTotals,
   type StoreLocatorDashboardItem,
@@ -77,13 +76,13 @@ export function sortStoreLocatorDashboard(
 export function describeStoreLocatorDashboardItem(
   item: StoreLocatorDashboardItem,
 ): string {
-  const amount = mathName(item.amount);
-  const name = storageText(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatStoreLocatorDashboardAmount(amount: number): string {
-  return mathName(amount);
+  return asyncName(amount);
 }
 
 export function storeLocatorDashboardStatusTone(

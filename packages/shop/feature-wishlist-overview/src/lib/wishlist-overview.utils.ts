@@ -1,5 +1,4 @@
-import { collectionText } from '@org/shop-util-collection-text';
-import { mathPhone } from '@org/shop-util-math-phone';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyWishlistOverviewTotals,
   type WishlistOverviewItem,
@@ -74,13 +73,13 @@ export function sortWishlistOverview(
 export function describeWishlistOverviewItem(
   item: WishlistOverviewItem,
 ): string {
-  const amount = collectionText(item.amount);
-  const name = mathPhone(item.name);
+  const amount = validateText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatWishlistOverviewAmount(amount: number): string {
-  return collectionText(amount);
+  return validateText(amount);
 }
 
 export function wishlistOverviewStatusTone(

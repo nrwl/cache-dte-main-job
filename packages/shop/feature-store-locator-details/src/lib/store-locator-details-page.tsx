@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CompareSettingsSummary } from '@org/shop-feature-compare-settings';
+import { OrdersOverviewSummary } from '@org/shop-feature-orders-overview';
 import { StoreLocatorDetailsFilters } from './store-locator-details-filters';
 import { StoreLocatorDetailsHeader } from './store-locator-details-header';
 import { StoreLocatorDetailsPanel } from './store-locator-details-panel';
@@ -54,7 +54,7 @@ export function StoreLocatorDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CompareSettingsSummary compact />
+          <OrdersOverviewSummary compact />
         </div>
       </div>
     </section>

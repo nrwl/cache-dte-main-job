@@ -1,4 +1,5 @@
-import { formatName } from '@org/shop-util-format-name';
+import { mathName } from '@org/shop-util-math-name';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyCartListTotals,
   type CartListItem,
@@ -70,13 +71,13 @@ export function sortCartList(
 }
 
 export function describeCartListItem(item: CartListItem): string {
-  const amount = formatName(item.amount);
-  const name = formatName(item.name);
+  const amount = mathName(item.amount);
+  const name = asyncNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCartListAmount(amount: number): string {
-  return formatName(amount);
+  return mathName(amount);
 }
 
 export function cartListStatusTone(

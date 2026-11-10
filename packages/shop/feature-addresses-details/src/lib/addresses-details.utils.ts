@@ -1,4 +1,4 @@
-import { i18nCurrency } from '@org/shop-util-i18n-currency';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyAddressesDetailsTotals,
   type AddressesDetailsItem,
@@ -73,13 +73,13 @@ export function sortAddressesDetails(
 export function describeAddressesDetailsItem(
   item: AddressesDetailsItem,
 ): string {
-  const amount = i18nCurrency(item.amount);
-  const name = i18nCurrency(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesDetailsAmount(amount: number): string {
-  return i18nCurrency(amount);
+  return formatCurrency(amount);
 }
 
 export function addressesDetailsStatusTone(

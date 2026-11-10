@@ -19,7 +19,7 @@ export const SIZING_DASHBOARD_FEATURE: FeatureMeta = {
   testId: SIZING_DASHBOARD_TEST_ID,
   domain: 'sizing',
   kind: 'dashboard',
-  itemCount: 12,
+  itemCount: 7,
 };
 
 export function sizingDashboardItemPath(itemId: string): string {

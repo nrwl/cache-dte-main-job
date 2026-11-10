@@ -1,6 +1,4 @@
-import { mathName } from '@org/shop-util-math-name';
-import { mathNumber } from '@org/shop-util-math-number';
-import { asyncPhone } from '@org/shop-util-async-phone';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyWishlistListTotals,
   type WishlistListItem,
@@ -72,13 +70,13 @@ export function sortWishlistList(
 }
 
 export function describeWishlistListItem(item: WishlistListItem): string {
-  const amount = mathName(item.amount);
-  const name = asyncPhone(mathNumber(item.name));
+  const amount = validateText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatWishlistListAmount(amount: number): string {
-  return mathName(amount);
+  return validateText(amount);
 }
 
 export function wishlistListStatusTone(

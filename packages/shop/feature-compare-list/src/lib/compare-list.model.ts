@@ -21,7 +21,7 @@ export interface CompareListTotals {
   archived: number;
 }
 
-export const COMPARE_LIST_ITEM_COUNT = 5;
+export const COMPARE_LIST_ITEM_COUNT = 10;
 
 export const COMPARE_LIST_STATUSES: ReadonlyArray<CompareListStatus> = [
   'active',

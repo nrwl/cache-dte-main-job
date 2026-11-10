@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { BundlesDetailsSummary } from '@org/shop-feature-bundles-details';
 import { ProfileListFilters } from './profile-list-filters';
 import { ProfileListHeader } from './profile-list-header';
 import { ProfileListPanel } from './profile-list-panel';
@@ -48,7 +47,6 @@ export function ProfileListPage() {
         </div>
         <div className="feature-side">
           <ProfileListPanel selected={selected} onClear={() => select(null)} />
-          <BundlesDetailsSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { CompareDashboardItem } from './compare-dashboard.model';
 import { COMPARE_DASHBOARD_FEATURE } from './compare-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function CompareDashboardTable({
             <td>{formatCompareDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceBadge
+              <TypographyBanner
                 label={item.status}
                 tone={compareDashboardStatusTone(item.status)}
                 size="sm"

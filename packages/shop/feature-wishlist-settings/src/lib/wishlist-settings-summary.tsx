@@ -1,4 +1,4 @@
-import { LayoutToolbarGroup } from '@org/shop-ui-layout-toolbar';
+import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
 import { buildWishlistSettingsItems } from './wishlist-settings.model';
 import { WISHLIST_SETTINGS_FEATURE } from './wishlist-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function WishlistSettingsSummary({
       <h3 className="feature-summary-title">
         {WISHLIST_SETTINGS_FEATURE.title}
       </h3>
-      <LayoutToolbarGroup
+      <TypographyBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

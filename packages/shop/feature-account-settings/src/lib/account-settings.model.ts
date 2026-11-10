@@ -21,7 +21,7 @@ export interface AccountSettingsTotals {
   archived: number;
 }
 
-export const ACCOUNT_SETTINGS_ITEM_COUNT = 6;
+export const ACCOUNT_SETTINGS_ITEM_COUNT = 10;
 
 export const ACCOUNT_SETTINGS_STATUSES: ReadonlyArray<AccountSettingsStatus> = [
   'active',

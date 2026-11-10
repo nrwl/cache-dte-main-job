@@ -1,4 +1,4 @@
-import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { TrackingOverviewItem } from './tracking-overview.model';
 import { TRACKING_OVERVIEW_FEATURE } from './tracking-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function TrackingOverviewTable({
             <td>{formatTrackingOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceToolbar
+              <FormsStat
                 label={item.status}
                 tone={trackingOverviewStatusTone(item.status)}
                 size="sm"

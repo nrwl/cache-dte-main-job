@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { ReviewsOverviewSummary } from '@org/shop-feature-reviews-overview';
 import { ReturnsDetailsFilters } from './returns-details-filters';
 import { ReturnsDetailsHeader } from './returns-details-header';
 import { ReturnsDetailsPanel } from './returns-details-panel';
@@ -53,6 +54,7 @@ export function ReturnsDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <ReviewsOverviewSummary compact />
         </div>
       </div>
     </section>

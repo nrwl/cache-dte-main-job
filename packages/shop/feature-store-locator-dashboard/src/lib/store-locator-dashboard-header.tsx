@@ -1,4 +1,4 @@
-import { NavigationStat } from '@org/shop-ui-navigation-stat';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import { STORE_LOCATOR_DASHBOARD_FEATURE } from './store-locator-dashboard.routes';
 
 export interface StoreLocatorDashboardHeaderProps {
@@ -29,8 +29,8 @@ export function StoreLocatorDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationStat label="Items" value={count} tone="info" />
-        <NavigationStat label="Total" value={total} tone="success" />
+        <NavigationPanel label="Items" value={count} tone="info" />
+        <NavigationPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

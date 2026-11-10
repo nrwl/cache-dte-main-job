@@ -1,6 +1,6 @@
-import { mathNumber } from '@org/shop-util-math-number';
-import { validateCurrency } from '@org/shop-util-validate-currency';
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyProfileDashboardTotals,
   type ProfileDashboardItem,
@@ -75,13 +75,13 @@ export function sortProfileDashboard(
 export function describeProfileDashboardItem(
   item: ProfileDashboardItem,
 ): string {
-  const amount = mathNumber(item.amount);
-  const name = validatePhone(validateCurrency(item.name));
+  const amount = i18nNumber(item.amount);
+  const name = mathCurrency(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileDashboardAmount(amount: number): string {
-  return mathNumber(amount);
+  return i18nNumber(amount);
 }
 
 export function profileDashboardStatusTone(

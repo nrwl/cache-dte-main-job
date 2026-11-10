@@ -1,4 +1,5 @@
-import { storageName } from '@org/shop-util-storage-name';
+import { collectionText } from '@org/shop-util-collection-text';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyGiftCardsSettingsTotals,
   type GiftCardsSettingsItem,
@@ -73,13 +74,13 @@ export function sortGiftCardsSettings(
 export function describeGiftCardsSettingsItem(
   item: GiftCardsSettingsItem,
 ): string {
-  const amount = storageName(item.amount);
-  const name = storageName(item.name);
+  const amount = collectionText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatGiftCardsSettingsAmount(amount: number): string {
-  return storageName(amount);
+  return collectionText(amount);
 }
 
 export function giftCardsSettingsStatusTone(

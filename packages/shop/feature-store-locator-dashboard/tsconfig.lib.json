@@ -30,19 +30,22 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-storage-text/tsconfig.lib.json"
+      "path": "../feature-search-settings/tsconfig.lib.json"
     },
     {
-      "path": "../util-math-name/tsconfig.lib.json"
+      "path": "../util-async-name/tsconfig.lib.json"
     },
     {
-      "path": "../ui-commerce-panel/tsconfig.lib.json"
+      "path": "../ui-core-toolbar/tsconfig.lib.json"
     },
     {
-      "path": "../ui-core-panel/tsconfig.lib.json"
+      "path": "../ui-commerce-badge/tsconfig.lib.json"
     },
     {
-      "path": "../ui-navigation-stat/tsconfig.lib.json"
+      "path": "../ui-charts-banner/tsconfig.lib.json"
+    },
+    {
+      "path": "../ui-navigation-panel/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { GiftCardsDashboardSummary } from '@org/shop-feature-gift-cards-dashboard';
 import { FeedbackOverviewFilters } from './feedback-overview-filters';
 import { FeedbackOverviewHeader } from './feedback-overview-header';
 import { FeedbackOverviewPanel } from './feedback-overview-panel';
@@ -54,7 +53,6 @@ export function FeedbackOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <GiftCardsDashboardSummary compact />
         </div>
       </div>
     </section>

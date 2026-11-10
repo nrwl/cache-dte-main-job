@@ -1,4 +1,4 @@
-import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import { buildShippingListItems } from './shipping-list.model';
 import { SHIPPING_LIST_FEATURE } from './shipping-list.routes';
 import {
@@ -29,7 +29,7 @@ export function ShippingListSummary({
       data-testid={`${SHIPPING_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SHIPPING_LIST_FEATURE.title}</h3>
-      <OverlayBannerGroup
+      <CommerceToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

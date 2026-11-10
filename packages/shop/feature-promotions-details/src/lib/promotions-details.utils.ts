@@ -1,6 +1,5 @@
-import { collectionNumber } from '@org/shop-util-collection-number';
-import { mathText } from '@org/shop-util-math-text';
-import { asyncText } from '@org/shop-util-async-text';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyPromotionsDetailsTotals,
   type PromotionsDetailsItem,
@@ -75,13 +74,13 @@ export function sortPromotionsDetails(
 export function describePromotionsDetailsItem(
   item: PromotionsDetailsItem,
 ): string {
-  const amount = collectionNumber(item.amount);
-  const name = asyncText(mathText(item.name));
+  const amount = formatPhone(item.amount);
+  const name = i18nNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPromotionsDetailsAmount(amount: number): string {
-  return collectionNumber(amount);
+  return formatPhone(amount);
 }
 
 export function promotionsDetailsStatusTone(

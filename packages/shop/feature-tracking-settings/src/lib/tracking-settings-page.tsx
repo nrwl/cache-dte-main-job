@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { RecommendationsDashboardSummary } from '@org/shop-feature-recommendations-dashboard';
+import { RecommendationsSettingsSummary } from '@org/shop-feature-recommendations-settings';
 import { TrackingSettingsFilters } from './tracking-settings-filters';
 import { TrackingSettingsHeader } from './tracking-settings-header';
 import { TrackingSettingsPanel } from './tracking-settings-panel';
@@ -54,7 +54,7 @@ export function TrackingSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <RecommendationsDashboardSummary compact />
+          <RecommendationsSettingsSummary compact />
         </div>
       </div>
     </section>

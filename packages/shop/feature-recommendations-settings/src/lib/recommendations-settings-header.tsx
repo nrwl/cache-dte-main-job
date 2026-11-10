@@ -1,4 +1,4 @@
-import { OverlayBadge } from '@org/shop-ui-overlay-badge';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import { RECOMMENDATIONS_SETTINGS_FEATURE } from './recommendations-settings.routes';
 
 export interface RecommendationsSettingsHeaderProps {
@@ -29,8 +29,8 @@ export function RecommendationsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <OverlayBadge label="Items" value={count} tone="info" />
-        <OverlayBadge label="Total" value={total} tone="success" />
+        <FormsStat label="Items" value={count} tone="info" />
+        <FormsStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

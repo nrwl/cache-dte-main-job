@@ -1,4 +1,4 @@
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { RecommendationsSettingsItem } from './recommendations-settings.model';
 import { RECOMMENDATIONS_SETTINGS_FEATURE } from './recommendations-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function RecommendationsSettingsTable({
             <td>{formatRecommendationsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CorePanel
+              <MediaToolbar
                 label={item.status}
                 tone={recommendationsSettingsStatusTone(item.status)}
                 size="sm"

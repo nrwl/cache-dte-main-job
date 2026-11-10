@@ -1,6 +1,4 @@
-import { MediaPanelGroup } from '@org/shop-ui-media-panel';
-import { LayoutStat } from '@org/shop-ui-layout-stat';
-import { CoreToolbar } from '@org/shop-ui-core-toolbar';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import type { LoyaltyOverviewItem } from './loyalty-overview.model';
 import { LOYALTY_OVERVIEW_FEATURE } from './loyalty-overview.routes';
 import { describeLoyaltyOverviewItem } from './loyalty-overview.utils';
@@ -41,7 +39,7 @@ export function LoyaltyOverviewPanel({
       <p className="feature-panel-description">
         {describeLoyaltyOverviewItem(selected)}
       </p>
-      <MediaPanelGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function LoyaltyOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <LayoutStat
-          label="Layout Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <CoreToolbar
-          label="Core Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

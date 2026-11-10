@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { GiftCardsSettingsSummary } from '@org/shop-feature-gift-cards-settings';
+import { SearchDetailsSummary } from '@org/shop-feature-search-details';
 import { NotificationsDetailsFilters } from './notifications-details-filters';
 import { NotificationsDetailsHeader } from './notifications-details-header';
 import { NotificationsDetailsPanel } from './notifications-details-panel';
@@ -54,7 +54,7 @@ export function NotificationsDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <GiftCardsSettingsSummary compact />
+          <SearchDetailsSummary compact />
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
-import { i18nCurrency } from '@org/shop-util-i18n-currency';
-import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyPreordersDetailsTotals,
   type PreordersDetailsItem,
@@ -74,13 +74,13 @@ export function sortPreordersDetails(
 export function describePreordersDetailsItem(
   item: PreordersDetailsItem,
 ): string {
-  const amount = i18nCurrency(item.amount);
-  const name = collectionCurrency(item.name);
+  const amount = formatPhone(item.amount);
+  const name = collectionText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPreordersDetailsAmount(amount: number): string {
-  return i18nCurrency(amount);
+  return formatPhone(amount);
 }
 
 export function preordersDetailsStatusTone(

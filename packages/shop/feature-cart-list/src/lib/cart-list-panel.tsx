@@ -1,6 +1,5 @@
-import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
-import { CoreStat } from '@org/shop-ui-core-stat';
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { CartListItem } from './cart-list.model';
 import { CART_LIST_FEATURE } from './cart-list.routes';
 import { describeCartListItem } from './cart-list.utils';
@@ -38,7 +37,7 @@ export function CartListPanel({ selected, onClear }: CartListPanelProps) {
       <p className="feature-panel-description">
         {describeCartListItem(selected)}
       </p>
-      <TypographyBannerGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,9 +48,8 @@ export function CartListPanel({ selected, onClear }: CartListPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <CoreStat label="Core Stat" value={selected.product.rating} size="sm" />
-        <CommerceStat
-          label="Commerce Stat"
+        <CoreBadge
+          label="Core Badge"
           value={selected.product.rating}
           size="sm"
         />

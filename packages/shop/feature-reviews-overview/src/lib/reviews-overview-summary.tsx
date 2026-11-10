@@ -1,4 +1,4 @@
-import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
 import { buildReviewsOverviewItems } from './reviews-overview.model';
 import { REVIEWS_OVERVIEW_FEATURE } from './reviews-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function ReviewsOverviewSummary({
       <h3 className="feature-summary-title">
         {REVIEWS_OVERVIEW_FEATURE.title}
       </h3>
-      <NavigationBadgeGroup
+      <LayoutStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

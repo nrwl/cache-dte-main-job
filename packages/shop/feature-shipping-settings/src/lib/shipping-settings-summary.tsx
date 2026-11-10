@@ -1,4 +1,4 @@
-import { CommerceBannerGroup } from '@org/shop-ui-commerce-banner';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildShippingSettingsItems } from './shipping-settings.model';
 import { SHIPPING_SETTINGS_FEATURE } from './shipping-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function ShippingSettingsSummary({
       <h3 className="feature-summary-title">
         {SHIPPING_SETTINGS_FEATURE.title}
       </h3>
-      <CommerceBannerGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

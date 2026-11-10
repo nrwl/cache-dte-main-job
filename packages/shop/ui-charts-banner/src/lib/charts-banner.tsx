@@ -1,7 +1,5 @@
-import { formatCurrency } from '@org/shop-util-format-currency';
-import { i18nName } from '@org/shop-util-i18n-name';
-import { collectionText } from '@org/shop-util-collection-text';
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { asyncName } from '@org/shop-util-async-name';
 import type { ChartsBannerProps } from './charts-banner.types';
 import { resolveChartsBannerStyle } from './charts-banner-variants';
 
@@ -14,9 +12,9 @@ export function ChartsBanner({
   onSelect,
   children,
 }: ChartsBannerProps) {
-  const formatted = value === undefined ? '' : formatCurrency(value);
+  const formatted = value === undefined ? '' : formatPhone(value);
   const style = resolveChartsBannerStyle(tone, size);
-  const ariaLabel = collectionText(i18nName(label));
+  const ariaLabel = asyncName(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +37,6 @@ export function ChartsBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CorePanel label="Core Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import { InputsBannerGroup } from '@org/shop-ui-inputs-banner';
-import { DataStat } from '@org/shop-ui-data-stat';
-import { NavigationPanel } from '@org/shop-ui-navigation-panel';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { RecommendationsListItem } from './recommendations-list.model';
 import { RECOMMENDATIONS_LIST_FEATURE } from './recommendations-list.routes';
 import { describeRecommendationsListItem } from './recommendations-list.utils';
@@ -41,7 +41,7 @@ export function RecommendationsListPanel({
       <p className="feature-panel-description">
         {describeRecommendationsListItem(selected)}
       </p>
-      <InputsBannerGroup
+      <LayoutStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,9 +52,13 @@ export function RecommendationsListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
-        <NavigationPanel
-          label="Navigation Panel"
+        <MediaToolbar
+          label="Media Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <TypographyBanner
+          label="Typography Banner"
           value={selected.product.rating}
           size="sm"
         />

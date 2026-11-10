@@ -1,4 +1,4 @@
-import { ChartsToolbar } from '@org/shop-ui-charts-toolbar';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import { PROMOTIONS_SETTINGS_FEATURE } from './promotions-settings.routes';
 
 export interface PromotionsSettingsHeaderProps {
@@ -27,8 +27,8 @@ export function PromotionsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsToolbar label="Items" value={count} tone="info" />
-        <ChartsToolbar label="Total" value={total} tone="success" />
+        <NavigationPanel label="Items" value={count} tone="info" />
+        <NavigationPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

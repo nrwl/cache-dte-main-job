@@ -1,6 +1,6 @@
-import { DataPanelGroup } from '@org/shop-ui-data-panel';
-import { InputsBadge } from '@org/shop-ui-inputs-badge';
-import { OverlayToolbar } from '@org/shop-ui-overlay-toolbar';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { CheckoutSettingsItem } from './checkout-settings.model';
 import { CHECKOUT_SETTINGS_FEATURE } from './checkout-settings.routes';
 import { describeCheckoutSettingsItem } from './checkout-settings.utils';
@@ -41,7 +41,7 @@ export function CheckoutSettingsPanel({
       <p className="feature-panel-description">
         {describeCheckoutSettingsItem(selected)}
       </p>
-      <DataPanelGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function CheckoutSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsBadge
-          label="Inputs Badge"
+        <CoreToolbar
+          label="Core Toolbar"
           value={selected.product.rating}
           size="sm"
         />
-        <OverlayToolbar
-          label="Overlay Toolbar"
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,4 +1,5 @@
 import type { Product } from '@org/models';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   clampLength,
   hashString,
@@ -45,7 +46,7 @@ export function storagePhone(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = normalized;
+  const staged = [asyncName].reduce<string>((acc, fn) => fn(acc), normalized);
   const transformed = kebabCase(staged);
   return clampLength(transformed, opts.maxLength);
 }

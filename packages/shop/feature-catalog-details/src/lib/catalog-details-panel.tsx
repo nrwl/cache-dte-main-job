@@ -1,6 +1,5 @@
-import { LayoutPanelGroup } from '@org/shop-ui-layout-panel';
-import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
-import { InputsPanel } from '@org/shop-ui-inputs-panel';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { CatalogDetailsItem } from './catalog-details.model';
 import { CATALOG_DETAILS_FEATURE } from './catalog-details.routes';
 import { describeCatalogDetailsItem } from './catalog-details.utils';
@@ -41,7 +40,7 @@ export function CatalogDetailsPanel({
       <p className="feature-panel-description">
         {describeCatalogDetailsItem(selected)}
       </p>
-      <LayoutPanelGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function CatalogDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackToolbar
-          label="Feedback Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <InputsPanel
-          label="Inputs Panel"
+        <TypographyBanner
+          label="Typography Banner"
           value={selected.product.rating}
           size="sm"
         />

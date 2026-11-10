@@ -19,7 +19,7 @@ export const SEARCH_DASHBOARD_FEATURE: FeatureMeta = {
   testId: SEARCH_DASHBOARD_TEST_ID,
   domain: 'search',
   kind: 'dashboard',
-  itemCount: 5,
+  itemCount: 11,
 };
 
 export function searchDashboardItemPath(itemId: string): string {

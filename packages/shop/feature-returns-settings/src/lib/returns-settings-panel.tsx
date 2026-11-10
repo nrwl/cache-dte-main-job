@@ -1,4 +1,4 @@
-import { OverlayPanelGroup } from '@org/shop-ui-overlay-panel';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
 import type { ReturnsSettingsItem } from './returns-settings.model';
 import { RETURNS_SETTINGS_FEATURE } from './returns-settings.routes';
 import { describeReturnsSettingsItem } from './returns-settings.utils';
@@ -39,7 +39,7 @@ export function ReturnsSettingsPanel({
       <p className="feature-panel-description">
         {describeReturnsSettingsItem(selected)}
       </p>
-      <OverlayPanelGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

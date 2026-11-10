@@ -34,9 +34,6 @@
       "path": "./packages/shared/test-utils"
     },
     {
-      "path": "./packages/shop/feature-recommendations-dashboard"
-    },
-    {
       "path": "./packages/shop/feature-recommendations-overview"
     },
     {
@@ -46,28 +43,16 @@
       "path": "./packages/shop/feature-notifications-dashboard"
     },
     {
-      "path": "./packages/shop/feature-recommendations-details"
-    },
-    {
       "path": "./packages/shop/feature-store-locator-dashboard"
     },
     {
       "path": "./packages/shop/feature-subscriptions-dashboard"
     },
     {
-      "path": "./packages/shop/feature-notifications-overview"
-    },
-    {
       "path": "./packages/shop/feature-notifications-settings"
     },
     {
-      "path": "./packages/shop/feature-store-locator-overview"
-    },
-    {
       "path": "./packages/shop/feature-store-locator-settings"
-    },
-    {
-      "path": "./packages/shop/feature-subscriptions-overview"
     },
     {
       "path": "./packages/shop/feature-subscriptions-settings"
@@ -80,9 +65,6 @@
     },
     {
       "path": "./packages/shop/feature-subscriptions-details"
-    },
-    {
-      "path": "./packages/shop/feature-gift-cards-dashboard"
     },
     {
       "path": "./packages/shop/feature-promotions-dashboard"
@@ -109,19 +91,10 @@
       "path": "./packages/shop/feature-preorders-dashboard"
     },
     {
-      "path": "./packages/shop/feature-promotions-overview"
-    },
-    {
       "path": "./packages/shop/feature-promotions-settings"
     },
     {
       "path": "./packages/shop/feature-addresses-overview"
-    },
-    {
-      "path": "./packages/shop/feature-addresses-settings"
-    },
-    {
-      "path": "./packages/shop/feature-analytics-overview"
     },
     {
       "path": "./packages/shop/feature-analytics-settings"
@@ -130,19 +103,7 @@
       "path": "./packages/shop/feature-checkout-dashboard"
     },
     {
-      "path": "./packages/shop/feature-feedback-dashboard"
-    },
-    {
-      "path": "./packages/shop/feature-gift-cards-details"
-    },
-    {
       "path": "./packages/shop/feature-inventory-overview"
-    },
-    {
-      "path": "./packages/shop/feature-inventory-settings"
-    },
-    {
-      "path": "./packages/shop/feature-notifications-list"
     },
     {
       "path": "./packages/shop/feature-payments-dashboard"
@@ -151,28 +112,7 @@
       "path": "./packages/shop/feature-preorders-overview"
     },
     {
-      "path": "./packages/shop/feature-preorders-settings"
-    },
-    {
       "path": "./packages/shop/feature-promotions-details"
-    },
-    {
-      "path": "./packages/shop/feature-shipping-dashboard"
-    },
-    {
-      "path": "./packages/shop/feature-store-locator-list"
-    },
-    {
-      "path": "./packages/shop/feature-subscriptions-list"
-    },
-    {
-      "path": "./packages/shop/feature-tracking-dashboard"
-    },
-    {
-      "path": "./packages/shop/feature-wishlist-dashboard"
-    },
-    {
-      "path": "./packages/shop/feature-account-dashboard"
     },
     {
       "path": "./packages/shop/feature-addresses-details"
@@ -181,13 +121,7 @@
       "path": "./packages/shop/feature-analytics-details"
     },
     {
-      "path": "./packages/shop/feature-bundles-dashboard"
-    },
-    {
       "path": "./packages/shop/feature-catalog-dashboard"
-    },
-    {
-      "path": "./packages/shop/feature-checkout-overview"
     },
     {
       "path": "./packages/shop/feature-checkout-settings"
@@ -206,9 +140,6 @@
     },
     {
       "path": "./packages/shop/feature-loyalty-dashboard"
-    },
-    {
-      "path": "./packages/shop/feature-payments-overview"
     },
     {
       "path": "./packages/shop/feature-payments-settings"
@@ -230,9 +161,6 @@
     },
     {
       "path": "./packages/shop/feature-shipping-settings"
-    },
-    {
-      "path": "./packages/shop/feature-support-dashboard"
     },
     {
       "path": "./packages/shop/feature-tracking-overview"
@@ -259,9 +187,6 @@
       "path": "./packages/shop/feature-bundles-settings"
     },
     {
-      "path": "./packages/shop/feature-catalog-overview"
-    },
-    {
       "path": "./packages/shop/feature-catalog-settings"
     },
     {
@@ -271,16 +196,7 @@
       "path": "./packages/shop/feature-compare-overview"
     },
     {
-      "path": "./packages/shop/feature-compare-settings"
-    },
-    {
-      "path": "./packages/shop/feature-feedback-details"
-    },
-    {
       "path": "./packages/shop/feature-loyalty-overview"
-    },
-    {
-      "path": "./packages/shop/feature-loyalty-settings"
     },
     {
       "path": "./packages/shop/feature-orders-dashboard"
@@ -292,25 +208,13 @@
       "path": "./packages/shop/feature-profile-overview"
     },
     {
-      "path": "./packages/shop/feature-profile-settings"
-    },
-    {
-      "path": "./packages/shop/feature-returns-overview"
-    },
-    {
       "path": "./packages/shop/feature-returns-settings"
     },
     {
       "path": "./packages/shop/feature-reviews-overview"
     },
     {
-      "path": "./packages/shop/feature-reviews-settings"
-    },
-    {
       "path": "./packages/shop/feature-search-dashboard"
-    },
-    {
-      "path": "./packages/shop/feature-shipping-details"
     },
     {
       "path": "./packages/shop/feature-sizing-dashboard"
@@ -320,21 +224,6 @@
     },
     {
       "path": "./packages/shop/feature-support-settings"
-    },
-    {
-      "path": "./packages/shop/feature-tracking-details"
-    },
-    {
-      "path": "./packages/shop/feature-wishlist-details"
-    },
-    {
-      "path": "./packages/shop/util-collection-currency"
-    },
-    {
-      "path": "./packages/shop/feature-account-details"
-    },
-    {
-      "path": "./packages/shop/feature-bundles-details"
     },
     {
       "path": "./packages/shop/feature-catalog-details"
@@ -352,13 +241,7 @@
       "path": "./packages/shop/feature-orders-overview"
     },
     {
-      "path": "./packages/shop/feature-orders-settings"
-    },
-    {
       "path": "./packages/shop/feature-profile-details"
-    },
-    {
-      "path": "./packages/shop/feature-promotions-list"
     },
     {
       "path": "./packages/shop/feature-returns-details"
@@ -367,28 +250,13 @@
       "path": "./packages/shop/feature-reviews-details"
     },
     {
-      "path": "./packages/shop/feature-search-overview"
-    },
-    {
       "path": "./packages/shop/feature-search-settings"
     },
     {
       "path": "./packages/shop/feature-sizing-overview"
     },
     {
-      "path": "./packages/shop/feature-sizing-settings"
-    },
-    {
-      "path": "./packages/shop/feature-support-details"
-    },
-    {
       "path": "./packages/shop/feature-addresses-list"
-    },
-    {
-      "path": "./packages/shop/feature-analytics-list"
-    },
-    {
-      "path": "./packages/shop/feature-auth-dashboard"
     },
     {
       "path": "./packages/shop/feature-cart-dashboard"
@@ -409,12 +277,6 @@
       "path": "./packages/shop/feature-sizing-details"
     },
     {
-      "path": "./packages/shop/util-collection-number"
-    },
-    {
-      "path": "./packages/shop/util-validate-currency"
-    },
-    {
       "path": "./packages/shop/feature-auth-overview"
     },
     {
@@ -424,16 +286,7 @@
       "path": "./packages/shop/feature-cart-overview"
     },
     {
-      "path": "./packages/shop/feature-cart-settings"
-    },
-    {
-      "path": "./packages/shop/feature-checkout-list"
-    },
-    {
       "path": "./packages/shop/feature-feedback-list"
-    },
-    {
-      "path": "./packages/shop/feature-payments-list"
     },
     {
       "path": "./packages/shop/feature-shipping-list"
@@ -445,31 +298,13 @@
       "path": "./packages/shop/feature-wishlist-list"
     },
     {
-      "path": "./packages/shop/ui-navigation-toolbar"
-    },
-    {
-      "path": "./packages/shop/ui-typography-toolbar"
-    },
-    {
-      "path": "./packages/shop/util-collection-phone"
-    },
-    {
-      "path": "./packages/shop/util-storage-currency"
-    },
-    {
       "path": "./packages/shop/feature-account-list"
-    },
-    {
-      "path": "./packages/shop/feature-auth-details"
     },
     {
       "path": "./packages/shop/feature-bundles-list"
     },
     {
       "path": "./packages/shop/feature-cart-details"
-    },
-    {
-      "path": "./packages/shop/feature-catalog-list"
     },
     {
       "path": "./packages/shop/feature-compare-list"
@@ -481,25 +316,13 @@
       "path": "./packages/shop/feature-profile-list"
     },
     {
-      "path": "./packages/shop/feature-returns-list"
-    },
-    {
       "path": "./packages/shop/feature-reviews-list"
     },
     {
       "path": "./packages/shop/feature-support-list"
     },
     {
-      "path": "./packages/shop/ui-marketing-toolbar"
-    },
-    {
-      "path": "./packages/shop/ui-navigation-banner"
-    },
-    {
       "path": "./packages/shop/ui-typography-banner"
-    },
-    {
-      "path": "./packages/shop/util-collection-name"
     },
     {
       "path": "./packages/shop/util-collection-text"
@@ -508,13 +331,7 @@
       "path": "./packages/shop/util-format-currency"
     },
     {
-      "path": "./packages/shop/util-validate-number"
-    },
-    {
       "path": "./packages/shop/feature-orders-list"
-    },
-    {
-      "path": "./packages/shop/feature-search-list"
     },
     {
       "path": "./packages/shop/feature-sizing-list"
@@ -523,34 +340,7 @@
       "path": "./packages/shop/ui-commerce-toolbar"
     },
     {
-      "path": "./packages/shop/ui-feedback-toolbar"
-    },
-    {
-      "path": "./packages/shop/ui-marketing-banner"
-    },
-    {
-      "path": "./packages/shop/ui-navigation-badge"
-    },
-    {
       "path": "./packages/shop/ui-navigation-panel"
-    },
-    {
-      "path": "./packages/shop/ui-typography-badge"
-    },
-    {
-      "path": "./packages/shop/ui-typography-panel"
-    },
-    {
-      "path": "./packages/shop/util-async-currency"
-    },
-    {
-      "path": "./packages/shop/util-storage-number"
-    },
-    {
-      "path": "./packages/shop/util-validate-phone"
-    },
-    {
-      "path": "./packages/shop/ui-commerce-banner"
     },
     {
       "path": "./packages/shop/ui-feedback-banner"
@@ -559,31 +349,10 @@
       "path": "./packages/shop/ui-marketing-badge"
     },
     {
-      "path": "./packages/shop/ui-marketing-panel"
-    },
-    {
-      "path": "./packages/shop/ui-navigation-stat"
-    },
-    {
-      "path": "./packages/shop/ui-overlay-toolbar"
-    },
-    {
-      "path": "./packages/shop/ui-typography-stat"
-    },
-    {
-      "path": "./packages/shop/util-format-number"
-    },
-    {
-      "path": "./packages/shop/util-i18n-currency"
-    },
-    {
       "path": "./packages/shop/util-math-currency"
     },
     {
       "path": "./packages/shop/util-storage-phone"
-    },
-    {
-      "path": "./packages/shop/util-validate-name"
     },
     {
       "path": "./packages/shop/util-validate-text"
@@ -595,31 +364,7 @@
       "path": "./packages/shop/feature-cart-list"
     },
     {
-      "path": "./packages/shop/ui-charts-toolbar"
-    },
-    {
       "path": "./packages/shop/ui-commerce-badge"
-    },
-    {
-      "path": "./packages/shop/ui-commerce-panel"
-    },
-    {
-      "path": "./packages/shop/ui-feedback-badge"
-    },
-    {
-      "path": "./packages/shop/ui-feedback-panel"
-    },
-    {
-      "path": "./packages/shop/ui-inputs-toolbar"
-    },
-    {
-      "path": "./packages/shop/ui-layout-toolbar"
-    },
-    {
-      "path": "./packages/shop/ui-marketing-stat"
-    },
-    {
-      "path": "./packages/shop/ui-overlay-banner"
     },
     {
       "path": "./packages/shop/util-async-number"
@@ -628,82 +373,19 @@
       "path": "./packages/shop/util-format-phone"
     },
     {
-      "path": "./packages/shop/util-storage-name"
-    },
-    {
-      "path": "./packages/shop/util-storage-text"
-    },
-    {
       "path": "./packages/shop/ui-charts-banner"
-    },
-    {
-      "path": "./packages/shop/ui-commerce-stat"
-    },
-    {
-      "path": "./packages/shop/ui-feedback-stat"
-    },
-    {
-      "path": "./packages/shop/ui-forms-toolbar"
-    },
-    {
-      "path": "./packages/shop/ui-inputs-banner"
-    },
-    {
-      "path": "./packages/shop/ui-layout-banner"
     },
     {
       "path": "./packages/shop/ui-media-toolbar"
     },
     {
-      "path": "./packages/shop/ui-overlay-badge"
-    },
-    {
-      "path": "./packages/shop/ui-overlay-panel"
-    },
-    {
-      "path": "./packages/shop/util-async-phone"
-    },
-    {
-      "path": "./packages/shop/util-format-name"
-    },
-    {
-      "path": "./packages/shop/util-format-text"
-    },
-    {
       "path": "./packages/shop/util-i18n-number"
-    },
-    {
-      "path": "./packages/shop/util-math-number"
-    },
-    {
-      "path": "./packages/shop/ui-charts-badge"
-    },
-    {
-      "path": "./packages/shop/ui-charts-panel"
     },
     {
       "path": "./packages/shop/ui-core-toolbar"
     },
     {
-      "path": "./packages/shop/ui-data-toolbar"
-    },
-    {
-      "path": "./packages/shop/ui-forms-banner"
-    },
-    {
-      "path": "./packages/shop/ui-inputs-badge"
-    },
-    {
       "path": "./packages/shop/ui-inputs-panel"
-    },
-    {
-      "path": "./packages/shop/ui-layout-badge"
-    },
-    {
-      "path": "./packages/shop/ui-layout-panel"
-    },
-    {
-      "path": "./packages/shop/ui-media-banner"
     },
     {
       "path": "./packages/shop/ui-overlay-stat"
@@ -712,76 +394,19 @@
       "path": "./packages/shop/util-async-name"
     },
     {
-      "path": "./packages/shop/util-async-text"
-    },
-    {
-      "path": "./packages/shop/util-i18n-phone"
-    },
-    {
-      "path": "./packages/shop/util-math-phone"
-    },
-    {
-      "path": "./packages/shop/ui-charts-stat"
-    },
-    {
-      "path": "./packages/shop/ui-core-banner"
-    },
-    {
-      "path": "./packages/shop/ui-data-banner"
-    },
-    {
-      "path": "./packages/shop/ui-forms-badge"
-    },
-    {
-      "path": "./packages/shop/ui-forms-panel"
-    },
-    {
-      "path": "./packages/shop/ui-inputs-stat"
-    },
-    {
       "path": "./packages/shop/ui-layout-stat"
-    },
-    {
-      "path": "./packages/shop/ui-media-badge"
-    },
-    {
-      "path": "./packages/shop/ui-media-panel"
-    },
-    {
-      "path": "./packages/shop/util-i18n-name"
-    },
-    {
-      "path": "./packages/shop/util-i18n-text"
     },
     {
       "path": "./packages/shop/util-math-name"
     },
     {
-      "path": "./packages/shop/util-math-text"
-    },
-    {
       "path": "./packages/shop/ui-core-badge"
-    },
-    {
-      "path": "./packages/shop/ui-core-panel"
-    },
-    {
-      "path": "./packages/shop/ui-data-badge"
     },
     {
       "path": "./packages/shop/ui-data-panel"
     },
     {
       "path": "./packages/shop/ui-forms-stat"
-    },
-    {
-      "path": "./packages/shop/ui-media-stat"
-    },
-    {
-      "path": "./packages/shop/ui-core-stat"
-    },
-    {
-      "path": "./packages/shop/ui-data-stat"
     }
   ]
 }

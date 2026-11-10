@@ -1,4 +1,4 @@
-import { InputsBadgeGroup } from '@org/shop-ui-inputs-badge';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
 import { buildReturnsDetailsItems } from './returns-details.model';
 import { RETURNS_DETAILS_FEATURE } from './returns-details.routes';
 import {
@@ -29,7 +29,7 @@ export function ReturnsDetailsSummary({
       data-testid={`${RETURNS_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{RETURNS_DETAILS_FEATURE.title}</h3>
-      <InputsBadgeGroup
+      <FormsStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

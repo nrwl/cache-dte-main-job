@@ -21,7 +21,7 @@ export interface CheckoutDashboardTotals {
   archived: number;
 }
 
-export const CHECKOUT_DASHBOARD_ITEM_COUNT = 5;
+export const CHECKOUT_DASHBOARD_ITEM_COUNT = 9;
 
 export const CHECKOUT_DASHBOARD_STATUSES: ReadonlyArray<CheckoutDashboardStatus> =
   ['active', 'pending', 'archived'];

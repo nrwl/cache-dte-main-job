@@ -1,6 +1,5 @@
-import { mathText } from '@org/shop-util-math-text';
-import { mathPhone } from '@org/shop-util-math-phone';
-import { i18nPhone } from '@org/shop-util-i18n-phone';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyAnalyticsDashboardTotals,
   type AnalyticsDashboardItem,
@@ -75,13 +74,13 @@ export function sortAnalyticsDashboard(
 export function describeAnalyticsDashboardItem(
   item: AnalyticsDashboardItem,
 ): string {
-  const amount = mathText(item.amount);
-  const name = i18nPhone(mathPhone(item.name));
+  const amount = collectionText(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAnalyticsDashboardAmount(amount: number): string {
-  return mathText(amount);
+  return collectionText(amount);
 }
 
 export function analyticsDashboardStatusTone(

@@ -21,7 +21,7 @@ export interface AccountListTotals {
   archived: number;
 }
 
-export const ACCOUNT_LIST_ITEM_COUNT = 9;
+export const ACCOUNT_LIST_ITEM_COUNT = 11;
 
 export const ACCOUNT_LIST_STATUSES: ReadonlyArray<AccountListStatus> = [
   'active',

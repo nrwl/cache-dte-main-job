@@ -1,5 +1,4 @@
-import { MarketingBannerGroup } from '@org/shop-ui-marketing-banner';
-import { NavigationStat } from '@org/shop-ui-navigation-stat';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
 import type { ReviewsListItem } from './reviews-list.model';
 import { REVIEWS_LIST_FEATURE } from './reviews-list.routes';
 import { describeReviewsListItem } from './reviews-list.utils';
@@ -37,7 +36,7 @@ export function ReviewsListPanel({ selected, onClear }: ReviewsListPanelProps) {
       <p className="feature-panel-description">
         {describeReviewsListItem(selected)}
       </p>
-      <MarketingBannerGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -47,13 +46,7 @@ export function ReviewsListPanel({ selected, onClear }: ReviewsListPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <NavigationStat
-          label="Navigation Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

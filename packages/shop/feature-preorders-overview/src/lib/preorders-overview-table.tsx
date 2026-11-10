@@ -1,4 +1,4 @@
-import { CommerceBanner } from '@org/shop-ui-commerce-banner';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { PreordersOverviewItem } from './preorders-overview.model';
 import { PREORDERS_OVERVIEW_FEATURE } from './preorders-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function PreordersOverviewTable({
             <td>{formatPreordersOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceBanner
+              <ChartsBanner
                 label={item.status}
                 tone={preordersOverviewStatusTone(item.status)}
                 size="sm"

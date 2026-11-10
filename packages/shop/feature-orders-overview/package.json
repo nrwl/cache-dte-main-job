@@ -21,13 +21,9 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-feedback-banner": "*",
-    "@org/shop-ui-navigation-banner": "*",
-    "@org/shop-ui-inputs-panel": "*",
-    "@org/shop-ui-commerce-banner": "*",
-    "@org/shop-ui-charts-banner": "*",
-    "@org/shop-util-storage-phone": "*",
-    "@org/shop-util-math-name": "*",
-    "@org/shop-util-i18n-number": "*"
+    "@org/shop-ui-layout-stat": "*",
+    "@org/shop-ui-commerce-toolbar": "*",
+    "@org/shop-ui-navigation-panel": "*",
+    "@org/shop-util-math-name": "*"
   }
 }

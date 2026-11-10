@@ -1,4 +1,4 @@
-import { ChartsPanelGroup } from '@org/shop-ui-charts-panel';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildPreordersDashboardItems } from './preorders-dashboard.model';
 import { PREORDERS_DASHBOARD_FEATURE } from './preorders-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function PreordersDashboardSummary({
       <h3 className="feature-summary-title">
         {PREORDERS_DASHBOARD_FEATURE.title}
       </h3>
-      <ChartsPanelGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

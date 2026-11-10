@@ -20,6 +20,6 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-util-format-phone": "*",
-    "@org/shop-util-format-name": "*"
+    "@org/shop-util-validate-text": "*"
   }
 }

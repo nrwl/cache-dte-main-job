@@ -1,4 +1,4 @@
-import { mathPhone } from '@org/shop-util-math-phone';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyCheckoutSettingsTotals,
   type CheckoutSettingsItem,
@@ -73,13 +73,13 @@ export function sortCheckoutSettings(
 export function describeCheckoutSettingsItem(
   item: CheckoutSettingsItem,
 ): string {
-  const amount = mathPhone(item.amount);
-  const name = mathPhone(item.name);
+  const amount = mathName(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCheckoutSettingsAmount(amount: number): string {
-  return mathPhone(amount);
+  return mathName(amount);
 }
 
 export function checkoutSettingsStatusTone(

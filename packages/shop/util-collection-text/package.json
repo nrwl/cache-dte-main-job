@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-math-number": "*",
-    "@org/shop-util-format-name": "*"
+    "@org/shop-util-format-phone": "*"
   }
 }

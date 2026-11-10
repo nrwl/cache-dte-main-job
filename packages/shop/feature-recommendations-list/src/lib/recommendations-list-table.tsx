@@ -1,4 +1,4 @@
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { RecommendationsListItem } from './recommendations-list.model';
 import { RECOMMENDATIONS_LIST_FEATURE } from './recommendations-list.routes';
 import {
@@ -58,7 +58,7 @@ export function RecommendationsListTable({
             <td>{formatRecommendationsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceStat
+              <MarketingBadge
                 label={item.status}
                 tone={recommendationsListStatusTone(item.status)}
                 size="sm"

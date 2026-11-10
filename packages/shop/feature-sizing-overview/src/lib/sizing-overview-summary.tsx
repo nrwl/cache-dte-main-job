@@ -1,4 +1,4 @@
-import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
 import { buildSizingOverviewItems } from './sizing-overview.model';
 import { SIZING_OVERVIEW_FEATURE } from './sizing-overview.routes';
 import {
@@ -29,7 +29,7 @@ export function SizingOverviewSummary({
       data-testid={`${SIZING_OVERVIEW_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SIZING_OVERVIEW_FEATURE.title}</h3>
-      <CoreBadgeGroup
+      <OverlayStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

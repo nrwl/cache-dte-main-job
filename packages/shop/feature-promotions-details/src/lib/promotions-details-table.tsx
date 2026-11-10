@@ -1,4 +1,4 @@
-import { LayoutPanel } from '@org/shop-ui-layout-panel';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { PromotionsDetailsItem } from './promotions-details.model';
 import { PROMOTIONS_DETAILS_FEATURE } from './promotions-details.routes';
 import {
@@ -58,7 +58,7 @@ export function PromotionsDetailsTable({
             <td>{formatPromotionsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutPanel
+              <FeedbackBanner
                 label={item.status}
                 tone={promotionsDetailsStatusTone(item.status)}
                 size="sm"

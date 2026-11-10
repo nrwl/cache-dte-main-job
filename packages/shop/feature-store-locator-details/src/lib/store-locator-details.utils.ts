@@ -1,6 +1,6 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
-import { validateName } from '@org/shop-util-validate-name';
-import { i18nName } from '@org/shop-util-i18n-name';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyStoreLocatorDetailsTotals,
   type StoreLocatorDetailsItem,
@@ -76,13 +76,13 @@ export function sortStoreLocatorDetails(
 export function describeStoreLocatorDetailsItem(
   item: StoreLocatorDetailsItem,
 ): string {
-  const amount = validateCurrency(item.amount);
-  const name = i18nName(validateName(item.name));
+  const amount = asyncNumber(item.amount);
+  const name = formatPhone(storagePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatStoreLocatorDetailsAmount(amount: number): string {
-  return validateCurrency(amount);
+  return asyncNumber(amount);
 }
 
 export function storeLocatorDetailsStatusTone(

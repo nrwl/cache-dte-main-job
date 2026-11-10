@@ -1,4 +1,4 @@
-import { TypographyBanner } from '@org/shop-ui-typography-banner';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import { SIZING_DASHBOARD_FEATURE } from './sizing-dashboard.routes';
 
 export interface SizingDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function SizingDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyBanner label="Items" value={count} tone="info" />
-        <TypographyBanner label="Total" value={total} tone="success" />
+        <CommerceToolbar label="Items" value={count} tone="info" />
+        <CommerceToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

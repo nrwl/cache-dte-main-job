@@ -20,8 +20,8 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-util-i18n-number": "*",
-    "@org/shop-util-storage-name": "*",
-    "@org/shop-util-validate-text": "*",
-    "@org/shop-ui-media-stat": "*"
+    "@org/shop-util-collection-text": "*",
+    "@org/shop-util-math-name": "*",
+    "@org/shop-ui-core-badge": "*"
   }
 }

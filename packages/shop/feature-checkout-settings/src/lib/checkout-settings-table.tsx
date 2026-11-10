@@ -1,4 +1,4 @@
-import { InputsPanel } from '@org/shop-ui-inputs-panel';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { CheckoutSettingsItem } from './checkout-settings.model';
 import { CHECKOUT_SETTINGS_FEATURE } from './checkout-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function CheckoutSettingsTable({
             <td>{formatCheckoutSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsPanel
+              <CommerceBadge
                 label={item.status}
                 tone={checkoutSettingsStatusTone(item.status)}
                 size="sm"

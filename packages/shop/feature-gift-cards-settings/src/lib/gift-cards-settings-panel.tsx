@@ -1,5 +1,6 @@
-import { FormsPanelGroup } from '@org/shop-ui-forms-panel';
-import { TypographyPanel } from '@org/shop-ui-typography-panel';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { GiftCardsSettingsItem } from './gift-cards-settings.model';
 import { GIFT_CARDS_SETTINGS_FEATURE } from './gift-cards-settings.routes';
 import { describeGiftCardsSettingsItem } from './gift-cards-settings.utils';
@@ -40,7 +41,7 @@ export function GiftCardsSettingsPanel({
       <p className="feature-panel-description">
         {describeGiftCardsSettingsItem(selected)}
       </p>
-      <FormsPanelGroup
+      <ChartsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function GiftCardsSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <TypographyPanel
-          label="Typography Panel"
+        <NavigationPanel
+          label="Navigation Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CoreBadge
+          label="Core Badge"
           value={selected.product.rating}
           size="sm"
         />

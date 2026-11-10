@@ -1,4 +1,4 @@
-import { NavigationToolbarGroup } from '@org/shop-ui-navigation-toolbar';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildSupportListItems } from './support-list.model';
 import { SUPPORT_LIST_FEATURE } from './support-list.routes';
 import {
@@ -29,7 +29,7 @@ export function SupportListSummary({
       data-testid={`${SUPPORT_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SUPPORT_LIST_FEATURE.title}</h3>
-      <NavigationToolbarGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

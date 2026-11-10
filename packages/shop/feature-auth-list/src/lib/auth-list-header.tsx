@@ -1,4 +1,4 @@
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import { AUTH_LIST_FEATURE } from './auth-list.routes';
 
 export interface AuthListHeaderProps {
@@ -26,8 +26,8 @@ export function AuthListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackStat label="Items" value={count} tone="info" />
-        <FeedbackStat label="Total" value={total} tone="success" />
+        <CommerceBadge label="Items" value={count} tone="info" />
+        <CommerceBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

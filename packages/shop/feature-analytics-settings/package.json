@@ -21,11 +21,9 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-layout-banner": "*",
-    "@org/shop-ui-inputs-panel": "*",
-    "@org/shop-ui-media-badge": "*",
-    "@org/shop-ui-charts-panel": "*",
+    "@org/shop-ui-feedback-banner": "*",
     "@org/shop-ui-commerce-badge": "*",
-    "@org/shop-util-collection-number": "*"
+    "@org/shop-ui-typography-banner": "*",
+    "@org/shop-util-async-name": "*"
   }
 }

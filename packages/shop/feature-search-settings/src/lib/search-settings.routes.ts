@@ -19,7 +19,7 @@ export const SEARCH_SETTINGS_FEATURE: FeatureMeta = {
   testId: SEARCH_SETTINGS_TEST_ID,
   domain: 'search',
   kind: 'settings',
-  itemCount: 10,
+  itemCount: 8,
 };
 
 export function searchSettingsItemPath(itemId: string): string {

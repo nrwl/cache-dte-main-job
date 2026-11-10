@@ -1,4 +1,4 @@
-import { asyncNumber } from '@org/shop-util-async-number';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyAnalyticsDetailsTotals,
   type AnalyticsDetailsItem,
@@ -73,13 +73,13 @@ export function sortAnalyticsDetails(
 export function describeAnalyticsDetailsItem(
   item: AnalyticsDetailsItem,
 ): string {
-  const amount = asyncNumber(item.amount);
-  const name = asyncNumber(item.name);
+  const amount = validateText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAnalyticsDetailsAmount(amount: number): string {
-  return asyncNumber(amount);
+  return validateText(amount);
 }
 
 export function analyticsDetailsStatusTone(

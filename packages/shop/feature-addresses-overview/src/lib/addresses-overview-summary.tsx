@@ -1,4 +1,4 @@
-import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildAddressesOverviewItems } from './addresses-overview.model';
 import { ADDRESSES_OVERVIEW_FEATURE } from './addresses-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function AddressesOverviewSummary({
       <h3 className="feature-summary-title">
         {ADDRESSES_OVERVIEW_FEATURE.title}
       </h3>
-      <TypographyToolbarGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

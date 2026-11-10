@@ -1,4 +1,4 @@
-import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import { buildRecommendationsOverviewItems } from './recommendations-overview.model';
 import { RECOMMENDATIONS_OVERVIEW_FEATURE } from './recommendations-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function RecommendationsOverviewSummary({
       <h3 className="feature-summary-title">
         {RECOMMENDATIONS_OVERVIEW_FEATURE.title}
       </h3>
-      <FeedbackPanelGroup
+      <CoreToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

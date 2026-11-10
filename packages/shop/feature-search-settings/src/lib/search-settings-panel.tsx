@@ -1,6 +1,6 @@
-import { MediaStatGroup } from '@org/shop-ui-media-stat';
-import { ChartsToolbar } from '@org/shop-ui-charts-toolbar';
-import { NavigationBanner } from '@org/shop-ui-navigation-banner';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { SearchSettingsItem } from './search-settings.model';
 import { SEARCH_SETTINGS_FEATURE } from './search-settings.routes';
 import { describeSearchSettingsItem } from './search-settings.utils';
@@ -41,7 +41,7 @@ export function SearchSettingsPanel({
       <p className="feature-panel-description">
         {describeSearchSettingsItem(selected)}
       </p>
-      <MediaStatGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function SearchSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <ChartsToolbar
-          label="Charts Toolbar"
+        <InputsPanel
+          label="Inputs Panel"
           value={selected.product.rating}
           size="sm"
         />
-        <NavigationBanner
-          label="Navigation Banner"
+        <NavigationPanel
+          label="Navigation Panel"
           value={selected.product.rating}
           size="sm"
         />

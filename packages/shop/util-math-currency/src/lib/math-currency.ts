@@ -1,6 +1,5 @@
 import type { Product } from '@org/models';
-import { validateNumber } from '@org/shop-util-validate-number';
-import { validateName } from '@org/shop-util-validate-name';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   clampLength,
   hashString,
@@ -46,10 +45,7 @@ export function mathCurrency(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [validateNumber, validateName].reduce<string>(
-    (acc, fn) => fn(acc),
-    normalized,
-  );
+  const staged = [formatPhone].reduce<string>((acc, fn) => fn(acc), normalized);
   const transformed = staged.toLowerCase();
   return clampLength(transformed, opts.maxLength);
 }

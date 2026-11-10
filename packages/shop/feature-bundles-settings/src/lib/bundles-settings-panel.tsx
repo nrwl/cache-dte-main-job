@@ -1,4 +1,4 @@
-import { CoreStatGroup } from '@org/shop-ui-core-stat';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
 import type { BundlesSettingsItem } from './bundles-settings.model';
 import { BUNDLES_SETTINGS_FEATURE } from './bundles-settings.routes';
 import { describeBundlesSettingsItem } from './bundles-settings.utils';
@@ -39,7 +39,7 @@ export function BundlesSettingsPanel({
       <p className="feature-panel-description">
         {describeBundlesSettingsItem(selected)}
       </p>
-      <CoreStatGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

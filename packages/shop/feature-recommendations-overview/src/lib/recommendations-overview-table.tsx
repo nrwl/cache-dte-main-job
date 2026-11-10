@@ -1,4 +1,4 @@
-import { OverlayToolbar } from '@org/shop-ui-overlay-toolbar';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { RecommendationsOverviewItem } from './recommendations-overview.model';
 import { RECOMMENDATIONS_OVERVIEW_FEATURE } from './recommendations-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function RecommendationsOverviewTable({
             <td>{formatRecommendationsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayToolbar
+              <CoreBadge
                 label={item.status}
                 tone={recommendationsOverviewStatusTone(item.status)}
                 size="sm"

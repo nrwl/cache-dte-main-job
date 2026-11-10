@@ -30,25 +30,22 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../feature-wishlist-details/tsconfig.lib.json"
+      "path": "../util-storage-phone/tsconfig.lib.json"
     },
     {
-      "path": "../util-validate-number/tsconfig.lib.json"
+      "path": "../util-collection-text/tsconfig.lib.json"
     },
     {
-      "path": "../util-storage-name/tsconfig.lib.json"
+      "path": "../util-async-name/tsconfig.lib.json"
     },
     {
-      "path": "../util-async-text/tsconfig.lib.json"
+      "path": "../ui-data-panel/tsconfig.lib.json"
     },
     {
-      "path": "../ui-navigation-stat/tsconfig.lib.json"
+      "path": "../ui-commerce-badge/tsconfig.lib.json"
     },
     {
       "path": "../ui-overlay-stat/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-inputs-stat/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

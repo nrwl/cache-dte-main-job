@@ -1,5 +1,5 @@
 import type { Product } from '@org/models';
-import { formatNumber } from '@org/shop-util-format-number';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   clampLength,
   hashString,
@@ -46,7 +46,7 @@ export function formatPhone(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatNumber].reduce<string>(
+  const staged = [formatCurrency].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );

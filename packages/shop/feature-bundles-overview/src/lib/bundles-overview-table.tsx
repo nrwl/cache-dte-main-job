@@ -1,4 +1,4 @@
-import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { BundlesOverviewItem } from './bundles-overview.model';
 import { BUNDLES_OVERVIEW_FEATURE } from './bundles-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function BundlesOverviewTable({
             <td>{formatBundlesOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaToolbar
+              <ChartsBanner
                 label={item.status}
                 tone={bundlesOverviewStatusTone(item.status)}
                 size="sm"

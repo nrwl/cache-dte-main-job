@@ -1,6 +1,6 @@
-import { collectionCurrency } from '@org/shop-util-collection-currency';
-import { storageCurrency } from '@org/shop-util-storage-currency';
-import { asyncPhone } from '@org/shop-util-async-phone';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyTrackingListTotals,
   type TrackingListItem,
@@ -72,13 +72,13 @@ export function sortTrackingList(
 }
 
 export function describeTrackingListItem(item: TrackingListItem): string {
-  const amount = collectionCurrency(item.amount);
-  const name = asyncPhone(storageCurrency(item.name));
+  const amount = i18nNumber(item.amount);
+  const name = mathName(collectionText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatTrackingListAmount(amount: number): string {
-  return collectionCurrency(amount);
+  return i18nNumber(amount);
 }
 
 export function trackingListStatusTone(

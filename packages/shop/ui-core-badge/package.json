@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-math-name": "*",
-    "@org/shop-util-validate-number": "*",
-    "@org/shop-util-storage-text": "*"
+    "@org/shop-util-async-number": "*",
+    "@org/shop-util-i18n-number": "*",
+    "@org/shop-util-math-currency": "*"
   }
 }

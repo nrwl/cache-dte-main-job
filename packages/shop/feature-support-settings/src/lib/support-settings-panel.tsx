@@ -1,4 +1,5 @@
-import { MarketingToolbarGroup } from '@org/shop-ui-marketing-toolbar';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { SupportSettingsItem } from './support-settings.model';
 import { SUPPORT_SETTINGS_FEATURE } from './support-settings.routes';
 import { describeSupportSettingsItem } from './support-settings.utils';
@@ -39,7 +40,7 @@ export function SupportSettingsPanel({
       <p className="feature-panel-description">
         {describeSupportSettingsItem(selected)}
       </p>
-      <MarketingToolbarGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function SupportSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CommerceBadge
+          label="Commerce Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

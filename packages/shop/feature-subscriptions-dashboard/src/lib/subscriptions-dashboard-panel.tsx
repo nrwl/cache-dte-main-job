@@ -1,4 +1,6 @@
-import { CoreBannerGroup } from '@org/shop-ui-core-banner';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { SubscriptionsDashboardItem } from './subscriptions-dashboard.model';
 import { SUBSCRIPTIONS_DASHBOARD_FEATURE } from './subscriptions-dashboard.routes';
 import { describeSubscriptionsDashboardItem } from './subscriptions-dashboard.utils';
@@ -39,7 +41,7 @@ export function SubscriptionsDashboardPanel({
       <p className="feature-panel-description">
         {describeSubscriptionsDashboardItem(selected)}
       </p>
-      <CoreBannerGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function SubscriptionsDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CommerceBadge
+          label="Commerce Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CoreBadge
+          label="Core Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

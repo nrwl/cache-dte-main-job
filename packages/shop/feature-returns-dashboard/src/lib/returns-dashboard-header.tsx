@@ -1,4 +1,4 @@
-import { DataStat } from '@org/shop-ui-data-stat';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import { RETURNS_DASHBOARD_FEATURE } from './returns-dashboard.routes';
 
 export interface ReturnsDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function ReturnsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataStat label="Items" value={count} tone="info" />
-        <DataStat label="Total" value={total} tone="success" />
+        <MediaToolbar label="Items" value={count} tone="info" />
+        <MediaToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

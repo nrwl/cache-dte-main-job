@@ -1,4 +1,4 @@
-import { FormsBadgeGroup } from '@org/shop-ui-forms-badge';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import { buildLoyaltyOverviewItems } from './loyalty-overview.model';
 import { LOYALTY_OVERVIEW_FEATURE } from './loyalty-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function LoyaltyOverviewSummary({
       <h3 className="feature-summary-title">
         {LOYALTY_OVERVIEW_FEATURE.title}
       </h3>
-      <FormsBadgeGroup
+      <FeedbackBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

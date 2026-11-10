@@ -1,4 +1,5 @@
-import { CorePanelGroup } from '@org/shop-ui-core-panel';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { StoreLocatorDashboardItem } from './store-locator-dashboard.model';
 import { STORE_LOCATOR_DASHBOARD_FEATURE } from './store-locator-dashboard.routes';
 import { describeStoreLocatorDashboardItem } from './store-locator-dashboard.utils';
@@ -39,7 +40,7 @@ export function StoreLocatorDashboardPanel({
       <p className="feature-panel-description">
         {describeStoreLocatorDashboardItem(selected)}
       </p>
-      <CorePanelGroup
+      <ChartsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function StoreLocatorDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

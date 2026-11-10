@@ -1,4 +1,5 @@
-import { mathPhone } from '@org/shop-util-math-phone';
+import { asyncName } from '@org/shop-util-async-name';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyRecommendationsOverviewTotals,
   type RecommendationsOverviewItem,
@@ -76,13 +77,13 @@ export function sortRecommendationsOverview(
 export function describeRecommendationsOverviewItem(
   item: RecommendationsOverviewItem,
 ): string {
-  const amount = mathPhone(item.amount);
-  const name = mathPhone(item.name);
+  const amount = asyncName(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatRecommendationsOverviewAmount(amount: number): string {
-  return mathPhone(amount);
+  return asyncName(amount);
 }
 
 export function recommendationsOverviewStatusTone(

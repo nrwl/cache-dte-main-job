@@ -1,4 +1,4 @@
-import { OverlayBadge } from '@org/shop-ui-overlay-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { SizingOverviewItem } from './sizing-overview.model';
 import { SIZING_OVERVIEW_FEATURE } from './sizing-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function SizingOverviewTable({
             <td>{formatSizingOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayBadge
+              <FeedbackBanner
                 label={item.status}
                 tone={sizingOverviewStatusTone(item.status)}
                 size="sm"

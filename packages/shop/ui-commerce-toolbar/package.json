@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-async-phone": "*",
-    "@org/shop-ui-data-stat": "*"
+    "@org/shop-util-format-phone": "*"
   }
 }

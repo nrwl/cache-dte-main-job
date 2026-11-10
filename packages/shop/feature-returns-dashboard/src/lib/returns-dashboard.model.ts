@@ -21,7 +21,7 @@ export interface ReturnsDashboardTotals {
   archived: number;
 }
 
-export const RETURNS_DASHBOARD_ITEM_COUNT = 6;
+export const RETURNS_DASHBOARD_ITEM_COUNT = 12;
 
 export const RETURNS_DASHBOARD_STATUSES: ReadonlyArray<ReturnsDashboardStatus> =
   ['active', 'pending', 'archived'];

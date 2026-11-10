@@ -1,4 +1,4 @@
-import { storageText } from '@org/shop-util-storage-text';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyAccountListTotals,
   type AccountListItem,
@@ -70,13 +70,13 @@ export function sortAccountList(
 }
 
 export function describeAccountListItem(item: AccountListItem): string {
-  const amount = storageText(item.amount);
-  const name = storageText(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAccountListAmount(amount: number): string {
-  return storageText(amount);
+  return formatCurrency(amount);
 }
 
 export function accountListStatusTone(

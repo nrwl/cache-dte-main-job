@@ -1,4 +1,4 @@
-import { collectionNumber } from '@org/shop-util-collection-number';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyAnalyticsSettingsTotals,
   type AnalyticsSettingsItem,
@@ -73,13 +73,13 @@ export function sortAnalyticsSettings(
 export function describeAnalyticsSettingsItem(
   item: AnalyticsSettingsItem,
 ): string {
-  const amount = collectionNumber(item.amount);
-  const name = collectionNumber(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAnalyticsSettingsAmount(amount: number): string {
-  return collectionNumber(amount);
+  return asyncName(amount);
 }
 
 export function analyticsSettingsStatusTone(

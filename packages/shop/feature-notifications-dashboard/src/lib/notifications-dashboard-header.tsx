@@ -1,4 +1,4 @@
-import { DataBanner } from '@org/shop-ui-data-banner';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { NOTIFICATIONS_DASHBOARD_FEATURE } from './notifications-dashboard.routes';
 
 export interface NotificationsDashboardHeaderProps {
@@ -29,8 +29,8 @@ export function NotificationsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataBanner label="Items" value={count} tone="info" />
-        <DataBanner label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

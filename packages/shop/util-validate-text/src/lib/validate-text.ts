@@ -1,6 +1,5 @@
 import type { Product } from '@org/models';
 import { formatCurrency } from '@org/shop-util-format-currency';
-import { formatName } from '@org/shop-util-format-name';
 import {
   clampLength,
   hashString,
@@ -46,7 +45,7 @@ export function validateText(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatCurrency, formatName].reduce<string>(
+  const staged = [formatCurrency].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );

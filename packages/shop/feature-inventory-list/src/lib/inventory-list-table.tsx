@@ -1,4 +1,4 @@
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { InventoryListItem } from './inventory-list.model';
 import { INVENTORY_LIST_FEATURE } from './inventory-list.routes';
 import {
@@ -58,7 +58,7 @@ export function InventoryListTable({
             <td>{formatInventoryListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CorePanel
+              <LayoutStat
                 label={item.status}
                 tone={inventoryListStatusTone(item.status)}
                 size="sm"

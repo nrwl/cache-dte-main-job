@@ -1,4 +1,4 @@
-import { InputsBadge } from '@org/shop-ui-inputs-badge';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { LoyaltyOverviewItem } from './loyalty-overview.model';
 import { LOYALTY_OVERVIEW_FEATURE } from './loyalty-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function LoyaltyOverviewTable({
             <td>{formatLoyaltyOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsBadge
+              <CommerceBadge
                 label={item.status}
                 tone={loyaltyOverviewStatusTone(item.status)}
                 size="sm"

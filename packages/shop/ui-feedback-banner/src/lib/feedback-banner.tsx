@@ -1,5 +1,4 @@
-import { validateName } from '@org/shop-util-validate-name';
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { formatPhone } from '@org/shop-util-format-phone';
 import type { FeedbackBannerProps } from './feedback-banner.types';
 import { resolveFeedbackBannerStyle } from './feedback-banner-variants';
 
@@ -12,7 +11,7 @@ export function FeedbackBanner({
   onSelect,
   children,
 }: FeedbackBannerProps) {
-  const formatted = value === undefined ? '' : validateName(value);
+  const formatted = value === undefined ? '' : formatPhone(value);
   const style = resolveFeedbackBannerStyle(tone, size);
   const ariaLabel = label;
 
@@ -37,7 +36,6 @@ export function FeedbackBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <LayoutBanner label="Layout Banner" value={value} tone={tone} size="sm" />
     </div>
   );
 }

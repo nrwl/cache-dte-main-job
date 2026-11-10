@@ -1,4 +1,4 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptySubscriptionsDashboardTotals,
   type SubscriptionsDashboardItem,
@@ -76,13 +76,13 @@ export function sortSubscriptionsDashboard(
 export function describeSubscriptionsDashboardItem(
   item: SubscriptionsDashboardItem,
 ): string {
-  const amount = validatePhone(item.amount);
-  const name = validatePhone(item.name);
+  const amount = i18nNumber(item.amount);
+  const name = i18nNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSubscriptionsDashboardAmount(amount: number): string {
-  return validatePhone(amount);
+  return i18nNumber(amount);
 }
 
 export function subscriptionsDashboardStatusTone(

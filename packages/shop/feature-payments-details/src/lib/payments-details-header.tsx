@@ -1,4 +1,4 @@
-import { DataStat } from '@org/shop-ui-data-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { PAYMENTS_DETAILS_FEATURE } from './payments-details.routes';
 
 export interface PaymentsDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function PaymentsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataStat label="Items" value={count} tone="info" />
-        <DataStat label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

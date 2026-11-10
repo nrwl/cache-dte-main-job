@@ -25,9 +25,6 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-format-name/tsconfig.lib.json"
-    },
-    {
       "path": "../util-format-currency/tsconfig.lib.json"
     },
     {

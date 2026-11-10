@@ -1,4 +1,4 @@
-import { DataStatGroup } from '@org/shop-ui-data-stat';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
 import { buildNotificationsSettingsItems } from './notifications-settings.model';
 import { NOTIFICATIONS_SETTINGS_FEATURE } from './notifications-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function NotificationsSettingsSummary({
       <h3 className="feature-summary-title">
         {NOTIFICATIONS_SETTINGS_FEATURE.title}
       </h3>
-      <DataStatGroup
+      <NavigationPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

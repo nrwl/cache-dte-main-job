@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { AddressesListSummary } from '@org/shop-feature-addresses-list';
 import { LoyaltyOverviewFilters } from './loyalty-overview-filters';
 import { LoyaltyOverviewHeader } from './loyalty-overview-header';
 import { LoyaltyOverviewPanel } from './loyalty-overview-panel';
@@ -53,6 +54,7 @@ export function LoyaltyOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <AddressesListSummary compact />
         </div>
       </div>
     </section>

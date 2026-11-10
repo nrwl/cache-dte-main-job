@@ -1,4 +1,4 @@
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { AddressesOverviewItem } from './addresses-overview.model';
 import { ADDRESSES_OVERVIEW_FEATURE } from './addresses-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function AddressesOverviewTable({
             <td>{formatAddressesOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsBadge
+              <LayoutStat
                 label={item.status}
                 tone={addressesOverviewStatusTone(item.status)}
                 size="sm"

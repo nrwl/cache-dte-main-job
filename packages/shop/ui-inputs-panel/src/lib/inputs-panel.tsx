@@ -1,6 +1,5 @@
-import { formatNumber } from '@org/shop-util-format-number';
-import { mathPhone } from '@org/shop-util-math-phone';
-import { LayoutBadge } from '@org/shop-ui-layout-badge';
+import { mathName } from '@org/shop-util-math-name';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { InputsPanelProps } from './inputs-panel.types';
 import { resolveInputsPanelStyle } from './inputs-panel-variants';
 
@@ -13,9 +12,9 @@ export function InputsPanel({
   onSelect,
   children,
 }: InputsPanelProps) {
-  const formatted = value === undefined ? '' : formatNumber(value);
+  const formatted = value === undefined ? '' : mathName(value);
   const style = resolveInputsPanelStyle(tone, size);
-  const ariaLabel = mathPhone(label);
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +37,7 @@ export function InputsPanel({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <LayoutBadge label="Layout Badge" value={value} tone={tone} size="sm" />
+      <OverlayStat label="Overlay Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

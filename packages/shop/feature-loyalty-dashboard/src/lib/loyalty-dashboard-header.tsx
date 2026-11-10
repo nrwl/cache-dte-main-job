@@ -1,4 +1,4 @@
-import { DataBadge } from '@org/shop-ui-data-badge';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import { LOYALTY_DASHBOARD_FEATURE } from './loyalty-dashboard.routes';
 
 export interface LoyaltyDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function LoyaltyDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataBadge label="Items" value={count} tone="info" />
-        <DataBadge label="Total" value={total} tone="success" />
+        <InputsPanel label="Items" value={count} tone="info" />
+        <InputsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

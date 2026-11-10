@@ -1,6 +1,4 @@
-import { MarketingToolbarGroup } from '@org/shop-ui-marketing-toolbar';
-import { MediaBadge } from '@org/shop-ui-media-badge';
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
 import type { LoyaltyDetailsItem } from './loyalty-details.model';
 import { LOYALTY_DETAILS_FEATURE } from './loyalty-details.routes';
 import { describeLoyaltyDetailsItem } from './loyalty-details.utils';
@@ -41,7 +39,7 @@ export function LoyaltyDetailsPanel({
       <p className="feature-panel-description">
         {describeLoyaltyDetailsItem(selected)}
       </p>
-      <MarketingToolbarGroup
+      <TypographyBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function LoyaltyDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MediaBadge
-          label="Media Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <CommerceBadge
-          label="Commerce Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

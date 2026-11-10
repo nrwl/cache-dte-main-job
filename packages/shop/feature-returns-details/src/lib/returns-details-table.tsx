@@ -1,4 +1,4 @@
-import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { ReturnsDetailsItem } from './returns-details.model';
 import { RETURNS_DETAILS_FEATURE } from './returns-details.routes';
 import {
@@ -58,7 +58,7 @@ export function ReturnsDetailsTable({
             <td>{formatReturnsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingToolbar
+              <OverlayStat
                 label={item.status}
                 tone={returnsDetailsStatusTone(item.status)}
                 size="sm"

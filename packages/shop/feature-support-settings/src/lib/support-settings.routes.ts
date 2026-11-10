@@ -19,7 +19,7 @@ export const SUPPORT_SETTINGS_FEATURE: FeatureMeta = {
   testId: SUPPORT_SETTINGS_TEST_ID,
   domain: 'support',
   kind: 'settings',
-  itemCount: 8,
+  itemCount: 12,
 };
 
 export function supportSettingsItemPath(itemId: string): string {

@@ -1,6 +1,6 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { formatPhone } from '@org/shop-util-format-phone';
-import { i18nName } from '@org/shop-util-i18n-name';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { validateText } from '@org/shop-util-validate-text';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyInventoryOverviewTotals,
   type InventoryOverviewItem,
@@ -75,13 +75,13 @@ export function sortInventoryOverview(
 export function describeInventoryOverviewItem(
   item: InventoryOverviewItem,
 ): string {
-  const amount = validatePhone(item.amount);
-  const name = i18nName(formatPhone(item.name));
+  const amount = mathCurrency(item.amount);
+  const name = asyncNumber(validateText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatInventoryOverviewAmount(amount: number): string {
-  return validatePhone(amount);
+  return mathCurrency(amount);
 }
 
 export function inventoryOverviewStatusTone(

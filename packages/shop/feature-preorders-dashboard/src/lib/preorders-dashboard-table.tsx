@@ -1,4 +1,4 @@
-import { DataPanel } from '@org/shop-ui-data-panel';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { PreordersDashboardItem } from './preorders-dashboard.model';
 import { PREORDERS_DASHBOARD_FEATURE } from './preorders-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function PreordersDashboardTable({
             <td>{formatPreordersDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataPanel
+              <MarketingBadge
                 label={item.status}
                 tone={preordersDashboardStatusTone(item.status)}
                 size="sm"

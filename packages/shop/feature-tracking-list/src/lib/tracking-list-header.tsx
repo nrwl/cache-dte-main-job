@@ -1,4 +1,4 @@
-import { MediaStat } from '@org/shop-ui-media-stat';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { TRACKING_LIST_FEATURE } from './tracking-list.routes';
 
 export interface TrackingListHeaderProps {
@@ -26,8 +26,8 @@ export function TrackingListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaStat label="Items" value={count} tone="info" />
-        <MediaStat label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

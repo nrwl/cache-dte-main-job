@@ -21,7 +21,7 @@ export interface AddressesDetailsTotals {
   archived: number;
 }
 
-export const ADDRESSES_DETAILS_ITEM_COUNT = 8;
+export const ADDRESSES_DETAILS_ITEM_COUNT = 7;
 
 export const ADDRESSES_DETAILS_STATUSES: ReadonlyArray<AddressesDetailsStatus> =
   ['active', 'pending', 'archived'];

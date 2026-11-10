@@ -1,4 +1,4 @@
-import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { ReviewsDetailsItem } from './reviews-details.model';
 import { REVIEWS_DETAILS_FEATURE } from './reviews-details.routes';
 import {
@@ -58,7 +58,7 @@ export function ReviewsDetailsTable({
             <td>{formatReviewsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaToolbar
+              <OverlayStat
                 label={item.status}
                 tone={reviewsDetailsStatusTone(item.status)}
                 size="sm"

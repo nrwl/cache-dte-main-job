@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { CartListSummary } from '@org/shop-feature-cart-list';
 import { ShippingOverviewFilters } from './shipping-overview-filters';
 import { ShippingOverviewHeader } from './shipping-overview-header';
 import { ShippingOverviewPanel } from './shipping-overview-panel';
@@ -53,6 +54,7 @@ export function ShippingOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <CartListSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
+import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
 import { buildShippingOverviewItems } from './shipping-overview.model';
 import { SHIPPING_OVERVIEW_FEATURE } from './shipping-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function ShippingOverviewSummary({
       <h3 className="feature-summary-title">
         {SHIPPING_OVERVIEW_FEATURE.title}
       </h3>
-      <ChartsBannerGroup
+      <TypographyBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

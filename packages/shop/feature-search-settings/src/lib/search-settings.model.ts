@@ -21,7 +21,7 @@ export interface SearchSettingsTotals {
   archived: number;
 }
 
-export const SEARCH_SETTINGS_ITEM_COUNT = 10;
+export const SEARCH_SETTINGS_ITEM_COUNT = 8;
 
 export const SEARCH_SETTINGS_STATUSES: ReadonlyArray<SearchSettingsStatus> = [
   'active',

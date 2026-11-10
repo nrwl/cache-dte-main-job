@@ -1,4 +1,4 @@
-import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import { REVIEWS_DASHBOARD_FEATURE } from './reviews-dashboard.routes';
 
 export interface ReviewsDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function ReviewsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackBanner label="Items" value={count} tone="info" />
-        <FeedbackBanner label="Total" value={total} tone="success" />
+        <MediaToolbar label="Items" value={count} tone="info" />
+        <MediaToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

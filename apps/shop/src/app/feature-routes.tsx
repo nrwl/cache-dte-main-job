@@ -24,12 +24,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'cart',
   },
   {
-    id: 'cart-settings',
-    title: 'Cart Settings',
-    route: '/features/cart-settings',
-    domain: 'cart',
-  },
-  {
     id: 'cart-list',
     title: 'Cart List',
     route: '/features/cart-list',
@@ -42,12 +36,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'cart',
   },
   {
-    id: 'checkout-overview',
-    title: 'Checkout Overview',
-    route: '/features/checkout-overview',
-    domain: 'checkout',
-  },
-  {
     id: 'checkout-details',
     title: 'Checkout Details',
     route: '/features/checkout-details',
@@ -57,12 +45,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'checkout-settings',
     title: 'Checkout Settings',
     route: '/features/checkout-settings',
-    domain: 'checkout',
-  },
-  {
-    id: 'checkout-list',
-    title: 'Checkout List',
-    route: '/features/checkout-list',
     domain: 'checkout',
   },
   {
@@ -78,12 +60,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'wishlist',
   },
   {
-    id: 'wishlist-details',
-    title: 'Wishlist Details',
-    route: '/features/wishlist-details',
-    domain: 'wishlist',
-  },
-  {
     id: 'wishlist-settings',
     title: 'Wishlist Settings',
     route: '/features/wishlist-settings',
@@ -93,12 +69,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'wishlist-list',
     title: 'Wishlist List',
     route: '/features/wishlist-list',
-    domain: 'wishlist',
-  },
-  {
-    id: 'wishlist-dashboard',
-    title: 'Wishlist Dashboard',
-    route: '/features/wishlist-dashboard',
     domain: 'wishlist',
   },
   {
@@ -114,12 +84,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'reviews',
   },
   {
-    id: 'reviews-settings',
-    title: 'Reviews Settings',
-    route: '/features/reviews-settings',
-    domain: 'reviews',
-  },
-  {
     id: 'reviews-list',
     title: 'Reviews List',
     route: '/features/reviews-list',
@@ -132,12 +96,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'reviews',
   },
   {
-    id: 'search-overview',
-    title: 'Search Overview',
-    route: '/features/search-overview',
-    domain: 'search',
-  },
-  {
     id: 'search-details',
     title: 'Search Details',
     route: '/features/search-details',
@@ -147,12 +105,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'search-settings',
     title: 'Search Settings',
     route: '/features/search-settings',
-    domain: 'search',
-  },
-  {
-    id: 'search-list',
-    title: 'Search List',
-    route: '/features/search-list',
     domain: 'search',
   },
   {
@@ -168,12 +120,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'recommendations',
   },
   {
-    id: 'recommendations-details',
-    title: 'Recommendations Details',
-    route: '/features/recommendations-details',
-    domain: 'recommendations',
-  },
-  {
     id: 'recommendations-settings',
     title: 'Recommendations Settings',
     route: '/features/recommendations-settings',
@@ -183,12 +129,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'recommendations-list',
     title: 'Recommendations List',
     route: '/features/recommendations-list',
-    domain: 'recommendations',
-  },
-  {
-    id: 'recommendations-dashboard',
-    title: 'Recommendations Dashboard',
-    route: '/features/recommendations-dashboard',
     domain: 'recommendations',
   },
   {
@@ -204,12 +144,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'orders',
   },
   {
-    id: 'orders-settings',
-    title: 'Orders Settings',
-    route: '/features/orders-settings',
-    domain: 'orders',
-  },
-  {
     id: 'orders-list',
     title: 'Orders List',
     route: '/features/orders-list',
@@ -222,12 +156,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'orders',
   },
   {
-    id: 'returns-overview',
-    title: 'Returns Overview',
-    route: '/features/returns-overview',
-    domain: 'returns',
-  },
-  {
     id: 'returns-details',
     title: 'Returns Details',
     route: '/features/returns-details',
@@ -237,12 +165,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'returns-settings',
     title: 'Returns Settings',
     route: '/features/returns-settings',
-    domain: 'returns',
-  },
-  {
-    id: 'returns-list',
-    title: 'Returns List',
-    route: '/features/returns-list',
     domain: 'returns',
   },
   {
@@ -258,12 +180,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'account',
   },
   {
-    id: 'account-details',
-    title: 'Account Details',
-    route: '/features/account-details',
-    domain: 'account',
-  },
-  {
     id: 'account-settings',
     title: 'Account Settings',
     route: '/features/account-settings',
@@ -273,12 +189,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'account-list',
     title: 'Account List',
     route: '/features/account-list',
-    domain: 'account',
-  },
-  {
-    id: 'account-dashboard',
-    title: 'Account Dashboard',
-    route: '/features/account-dashboard',
     domain: 'account',
   },
   {
@@ -294,12 +204,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'addresses',
   },
   {
-    id: 'addresses-settings',
-    title: 'Addresses Settings',
-    route: '/features/addresses-settings',
-    domain: 'addresses',
-  },
-  {
     id: 'addresses-list',
     title: 'Addresses List',
     route: '/features/addresses-list',
@@ -312,12 +216,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'addresses',
   },
   {
-    id: 'payments-overview',
-    title: 'Payments Overview',
-    route: '/features/payments-overview',
-    domain: 'payments',
-  },
-  {
     id: 'payments-details',
     title: 'Payments Details',
     route: '/features/payments-details',
@@ -327,12 +225,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'payments-settings',
     title: 'Payments Settings',
     route: '/features/payments-settings',
-    domain: 'payments',
-  },
-  {
-    id: 'payments-list',
-    title: 'Payments List',
-    route: '/features/payments-list',
     domain: 'payments',
   },
   {
@@ -348,12 +240,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'shipping',
   },
   {
-    id: 'shipping-details',
-    title: 'Shipping Details',
-    route: '/features/shipping-details',
-    domain: 'shipping',
-  },
-  {
     id: 'shipping-settings',
     title: 'Shipping Settings',
     route: '/features/shipping-settings',
@@ -363,12 +249,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'shipping-list',
     title: 'Shipping List',
     route: '/features/shipping-list',
-    domain: 'shipping',
-  },
-  {
-    id: 'shipping-dashboard',
-    title: 'Shipping Dashboard',
-    route: '/features/shipping-dashboard',
     domain: 'shipping',
   },
   {
@@ -384,12 +264,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'loyalty',
   },
   {
-    id: 'loyalty-settings',
-    title: 'Loyalty Settings',
-    route: '/features/loyalty-settings',
-    domain: 'loyalty',
-  },
-  {
     id: 'loyalty-list',
     title: 'Loyalty List',
     route: '/features/loyalty-list',
@@ -402,12 +276,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'loyalty',
   },
   {
-    id: 'promotions-overview',
-    title: 'Promotions Overview',
-    route: '/features/promotions-overview',
-    domain: 'promotions',
-  },
-  {
     id: 'promotions-details',
     title: 'Promotions Details',
     route: '/features/promotions-details',
@@ -417,12 +285,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'promotions-settings',
     title: 'Promotions Settings',
     route: '/features/promotions-settings',
-    domain: 'promotions',
-  },
-  {
-    id: 'promotions-list',
-    title: 'Promotions List',
-    route: '/features/promotions-list',
     domain: 'promotions',
   },
   {
@@ -438,12 +300,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'gift-cards',
   },
   {
-    id: 'gift-cards-details',
-    title: 'Gift Cards Details',
-    route: '/features/gift-cards-details',
-    domain: 'gift-cards',
-  },
-  {
     id: 'gift-cards-settings',
     title: 'Gift Cards Settings',
     route: '/features/gift-cards-settings',
@@ -453,12 +309,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'gift-cards-list',
     title: 'Gift Cards List',
     route: '/features/gift-cards-list',
-    domain: 'gift-cards',
-  },
-  {
-    id: 'gift-cards-dashboard',
-    title: 'Gift Cards Dashboard',
-    route: '/features/gift-cards-dashboard',
     domain: 'gift-cards',
   },
   {
@@ -474,12 +324,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'inventory',
   },
   {
-    id: 'inventory-settings',
-    title: 'Inventory Settings',
-    route: '/features/inventory-settings',
-    domain: 'inventory',
-  },
-  {
     id: 'inventory-list',
     title: 'Inventory List',
     route: '/features/inventory-list',
@@ -492,12 +336,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'inventory',
   },
   {
-    id: 'notifications-overview',
-    title: 'Notifications Overview',
-    route: '/features/notifications-overview',
-    domain: 'notifications',
-  },
-  {
     id: 'notifications-details',
     title: 'Notifications Details',
     route: '/features/notifications-details',
@@ -507,12 +345,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'notifications-settings',
     title: 'Notifications Settings',
     route: '/features/notifications-settings',
-    domain: 'notifications',
-  },
-  {
-    id: 'notifications-list',
-    title: 'Notifications List',
-    route: '/features/notifications-list',
     domain: 'notifications',
   },
   {
@@ -528,12 +360,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'support',
   },
   {
-    id: 'support-details',
-    title: 'Support Details',
-    route: '/features/support-details',
-    domain: 'support',
-  },
-  {
     id: 'support-settings',
     title: 'Support Settings',
     route: '/features/support-settings',
@@ -543,12 +369,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'support-list',
     title: 'Support List',
     route: '/features/support-list',
-    domain: 'support',
-  },
-  {
-    id: 'support-dashboard',
-    title: 'Support Dashboard',
-    route: '/features/support-dashboard',
     domain: 'support',
   },
   {
@@ -564,12 +384,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'compare',
   },
   {
-    id: 'compare-settings',
-    title: 'Compare Settings',
-    route: '/features/compare-settings',
-    domain: 'compare',
-  },
-  {
     id: 'compare-list',
     title: 'Compare List',
     route: '/features/compare-list',
@@ -582,12 +396,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'compare',
   },
   {
-    id: 'subscriptions-overview',
-    title: 'Subscriptions Overview',
-    route: '/features/subscriptions-overview',
-    domain: 'subscriptions',
-  },
-  {
     id: 'subscriptions-details',
     title: 'Subscriptions Details',
     route: '/features/subscriptions-details',
@@ -597,12 +405,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'subscriptions-settings',
     title: 'Subscriptions Settings',
     route: '/features/subscriptions-settings',
-    domain: 'subscriptions',
-  },
-  {
-    id: 'subscriptions-list',
-    title: 'Subscriptions List',
-    route: '/features/subscriptions-list',
     domain: 'subscriptions',
   },
   {
@@ -618,12 +420,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'bundles',
   },
   {
-    id: 'bundles-details',
-    title: 'Bundles Details',
-    route: '/features/bundles-details',
-    domain: 'bundles',
-  },
-  {
     id: 'bundles-settings',
     title: 'Bundles Settings',
     route: '/features/bundles-settings',
@@ -633,12 +429,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'bundles-list',
     title: 'Bundles List',
     route: '/features/bundles-list',
-    domain: 'bundles',
-  },
-  {
-    id: 'bundles-dashboard',
-    title: 'Bundles Dashboard',
-    route: '/features/bundles-dashboard',
     domain: 'bundles',
   },
   {
@@ -654,12 +444,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'sizing',
   },
   {
-    id: 'sizing-settings',
-    title: 'Sizing Settings',
-    route: '/features/sizing-settings',
-    domain: 'sizing',
-  },
-  {
     id: 'sizing-list',
     title: 'Sizing List',
     route: '/features/sizing-list',
@@ -672,12 +456,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'sizing',
   },
   {
-    id: 'store-locator-overview',
-    title: 'Store Locator Overview',
-    route: '/features/store-locator-overview',
-    domain: 'store-locator',
-  },
-  {
     id: 'store-locator-details',
     title: 'Store Locator Details',
     route: '/features/store-locator-details',
@@ -687,12 +465,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'store-locator-settings',
     title: 'Store Locator Settings',
     route: '/features/store-locator-settings',
-    domain: 'store-locator',
-  },
-  {
-    id: 'store-locator-list',
-    title: 'Store Locator List',
-    route: '/features/store-locator-list',
     domain: 'store-locator',
   },
   {
@@ -708,12 +480,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'tracking',
   },
   {
-    id: 'tracking-details',
-    title: 'Tracking Details',
-    route: '/features/tracking-details',
-    domain: 'tracking',
-  },
-  {
     id: 'tracking-settings',
     title: 'Tracking Settings',
     route: '/features/tracking-settings',
@@ -723,12 +489,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'tracking-list',
     title: 'Tracking List',
     route: '/features/tracking-list',
-    domain: 'tracking',
-  },
-  {
-    id: 'tracking-dashboard',
-    title: 'Tracking Dashboard',
-    route: '/features/tracking-dashboard',
     domain: 'tracking',
   },
   {
@@ -744,12 +504,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'preorders',
   },
   {
-    id: 'preorders-settings',
-    title: 'Preorders Settings',
-    route: '/features/preorders-settings',
-    domain: 'preorders',
-  },
-  {
     id: 'preorders-list',
     title: 'Preorders List',
     route: '/features/preorders-list',
@@ -762,12 +516,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'preorders',
   },
   {
-    id: 'catalog-overview',
-    title: 'Catalog Overview',
-    route: '/features/catalog-overview',
-    domain: 'catalog',
-  },
-  {
     id: 'catalog-details',
     title: 'Catalog Details',
     route: '/features/catalog-details',
@@ -777,12 +525,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'catalog-settings',
     title: 'Catalog Settings',
     route: '/features/catalog-settings',
-    domain: 'catalog',
-  },
-  {
-    id: 'catalog-list',
-    title: 'Catalog List',
-    route: '/features/catalog-list',
     domain: 'catalog',
   },
   {
@@ -798,12 +540,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'auth',
   },
   {
-    id: 'auth-details',
-    title: 'Auth Details',
-    route: '/features/auth-details',
-    domain: 'auth',
-  },
-  {
     id: 'auth-settings',
     title: 'Auth Settings',
     route: '/features/auth-settings',
@@ -813,12 +549,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'auth-list',
     title: 'Auth List',
     route: '/features/auth-list',
-    domain: 'auth',
-  },
-  {
-    id: 'auth-dashboard',
-    title: 'Auth Dashboard',
-    route: '/features/auth-dashboard',
     domain: 'auth',
   },
   {
@@ -834,12 +564,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'profile',
   },
   {
-    id: 'profile-settings',
-    title: 'Profile Settings',
-    route: '/features/profile-settings',
-    domain: 'profile',
-  },
-  {
     id: 'profile-list',
     title: 'Profile List',
     route: '/features/profile-list',
@@ -852,12 +576,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'profile',
   },
   {
-    id: 'analytics-overview',
-    title: 'Analytics Overview',
-    route: '/features/analytics-overview',
-    domain: 'analytics',
-  },
-  {
     id: 'analytics-details',
     title: 'Analytics Details',
     route: '/features/analytics-details',
@@ -867,12 +585,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'analytics-settings',
     title: 'Analytics Settings',
     route: '/features/analytics-settings',
-    domain: 'analytics',
-  },
-  {
-    id: 'analytics-list',
-    title: 'Analytics List',
-    route: '/features/analytics-list',
     domain: 'analytics',
   },
   {
@@ -888,12 +600,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     domain: 'feedback',
   },
   {
-    id: 'feedback-details',
-    title: 'Feedback Details',
-    route: '/features/feedback-details',
-    domain: 'feedback',
-  },
-  {
     id: 'feedback-settings',
     title: 'Feedback Settings',
     route: '/features/feedback-settings',
@@ -903,12 +609,6 @@ export const FEATURE_LINKS: ReadonlyArray<FeatureLink> = [
     id: 'feedback-list',
     title: 'Feedback List',
     route: '/features/feedback-list',
-    domain: 'feedback',
-  },
-  {
-    id: 'feedback-dashboard',
-    title: 'Feedback Dashboard',
-    route: '/features/feedback-dashboard',
     domain: 'feedback',
   },
 ];
@@ -923,11 +623,6 @@ const CartDetailsPage = lazy(() =>
     default: m.CartDetailsPage,
   })),
 );
-const CartSettingsPage = lazy(() =>
-  import('@org/shop-feature-cart-settings').then((m) => ({
-    default: m.CartSettingsPage,
-  })),
-);
 const CartListPage = lazy(() =>
   import('@org/shop-feature-cart-list').then((m) => ({
     default: m.CartListPage,
@@ -936,11 +631,6 @@ const CartListPage = lazy(() =>
 const CartDashboardPage = lazy(() =>
   import('@org/shop-feature-cart-dashboard').then((m) => ({
     default: m.CartDashboardPage,
-  })),
-);
-const CheckoutOverviewPage = lazy(() =>
-  import('@org/shop-feature-checkout-overview').then((m) => ({
-    default: m.CheckoutOverviewPage,
   })),
 );
 const CheckoutDetailsPage = lazy(() =>
@@ -953,11 +643,6 @@ const CheckoutSettingsPage = lazy(() =>
     default: m.CheckoutSettingsPage,
   })),
 );
-const CheckoutListPage = lazy(() =>
-  import('@org/shop-feature-checkout-list').then((m) => ({
-    default: m.CheckoutListPage,
-  })),
-);
 const CheckoutDashboardPage = lazy(() =>
   import('@org/shop-feature-checkout-dashboard').then((m) => ({
     default: m.CheckoutDashboardPage,
@@ -966,11 +651,6 @@ const CheckoutDashboardPage = lazy(() =>
 const WishlistOverviewPage = lazy(() =>
   import('@org/shop-feature-wishlist-overview').then((m) => ({
     default: m.WishlistOverviewPage,
-  })),
-);
-const WishlistDetailsPage = lazy(() =>
-  import('@org/shop-feature-wishlist-details').then((m) => ({
-    default: m.WishlistDetailsPage,
   })),
 );
 const WishlistSettingsPage = lazy(() =>
@@ -983,11 +663,6 @@ const WishlistListPage = lazy(() =>
     default: m.WishlistListPage,
   })),
 );
-const WishlistDashboardPage = lazy(() =>
-  import('@org/shop-feature-wishlist-dashboard').then((m) => ({
-    default: m.WishlistDashboardPage,
-  })),
-);
 const ReviewsOverviewPage = lazy(() =>
   import('@org/shop-feature-reviews-overview').then((m) => ({
     default: m.ReviewsOverviewPage,
@@ -996,11 +671,6 @@ const ReviewsOverviewPage = lazy(() =>
 const ReviewsDetailsPage = lazy(() =>
   import('@org/shop-feature-reviews-details').then((m) => ({
     default: m.ReviewsDetailsPage,
-  })),
-);
-const ReviewsSettingsPage = lazy(() =>
-  import('@org/shop-feature-reviews-settings').then((m) => ({
-    default: m.ReviewsSettingsPage,
   })),
 );
 const ReviewsListPage = lazy(() =>
@@ -1013,11 +683,6 @@ const ReviewsDashboardPage = lazy(() =>
     default: m.ReviewsDashboardPage,
   })),
 );
-const SearchOverviewPage = lazy(() =>
-  import('@org/shop-feature-search-overview').then((m) => ({
-    default: m.SearchOverviewPage,
-  })),
-);
 const SearchDetailsPage = lazy(() =>
   import('@org/shop-feature-search-details').then((m) => ({
     default: m.SearchDetailsPage,
@@ -1026,11 +691,6 @@ const SearchDetailsPage = lazy(() =>
 const SearchSettingsPage = lazy(() =>
   import('@org/shop-feature-search-settings').then((m) => ({
     default: m.SearchSettingsPage,
-  })),
-);
-const SearchListPage = lazy(() =>
-  import('@org/shop-feature-search-list').then((m) => ({
-    default: m.SearchListPage,
   })),
 );
 const SearchDashboardPage = lazy(() =>
@@ -1043,11 +703,6 @@ const RecommendationsOverviewPage = lazy(() =>
     default: m.RecommendationsOverviewPage,
   })),
 );
-const RecommendationsDetailsPage = lazy(() =>
-  import('@org/shop-feature-recommendations-details').then((m) => ({
-    default: m.RecommendationsDetailsPage,
-  })),
-);
 const RecommendationsSettingsPage = lazy(() =>
   import('@org/shop-feature-recommendations-settings').then((m) => ({
     default: m.RecommendationsSettingsPage,
@@ -1056,11 +711,6 @@ const RecommendationsSettingsPage = lazy(() =>
 const RecommendationsListPage = lazy(() =>
   import('@org/shop-feature-recommendations-list').then((m) => ({
     default: m.RecommendationsListPage,
-  })),
-);
-const RecommendationsDashboardPage = lazy(() =>
-  import('@org/shop-feature-recommendations-dashboard').then((m) => ({
-    default: m.RecommendationsDashboardPage,
   })),
 );
 const OrdersOverviewPage = lazy(() =>
@@ -1073,11 +723,6 @@ const OrdersDetailsPage = lazy(() =>
     default: m.OrdersDetailsPage,
   })),
 );
-const OrdersSettingsPage = lazy(() =>
-  import('@org/shop-feature-orders-settings').then((m) => ({
-    default: m.OrdersSettingsPage,
-  })),
-);
 const OrdersListPage = lazy(() =>
   import('@org/shop-feature-orders-list').then((m) => ({
     default: m.OrdersListPage,
@@ -1086,11 +731,6 @@ const OrdersListPage = lazy(() =>
 const OrdersDashboardPage = lazy(() =>
   import('@org/shop-feature-orders-dashboard').then((m) => ({
     default: m.OrdersDashboardPage,
-  })),
-);
-const ReturnsOverviewPage = lazy(() =>
-  import('@org/shop-feature-returns-overview').then((m) => ({
-    default: m.ReturnsOverviewPage,
   })),
 );
 const ReturnsDetailsPage = lazy(() =>
@@ -1103,11 +743,6 @@ const ReturnsSettingsPage = lazy(() =>
     default: m.ReturnsSettingsPage,
   })),
 );
-const ReturnsListPage = lazy(() =>
-  import('@org/shop-feature-returns-list').then((m) => ({
-    default: m.ReturnsListPage,
-  })),
-);
 const ReturnsDashboardPage = lazy(() =>
   import('@org/shop-feature-returns-dashboard').then((m) => ({
     default: m.ReturnsDashboardPage,
@@ -1116,11 +751,6 @@ const ReturnsDashboardPage = lazy(() =>
 const AccountOverviewPage = lazy(() =>
   import('@org/shop-feature-account-overview').then((m) => ({
     default: m.AccountOverviewPage,
-  })),
-);
-const AccountDetailsPage = lazy(() =>
-  import('@org/shop-feature-account-details').then((m) => ({
-    default: m.AccountDetailsPage,
   })),
 );
 const AccountSettingsPage = lazy(() =>
@@ -1133,11 +763,6 @@ const AccountListPage = lazy(() =>
     default: m.AccountListPage,
   })),
 );
-const AccountDashboardPage = lazy(() =>
-  import('@org/shop-feature-account-dashboard').then((m) => ({
-    default: m.AccountDashboardPage,
-  })),
-);
 const AddressesOverviewPage = lazy(() =>
   import('@org/shop-feature-addresses-overview').then((m) => ({
     default: m.AddressesOverviewPage,
@@ -1146,11 +771,6 @@ const AddressesOverviewPage = lazy(() =>
 const AddressesDetailsPage = lazy(() =>
   import('@org/shop-feature-addresses-details').then((m) => ({
     default: m.AddressesDetailsPage,
-  })),
-);
-const AddressesSettingsPage = lazy(() =>
-  import('@org/shop-feature-addresses-settings').then((m) => ({
-    default: m.AddressesSettingsPage,
   })),
 );
 const AddressesListPage = lazy(() =>
@@ -1163,11 +783,6 @@ const AddressesDashboardPage = lazy(() =>
     default: m.AddressesDashboardPage,
   })),
 );
-const PaymentsOverviewPage = lazy(() =>
-  import('@org/shop-feature-payments-overview').then((m) => ({
-    default: m.PaymentsOverviewPage,
-  })),
-);
 const PaymentsDetailsPage = lazy(() =>
   import('@org/shop-feature-payments-details').then((m) => ({
     default: m.PaymentsDetailsPage,
@@ -1176,11 +791,6 @@ const PaymentsDetailsPage = lazy(() =>
 const PaymentsSettingsPage = lazy(() =>
   import('@org/shop-feature-payments-settings').then((m) => ({
     default: m.PaymentsSettingsPage,
-  })),
-);
-const PaymentsListPage = lazy(() =>
-  import('@org/shop-feature-payments-list').then((m) => ({
-    default: m.PaymentsListPage,
   })),
 );
 const PaymentsDashboardPage = lazy(() =>
@@ -1193,11 +803,6 @@ const ShippingOverviewPage = lazy(() =>
     default: m.ShippingOverviewPage,
   })),
 );
-const ShippingDetailsPage = lazy(() =>
-  import('@org/shop-feature-shipping-details').then((m) => ({
-    default: m.ShippingDetailsPage,
-  })),
-);
 const ShippingSettingsPage = lazy(() =>
   import('@org/shop-feature-shipping-settings').then((m) => ({
     default: m.ShippingSettingsPage,
@@ -1206,11 +811,6 @@ const ShippingSettingsPage = lazy(() =>
 const ShippingListPage = lazy(() =>
   import('@org/shop-feature-shipping-list').then((m) => ({
     default: m.ShippingListPage,
-  })),
-);
-const ShippingDashboardPage = lazy(() =>
-  import('@org/shop-feature-shipping-dashboard').then((m) => ({
-    default: m.ShippingDashboardPage,
   })),
 );
 const LoyaltyOverviewPage = lazy(() =>
@@ -1223,11 +823,6 @@ const LoyaltyDetailsPage = lazy(() =>
     default: m.LoyaltyDetailsPage,
   })),
 );
-const LoyaltySettingsPage = lazy(() =>
-  import('@org/shop-feature-loyalty-settings').then((m) => ({
-    default: m.LoyaltySettingsPage,
-  })),
-);
 const LoyaltyListPage = lazy(() =>
   import('@org/shop-feature-loyalty-list').then((m) => ({
     default: m.LoyaltyListPage,
@@ -1236,11 +831,6 @@ const LoyaltyListPage = lazy(() =>
 const LoyaltyDashboardPage = lazy(() =>
   import('@org/shop-feature-loyalty-dashboard').then((m) => ({
     default: m.LoyaltyDashboardPage,
-  })),
-);
-const PromotionsOverviewPage = lazy(() =>
-  import('@org/shop-feature-promotions-overview').then((m) => ({
-    default: m.PromotionsOverviewPage,
   })),
 );
 const PromotionsDetailsPage = lazy(() =>
@@ -1253,11 +843,6 @@ const PromotionsSettingsPage = lazy(() =>
     default: m.PromotionsSettingsPage,
   })),
 );
-const PromotionsListPage = lazy(() =>
-  import('@org/shop-feature-promotions-list').then((m) => ({
-    default: m.PromotionsListPage,
-  })),
-);
 const PromotionsDashboardPage = lazy(() =>
   import('@org/shop-feature-promotions-dashboard').then((m) => ({
     default: m.PromotionsDashboardPage,
@@ -1266,11 +851,6 @@ const PromotionsDashboardPage = lazy(() =>
 const GiftCardsOverviewPage = lazy(() =>
   import('@org/shop-feature-gift-cards-overview').then((m) => ({
     default: m.GiftCardsOverviewPage,
-  })),
-);
-const GiftCardsDetailsPage = lazy(() =>
-  import('@org/shop-feature-gift-cards-details').then((m) => ({
-    default: m.GiftCardsDetailsPage,
   })),
 );
 const GiftCardsSettingsPage = lazy(() =>
@@ -1283,11 +863,6 @@ const GiftCardsListPage = lazy(() =>
     default: m.GiftCardsListPage,
   })),
 );
-const GiftCardsDashboardPage = lazy(() =>
-  import('@org/shop-feature-gift-cards-dashboard').then((m) => ({
-    default: m.GiftCardsDashboardPage,
-  })),
-);
 const InventoryOverviewPage = lazy(() =>
   import('@org/shop-feature-inventory-overview').then((m) => ({
     default: m.InventoryOverviewPage,
@@ -1296,11 +871,6 @@ const InventoryOverviewPage = lazy(() =>
 const InventoryDetailsPage = lazy(() =>
   import('@org/shop-feature-inventory-details').then((m) => ({
     default: m.InventoryDetailsPage,
-  })),
-);
-const InventorySettingsPage = lazy(() =>
-  import('@org/shop-feature-inventory-settings').then((m) => ({
-    default: m.InventorySettingsPage,
   })),
 );
 const InventoryListPage = lazy(() =>
@@ -1313,11 +883,6 @@ const InventoryDashboardPage = lazy(() =>
     default: m.InventoryDashboardPage,
   })),
 );
-const NotificationsOverviewPage = lazy(() =>
-  import('@org/shop-feature-notifications-overview').then((m) => ({
-    default: m.NotificationsOverviewPage,
-  })),
-);
 const NotificationsDetailsPage = lazy(() =>
   import('@org/shop-feature-notifications-details').then((m) => ({
     default: m.NotificationsDetailsPage,
@@ -1326,11 +891,6 @@ const NotificationsDetailsPage = lazy(() =>
 const NotificationsSettingsPage = lazy(() =>
   import('@org/shop-feature-notifications-settings').then((m) => ({
     default: m.NotificationsSettingsPage,
-  })),
-);
-const NotificationsListPage = lazy(() =>
-  import('@org/shop-feature-notifications-list').then((m) => ({
-    default: m.NotificationsListPage,
   })),
 );
 const NotificationsDashboardPage = lazy(() =>
@@ -1343,11 +903,6 @@ const SupportOverviewPage = lazy(() =>
     default: m.SupportOverviewPage,
   })),
 );
-const SupportDetailsPage = lazy(() =>
-  import('@org/shop-feature-support-details').then((m) => ({
-    default: m.SupportDetailsPage,
-  })),
-);
 const SupportSettingsPage = lazy(() =>
   import('@org/shop-feature-support-settings').then((m) => ({
     default: m.SupportSettingsPage,
@@ -1356,11 +911,6 @@ const SupportSettingsPage = lazy(() =>
 const SupportListPage = lazy(() =>
   import('@org/shop-feature-support-list').then((m) => ({
     default: m.SupportListPage,
-  })),
-);
-const SupportDashboardPage = lazy(() =>
-  import('@org/shop-feature-support-dashboard').then((m) => ({
-    default: m.SupportDashboardPage,
   })),
 );
 const CompareOverviewPage = lazy(() =>
@@ -1373,11 +923,6 @@ const CompareDetailsPage = lazy(() =>
     default: m.CompareDetailsPage,
   })),
 );
-const CompareSettingsPage = lazy(() =>
-  import('@org/shop-feature-compare-settings').then((m) => ({
-    default: m.CompareSettingsPage,
-  })),
-);
 const CompareListPage = lazy(() =>
   import('@org/shop-feature-compare-list').then((m) => ({
     default: m.CompareListPage,
@@ -1386,11 +931,6 @@ const CompareListPage = lazy(() =>
 const CompareDashboardPage = lazy(() =>
   import('@org/shop-feature-compare-dashboard').then((m) => ({
     default: m.CompareDashboardPage,
-  })),
-);
-const SubscriptionsOverviewPage = lazy(() =>
-  import('@org/shop-feature-subscriptions-overview').then((m) => ({
-    default: m.SubscriptionsOverviewPage,
   })),
 );
 const SubscriptionsDetailsPage = lazy(() =>
@@ -1403,11 +943,6 @@ const SubscriptionsSettingsPage = lazy(() =>
     default: m.SubscriptionsSettingsPage,
   })),
 );
-const SubscriptionsListPage = lazy(() =>
-  import('@org/shop-feature-subscriptions-list').then((m) => ({
-    default: m.SubscriptionsListPage,
-  })),
-);
 const SubscriptionsDashboardPage = lazy(() =>
   import('@org/shop-feature-subscriptions-dashboard').then((m) => ({
     default: m.SubscriptionsDashboardPage,
@@ -1416,11 +951,6 @@ const SubscriptionsDashboardPage = lazy(() =>
 const BundlesOverviewPage = lazy(() =>
   import('@org/shop-feature-bundles-overview').then((m) => ({
     default: m.BundlesOverviewPage,
-  })),
-);
-const BundlesDetailsPage = lazy(() =>
-  import('@org/shop-feature-bundles-details').then((m) => ({
-    default: m.BundlesDetailsPage,
   })),
 );
 const BundlesSettingsPage = lazy(() =>
@@ -1433,11 +963,6 @@ const BundlesListPage = lazy(() =>
     default: m.BundlesListPage,
   })),
 );
-const BundlesDashboardPage = lazy(() =>
-  import('@org/shop-feature-bundles-dashboard').then((m) => ({
-    default: m.BundlesDashboardPage,
-  })),
-);
 const SizingOverviewPage = lazy(() =>
   import('@org/shop-feature-sizing-overview').then((m) => ({
     default: m.SizingOverviewPage,
@@ -1446,11 +971,6 @@ const SizingOverviewPage = lazy(() =>
 const SizingDetailsPage = lazy(() =>
   import('@org/shop-feature-sizing-details').then((m) => ({
     default: m.SizingDetailsPage,
-  })),
-);
-const SizingSettingsPage = lazy(() =>
-  import('@org/shop-feature-sizing-settings').then((m) => ({
-    default: m.SizingSettingsPage,
   })),
 );
 const SizingListPage = lazy(() =>
@@ -1463,11 +983,6 @@ const SizingDashboardPage = lazy(() =>
     default: m.SizingDashboardPage,
   })),
 );
-const StoreLocatorOverviewPage = lazy(() =>
-  import('@org/shop-feature-store-locator-overview').then((m) => ({
-    default: m.StoreLocatorOverviewPage,
-  })),
-);
 const StoreLocatorDetailsPage = lazy(() =>
   import('@org/shop-feature-store-locator-details').then((m) => ({
     default: m.StoreLocatorDetailsPage,
@@ -1476,11 +991,6 @@ const StoreLocatorDetailsPage = lazy(() =>
 const StoreLocatorSettingsPage = lazy(() =>
   import('@org/shop-feature-store-locator-settings').then((m) => ({
     default: m.StoreLocatorSettingsPage,
-  })),
-);
-const StoreLocatorListPage = lazy(() =>
-  import('@org/shop-feature-store-locator-list').then((m) => ({
-    default: m.StoreLocatorListPage,
   })),
 );
 const StoreLocatorDashboardPage = lazy(() =>
@@ -1493,11 +1003,6 @@ const TrackingOverviewPage = lazy(() =>
     default: m.TrackingOverviewPage,
   })),
 );
-const TrackingDetailsPage = lazy(() =>
-  import('@org/shop-feature-tracking-details').then((m) => ({
-    default: m.TrackingDetailsPage,
-  })),
-);
 const TrackingSettingsPage = lazy(() =>
   import('@org/shop-feature-tracking-settings').then((m) => ({
     default: m.TrackingSettingsPage,
@@ -1506,11 +1011,6 @@ const TrackingSettingsPage = lazy(() =>
 const TrackingListPage = lazy(() =>
   import('@org/shop-feature-tracking-list').then((m) => ({
     default: m.TrackingListPage,
-  })),
-);
-const TrackingDashboardPage = lazy(() =>
-  import('@org/shop-feature-tracking-dashboard').then((m) => ({
-    default: m.TrackingDashboardPage,
   })),
 );
 const PreordersOverviewPage = lazy(() =>
@@ -1523,11 +1023,6 @@ const PreordersDetailsPage = lazy(() =>
     default: m.PreordersDetailsPage,
   })),
 );
-const PreordersSettingsPage = lazy(() =>
-  import('@org/shop-feature-preorders-settings').then((m) => ({
-    default: m.PreordersSettingsPage,
-  })),
-);
 const PreordersListPage = lazy(() =>
   import('@org/shop-feature-preorders-list').then((m) => ({
     default: m.PreordersListPage,
@@ -1536,11 +1031,6 @@ const PreordersListPage = lazy(() =>
 const PreordersDashboardPage = lazy(() =>
   import('@org/shop-feature-preorders-dashboard').then((m) => ({
     default: m.PreordersDashboardPage,
-  })),
-);
-const CatalogOverviewPage = lazy(() =>
-  import('@org/shop-feature-catalog-overview').then((m) => ({
-    default: m.CatalogOverviewPage,
   })),
 );
 const CatalogDetailsPage = lazy(() =>
@@ -1553,11 +1043,6 @@ const CatalogSettingsPage = lazy(() =>
     default: m.CatalogSettingsPage,
   })),
 );
-const CatalogListPage = lazy(() =>
-  import('@org/shop-feature-catalog-list').then((m) => ({
-    default: m.CatalogListPage,
-  })),
-);
 const CatalogDashboardPage = lazy(() =>
   import('@org/shop-feature-catalog-dashboard').then((m) => ({
     default: m.CatalogDashboardPage,
@@ -1566,11 +1051,6 @@ const CatalogDashboardPage = lazy(() =>
 const AuthOverviewPage = lazy(() =>
   import('@org/shop-feature-auth-overview').then((m) => ({
     default: m.AuthOverviewPage,
-  })),
-);
-const AuthDetailsPage = lazy(() =>
-  import('@org/shop-feature-auth-details').then((m) => ({
-    default: m.AuthDetailsPage,
   })),
 );
 const AuthSettingsPage = lazy(() =>
@@ -1583,11 +1063,6 @@ const AuthListPage = lazy(() =>
     default: m.AuthListPage,
   })),
 );
-const AuthDashboardPage = lazy(() =>
-  import('@org/shop-feature-auth-dashboard').then((m) => ({
-    default: m.AuthDashboardPage,
-  })),
-);
 const ProfileOverviewPage = lazy(() =>
   import('@org/shop-feature-profile-overview').then((m) => ({
     default: m.ProfileOverviewPage,
@@ -1596,11 +1071,6 @@ const ProfileOverviewPage = lazy(() =>
 const ProfileDetailsPage = lazy(() =>
   import('@org/shop-feature-profile-details').then((m) => ({
     default: m.ProfileDetailsPage,
-  })),
-);
-const ProfileSettingsPage = lazy(() =>
-  import('@org/shop-feature-profile-settings').then((m) => ({
-    default: m.ProfileSettingsPage,
   })),
 );
 const ProfileListPage = lazy(() =>
@@ -1613,11 +1083,6 @@ const ProfileDashboardPage = lazy(() =>
     default: m.ProfileDashboardPage,
   })),
 );
-const AnalyticsOverviewPage = lazy(() =>
-  import('@org/shop-feature-analytics-overview').then((m) => ({
-    default: m.AnalyticsOverviewPage,
-  })),
-);
 const AnalyticsDetailsPage = lazy(() =>
   import('@org/shop-feature-analytics-details').then((m) => ({
     default: m.AnalyticsDetailsPage,
@@ -1626,11 +1091,6 @@ const AnalyticsDetailsPage = lazy(() =>
 const AnalyticsSettingsPage = lazy(() =>
   import('@org/shop-feature-analytics-settings').then((m) => ({
     default: m.AnalyticsSettingsPage,
-  })),
-);
-const AnalyticsListPage = lazy(() =>
-  import('@org/shop-feature-analytics-list').then((m) => ({
-    default: m.AnalyticsListPage,
   })),
 );
 const AnalyticsDashboardPage = lazy(() =>
@@ -1643,11 +1103,6 @@ const FeedbackOverviewPage = lazy(() =>
     default: m.FeedbackOverviewPage,
   })),
 );
-const FeedbackDetailsPage = lazy(() =>
-  import('@org/shop-feature-feedback-details').then((m) => ({
-    default: m.FeedbackDetailsPage,
-  })),
-);
 const FeedbackSettingsPage = lazy(() =>
   import('@org/shop-feature-feedback-settings').then((m) => ({
     default: m.FeedbackSettingsPage,
@@ -1656,11 +1111,6 @@ const FeedbackSettingsPage = lazy(() =>
 const FeedbackListPage = lazy(() =>
   import('@org/shop-feature-feedback-list').then((m) => ({
     default: m.FeedbackListPage,
-  })),
-);
-const FeedbackDashboardPage = lazy(() =>
-  import('@org/shop-feature-feedback-dashboard').then((m) => ({
-    default: m.FeedbackDashboardPage,
   })),
 );
 
@@ -1676,11 +1126,6 @@ export const featureRoutes = [
     element={<CartDetailsPage />}
   />,
   <Route
-    key="cart-settings"
-    path="/features/cart-settings"
-    element={<CartSettingsPage />}
-  />,
-  <Route
     key="cart-list"
     path="/features/cart-list"
     element={<CartListPage />}
@@ -1689,11 +1134,6 @@ export const featureRoutes = [
     key="cart-dashboard"
     path="/features/cart-dashboard"
     element={<CartDashboardPage />}
-  />,
-  <Route
-    key="checkout-overview"
-    path="/features/checkout-overview"
-    element={<CheckoutOverviewPage />}
   />,
   <Route
     key="checkout-details"
@@ -1706,11 +1146,6 @@ export const featureRoutes = [
     element={<CheckoutSettingsPage />}
   />,
   <Route
-    key="checkout-list"
-    path="/features/checkout-list"
-    element={<CheckoutListPage />}
-  />,
-  <Route
     key="checkout-dashboard"
     path="/features/checkout-dashboard"
     element={<CheckoutDashboardPage />}
@@ -1719,11 +1154,6 @@ export const featureRoutes = [
     key="wishlist-overview"
     path="/features/wishlist-overview"
     element={<WishlistOverviewPage />}
-  />,
-  <Route
-    key="wishlist-details"
-    path="/features/wishlist-details"
-    element={<WishlistDetailsPage />}
   />,
   <Route
     key="wishlist-settings"
@@ -1736,11 +1166,6 @@ export const featureRoutes = [
     element={<WishlistListPage />}
   />,
   <Route
-    key="wishlist-dashboard"
-    path="/features/wishlist-dashboard"
-    element={<WishlistDashboardPage />}
-  />,
-  <Route
     key="reviews-overview"
     path="/features/reviews-overview"
     element={<ReviewsOverviewPage />}
@@ -1749,11 +1174,6 @@ export const featureRoutes = [
     key="reviews-details"
     path="/features/reviews-details"
     element={<ReviewsDetailsPage />}
-  />,
-  <Route
-    key="reviews-settings"
-    path="/features/reviews-settings"
-    element={<ReviewsSettingsPage />}
   />,
   <Route
     key="reviews-list"
@@ -1766,11 +1186,6 @@ export const featureRoutes = [
     element={<ReviewsDashboardPage />}
   />,
   <Route
-    key="search-overview"
-    path="/features/search-overview"
-    element={<SearchOverviewPage />}
-  />,
-  <Route
     key="search-details"
     path="/features/search-details"
     element={<SearchDetailsPage />}
@@ -1779,11 +1194,6 @@ export const featureRoutes = [
     key="search-settings"
     path="/features/search-settings"
     element={<SearchSettingsPage />}
-  />,
-  <Route
-    key="search-list"
-    path="/features/search-list"
-    element={<SearchListPage />}
   />,
   <Route
     key="search-dashboard"
@@ -1796,11 +1206,6 @@ export const featureRoutes = [
     element={<RecommendationsOverviewPage />}
   />,
   <Route
-    key="recommendations-details"
-    path="/features/recommendations-details"
-    element={<RecommendationsDetailsPage />}
-  />,
-  <Route
     key="recommendations-settings"
     path="/features/recommendations-settings"
     element={<RecommendationsSettingsPage />}
@@ -1809,11 +1214,6 @@ export const featureRoutes = [
     key="recommendations-list"
     path="/features/recommendations-list"
     element={<RecommendationsListPage />}
-  />,
-  <Route
-    key="recommendations-dashboard"
-    path="/features/recommendations-dashboard"
-    element={<RecommendationsDashboardPage />}
   />,
   <Route
     key="orders-overview"
@@ -1826,11 +1226,6 @@ export const featureRoutes = [
     element={<OrdersDetailsPage />}
   />,
   <Route
-    key="orders-settings"
-    path="/features/orders-settings"
-    element={<OrdersSettingsPage />}
-  />,
-  <Route
     key="orders-list"
     path="/features/orders-list"
     element={<OrdersListPage />}
@@ -1839,11 +1234,6 @@ export const featureRoutes = [
     key="orders-dashboard"
     path="/features/orders-dashboard"
     element={<OrdersDashboardPage />}
-  />,
-  <Route
-    key="returns-overview"
-    path="/features/returns-overview"
-    element={<ReturnsOverviewPage />}
   />,
   <Route
     key="returns-details"
@@ -1856,11 +1246,6 @@ export const featureRoutes = [
     element={<ReturnsSettingsPage />}
   />,
   <Route
-    key="returns-list"
-    path="/features/returns-list"
-    element={<ReturnsListPage />}
-  />,
-  <Route
     key="returns-dashboard"
     path="/features/returns-dashboard"
     element={<ReturnsDashboardPage />}
@@ -1869,11 +1254,6 @@ export const featureRoutes = [
     key="account-overview"
     path="/features/account-overview"
     element={<AccountOverviewPage />}
-  />,
-  <Route
-    key="account-details"
-    path="/features/account-details"
-    element={<AccountDetailsPage />}
   />,
   <Route
     key="account-settings"
@@ -1886,11 +1266,6 @@ export const featureRoutes = [
     element={<AccountListPage />}
   />,
   <Route
-    key="account-dashboard"
-    path="/features/account-dashboard"
-    element={<AccountDashboardPage />}
-  />,
-  <Route
     key="addresses-overview"
     path="/features/addresses-overview"
     element={<AddressesOverviewPage />}
@@ -1899,11 +1274,6 @@ export const featureRoutes = [
     key="addresses-details"
     path="/features/addresses-details"
     element={<AddressesDetailsPage />}
-  />,
-  <Route
-    key="addresses-settings"
-    path="/features/addresses-settings"
-    element={<AddressesSettingsPage />}
   />,
   <Route
     key="addresses-list"
@@ -1916,11 +1286,6 @@ export const featureRoutes = [
     element={<AddressesDashboardPage />}
   />,
   <Route
-    key="payments-overview"
-    path="/features/payments-overview"
-    element={<PaymentsOverviewPage />}
-  />,
-  <Route
     key="payments-details"
     path="/features/payments-details"
     element={<PaymentsDetailsPage />}
@@ -1929,11 +1294,6 @@ export const featureRoutes = [
     key="payments-settings"
     path="/features/payments-settings"
     element={<PaymentsSettingsPage />}
-  />,
-  <Route
-    key="payments-list"
-    path="/features/payments-list"
-    element={<PaymentsListPage />}
   />,
   <Route
     key="payments-dashboard"
@@ -1946,11 +1306,6 @@ export const featureRoutes = [
     element={<ShippingOverviewPage />}
   />,
   <Route
-    key="shipping-details"
-    path="/features/shipping-details"
-    element={<ShippingDetailsPage />}
-  />,
-  <Route
     key="shipping-settings"
     path="/features/shipping-settings"
     element={<ShippingSettingsPage />}
@@ -1959,11 +1314,6 @@ export const featureRoutes = [
     key="shipping-list"
     path="/features/shipping-list"
     element={<ShippingListPage />}
-  />,
-  <Route
-    key="shipping-dashboard"
-    path="/features/shipping-dashboard"
-    element={<ShippingDashboardPage />}
   />,
   <Route
     key="loyalty-overview"
@@ -1976,11 +1326,6 @@ export const featureRoutes = [
     element={<LoyaltyDetailsPage />}
   />,
   <Route
-    key="loyalty-settings"
-    path="/features/loyalty-settings"
-    element={<LoyaltySettingsPage />}
-  />,
-  <Route
     key="loyalty-list"
     path="/features/loyalty-list"
     element={<LoyaltyListPage />}
@@ -1989,11 +1334,6 @@ export const featureRoutes = [
     key="loyalty-dashboard"
     path="/features/loyalty-dashboard"
     element={<LoyaltyDashboardPage />}
-  />,
-  <Route
-    key="promotions-overview"
-    path="/features/promotions-overview"
-    element={<PromotionsOverviewPage />}
   />,
   <Route
     key="promotions-details"
@@ -2006,11 +1346,6 @@ export const featureRoutes = [
     element={<PromotionsSettingsPage />}
   />,
   <Route
-    key="promotions-list"
-    path="/features/promotions-list"
-    element={<PromotionsListPage />}
-  />,
-  <Route
     key="promotions-dashboard"
     path="/features/promotions-dashboard"
     element={<PromotionsDashboardPage />}
@@ -2019,11 +1354,6 @@ export const featureRoutes = [
     key="gift-cards-overview"
     path="/features/gift-cards-overview"
     element={<GiftCardsOverviewPage />}
-  />,
-  <Route
-    key="gift-cards-details"
-    path="/features/gift-cards-details"
-    element={<GiftCardsDetailsPage />}
   />,
   <Route
     key="gift-cards-settings"
@@ -2036,11 +1366,6 @@ export const featureRoutes = [
     element={<GiftCardsListPage />}
   />,
   <Route
-    key="gift-cards-dashboard"
-    path="/features/gift-cards-dashboard"
-    element={<GiftCardsDashboardPage />}
-  />,
-  <Route
     key="inventory-overview"
     path="/features/inventory-overview"
     element={<InventoryOverviewPage />}
@@ -2049,11 +1374,6 @@ export const featureRoutes = [
     key="inventory-details"
     path="/features/inventory-details"
     element={<InventoryDetailsPage />}
-  />,
-  <Route
-    key="inventory-settings"
-    path="/features/inventory-settings"
-    element={<InventorySettingsPage />}
   />,
   <Route
     key="inventory-list"
@@ -2066,11 +1386,6 @@ export const featureRoutes = [
     element={<InventoryDashboardPage />}
   />,
   <Route
-    key="notifications-overview"
-    path="/features/notifications-overview"
-    element={<NotificationsOverviewPage />}
-  />,
-  <Route
     key="notifications-details"
     path="/features/notifications-details"
     element={<NotificationsDetailsPage />}
@@ -2079,11 +1394,6 @@ export const featureRoutes = [
     key="notifications-settings"
     path="/features/notifications-settings"
     element={<NotificationsSettingsPage />}
-  />,
-  <Route
-    key="notifications-list"
-    path="/features/notifications-list"
-    element={<NotificationsListPage />}
   />,
   <Route
     key="notifications-dashboard"
@@ -2096,11 +1406,6 @@ export const featureRoutes = [
     element={<SupportOverviewPage />}
   />,
   <Route
-    key="support-details"
-    path="/features/support-details"
-    element={<SupportDetailsPage />}
-  />,
-  <Route
     key="support-settings"
     path="/features/support-settings"
     element={<SupportSettingsPage />}
@@ -2109,11 +1414,6 @@ export const featureRoutes = [
     key="support-list"
     path="/features/support-list"
     element={<SupportListPage />}
-  />,
-  <Route
-    key="support-dashboard"
-    path="/features/support-dashboard"
-    element={<SupportDashboardPage />}
   />,
   <Route
     key="compare-overview"
@@ -2126,11 +1426,6 @@ export const featureRoutes = [
     element={<CompareDetailsPage />}
   />,
   <Route
-    key="compare-settings"
-    path="/features/compare-settings"
-    element={<CompareSettingsPage />}
-  />,
-  <Route
     key="compare-list"
     path="/features/compare-list"
     element={<CompareListPage />}
@@ -2139,11 +1434,6 @@ export const featureRoutes = [
     key="compare-dashboard"
     path="/features/compare-dashboard"
     element={<CompareDashboardPage />}
-  />,
-  <Route
-    key="subscriptions-overview"
-    path="/features/subscriptions-overview"
-    element={<SubscriptionsOverviewPage />}
   />,
   <Route
     key="subscriptions-details"
@@ -2156,11 +1446,6 @@ export const featureRoutes = [
     element={<SubscriptionsSettingsPage />}
   />,
   <Route
-    key="subscriptions-list"
-    path="/features/subscriptions-list"
-    element={<SubscriptionsListPage />}
-  />,
-  <Route
     key="subscriptions-dashboard"
     path="/features/subscriptions-dashboard"
     element={<SubscriptionsDashboardPage />}
@@ -2169,11 +1454,6 @@ export const featureRoutes = [
     key="bundles-overview"
     path="/features/bundles-overview"
     element={<BundlesOverviewPage />}
-  />,
-  <Route
-    key="bundles-details"
-    path="/features/bundles-details"
-    element={<BundlesDetailsPage />}
   />,
   <Route
     key="bundles-settings"
@@ -2186,11 +1466,6 @@ export const featureRoutes = [
     element={<BundlesListPage />}
   />,
   <Route
-    key="bundles-dashboard"
-    path="/features/bundles-dashboard"
-    element={<BundlesDashboardPage />}
-  />,
-  <Route
     key="sizing-overview"
     path="/features/sizing-overview"
     element={<SizingOverviewPage />}
@@ -2199,11 +1474,6 @@ export const featureRoutes = [
     key="sizing-details"
     path="/features/sizing-details"
     element={<SizingDetailsPage />}
-  />,
-  <Route
-    key="sizing-settings"
-    path="/features/sizing-settings"
-    element={<SizingSettingsPage />}
   />,
   <Route
     key="sizing-list"
@@ -2216,11 +1486,6 @@ export const featureRoutes = [
     element={<SizingDashboardPage />}
   />,
   <Route
-    key="store-locator-overview"
-    path="/features/store-locator-overview"
-    element={<StoreLocatorOverviewPage />}
-  />,
-  <Route
     key="store-locator-details"
     path="/features/store-locator-details"
     element={<StoreLocatorDetailsPage />}
@@ -2229,11 +1494,6 @@ export const featureRoutes = [
     key="store-locator-settings"
     path="/features/store-locator-settings"
     element={<StoreLocatorSettingsPage />}
-  />,
-  <Route
-    key="store-locator-list"
-    path="/features/store-locator-list"
-    element={<StoreLocatorListPage />}
   />,
   <Route
     key="store-locator-dashboard"
@@ -2246,11 +1506,6 @@ export const featureRoutes = [
     element={<TrackingOverviewPage />}
   />,
   <Route
-    key="tracking-details"
-    path="/features/tracking-details"
-    element={<TrackingDetailsPage />}
-  />,
-  <Route
     key="tracking-settings"
     path="/features/tracking-settings"
     element={<TrackingSettingsPage />}
@@ -2259,11 +1514,6 @@ export const featureRoutes = [
     key="tracking-list"
     path="/features/tracking-list"
     element={<TrackingListPage />}
-  />,
-  <Route
-    key="tracking-dashboard"
-    path="/features/tracking-dashboard"
-    element={<TrackingDashboardPage />}
   />,
   <Route
     key="preorders-overview"
@@ -2276,11 +1526,6 @@ export const featureRoutes = [
     element={<PreordersDetailsPage />}
   />,
   <Route
-    key="preorders-settings"
-    path="/features/preorders-settings"
-    element={<PreordersSettingsPage />}
-  />,
-  <Route
     key="preorders-list"
     path="/features/preorders-list"
     element={<PreordersListPage />}
@@ -2289,11 +1534,6 @@ export const featureRoutes = [
     key="preorders-dashboard"
     path="/features/preorders-dashboard"
     element={<PreordersDashboardPage />}
-  />,
-  <Route
-    key="catalog-overview"
-    path="/features/catalog-overview"
-    element={<CatalogOverviewPage />}
   />,
   <Route
     key="catalog-details"
@@ -2306,11 +1546,6 @@ export const featureRoutes = [
     element={<CatalogSettingsPage />}
   />,
   <Route
-    key="catalog-list"
-    path="/features/catalog-list"
-    element={<CatalogListPage />}
-  />,
-  <Route
     key="catalog-dashboard"
     path="/features/catalog-dashboard"
     element={<CatalogDashboardPage />}
@@ -2319,11 +1554,6 @@ export const featureRoutes = [
     key="auth-overview"
     path="/features/auth-overview"
     element={<AuthOverviewPage />}
-  />,
-  <Route
-    key="auth-details"
-    path="/features/auth-details"
-    element={<AuthDetailsPage />}
   />,
   <Route
     key="auth-settings"
@@ -2336,11 +1566,6 @@ export const featureRoutes = [
     element={<AuthListPage />}
   />,
   <Route
-    key="auth-dashboard"
-    path="/features/auth-dashboard"
-    element={<AuthDashboardPage />}
-  />,
-  <Route
     key="profile-overview"
     path="/features/profile-overview"
     element={<ProfileOverviewPage />}
@@ -2349,11 +1574,6 @@ export const featureRoutes = [
     key="profile-details"
     path="/features/profile-details"
     element={<ProfileDetailsPage />}
-  />,
-  <Route
-    key="profile-settings"
-    path="/features/profile-settings"
-    element={<ProfileSettingsPage />}
   />,
   <Route
     key="profile-list"
@@ -2366,11 +1586,6 @@ export const featureRoutes = [
     element={<ProfileDashboardPage />}
   />,
   <Route
-    key="analytics-overview"
-    path="/features/analytics-overview"
-    element={<AnalyticsOverviewPage />}
-  />,
-  <Route
     key="analytics-details"
     path="/features/analytics-details"
     element={<AnalyticsDetailsPage />}
@@ -2379,11 +1594,6 @@ export const featureRoutes = [
     key="analytics-settings"
     path="/features/analytics-settings"
     element={<AnalyticsSettingsPage />}
-  />,
-  <Route
-    key="analytics-list"
-    path="/features/analytics-list"
-    element={<AnalyticsListPage />}
   />,
   <Route
     key="analytics-dashboard"
@@ -2396,11 +1606,6 @@ export const featureRoutes = [
     element={<FeedbackOverviewPage />}
   />,
   <Route
-    key="feedback-details"
-    path="/features/feedback-details"
-    element={<FeedbackDetailsPage />}
-  />,
-  <Route
     key="feedback-settings"
     path="/features/feedback-settings"
     element={<FeedbackSettingsPage />}
@@ -2409,10 +1614,5 @@ export const featureRoutes = [
     key="feedback-list"
     path="/features/feedback-list"
     element={<FeedbackListPage />}
-  />,
-  <Route
-    key="feedback-dashboard"
-    path="/features/feedback-dashboard"
-    element={<FeedbackDashboardPage />}
   />,
 ];

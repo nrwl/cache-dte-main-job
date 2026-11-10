@@ -1,4 +1,4 @@
-import { InputsStat } from '@org/shop-ui-inputs-stat';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import { ACCOUNT_SETTINGS_FEATURE } from './account-settings.routes';
 
 export interface AccountSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function AccountSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <InputsStat label="Items" value={count} tone="info" />
-        <InputsStat label="Total" value={total} tone="success" />
+        <OverlayStat label="Items" value={count} tone="info" />
+        <OverlayStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

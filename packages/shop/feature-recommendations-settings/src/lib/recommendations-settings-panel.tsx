@@ -1,6 +1,4 @@
-import { CommercePanelGroup } from '@org/shop-ui-commerce-panel';
-import { DataBanner } from '@org/shop-ui-data-banner';
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
 import type { RecommendationsSettingsItem } from './recommendations-settings.model';
 import { RECOMMENDATIONS_SETTINGS_FEATURE } from './recommendations-settings.routes';
 import { describeRecommendationsSettingsItem } from './recommendations-settings.utils';
@@ -41,7 +39,7 @@ export function RecommendationsSettingsPanel({
       <p className="feature-panel-description">
         {describeRecommendationsSettingsItem(selected)}
       </p>
-      <CommercePanelGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function RecommendationsSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <DataBanner
-          label="Data Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FeedbackStat
-          label="Feedback Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

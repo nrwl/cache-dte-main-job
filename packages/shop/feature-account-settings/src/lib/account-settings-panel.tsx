@@ -1,4 +1,4 @@
-import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
 import type { AccountSettingsItem } from './account-settings.model';
 import { ACCOUNT_SETTINGS_FEATURE } from './account-settings.routes';
 import { describeAccountSettingsItem } from './account-settings.utils';
@@ -39,7 +39,7 @@ export function AccountSettingsPanel({
       <p className="feature-panel-description">
         {describeAccountSettingsItem(selected)}
       </p>
-      <OverlayStatGroup
+      <CommerceBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

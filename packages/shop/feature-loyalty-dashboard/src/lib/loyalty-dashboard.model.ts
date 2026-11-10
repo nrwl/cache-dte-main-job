@@ -21,7 +21,7 @@ export interface LoyaltyDashboardTotals {
   archived: number;
 }
 
-export const LOYALTY_DASHBOARD_ITEM_COUNT = 8;
+export const LOYALTY_DASHBOARD_ITEM_COUNT = 6;
 
 export const LOYALTY_DASHBOARD_STATUSES: ReadonlyArray<LoyaltyDashboardStatus> =
   ['active', 'pending', 'archived'];

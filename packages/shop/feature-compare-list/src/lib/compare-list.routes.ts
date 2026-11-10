@@ -19,7 +19,7 @@ export const COMPARE_LIST_FEATURE: FeatureMeta = {
   testId: COMPARE_LIST_TEST_ID,
   domain: 'compare',
   kind: 'list',
-  itemCount: 5,
+  itemCount: 10,
 };
 
 export function compareListItemPath(itemId: string): string {

@@ -1,6 +1,6 @@
-import { collectionPhone } from '@org/shop-util-collection-phone';
-import { mathCurrency } from '@org/shop-util-math-currency';
-import { mathName } from '@org/shop-util-math-name';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptySubscriptionsDetailsTotals,
   type SubscriptionsDetailsItem,
@@ -78,13 +78,13 @@ export function sortSubscriptionsDetails(
 export function describeSubscriptionsDetailsItem(
   item: SubscriptionsDetailsItem,
 ): string {
-  const amount = collectionPhone(item.amount);
-  const name = mathName(mathCurrency(item.name));
+  const amount = storagePhone(item.amount);
+  const name = formatPhone(asyncNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSubscriptionsDetailsAmount(amount: number): string {
-  return collectionPhone(amount);
+  return storagePhone(amount);
 }
 
 export function subscriptionsDetailsStatusTone(

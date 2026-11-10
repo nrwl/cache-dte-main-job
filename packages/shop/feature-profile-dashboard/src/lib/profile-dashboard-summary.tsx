@@ -1,4 +1,4 @@
-import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildProfileDashboardItems } from './profile-dashboard.model';
 import { PROFILE_DASHBOARD_FEATURE } from './profile-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function ProfileDashboardSummary({
       <h3 className="feature-summary-title">
         {PROFILE_DASHBOARD_FEATURE.title}
       </h3>
-      <FeedbackBannerGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

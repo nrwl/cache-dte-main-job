@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { CartOverviewSummary } from '@org/shop-feature-cart-overview';
 import { SearchDashboardFilters } from './search-dashboard-filters';
 import { SearchDashboardHeader } from './search-dashboard-header';
 import { SearchDashboardPanel } from './search-dashboard-panel';
@@ -53,6 +54,7 @@ export function SearchDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <CartOverviewSummary compact />
         </div>
       </div>
     </section>

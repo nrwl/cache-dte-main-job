@@ -21,9 +21,11 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-navigation-banner": "*",
-    "@org/shop-ui-data-toolbar": "*",
-    "@org/shop-ui-marketing-panel": "*",
-    "@org/shop-util-validate-phone": "*"
+    "@org/shop-ui-charts-banner": "*",
+    "@org/shop-ui-commerce-toolbar": "*",
+    "@org/shop-ui-feedback-banner": "*",
+    "@org/shop-ui-data-panel": "*",
+    "@org/shop-util-format-phone": "*",
+    "@org/shop-feature-payments-details": "*"
   }
 }

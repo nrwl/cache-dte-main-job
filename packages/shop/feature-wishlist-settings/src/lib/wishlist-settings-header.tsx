@@ -1,4 +1,4 @@
-import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import { WISHLIST_SETTINGS_FEATURE } from './wishlist-settings.routes';
 
 export interface WishlistSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function WishlistSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutToolbar label="Items" value={count} tone="info" />
-        <LayoutToolbar label="Total" value={total} tone="success" />
+        <TypographyBanner label="Items" value={count} tone="info" />
+        <TypographyBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

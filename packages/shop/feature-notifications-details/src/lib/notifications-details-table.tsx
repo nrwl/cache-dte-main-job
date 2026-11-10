@@ -1,4 +1,4 @@
-import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { NotificationsDetailsItem } from './notifications-details.model';
 import { NOTIFICATIONS_DETAILS_FEATURE } from './notifications-details.routes';
 import {
@@ -58,7 +58,7 @@ export function NotificationsDetailsTable({
             <td>{formatNotificationsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaToolbar
+              <InputsPanel
                 label={item.status}
                 tone={notificationsDetailsStatusTone(item.status)}
                 size="sm"

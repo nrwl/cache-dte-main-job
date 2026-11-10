@@ -1,4 +1,5 @@
-import { DataToolbarGroup } from '@org/shop-ui-data-toolbar';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { FeedbackListItem } from './feedback-list.model';
 import { FEEDBACK_LIST_FEATURE } from './feedback-list.routes';
 import { describeFeedbackListItem } from './feedback-list.utils';
@@ -39,7 +40,7 @@ export function FeedbackListPanel({
       <p className="feature-panel-description">
         {describeFeedbackListItem(selected)}
       </p>
-      <DataToolbarGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function FeedbackListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

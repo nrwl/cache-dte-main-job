@@ -1,4 +1,4 @@
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { BundlesListItem } from './bundles-list.model';
 import { BUNDLES_LIST_FEATURE } from './bundles-list.routes';
 import {
@@ -58,7 +58,7 @@ export function BundlesListTable({
             <td>{formatBundlesListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceBadge
+              <ChartsBanner
                 label={item.status}
                 tone={bundlesListStatusTone(item.status)}
                 size="sm"

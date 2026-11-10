@@ -1,4 +1,5 @@
-import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { SupportOverviewItem } from './support-overview.model';
 import { SUPPORT_OVERVIEW_FEATURE } from './support-overview.routes';
 import { describeSupportOverviewItem } from './support-overview.utils';
@@ -39,7 +40,7 @@ export function SupportOverviewPanel({
       <p className="feature-panel-description">
         {describeSupportOverviewItem(selected)}
       </p>
-      <TypographyPanelGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function SupportOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

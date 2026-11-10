@@ -19,7 +19,7 @@ export const PAYMENTS_DETAILS_FEATURE: FeatureMeta = {
   testId: PAYMENTS_DETAILS_TEST_ID,
   domain: 'payments',
   kind: 'details',
-  itemCount: 12,
+  itemCount: 5,
 };
 
 export function paymentsDetailsItemPath(itemId: string): string {

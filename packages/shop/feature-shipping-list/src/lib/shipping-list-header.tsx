@@ -1,4 +1,4 @@
-import { OverlayBanner } from '@org/shop-ui-overlay-banner';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import { SHIPPING_LIST_FEATURE } from './shipping-list.routes';
 
 export interface ShippingListHeaderProps {
@@ -26,8 +26,8 @@ export function ShippingListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <OverlayBanner label="Items" value={count} tone="info" />
-        <OverlayBanner label="Total" value={total} tone="success" />
+        <CommerceToolbar label="Items" value={count} tone="info" />
+        <CommerceToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

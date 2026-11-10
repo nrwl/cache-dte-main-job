@@ -21,7 +21,7 @@ export interface PaymentsSettingsTotals {
   archived: number;
 }
 
-export const PAYMENTS_SETTINGS_ITEM_COUNT = 7;
+export const PAYMENTS_SETTINGS_ITEM_COUNT = 5;
 
 export const PAYMENTS_SETTINGS_STATUSES: ReadonlyArray<PaymentsSettingsStatus> =
   ['active', 'pending', 'archived'];

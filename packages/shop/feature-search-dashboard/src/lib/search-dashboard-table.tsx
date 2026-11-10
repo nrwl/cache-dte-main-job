@@ -1,4 +1,4 @@
-import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { SearchDashboardItem } from './search-dashboard.model';
 import { SEARCH_DASHBOARD_FEATURE } from './search-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function SearchDashboardTable({
             <td>{formatSearchDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackPanel
+              <CoreBadge
                 label={item.status}
                 tone={searchDashboardStatusTone(item.status)}
                 size="sm"

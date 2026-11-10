@@ -1,4 +1,4 @@
-import { NavigationPanel } from '@org/shop-ui-navigation-panel';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { WishlistOverviewItem } from './wishlist-overview.model';
 import { WISHLIST_OVERVIEW_FEATURE } from './wishlist-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function WishlistOverviewTable({
             <td>{formatWishlistOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationPanel
+              <FeedbackBanner
                 label={item.status}
                 tone={wishlistOverviewStatusTone(item.status)}
                 size="sm"

@@ -1,4 +1,4 @@
-import { CoreBannerGroup } from '@org/shop-ui-core-banner';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import { buildCartDashboardItems } from './cart-dashboard.model';
 import { CART_DASHBOARD_FEATURE } from './cart-dashboard.routes';
 import {
@@ -29,7 +29,7 @@ export function CartDashboardSummary({
       data-testid={`${CART_DASHBOARD_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{CART_DASHBOARD_FEATURE.title}</h3>
-      <CoreBannerGroup
+      <InputsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -21,7 +21,7 @@ export interface TrackingListTotals {
   archived: number;
 }
 
-export const TRACKING_LIST_ITEM_COUNT = 12;
+export const TRACKING_LIST_ITEM_COUNT = 9;
 
 export const TRACKING_LIST_STATUSES: ReadonlyArray<TrackingListStatus> = [
   'active',

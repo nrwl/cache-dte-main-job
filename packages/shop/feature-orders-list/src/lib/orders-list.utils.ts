@@ -1,5 +1,5 @@
-import { formatText } from '@org/shop-util-format-text';
-import { storageCurrency } from '@org/shop-util-storage-currency';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyOrdersListTotals,
   type OrdersListItem,
@@ -71,13 +71,13 @@ export function sortOrdersList(
 }
 
 export function describeOrdersListItem(item: OrdersListItem): string {
-  const amount = formatText(item.amount);
-  const name = storageCurrency(item.name);
+  const amount = asyncNumber(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersListAmount(amount: number): string {
-  return formatText(amount);
+  return asyncNumber(amount);
 }
 
 export function ordersListStatusTone(

@@ -1,4 +1,6 @@
-import { storageText } from '@org/shop-util-storage-text';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyInventoryDashboardTotals,
   type InventoryDashboardItem,
@@ -73,13 +75,13 @@ export function sortInventoryDashboard(
 export function describeInventoryDashboardItem(
   item: InventoryDashboardItem,
 ): string {
-  const amount = storageText(item.amount);
-  const name = storageText(item.name);
+  const amount = asyncNumber(item.amount);
+  const name = collectionText(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatInventoryDashboardAmount(amount: number): string {
-  return storageText(amount);
+  return asyncNumber(amount);
 }
 
 export function inventoryDashboardStatusTone(

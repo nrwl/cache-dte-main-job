@@ -1,5 +1,6 @@
-import { i18nNumber } from '@org/shop-util-i18n-number';
-import { validateCurrency } from '@org/shop-util-validate-currency';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyPromotionsDashboardTotals,
   type PromotionsDashboardItem,
@@ -75,13 +76,13 @@ export function sortPromotionsDashboard(
 export function describePromotionsDashboardItem(
   item: PromotionsDashboardItem,
 ): string {
-  const amount = i18nNumber(item.amount);
-  const name = validateCurrency(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = mathCurrency(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPromotionsDashboardAmount(amount: number): string {
-  return i18nNumber(amount);
+  return formatCurrency(amount);
 }
 
 export function promotionsDashboardStatusTone(

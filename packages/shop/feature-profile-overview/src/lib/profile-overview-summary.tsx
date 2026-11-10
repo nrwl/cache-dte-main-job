@@ -1,4 +1,4 @@
-import { DataStatGroup } from '@org/shop-ui-data-stat';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildProfileOverviewItems } from './profile-overview.model';
 import { PROFILE_OVERVIEW_FEATURE } from './profile-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function ProfileOverviewSummary({
       <h3 className="feature-summary-title">
         {PROFILE_OVERVIEW_FEATURE.title}
       </h3>
-      <DataStatGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

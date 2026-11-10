@@ -1,4 +1,4 @@
-import { MarketingStat } from '@org/shop-ui-marketing-stat';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import { SUBSCRIPTIONS_DETAILS_FEATURE } from './subscriptions-details.routes';
 
 export interface SubscriptionsDetailsHeaderProps {
@@ -27,8 +27,8 @@ export function SubscriptionsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingStat label="Items" value={count} tone="info" />
-        <MarketingStat label="Total" value={total} tone="success" />
+        <MediaToolbar label="Items" value={count} tone="info" />
+        <MediaToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

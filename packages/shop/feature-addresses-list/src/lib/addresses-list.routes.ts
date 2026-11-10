@@ -19,7 +19,7 @@ export const ADDRESSES_LIST_FEATURE: FeatureMeta = {
   testId: ADDRESSES_LIST_TEST_ID,
   domain: 'addresses',
   kind: 'list',
-  itemCount: 11,
+  itemCount: 7,
 };
 
 export function addressesListItemPath(itemId: string): string {

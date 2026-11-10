@@ -1,4 +1,4 @@
-import { InputsStatGroup } from '@org/shop-ui-inputs-stat';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildWishlistOverviewItems } from './wishlist-overview.model';
 import { WISHLIST_OVERVIEW_FEATURE } from './wishlist-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function WishlistOverviewSummary({
       <h3 className="feature-summary-title">
         {WISHLIST_OVERVIEW_FEATURE.title}
       </h3>
-      <InputsStatGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

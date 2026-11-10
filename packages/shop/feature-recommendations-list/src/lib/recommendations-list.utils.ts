@@ -1,4 +1,6 @@
-import { storageCurrency } from '@org/shop-util-storage-currency';
+import { validateText } from '@org/shop-util-validate-text';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyRecommendationsListTotals,
   type RecommendationsListItem,
@@ -74,13 +76,13 @@ export function sortRecommendationsList(
 export function describeRecommendationsListItem(
   item: RecommendationsListItem,
 ): string {
-  const amount = storageCurrency(item.amount);
-  const name = storageCurrency(item.name);
+  const amount = validateText(item.amount);
+  const name = asyncNumber(storagePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatRecommendationsListAmount(amount: number): string {
-  return storageCurrency(amount);
+  return validateText(amount);
 }
 
 export function recommendationsListStatusTone(

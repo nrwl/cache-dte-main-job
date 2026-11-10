@@ -1,5 +1,4 @@
-import { validateNumber } from '@org/shop-util-validate-number';
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyProfileOverviewTotals,
   type ProfileOverviewItem,
@@ -72,13 +71,13 @@ export function sortProfileOverview(
 }
 
 export function describeProfileOverviewItem(item: ProfileOverviewItem): string {
-  const amount = validateNumber(item.amount);
-  const name = validatePhone(item.name);
+  const amount = collectionText(item.amount);
+  const name = collectionText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileOverviewAmount(amount: number): string {
-  return validateNumber(amount);
+  return collectionText(amount);
 }
 
 export function profileOverviewStatusTone(

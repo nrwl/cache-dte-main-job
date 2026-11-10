@@ -1,4 +1,4 @@
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { FeedbackOverviewItem } from './feedback-overview.model';
 import { FEEDBACK_OVERVIEW_FEATURE } from './feedback-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function FeedbackOverviewTable({
             <td>{formatFeedbackOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreBanner
+              <CoreBadge
                 label={item.status}
                 tone={feedbackOverviewStatusTone(item.status)}
                 size="sm"

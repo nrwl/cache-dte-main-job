@@ -1,4 +1,4 @@
-import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildBundlesListItems } from './bundles-list.model';
 import { BUNDLES_LIST_FEATURE } from './bundles-list.routes';
 import {
@@ -29,7 +29,7 @@ export function BundlesListSummary({
       data-testid={`${BUNDLES_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{BUNDLES_LIST_FEATURE.title}</h3>
-      <CoreToolbarGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

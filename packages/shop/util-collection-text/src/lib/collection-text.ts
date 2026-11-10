@@ -1,6 +1,5 @@
 import type { Product } from '@org/models';
-import { mathNumber } from '@org/shop-util-math-number';
-import { formatName } from '@org/shop-util-format-name';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   clampLength,
   hashString,
@@ -47,10 +46,7 @@ export function collectionText(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [mathNumber, formatName].reduce<string>(
-    (acc, fn) => fn(acc),
-    normalized,
-  );
+  const staged = [formatPhone].reduce<string>((acc, fn) => fn(acc), normalized);
   const transformed = reverseText(staged);
   return clampLength(transformed, opts.maxLength);
 }

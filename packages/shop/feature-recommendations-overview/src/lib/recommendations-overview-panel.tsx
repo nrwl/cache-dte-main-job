@@ -1,5 +1,6 @@
-import { DataBadgeGroup } from '@org/shop-ui-data-badge';
-import { FormsStat } from '@org/shop-ui-forms-stat';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { RecommendationsOverviewItem } from './recommendations-overview.model';
 import { RECOMMENDATIONS_OVERVIEW_FEATURE } from './recommendations-overview.routes';
 import { describeRecommendationsOverviewItem } from './recommendations-overview.utils';
@@ -40,7 +41,7 @@ export function RecommendationsOverviewPanel({
       <p className="feature-panel-description">
         {describeRecommendationsOverviewItem(selected)}
       </p>
-      <DataBadgeGroup
+      <LayoutStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function RecommendationsOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsStat
-          label="Forms Stat"
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <OverlayStat
+          label="Overlay Stat"
           value={selected.product.rating}
           size="sm"
         />

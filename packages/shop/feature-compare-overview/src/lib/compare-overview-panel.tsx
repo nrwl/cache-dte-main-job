@@ -1,6 +1,6 @@
-import { CommerceStatGroup } from '@org/shop-ui-commerce-stat';
-import { CoreStat } from '@org/shop-ui-core-stat';
-import { MarketingBadge } from '@org/shop-ui-marketing-badge';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
+import { DataPanel } from '@org/shop-ui-data-panel';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { CompareOverviewItem } from './compare-overview.model';
 import { COMPARE_OVERVIEW_FEATURE } from './compare-overview.routes';
 import { describeCompareOverviewItem } from './compare-overview.utils';
@@ -41,7 +41,7 @@ export function CompareOverviewPanel({
       <p className="feature-panel-description">
         {describeCompareOverviewItem(selected)}
       </p>
-      <CommerceStatGroup
+      <InputsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,9 +52,13 @@ export function CompareOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CoreStat label="Core Stat" value={selected.product.rating} size="sm" />
-        <MarketingBadge
-          label="Marketing Badge"
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <FeedbackBanner
+          label="Feedback Banner"
           value={selected.product.rating}
           size="sm"
         />

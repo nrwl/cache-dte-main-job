@@ -1,7 +1,5 @@
-import { i18nNumber } from '@org/shop-util-i18n-number';
-import { formatCurrency } from '@org/shop-util-format-currency';
+import { formatPhone } from '@org/shop-util-format-phone';
 import { mathCurrency } from '@org/shop-util-math-currency';
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
 import type { TypographyBannerProps } from './typography-banner.types';
 import { resolveTypographyBannerStyle } from './typography-banner-variants';
 
@@ -14,9 +12,9 @@ export function TypographyBanner({
   onSelect,
   children,
 }: TypographyBannerProps) {
-  const formatted = value === undefined ? '' : i18nNumber(value);
+  const formatted = value === undefined ? '' : formatPhone(value);
   const style = resolveTypographyBannerStyle(tone, size);
-  const ariaLabel = mathCurrency(formatCurrency(label));
+  const ariaLabel = mathCurrency(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +37,6 @@ export function TypographyBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FeedbackStat label="Feedback Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { DataBanner } from '@org/shop-ui-data-banner';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import { COMPARE_DASHBOARD_FEATURE } from './compare-dashboard.routes';
 
 export interface CompareDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function CompareDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataBanner label="Items" value={count} tone="info" />
-        <DataBanner label="Total" value={total} tone="success" />
+        <LayoutStat label="Items" value={count} tone="info" />
+        <LayoutStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

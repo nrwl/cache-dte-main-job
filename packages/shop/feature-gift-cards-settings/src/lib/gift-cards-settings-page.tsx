@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { RecommendationsOverviewSummary } from '@org/shop-feature-recommendations-overview';
 import { GiftCardsSettingsFilters } from './gift-cards-settings-filters';
 import { GiftCardsSettingsHeader } from './gift-cards-settings-header';
 import { GiftCardsSettingsPanel } from './gift-cards-settings-panel';
@@ -54,7 +53,6 @@ export function GiftCardsSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <RecommendationsOverviewSummary compact />
         </div>
       </div>
     </section>

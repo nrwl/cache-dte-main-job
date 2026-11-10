@@ -1,4 +1,4 @@
-import { MediaBanner } from '@org/shop-ui-media-banner';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { TrackingSettingsItem } from './tracking-settings.model';
 import { TRACKING_SETTINGS_FEATURE } from './tracking-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function TrackingSettingsTable({
             <td>{formatTrackingSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaBanner
+              <TypographyBanner
                 label={item.status}
                 tone={trackingSettingsStatusTone(item.status)}
                 size="sm"

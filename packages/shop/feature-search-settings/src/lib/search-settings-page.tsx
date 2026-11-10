@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CheckoutDetailsSummary } from '@org/shop-feature-checkout-details';
+import { ReviewsDashboardSummary } from '@org/shop-feature-reviews-dashboard';
 import { SearchSettingsFilters } from './search-settings-filters';
 import { SearchSettingsHeader } from './search-settings-header';
 import { SearchSettingsPanel } from './search-settings-panel';
@@ -54,7 +54,7 @@ export function SearchSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CheckoutDetailsSummary compact />
+          <ReviewsDashboardSummary compact />
         </div>
       </div>
     </section>

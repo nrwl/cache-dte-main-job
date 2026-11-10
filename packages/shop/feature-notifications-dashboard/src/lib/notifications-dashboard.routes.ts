@@ -21,7 +21,7 @@ export const NOTIFICATIONS_DASHBOARD_FEATURE: FeatureMeta = {
   testId: NOTIFICATIONS_DASHBOARD_TEST_ID,
   domain: 'notifications',
   kind: 'dashboard',
-  itemCount: 8,
+  itemCount: 12,
 };
 
 export function notificationsDashboardItemPath(itemId: string): string {

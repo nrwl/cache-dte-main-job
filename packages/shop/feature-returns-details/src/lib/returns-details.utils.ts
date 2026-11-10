@@ -1,6 +1,6 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
-import { storageName } from '@org/shop-util-storage-name';
-import { i18nCurrency } from '@org/shop-util-i18n-currency';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyReturnsDetailsTotals,
   type ReturnsDetailsItem,
@@ -73,13 +73,13 @@ export function sortReturnsDetails(
 }
 
 export function describeReturnsDetailsItem(item: ReturnsDetailsItem): string {
-  const amount = validateCurrency(item.amount);
-  const name = i18nCurrency(storageName(item.name));
+  const amount = asyncNumber(item.amount);
+  const name = validateText(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReturnsDetailsAmount(amount: number): string {
-  return validateCurrency(amount);
+  return asyncNumber(amount);
 }
 
 export function returnsDetailsStatusTone(

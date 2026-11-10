@@ -1,6 +1,4 @@
-import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
-import { TypographyStat } from '@org/shop-ui-typography-stat';
-import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import type { NotificationsDashboardItem } from './notifications-dashboard.model';
 import { NOTIFICATIONS_DASHBOARD_FEATURE } from './notifications-dashboard.routes';
 import { describeNotificationsDashboardItem } from './notifications-dashboard.utils';
@@ -41,7 +39,7 @@ export function NotificationsDashboardPanel({
       <p className="feature-panel-description">
         {describeNotificationsDashboardItem(selected)}
       </p>
-      <ChartsBadgeGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function NotificationsDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <TypographyStat
-          label="Typography Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FeedbackPanel
-          label="Feedback Panel"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,6 +1,5 @@
-import { mathPhone } from '@org/shop-util-math-phone';
-import { mathCurrency } from '@org/shop-util-math-currency';
-import { asyncNumber } from '@org/shop-util-async-number';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyReviewsListTotals,
   type ReviewsListItem,
@@ -72,13 +71,13 @@ export function sortReviewsList(
 }
 
 export function describeReviewsListItem(item: ReviewsListItem): string {
-  const amount = mathPhone(item.amount);
-  const name = asyncNumber(mathCurrency(item.name));
+  const amount = formatPhone(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReviewsListAmount(amount: number): string {
-  return mathPhone(amount);
+  return formatPhone(amount);
 }
 
 export function reviewsListStatusTone(

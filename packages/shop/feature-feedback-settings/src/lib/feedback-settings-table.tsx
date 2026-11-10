@@ -1,4 +1,4 @@
-import { InputsPanel } from '@org/shop-ui-inputs-panel';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { FeedbackSettingsItem } from './feedback-settings.model';
 import { FEEDBACK_SETTINGS_FEATURE } from './feedback-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function FeedbackSettingsTable({
             <td>{formatFeedbackSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsPanel
+              <FormsStat
                 label={item.status}
                 tone={feedbackSettingsStatusTone(item.status)}
                 size="sm"

@@ -1,4 +1,5 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { storagePhone } from '@org/shop-util-storage-phone';
 import { mathName } from '@org/shop-util-math-name';
 import {
   emptyNotificationsSettingsTotals,
@@ -77,13 +78,13 @@ export function sortNotificationsSettings(
 export function describeNotificationsSettingsItem(
   item: NotificationsSettingsItem,
 ): string {
-  const amount = validateCurrency(item.amount);
-  const name = mathName(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = mathName(storagePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatNotificationsSettingsAmount(amount: number): string {
-  return validateCurrency(amount);
+  return formatCurrency(amount);
 }
 
 export function notificationsSettingsStatusTone(

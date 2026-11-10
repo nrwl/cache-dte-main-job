@@ -21,7 +21,7 @@ export const STORE_LOCATOR_DASHBOARD_FEATURE: FeatureMeta = {
   testId: STORE_LOCATOR_DASHBOARD_TEST_ID,
   domain: 'store-locator',
   kind: 'dashboard',
-  itemCount: 5,
+  itemCount: 8,
 };
 
 export function storeLocatorDashboardItemPath(itemId: string): string {

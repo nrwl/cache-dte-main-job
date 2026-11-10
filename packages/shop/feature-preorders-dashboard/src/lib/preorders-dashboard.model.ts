@@ -21,7 +21,7 @@ export interface PreordersDashboardTotals {
   archived: number;
 }
 
-export const PREORDERS_DASHBOARD_ITEM_COUNT = 5;
+export const PREORDERS_DASHBOARD_ITEM_COUNT = 6;
 
 export const PREORDERS_DASHBOARD_STATUSES: ReadonlyArray<PreordersDashboardStatus> =
   ['active', 'pending', 'archived'];

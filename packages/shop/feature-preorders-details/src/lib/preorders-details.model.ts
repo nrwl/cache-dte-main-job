@@ -21,7 +21,7 @@ export interface PreordersDetailsTotals {
   archived: number;
 }
 
-export const PREORDERS_DETAILS_ITEM_COUNT = 11;
+export const PREORDERS_DETAILS_ITEM_COUNT = 12;
 
 export const PREORDERS_DETAILS_STATUSES: ReadonlyArray<PreordersDetailsStatus> =
   ['active', 'pending', 'archived'];

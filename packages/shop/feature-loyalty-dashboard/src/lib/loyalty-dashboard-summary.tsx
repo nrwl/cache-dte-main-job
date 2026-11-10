@@ -1,4 +1,4 @@
-import { DataBadgeGroup } from '@org/shop-ui-data-badge';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import { buildLoyaltyDashboardItems } from './loyalty-dashboard.model';
 import { LOYALTY_DASHBOARD_FEATURE } from './loyalty-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function LoyaltyDashboardSummary({
       <h3 className="feature-summary-title">
         {LOYALTY_DASHBOARD_FEATURE.title}
       </h3>
-      <DataBadgeGroup
+      <InputsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

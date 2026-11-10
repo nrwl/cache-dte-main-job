@@ -1,4 +1,4 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyFeedbackListTotals,
   type FeedbackListItem,
@@ -70,13 +70,13 @@ export function sortFeedbackList(
 }
 
 export function describeFeedbackListItem(item: FeedbackListItem): string {
-  const amount = validatePhone(item.amount);
-  const name = validatePhone(item.name);
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatFeedbackListAmount(amount: number): string {
-  return validatePhone(amount);
+  return formatPhone(amount);
 }
 
 export function feedbackListStatusTone(

@@ -21,14 +21,11 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-navigation-stat": "*",
-    "@org/shop-ui-marketing-banner": "*",
-    "@org/shop-ui-typography-stat": "*",
-    "@org/shop-ui-inputs-badge": "*",
-    "@org/shop-ui-data-toolbar": "*",
-    "@org/shop-util-math-name": "*",
-    "@org/shop-util-math-number": "*",
-    "@org/shop-util-async-phone": "*",
-    "@org/shop-feature-wishlist-details": "*"
+    "@org/shop-ui-typography-banner": "*",
+    "@org/shop-ui-core-badge": "*",
+    "@org/shop-ui-marketing-badge": "*",
+    "@org/shop-ui-data-panel": "*",
+    "@org/shop-ui-layout-stat": "*",
+    "@org/shop-util-validate-text": "*"
   }
 }

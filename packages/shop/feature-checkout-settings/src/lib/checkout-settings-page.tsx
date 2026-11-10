@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CartListSummary } from '@org/shop-feature-cart-list';
 import { CheckoutSettingsFilters } from './checkout-settings-filters';
 import { CheckoutSettingsHeader } from './checkout-settings-header';
 import { CheckoutSettingsPanel } from './checkout-settings-panel';
@@ -54,7 +53,6 @@ export function CheckoutSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CartListSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { OverlayBanner } from '@org/shop-ui-overlay-banner';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { PAYMENTS_DASHBOARD_FEATURE } from './payments-dashboard.routes';
 
 export interface PaymentsDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function PaymentsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <OverlayBanner label="Items" value={count} tone="info" />
-        <OverlayBanner label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

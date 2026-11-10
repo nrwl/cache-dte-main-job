@@ -1,5 +1,4 @@
-import { collectionText } from '@org/shop-util-collection-text';
-import { collectionNumber } from '@org/shop-util-collection-number';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyLoyaltyDashboardTotals,
   type LoyaltyDashboardItem,
@@ -74,13 +73,13 @@ export function sortLoyaltyDashboard(
 export function describeLoyaltyDashboardItem(
   item: LoyaltyDashboardItem,
 ): string {
-  const amount = collectionText(item.amount);
-  const name = collectionNumber(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatLoyaltyDashboardAmount(amount: number): string {
-  return collectionText(amount);
+  return asyncName(amount);
 }
 
 export function loyaltyDashboardStatusTone(

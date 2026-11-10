@@ -1,5 +1,4 @@
-import { asyncPhone } from '@org/shop-util-async-phone';
-import { DataStat } from '@org/shop-ui-data-stat';
+import { formatPhone } from '@org/shop-util-format-phone';
 import type { CommerceToolbarProps } from './commerce-toolbar.types';
 import { resolveCommerceToolbarStyle } from './commerce-toolbar-variants';
 
@@ -12,7 +11,7 @@ export function CommerceToolbar({
   onSelect,
   children,
 }: CommerceToolbarProps) {
-  const formatted = value === undefined ? '' : asyncPhone(value);
+  const formatted = value === undefined ? '' : formatPhone(value);
   const style = resolveCommerceToolbarStyle(tone, size);
   const ariaLabel = label;
 
@@ -37,7 +36,6 @@ export function CommerceToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <DataStat label="Data Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

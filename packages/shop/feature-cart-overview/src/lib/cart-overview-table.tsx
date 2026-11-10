@@ -1,4 +1,4 @@
-import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { CartOverviewItem } from './cart-overview.model';
 import { CART_OVERVIEW_FEATURE } from './cart-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function CartOverviewTable({
             <td>{formatCartOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutStat
+              <ChartsBanner
                 label={item.status}
                 tone={cartOverviewStatusTone(item.status)}
                 size="sm"

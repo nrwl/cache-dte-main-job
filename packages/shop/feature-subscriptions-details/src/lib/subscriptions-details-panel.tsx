@@ -1,6 +1,6 @@
-import { DataToolbarGroup } from '@org/shop-ui-data-toolbar';
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
-import { DataBanner } from '@org/shop-ui-data-banner';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { SubscriptionsDetailsItem } from './subscriptions-details.model';
 import { SUBSCRIPTIONS_DETAILS_FEATURE } from './subscriptions-details.routes';
 import { describeSubscriptionsDetailsItem } from './subscriptions-details.utils';
@@ -41,7 +41,7 @@ export function SubscriptionsDetailsPanel({
       <p className="feature-panel-description">
         {describeSubscriptionsDetailsItem(selected)}
       </p>
-      <DataToolbarGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function SubscriptionsDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <TypographyToolbar
-          label="Typography Toolbar"
+        <LayoutStat
+          label="Layout Stat"
           value={selected.product.rating}
           size="sm"
         />
-        <DataBanner
-          label="Data Banner"
+        <DataPanel
+          label="Data Panel"
           value={selected.product.rating}
           size="sm"
         />

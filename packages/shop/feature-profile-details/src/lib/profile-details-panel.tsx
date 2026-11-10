@@ -1,4 +1,6 @@
-import { TypographyStatGroup } from '@org/shop-ui-typography-stat';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { ProfileDetailsItem } from './profile-details.model';
 import { PROFILE_DETAILS_FEATURE } from './profile-details.routes';
 import { describeProfileDetailsItem } from './profile-details.utils';
@@ -39,7 +41,7 @@ export function ProfileDetailsPanel({
       <p className="feature-panel-description">
         {describeProfileDetailsItem(selected)}
       </p>
-      <TypographyStatGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function ProfileDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <MediaToolbar
+          label="Media Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <MarketingBadge
+          label="Marketing Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

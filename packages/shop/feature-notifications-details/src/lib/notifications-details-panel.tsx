@@ -1,4 +1,6 @@
-import { InputsStatGroup } from '@org/shop-ui-inputs-stat';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { NotificationsDetailsItem } from './notifications-details.model';
 import { NOTIFICATIONS_DETAILS_FEATURE } from './notifications-details.routes';
 import { describeNotificationsDetailsItem } from './notifications-details.utils';
@@ -39,7 +41,7 @@ export function NotificationsDetailsPanel({
       <p className="feature-panel-description">
         {describeNotificationsDetailsItem(selected)}
       </p>
-      <InputsStatGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function NotificationsDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <TypographyBanner
+          label="Typography Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <LayoutStat
+          label="Layout Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

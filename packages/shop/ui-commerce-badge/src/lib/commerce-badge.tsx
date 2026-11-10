@@ -1,5 +1,5 @@
-import { validateText } from '@org/shop-util-validate-text';
-import { formatCurrency } from '@org/shop-util-format-currency';
+import { mathName } from '@org/shop-util-math-name';
+import { formatPhone } from '@org/shop-util-format-phone';
 import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { CommerceBadgeProps } from './commerce-badge.types';
 import { resolveCommerceBadgeStyle } from './commerce-badge-variants';
@@ -13,9 +13,9 @@ export function CommerceBadge({
   onSelect,
   children,
 }: CommerceBadgeProps) {
-  const formatted = value === undefined ? '' : validateText(value);
+  const formatted = value === undefined ? '' : mathName(value);
   const style = resolveCommerceBadgeStyle(tone, size);
-  const ariaLabel = formatCurrency(label);
+  const ariaLabel = formatPhone(label);
 
   const handleClick = () => {
     if (onSelect) {

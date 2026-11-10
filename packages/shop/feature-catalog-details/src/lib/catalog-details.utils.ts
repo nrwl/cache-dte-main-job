@@ -1,4 +1,4 @@
-import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyCatalogDetailsTotals,
   type CatalogDetailsItem,
@@ -71,13 +71,13 @@ export function sortCatalogDetails(
 }
 
 export function describeCatalogDetailsItem(item: CatalogDetailsItem): string {
-  const amount = collectionCurrency(item.amount);
-  const name = collectionCurrency(item.name);
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCatalogDetailsAmount(amount: number): string {
-  return collectionCurrency(amount);
+  return formatPhone(amount);
 }
 
 export function catalogDetailsStatusTone(

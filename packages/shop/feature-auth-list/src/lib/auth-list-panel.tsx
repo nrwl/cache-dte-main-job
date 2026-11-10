@@ -1,5 +1,6 @@
-import { CoreStatGroup } from '@org/shop-ui-core-stat';
-import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { CoreBadge } from '@org/shop-ui-core-badge';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { AuthListItem } from './auth-list.model';
 import { AUTH_LIST_FEATURE } from './auth-list.routes';
 import { describeAuthListItem } from './auth-list.utils';
@@ -37,7 +38,7 @@ export function AuthListPanel({ selected, onClear }: AuthListPanelProps) {
       <p className="feature-panel-description">
         {describeAuthListItem(selected)}
       </p>
-      <CoreStatGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -48,8 +49,13 @@ export function AuthListPanel({ selected, onClear }: AuthListPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackToolbar
-          label="Feedback Toolbar"
+        <CoreBadge
+          label="Core Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <TypographyBanner
+          label="Typography Banner"
           value={selected.product.rating}
           size="sm"
         />

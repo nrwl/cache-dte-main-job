@@ -1,4 +1,4 @@
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import { PREORDERS_OVERVIEW_FEATURE } from './preorders-overview.routes';
 
 export interface PreordersOverviewHeaderProps {
@@ -27,8 +27,8 @@ export function PreordersOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CorePanel label="Items" value={count} tone="info" />
-        <CorePanel label="Total" value={total} tone="success" />
+        <CommerceBadge label="Items" value={count} tone="info" />
+        <CommerceBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

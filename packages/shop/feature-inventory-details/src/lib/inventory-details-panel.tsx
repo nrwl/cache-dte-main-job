@@ -1,6 +1,4 @@
-import { MediaPanelGroup } from '@org/shop-ui-media-panel';
-import { MediaBadge } from '@org/shop-ui-media-badge';
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import type { InventoryDetailsItem } from './inventory-details.model';
 import { INVENTORY_DETAILS_FEATURE } from './inventory-details.routes';
 import { describeInventoryDetailsItem } from './inventory-details.utils';
@@ -41,7 +39,7 @@ export function InventoryDetailsPanel({
       <p className="feature-panel-description">
         {describeInventoryDetailsItem(selected)}
       </p>
-      <MediaPanelGroup
+      <InputsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function InventoryDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MediaBadge
-          label="Media Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <LayoutBanner
-          label="Layout Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

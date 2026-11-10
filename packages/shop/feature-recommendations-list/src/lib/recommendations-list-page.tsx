@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { WishlistOverviewSummary } from '@org/shop-feature-wishlist-overview';
 import { RecommendationsListFilters } from './recommendations-list-filters';
 import { RecommendationsListHeader } from './recommendations-list-header';
 import { RecommendationsListPanel } from './recommendations-list-panel';
@@ -53,6 +54,7 @@ export function RecommendationsListPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <WishlistOverviewSummary compact />
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ export interface FeedbackListTotals {
   archived: number;
 }
 
-export const FEEDBACK_LIST_ITEM_COUNT = 7;
+export const FEEDBACK_LIST_ITEM_COUNT = 6;
 
 export const FEEDBACK_LIST_STATUSES: ReadonlyArray<FeedbackListStatus> = [
   'active',

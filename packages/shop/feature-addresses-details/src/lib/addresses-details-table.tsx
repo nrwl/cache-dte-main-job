@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import type { AddressesDetailsItem } from './addresses-details.model';
 import { ADDRESSES_DETAILS_FEATURE } from './addresses-details.routes';
 import {
@@ -58,7 +58,7 @@ export function AddressesDetailsTable({
             <td>{formatAddressesDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyToolbar
+              <CommerceToolbar
                 label={item.status}
                 tone={addressesDetailsStatusTone(item.status)}
                 size="sm"

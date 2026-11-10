@@ -1,6 +1,6 @@
 import type { Product } from '@org/models';
 import { formatPhone } from '@org/shop-util-format-phone';
-import { formatName } from '@org/shop-util-format-name';
+import { validateText } from '@org/shop-util-validate-text';
 import { clampLength, hashString, normalizeInput } from './math-name-helpers';
 
 export interface MathNameOptions {
@@ -39,7 +39,7 @@ export function mathName(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatPhone, formatName].reduce<string>(
+  const staged = [formatPhone, validateText].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );

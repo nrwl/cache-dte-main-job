@@ -1,4 +1,4 @@
-import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { WishlistSettingsItem } from './wishlist-settings.model';
 import { WISHLIST_SETTINGS_FEATURE } from './wishlist-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function WishlistSettingsTable({
             <td>{formatWishlistSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackToolbar
+              <DataPanel
                 label={item.status}
                 tone={wishlistSettingsStatusTone(item.status)}
                 size="sm"

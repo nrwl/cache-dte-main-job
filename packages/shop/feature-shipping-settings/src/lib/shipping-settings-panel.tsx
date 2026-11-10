@@ -1,6 +1,4 @@
-import { MediaPanelGroup } from '@org/shop-ui-media-panel';
-import { CoreStat } from '@org/shop-ui-core-stat';
-import { OverlayStat } from '@org/shop-ui-overlay-stat';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import type { ShippingSettingsItem } from './shipping-settings.model';
 import { SHIPPING_SETTINGS_FEATURE } from './shipping-settings.routes';
 import { describeShippingSettingsItem } from './shipping-settings.utils';
@@ -41,7 +39,7 @@ export function ShippingSettingsPanel({
       <p className="feature-panel-description">
         {describeShippingSettingsItem(selected)}
       </p>
-      <MediaPanelGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,14 +49,7 @@ export function ShippingSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CoreStat label="Core Stat" value={selected.product.rating} size="sm" />
-        <OverlayStat
-          label="Overlay Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { TypographyBadgeGroup } from '@org/shop-ui-typography-badge';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildPromotionsDashboardItems } from './promotions-dashboard.model';
 import { PROMOTIONS_DASHBOARD_FEATURE } from './promotions-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function PromotionsDashboardSummary({
       <h3 className="feature-summary-title">
         {PROMOTIONS_DASHBOARD_FEATURE.title}
       </h3>
-      <TypographyBadgeGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

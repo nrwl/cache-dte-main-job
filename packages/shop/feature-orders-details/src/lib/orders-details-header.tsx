@@ -1,4 +1,4 @@
-import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { ORDERS_DETAILS_FEATURE } from './orders-details.routes';
 
 export interface OrdersDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function OrdersDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutStat label="Items" value={count} tone="info" />
-        <LayoutStat label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

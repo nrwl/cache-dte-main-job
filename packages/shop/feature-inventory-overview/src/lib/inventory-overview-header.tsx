@@ -1,4 +1,4 @@
-import { MediaStat } from '@org/shop-ui-media-stat';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import { INVENTORY_OVERVIEW_FEATURE } from './inventory-overview.routes';
 
 export interface InventoryOverviewHeaderProps {
@@ -27,8 +27,8 @@ export function InventoryOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaStat label="Items" value={count} tone="info" />
-        <MediaStat label="Total" value={total} tone="success" />
+        <CoreToolbar label="Items" value={count} tone="info" />
+        <CoreToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { DataStatGroup } from '@org/shop-ui-data-stat';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildPaymentsDetailsItems } from './payments-details.model';
 import { PAYMENTS_DETAILS_FEATURE } from './payments-details.routes';
 import {
@@ -31,7 +31,7 @@ export function PaymentsDetailsSummary({
       <h3 className="feature-summary-title">
         {PAYMENTS_DETAILS_FEATURE.title}
       </h3>
-      <DataStatGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { RecommendationsOverviewSummary } from '@org/shop-feature-recommendations-overview';
 import { OrdersListFilters } from './orders-list-filters';
 import { OrdersListHeader } from './orders-list-header';
 import { OrdersListPanel } from './orders-list-panel';
@@ -47,6 +48,7 @@ export function OrdersListPage() {
         </div>
         <div className="feature-side">
           <OrdersListPanel selected={selected} onClear={() => select(null)} />
+          <RecommendationsOverviewSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import { buildGiftCardsListItems } from './gift-cards-list.model';
 import { GIFT_CARDS_LIST_FEATURE } from './gift-cards-list.routes';
 import {
@@ -29,7 +29,7 @@ export function GiftCardsListSummary({
       data-testid={`${GIFT_CARDS_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{GIFT_CARDS_LIST_FEATURE.title}</h3>
-      <MarketingBadgeGroup
+      <CommerceToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

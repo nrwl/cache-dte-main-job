@@ -1,4 +1,4 @@
-import { NavigationStatGroup } from '@org/shop-ui-navigation-stat';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
 import { buildCartOverviewItems } from './cart-overview.model';
 import { CART_OVERVIEW_FEATURE } from './cart-overview.routes';
 import {
@@ -29,7 +29,7 @@ export function CartOverviewSummary({
       data-testid={`${CART_OVERVIEW_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{CART_OVERVIEW_FEATURE.title}</h3>
-      <NavigationStatGroup
+      <OverlayStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

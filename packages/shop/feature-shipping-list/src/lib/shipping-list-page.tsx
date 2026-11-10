@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { WishlistDetailsSummary } from '@org/shop-feature-wishlist-details';
+import { OrdersDetailsSummary } from '@org/shop-feature-orders-details';
 import { ShippingListFilters } from './shipping-list-filters';
 import { ShippingListHeader } from './shipping-list-header';
 import { ShippingListPanel } from './shipping-list-panel';
@@ -51,7 +51,7 @@ export function ShippingListPage() {
         </div>
         <div className="feature-side">
           <ShippingListPanel selected={selected} onClear={() => select(null)} />
-          <WishlistDetailsSummary compact />
+          <OrdersDetailsSummary compact />
         </div>
       </div>
     </section>

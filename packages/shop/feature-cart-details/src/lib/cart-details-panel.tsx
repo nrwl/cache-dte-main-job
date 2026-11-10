@@ -1,5 +1,4 @@
-import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import type { CartDetailsItem } from './cart-details.model';
 import { CART_DETAILS_FEATURE } from './cart-details.routes';
 import { describeCartDetailsItem } from './cart-details.utils';
@@ -37,7 +36,7 @@ export function CartDetailsPanel({ selected, onClear }: CartDetailsPanelProps) {
       <p className="feature-panel-description">
         {describeCartDetailsItem(selected)}
       </p>
-      <TypographyToolbarGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -47,13 +46,7 @@ export function CartDetailsPanel({ selected, onClear }: CartDetailsPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CommerceStat
-          label="Commerce Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

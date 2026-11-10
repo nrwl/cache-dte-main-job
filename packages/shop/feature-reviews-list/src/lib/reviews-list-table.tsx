@@ -1,4 +1,4 @@
-import { OverlayStat } from '@org/shop-ui-overlay-stat';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { ReviewsListItem } from './reviews-list.model';
 import { REVIEWS_LIST_FEATURE } from './reviews-list.routes';
 import {
@@ -58,7 +58,7 @@ export function ReviewsListTable({
             <td>{formatReviewsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayStat
+              <CommerceBadge
                 label={item.status}
                 tone={reviewsListStatusTone(item.status)}
                 size="sm"

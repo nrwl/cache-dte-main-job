@@ -1,5 +1,6 @@
-import { MediaStatGroup } from '@org/shop-ui-media-stat';
-import { DataStat } from '@org/shop-ui-data-stat';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { PromotionsSettingsItem } from './promotions-settings.model';
 import { PROMOTIONS_SETTINGS_FEATURE } from './promotions-settings.routes';
 import { describePromotionsSettingsItem } from './promotions-settings.utils';
@@ -40,7 +41,7 @@ export function PromotionsSettingsPanel({
       <p className="feature-panel-description">
         {describePromotionsSettingsItem(selected)}
       </p>
-      <MediaStatGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,7 +52,16 @@ export function PromotionsSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
+        <ChartsBanner
+          label="Charts Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
       </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (

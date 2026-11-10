@@ -1,4 +1,4 @@
-import { ChartsStat } from '@org/shop-ui-charts-stat';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { CheckoutDetailsItem } from './checkout-details.model';
 import { CHECKOUT_DETAILS_FEATURE } from './checkout-details.routes';
 import {
@@ -58,7 +58,7 @@ export function CheckoutDetailsTable({
             <td>{formatCheckoutDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <ChartsStat
+              <OverlayStat
                 label={item.status}
                 tone={checkoutDetailsStatusTone(item.status)}
                 size="sm"

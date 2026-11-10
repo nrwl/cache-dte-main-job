@@ -1,4 +1,4 @@
-import { InputsBadge } from '@org/shop-ui-inputs-badge';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import { PREORDERS_DETAILS_FEATURE } from './preorders-details.routes';
 
 export interface PreordersDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function PreordersDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <InputsBadge label="Items" value={count} tone="info" />
-        <InputsBadge label="Total" value={total} tone="success" />
+        <InputsPanel label="Items" value={count} tone="info" />
+        <InputsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,3 @@
-import { storageText } from '@org/shop-util-storage-text';
 import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyShippingOverviewTotals,
@@ -74,13 +73,13 @@ export function sortShippingOverview(
 export function describeShippingOverviewItem(
   item: ShippingOverviewItem,
 ): string {
-  const amount = storageText(item.amount);
+  const amount = asyncName(item.amount);
   const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatShippingOverviewAmount(amount: number): string {
-  return storageText(amount);
+  return asyncName(amount);
 }
 
 export function shippingOverviewStatusTone(

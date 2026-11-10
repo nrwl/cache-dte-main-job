@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { ADDRESSES_OVERVIEW_FEATURE } from './addresses-overview.routes';
 
 export interface AddressesOverviewHeaderProps {
@@ -27,8 +27,8 @@ export function AddressesOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyToolbar label="Items" value={count} tone="info" />
-        <TypographyToolbar label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

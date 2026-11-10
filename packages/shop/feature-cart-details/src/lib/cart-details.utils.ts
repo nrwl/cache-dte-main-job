@@ -1,4 +1,6 @@
-import { mathName } from '@org/shop-util-math-name';
+import { collectionText } from '@org/shop-util-collection-text';
+import { asyncName } from '@org/shop-util-async-name';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyCartDetailsTotals,
   type CartDetailsItem,
@@ -70,13 +72,13 @@ export function sortCartDetails(
 }
 
 export function describeCartDetailsItem(item: CartDetailsItem): string {
-  const amount = mathName(item.amount);
-  const name = mathName(item.name);
+  const amount = collectionText(item.amount);
+  const name = asyncNumber(asyncName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCartDetailsAmount(amount: number): string {
-  return mathName(amount);
+  return collectionText(amount);
 }
 
 export function cartDetailsStatusTone(

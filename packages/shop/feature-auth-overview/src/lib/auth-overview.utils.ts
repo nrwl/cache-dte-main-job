@@ -1,4 +1,5 @@
-import { i18nCurrency } from '@org/shop-util-i18n-currency';
+import { asyncName } from '@org/shop-util-async-name';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyAuthOverviewTotals,
   type AuthOverviewItem,
@@ -70,13 +71,13 @@ export function sortAuthOverview(
 }
 
 export function describeAuthOverviewItem(item: AuthOverviewItem): string {
-  const amount = i18nCurrency(item.amount);
-  const name = i18nCurrency(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAuthOverviewAmount(amount: number): string {
-  return i18nCurrency(amount);
+  return asyncName(amount);
 }
 
 export function authOverviewStatusTone(

@@ -1,4 +1,4 @@
-import { MarketingStatGroup } from '@org/shop-ui-marketing-stat';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildSubscriptionsDetailsItems } from './subscriptions-details.model';
 import { SUBSCRIPTIONS_DETAILS_FEATURE } from './subscriptions-details.routes';
 import {
@@ -31,7 +31,7 @@ export function SubscriptionsDetailsSummary({
       <h3 className="feature-summary-title">
         {SUBSCRIPTIONS_DETAILS_FEATURE.title}
       </h3>
-      <MarketingStatGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

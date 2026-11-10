@@ -1,5 +1,6 @@
-import { formatName } from '@org/shop-util-format-name';
-import { i18nText } from '@org/shop-util-i18n-text';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyWishlistSettingsTotals,
   type WishlistSettingsItem,
@@ -74,13 +75,13 @@ export function sortWishlistSettings(
 export function describeWishlistSettingsItem(
   item: WishlistSettingsItem,
 ): string {
-  const amount = formatName(item.amount);
-  const name = i18nText(item.name);
+  const amount = i18nNumber(item.amount);
+  const name = validateText(storagePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatWishlistSettingsAmount(amount: number): string {
-  return formatName(amount);
+  return i18nNumber(amount);
 }
 
 export function wishlistSettingsStatusTone(

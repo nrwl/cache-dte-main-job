@@ -1,4 +1,4 @@
-import { FormsStat } from '@org/shop-ui-forms-stat';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { CompareDetailsItem } from './compare-details.model';
 import { COMPARE_DETAILS_FEATURE } from './compare-details.routes';
 import {
@@ -58,7 +58,7 @@ export function CompareDetailsTable({
             <td>{formatCompareDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsStat
+              <LayoutStat
                 label={item.status}
                 tone={compareDetailsStatusTone(item.status)}
                 size="sm"

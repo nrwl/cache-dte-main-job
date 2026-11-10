@@ -1,4 +1,4 @@
-import { LayoutToolbarGroup } from '@org/shop-ui-layout-toolbar';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildCartListItems } from './cart-list.model';
 import { CART_LIST_FEATURE } from './cart-list.routes';
 import { pickCartListHighlights, totalCartList } from './cart-list.utils';
@@ -26,7 +26,7 @@ export function CartListSummary({
       data-testid={`${CART_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{CART_LIST_FEATURE.title}</h3>
-      <LayoutToolbarGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

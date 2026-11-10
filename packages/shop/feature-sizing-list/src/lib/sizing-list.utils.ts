@@ -1,6 +1,4 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { collectionName } from '@org/shop-util-collection-name';
-import { storageCurrency } from '@org/shop-util-storage-currency';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptySizingListTotals,
   type SizingListItem,
@@ -72,13 +70,13 @@ export function sortSizingList(
 }
 
 export function describeSizingListItem(item: SizingListItem): string {
-  const amount = validatePhone(item.amount);
-  const name = storageCurrency(collectionName(item.name));
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingListAmount(amount: number): string {
-  return validatePhone(amount);
+  return asyncName(amount);
 }
 
 export function sizingListStatusTone(

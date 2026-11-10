@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { AccountSettingsSummary } from '@org/shop-feature-account-settings';
 import { PromotionsDetailsFilters } from './promotions-details-filters';
 import { PromotionsDetailsHeader } from './promotions-details-header';
 import { PromotionsDetailsPanel } from './promotions-details-panel';
@@ -54,7 +53,6 @@ export function PromotionsDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <AccountSettingsSummary compact />
         </div>
       </div>
     </section>

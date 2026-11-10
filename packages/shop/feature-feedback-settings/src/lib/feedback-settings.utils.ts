@@ -1,6 +1,6 @@
-import { collectionName } from '@org/shop-util-collection-name';
-import { formatPhone } from '@org/shop-util-format-phone';
-import { asyncCurrency } from '@org/shop-util-async-currency';
+import { mathName } from '@org/shop-util-math-name';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyFeedbackSettingsTotals,
   type FeedbackSettingsItem,
@@ -75,13 +75,13 @@ export function sortFeedbackSettings(
 export function describeFeedbackSettingsItem(
   item: FeedbackSettingsItem,
 ): string {
-  const amount = collectionName(item.amount);
-  const name = asyncCurrency(formatPhone(item.name));
+  const amount = mathName(item.amount);
+  const name = asyncName(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatFeedbackSettingsAmount(amount: number): string {
-  return collectionName(amount);
+  return mathName(amount);
 }
 
 export function feedbackSettingsStatusTone(

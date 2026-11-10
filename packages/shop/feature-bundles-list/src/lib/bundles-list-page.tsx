@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { NotificationsDashboardSummary } from '@org/shop-feature-notifications-dashboard';
 import { BundlesListFilters } from './bundles-list-filters';
 import { BundlesListHeader } from './bundles-list-header';
 import { BundlesListPanel } from './bundles-list-panel';
@@ -48,7 +47,6 @@ export function BundlesListPage() {
         </div>
         <div className="feature-side">
           <BundlesListPanel selected={selected} onClear={() => select(null)} />
-          <NotificationsDashboardSummary compact />
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
-import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
-import { MarketingStat } from '@org/shop-ui-marketing-stat';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { TrackingOverviewItem } from './tracking-overview.model';
 import { TRACKING_OVERVIEW_FEATURE } from './tracking-overview.routes';
 import { describeTrackingOverviewItem } from './tracking-overview.utils';
@@ -40,7 +41,7 @@ export function TrackingOverviewPanel({
       <p className="feature-panel-description">
         {describeTrackingOverviewItem(selected)}
       </p>
-      <OverlayBannerGroup
+      <CoreToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function TrackingOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <MarketingStat
-          label="Marketing Stat"
+        <CommerceToolbar
+          label="Commerce Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <LayoutStat
+          label="Layout Stat"
           value={selected.product.rating}
           size="sm"
         />

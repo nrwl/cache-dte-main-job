@@ -1,5 +1,6 @@
-import { mathNumber } from '@org/shop-util-math-number';
-import { storageText } from '@org/shop-util-storage-text';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { collectionText } from '@org/shop-util-collection-text';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyAuthListTotals,
   type AuthListItem,
@@ -71,13 +72,13 @@ export function sortAuthList(
 }
 
 export function describeAuthListItem(item: AuthListItem): string {
-  const amount = mathNumber(item.amount);
-  const name = storageText(item.name);
+  const amount = storagePhone(item.amount);
+  const name = validateText(collectionText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAuthListAmount(amount: number): string {
-  return mathNumber(amount);
+  return storagePhone(amount);
 }
 
 export function authListStatusTone(

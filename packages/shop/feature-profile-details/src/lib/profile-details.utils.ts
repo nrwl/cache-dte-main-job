@@ -1,4 +1,5 @@
-import { asyncName } from '@org/shop-util-async-name';
+import { validateText } from '@org/shop-util-validate-text';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyProfileDetailsTotals,
   type ProfileDetailsItem,
@@ -71,13 +72,13 @@ export function sortProfileDetails(
 }
 
 export function describeProfileDetailsItem(item: ProfileDetailsItem): string {
-  const amount = asyncName(item.amount);
-  const name = asyncName(item.name);
+  const amount = validateText(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileDetailsAmount(amount: number): string {
-  return asyncName(amount);
+  return validateText(amount);
 }
 
 export function profileDetailsStatusTone(

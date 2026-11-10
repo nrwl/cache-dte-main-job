@@ -1,4 +1,4 @@
-import { NavigationStat } from '@org/shop-ui-navigation-stat';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { InventoryDetailsItem } from './inventory-details.model';
 import { INVENTORY_DETAILS_FEATURE } from './inventory-details.routes';
 import {
@@ -58,7 +58,7 @@ export function InventoryDetailsTable({
             <td>{formatInventoryDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationStat
+              <MediaToolbar
                 label={item.status}
                 tone={inventoryDetailsStatusTone(item.status)}
                 size="sm"

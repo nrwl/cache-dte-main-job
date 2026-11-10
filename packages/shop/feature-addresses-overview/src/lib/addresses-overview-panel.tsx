@@ -1,6 +1,6 @@
-import { FormsPanelGroup } from '@org/shop-ui-forms-panel';
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
-import { LayoutPanel } from '@org/shop-ui-layout-panel';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { AddressesOverviewItem } from './addresses-overview.model';
 import { ADDRESSES_OVERVIEW_FEATURE } from './addresses-overview.routes';
 import { describeAddressesOverviewItem } from './addresses-overview.utils';
@@ -41,7 +41,7 @@ export function AddressesOverviewPanel({
       <p className="feature-panel-description">
         {describeAddressesOverviewItem(selected)}
       </p>
-      <FormsPanelGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function AddressesOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceStat
-          label="Commerce Stat"
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />
-        <LayoutPanel
-          label="Layout Panel"
+        <DataPanel
+          label="Data Panel"
           value={selected.product.rating}
           size="sm"
         />

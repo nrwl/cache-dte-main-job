@@ -1,6 +1,5 @@
 import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
-import { MediaPanel } from '@org/shop-ui-media-panel';
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { OrdersDashboardItem } from './orders-dashboard.model';
 import { ORDERS_DASHBOARD_FEATURE } from './orders-dashboard.routes';
 import { describeOrdersDashboardItem } from './orders-dashboard.utils';
@@ -52,13 +51,8 @@ export function OrdersDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <MediaPanel
-          label="Media Panel"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <CoreBanner
-          label="Core Banner"
+        <InputsPanel
+          label="Inputs Panel"
           value={selected.product.rating}
           size="sm"
         />

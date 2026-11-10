@@ -1,5 +1,4 @@
 import type { Product } from '@org/models';
-import { collectionCurrency } from '@org/shop-util-collection-currency';
 import {
   clampLength,
   hashString,
@@ -46,10 +45,7 @@ export function asyncNumber(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [collectionCurrency].reduce<string>(
-    (acc, fn) => fn(acc),
-    normalized,
-  );
+  const staged = normalized;
   const transformed = onlyDigits(staged) || staged;
   return clampLength(transformed, opts.maxLength);
 }

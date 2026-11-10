@@ -19,7 +19,7 @@ export const SIZING_OVERVIEW_FEATURE: FeatureMeta = {
   testId: SIZING_OVERVIEW_TEST_ID,
   domain: 'sizing',
   kind: 'overview',
-  itemCount: 12,
+  itemCount: 10,
 };
 
 export function sizingOverviewItemPath(itemId: string): string {

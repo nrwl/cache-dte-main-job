@@ -1,6 +1,4 @@
-import { DataPanelGroup } from '@org/shop-ui-data-panel';
-import { MediaPanel } from '@org/shop-ui-media-panel';
-import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import type { StoreLocatorSettingsItem } from './store-locator-settings.model';
 import { STORE_LOCATOR_SETTINGS_FEATURE } from './store-locator-settings.routes';
 import { describeStoreLocatorSettingsItem } from './store-locator-settings.utils';
@@ -41,7 +39,7 @@ export function StoreLocatorSettingsPanel({
       <p className="feature-panel-description">
         {describeStoreLocatorSettingsItem(selected)}
       </p>
-      <DataPanelGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function StoreLocatorSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MediaPanel
-          label="Media Panel"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FeedbackBadge
-          label="Feedback Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

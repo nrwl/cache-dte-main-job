@@ -1,5 +1,5 @@
-import { formatText } from '@org/shop-util-format-text';
-import { mathNumber } from '@org/shop-util-math-number';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyTrackingOverviewTotals,
   type TrackingOverviewItem,
@@ -74,13 +74,13 @@ export function sortTrackingOverview(
 export function describeTrackingOverviewItem(
   item: TrackingOverviewItem,
 ): string {
-  const amount = formatText(item.amount);
-  const name = mathNumber(item.name);
+  const amount = collectionText(item.amount);
+  const name = mathCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatTrackingOverviewAmount(amount: number): string {
-  return formatText(amount);
+  return collectionText(amount);
 }
 
 export function trackingOverviewStatusTone(

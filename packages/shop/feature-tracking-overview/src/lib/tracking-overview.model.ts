@@ -21,7 +21,7 @@ export interface TrackingOverviewTotals {
   archived: number;
 }
 
-export const TRACKING_OVERVIEW_ITEM_COUNT = 10;
+export const TRACKING_OVERVIEW_ITEM_COUNT = 7;
 
 export const TRACKING_OVERVIEW_STATUSES: ReadonlyArray<TrackingOverviewStatus> =
   ['active', 'pending', 'archived'];

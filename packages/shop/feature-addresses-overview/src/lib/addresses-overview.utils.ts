@@ -1,5 +1,5 @@
+import { asyncName } from '@org/shop-util-async-name';
 import { collectionText } from '@org/shop-util-collection-text';
-import { mathName } from '@org/shop-util-math-name';
 import {
   emptyAddressesOverviewTotals,
   type AddressesOverviewItem,
@@ -74,13 +74,13 @@ export function sortAddressesOverview(
 export function describeAddressesOverviewItem(
   item: AddressesOverviewItem,
 ): string {
-  const amount = collectionText(item.amount);
-  const name = mathName(item.name);
+  const amount = asyncName(item.amount);
+  const name = collectionText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesOverviewAmount(amount: number): string {
-  return collectionText(amount);
+  return asyncName(amount);
 }
 
 export function addressesOverviewStatusTone(

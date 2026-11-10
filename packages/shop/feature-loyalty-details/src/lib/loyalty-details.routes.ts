@@ -19,7 +19,7 @@ export const LOYALTY_DETAILS_FEATURE: FeatureMeta = {
   testId: LOYALTY_DETAILS_TEST_ID,
   domain: 'loyalty',
   kind: 'details',
-  itemCount: 12,
+  itemCount: 10,
 };
 
 export function loyaltyDetailsItemPath(itemId: string): string {

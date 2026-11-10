@@ -1,4 +1,4 @@
-import { CommerceStatGroup } from '@org/shop-ui-commerce-stat';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import { buildInventoryDashboardItems } from './inventory-dashboard.model';
 import { INVENTORY_DASHBOARD_FEATURE } from './inventory-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function InventoryDashboardSummary({
       <h3 className="feature-summary-title">
         {INVENTORY_DASHBOARD_FEATURE.title}
       </h3>
-      <CommerceStatGroup
+      <InputsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

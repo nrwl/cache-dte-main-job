@@ -19,7 +19,7 @@ export const NOTIFICATIONS_SETTINGS_FEATURE: FeatureMeta = {
   testId: NOTIFICATIONS_SETTINGS_TEST_ID,
   domain: 'notifications',
   kind: 'settings',
-  itemCount: 10,
+  itemCount: 5,
 };
 
 export function notificationsSettingsItemPath(itemId: string): string {

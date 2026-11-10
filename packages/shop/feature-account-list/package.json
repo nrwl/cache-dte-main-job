@@ -21,9 +21,9 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
+    "@org/shop-ui-core-toolbar": "*",
+    "@org/shop-ui-layout-stat": "*",
     "@org/shop-ui-charts-banner": "*",
-    "@org/shop-ui-overlay-stat": "*",
-    "@org/shop-ui-charts-panel": "*",
-    "@org/shop-util-storage-text": "*"
+    "@org/shop-util-format-currency": "*"
   }
 }

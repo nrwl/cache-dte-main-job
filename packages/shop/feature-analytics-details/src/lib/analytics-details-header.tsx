@@ -1,4 +1,4 @@
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { ANALYTICS_DETAILS_FEATURE } from './analytics-details.routes';
 
 export interface AnalyticsDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function AnalyticsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CorePanel label="Items" value={count} tone="info" />
-        <CorePanel label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

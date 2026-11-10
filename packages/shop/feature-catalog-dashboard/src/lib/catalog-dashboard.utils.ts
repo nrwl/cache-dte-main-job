@@ -1,5 +1,6 @@
-import { collectionPhone } from '@org/shop-util-collection-phone';
-import { storageText } from '@org/shop-util-storage-text';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { storagePhone } from '@org/shop-util-storage-phone';
 import {
   emptyCatalogDashboardTotals,
   type CatalogDashboardItem,
@@ -74,13 +75,13 @@ export function sortCatalogDashboard(
 export function describeCatalogDashboardItem(
   item: CatalogDashboardItem,
 ): string {
-  const amount = collectionPhone(item.amount);
-  const name = storageText(item.name);
+  const amount = collectionText(item.amount);
+  const name = storagePhone(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCatalogDashboardAmount(amount: number): string {
-  return collectionPhone(amount);
+  return collectionText(amount);
 }
 
 export function catalogDashboardStatusTone(

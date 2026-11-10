@@ -1,5 +1,6 @@
-import { InputsBannerGroup } from '@org/shop-ui-inputs-banner';
-import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { SizingDashboardItem } from './sizing-dashboard.model';
 import { SIZING_DASHBOARD_FEATURE } from './sizing-dashboard.routes';
 import { describeSizingDashboardItem } from './sizing-dashboard.utils';
@@ -40,7 +41,7 @@ export function SizingDashboardPanel({
       <p className="feature-panel-description">
         {describeSizingDashboardItem(selected)}
       </p>
-      <InputsBannerGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function SizingDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutStat
-          label="Layout Stat"
+        <FeedbackBanner
+          label="Feedback Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />

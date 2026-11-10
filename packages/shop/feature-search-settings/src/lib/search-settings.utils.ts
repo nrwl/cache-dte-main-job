@@ -1,5 +1,4 @@
-import { i18nText } from '@org/shop-util-i18n-text';
-import { i18nName } from '@org/shop-util-i18n-name';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptySearchSettingsTotals,
   type SearchSettingsItem,
@@ -72,13 +71,13 @@ export function sortSearchSettings(
 }
 
 export function describeSearchSettingsItem(item: SearchSettingsItem): string {
-  const amount = i18nText(item.amount);
-  const name = i18nName(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSearchSettingsAmount(amount: number): string {
-  return i18nText(amount);
+  return asyncName(amount);
 }
 
 export function searchSettingsStatusTone(

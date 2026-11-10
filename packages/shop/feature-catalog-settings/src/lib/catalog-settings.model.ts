@@ -21,7 +21,7 @@ export interface CatalogSettingsTotals {
   archived: number;
 }
 
-export const CATALOG_SETTINGS_ITEM_COUNT = 5;
+export const CATALOG_SETTINGS_ITEM_COUNT = 12;
 
 export const CATALOG_SETTINGS_STATUSES: ReadonlyArray<CatalogSettingsStatus> = [
   'active',

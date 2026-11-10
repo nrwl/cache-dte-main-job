@@ -1,4 +1,5 @@
-import { i18nText } from '@org/shop-util-i18n-text';
+import { asyncName } from '@org/shop-util-async-name';
+import { storagePhone } from '@org/shop-util-storage-phone';
 import {
   emptyOrdersDashboardTotals,
   type OrdersDashboardItem,
@@ -71,13 +72,13 @@ export function sortOrdersDashboard(
 }
 
 export function describeOrdersDashboardItem(item: OrdersDashboardItem): string {
-  const amount = i18nText(item.amount);
-  const name = i18nText(item.name);
+  const amount = asyncName(item.amount);
+  const name = storagePhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersDashboardAmount(amount: number): string {
-  return i18nText(amount);
+  return asyncName(amount);
 }
 
 export function ordersDashboardStatusTone(

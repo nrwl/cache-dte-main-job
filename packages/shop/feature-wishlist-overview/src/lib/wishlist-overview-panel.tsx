@@ -1,4 +1,6 @@
-import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { WishlistOverviewItem } from './wishlist-overview.model';
 import { WISHLIST_OVERVIEW_FEATURE } from './wishlist-overview.routes';
 import { describeWishlistOverviewItem } from './wishlist-overview.utils';
@@ -39,7 +41,7 @@ export function WishlistOverviewPanel({
       <p className="feature-panel-description">
         {describeWishlistOverviewItem(selected)}
       </p>
-      <OverlayBannerGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function WishlistOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <InputsPanel
+          label="Inputs Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

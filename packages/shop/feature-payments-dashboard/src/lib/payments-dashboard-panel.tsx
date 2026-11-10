@@ -1,4 +1,4 @@
-import { LayoutBannerGroup } from '@org/shop-ui-layout-banner';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
 import type { PaymentsDashboardItem } from './payments-dashboard.model';
 import { PAYMENTS_DASHBOARD_FEATURE } from './payments-dashboard.routes';
 import { describePaymentsDashboardItem } from './payments-dashboard.utils';
@@ -39,7 +39,7 @@ export function PaymentsDashboardPanel({
       <p className="feature-panel-description">
         {describePaymentsDashboardItem(selected)}
       </p>
-      <LayoutBannerGroup
+      <ChartsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

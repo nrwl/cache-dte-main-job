@@ -1,4 +1,4 @@
-import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import type { WishlistSettingsItem } from './wishlist-settings.model';
 import { WISHLIST_SETTINGS_FEATURE } from './wishlist-settings.routes';
 import { describeWishlistSettingsItem } from './wishlist-settings.utils';
@@ -39,7 +39,7 @@ export function WishlistSettingsPanel({
       <p className="feature-panel-description">
         {describeWishlistSettingsItem(selected)}
       </p>
-      <TypographyToolbarGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

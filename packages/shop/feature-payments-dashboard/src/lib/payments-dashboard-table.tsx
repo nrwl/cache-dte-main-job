@@ -1,4 +1,4 @@
-import { DataBanner } from '@org/shop-ui-data-banner';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { PaymentsDashboardItem } from './payments-dashboard.model';
 import { PAYMENTS_DASHBOARD_FEATURE } from './payments-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function PaymentsDashboardTable({
             <td>{formatPaymentsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataBanner
+              <NavigationPanel
                 label={item.status}
                 tone={paymentsDashboardStatusTone(item.status)}
                 size="sm"

@@ -1,5 +1,4 @@
-import { i18nPhone } from '@org/shop-util-i18n-phone';
-import { i18nText } from '@org/shop-util-i18n-text';
+import { storagePhone } from '@org/shop-util-storage-phone';
 import {
   emptyTrackingSettingsTotals,
   type TrackingSettingsItem,
@@ -74,13 +73,13 @@ export function sortTrackingSettings(
 export function describeTrackingSettingsItem(
   item: TrackingSettingsItem,
 ): string {
-  const amount = i18nPhone(item.amount);
-  const name = i18nText(item.name);
+  const amount = storagePhone(item.amount);
+  const name = storagePhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatTrackingSettingsAmount(amount: number): string {
-  return i18nPhone(amount);
+  return storagePhone(amount);
 }
 
 export function trackingSettingsStatusTone(

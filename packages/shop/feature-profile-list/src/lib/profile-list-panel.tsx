@@ -1,4 +1,6 @@
-import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { ProfileListItem } from './profile-list.model';
 import { PROFILE_LIST_FEATURE } from './profile-list.routes';
 import { describeProfileListItem } from './profile-list.utils';
@@ -36,7 +38,7 @@ export function ProfileListPanel({ selected, onClear }: ProfileListPanelProps) {
       <p className="feature-panel-description">
         {describeProfileListItem(selected)}
       </p>
-      <CommerceBadgeGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -46,7 +48,18 @@ export function ProfileListPanel({ selected, onClear }: ProfileListPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <LayoutStat
+          label="Layout Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CoreBadge
+          label="Core Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

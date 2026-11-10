@@ -1,4 +1,4 @@
-import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import { PROFILE_DETAILS_FEATURE } from './profile-details.routes';
 
 export interface ProfileDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function ProfileDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackBanner label="Items" value={count} tone="info" />
-        <FeedbackBanner label="Total" value={total} tone="success" />
+        <CommerceToolbar label="Items" value={count} tone="info" />
+        <CommerceToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

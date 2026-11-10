@@ -1,6 +1,4 @@
-import { asyncName } from '@org/shop-util-async-name';
-import { validateNumber } from '@org/shop-util-validate-number';
-import { validateName } from '@org/shop-util-validate-name';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyGiftCardsOverviewTotals,
   type GiftCardsOverviewItem,
@@ -75,13 +73,13 @@ export function sortGiftCardsOverview(
 export function describeGiftCardsOverviewItem(
   item: GiftCardsOverviewItem,
 ): string {
-  const amount = asyncName(item.amount);
-  const name = validateName(validateNumber(item.name));
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatGiftCardsOverviewAmount(amount: number): string {
-  return asyncName(amount);
+  return formatPhone(amount);
 }
 
 export function giftCardsOverviewStatusTone(

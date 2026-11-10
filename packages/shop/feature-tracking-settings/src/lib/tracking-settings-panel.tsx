@@ -1,5 +1,4 @@
-import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
-import { CommercePanel } from '@org/shop-ui-commerce-panel';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import type { TrackingSettingsItem } from './tracking-settings.model';
 import { TRACKING_SETTINGS_FEATURE } from './tracking-settings.routes';
 import { describeTrackingSettingsItem } from './tracking-settings.utils';
@@ -40,7 +39,7 @@ export function TrackingSettingsPanel({
       <p className="feature-panel-description">
         {describeTrackingSettingsItem(selected)}
       </p>
-      <FeedbackPanelGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function TrackingSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CommercePanel
-          label="Commerce Panel"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,6 @@
-import { CommerceBannerGroup } from '@org/shop-ui-commerce-banner';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { AuthSettingsItem } from './auth-settings.model';
 import { AUTH_SETTINGS_FEATURE } from './auth-settings.routes';
 import { describeAuthSettingsItem } from './auth-settings.utils';
@@ -39,7 +41,7 @@ export function AuthSettingsPanel({
       <p className="feature-panel-description">
         {describeAuthSettingsItem(selected)}
       </p>
-      <CommerceBannerGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function AuthSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <MarketingBadge
+          label="Marketing Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <InputsPanel
+          label="Inputs Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
 import { buildAuthOverviewItems } from './auth-overview.model';
 import { AUTH_OVERVIEW_FEATURE } from './auth-overview.routes';
 import {
@@ -29,7 +29,7 @@ export function AuthOverviewSummary({
       data-testid={`${AUTH_OVERVIEW_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{AUTH_OVERVIEW_FEATURE.title}</h3>
-      <OverlayStatGroup
+      <ChartsBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

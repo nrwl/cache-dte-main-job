@@ -1,6 +1,4 @@
-import { validateNumber } from '@org/shop-util-validate-number';
-import { formatNumber } from '@org/shop-util-format-number';
-import { storagePhone } from '@org/shop-util-storage-phone';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyCompareDashboardTotals,
   type CompareDashboardItem,
@@ -75,13 +73,13 @@ export function sortCompareDashboard(
 export function describeCompareDashboardItem(
   item: CompareDashboardItem,
 ): string {
-  const amount = validateNumber(item.amount);
-  const name = storagePhone(formatNumber(item.name));
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCompareDashboardAmount(amount: number): string {
-  return validateNumber(amount);
+  return formatPhone(amount);
 }
 
 export function compareDashboardStatusTone(

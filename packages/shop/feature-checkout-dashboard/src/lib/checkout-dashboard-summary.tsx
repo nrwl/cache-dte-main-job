@@ -1,4 +1,4 @@
-import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
 import { buildCheckoutDashboardItems } from './checkout-dashboard.model';
 import { CHECKOUT_DASHBOARD_FEATURE } from './checkout-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function CheckoutDashboardSummary({
       <h3 className="feature-summary-title">
         {CHECKOUT_DASHBOARD_FEATURE.title}
       </h3>
-      <MediaToolbarGroup
+      <ChartsBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

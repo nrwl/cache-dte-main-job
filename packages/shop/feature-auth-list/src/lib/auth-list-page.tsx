@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { WishlistOverviewSummary } from '@org/shop-feature-wishlist-overview';
 import { AuthListFilters } from './auth-list-filters';
 import { AuthListHeader } from './auth-list-header';
 import { AuthListPanel } from './auth-list-panel';
@@ -48,7 +47,6 @@ export function AuthListPage() {
         </div>
         <div className="feature-side">
           <AuthListPanel selected={selected} onClear={() => select(null)} />
-          <WishlistOverviewSummary compact />
         </div>
       </div>
     </section>

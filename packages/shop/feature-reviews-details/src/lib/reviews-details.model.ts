@@ -21,7 +21,7 @@ export interface ReviewsDetailsTotals {
   archived: number;
 }
 
-export const REVIEWS_DETAILS_ITEM_COUNT = 6;
+export const REVIEWS_DETAILS_ITEM_COUNT = 8;
 
 export const REVIEWS_DETAILS_STATUSES: ReadonlyArray<ReviewsDetailsStatus> = [
   'active',

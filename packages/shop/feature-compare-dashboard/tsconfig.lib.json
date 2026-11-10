@@ -30,28 +30,22 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../feature-recommendations-dashboard/tsconfig.lib.json"
+      "path": "../util-format-phone/tsconfig.lib.json"
     },
     {
-      "path": "../util-storage-phone/tsconfig.lib.json"
+      "path": "../ui-commerce-toolbar/tsconfig.lib.json"
     },
     {
-      "path": "../util-format-number/tsconfig.lib.json"
+      "path": "../ui-core-toolbar/tsconfig.lib.json"
     },
     {
-      "path": "../util-validate-number/tsconfig.lib.json"
+      "path": "../ui-typography-banner/tsconfig.lib.json"
+    },
+    {
+      "path": "../ui-core-badge/tsconfig.lib.json"
     },
     {
       "path": "../ui-layout-stat/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-commerce-badge/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-overlay-stat/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-data-banner/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

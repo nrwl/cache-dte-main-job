@@ -1,4 +1,6 @@
-import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { CompareListItem } from './compare-list.model';
 import { COMPARE_LIST_FEATURE } from './compare-list.routes';
 import { describeCompareListItem } from './compare-list.utils';
@@ -36,7 +38,7 @@ export function CompareListPanel({ selected, onClear }: CompareListPanelProps) {
       <p className="feature-panel-description">
         {describeCompareListItem(selected)}
       </p>
-      <CommerceToolbarGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -46,7 +48,18 @@ export function CompareListPanel({ selected, onClear }: CompareListPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CommerceBadge
+          label="Commerce Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <TypographyBanner
+          label="Typography Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

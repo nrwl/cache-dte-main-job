@@ -1,4 +1,4 @@
-import { CoreBadge } from '@org/shop-ui-core-badge';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import { SIZING_OVERVIEW_FEATURE } from './sizing-overview.routes';
 
 export interface SizingOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function SizingOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreBadge label="Items" value={count} tone="info" />
-        <CoreBadge label="Total" value={total} tone="success" />
+        <OverlayStat label="Items" value={count} tone="info" />
+        <OverlayStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

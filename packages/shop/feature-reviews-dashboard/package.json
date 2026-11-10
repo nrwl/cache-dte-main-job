@@ -21,10 +21,10 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-feedback-banner": "*",
-    "@org/shop-ui-inputs-stat": "*",
-    "@org/shop-ui-overlay-badge": "*",
-    "@org/shop-util-i18n-name": "*",
-    "@org/shop-feature-checkout-details": "*"
+    "@org/shop-ui-media-toolbar": "*",
+    "@org/shop-ui-overlay-stat": "*",
+    "@org/shop-ui-core-badge": "*",
+    "@org/shop-util-format-currency": "*",
+    "@org/shop-util-async-name": "*"
   }
 }

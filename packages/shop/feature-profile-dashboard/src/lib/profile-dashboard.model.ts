@@ -21,7 +21,7 @@ export interface ProfileDashboardTotals {
   archived: number;
 }
 
-export const PROFILE_DASHBOARD_ITEM_COUNT = 7;
+export const PROFILE_DASHBOARD_ITEM_COUNT = 9;
 
 export const PROFILE_DASHBOARD_STATUSES: ReadonlyArray<ProfileDashboardStatus> =
   ['active', 'pending', 'archived'];

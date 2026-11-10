@@ -1,6 +1,5 @@
-import { storageName } from '@org/shop-util-storage-name';
-import { asyncNumber } from '@org/shop-util-async-number';
-import { validateName } from '@org/shop-util-validate-name';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyShippingSettingsTotals,
   type ShippingSettingsItem,
@@ -75,13 +74,13 @@ export function sortShippingSettings(
 export function describeShippingSettingsItem(
   item: ShippingSettingsItem,
 ): string {
-  const amount = storageName(item.amount);
-  const name = validateName(asyncNumber(item.name));
+  const amount = formatPhone(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatShippingSettingsAmount(amount: number): string {
-  return storageName(amount);
+  return formatPhone(amount);
 }
 
 export function shippingSettingsStatusTone(

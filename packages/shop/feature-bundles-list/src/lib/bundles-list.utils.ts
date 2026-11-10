@@ -1,5 +1,6 @@
-import { asyncText } from '@org/shop-util-async-text';
-import { mathText } from '@org/shop-util-math-text';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyBundlesListTotals,
   type BundlesListItem,
@@ -71,13 +72,13 @@ export function sortBundlesList(
 }
 
 export function describeBundlesListItem(item: BundlesListItem): string {
-  const amount = asyncText(item.amount);
-  const name = mathText(item.name);
+  const amount = asyncNumber(item.amount);
+  const name = mathName(storagePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatBundlesListAmount(amount: number): string {
-  return asyncText(amount);
+  return asyncNumber(amount);
 }
 
 export function bundlesListStatusTone(

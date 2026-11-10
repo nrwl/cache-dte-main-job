@@ -1,4 +1,4 @@
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { LoyaltyDashboardItem } from './loyalty-dashboard.model';
 import { LOYALTY_DASHBOARD_FEATURE } from './loyalty-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function LoyaltyDashboardTable({
             <td>{formatLoyaltyDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceStat
+              <FeedbackBanner
                 label={item.status}
                 tone={loyaltyDashboardStatusTone(item.status)}
                 size="sm"

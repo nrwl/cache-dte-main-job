@@ -1,4 +1,4 @@
-import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
+import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
 import type { PromotionsDetailsItem } from './promotions-details.model';
 import { PROMOTIONS_DETAILS_FEATURE } from './promotions-details.routes';
 import { describePromotionsDetailsItem } from './promotions-details.utils';
@@ -39,7 +39,7 @@ export function PromotionsDetailsPanel({
       <p className="feature-panel-description">
         {describePromotionsDetailsItem(selected)}
       </p>
-      <CommerceBadgeGroup
+      <TypographyBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

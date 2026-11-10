@@ -19,7 +19,7 @@ export const INVENTORY_DETAILS_FEATURE: FeatureMeta = {
   testId: INVENTORY_DETAILS_TEST_ID,
   domain: 'inventory',
   kind: 'details',
-  itemCount: 10,
+  itemCount: 12,
 };
 
 export function inventoryDetailsItemPath(itemId: string): string {

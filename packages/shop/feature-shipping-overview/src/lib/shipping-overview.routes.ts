@@ -19,7 +19,7 @@ export const SHIPPING_OVERVIEW_FEATURE: FeatureMeta = {
   testId: SHIPPING_OVERVIEW_TEST_ID,
   domain: 'shipping',
   kind: 'overview',
-  itemCount: 6,
+  itemCount: 12,
 };
 
 export function shippingOverviewItemPath(itemId: string): string {

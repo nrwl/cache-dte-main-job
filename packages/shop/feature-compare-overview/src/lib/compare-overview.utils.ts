@@ -1,5 +1,4 @@
-import { mathPhone } from '@org/shop-util-math-phone';
-import { formatName } from '@org/shop-util-format-name';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyCompareOverviewTotals,
   type CompareOverviewItem,
@@ -72,13 +71,13 @@ export function sortCompareOverview(
 }
 
 export function describeCompareOverviewItem(item: CompareOverviewItem): string {
-  const amount = mathPhone(item.amount);
-  const name = formatName(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCompareOverviewAmount(amount: number): string {
-  return mathPhone(amount);
+  return asyncName(amount);
 }
 
 export function compareOverviewStatusTone(

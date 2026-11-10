@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import { TRACKING_OVERVIEW_FEATURE } from './tracking-overview.routes';
 
 export interface TrackingOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function TrackingOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyToolbar label="Items" value={count} tone="info" />
-        <TypographyToolbar label="Total" value={total} tone="success" />
+        <TypographyBanner label="Items" value={count} tone="info" />
+        <TypographyBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

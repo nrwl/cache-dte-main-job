@@ -1,6 +1,5 @@
-import { FeedbackStatGroup } from '@org/shop-ui-feedback-stat';
-import { CoreBanner } from '@org/shop-ui-core-banner';
-import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { BundlesOverviewItem } from './bundles-overview.model';
 import { BUNDLES_OVERVIEW_FEATURE } from './bundles-overview.routes';
 import { describeBundlesOverviewItem } from './bundles-overview.utils';
@@ -41,7 +40,7 @@ export function BundlesOverviewPanel({
       <p className="feature-panel-description">
         {describeBundlesOverviewItem(selected)}
       </p>
-      <FeedbackStatGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function BundlesOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CoreBanner
-          label="Core Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <LayoutStat
-          label="Layout Stat"
+        <TypographyBanner
+          label="Typography Banner"
           value={selected.product.rating}
           size="sm"
         />

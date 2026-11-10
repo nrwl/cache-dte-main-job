@@ -30,16 +30,10 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-core-panel/tsconfig.lib.json"
+      "path": "../util-async-name/tsconfig.lib.json"
     },
     {
-      "path": "../util-collection-text/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-i18n-name/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-format-currency/tsconfig.lib.json"
+      "path": "../util-format-phone/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

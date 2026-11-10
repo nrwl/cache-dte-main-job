@@ -1,4 +1,4 @@
-import { InputsBannerGroup } from '@org/shop-ui-inputs-banner';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
 import { buildAddressesDashboardItems } from './addresses-dashboard.model';
 import { ADDRESSES_DASHBOARD_FEATURE } from './addresses-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function AddressesDashboardSummary({
       <h3 className="feature-summary-title">
         {ADDRESSES_DASHBOARD_FEATURE.title}
       </h3>
-      <InputsBannerGroup
+      <LayoutStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

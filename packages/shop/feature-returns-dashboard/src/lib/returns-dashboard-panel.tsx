@@ -1,5 +1,5 @@
 import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
-import { FormsPanel } from '@org/shop-ui-forms-panel';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { ReturnsDashboardItem } from './returns-dashboard.model';
 import { RETURNS_DASHBOARD_FEATURE } from './returns-dashboard.routes';
 import { describeReturnsDashboardItem } from './returns-dashboard.utils';
@@ -51,8 +51,8 @@ export function ReturnsDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsPanel
-          label="Forms Panel"
+        <DataPanel
+          label="Data Panel"
           value={selected.product.rating}
           size="sm"
         />

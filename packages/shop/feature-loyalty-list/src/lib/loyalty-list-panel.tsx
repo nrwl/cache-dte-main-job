@@ -1,4 +1,4 @@
-import { CommercePanelGroup } from '@org/shop-ui-commerce-panel';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import type { LoyaltyListItem } from './loyalty-list.model';
 import { LOYALTY_LIST_FEATURE } from './loyalty-list.routes';
 import { describeLoyaltyListItem } from './loyalty-list.utils';
@@ -36,7 +36,7 @@ export function LoyaltyListPanel({ selected, onClear }: LoyaltyListPanelProps) {
       <p className="feature-panel-description">
         {describeLoyaltyListItem(selected)}
       </p>
-      <CommercePanelGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

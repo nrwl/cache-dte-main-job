@@ -19,9 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-collection-name": "*",
-    "@org/shop-util-format-number": "*",
-    "@org/shop-util-storage-text": "*",
-    "@org/shop-ui-core-banner": "*"
+    "@org/shop-util-i18n-number": "*",
+    "@org/shop-ui-core-toolbar": "*"
   }
 }

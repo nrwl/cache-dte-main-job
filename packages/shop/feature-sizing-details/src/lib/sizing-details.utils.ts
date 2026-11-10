@@ -1,5 +1,5 @@
-import { validateText } from '@org/shop-util-validate-text';
-import { asyncText } from '@org/shop-util-async-text';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptySizingDetailsTotals,
   type SizingDetailsItem,
@@ -71,13 +71,13 @@ export function sortSizingDetails(
 }
 
 export function describeSizingDetailsItem(item: SizingDetailsItem): string {
-  const amount = validateText(item.amount);
-  const name = asyncText(item.name);
+  const amount = mathCurrency(item.amount);
+  const name = collectionText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingDetailsAmount(amount: number): string {
-  return validateText(amount);
+  return mathCurrency(amount);
 }
 
 export function sizingDetailsStatusTone(

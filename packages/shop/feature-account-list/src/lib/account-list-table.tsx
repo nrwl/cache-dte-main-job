@@ -1,4 +1,4 @@
-import { ChartsPanel } from '@org/shop-ui-charts-panel';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { AccountListItem } from './account-list.model';
 import { ACCOUNT_LIST_FEATURE } from './account-list.routes';
 import {
@@ -58,7 +58,7 @@ export function AccountListTable({
             <td>{formatAccountListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <ChartsPanel
+              <ChartsBanner
                 label={item.status}
                 tone={accountListStatusTone(item.status)}
                 size="sm"

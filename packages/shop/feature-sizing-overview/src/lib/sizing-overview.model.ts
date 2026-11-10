@@ -21,7 +21,7 @@ export interface SizingOverviewTotals {
   archived: number;
 }
 
-export const SIZING_OVERVIEW_ITEM_COUNT = 12;
+export const SIZING_OVERVIEW_ITEM_COUNT = 10;
 
 export const SIZING_OVERVIEW_STATUSES: ReadonlyArray<SizingOverviewStatus> = [
   'active',

@@ -1,4 +1,4 @@
-import { FeedbackToolbarGroup } from '@org/shop-ui-feedback-toolbar';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
 import { buildPromotionsDetailsItems } from './promotions-details.model';
 import { PROMOTIONS_DETAILS_FEATURE } from './promotions-details.routes';
 import {
@@ -31,7 +31,7 @@ export function PromotionsDetailsSummary({
       <h3 className="feature-summary-title">
         {PROMOTIONS_DETAILS_FEATURE.title}
       </h3>
-      <FeedbackToolbarGroup
+      <LayoutStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

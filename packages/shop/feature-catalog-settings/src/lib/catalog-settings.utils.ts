@@ -1,6 +1,6 @@
 import { asyncNumber } from '@org/shop-util-async-number';
-import { mathText } from '@org/shop-util-math-text';
-import { validateCurrency } from '@org/shop-util-validate-currency';
+import { mathName } from '@org/shop-util-math-name';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyCatalogSettingsTotals,
   type CatalogSettingsItem,
@@ -74,7 +74,7 @@ export function sortCatalogSettings(
 
 export function describeCatalogSettingsItem(item: CatalogSettingsItem): string {
   const amount = asyncNumber(item.amount);
-  const name = validateCurrency(mathText(item.name));
+  const name = formatPhone(mathName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 

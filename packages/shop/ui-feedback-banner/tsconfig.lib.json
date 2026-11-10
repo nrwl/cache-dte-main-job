@@ -30,10 +30,7 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-layout-banner/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-validate-name/tsconfig.lib.json"
+      "path": "../util-format-phone/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

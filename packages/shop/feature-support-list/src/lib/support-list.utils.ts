@@ -1,6 +1,4 @@
-import { i18nPhone } from '@org/shop-util-i18n-phone';
-import { storageText } from '@org/shop-util-storage-text';
-import { collectionPhone } from '@org/shop-util-collection-phone';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptySupportListTotals,
   type SupportListItem,
@@ -72,13 +70,13 @@ export function sortSupportList(
 }
 
 export function describeSupportListItem(item: SupportListItem): string {
-  const amount = i18nPhone(item.amount);
-  const name = collectionPhone(storageText(item.name));
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSupportListAmount(amount: number): string {
-  return i18nPhone(amount);
+  return formatPhone(amount);
 }
 
 export function supportListStatusTone(

@@ -1,4 +1,4 @@
-import { MarketingPanel } from '@org/shop-ui-marketing-panel';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { FeedbackListItem } from './feedback-list.model';
 import { FEEDBACK_LIST_FEATURE } from './feedback-list.routes';
 import {
@@ -58,7 +58,7 @@ export function FeedbackListTable({
             <td>{formatFeedbackListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingPanel
+              <FeedbackBanner
                 label={item.status}
                 tone={feedbackListStatusTone(item.status)}
                 size="sm"

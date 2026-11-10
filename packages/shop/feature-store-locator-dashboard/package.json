@@ -21,10 +21,11 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-navigation-stat": "*",
-    "@org/shop-ui-core-panel": "*",
-    "@org/shop-ui-commerce-panel": "*",
-    "@org/shop-util-math-name": "*",
-    "@org/shop-util-storage-text": "*"
+    "@org/shop-ui-navigation-panel": "*",
+    "@org/shop-ui-charts-banner": "*",
+    "@org/shop-ui-commerce-badge": "*",
+    "@org/shop-ui-core-toolbar": "*",
+    "@org/shop-util-async-name": "*",
+    "@org/shop-feature-search-settings": "*"
   }
 }

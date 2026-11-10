@@ -1,4 +1,4 @@
-import { TypographyStat } from '@org/shop-ui-typography-stat';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { SupportListItem } from './support-list.model';
 import { SUPPORT_LIST_FEATURE } from './support-list.routes';
 import {
@@ -58,7 +58,7 @@ export function SupportListTable({
             <td>{formatSupportListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyStat
+              <CoreBadge
                 label={item.status}
                 tone={supportListStatusTone(item.status)}
                 size="sm"

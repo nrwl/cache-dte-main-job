@@ -19,7 +19,7 @@ export const PROFILE_OVERVIEW_FEATURE: FeatureMeta = {
   testId: PROFILE_OVERVIEW_TEST_ID,
   domain: 'profile',
   kind: 'overview',
-  itemCount: 7,
+  itemCount: 5,
 };
 
 export function profileOverviewItemPath(itemId: string): string {

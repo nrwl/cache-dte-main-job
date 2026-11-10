@@ -1,4 +1,5 @@
-import { asyncText } from '@org/shop-util-async-text';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyCartDashboardTotals,
   type CartDashboardItem,
@@ -70,13 +71,13 @@ export function sortCartDashboard(
 }
 
 export function describeCartDashboardItem(item: CartDashboardItem): string {
-  const amount = asyncText(item.amount);
-  const name = asyncText(item.name);
+  const amount = formatPhone(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCartDashboardAmount(amount: number): string {
-  return asyncText(amount);
+  return formatPhone(amount);
 }
 
 export function cartDashboardStatusTone(

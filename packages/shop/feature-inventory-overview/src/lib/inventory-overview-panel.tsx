@@ -1,5 +1,5 @@
-import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
-import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { InventoryOverviewItem } from './inventory-overview.model';
 import { INVENTORY_OVERVIEW_FEATURE } from './inventory-overview.routes';
 import { describeInventoryOverviewItem } from './inventory-overview.utils';
@@ -40,7 +40,7 @@ export function InventoryOverviewPanel({
       <p className="feature-panel-description">
         {describeInventoryOverviewItem(selected)}
       </p>
-      <ChartsToolbarGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function InventoryOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutStat
-          label="Layout Stat"
+        <NavigationPanel
+          label="Navigation Panel"
           value={selected.product.rating}
           size="sm"
         />

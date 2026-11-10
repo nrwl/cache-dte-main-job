@@ -1,4 +1,4 @@
-import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import { CHECKOUT_DASHBOARD_FEATURE } from './checkout-dashboard.routes';
 
 export interface CheckoutDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function CheckoutDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaToolbar label="Items" value={count} tone="info" />
-        <MediaToolbar label="Total" value={total} tone="success" />
+        <ChartsBanner label="Items" value={count} tone="info" />
+        <ChartsBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

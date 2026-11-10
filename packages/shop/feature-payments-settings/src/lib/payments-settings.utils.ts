@@ -1,4 +1,5 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
+import { validateText } from '@org/shop-util-validate-text';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyPaymentsSettingsTotals,
   type PaymentsSettingsItem,
@@ -73,13 +74,13 @@ export function sortPaymentsSettings(
 export function describePaymentsSettingsItem(
   item: PaymentsSettingsItem,
 ): string {
-  const amount = validateCurrency(item.amount);
-  const name = validateCurrency(item.name);
+  const amount = validateText(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPaymentsSettingsAmount(amount: number): string {
-  return validateCurrency(amount);
+  return validateText(amount);
 }
 
 export function paymentsSettingsStatusTone(

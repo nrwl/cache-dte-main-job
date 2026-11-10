@@ -1,5 +1,6 @@
-import { MediaBannerGroup } from '@org/shop-ui-media-banner';
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { ShippingListItem } from './shipping-list.model';
 import { SHIPPING_LIST_FEATURE } from './shipping-list.routes';
 import { describeShippingListItem } from './shipping-list.utils';
@@ -40,7 +41,7 @@ export function ShippingListPanel({
       <p className="feature-panel-description">
         {describeShippingListItem(selected)}
       </p>
-      <MediaBannerGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function ShippingListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutBanner
-          label="Layout Banner"
+        <ChartsBanner
+          label="Charts Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />

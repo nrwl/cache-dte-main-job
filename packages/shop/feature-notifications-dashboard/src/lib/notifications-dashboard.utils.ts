@@ -1,5 +1,4 @@
-import { collectionNumber } from '@org/shop-util-collection-number';
-import { formatPhone } from '@org/shop-util-format-phone';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyNotificationsDashboardTotals,
   type NotificationsDashboardItem,
@@ -77,13 +76,13 @@ export function sortNotificationsDashboard(
 export function describeNotificationsDashboardItem(
   item: NotificationsDashboardItem,
 ): string {
-  const amount = collectionNumber(item.amount);
-  const name = formatPhone(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatNotificationsDashboardAmount(amount: number): string {
-  return collectionNumber(amount);
+  return formatCurrency(amount);
 }
 
 export function notificationsDashboardStatusTone(

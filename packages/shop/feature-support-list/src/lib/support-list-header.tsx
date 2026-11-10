@@ -1,4 +1,4 @@
-import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import { SUPPORT_LIST_FEATURE } from './support-list.routes';
 
 export interface SupportListHeaderProps {
@@ -26,8 +26,8 @@ export function SupportListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationToolbar label="Items" value={count} tone="info" />
-        <NavigationToolbar label="Total" value={total} tone="success" />
+        <MediaToolbar label="Items" value={count} tone="info" />
+        <MediaToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -12,8 +12,8 @@ startup overhead of 100 separate `e2e-ci` tasks.
 The target for the checks command after setup is 10–12 minutes on a cold run,
 not a guaranteed duration. Checkout, Node/npm setup, and browser installation
 are outside that budget; the shop build is included.
-The generated workspace is reduced from 500 to 250 libraries: 35 utilities,
-65 UI libraries, and 150 feature libraries spanning all 30 feature domains.
+The generated workspace is reduced from 500 to 125 libraries: 10 utilities,
+15 UI libraries, and 100 feature libraries spanning all 30 feature domains.
 Handwritten application and support projects are retained. Each library's unit-test
 task adds two calibrated seconds of CPU work and three seconds of waiting, once
 per library via Vitest `globalSetup`, not once per spec file. Actual CPU time

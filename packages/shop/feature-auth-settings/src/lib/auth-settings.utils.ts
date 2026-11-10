@@ -1,6 +1,6 @@
-import { collectionName } from '@org/shop-util-collection-name';
-import { formatText } from '@org/shop-util-format-text';
-import { asyncText } from '@org/shop-util-async-text';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyAuthSettingsTotals,
   type AuthSettingsItem,
@@ -72,13 +72,13 @@ export function sortAuthSettings(
 }
 
 export function describeAuthSettingsItem(item: AuthSettingsItem): string {
-  const amount = collectionName(item.amount);
-  const name = asyncText(formatText(item.name));
+  const amount = mathCurrency(item.amount);
+  const name = mathName(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAuthSettingsAmount(amount: number): string {
-  return collectionName(amount);
+  return mathCurrency(amount);
 }
 
 export function authSettingsStatusTone(

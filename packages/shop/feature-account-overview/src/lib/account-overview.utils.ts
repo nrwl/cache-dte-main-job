@@ -1,4 +1,4 @@
-import { storageCurrency } from '@org/shop-util-storage-currency';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyAccountOverviewTotals,
   type AccountOverviewItem,
@@ -71,13 +71,13 @@ export function sortAccountOverview(
 }
 
 export function describeAccountOverviewItem(item: AccountOverviewItem): string {
-  const amount = storageCurrency(item.amount);
-  const name = storageCurrency(item.name);
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAccountOverviewAmount(amount: number): string {
-  return storageCurrency(amount);
+  return formatPhone(amount);
 }
 
 export function accountOverviewStatusTone(

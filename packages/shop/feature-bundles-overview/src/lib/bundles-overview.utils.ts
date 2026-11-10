@@ -1,4 +1,5 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyBundlesOverviewTotals,
   type BundlesOverviewItem,
@@ -71,13 +72,13 @@ export function sortBundlesOverview(
 }
 
 export function describeBundlesOverviewItem(item: BundlesOverviewItem): string {
-  const amount = validatePhone(item.amount);
-  const name = validatePhone(item.name);
+  const amount = mathCurrency(item.amount);
+  const name = i18nNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatBundlesOverviewAmount(amount: number): string {
-  return validatePhone(amount);
+  return mathCurrency(amount);
 }
 
 export function bundlesOverviewStatusTone(

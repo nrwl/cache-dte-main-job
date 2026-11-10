@@ -19,9 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-i18n-number": "*",
-    "@org/shop-util-format-currency": "*",
-    "@org/shop-util-math-currency": "*",
-    "@org/shop-ui-feedback-stat": "*"
+    "@org/shop-util-format-phone": "*",
+    "@org/shop-util-math-currency": "*"
   }
 }

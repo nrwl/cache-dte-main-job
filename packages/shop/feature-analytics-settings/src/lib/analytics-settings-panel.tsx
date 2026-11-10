@@ -1,6 +1,4 @@
-import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
-import { ChartsPanel } from '@org/shop-ui-charts-panel';
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
 import type { AnalyticsSettingsItem } from './analytics-settings.model';
 import { ANALYTICS_SETTINGS_FEATURE } from './analytics-settings.routes';
 import { describeAnalyticsSettingsItem } from './analytics-settings.utils';
@@ -41,7 +39,7 @@ export function AnalyticsSettingsPanel({
       <p className="feature-panel-description">
         {describeAnalyticsSettingsItem(selected)}
       </p>
-      <InputsPanelGroup
+      <CommerceBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function AnalyticsSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <ChartsPanel
-          label="Charts Panel"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <CommerceBadge
-          label="Commerce Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

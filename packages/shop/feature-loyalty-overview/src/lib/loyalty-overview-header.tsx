@@ -1,4 +1,4 @@
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { LOYALTY_OVERVIEW_FEATURE } from './loyalty-overview.routes';
 
 export interface LoyaltyOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function LoyaltyOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsBadge label="Items" value={count} tone="info" />
-        <FormsBadge label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

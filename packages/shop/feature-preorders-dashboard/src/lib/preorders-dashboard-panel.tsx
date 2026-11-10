@@ -1,4 +1,5 @@
-import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { PreordersDashboardItem } from './preorders-dashboard.model';
 import { PREORDERS_DASHBOARD_FEATURE } from './preorders-dashboard.routes';
 import { describePreordersDashboardItem } from './preorders-dashboard.utils';
@@ -39,7 +40,7 @@ export function PreordersDashboardPanel({
       <p className="feature-panel-description">
         {describePreordersDashboardItem(selected)}
       </p>
-      <MarketingBadgeGroup
+      <LayoutStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function PreordersDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <FeedbackBanner
+          label="Feedback Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

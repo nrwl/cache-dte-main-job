@@ -1,5 +1,6 @@
-import { storagePhone } from '@org/shop-util-storage-phone';
-import { formatNumber } from '@org/shop-util-format-number';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { asyncName } from '@org/shop-util-async-name';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptySizingDashboardTotals,
   type SizingDashboardItem,
@@ -72,13 +73,13 @@ export function sortSizingDashboard(
 }
 
 export function describeSizingDashboardItem(item: SizingDashboardItem): string {
-  const amount = storagePhone(item.amount);
-  const name = formatNumber(item.name);
+  const amount = mathCurrency(item.amount);
+  const name = collectionText(asyncName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingDashboardAmount(amount: number): string {
-  return storagePhone(amount);
+  return mathCurrency(amount);
 }
 
 export function sizingDashboardStatusTone(

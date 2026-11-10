@@ -1,5 +1,6 @@
-import { FeedbackBadgeGroup } from '@org/shop-ui-feedback-badge';
-import { FormsStat } from '@org/shop-ui-forms-stat';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { GiftCardsOverviewItem } from './gift-cards-overview.model';
 import { GIFT_CARDS_OVERVIEW_FEATURE } from './gift-cards-overview.routes';
 import { describeGiftCardsOverviewItem } from './gift-cards-overview.utils';
@@ -40,7 +41,7 @@ export function GiftCardsOverviewPanel({
       <p className="feature-panel-description">
         {describeGiftCardsOverviewItem(selected)}
       </p>
-      <FeedbackBadgeGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function GiftCardsOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsStat
-          label="Forms Stat"
+        <CommerceBadge
+          label="Commerce Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <ChartsBanner
+          label="Charts Banner"
           value={selected.product.rating}
           size="sm"
         />

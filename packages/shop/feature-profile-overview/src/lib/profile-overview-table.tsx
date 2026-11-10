@@ -1,4 +1,4 @@
-import { CommercePanel } from '@org/shop-ui-commerce-panel';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { ProfileOverviewItem } from './profile-overview.model';
 import { PROFILE_OVERVIEW_FEATURE } from './profile-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function ProfileOverviewTable({
             <td>{formatProfileOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommercePanel
+              <NavigationPanel
                 label={item.status}
                 tone={profileOverviewStatusTone(item.status)}
                 size="sm"

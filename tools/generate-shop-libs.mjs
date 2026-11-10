@@ -3,9 +3,9 @@
  * Deterministic generator for the large shop workspace.
  *
  * Produces:
- *   - 35  util libraries    packages/shop/util-*      (@org/shop-util-*)
- *   - 65  ui libraries      packages/shop/ui-*        (@org/shop-ui-*)
- *   - 150 feature libraries packages/shop/feature-*   (@org/shop-feature-*)
+ *   - 10  util libraries    packages/shop/util-*      (@org/shop-util-*)
+ *   - 15  ui libraries      packages/shop/ui-*        (@org/shop-ui-*)
+ *   - 100 feature libraries packages/shop/feature-*   (@org/shop-feature-*)
  *   - apps/shop/src/app/feature-routes.tsx wiring every feature into the app
  *   - apps/shop-e2e/src/features/*.spec.ts  (E2E_SPEC_COUNT specs, one test each,
  *     every test padded to ~6s by apps/shop-e2e/src/support/pacing.ts)
@@ -150,7 +150,15 @@ const TRANSFORMS = [
 // ---------------------------------------------------------------------------
 // Build the lib descriptors
 // ---------------------------------------------------------------------------
-const utils = [];
+// Sample across each tier so the smaller benchmark retains every domain.
+function sampleEvenly(items, count) {
+  return Array.from(
+    { length: count },
+    (_, i) => items[Math.floor((i * items.length) / count)],
+  );
+}
+
+let utils = [];
 UTIL_GROUPS.forEach((g) =>
   UTIL_KINDS.forEach((k) => {
     const name = `${g}-${k}`;
@@ -164,11 +172,12 @@ UTIL_GROUPS.forEach((g) =>
     });
   }),
 );
+utils = sampleEvenly(utils, 10);
 utils.forEach((u, i) => {
   if (i > 0) u.deps = pickN(utils.slice(0, i), randInt(0, Math.min(2, i)));
 });
 
-const uis = [];
+let uis = [];
 UI_GROUPS.forEach((g) =>
   UI_KINDS.forEach((k) => {
     const name = `${g}-${k}`;
@@ -182,12 +191,13 @@ UI_GROUPS.forEach((g) =>
     });
   }),
 );
+uis = sampleEvenly(uis, 15);
 uis.forEach((u, i) => {
   u.utilDeps = pickN(utils, randInt(1, 3));
   u.uiDeps = i > 0 && rng() < 0.6 ? pickN(uis.slice(0, i), 1) : [];
 });
 
-const features = [];
+let features = [];
 FEATURE_DOMAINS.forEach((d) =>
   FEATURE_KINDS.forEach((k) => {
     const name = `${d}-${k}`;
@@ -207,6 +217,7 @@ FEATURE_DOMAINS.forEach((d) =>
     });
   }),
 );
+features = sampleEvenly(features, 100);
 features.forEach((f, i) => {
   f.uiDeps = pickN(uis, randInt(3, 5));
   f.utilDeps = pickN(utils, randInt(1, 3));

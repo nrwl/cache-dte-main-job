@@ -1,6 +1,6 @@
 import type { Product } from '@org/models';
-import { mathText } from '@org/shop-util-math-text';
-import { mathNumber } from '@org/shop-util-math-number';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { mathName } from '@org/shop-util-math-name';
 import { clampLength, hashString, normalizeInput } from './async-name-helpers';
 
 export interface AsyncNameOptions {
@@ -42,7 +42,7 @@ export function asyncName(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [mathText, mathNumber].reduce<string>(
+  const staged = [formatCurrency, mathName].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );

@@ -1,4 +1,4 @@
-import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildPaymentsDashboardItems } from './payments-dashboard.model';
 import { PAYMENTS_DASHBOARD_FEATURE } from './payments-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function PaymentsDashboardSummary({
       <h3 className="feature-summary-title">
         {PAYMENTS_DASHBOARD_FEATURE.title}
       </h3>
-      <OverlayBannerGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

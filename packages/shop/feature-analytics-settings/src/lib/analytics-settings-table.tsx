@@ -1,4 +1,4 @@
-import { MediaBadge } from '@org/shop-ui-media-badge';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { AnalyticsSettingsItem } from './analytics-settings.model';
 import { ANALYTICS_SETTINGS_FEATURE } from './analytics-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function AnalyticsSettingsTable({
             <td>{formatAnalyticsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaBadge
+              <TypographyBanner
                 label={item.status}
                 tone={analyticsSettingsStatusTone(item.status)}
                 size="sm"

@@ -21,7 +21,7 @@ export interface StoreLocatorDashboardTotals {
   archived: number;
 }
 
-export const STORE_LOCATOR_DASHBOARD_ITEM_COUNT = 5;
+export const STORE_LOCATOR_DASHBOARD_ITEM_COUNT = 8;
 
 export const STORE_LOCATOR_DASHBOARD_STATUSES: ReadonlyArray<StoreLocatorDashboardStatus> =
   ['active', 'pending', 'archived'];

@@ -19,7 +19,7 @@ export const RETURNS_DETAILS_FEATURE: FeatureMeta = {
   testId: RETURNS_DETAILS_TEST_ID,
   domain: 'returns',
   kind: 'details',
-  itemCount: 7,
+  itemCount: 11,
 };
 
 export function returnsDetailsItemPath(itemId: string): string {

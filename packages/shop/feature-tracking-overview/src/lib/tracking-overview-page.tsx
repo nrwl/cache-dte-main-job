@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { CompareOverviewSummary } from '@org/shop-feature-compare-overview';
 import { TrackingOverviewFilters } from './tracking-overview-filters';
 import { TrackingOverviewHeader } from './tracking-overview-header';
 import { TrackingOverviewPanel } from './tracking-overview-panel';
@@ -53,6 +54,7 @@ export function TrackingOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <CompareOverviewSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { NotificationsSettingsItem } from './notifications-settings.model';
 import { NOTIFICATIONS_SETTINGS_FEATURE } from './notifications-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function NotificationsSettingsTable({
             <td>{formatNotificationsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackStat
+              <TypographyBanner
                 label={item.status}
                 tone={notificationsSettingsStatusTone(item.status)}
                 size="sm"

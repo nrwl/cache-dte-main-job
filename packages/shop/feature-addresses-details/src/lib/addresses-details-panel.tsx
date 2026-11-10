@@ -1,4 +1,4 @@
-import { MediaBannerGroup } from '@org/shop-ui-media-banner';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import type { AddressesDetailsItem } from './addresses-details.model';
 import { ADDRESSES_DETAILS_FEATURE } from './addresses-details.routes';
 import { describeAddressesDetailsItem } from './addresses-details.utils';
@@ -39,7 +39,7 @@ export function AddressesDetailsPanel({
       <p className="feature-panel-description">
         {describeAddressesDetailsItem(selected)}
       </p>
-      <MediaBannerGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

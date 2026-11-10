@@ -1,4 +1,4 @@
-import { MarketingPanelGroup } from '@org/shop-ui-marketing-panel';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import { buildInventoryListItems } from './inventory-list.model';
 import { INVENTORY_LIST_FEATURE } from './inventory-list.routes';
 import {
@@ -29,7 +29,7 @@ export function InventoryListSummary({
       data-testid={`${INVENTORY_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{INVENTORY_LIST_FEATURE.title}</h3>
-      <MarketingPanelGroup
+      <CoreToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

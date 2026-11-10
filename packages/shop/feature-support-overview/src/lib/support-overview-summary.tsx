@@ -1,4 +1,4 @@
-import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
 import { buildSupportOverviewItems } from './support-overview.model';
 import { SUPPORT_OVERVIEW_FEATURE } from './support-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function SupportOverviewSummary({
       <h3 className="feature-summary-title">
         {SUPPORT_OVERVIEW_FEATURE.title}
       </h3>
-      <CommerceBadgeGroup
+      <LayoutStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

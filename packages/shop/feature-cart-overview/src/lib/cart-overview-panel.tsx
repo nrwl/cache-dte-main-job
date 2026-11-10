@@ -1,5 +1,4 @@
-import { FormsBannerGroup } from '@org/shop-ui-forms-banner';
-import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import type { CartOverviewItem } from './cart-overview.model';
 import { CART_OVERVIEW_FEATURE } from './cart-overview.routes';
 import { describeCartOverviewItem } from './cart-overview.utils';
@@ -40,7 +39,7 @@ export function CartOverviewPanel({
       <p className="feature-panel-description">
         {describeCartOverviewItem(selected)}
       </p>
-      <FormsBannerGroup
+      <CoreToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function CartOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MarketingToolbar
-          label="Marketing Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { LayoutBadge } from '@org/shop-ui-layout-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { StoreLocatorDetailsItem } from './store-locator-details.model';
 import { STORE_LOCATOR_DETAILS_FEATURE } from './store-locator-details.routes';
 import {
@@ -58,7 +58,7 @@ export function StoreLocatorDetailsTable({
             <td>{formatStoreLocatorDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutBadge
+              <FeedbackBanner
                 label={item.status}
                 tone={storeLocatorDetailsStatusTone(item.status)}
                 size="sm"

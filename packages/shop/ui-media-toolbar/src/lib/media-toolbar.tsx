@@ -1,5 +1,5 @@
-import { asyncText } from '@org/shop-util-async-text';
-import { validateText } from '@org/shop-util-validate-text';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import type { MediaToolbarProps } from './media-toolbar.types';
 import { resolveMediaToolbarStyle } from './media-toolbar-variants';
 
@@ -12,9 +12,9 @@ export function MediaToolbar({
   onSelect,
   children,
 }: MediaToolbarProps) {
-  const formatted = value === undefined ? '' : asyncText(value);
+  const formatted = value === undefined ? '' : collectionText(value);
   const style = resolveMediaToolbarStyle(tone, size);
-  const ariaLabel = validateText(label);
+  const ariaLabel = mathCurrency(label);
 
   const handleClick = () => {
     if (onSelect) {

@@ -1,5 +1,5 @@
-import { DataToolbarGroup } from '@org/shop-ui-data-toolbar';
-import { InputsBanner } from '@org/shop-ui-inputs-banner';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { NotificationsSettingsItem } from './notifications-settings.model';
 import { NOTIFICATIONS_SETTINGS_FEATURE } from './notifications-settings.routes';
 import { describeNotificationsSettingsItem } from './notifications-settings.utils';
@@ -40,7 +40,7 @@ export function NotificationsSettingsPanel({
       <p className="feature-panel-description">
         {describeNotificationsSettingsItem(selected)}
       </p>
-      <DataToolbarGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function NotificationsSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsBanner
-          label="Inputs Banner"
+        <ChartsBanner
+          label="Charts Banner"
           value={selected.product.rating}
           size="sm"
         />

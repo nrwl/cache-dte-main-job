@@ -1,5 +1,4 @@
-import { ChartsPanelGroup } from '@org/shop-ui-charts-panel';
-import { MarketingStat } from '@org/shop-ui-marketing-stat';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import type { GiftCardsListItem } from './gift-cards-list.model';
 import { GIFT_CARDS_LIST_FEATURE } from './gift-cards-list.routes';
 import { describeGiftCardsListItem } from './gift-cards-list.utils';
@@ -40,7 +39,7 @@ export function GiftCardsListPanel({
       <p className="feature-panel-description">
         {describeGiftCardsListItem(selected)}
       </p>
-      <ChartsPanelGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function GiftCardsListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MarketingStat
-          label="Marketing Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,6 +1,6 @@
-import { CoreBannerGroup } from '@org/shop-ui-core-banner';
-import { CoreBadge } from '@org/shop-ui-core-badge';
-import { CommercePanel } from '@org/shop-ui-commerce-panel';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { OrdersDetailsItem } from './orders-details.model';
 import { ORDERS_DETAILS_FEATURE } from './orders-details.routes';
 import { describeOrdersDetailsItem } from './orders-details.utils';
@@ -41,7 +41,7 @@ export function OrdersDetailsPanel({
       <p className="feature-panel-description">
         {describeOrdersDetailsItem(selected)}
       </p>
-      <CoreBannerGroup
+      <InputsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function OrdersDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CoreBadge
-          label="Core Badge"
+        <LayoutStat
+          label="Layout Stat"
           value={selected.product.rating}
           size="sm"
         />
-        <CommercePanel
-          label="Commerce Panel"
+        <OverlayStat
+          label="Overlay Stat"
           value={selected.product.rating}
           size="sm"
         />

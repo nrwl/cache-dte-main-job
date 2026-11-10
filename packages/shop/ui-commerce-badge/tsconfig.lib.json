@@ -33,10 +33,10 @@
       "path": "../ui-feedback-banner/tsconfig.lib.json"
     },
     {
-      "path": "../util-format-currency/tsconfig.lib.json"
+      "path": "../util-format-phone/tsconfig.lib.json"
     },
     {
-      "path": "../util-validate-text/tsconfig.lib.json"
+      "path": "../util-math-name/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

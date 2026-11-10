@@ -1,6 +1,6 @@
-import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
-import { LayoutPanel } from '@org/shop-ui-layout-panel';
-import { TypographyBanner } from '@org/shop-ui-typography-banner';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { InventoryListItem } from './inventory-list.model';
 import { INVENTORY_LIST_FEATURE } from './inventory-list.routes';
 import { describeInventoryListItem } from './inventory-list.utils';
@@ -41,7 +41,7 @@ export function InventoryListPanel({
       <p className="feature-panel-description">
         {describeInventoryListItem(selected)}
       </p>
-      <ChartsToolbarGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function InventoryListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutPanel
-          label="Layout Panel"
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />
-        <TypographyBanner
-          label="Typography Banner"
+        <OverlayStat
+          label="Overlay Stat"
           value={selected.product.rating}
           size="sm"
         />

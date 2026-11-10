@@ -1,4 +1,4 @@
-import { DataStatGroup } from '@org/shop-ui-data-stat';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import { buildCheckoutDetailsItems } from './checkout-details.model';
 import { CHECKOUT_DETAILS_FEATURE } from './checkout-details.routes';
 import {
@@ -31,7 +31,7 @@ export function CheckoutDetailsSummary({
       <h3 className="feature-summary-title">
         {CHECKOUT_DETAILS_FEATURE.title}
       </h3>
-      <DataStatGroup
+      <FeedbackBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

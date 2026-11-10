@@ -1,5 +1,6 @@
-import { asyncText } from '@org/shop-util-async-text';
-import { formatPhone } from '@org/shop-util-format-phone';
+import { collectionText } from '@org/shop-util-collection-text';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyPreordersOverviewTotals,
   type PreordersOverviewItem,
@@ -74,13 +75,13 @@ export function sortPreordersOverview(
 export function describePreordersOverviewItem(
   item: PreordersOverviewItem,
 ): string {
-  const amount = asyncText(item.amount);
-  const name = formatPhone(item.name);
+  const amount = collectionText(item.amount);
+  const name = i18nNumber(asyncNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPreordersOverviewAmount(amount: number): string {
-  return asyncText(amount);
+  return collectionText(amount);
 }
 
 export function preordersOverviewStatusTone(

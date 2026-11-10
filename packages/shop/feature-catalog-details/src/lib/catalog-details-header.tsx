@@ -1,4 +1,4 @@
-import { ChartsStat } from '@org/shop-ui-charts-stat';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import { CATALOG_DETAILS_FEATURE } from './catalog-details.routes';
 
 export interface CatalogDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function CatalogDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsStat label="Items" value={count} tone="info" />
-        <ChartsStat label="Total" value={total} tone="success" />
+        <CommerceToolbar label="Items" value={count} tone="info" />
+        <CommerceToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

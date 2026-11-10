@@ -1,4 +1,4 @@
-import { ChartsBanner } from '@org/shop-ui-charts-banner';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { CheckoutDashboardItem } from './checkout-dashboard.model';
 import { CHECKOUT_DASHBOARD_FEATURE } from './checkout-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function CheckoutDashboardTable({
             <td>{formatCheckoutDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <ChartsBanner
+              <TypographyBanner
                 label={item.status}
                 tone={checkoutDashboardStatusTone(item.status)}
                 size="sm"

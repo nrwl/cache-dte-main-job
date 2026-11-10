@@ -47,12 +47,6 @@
       "path": "../../packages/shop/feature-wishlist-list/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-wishlist-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-wishlist-dashboard/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-tracking-settings/tsconfig.lib.json"
     },
     {
@@ -60,12 +54,6 @@
     },
     {
       "path": "../../packages/shop/feature-tracking-list/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-tracking-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-tracking-dashboard/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-support-settings/tsconfig.lib.json"
@@ -77,19 +65,7 @@
       "path": "../../packages/shop/feature-support-list/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-support-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-support-dashboard/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-subscriptions-settings/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-subscriptions-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-subscriptions-list/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-subscriptions-details/tsconfig.lib.json"
@@ -101,19 +77,10 @@
       "path": "../../packages/shop/feature-store-locator-settings/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-store-locator-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-store-locator-list/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-store-locator-details/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-store-locator-dashboard/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-sizing-settings/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-sizing-overview/tsconfig.lib.json"
@@ -137,28 +104,13 @@
       "path": "../../packages/shop/feature-shipping-list/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-shipping-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-shipping-dashboard/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-search-settings/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-search-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-search-list/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-search-details/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-search-dashboard/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-reviews-settings/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-reviews-overview/tsconfig.lib.json"
@@ -176,12 +128,6 @@
       "path": "../../packages/shop/feature-returns-settings/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-returns-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-returns-list/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-returns-details/tsconfig.lib.json"
     },
     {
@@ -197,28 +143,13 @@
       "path": "../../packages/shop/feature-recommendations-list/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-recommendations-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-recommendations-dashboard/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-promotions-settings/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-promotions-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-promotions-list/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-promotions-details/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-promotions-dashboard/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-profile-settings/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-profile-overview/tsconfig.lib.json"
@@ -239,9 +170,6 @@
       "path": "../../packages/shop/feature-product-detail/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-preorders-settings/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-preorders-overview/tsconfig.lib.json"
     },
     {
@@ -257,19 +185,10 @@
       "path": "../../packages/shop/feature-payments-settings/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-payments-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-payments-list/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-payments-details/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-payments-dashboard/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-orders-settings/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-orders-overview/tsconfig.lib.json"
@@ -287,19 +206,10 @@
       "path": "../../packages/shop/feature-notifications-settings/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-notifications-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-notifications-list/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-notifications-details/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-notifications-dashboard/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-loyalty-settings/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-loyalty-overview/tsconfig.lib.json"
@@ -312,9 +222,6 @@
     },
     {
       "path": "../../packages/shop/feature-loyalty-dashboard/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-inventory-settings/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-inventory-overview/tsconfig.lib.json"
@@ -338,12 +245,6 @@
       "path": "../../packages/shop/feature-gift-cards-list/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-gift-cards-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-gift-cards-dashboard/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-feedback-settings/tsconfig.lib.json"
     },
     {
@@ -351,15 +252,6 @@
     },
     {
       "path": "../../packages/shop/feature-feedback-list/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-feedback-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-feedback-dashboard/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-compare-settings/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-compare-overview/tsconfig.lib.json"
@@ -377,12 +269,6 @@
       "path": "../../packages/shop/feature-checkout-settings/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-checkout-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-checkout-list/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-checkout-details/tsconfig.lib.json"
     },
     {
@@ -392,19 +278,10 @@
       "path": "../../packages/shop/feature-catalog-settings/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-catalog-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-catalog-list/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-catalog-details/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-catalog-dashboard/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-cart-settings/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-cart-overview/tsconfig.lib.json"
@@ -428,12 +305,6 @@
       "path": "../../packages/shop/feature-bundles-list/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-bundles-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-bundles-dashboard/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-auth-settings/tsconfig.lib.json"
     },
     {
@@ -443,28 +314,13 @@
       "path": "../../packages/shop/feature-auth-list/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/shop/feature-auth-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-auth-dashboard/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/shop/feature-analytics-settings/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-analytics-overview/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-analytics-list/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-analytics-details/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-analytics-dashboard/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-addresses-settings/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/feature-addresses-overview/tsconfig.lib.json"
@@ -486,12 +342,6 @@
     },
     {
       "path": "../../packages/shop/feature-account-list/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-account-details/tsconfig.lib.json"
-    },
-    {
-      "path": "../../packages/shop/feature-account-dashboard/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shop/data/tsconfig.lib.json"

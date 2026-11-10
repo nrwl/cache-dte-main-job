@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { ReturnsOverviewSummary } from '@org/shop-feature-returns-overview';
+import { CheckoutDetailsSummary } from '@org/shop-feature-checkout-details';
 import { AddressesOverviewFilters } from './addresses-overview-filters';
 import { AddressesOverviewHeader } from './addresses-overview-header';
 import { AddressesOverviewPanel } from './addresses-overview-panel';
@@ -54,7 +54,7 @@ export function AddressesOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <ReturnsOverviewSummary compact />
+          <CheckoutDetailsSummary compact />
         </div>
       </div>
     </section>

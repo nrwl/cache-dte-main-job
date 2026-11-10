@@ -1,4 +1,4 @@
-import { CorePanelGroup } from '@org/shop-ui-core-panel';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildAnalyticsDetailsItems } from './analytics-details.model';
 import { ANALYTICS_DETAILS_FEATURE } from './analytics-details.routes';
 import {
@@ -31,7 +31,7 @@ export function AnalyticsDetailsSummary({
       <h3 className="feature-summary-title">
         {ANALYTICS_DETAILS_FEATURE.title}
       </h3>
-      <CorePanelGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

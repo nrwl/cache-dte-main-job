@@ -1,4 +1,6 @@
-import { DataToolbarGroup } from '@org/shop-ui-data-toolbar';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { SupportListItem } from './support-list.model';
 import { SUPPORT_LIST_FEATURE } from './support-list.routes';
 import { describeSupportListItem } from './support-list.utils';
@@ -36,7 +38,7 @@ export function SupportListPanel({ selected, onClear }: SupportListPanelProps) {
       <p className="feature-panel-description">
         {describeSupportListItem(selected)}
       </p>
-      <DataToolbarGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -46,7 +48,18 @@ export function SupportListPanel({ selected, onClear }: SupportListPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CommerceBadge
+          label="Commerce Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <FeedbackBanner
+          label="Feedback Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

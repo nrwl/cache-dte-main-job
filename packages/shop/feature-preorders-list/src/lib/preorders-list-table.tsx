@@ -1,4 +1,4 @@
-import { CommercePanel } from '@org/shop-ui-commerce-panel';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { PreordersListItem } from './preorders-list.model';
 import { PREORDERS_LIST_FEATURE } from './preorders-list.routes';
 import {
@@ -58,7 +58,7 @@ export function PreordersListTable({
             <td>{formatPreordersListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommercePanel
+              <NavigationPanel
                 label={item.status}
                 tone={preordersListStatusTone(item.status)}
                 size="sm"

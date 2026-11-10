@@ -1,5 +1,5 @@
-import { MarketingToolbarGroup } from '@org/shop-ui-marketing-toolbar';
-import { MarketingStat } from '@org/shop-ui-marketing-stat';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { SearchDetailsItem } from './search-details.model';
 import { SEARCH_DETAILS_FEATURE } from './search-details.routes';
@@ -41,7 +41,7 @@ export function SearchDetailsPanel({
       <p className="feature-panel-description">
         {describeSearchDetailsItem(selected)}
       </p>
-      <MarketingToolbarGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,8 +52,8 @@ export function SearchDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <MarketingStat
-          label="Marketing Stat"
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,5 +1,6 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { formatText } from '@org/shop-util-format-text';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyCompareListTotals,
   type CompareListItem,
@@ -71,13 +72,13 @@ export function sortCompareList(
 }
 
 export function describeCompareListItem(item: CompareListItem): string {
-  const amount = validatePhone(item.amount);
-  const name = formatText(item.name);
+  const amount = storagePhone(item.amount);
+  const name = i18nNumber(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCompareListAmount(amount: number): string {
-  return validatePhone(amount);
+  return storagePhone(amount);
 }
 
 export function compareListStatusTone(

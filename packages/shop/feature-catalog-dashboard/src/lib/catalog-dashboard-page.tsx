@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { PaymentsDashboardSummary } from '@org/shop-feature-payments-dashboard';
 import { CatalogDashboardFilters } from './catalog-dashboard-filters';
 import { CatalogDashboardHeader } from './catalog-dashboard-header';
 import { CatalogDashboardPanel } from './catalog-dashboard-panel';
@@ -54,7 +53,6 @@ export function CatalogDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <PaymentsDashboardSummary compact />
         </div>
       </div>
     </section>

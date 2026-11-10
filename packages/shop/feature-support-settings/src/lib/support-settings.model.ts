@@ -21,7 +21,7 @@ export interface SupportSettingsTotals {
   archived: number;
 }
 
-export const SUPPORT_SETTINGS_ITEM_COUNT = 8;
+export const SUPPORT_SETTINGS_ITEM_COUNT = 12;
 
 export const SUPPORT_SETTINGS_STATUSES: ReadonlyArray<SupportSettingsStatus> = [
   'active',

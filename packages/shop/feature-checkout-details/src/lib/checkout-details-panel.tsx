@@ -1,4 +1,6 @@
-import { CoreStatGroup } from '@org/shop-ui-core-stat';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { CheckoutDetailsItem } from './checkout-details.model';
 import { CHECKOUT_DETAILS_FEATURE } from './checkout-details.routes';
 import { describeCheckoutDetailsItem } from './checkout-details.utils';
@@ -39,7 +41,7 @@ export function CheckoutDetailsPanel({
       <p className="feature-panel-description">
         {describeCheckoutDetailsItem(selected)}
       </p>
-      <CoreStatGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function CheckoutDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <NavigationPanel
+          label="Navigation Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

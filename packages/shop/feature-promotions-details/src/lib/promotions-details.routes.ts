@@ -19,7 +19,7 @@ export const PROMOTIONS_DETAILS_FEATURE: FeatureMeta = {
   testId: PROMOTIONS_DETAILS_TEST_ID,
   domain: 'promotions',
   kind: 'details',
-  itemCount: 11,
+  itemCount: 6,
 };
 
 export function promotionsDetailsItemPath(itemId: string): string {

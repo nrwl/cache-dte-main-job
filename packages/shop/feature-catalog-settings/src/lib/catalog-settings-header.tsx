@@ -1,4 +1,4 @@
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import { CATALOG_SETTINGS_FEATURE } from './catalog-settings.routes';
 
 export interface CatalogSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function CatalogSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreBanner label="Items" value={count} tone="info" />
-        <CoreBanner label="Total" value={total} tone="success" />
+        <MarketingBadge label="Items" value={count} tone="info" />
+        <MarketingBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

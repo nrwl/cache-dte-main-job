@@ -1,6 +1,4 @@
-import { collectionName } from '@org/shop-util-collection-name';
-import { asyncText } from '@org/shop-util-async-text';
-import { i18nText } from '@org/shop-util-i18n-text';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyAddressesListTotals,
   type AddressesListItem,
@@ -72,13 +70,13 @@ export function sortAddressesList(
 }
 
 export function describeAddressesListItem(item: AddressesListItem): string {
-  const amount = collectionName(item.amount);
-  const name = i18nText(asyncText(item.name));
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesListAmount(amount: number): string {
-  return collectionName(amount);
+  return formatPhone(amount);
 }
 
 export function addressesListStatusTone(

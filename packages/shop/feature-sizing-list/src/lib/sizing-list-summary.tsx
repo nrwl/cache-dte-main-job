@@ -1,4 +1,4 @@
-import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import { buildSizingListItems } from './sizing-list.model';
 import { SIZING_LIST_FEATURE } from './sizing-list.routes';
 import { pickSizingListHighlights, totalSizingList } from './sizing-list.utils';
@@ -26,7 +26,7 @@ export function SizingListSummary({
       data-testid={`${SIZING_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SIZING_LIST_FEATURE.title}</h3>
-      <ChartsToolbarGroup
+      <CoreToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

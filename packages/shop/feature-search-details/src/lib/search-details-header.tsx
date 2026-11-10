@@ -1,4 +1,4 @@
-import { InputsStat } from '@org/shop-ui-inputs-stat';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import { SEARCH_DETAILS_FEATURE } from './search-details.routes';
 
 export interface SearchDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function SearchDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <InputsStat label="Items" value={count} tone="info" />
-        <InputsStat label="Total" value={total} tone="success" />
+        <LayoutStat label="Items" value={count} tone="info" />
+        <LayoutStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

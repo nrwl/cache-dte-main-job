@@ -1,6 +1,6 @@
-import { validateName } from '@org/shop-util-validate-name';
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { collectionNumber } from '@org/shop-util-collection-number';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyCheckoutDashboardTotals,
   type CheckoutDashboardItem,
@@ -75,13 +75,13 @@ export function sortCheckoutDashboard(
 export function describeCheckoutDashboardItem(
   item: CheckoutDashboardItem,
 ): string {
-  const amount = validateName(item.amount);
-  const name = collectionNumber(validatePhone(item.name));
+  const amount = formatCurrency(item.amount);
+  const name = mathName(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCheckoutDashboardAmount(amount: number): string {
-  return validateName(amount);
+  return formatCurrency(amount);
 }
 
 export function checkoutDashboardStatusTone(

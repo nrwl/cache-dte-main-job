@@ -1,5 +1,6 @@
-import { validateNumber } from '@org/shop-util-validate-number';
+import { formatPhone } from '@org/shop-util-format-phone';
 import { collectionText } from '@org/shop-util-collection-text';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyAddressesDashboardTotals,
   type AddressesDashboardItem,
@@ -74,13 +75,13 @@ export function sortAddressesDashboard(
 export function describeAddressesDashboardItem(
   item: AddressesDashboardItem,
 ): string {
-  const amount = validateNumber(item.amount);
-  const name = collectionText(item.name);
+  const amount = formatPhone(item.amount);
+  const name = formatCurrency(collectionText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesDashboardAmount(amount: number): string {
-  return validateNumber(amount);
+  return formatPhone(amount);
 }
 
 export function addressesDashboardStatusTone(

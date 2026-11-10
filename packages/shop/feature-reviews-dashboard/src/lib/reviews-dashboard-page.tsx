@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CheckoutDetailsSummary } from '@org/shop-feature-checkout-details';
 import { ReviewsDashboardFilters } from './reviews-dashboard-filters';
 import { ReviewsDashboardHeader } from './reviews-dashboard-header';
 import { ReviewsDashboardPanel } from './reviews-dashboard-panel';
@@ -54,7 +53,6 @@ export function ReviewsDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CheckoutDetailsSummary compact />
         </div>
       </div>
     </section>

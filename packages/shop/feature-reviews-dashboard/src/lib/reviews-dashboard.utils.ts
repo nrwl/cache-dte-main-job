@@ -1,4 +1,5 @@
-import { i18nName } from '@org/shop-util-i18n-name';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyReviewsDashboardTotals,
   type ReviewsDashboardItem,
@@ -73,13 +74,13 @@ export function sortReviewsDashboard(
 export function describeReviewsDashboardItem(
   item: ReviewsDashboardItem,
 ): string {
-  const amount = i18nName(item.amount);
-  const name = i18nName(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReviewsDashboardAmount(amount: number): string {
-  return i18nName(amount);
+  return formatCurrency(amount);
 }
 
 export function reviewsDashboardStatusTone(

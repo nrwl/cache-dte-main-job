@@ -1,6 +1,5 @@
-import { MediaBadgeGroup } from '@org/shop-ui-media-badge';
-import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
-import { ChartsStat } from '@org/shop-ui-charts-stat';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { PreordersOverviewItem } from './preorders-overview.model';
 import { PREORDERS_OVERVIEW_FEATURE } from './preorders-overview.routes';
 import { describePreordersOverviewItem } from './preorders-overview.utils';
@@ -41,7 +40,7 @@ export function PreordersOverviewPanel({
       <p className="feature-panel-description">
         {describePreordersOverviewItem(selected)}
       </p>
-      <MediaBadgeGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function PreordersOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <NavigationToolbar
-          label="Navigation Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <ChartsStat
-          label="Charts Stat"
+        <FeedbackBanner
+          label="Feedback Banner"
           value={selected.product.rating}
           size="sm"
         />

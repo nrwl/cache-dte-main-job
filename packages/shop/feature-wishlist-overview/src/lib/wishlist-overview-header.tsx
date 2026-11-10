@@ -1,4 +1,4 @@
-import { InputsStat } from '@org/shop-ui-inputs-stat';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { WISHLIST_OVERVIEW_FEATURE } from './wishlist-overview.routes';
 
 export interface WishlistOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function WishlistOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <InputsStat label="Items" value={count} tone="info" />
-        <InputsStat label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

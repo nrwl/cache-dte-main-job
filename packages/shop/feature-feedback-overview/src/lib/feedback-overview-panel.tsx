@@ -1,4 +1,6 @@
-import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { FeedbackOverviewItem } from './feedback-overview.model';
 import { FEEDBACK_OVERVIEW_FEATURE } from './feedback-overview.routes';
 import { describeFeedbackOverviewItem } from './feedback-overview.utils';
@@ -39,7 +41,7 @@ export function FeedbackOverviewPanel({
       <p className="feature-panel-description">
         {describeFeedbackOverviewItem(selected)}
       </p>
-      <OverlayBannerGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function FeedbackOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <InputsPanel
+          label="Inputs Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <FeedbackBanner
+          label="Feedback Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { ChartsBadge } from '@org/shop-ui-charts-badge';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { AuthListItem } from './auth-list.model';
 import { AUTH_LIST_FEATURE } from './auth-list.routes';
 import { formatAuthListAmount, authListStatusTone } from './auth-list.utils';
@@ -55,7 +55,7 @@ export function AuthListTable({
             <td>{formatAuthListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <ChartsBadge
+              <DataPanel
                 label={item.status}
                 tone={authListStatusTone(item.status)}
                 size="sm"
