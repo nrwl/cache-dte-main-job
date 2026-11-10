@@ -1,5 +1,6 @@
-import { collectionNumber } from '@org/shop-util-collection-number';
-import { i18nDate } from '@org/shop-util-i18n-date';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { validateText } from '@org/shop-util-validate-text';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyGiftCardsListTotals,
   type GiftCardsListItem,
@@ -71,13 +72,13 @@ export function sortGiftCardsList(
 }
 
 export function describeGiftCardsListItem(item: GiftCardsListItem): string {
-  const amount = collectionNumber(item.amount);
-  const name = i18nDate(item.name);
+  const amount = i18nNumber(item.amount);
+  const name = collectionText(validateText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatGiftCardsListAmount(amount: number): string {
-  return collectionNumber(amount);
+  return i18nNumber(amount);
 }
 
 export function giftCardsListStatusTone(

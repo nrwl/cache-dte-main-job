@@ -1,4 +1,4 @@
-import { MediaCard } from '@org/shop-ui-media-card';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import { STORE_LOCATOR_SETTINGS_FEATURE } from './store-locator-settings.routes';
 
 export interface StoreLocatorSettingsHeaderProps {
@@ -29,8 +29,8 @@ export function StoreLocatorSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaCard label="Items" value={count} tone="info" />
-        <MediaCard label="Total" value={total} tone="success" />
+        <ChartsBanner label="Items" value={count} tone="info" />
+        <ChartsBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

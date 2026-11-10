@@ -1,4 +1,4 @@
-import { DataCardGroup } from '@org/shop-ui-data-card';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import { buildPreordersDetailsItems } from './preorders-details.model';
 import { PREORDERS_DETAILS_FEATURE } from './preorders-details.routes';
 import {
@@ -31,7 +31,7 @@ export function PreordersDetailsSummary({
       <h3 className="feature-summary-title">
         {PREORDERS_DETAILS_FEATURE.title}
       </h3>
-      <DataCardGroup
+      <InputsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

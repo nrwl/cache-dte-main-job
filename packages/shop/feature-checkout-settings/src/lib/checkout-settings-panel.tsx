@@ -1,6 +1,6 @@
-import { MediaChipGroup } from '@org/shop-ui-media-chip';
-import { NavigationPanel } from '@org/shop-ui-navigation-panel';
-import { FormsChip } from '@org/shop-ui-forms-chip';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { CheckoutSettingsItem } from './checkout-settings.model';
 import { CHECKOUT_SETTINGS_FEATURE } from './checkout-settings.routes';
 import { describeCheckoutSettingsItem } from './checkout-settings.utils';
@@ -41,7 +41,7 @@ export function CheckoutSettingsPanel({
       <p className="feature-panel-description">
         {describeCheckoutSettingsItem(selected)}
       </p>
-      <MediaChipGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function CheckoutSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <NavigationPanel
-          label="Navigation Panel"
+        <CoreToolbar
+          label="Core Toolbar"
           value={selected.product.rating}
           size="sm"
         />
-        <FormsChip
-          label="Forms Chip"
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />

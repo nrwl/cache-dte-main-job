@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { AccountOverviewSummary } from '@org/shop-feature-account-overview';
 import { LoyaltyListFilters } from './loyalty-list-filters';
 import { LoyaltyListHeader } from './loyalty-list-header';
 import { LoyaltyListPanel } from './loyalty-list-panel';
@@ -48,7 +47,6 @@ export function LoyaltyListPage() {
         </div>
         <div className="feature-side">
           <LoyaltyListPanel selected={selected} onClear={() => select(null)} />
-          <AccountOverviewSummary compact />
         </div>
       </div>
     </section>

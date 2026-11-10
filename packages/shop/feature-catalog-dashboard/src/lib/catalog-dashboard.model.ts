@@ -21,7 +21,7 @@ export interface CatalogDashboardTotals {
   archived: number;
 }
 
-export const CATALOG_DASHBOARD_ITEM_COUNT = 9;
+export const CATALOG_DASHBOARD_ITEM_COUNT = 11;
 
 export const CATALOG_DASHBOARD_STATUSES: ReadonlyArray<CatalogDashboardStatus> =
   ['active', 'pending', 'archived'];

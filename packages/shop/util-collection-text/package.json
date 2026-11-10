@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-math-address": "*"
+    "@org/shop-util-format-phone": "*"
   }
 }

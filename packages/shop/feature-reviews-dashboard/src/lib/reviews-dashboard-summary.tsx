@@ -1,4 +1,4 @@
-import { FormsHeaderGroup } from '@org/shop-ui-forms-header';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildReviewsDashboardItems } from './reviews-dashboard.model';
 import { REVIEWS_DASHBOARD_FEATURE } from './reviews-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function ReviewsDashboardSummary({
       <h3 className="feature-summary-title">
         {REVIEWS_DASHBOARD_FEATURE.title}
       </h3>
-      <FormsHeaderGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

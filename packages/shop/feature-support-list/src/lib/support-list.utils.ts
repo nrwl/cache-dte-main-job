@@ -1,4 +1,4 @@
-import { collectionSlug } from '@org/shop-util-collection-slug';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptySupportListTotals,
   type SupportListItem,
@@ -70,13 +70,13 @@ export function sortSupportList(
 }
 
 export function describeSupportListItem(item: SupportListItem): string {
-  const amount = collectionSlug(item.amount);
-  const name = collectionSlug(item.name);
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSupportListAmount(amount: number): string {
-  return collectionSlug(amount);
+  return formatPhone(amount);
 }
 
 export function supportListStatusTone(

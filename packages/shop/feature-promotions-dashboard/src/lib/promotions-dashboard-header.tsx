@@ -1,4 +1,4 @@
-import { DataTile } from '@org/shop-ui-data-tile';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { PROMOTIONS_DASHBOARD_FEATURE } from './promotions-dashboard.routes';
 
 export interface PromotionsDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function PromotionsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataTile label="Items" value={count} tone="info" />
-        <DataTile label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

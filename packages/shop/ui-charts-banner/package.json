@@ -19,8 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-math-slug": "*",
-    "@org/shop-util-i18n-address": "*",
-    "@org/shop-util-storage-date": "*"
+    "@org/shop-util-format-phone": "*",
+    "@org/shop-util-async-name": "*"
   }
 }

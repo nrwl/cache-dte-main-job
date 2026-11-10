@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { WishlistEditorSummary } from '@org/shop-feature-wishlist-editor';
 import { ReviewsDetailsFilters } from './reviews-details-filters';
 import { ReviewsDetailsHeader } from './reviews-details-header';
 import { ReviewsDetailsPanel } from './reviews-details-panel';
@@ -54,7 +53,6 @@ export function ReviewsDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <WishlistEditorSummary compact />
         </div>
       </div>
     </section>

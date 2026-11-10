@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { PreordersDashboardSummary } from '@org/shop-feature-preorders-dashboard';
 import { CatalogSettingsFilters } from './catalog-settings-filters';
 import { CatalogSettingsHeader } from './catalog-settings-header';
 import { CatalogSettingsPanel } from './catalog-settings-panel';
@@ -53,6 +54,7 @@ export function CatalogSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <PreordersDashboardSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { validateDate } from '@org/shop-util-validate-date';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyInventoryDetailsTotals,
   type InventoryDetailsItem,
@@ -73,13 +73,13 @@ export function sortInventoryDetails(
 export function describeInventoryDetailsItem(
   item: InventoryDetailsItem,
 ): string {
-  const amount = validateDate(item.amount);
-  const name = validateDate(item.name);
+  const amount = i18nNumber(item.amount);
+  const name = i18nNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatInventoryDetailsAmount(amount: number): string {
-  return validateDate(amount);
+  return i18nNumber(amount);
 }
 
 export function inventoryDetailsStatusTone(

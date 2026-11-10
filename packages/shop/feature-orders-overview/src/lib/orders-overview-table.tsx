@@ -1,4 +1,4 @@
-import { MediaBadge } from '@org/shop-ui-media-badge';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { OrdersOverviewItem } from './orders-overview.model';
 import { ORDERS_OVERVIEW_FEATURE } from './orders-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function OrdersOverviewTable({
             <td>{formatOrdersOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaBadge
+              <NavigationPanel
                 label={item.status}
                 tone={ordersOverviewStatusTone(item.status)}
                 size="sm"

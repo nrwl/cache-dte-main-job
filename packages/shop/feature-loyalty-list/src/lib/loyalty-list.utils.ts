@@ -1,4 +1,5 @@
-import { storageSlug } from '@org/shop-util-storage-slug';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyLoyaltyListTotals,
   type LoyaltyListItem,
@@ -70,13 +71,13 @@ export function sortLoyaltyList(
 }
 
 export function describeLoyaltyListItem(item: LoyaltyListItem): string {
-  const amount = storageSlug(item.amount);
-  const name = storageSlug(item.name);
+  const amount = collectionText(item.amount);
+  const name = mathCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatLoyaltyListAmount(amount: number): string {
-  return storageSlug(amount);
+  return collectionText(amount);
 }
 
 export function loyaltyListStatusTone(

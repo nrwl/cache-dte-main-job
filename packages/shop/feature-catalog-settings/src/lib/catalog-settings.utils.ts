@@ -1,6 +1,6 @@
-import { formatNumber } from '@org/shop-util-format-number';
-import { mathText } from '@org/shop-util-math-text';
-import { storagePhone } from '@org/shop-util-storage-phone';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { mathName } from '@org/shop-util-math-name';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyCatalogSettingsTotals,
   type CatalogSettingsItem,
@@ -73,13 +73,13 @@ export function sortCatalogSettings(
 }
 
 export function describeCatalogSettingsItem(item: CatalogSettingsItem): string {
-  const amount = formatNumber(item.amount);
-  const name = storagePhone(mathText(item.name));
+  const amount = asyncNumber(item.amount);
+  const name = formatPhone(mathName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCatalogSettingsAmount(amount: number): string {
-  return formatNumber(amount);
+  return asyncNumber(amount);
 }
 
 export function catalogSettingsStatusTone(

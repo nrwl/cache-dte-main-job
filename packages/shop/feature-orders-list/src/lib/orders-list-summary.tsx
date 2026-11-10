@@ -1,4 +1,4 @@
-import { InputsBadgeGroup } from '@org/shop-ui-inputs-badge';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildOrdersListItems } from './orders-list.model';
 import { ORDERS_LIST_FEATURE } from './orders-list.routes';
 import { pickOrdersListHighlights, totalOrdersList } from './orders-list.utils';
@@ -26,7 +26,7 @@ export function OrdersListSummary({
       data-testid={`${ORDERS_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{ORDERS_LIST_FEATURE.title}</h3>
-      <InputsBadgeGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

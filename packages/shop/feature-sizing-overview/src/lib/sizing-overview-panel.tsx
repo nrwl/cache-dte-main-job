@@ -1,4 +1,4 @@
-import { OverlayCardGroup } from '@org/shop-ui-overlay-card';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import type { SizingOverviewItem } from './sizing-overview.model';
 import { SIZING_OVERVIEW_FEATURE } from './sizing-overview.routes';
 import { describeSizingOverviewItem } from './sizing-overview.utils';
@@ -39,7 +39,7 @@ export function SizingOverviewPanel({
       <p className="feature-panel-description">
         {describeSizingOverviewItem(selected)}
       </p>
-      <OverlayCardGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

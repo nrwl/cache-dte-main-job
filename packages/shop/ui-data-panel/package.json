@@ -19,8 +19,9 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-validate-phone": "*",
-    "@org/shop-util-i18n-address": "*",
-    "@org/shop-util-async-name": "*"
+    "@org/shop-util-math-name": "*",
+    "@org/shop-util-validate-text": "*",
+    "@org/shop-util-async-number": "*",
+    "@org/shop-ui-navigation-panel": "*"
   }
 }

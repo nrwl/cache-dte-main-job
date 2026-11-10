@@ -1,4 +1,4 @@
-import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { SubscriptionsDashboardItem } from './subscriptions-dashboard.model';
 import { SUBSCRIPTIONS_DASHBOARD_FEATURE } from './subscriptions-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function SubscriptionsDashboardTable({
             <td>{formatSubscriptionsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaToolbar
+              <TypographyBanner
                 label={item.status}
                 tone={subscriptionsDashboardStatusTone(item.status)}
                 size="sm"

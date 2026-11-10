@@ -1,5 +1,5 @@
-import { formatDate } from '@org/shop-util-format-date';
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import type { MediaToolbarProps } from './media-toolbar.types';
 import { resolveMediaToolbarStyle } from './media-toolbar-variants';
 
@@ -12,9 +12,9 @@ export function MediaToolbar({
   onSelect,
   children,
 }: MediaToolbarProps) {
-  const formatted = value === undefined ? '' : formatDate(value);
+  const formatted = value === undefined ? '' : collectionText(value);
   const style = resolveMediaToolbarStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = mathCurrency(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,7 +37,6 @@ export function MediaToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <LayoutBanner label="Layout Banner" value={value} tone={tone} size="sm" />
     </div>
   );
 }

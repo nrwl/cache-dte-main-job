@@ -1,5 +1,4 @@
-import { asyncPhone } from '@org/shop-util-async-phone';
-import { validatePercent } from '@org/shop-util-validate-percent';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyFeedbackOverviewTotals,
   type FeedbackOverviewItem,
@@ -74,13 +73,13 @@ export function sortFeedbackOverview(
 export function describeFeedbackOverviewItem(
   item: FeedbackOverviewItem,
 ): string {
-  const amount = asyncPhone(item.amount);
-  const name = validatePercent(item.name);
+  const amount = validateText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatFeedbackOverviewAmount(amount: number): string {
-  return asyncPhone(amount);
+  return validateText(amount);
 }
 
 export function feedbackOverviewStatusTone(

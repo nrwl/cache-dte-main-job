@@ -21,7 +21,7 @@ export interface SizingListTotals {
   archived: number;
 }
 
-export const SIZING_LIST_ITEM_COUNT = 10;
+export const SIZING_LIST_ITEM_COUNT = 5;
 
 export const SIZING_LIST_STATUSES: ReadonlyArray<SizingListStatus> = [
   'active',

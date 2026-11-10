@@ -19,7 +19,7 @@ export const WISHLIST_OVERVIEW_FEATURE: FeatureMeta = {
   testId: WISHLIST_OVERVIEW_TEST_ID,
   domain: 'wishlist',
   kind: 'overview',
-  itemCount: 12,
+  itemCount: 7,
 };
 
 export function wishlistOverviewItemPath(itemId: string): string {

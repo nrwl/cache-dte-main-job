@@ -1,4 +1,4 @@
-import { mathCode } from '@org/shop-util-math-code';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyReviewsDetailsTotals,
   type ReviewsDetailsItem,
@@ -71,13 +71,13 @@ export function sortReviewsDetails(
 }
 
 export function describeReviewsDetailsItem(item: ReviewsDetailsItem): string {
-  const amount = mathCode(item.amount);
-  const name = mathCode(item.name);
+  const amount = mathCurrency(item.amount);
+  const name = mathCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReviewsDetailsAmount(amount: number): string {
-  return mathCode(amount);
+  return mathCurrency(amount);
 }
 
 export function reviewsDetailsStatusTone(

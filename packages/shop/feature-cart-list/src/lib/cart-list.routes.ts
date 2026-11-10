@@ -19,7 +19,7 @@ export const CART_LIST_FEATURE: FeatureMeta = {
   testId: CART_LIST_TEST_ID,
   domain: 'cart',
   kind: 'list',
-  itemCount: 10,
+  itemCount: 5,
 };
 
 export function cartListItemPath(itemId: string): string {

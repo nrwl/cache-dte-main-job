@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { WishlistDetailsSummary } from '@org/shop-feature-wishlist-details';
+import { AddressesDashboardSummary } from '@org/shop-feature-addresses-dashboard';
 import { SizingOverviewFilters } from './sizing-overview-filters';
 import { SizingOverviewHeader } from './sizing-overview-header';
 import { SizingOverviewPanel } from './sizing-overview-panel';
@@ -54,7 +54,7 @@ export function SizingOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <WishlistDetailsSummary compact />
+          <AddressesDashboardSummary compact />
         </div>
       </div>
     </section>

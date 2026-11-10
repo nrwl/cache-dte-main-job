@@ -1,5 +1,6 @@
-import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
-import { FeedbackHeader } from '@org/shop-ui-feedback-header';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { SearchDetailsItem } from './search-details.model';
 import { SEARCH_DETAILS_FEATURE } from './search-details.routes';
 import { describeSearchDetailsItem } from './search-details.utils';
@@ -40,7 +41,7 @@ export function SearchDetailsPanel({
       <p className="feature-panel-description">
         {describeSearchDetailsItem(selected)}
       </p>
-      <MediaToolbarGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function SearchDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackHeader
-          label="Feedback Header"
+        <MediaToolbar
+          label="Media Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <InputsPanel
+          label="Inputs Panel"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,4 +1,4 @@
-import { CommercePanelGroup } from '@org/shop-ui-commerce-panel';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import { buildCompareListItems } from './compare-list.model';
 import { COMPARE_LIST_FEATURE } from './compare-list.routes';
 import {
@@ -29,7 +29,7 @@ export function CompareListSummary({
       data-testid={`${COMPARE_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{COMPARE_LIST_FEATURE.title}</h3>
-      <CommercePanelGroup
+      <FeedbackBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,6 +1,4 @@
-import { asyncSlug } from '@org/shop-util-async-slug';
-import { validateSlug } from '@org/shop-util-validate-slug';
-import { validateName } from '@org/shop-util-validate-name';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyCompareDashboardTotals,
   type CompareDashboardItem,
@@ -75,13 +73,13 @@ export function sortCompareDashboard(
 export function describeCompareDashboardItem(
   item: CompareDashboardItem,
 ): string {
-  const amount = asyncSlug(item.amount);
-  const name = validateName(validateSlug(item.name));
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCompareDashboardAmount(amount: number): string {
-  return asyncSlug(amount);
+  return formatPhone(amount);
 }
 
 export function compareDashboardStatusTone(

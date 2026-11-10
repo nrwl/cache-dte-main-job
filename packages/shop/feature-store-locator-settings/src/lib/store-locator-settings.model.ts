@@ -21,7 +21,7 @@ export interface StoreLocatorSettingsTotals {
   archived: number;
 }
 
-export const STORE_LOCATOR_SETTINGS_ITEM_COUNT = 11;
+export const STORE_LOCATOR_SETTINGS_ITEM_COUNT = 7;
 
 export const STORE_LOCATOR_SETTINGS_STATUSES: ReadonlyArray<StoreLocatorSettingsStatus> =
   ['active', 'pending', 'archived'];

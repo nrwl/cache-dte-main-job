@@ -1,4 +1,4 @@
-import { MediaTileGroup } from '@org/shop-ui-media-tile';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import { buildReviewsListItems } from './reviews-list.model';
 import { REVIEWS_LIST_FEATURE } from './reviews-list.routes';
 import {
@@ -29,7 +29,7 @@ export function ReviewsListSummary({
       data-testid={`${REVIEWS_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{REVIEWS_LIST_FEATURE.title}</h3>
-      <MediaTileGroup
+      <CoreToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

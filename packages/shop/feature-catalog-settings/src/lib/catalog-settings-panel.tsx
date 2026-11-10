@@ -1,4 +1,6 @@
-import { FormsToolbarGroup } from '@org/shop-ui-forms-toolbar';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { CatalogSettingsItem } from './catalog-settings.model';
 import { CATALOG_SETTINGS_FEATURE } from './catalog-settings.routes';
 import { describeCatalogSettingsItem } from './catalog-settings.utils';
@@ -39,7 +41,7 @@ export function CatalogSettingsPanel({
       <p className="feature-panel-description">
         {describeCatalogSettingsItem(selected)}
       </p>
-      <FormsToolbarGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function CatalogSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <NavigationPanel
+          label="Navigation Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { MediaStat } from '@org/shop-ui-media-stat';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { BUNDLES_OVERVIEW_FEATURE } from './bundles-overview.routes';
 
 export interface BundlesOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function BundlesOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaStat label="Items" value={count} tone="info" />
-        <MediaStat label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

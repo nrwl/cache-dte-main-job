@@ -1,4 +1,4 @@
-import { ChartsBadge } from '@org/shop-ui-charts-badge';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import { WISHLIST_LIST_FEATURE } from './wishlist-list.routes';
 
 export interface WishlistListHeaderProps {
@@ -26,8 +26,8 @@ export function WishlistListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsBadge label="Items" value={count} tone="info" />
-        <ChartsBadge label="Total" value={total} tone="success" />
+        <TypographyBanner label="Items" value={count} tone="info" />
+        <TypographyBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

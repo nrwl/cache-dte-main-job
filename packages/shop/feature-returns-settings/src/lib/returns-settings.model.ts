@@ -21,7 +21,7 @@ export interface ReturnsSettingsTotals {
   archived: number;
 }
 
-export const RETURNS_SETTINGS_ITEM_COUNT = 6;
+export const RETURNS_SETTINGS_ITEM_COUNT = 12;
 
 export const RETURNS_SETTINGS_STATUSES: ReadonlyArray<ReturnsSettingsStatus> = [
   'active',

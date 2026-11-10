@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { CheckoutSettingsSummary } from '@org/shop-feature-checkout-settings';
 import { RecommendationsOverviewFilters } from './recommendations-overview-filters';
 import { RecommendationsOverviewHeader } from './recommendations-overview-header';
 import { RecommendationsOverviewPanel } from './recommendations-overview-panel';
@@ -53,6 +54,7 @@ export function RecommendationsOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <CheckoutSettingsSummary compact />
         </div>
       </div>
     </section>

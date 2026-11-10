@@ -1,4 +1,4 @@
-import { CommerceCard } from '@org/shop-ui-commerce-card';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import type { GiftCardsSettingsItem } from './gift-cards-settings.model';
 import { GIFT_CARDS_SETTINGS_FEATURE } from './gift-cards-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function GiftCardsSettingsTable({
             <td>{formatGiftCardsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceCard
+              <CommerceToolbar
                 label={item.status}
                 tone={giftCardsSettingsStatusTone(item.status)}
                 size="sm"

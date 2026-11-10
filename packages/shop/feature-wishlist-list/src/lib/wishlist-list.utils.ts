@@ -1,5 +1,4 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
-import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyWishlistListTotals,
   type WishlistListItem,
@@ -71,13 +70,13 @@ export function sortWishlistList(
 }
 
 export function describeWishlistListItem(item: WishlistListItem): string {
-  const amount = validateCurrency(item.amount);
-  const name = collectionCurrency(item.name);
+  const amount = validateText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatWishlistListAmount(amount: number): string {
-  return validateCurrency(amount);
+  return validateText(amount);
 }
 
 export function wishlistListStatusTone(

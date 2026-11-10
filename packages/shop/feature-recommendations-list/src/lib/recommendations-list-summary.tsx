@@ -1,4 +1,4 @@
-import { FeedbackListGroup } from '@org/shop-ui-feedback-list';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
 import { buildRecommendationsListItems } from './recommendations-list.model';
 import { RECOMMENDATIONS_LIST_FEATURE } from './recommendations-list.routes';
 import {
@@ -31,7 +31,7 @@ export function RecommendationsListSummary({
       <h3 className="feature-summary-title">
         {RECOMMENDATIONS_LIST_FEATURE.title}
       </h3>
-      <FeedbackListGroup
+      <ChartsBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

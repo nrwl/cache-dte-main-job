@@ -1,4 +1,4 @@
-import { CommerceListGroup } from '@org/shop-ui-commerce-list';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
 import { buildBundlesSettingsItems } from './bundles-settings.model';
 import { BUNDLES_SETTINGS_FEATURE } from './bundles-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function BundlesSettingsSummary({
       <h3 className="feature-summary-title">
         {BUNDLES_SETTINGS_FEATURE.title}
       </h3>
-      <CommerceListGroup
+      <ChartsBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

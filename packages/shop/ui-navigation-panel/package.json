@@ -19,8 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-async-currency": "*",
-    "@org/shop-util-validate-number": "*",
-    "@org/shop-util-validate-date": "*"
+    "@org/shop-util-i18n-number": "*",
+    "@org/shop-ui-core-toolbar": "*"
   }
 }

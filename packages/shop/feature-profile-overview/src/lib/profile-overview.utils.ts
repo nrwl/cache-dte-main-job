@@ -1,6 +1,4 @@
-import { collectionSlug } from '@org/shop-util-collection-slug';
-import { storageNumber } from '@org/shop-util-storage-number';
-import { formatCode } from '@org/shop-util-format-code';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyProfileOverviewTotals,
   type ProfileOverviewItem,
@@ -73,13 +71,13 @@ export function sortProfileOverview(
 }
 
 export function describeProfileOverviewItem(item: ProfileOverviewItem): string {
-  const amount = collectionSlug(item.amount);
-  const name = formatCode(storageNumber(item.name));
+  const amount = collectionText(item.amount);
+  const name = collectionText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileOverviewAmount(amount: number): string {
-  return collectionSlug(amount);
+  return collectionText(amount);
 }
 
 export function profileOverviewStatusTone(

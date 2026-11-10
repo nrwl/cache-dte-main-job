@@ -1,4 +1,4 @@
-import { OverlayBadgeGroup } from '@org/shop-ui-overlay-badge';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import type { GiftCardsListItem } from './gift-cards-list.model';
 import { GIFT_CARDS_LIST_FEATURE } from './gift-cards-list.routes';
 import { describeGiftCardsListItem } from './gift-cards-list.utils';
@@ -39,7 +39,7 @@ export function GiftCardsListPanel({
       <p className="feature-panel-description">
         {describeGiftCardsListItem(selected)}
       </p>
-      <OverlayBadgeGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

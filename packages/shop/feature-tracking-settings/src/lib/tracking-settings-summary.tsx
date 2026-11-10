@@ -1,4 +1,4 @@
-import { FeedbackListGroup } from '@org/shop-ui-feedback-list';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import { buildTrackingSettingsItems } from './tracking-settings.model';
 import { TRACKING_SETTINGS_FEATURE } from './tracking-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function TrackingSettingsSummary({
       <h3 className="feature-summary-title">
         {TRACKING_SETTINGS_FEATURE.title}
       </h3>
-      <FeedbackListGroup
+      <InputsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

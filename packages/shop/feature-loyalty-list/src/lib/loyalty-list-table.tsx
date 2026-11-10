@@ -1,4 +1,4 @@
-import { MediaBadge } from '@org/shop-ui-media-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { LoyaltyListItem } from './loyalty-list.model';
 import { LOYALTY_LIST_FEATURE } from './loyalty-list.routes';
 import {
@@ -58,7 +58,7 @@ export function LoyaltyListTable({
             <td>{formatLoyaltyListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaBadge
+              <FeedbackBanner
                 label={item.status}
                 tone={loyaltyListStatusTone(item.status)}
                 size="sm"

@@ -1,4 +1,6 @@
-import { CoreChipGroup } from '@org/shop-ui-core-chip';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { SearchSettingsItem } from './search-settings.model';
 import { SEARCH_SETTINGS_FEATURE } from './search-settings.routes';
 import { describeSearchSettingsItem } from './search-settings.utils';
@@ -39,7 +41,7 @@ export function SearchSettingsPanel({
       <p className="feature-panel-description">
         {describeSearchSettingsItem(selected)}
       </p>
-      <CoreChipGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function SearchSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <InputsPanel
+          label="Inputs Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <NavigationPanel
+          label="Navigation Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

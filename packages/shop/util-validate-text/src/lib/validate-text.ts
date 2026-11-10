@@ -1,5 +1,5 @@
 import type { Product } from '@org/models';
-import { validatePercent } from '@org/shop-util-validate-percent';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   clampLength,
   hashString,
@@ -45,7 +45,7 @@ export function validateText(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [validatePercent].reduce<string>(
+  const staged = [formatCurrency].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );

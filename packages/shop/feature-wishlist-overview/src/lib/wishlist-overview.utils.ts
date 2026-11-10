@@ -1,6 +1,4 @@
-import { validateAddress } from '@org/shop-util-validate-address';
-import { formatAddress } from '@org/shop-util-format-address';
-import { i18nCode } from '@org/shop-util-i18n-code';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyWishlistOverviewTotals,
   type WishlistOverviewItem,
@@ -75,13 +73,13 @@ export function sortWishlistOverview(
 export function describeWishlistOverviewItem(
   item: WishlistOverviewItem,
 ): string {
-  const amount = validateAddress(item.amount);
-  const name = i18nCode(formatAddress(item.name));
+  const amount = validateText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatWishlistOverviewAmount(amount: number): string {
-  return validateAddress(amount);
+  return validateText(amount);
 }
 
 export function wishlistOverviewStatusTone(

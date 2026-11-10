@@ -1,4 +1,4 @@
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import { RETURNS_DETAILS_FEATURE } from './returns-details.routes';
 
 export interface ReturnsDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function ReturnsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreBanner label="Items" value={count} tone="info" />
-        <CoreBanner label="Total" value={total} tone="success" />
+        <FormsStat label="Items" value={count} tone="info" />
+        <FormsStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

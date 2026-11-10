@@ -3,12 +3,12 @@
  * Deterministic generator for the large shop workspace.
  *
  * Produces:
- *   - 70  util libraries    packages/shop/util-*      (@org/shop-util-*)
- *   - 130 ui libraries      packages/shop/ui-*        (@org/shop-ui-*)
- *   - 300 feature libraries packages/shop/feature-*   (@org/shop-feature-*)
+ *   - 10  util libraries    packages/shop/util-*      (@org/shop-util-*)
+ *   - 15  ui libraries      packages/shop/ui-*        (@org/shop-ui-*)
+ *   - 100 feature libraries packages/shop/feature-*   (@org/shop-feature-*)
  *   - apps/shop/src/app/feature-routes.tsx wiring every feature into the app
  *   - apps/shop-e2e/src/features/*.spec.ts  (E2E_SPEC_COUNT specs, one test each,
- *     every test padded to ~27s by apps/shop-e2e/src/support/pacing.ts)
+ *     every test padded to ~6s by apps/shop-e2e/src/support/pacing.ts)
  *
  * The dependency graph is acyclic by construction: util -> ui -> feature, and a
  * library only ever depends on libraries with a lower index in the same tier.
@@ -109,18 +109,7 @@ const FEATURE_DOMAINS = [
   'analytics',
   'feedback',
 ];
-const FEATURE_KINDS = [
-  'overview',
-  'summary',
-  'details',
-  'history',
-  'settings',
-  'editor',
-  'list',
-  'wizard',
-  'dashboard',
-  'insights',
-];
+const FEATURE_KINDS = ['overview', 'details', 'settings', 'list', 'dashboard'];
 const UI_GROUPS = [
   'core',
   'forms',
@@ -136,18 +125,7 @@ const UI_GROUPS = [
   'inputs',
   'marketing',
 ];
-const UI_KINDS = [
-  'badge',
-  'card',
-  'panel',
-  'tile',
-  'banner',
-  'chip',
-  'stat',
-  'list',
-  'toolbar',
-  'header',
-];
+const UI_KINDS = ['badge', 'panel', 'banner', 'stat', 'toolbar'];
 const UTIL_GROUPS = [
   'format',
   'validate',
@@ -157,18 +135,7 @@ const UTIL_GROUPS = [
   'storage',
   'i18n',
 ];
-const UTIL_KINDS = [
-  'currency',
-  'date',
-  'number',
-  'percent',
-  'text',
-  'slug',
-  'phone',
-  'address',
-  'name',
-  'code',
-];
+const UTIL_KINDS = ['currency', 'number', 'text', 'phone', 'name'];
 const TRANSFORMS = [
   'upper',
   'lower',
@@ -183,7 +150,15 @@ const TRANSFORMS = [
 // ---------------------------------------------------------------------------
 // Build the lib descriptors
 // ---------------------------------------------------------------------------
-const utils = [];
+// Sample across each tier so the smaller benchmark retains every domain.
+function sampleEvenly(items, count) {
+  return Array.from(
+    { length: count },
+    (_, i) => items[Math.floor((i * items.length) / count)],
+  );
+}
+
+let utils = [];
 UTIL_GROUPS.forEach((g) =>
   UTIL_KINDS.forEach((k) => {
     const name = `${g}-${k}`;
@@ -197,11 +172,12 @@ UTIL_GROUPS.forEach((g) =>
     });
   }),
 );
+utils = sampleEvenly(utils, 10);
 utils.forEach((u, i) => {
   if (i > 0) u.deps = pickN(utils.slice(0, i), randInt(0, Math.min(2, i)));
 });
 
-const uis = [];
+let uis = [];
 UI_GROUPS.forEach((g) =>
   UI_KINDS.forEach((k) => {
     const name = `${g}-${k}`;
@@ -215,12 +191,13 @@ UI_GROUPS.forEach((g) =>
     });
   }),
 );
+uis = sampleEvenly(uis, 15);
 uis.forEach((u, i) => {
   u.utilDeps = pickN(utils, randInt(1, 3));
   u.uiDeps = i > 0 && rng() < 0.6 ? pickN(uis.slice(0, i), 1) : [];
 });
 
-const features = [];
+let features = [];
 FEATURE_DOMAINS.forEach((d) =>
   FEATURE_KINDS.forEach((k) => {
     const name = `${d}-${k}`;
@@ -240,6 +217,7 @@ FEATURE_DOMAINS.forEach((d) =>
     });
   }),
 );
+features = sampleEvenly(features, 100);
 features.forEach((f, i) => {
   f.uiDeps = pickN(uis, randInt(3, 5));
   f.utilDeps = pickN(utils, randInt(1, 3));
@@ -394,7 +372,7 @@ export default defineConfig(() => ({
     watch: false,
     globals: true,
     environment: '${react ? 'jsdom' : 'node'}',
-    setupFiles: [${react ? "'./src/test-setup.ts', " : ''}'../../../tools/test-delay/setup.mjs'],
+    ${react ? "setupFiles: ['./src/test-setup.ts'],\n    " : ''}globalSetup: ['../../../tools/test-delay/setup.mjs'],
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     reporters: ['default'],
     // Spec files run one at a time so Nx owns concurrency and each CPU burn
@@ -2149,7 +2127,7 @@ export default FeatureIndex;
 // ---------------------------------------------------------------------------
 // Exactly this many e2e specs are generated, one test per spec. Features are
 // sampled evenly across the list so every domain is covered.
-const E2E_SPEC_COUNT = 100;
+const E2E_SPEC_COUNT = 50;
 
 function genE2e() {
   const e2eRoot = join(ROOT, 'apps/shop-e2e/src');
@@ -2197,7 +2175,7 @@ const e2eSpecCount = genE2e();
 console.log(
   `generated ${utils.length} util libs, ${uis.length} ui libs, ${features.length} feature libs`,
 );
-console.log(`generated ${e2eSpecCount} e2e specs (one ~25s test each)`);
+console.log(`generated ${e2eSpecCount} e2e specs (one ~6s test each)`);
 
 if (!process.argv.includes('--no-format')) {
   console.log('formatting generated files with prettier…');

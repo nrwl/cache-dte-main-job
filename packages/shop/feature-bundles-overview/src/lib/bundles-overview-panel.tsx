@@ -1,4 +1,5 @@
-import { ChartsCardGroup } from '@org/shop-ui-charts-card';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { BundlesOverviewItem } from './bundles-overview.model';
 import { BUNDLES_OVERVIEW_FEATURE } from './bundles-overview.routes';
 import { describeBundlesOverviewItem } from './bundles-overview.utils';
@@ -39,7 +40,7 @@ export function BundlesOverviewPanel({
       <p className="feature-panel-description">
         {describeBundlesOverviewItem(selected)}
       </p>
-      <ChartsCardGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function BundlesOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <TypographyBanner
+          label="Typography Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

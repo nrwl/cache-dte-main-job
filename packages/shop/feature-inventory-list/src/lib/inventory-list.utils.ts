@@ -1,4 +1,5 @@
-import { validatePercent } from '@org/shop-util-validate-percent';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyInventoryListTotals,
   type InventoryListItem,
@@ -70,13 +71,13 @@ export function sortInventoryList(
 }
 
 export function describeInventoryListItem(item: InventoryListItem): string {
-  const amount = validatePercent(item.amount);
-  const name = validatePercent(item.name);
+  const amount = formatPhone(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatInventoryListAmount(amount: number): string {
-  return validatePercent(amount);
+  return formatPhone(amount);
 }
 
 export function inventoryListStatusTone(

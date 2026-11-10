@@ -1,6 +1,4 @@
-import { LayoutChipGroup } from '@org/shop-ui-layout-chip';
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
-import { FormsTile } from '@org/shop-ui-forms-tile';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import type { ShippingSettingsItem } from './shipping-settings.model';
 import { SHIPPING_SETTINGS_FEATURE } from './shipping-settings.routes';
 import { describeShippingSettingsItem } from './shipping-settings.utils';
@@ -41,7 +39,7 @@ export function ShippingSettingsPanel({
       <p className="feature-panel-description">
         {describeShippingSettingsItem(selected)}
       </p>
-      <LayoutChipGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function ShippingSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CommerceBadge
-          label="Commerce Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FormsTile
-          label="Forms Tile"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

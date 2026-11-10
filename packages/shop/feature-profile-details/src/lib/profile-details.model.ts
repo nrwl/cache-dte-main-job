@@ -21,7 +21,7 @@ export interface ProfileDetailsTotals {
   archived: number;
 }
 
-export const PROFILE_DETAILS_ITEM_COUNT = 10;
+export const PROFILE_DETAILS_ITEM_COUNT = 7;
 
 export const PROFILE_DETAILS_STATUSES: ReadonlyArray<ProfileDetailsStatus> = [
   'active',

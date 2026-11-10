@@ -1,6 +1,6 @@
-import { validateNumber } from '@org/shop-util-validate-number';
 import { mathCurrency } from '@org/shop-util-math-currency';
-import { mathPhone } from '@org/shop-util-math-phone';
+import { asyncName } from '@org/shop-util-async-name';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptySizingDashboardTotals,
   type SizingDashboardItem,
@@ -73,13 +73,13 @@ export function sortSizingDashboard(
 }
 
 export function describeSizingDashboardItem(item: SizingDashboardItem): string {
-  const amount = validateNumber(item.amount);
-  const name = mathPhone(mathCurrency(item.name));
+  const amount = mathCurrency(item.amount);
+  const name = collectionText(asyncName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingDashboardAmount(amount: number): string {
-  return validateNumber(amount);
+  return mathCurrency(amount);
 }
 
 export function sizingDashboardStatusTone(

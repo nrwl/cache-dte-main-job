@@ -1,4 +1,4 @@
-import { OverlayBadgeGroup } from '@org/shop-ui-overlay-badge';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildCartDetailsItems } from './cart-details.model';
 import { CART_DETAILS_FEATURE } from './cart-details.routes';
 import {
@@ -29,7 +29,7 @@ export function CartDetailsSummary({
       data-testid={`${CART_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{CART_DETAILS_FEATURE.title}</h3>
-      <OverlayBadgeGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

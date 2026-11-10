@@ -1,5 +1,6 @@
-import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
-import { LayoutList } from '@org/shop-ui-layout-list';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { WishlistOverviewItem } from './wishlist-overview.model';
 import { WISHLIST_OVERVIEW_FEATURE } from './wishlist-overview.routes';
 import { describeWishlistOverviewItem } from './wishlist-overview.utils';
@@ -40,7 +41,7 @@ export function WishlistOverviewPanel({
       <p className="feature-panel-description">
         {describeWishlistOverviewItem(selected)}
       </p>
-      <ChartsToolbarGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function WishlistOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutList
-          label="Layout List"
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <InputsPanel
+          label="Inputs Panel"
           value={selected.product.rating}
           size="sm"
         />

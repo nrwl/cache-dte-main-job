@@ -1,6 +1,4 @@
-import { i18nName } from '@org/shop-util-i18n-name';
-import { validateCode } from '@org/shop-util-validate-code';
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyGiftCardsOverviewTotals,
   type GiftCardsOverviewItem,
@@ -75,13 +73,13 @@ export function sortGiftCardsOverview(
 export function describeGiftCardsOverviewItem(
   item: GiftCardsOverviewItem,
 ): string {
-  const amount = i18nName(item.amount);
-  const name = validatePhone(validateCode(item.name));
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatGiftCardsOverviewAmount(amount: number): string {
-  return i18nName(amount);
+  return formatPhone(amount);
 }
 
 export function giftCardsOverviewStatusTone(

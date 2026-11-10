@@ -1,4 +1,4 @@
-import { FormsCardGroup } from '@org/shop-ui-forms-card';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import { buildProfileListItems } from './profile-list.model';
 import { PROFILE_LIST_FEATURE } from './profile-list.routes';
 import {
@@ -29,7 +29,7 @@ export function ProfileListSummary({
       data-testid={`${PROFILE_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{PROFILE_LIST_FEATURE.title}</h3>
-      <FormsCardGroup
+      <CoreToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,5 +1,5 @@
-import { i18nName } from '@org/shop-util-i18n-name';
-import { i18nPercent } from '@org/shop-util-i18n-percent';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptySubscriptionsSettingsTotals,
   type SubscriptionsSettingsItem,
@@ -77,13 +77,13 @@ export function sortSubscriptionsSettings(
 export function describeSubscriptionsSettingsItem(
   item: SubscriptionsSettingsItem,
 ): string {
-  const amount = i18nName(item.amount);
-  const name = i18nPercent(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSubscriptionsSettingsAmount(amount: number): string {
-  return i18nName(amount);
+  return formatCurrency(amount);
 }
 
 export function subscriptionsSettingsStatusTone(

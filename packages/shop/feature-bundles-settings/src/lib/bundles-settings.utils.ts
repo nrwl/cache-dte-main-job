@@ -1,6 +1,6 @@
-import { validateAddress } from '@org/shop-util-validate-address';
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { i18nAddress } from '@org/shop-util-i18n-address';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyBundlesSettingsTotals,
   type BundlesSettingsItem,
@@ -73,13 +73,13 @@ export function sortBundlesSettings(
 }
 
 export function describeBundlesSettingsItem(item: BundlesSettingsItem): string {
-  const amount = validateAddress(item.amount);
-  const name = i18nAddress(validatePhone(item.name));
+  const amount = formatPhone(item.amount);
+  const name = asyncName(storagePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatBundlesSettingsAmount(amount: number): string {
-  return validateAddress(amount);
+  return formatPhone(amount);
 }
 
 export function bundlesSettingsStatusTone(

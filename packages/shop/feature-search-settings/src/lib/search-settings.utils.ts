@@ -1,4 +1,4 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptySearchSettingsTotals,
   type SearchSettingsItem,
@@ -71,13 +71,13 @@ export function sortSearchSettings(
 }
 
 export function describeSearchSettingsItem(item: SearchSettingsItem): string {
-  const amount = validatePhone(item.amount);
-  const name = validatePhone(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSearchSettingsAmount(amount: number): string {
-  return validatePhone(amount);
+  return asyncName(amount);
 }
 
 export function searchSettingsStatusTone(

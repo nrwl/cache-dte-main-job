@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { PaymentsHistorySummary } from '@org/shop-feature-payments-history';
 import { InventoryOverviewFilters } from './inventory-overview-filters';
 import { InventoryOverviewHeader } from './inventory-overview-header';
 import { InventoryOverviewPanel } from './inventory-overview-panel';
@@ -54,7 +53,6 @@ export function InventoryOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <PaymentsHistorySummary compact />
         </div>
       </div>
     </section>

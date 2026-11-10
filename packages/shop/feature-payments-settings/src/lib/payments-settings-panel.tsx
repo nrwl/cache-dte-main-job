@@ -1,4 +1,6 @@
-import { CorePanelGroup } from '@org/shop-ui-core-panel';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { PaymentsSettingsItem } from './payments-settings.model';
 import { PAYMENTS_SETTINGS_FEATURE } from './payments-settings.routes';
 import { describePaymentsSettingsItem } from './payments-settings.utils';
@@ -39,7 +41,7 @@ export function PaymentsSettingsPanel({
       <p className="feature-panel-description">
         {describePaymentsSettingsItem(selected)}
       </p>
-      <CorePanelGroup
+      <LayoutStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function PaymentsSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <FeedbackBanner
+          label="Feedback Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CoreBadge
+          label="Core Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

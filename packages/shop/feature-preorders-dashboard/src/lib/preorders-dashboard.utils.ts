@@ -1,6 +1,5 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
-import { formatSlug } from '@org/shop-util-format-slug';
-import { formatDate } from '@org/shop-util-format-date';
+import { asyncName } from '@org/shop-util-async-name';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyPreordersDashboardTotals,
   type PreordersDashboardItem,
@@ -75,13 +74,13 @@ export function sortPreordersDashboard(
 export function describePreordersDashboardItem(
   item: PreordersDashboardItem,
 ): string {
-  const amount = i18nDate(item.amount);
-  const name = formatDate(formatSlug(item.name));
+  const amount = asyncName(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPreordersDashboardAmount(amount: number): string {
-  return i18nDate(amount);
+  return asyncName(amount);
 }
 
 export function preordersDashboardStatusTone(

@@ -21,7 +21,7 @@ export interface ShippingSettingsTotals {
   archived: number;
 }
 
-export const SHIPPING_SETTINGS_ITEM_COUNT = 11;
+export const SHIPPING_SETTINGS_ITEM_COUNT = 9;
 
 export const SHIPPING_SETTINGS_STATUSES: ReadonlyArray<ShippingSettingsStatus> =
   ['active', 'pending', 'archived'];

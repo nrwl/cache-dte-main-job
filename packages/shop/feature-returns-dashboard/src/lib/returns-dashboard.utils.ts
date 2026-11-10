@@ -1,5 +1,5 @@
-import { mathNumber } from '@org/shop-util-math-number';
-import { storageSlug } from '@org/shop-util-storage-slug';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyReturnsDashboardTotals,
   type ReturnsDashboardItem,
@@ -74,13 +74,13 @@ export function sortReturnsDashboard(
 export function describeReturnsDashboardItem(
   item: ReturnsDashboardItem,
 ): string {
-  const amount = mathNumber(item.amount);
-  const name = storageSlug(item.name);
+  const amount = formatPhone(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReturnsDashboardAmount(amount: number): string {
-  return mathNumber(amount);
+  return formatPhone(amount);
 }
 
 export function returnsDashboardStatusTone(

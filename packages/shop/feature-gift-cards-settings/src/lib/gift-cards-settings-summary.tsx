@@ -1,4 +1,4 @@
-import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
 import { buildGiftCardsSettingsItems } from './gift-cards-settings.model';
 import { GIFT_CARDS_SETTINGS_FEATURE } from './gift-cards-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function GiftCardsSettingsSummary({
       <h3 className="feature-summary-title">
         {GIFT_CARDS_SETTINGS_FEATURE.title}
       </h3>
-      <TypographyPanelGroup
+      <MarketingBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

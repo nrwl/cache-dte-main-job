@@ -1,4 +1,6 @@
-import { validateSlug } from '@org/shop-util-validate-slug';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { collectionText } from '@org/shop-util-collection-text';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyAuthListTotals,
   type AuthListItem,
@@ -70,13 +72,13 @@ export function sortAuthList(
 }
 
 export function describeAuthListItem(item: AuthListItem): string {
-  const amount = validateSlug(item.amount);
-  const name = validateSlug(item.name);
+  const amount = storagePhone(item.amount);
+  const name = validateText(collectionText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAuthListAmount(amount: number): string {
-  return validateSlug(amount);
+  return storagePhone(amount);
 }
 
 export function authListStatusTone(

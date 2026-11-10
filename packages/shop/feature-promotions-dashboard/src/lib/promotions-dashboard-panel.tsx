@@ -1,6 +1,6 @@
-import { MediaBannerGroup } from '@org/shop-ui-media-banner';
-import { FormsHeader } from '@org/shop-ui-forms-header';
-import { OverlayChip } from '@org/shop-ui-overlay-chip';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { PromotionsDashboardItem } from './promotions-dashboard.model';
 import { PROMOTIONS_DASHBOARD_FEATURE } from './promotions-dashboard.routes';
 import { describePromotionsDashboardItem } from './promotions-dashboard.utils';
@@ -41,7 +41,7 @@ export function PromotionsDashboardPanel({
       <p className="feature-panel-description">
         {describePromotionsDashboardItem(selected)}
       </p>
-      <MediaBannerGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function PromotionsDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsHeader
-          label="Forms Header"
+        <FeedbackBanner
+          label="Feedback Banner"
           value={selected.product.rating}
           size="sm"
         />
-        <OverlayChip
-          label="Overlay Chip"
+        <CoreToolbar
+          label="Core Toolbar"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,4 +1,4 @@
-import { CommercePanel } from '@org/shop-ui-commerce-panel';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { COMPARE_LIST_FEATURE } from './compare-list.routes';
 
 export interface CompareListHeaderProps {
@@ -26,8 +26,8 @@ export function CompareListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommercePanel label="Items" value={count} tone="info" />
-        <CommercePanel label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

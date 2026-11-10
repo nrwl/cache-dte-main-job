@@ -1,6 +1,5 @@
-import { i18nName } from '@org/shop-util-i18n-name';
-import { i18nDate } from '@org/shop-util-i18n-date';
-import { mathText } from '@org/shop-util-math-text';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyBundlesOverviewTotals,
   type BundlesOverviewItem,
@@ -73,13 +72,13 @@ export function sortBundlesOverview(
 }
 
 export function describeBundlesOverviewItem(item: BundlesOverviewItem): string {
-  const amount = i18nName(item.amount);
-  const name = mathText(i18nDate(item.name));
+  const amount = mathCurrency(item.amount);
+  const name = i18nNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatBundlesOverviewAmount(amount: number): string {
-  return i18nName(amount);
+  return mathCurrency(amount);
 }
 
 export function bundlesOverviewStatusTone(

@@ -12,8 +12,9 @@
  *
  * Set E2E_TEST_DURATION_MS=0 and E2E_TEST_CPU_SECONDS=0 to run at full speed.
  */
-export const DEFAULT_E2E_TEST_DURATION_MS = 25_000;
-export const DEFAULT_E2E_TEST_CPU_SECONDS = 2;
+// 50 serial tests contribute about 5 minutes of paced browser work.
+export const DEFAULT_E2E_TEST_DURATION_MS = 6_000;
+export const DEFAULT_E2E_TEST_CPU_SECONDS = 0;
 export const DEFAULT_E2E_TEST_BLOCKS = 10;
 
 /** Keep in sync with UNITS_PER_SECOND in tools/test-delay/burn.mjs. */

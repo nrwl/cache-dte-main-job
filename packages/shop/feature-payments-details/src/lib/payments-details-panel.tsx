@@ -1,4 +1,4 @@
-import { CorePanelGroup } from '@org/shop-ui-core-panel';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import type { PaymentsDetailsItem } from './payments-details.model';
 import { PAYMENTS_DETAILS_FEATURE } from './payments-details.routes';
 import { describePaymentsDetailsItem } from './payments-details.utils';
@@ -39,7 +39,7 @@ export function PaymentsDetailsPanel({
       <p className="feature-panel-description">
         {describePaymentsDetailsItem(selected)}
       </p>
-      <CorePanelGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

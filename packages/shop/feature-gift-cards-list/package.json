@@ -22,9 +22,10 @@
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
     "@org/shop-ui-commerce-toolbar": "*",
-    "@org/shop-ui-overlay-badge": "*",
-    "@org/shop-ui-marketing-tile": "*",
-    "@org/shop-util-collection-number": "*",
-    "@org/shop-util-i18n-date": "*"
+    "@org/shop-ui-feedback-banner": "*",
+    "@org/shop-ui-marketing-badge": "*",
+    "@org/shop-util-i18n-number": "*",
+    "@org/shop-util-validate-text": "*",
+    "@org/shop-util-collection-text": "*"
   }
 }

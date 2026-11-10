@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { SearchSettingsSummary } from '@org/shop-feature-search-settings';
 import { StoreLocatorDashboardFilters } from './store-locator-dashboard-filters';
 import { StoreLocatorDashboardHeader } from './store-locator-dashboard-header';
 import { StoreLocatorDashboardPanel } from './store-locator-dashboard-panel';
@@ -53,6 +54,7 @@ export function StoreLocatorDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <SearchSettingsSummary compact />
         </div>
       </div>
     </section>

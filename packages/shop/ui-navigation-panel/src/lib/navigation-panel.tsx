@@ -1,6 +1,5 @@
-import { asyncCurrency } from '@org/shop-util-async-currency';
-import { validateNumber } from '@org/shop-util-validate-number';
-import { validateDate } from '@org/shop-util-validate-date';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { NavigationPanelProps } from './navigation-panel.types';
 import { resolveNavigationPanelStyle } from './navigation-panel-variants';
 
@@ -13,9 +12,9 @@ export function NavigationPanel({
   onSelect,
   children,
 }: NavigationPanelProps) {
-  const formatted = value === undefined ? '' : asyncCurrency(value);
+  const formatted = value === undefined ? '' : i18nNumber(value);
   const style = resolveNavigationPanelStyle(tone, size);
-  const ariaLabel = validateDate(validateNumber(label));
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,6 +37,7 @@ export function NavigationPanel({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <CoreToolbar label="Core Toolbar" value={value} tone={tone} size="sm" />
     </div>
   );
 }

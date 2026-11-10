@@ -1,5 +1,5 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
-import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyOrdersListTotals,
   type OrdersListItem,
@@ -71,13 +71,13 @@ export function sortOrdersList(
 }
 
 export function describeOrdersListItem(item: OrdersListItem): string {
-  const amount = i18nDate(item.amount);
-  const name = collectionCurrency(item.name);
+  const amount = asyncNumber(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersListAmount(amount: number): string {
-  return i18nDate(amount);
+  return asyncNumber(amount);
 }
 
 export function ordersListStatusTone(

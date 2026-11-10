@@ -1,5 +1,4 @@
-import { i18nPercent } from '@org/shop-util-i18n-percent';
-import { validateDate } from '@org/shop-util-validate-date';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyCheckoutSettingsTotals,
   type CheckoutSettingsItem,
@@ -74,13 +73,13 @@ export function sortCheckoutSettings(
 export function describeCheckoutSettingsItem(
   item: CheckoutSettingsItem,
 ): string {
-  const amount = i18nPercent(item.amount);
-  const name = validateDate(item.name);
+  const amount = mathName(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCheckoutSettingsAmount(amount: number): string {
-  return i18nPercent(amount);
+  return mathName(amount);
 }
 
 export function checkoutSettingsStatusTone(

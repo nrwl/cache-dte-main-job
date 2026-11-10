@@ -21,7 +21,7 @@ export interface ReturnsDetailsTotals {
   archived: number;
 }
 
-export const RETURNS_DETAILS_ITEM_COUNT = 5;
+export const RETURNS_DETAILS_ITEM_COUNT = 11;
 
 export const RETURNS_DETAILS_STATUSES: ReadonlyArray<ReturnsDetailsStatus> = [
   'active',

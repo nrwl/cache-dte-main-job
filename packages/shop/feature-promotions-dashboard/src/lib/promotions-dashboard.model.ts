@@ -21,7 +21,7 @@ export interface PromotionsDashboardTotals {
   archived: number;
 }
 
-export const PROMOTIONS_DASHBOARD_ITEM_COUNT = 8;
+export const PROMOTIONS_DASHBOARD_ITEM_COUNT = 10;
 
 export const PROMOTIONS_DASHBOARD_STATUSES: ReadonlyArray<PromotionsDashboardStatus> =
   ['active', 'pending', 'archived'];

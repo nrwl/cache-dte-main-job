@@ -1,4 +1,4 @@
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { SIZING_DETAILS_FEATURE } from './sizing-details.routes';
 
 export interface SizingDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function SizingDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsBadge label="Items" value={count} tone="info" />
-        <FormsBadge label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,5 +1,4 @@
-import { validateNumber } from '@org/shop-util-validate-number';
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyAccountOverviewTotals,
   type AccountOverviewItem,
@@ -72,13 +71,13 @@ export function sortAccountOverview(
 }
 
 export function describeAccountOverviewItem(item: AccountOverviewItem): string {
-  const amount = validateNumber(item.amount);
-  const name = validatePhone(item.name);
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAccountOverviewAmount(amount: number): string {
-  return validateNumber(amount);
+  return formatPhone(amount);
 }
 
 export function accountOverviewStatusTone(

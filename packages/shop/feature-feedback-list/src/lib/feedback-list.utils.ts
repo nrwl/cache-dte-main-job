@@ -1,5 +1,4 @@
-import { i18nAddress } from '@org/shop-util-i18n-address';
-import { validateNumber } from '@org/shop-util-validate-number';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyFeedbackListTotals,
   type FeedbackListItem,
@@ -71,13 +70,13 @@ export function sortFeedbackList(
 }
 
 export function describeFeedbackListItem(item: FeedbackListItem): string {
-  const amount = i18nAddress(item.amount);
-  const name = validateNumber(item.name);
+  const amount = formatPhone(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatFeedbackListAmount(amount: number): string {
-  return i18nAddress(amount);
+  return formatPhone(amount);
 }
 
 export function feedbackListStatusTone(

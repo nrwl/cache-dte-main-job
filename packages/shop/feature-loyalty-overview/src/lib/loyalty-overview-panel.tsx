@@ -1,6 +1,4 @@
-import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
-import { FormsChip } from '@org/shop-ui-forms-chip';
-import { MarketingBadge } from '@org/shop-ui-marketing-badge';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import type { LoyaltyOverviewItem } from './loyalty-overview.model';
 import { LOYALTY_OVERVIEW_FEATURE } from './loyalty-overview.routes';
 import { describeLoyaltyOverviewItem } from './loyalty-overview.utils';
@@ -41,7 +39,7 @@ export function LoyaltyOverviewPanel({
       <p className="feature-panel-description">
         {describeLoyaltyOverviewItem(selected)}
       </p>
-      <ChartsBannerGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function LoyaltyOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <FormsChip
-          label="Forms Chip"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <MarketingBadge
-          label="Marketing Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { DataCard } from '@org/shop-ui-data-card';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { AccountSettingsItem } from './account-settings.model';
 import { ACCOUNT_SETTINGS_FEATURE } from './account-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function AccountSettingsTable({
             <td>{formatAccountSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataCard
+              <DataPanel
                 label={item.status}
                 tone={accountSettingsStatusTone(item.status)}
                 size="sm"

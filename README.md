@@ -1,5 +1,32 @@
 # Benchmark: Nx Cloud Platform vs Nx Using Remote Cache Only
 
+## Single-runner CI variant
+
+This branch runs every build, typecheck, lint, unit test, and end-to-end test
+in the `main` GitHub Actions job. Distribution is disabled; remote caching is
+still enabled. After building the shop, Nx runs up to three check tasks alongside
+the serial browser suite on that runner. The `e2e`
+target runs 50 Playwright specs with one worker, avoiding the process
+startup overhead of 50 separate `e2e-ci` tasks.
+
+The target for the checks command after setup is 10–12 minutes on a cold run,
+not a guaranteed duration. Checkout, Node/npm setup, and browser installation
+are outside that budget; the shop build is included.
+The generated workspace is reduced from 500 to 125 libraries: 10 utilities,
+15 UI libraries, and 100 feature libraries spanning all 30 feature domains.
+Handwritten application and support projects are retained. Each library's unit-test
+task adds two calibrated seconds of CPU work and three seconds of waiting, once
+per library via Vitest `globalSetup`, not once per spec file. Actual CPU time
+varies with hardware; test execution and process startup add overhead.
+Each end-to-end test is paced to six seconds with no
+extra CPU burn. The serial browser suite therefore takes about 5 minutes, plus
+server startup, while the other checks run concurrently. Cached runs
+can finish much sooner. The job times out after 25 minutes to allow for runner
+variation. Measure the GitHub Actions run before treating the target as achieved.
+
+The comparison and measurements below describe the original distributed benchmark,
+before this branch's workload changes; they do not measure this variant.
+
 Recent changes to the Nx Cloud platform significantly increase the cache hit rate and
 reduce compute, while also making CI much faster. This benchmark demonstrates the impact
 and explains where the savings come from.

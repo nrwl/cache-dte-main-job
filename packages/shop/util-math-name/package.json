@@ -18,6 +18,8 @@
     ]
   },
   "devDependencies": {
-    "@org/models": "*"
+    "@org/models": "*",
+    "@org/shop-util-format-phone": "*",
+    "@org/shop-util-validate-text": "*"
   }
 }

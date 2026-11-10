@@ -21,7 +21,7 @@ export interface OrdersOverviewTotals {
   archived: number;
 }
 
-export const ORDERS_OVERVIEW_ITEM_COUNT = 11;
+export const ORDERS_OVERVIEW_ITEM_COUNT = 7;
 
 export const ORDERS_OVERVIEW_STATUSES: ReadonlyArray<OrdersOverviewStatus> = [
   'active',

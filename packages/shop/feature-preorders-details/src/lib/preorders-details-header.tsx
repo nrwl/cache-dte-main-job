@@ -1,4 +1,4 @@
-import { DataCard } from '@org/shop-ui-data-card';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import { PREORDERS_DETAILS_FEATURE } from './preorders-details.routes';
 
 export interface PreordersDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function PreordersDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataCard label="Items" value={count} tone="info" />
-        <DataCard label="Total" value={total} tone="success" />
+        <InputsPanel label="Items" value={count} tone="info" />
+        <InputsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

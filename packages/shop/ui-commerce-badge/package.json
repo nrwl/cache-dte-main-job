@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-storage-percent": "*",
-    "@org/shop-util-async-percent": "*",
-    "@org/shop-ui-data-panel": "*"
+    "@org/shop-util-math-name": "*",
+    "@org/shop-util-format-phone": "*",
+    "@org/shop-ui-feedback-banner": "*"
   }
 }

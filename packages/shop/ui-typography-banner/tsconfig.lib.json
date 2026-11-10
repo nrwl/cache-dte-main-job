@@ -30,10 +30,10 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-overlay-card/tsconfig.lib.json"
+      "path": "../util-math-currency/tsconfig.lib.json"
     },
     {
-      "path": "../util-math-phone/tsconfig.lib.json"
+      "path": "../util-format-phone/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

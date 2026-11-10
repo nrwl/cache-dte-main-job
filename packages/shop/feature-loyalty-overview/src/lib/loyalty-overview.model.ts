@@ -21,7 +21,7 @@ export interface LoyaltyOverviewTotals {
   archived: number;
 }
 
-export const LOYALTY_OVERVIEW_ITEM_COUNT = 5;
+export const LOYALTY_OVERVIEW_ITEM_COUNT = 6;
 
 export const LOYALTY_OVERVIEW_STATUSES: ReadonlyArray<LoyaltyOverviewStatus> = [
   'active',

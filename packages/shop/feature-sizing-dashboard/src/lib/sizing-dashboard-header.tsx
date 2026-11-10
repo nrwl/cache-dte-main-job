@@ -1,4 +1,4 @@
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import { SIZING_DASHBOARD_FEATURE } from './sizing-dashboard.routes';
 
 export interface SizingDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function SizingDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceStat label="Items" value={count} tone="info" />
-        <CommerceStat label="Total" value={total} tone="success" />
+        <CommerceToolbar label="Items" value={count} tone="info" />
+        <CommerceToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

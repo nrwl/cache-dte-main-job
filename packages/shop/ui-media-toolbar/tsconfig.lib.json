@@ -30,10 +30,10 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-layout-banner/tsconfig.lib.json"
+      "path": "../util-math-currency/tsconfig.lib.json"
     },
     {
-      "path": "../util-format-date/tsconfig.lib.json"
+      "path": "../util-collection-text/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

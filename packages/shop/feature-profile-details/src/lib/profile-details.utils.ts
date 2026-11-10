@@ -1,5 +1,5 @@
-import { storageText } from '@org/shop-util-storage-text';
-import { i18nPercent } from '@org/shop-util-i18n-percent';
+import { validateText } from '@org/shop-util-validate-text';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyProfileDetailsTotals,
   type ProfileDetailsItem,
@@ -72,13 +72,13 @@ export function sortProfileDetails(
 }
 
 export function describeProfileDetailsItem(item: ProfileDetailsItem): string {
-  const amount = storageText(item.amount);
-  const name = i18nPercent(item.name);
+  const amount = validateText(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileDetailsAmount(amount: number): string {
-  return storageText(amount);
+  return validateText(amount);
 }
 
 export function profileDetailsStatusTone(

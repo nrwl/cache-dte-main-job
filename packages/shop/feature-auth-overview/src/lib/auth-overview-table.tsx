@@ -1,4 +1,4 @@
-import { InputsTile } from '@org/shop-ui-inputs-tile';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { AuthOverviewItem } from './auth-overview.model';
 import { AUTH_OVERVIEW_FEATURE } from './auth-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function AuthOverviewTable({
             <td>{formatAuthOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsTile
+              <MediaToolbar
                 label={item.status}
                 tone={authOverviewStatusTone(item.status)}
                 size="sm"

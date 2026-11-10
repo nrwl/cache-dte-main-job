@@ -1,5 +1,4 @@
-import { storageNumber } from '@org/shop-util-storage-number';
-import { storageAddress } from '@org/shop-util-storage-address';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyPaymentsDashboardTotals,
   type PaymentsDashboardItem,
@@ -74,13 +73,13 @@ export function sortPaymentsDashboard(
 export function describePaymentsDashboardItem(
   item: PaymentsDashboardItem,
 ): string {
-  const amount = storageNumber(item.amount);
-  const name = storageAddress(item.name);
+  const amount = asyncNumber(item.amount);
+  const name = asyncNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPaymentsDashboardAmount(amount: number): string {
-  return storageNumber(amount);
+  return asyncNumber(amount);
 }
 
 export function paymentsDashboardStatusTone(

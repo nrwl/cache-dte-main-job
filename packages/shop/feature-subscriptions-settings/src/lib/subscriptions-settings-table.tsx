@@ -1,4 +1,4 @@
-import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { SubscriptionsSettingsItem } from './subscriptions-settings.model';
 import { SUBSCRIPTIONS_SETTINGS_FEATURE } from './subscriptions-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function SubscriptionsSettingsTable({
             <td>{formatSubscriptionsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackBadge
+              <DataPanel
                 label={item.status}
                 tone={subscriptionsSettingsStatusTone(item.status)}
                 size="sm"

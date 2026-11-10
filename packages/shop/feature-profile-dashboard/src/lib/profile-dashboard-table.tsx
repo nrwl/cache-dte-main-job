@@ -1,4 +1,4 @@
-import { FeedbackTile } from '@org/shop-ui-feedback-tile';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { ProfileDashboardItem } from './profile-dashboard.model';
 import { PROFILE_DASHBOARD_FEATURE } from './profile-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function ProfileDashboardTable({
             <td>{formatProfileDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackTile
+              <FormsStat
                 label={item.status}
                 tone={profileDashboardStatusTone(item.status)}
                 size="sm"

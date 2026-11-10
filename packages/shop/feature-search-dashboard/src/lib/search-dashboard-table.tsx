@@ -1,4 +1,4 @@
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { SearchDashboardItem } from './search-dashboard.model';
 import { SEARCH_DASHBOARD_FEATURE } from './search-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function SearchDashboardTable({
             <td>{formatSearchDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceBadge
+              <CoreBadge
                 label={item.status}
                 tone={searchDashboardStatusTone(item.status)}
                 size="sm"

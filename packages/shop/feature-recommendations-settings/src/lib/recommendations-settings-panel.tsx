@@ -1,5 +1,4 @@
-import { InputsBannerGroup } from '@org/shop-ui-inputs-banner';
-import { LayoutList } from '@org/shop-ui-layout-list';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
 import type { RecommendationsSettingsItem } from './recommendations-settings.model';
 import { RECOMMENDATIONS_SETTINGS_FEATURE } from './recommendations-settings.routes';
 import { describeRecommendationsSettingsItem } from './recommendations-settings.utils';
@@ -40,7 +39,7 @@ export function RecommendationsSettingsPanel({
       <p className="feature-panel-description">
         {describeRecommendationsSettingsItem(selected)}
       </p>
-      <InputsBannerGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function RecommendationsSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <LayoutList
-          label="Layout List"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

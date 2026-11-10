@@ -1,4 +1,4 @@
-import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
+import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
 import { buildWishlistListItems } from './wishlist-list.model';
 import { WISHLIST_LIST_FEATURE } from './wishlist-list.routes';
 import {
@@ -29,7 +29,7 @@ export function WishlistListSummary({
       data-testid={`${WISHLIST_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{WISHLIST_LIST_FEATURE.title}</h3>
-      <ChartsBadgeGroup
+      <TypographyBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

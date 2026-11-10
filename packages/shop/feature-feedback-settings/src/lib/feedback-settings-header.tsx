@@ -1,4 +1,4 @@
-import { NavigationBadge } from '@org/shop-ui-navigation-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { FEEDBACK_SETTINGS_FEATURE } from './feedback-settings.routes';
 
 export interface FeedbackSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function FeedbackSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationBadge label="Items" value={count} tone="info" />
-        <NavigationBadge label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

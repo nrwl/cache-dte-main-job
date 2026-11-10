@@ -1,4 +1,4 @@
-import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import { buildFeedbackSettingsItems } from './feedback-settings.model';
 import { FEEDBACK_SETTINGS_FEATURE } from './feedback-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function FeedbackSettingsSummary({
       <h3 className="feature-summary-title">
         {FEEDBACK_SETTINGS_FEATURE.title}
       </h3>
-      <NavigationBadgeGroup
+      <FeedbackBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

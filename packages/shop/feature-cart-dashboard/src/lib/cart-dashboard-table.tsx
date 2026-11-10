@@ -1,4 +1,4 @@
-import { TypographyTile } from '@org/shop-ui-typography-tile';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { CartDashboardItem } from './cart-dashboard.model';
 import { CART_DASHBOARD_FEATURE } from './cart-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function CartDashboardTable({
             <td>{formatCartDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyTile
+              <NavigationPanel
                 label={item.status}
                 tone={cartDashboardStatusTone(item.status)}
                 size="sm"

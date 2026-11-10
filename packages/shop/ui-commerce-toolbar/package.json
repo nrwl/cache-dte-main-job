@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-storage-currency": "*"
+    "@org/shop-util-format-phone": "*"
   }
 }

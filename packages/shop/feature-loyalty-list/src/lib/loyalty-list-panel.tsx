@@ -1,5 +1,4 @@
-import { DataStatGroup } from '@org/shop-ui-data-stat';
-import { InputsStat } from '@org/shop-ui-inputs-stat';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import type { LoyaltyListItem } from './loyalty-list.model';
 import { LOYALTY_LIST_FEATURE } from './loyalty-list.routes';
 import { describeLoyaltyListItem } from './loyalty-list.utils';
@@ -37,7 +36,7 @@ export function LoyaltyListPanel({ selected, onClear }: LoyaltyListPanelProps) {
       <p className="feature-panel-description">
         {describeLoyaltyListItem(selected)}
       </p>
-      <DataStatGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -47,13 +46,7 @@ export function LoyaltyListPanel({ selected, onClear }: LoyaltyListPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <InputsStat
-          label="Inputs Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { FormsBadgeGroup } from '@org/shop-ui-forms-badge';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
 import { buildAnalyticsDashboardItems } from './analytics-dashboard.model';
 import { ANALYTICS_DASHBOARD_FEATURE } from './analytics-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function AnalyticsDashboardSummary({
       <h3 className="feature-summary-title">
         {ANALYTICS_DASHBOARD_FEATURE.title}
       </h3>
-      <FormsBadgeGroup
+      <NavigationPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -21,7 +21,7 @@ export interface AnalyticsDashboardTotals {
   archived: number;
 }
 
-export const ANALYTICS_DASHBOARD_ITEM_COUNT = 11;
+export const ANALYTICS_DASHBOARD_ITEM_COUNT = 9;
 
 export const ANALYTICS_DASHBOARD_STATUSES: ReadonlyArray<AnalyticsDashboardStatus> =
   ['active', 'pending', 'archived'];

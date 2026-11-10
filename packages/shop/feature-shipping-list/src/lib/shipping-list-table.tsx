@@ -1,4 +1,4 @@
-import { OverlayStat } from '@org/shop-ui-overlay-stat';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { ShippingListItem } from './shipping-list.model';
 import { SHIPPING_LIST_FEATURE } from './shipping-list.routes';
 import {
@@ -58,7 +58,7 @@ export function ShippingListTable({
             <td>{formatShippingListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayStat
+              <InputsPanel
                 label={item.status}
                 tone={shippingListStatusTone(item.status)}
                 size="sm"

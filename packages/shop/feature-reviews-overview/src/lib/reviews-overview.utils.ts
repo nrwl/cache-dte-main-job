@@ -1,5 +1,6 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
-import { storageSlug } from '@org/shop-util-storage-slug';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyReviewsOverviewTotals,
   type ReviewsOverviewItem,
@@ -72,13 +73,13 @@ export function sortReviewsOverview(
 }
 
 export function describeReviewsOverviewItem(item: ReviewsOverviewItem): string {
-  const amount = i18nDate(item.amount);
-  const name = storageSlug(item.name);
+  const amount = storagePhone(item.amount);
+  const name = i18nNumber(asyncNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReviewsOverviewAmount(amount: number): string {
-  return i18nDate(amount);
+  return storagePhone(amount);
 }
 
 export function reviewsOverviewStatusTone(

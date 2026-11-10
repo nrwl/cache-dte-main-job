@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { CartDetailsSummary } from '@org/shop-feature-cart-details';
 import { LoyaltyDetailsFilters } from './loyalty-details-filters';
 import { LoyaltyDetailsHeader } from './loyalty-details-header';
 import { LoyaltyDetailsPanel } from './loyalty-details-panel';
@@ -53,6 +54,7 @@ export function LoyaltyDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <CartDetailsSummary compact />
         </div>
       </div>
     </section>

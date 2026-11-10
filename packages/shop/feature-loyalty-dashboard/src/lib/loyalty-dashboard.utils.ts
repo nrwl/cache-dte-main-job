@@ -1,4 +1,4 @@
-import { mathPhone } from '@org/shop-util-math-phone';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyLoyaltyDashboardTotals,
   type LoyaltyDashboardItem,
@@ -73,13 +73,13 @@ export function sortLoyaltyDashboard(
 export function describeLoyaltyDashboardItem(
   item: LoyaltyDashboardItem,
 ): string {
-  const amount = mathPhone(item.amount);
-  const name = mathPhone(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatLoyaltyDashboardAmount(amount: number): string {
-  return mathPhone(amount);
+  return asyncName(amount);
 }
 
 export function loyaltyDashboardStatusTone(

@@ -21,7 +21,7 @@ export interface InventoryOverviewTotals {
   archived: number;
 }
 
-export const INVENTORY_OVERVIEW_ITEM_COUNT = 6;
+export const INVENTORY_OVERVIEW_ITEM_COUNT = 10;
 
 export const INVENTORY_OVERVIEW_STATUSES: ReadonlyArray<InventoryOverviewStatus> =
   ['active', 'pending', 'archived'];

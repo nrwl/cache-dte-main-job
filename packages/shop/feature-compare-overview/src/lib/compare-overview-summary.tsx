@@ -1,4 +1,4 @@
-import { LayoutHeaderGroup } from '@org/shop-ui-layout-header';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
 import { buildCompareOverviewItems } from './compare-overview.model';
 import { COMPARE_OVERVIEW_FEATURE } from './compare-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function CompareOverviewSummary({
       <h3 className="feature-summary-title">
         {COMPARE_OVERVIEW_FEATURE.title}
       </h3>
-      <LayoutHeaderGroup
+      <FormsStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

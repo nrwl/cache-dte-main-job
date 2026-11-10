@@ -1,4 +1,4 @@
-import { MediaList } from '@org/shop-ui-media-list';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { WISHLIST_OVERVIEW_FEATURE } from './wishlist-overview.routes';
 
 export interface WishlistOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function WishlistOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaList label="Items" value={count} tone="info" />
-        <MediaList label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

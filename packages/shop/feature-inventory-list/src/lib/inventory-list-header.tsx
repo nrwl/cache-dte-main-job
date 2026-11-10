@@ -1,4 +1,4 @@
-import { MarketingPanel } from '@org/shop-ui-marketing-panel';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import { INVENTORY_LIST_FEATURE } from './inventory-list.routes';
 
 export interface InventoryListHeaderProps {
@@ -26,8 +26,8 @@ export function InventoryListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingPanel label="Items" value={count} tone="info" />
-        <MarketingPanel label="Total" value={total} tone="success" />
+        <CoreToolbar label="Items" value={count} tone="info" />
+        <CoreToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,5 +1,6 @@
-import { MediaListGroup } from '@org/shop-ui-media-list';
-import { DataList } from '@org/shop-ui-data-list';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { CheckoutDetailsItem } from './checkout-details.model';
 import { CHECKOUT_DETAILS_FEATURE } from './checkout-details.routes';
 import { describeCheckoutDetailsItem } from './checkout-details.utils';
@@ -40,7 +41,7 @@ export function CheckoutDetailsPanel({
       <p className="feature-panel-description">
         {describeCheckoutDetailsItem(selected)}
       </p>
-      <MediaListGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,7 +52,16 @@ export function CheckoutDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <DataList label="Data List" value={selected.product.rating} size="sm" />
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <NavigationPanel
+          label="Navigation Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
       </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (

@@ -19,7 +19,7 @@ export const GIFT_CARDS_LIST_FEATURE: FeatureMeta = {
   testId: GIFT_CARDS_LIST_TEST_ID,
   domain: 'gift-cards',
   kind: 'list',
-  itemCount: 7,
+  itemCount: 9,
 };
 
 export function giftCardsListItemPath(itemId: string): string {

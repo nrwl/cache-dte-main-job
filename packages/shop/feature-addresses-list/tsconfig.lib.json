@@ -30,25 +30,16 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-async-percent/tsconfig.lib.json"
+      "path": "../util-format-phone/tsconfig.lib.json"
     },
     {
-      "path": "../util-validate-phone/tsconfig.lib.json"
+      "path": "../ui-feedback-banner/tsconfig.lib.json"
     },
     {
-      "path": "../util-i18n-address/tsconfig.lib.json"
+      "path": "../ui-navigation-panel/tsconfig.lib.json"
     },
     {
-      "path": "../ui-data-badge/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-layout-list/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-overlay-stat/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-core-card/tsconfig.lib.json"
+      "path": "../ui-data-panel/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

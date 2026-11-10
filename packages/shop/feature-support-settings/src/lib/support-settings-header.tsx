@@ -1,4 +1,4 @@
-import { TypographyBadge } from '@org/shop-ui-typography-badge';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { SUPPORT_SETTINGS_FEATURE } from './support-settings.routes';
 
 export interface SupportSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function SupportSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyBadge label="Items" value={count} tone="info" />
-        <TypographyBadge label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

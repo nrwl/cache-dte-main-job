@@ -1,4 +1,4 @@
-import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import type { StoreLocatorDetailsItem } from './store-locator-details.model';
 import { STORE_LOCATOR_DETAILS_FEATURE } from './store-locator-details.routes';
 import { describeStoreLocatorDetailsItem } from './store-locator-details.utils';
@@ -39,7 +39,7 @@ export function StoreLocatorDetailsPanel({
       <p className="feature-panel-description">
         {describeStoreLocatorDetailsItem(selected)}
       </p>
-      <CoreBadgeGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

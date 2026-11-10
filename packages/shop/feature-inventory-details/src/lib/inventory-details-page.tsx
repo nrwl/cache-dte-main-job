@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { ReviewsHistorySummary } from '@org/shop-feature-reviews-history';
+import { RecommendationsOverviewSummary } from '@org/shop-feature-recommendations-overview';
 import { InventoryDetailsFilters } from './inventory-details-filters';
 import { InventoryDetailsHeader } from './inventory-details-header';
 import { InventoryDetailsPanel } from './inventory-details-panel';
@@ -54,7 +54,7 @@ export function InventoryDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <ReviewsHistorySummary compact />
+          <RecommendationsOverviewSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { CommerceList } from '@org/shop-ui-commerce-list';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import { BUNDLES_SETTINGS_FEATURE } from './bundles-settings.routes';
 
 export interface BundlesSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function BundlesSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceList label="Items" value={count} tone="info" />
-        <CommerceList label="Total" value={total} tone="success" />
+        <ChartsBanner label="Items" value={count} tone="info" />
+        <ChartsBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { MarketingTileGroup } from '@org/shop-ui-marketing-tile';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import { buildInventoryOverviewItems } from './inventory-overview.model';
 import { INVENTORY_OVERVIEW_FEATURE } from './inventory-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function InventoryOverviewSummary({
       <h3 className="feature-summary-title">
         {INVENTORY_OVERVIEW_FEATURE.title}
       </h3>
-      <MarketingTileGroup
+      <CoreToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

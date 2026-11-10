@@ -1,4 +1,4 @@
-import { MediaCardGroup } from '@org/shop-ui-media-card';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
 import { buildStoreLocatorSettingsItems } from './store-locator-settings.model';
 import { STORE_LOCATOR_SETTINGS_FEATURE } from './store-locator-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function StoreLocatorSettingsSummary({
       <h3 className="feature-summary-title">
         {STORE_LOCATOR_SETTINGS_FEATURE.title}
       </h3>
-      <MediaCardGroup
+      <ChartsBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

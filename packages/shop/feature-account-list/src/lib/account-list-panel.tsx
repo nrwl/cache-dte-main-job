@@ -1,4 +1,4 @@
-import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
 import type { AccountListItem } from './account-list.model';
 import { ACCOUNT_LIST_FEATURE } from './account-list.routes';
 import { describeAccountListItem } from './account-list.utils';
@@ -36,7 +36,7 @@ export function AccountListPanel({ selected, onClear }: AccountListPanelProps) {
       <p className="feature-panel-description">
         {describeAccountListItem(selected)}
       </p>
-      <OverlayBannerGroup
+      <LayoutStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

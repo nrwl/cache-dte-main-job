@@ -1,5 +1,4 @@
-import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
-import { DataBadge } from '@org/shop-ui-data-badge';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
 import type { AddressesListItem } from './addresses-list.model';
 import { ADDRESSES_LIST_FEATURE } from './addresses-list.routes';
 import { describeAddressesListItem } from './addresses-list.utils';
@@ -40,7 +39,7 @@ export function AddressesListPanel({
       <p className="feature-panel-description">
         {describeAddressesListItem(selected)}
       </p>
-      <OverlayStatGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function AddressesListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <DataBadge
-          label="Data Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { FormsBadgeGroup } from '@org/shop-ui-forms-badge';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildSizingDetailsItems } from './sizing-details.model';
 import { SIZING_DETAILS_FEATURE } from './sizing-details.routes';
 import {
@@ -29,7 +29,7 @@ export function SizingDetailsSummary({
       data-testid={`${SIZING_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SIZING_DETAILS_FEATURE.title}</h3>
-      <FormsBadgeGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

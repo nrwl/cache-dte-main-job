@@ -1,7 +1,5 @@
-import { formatCurrency } from '@org/shop-util-format-currency';
-import { collectionText } from '@org/shop-util-collection-text';
-import { validateDate } from '@org/shop-util-validate-date';
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { CoreToolbarProps } from './core-toolbar.types';
 import { resolveCoreToolbarStyle } from './core-toolbar-variants';
 
@@ -14,9 +12,9 @@ export function CoreToolbar({
   onSelect,
   children,
 }: CoreToolbarProps) {
-  const formatted = value === undefined ? '' : formatCurrency(value);
+  const formatted = value === undefined ? '' : mathCurrency(value);
   const style = resolveCoreToolbarStyle(tone, size);
-  const ariaLabel = validateDate(collectionText(label));
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +37,7 @@ export function CoreToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CorePanel label="Core Panel" value={value} tone={tone} size="sm" />
+      <CoreBadge label="Core Badge" value={value} tone={tone} size="sm" />
     </div>
   );
 }

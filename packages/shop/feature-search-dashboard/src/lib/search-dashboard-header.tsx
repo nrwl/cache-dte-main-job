@@ -1,4 +1,4 @@
-import { CoreHeader } from '@org/shop-ui-core-header';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import { SEARCH_DASHBOARD_FEATURE } from './search-dashboard.routes';
 
 export interface SearchDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function SearchDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreHeader label="Items" value={count} tone="info" />
-        <CoreHeader label="Total" value={total} tone="success" />
+        <CoreToolbar label="Items" value={count} tone="info" />
+        <CoreToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,6 +1,6 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
-import { validateName } from '@org/shop-util-validate-name';
-import { i18nCode } from '@org/shop-util-i18n-code';
+import { validateText } from '@org/shop-util-validate-text';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyRecommendationsListTotals,
   type RecommendationsListItem,
@@ -76,13 +76,13 @@ export function sortRecommendationsList(
 export function describeRecommendationsListItem(
   item: RecommendationsListItem,
 ): string {
-  const amount = validateCurrency(item.amount);
-  const name = i18nCode(validateName(item.name));
+  const amount = validateText(item.amount);
+  const name = asyncNumber(storagePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatRecommendationsListAmount(amount: number): string {
-  return validateCurrency(amount);
+  return validateText(amount);
 }
 
 export function recommendationsListStatusTone(

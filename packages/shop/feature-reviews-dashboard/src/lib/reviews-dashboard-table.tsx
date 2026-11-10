@@ -1,4 +1,4 @@
-import { FormsChip } from '@org/shop-ui-forms-chip';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { ReviewsDashboardItem } from './reviews-dashboard.model';
 import { REVIEWS_DASHBOARD_FEATURE } from './reviews-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function ReviewsDashboardTable({
             <td>{formatReviewsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsChip
+              <CoreBadge
                 label={item.status}
                 tone={reviewsDashboardStatusTone(item.status)}
                 size="sm"

@@ -1,4 +1,4 @@
-import { MarketingBadge } from '@org/shop-ui-marketing-badge';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import { AUTH_SETTINGS_FEATURE } from './auth-settings.routes';
 
 export interface AuthSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function AuthSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingBadge label="Items" value={count} tone="info" />
-        <MarketingBadge label="Total" value={total} tone="success" />
+        <FormsStat label="Items" value={count} tone="info" />
+        <FormsStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

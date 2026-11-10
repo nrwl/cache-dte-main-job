@@ -1,4 +1,4 @@
-import { MediaCardGroup } from '@org/shop-ui-media-card';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import { buildProfileDetailsItems } from './profile-details.model';
 import { PROFILE_DETAILS_FEATURE } from './profile-details.routes';
 import {
@@ -29,7 +29,7 @@ export function ProfileDetailsSummary({
       data-testid={`${PROFILE_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{PROFILE_DETAILS_FEATURE.title}</h3>
-      <MediaCardGroup
+      <CommerceToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

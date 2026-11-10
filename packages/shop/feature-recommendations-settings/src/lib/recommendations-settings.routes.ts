@@ -21,7 +21,7 @@ export const RECOMMENDATIONS_SETTINGS_FEATURE: FeatureMeta = {
   testId: RECOMMENDATIONS_SETTINGS_TEST_ID,
   domain: 'recommendations',
   kind: 'settings',
-  itemCount: 8,
+  itemCount: 9,
 };
 
 export function recommendationsSettingsItemPath(itemId: string): string {

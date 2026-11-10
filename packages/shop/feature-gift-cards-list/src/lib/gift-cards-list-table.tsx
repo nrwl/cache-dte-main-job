@@ -1,4 +1,4 @@
-import { MarketingTile } from '@org/shop-ui-marketing-tile';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { GiftCardsListItem } from './gift-cards-list.model';
 import { GIFT_CARDS_LIST_FEATURE } from './gift-cards-list.routes';
 import {
@@ -58,7 +58,7 @@ export function GiftCardsListTable({
             <td>{formatGiftCardsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingTile
+              <MarketingBadge
                 label={item.status}
                 tone={giftCardsListStatusTone(item.status)}
                 size="sm"

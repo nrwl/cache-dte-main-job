@@ -1,4 +1,4 @@
-import { LayoutHeader } from '@org/shop-ui-layout-header';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { PaymentsDetailsItem } from './payments-details.model';
 import { PAYMENTS_DETAILS_FEATURE } from './payments-details.routes';
 import {
@@ -58,7 +58,7 @@ export function PaymentsDetailsTable({
             <td>{formatPaymentsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutHeader
+              <CoreBadge
                 label={item.status}
                 tone={paymentsDetailsStatusTone(item.status)}
                 size="sm"

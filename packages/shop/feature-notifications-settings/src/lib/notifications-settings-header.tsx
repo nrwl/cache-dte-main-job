@@ -1,4 +1,4 @@
-import { NavigationTile } from '@org/shop-ui-navigation-tile';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import { NOTIFICATIONS_SETTINGS_FEATURE } from './notifications-settings.routes';
 
 export interface NotificationsSettingsHeaderProps {
@@ -29,8 +29,8 @@ export function NotificationsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationTile label="Items" value={count} tone="info" />
-        <NavigationTile label="Total" value={total} tone="success" />
+        <NavigationPanel label="Items" value={count} tone="info" />
+        <NavigationPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

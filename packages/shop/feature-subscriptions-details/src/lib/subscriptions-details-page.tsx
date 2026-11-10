@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CheckoutInsightsSummary } from '@org/shop-feature-checkout-insights';
 import { SubscriptionsDetailsFilters } from './subscriptions-details-filters';
 import { SubscriptionsDetailsHeader } from './subscriptions-details-header';
 import { SubscriptionsDetailsPanel } from './subscriptions-details-panel';
@@ -54,7 +53,6 @@ export function SubscriptionsDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CheckoutInsightsSummary compact />
         </div>
       </div>
     </section>

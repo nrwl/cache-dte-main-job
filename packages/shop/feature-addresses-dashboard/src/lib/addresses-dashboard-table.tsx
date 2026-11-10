@@ -1,4 +1,4 @@
-import { ChartsChip } from '@org/shop-ui-charts-chip';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { AddressesDashboardItem } from './addresses-dashboard.model';
 import { ADDRESSES_DASHBOARD_FEATURE } from './addresses-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function AddressesDashboardTable({
             <td>{formatAddressesDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <ChartsChip
+              <CoreBadge
                 label={item.status}
                 tone={addressesDashboardStatusTone(item.status)}
                 size="sm"

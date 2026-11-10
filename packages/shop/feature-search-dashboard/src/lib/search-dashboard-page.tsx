@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { ReviewsInsightsSummary } from '@org/shop-feature-reviews-insights';
+import { CartOverviewSummary } from '@org/shop-feature-cart-overview';
 import { SearchDashboardFilters } from './search-dashboard-filters';
 import { SearchDashboardHeader } from './search-dashboard-header';
 import { SearchDashboardPanel } from './search-dashboard-panel';
@@ -54,7 +54,7 @@ export function SearchDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <ReviewsInsightsSummary compact />
+          <CartOverviewSummary compact />
         </div>
       </div>
     </section>

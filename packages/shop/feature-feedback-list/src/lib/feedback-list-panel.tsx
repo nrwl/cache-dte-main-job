@@ -1,5 +1,5 @@
-import { DataCardGroup } from '@org/shop-ui-data-card';
-import { ChartsTile } from '@org/shop-ui-charts-tile';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { FeedbackListItem } from './feedback-list.model';
 import { FEEDBACK_LIST_FEATURE } from './feedback-list.routes';
 import { describeFeedbackListItem } from './feedback-list.utils';
@@ -40,7 +40,7 @@ export function FeedbackListPanel({
       <p className="feature-panel-description">
         {describeFeedbackListItem(selected)}
       </p>
-      <DataCardGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function FeedbackListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <ChartsTile
-          label="Charts Tile"
+        <DataPanel
+          label="Data Panel"
           value={selected.product.rating}
           size="sm"
         />

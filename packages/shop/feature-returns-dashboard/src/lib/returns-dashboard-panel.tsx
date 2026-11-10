@@ -1,5 +1,5 @@
-import { CoreStatGroup } from '@org/shop-ui-core-stat';
-import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { ReturnsDashboardItem } from './returns-dashboard.model';
 import { RETURNS_DASHBOARD_FEATURE } from './returns-dashboard.routes';
 import { describeReturnsDashboardItem } from './returns-dashboard.utils';
@@ -40,7 +40,7 @@ export function ReturnsDashboardPanel({
       <p className="feature-panel-description">
         {describeReturnsDashboardItem(selected)}
       </p>
-      <CoreStatGroup
+      <LayoutStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function ReturnsDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackToolbar
-          label="Feedback Toolbar"
+        <DataPanel
+          label="Data Panel"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,5 +1,4 @@
-import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
-import { DataCard } from '@org/shop-ui-data-card';
+import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
 import type { PromotionsDetailsItem } from './promotions-details.model';
 import { PROMOTIONS_DETAILS_FEATURE } from './promotions-details.routes';
 import { describePromotionsDetailsItem } from './promotions-details.utils';
@@ -40,7 +39,7 @@ export function PromotionsDetailsPanel({
       <p className="feature-panel-description">
         {describePromotionsDetailsItem(selected)}
       </p>
-      <CommerceBadgeGroup
+      <TypographyBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,9 +49,7 @@ export function PromotionsDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <DataCard label="Data Card" value={selected.product.rating} size="sm" />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

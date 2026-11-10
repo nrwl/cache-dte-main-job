@@ -19,7 +19,7 @@ export const COMPARE_DASHBOARD_FEATURE: FeatureMeta = {
   testId: COMPARE_DASHBOARD_TEST_ID,
   domain: 'compare',
   kind: 'dashboard',
-  itemCount: 11,
+  itemCount: 9,
 };
 
 export function compareDashboardItemPath(itemId: string): string {

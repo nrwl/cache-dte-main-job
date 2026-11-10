@@ -3,7 +3,7 @@ import {
   clampLength,
   hashString,
   normalizeInput,
-  titleCase,
+  onlyDigits,
 } from './async-number-helpers';
 
 export interface AsyncNumberOptions {
@@ -31,7 +31,7 @@ export const ASYNC_NUMBER_DEFAULTS: Required<AsyncNumberOptions> = {
 export const ASYNC_NUMBER_KIND = 'async-number' as const;
 
 /**
- * Formats a raw value using the "title" strategy.
+ * Formats a raw value using the "digits" strategy.
  */
 export function asyncNumber(
   value: string | number,
@@ -46,7 +46,7 @@ export function asyncNumber(
     return opts.fallback;
   }
   const staged = normalized;
-  const transformed = titleCase(staged);
+  const transformed = onlyDigits(staged) || staged;
   return clampLength(transformed, opts.maxLength);
 }
 

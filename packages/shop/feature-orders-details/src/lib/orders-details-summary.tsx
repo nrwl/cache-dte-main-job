@@ -1,4 +1,4 @@
-import { NavigationToolbarGroup } from '@org/shop-ui-navigation-toolbar';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import { buildOrdersDetailsItems } from './orders-details.model';
 import { ORDERS_DETAILS_FEATURE } from './orders-details.routes';
 import {
@@ -29,7 +29,7 @@ export function OrdersDetailsSummary({
       data-testid={`${ORDERS_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{ORDERS_DETAILS_FEATURE.title}</h3>
-      <NavigationToolbarGroup
+      <FeedbackBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

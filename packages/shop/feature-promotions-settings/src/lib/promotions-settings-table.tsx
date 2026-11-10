@@ -1,4 +1,4 @@
-import { DataHeader } from '@org/shop-ui-data-header';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { PromotionsSettingsItem } from './promotions-settings.model';
 import { PROMOTIONS_SETTINGS_FEATURE } from './promotions-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function PromotionsSettingsTable({
             <td>{formatPromotionsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataHeader
+              <OverlayStat
                 label={item.status}
                 tone={promotionsSettingsStatusTone(item.status)}
                 size="sm"

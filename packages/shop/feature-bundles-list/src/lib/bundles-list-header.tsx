@@ -1,4 +1,4 @@
-import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { BUNDLES_LIST_FEATURE } from './bundles-list.routes';
 
 export interface BundlesListHeaderProps {
@@ -26,8 +26,8 @@ export function BundlesListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationToolbar label="Items" value={count} tone="info" />
-        <NavigationToolbar label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

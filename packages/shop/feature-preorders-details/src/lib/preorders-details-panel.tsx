@@ -1,6 +1,6 @@
-import { OverlayPanelGroup } from '@org/shop-ui-overlay-panel';
-import { NavigationHeader } from '@org/shop-ui-navigation-header';
-import { TypographyStat } from '@org/shop-ui-typography-stat';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { CoreBadge } from '@org/shop-ui-core-badge';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { PreordersDetailsItem } from './preorders-details.model';
 import { PREORDERS_DETAILS_FEATURE } from './preorders-details.routes';
 import { describePreordersDetailsItem } from './preorders-details.utils';
@@ -41,7 +41,7 @@ export function PreordersDetailsPanel({
       <p className="feature-panel-description">
         {describePreordersDetailsItem(selected)}
       </p>
-      <OverlayPanelGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function PreordersDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <NavigationHeader
-          label="Navigation Header"
+        <CoreBadge
+          label="Core Badge"
           value={selected.product.rating}
           size="sm"
         />
-        <TypographyStat
-          label="Typography Stat"
+        <CoreToolbar
+          label="Core Toolbar"
           value={selected.product.rating}
           size="sm"
         />

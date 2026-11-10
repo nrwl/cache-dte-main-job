@@ -1,4 +1,4 @@
-import { LayoutChipGroup } from '@org/shop-ui-layout-chip';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
 import { buildStoreLocatorDashboardItems } from './store-locator-dashboard.model';
 import { STORE_LOCATOR_DASHBOARD_FEATURE } from './store-locator-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function StoreLocatorDashboardSummary({
       <h3 className="feature-summary-title">
         {STORE_LOCATOR_DASHBOARD_FEATURE.title}
       </h3>
-      <LayoutChipGroup
+      <NavigationPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

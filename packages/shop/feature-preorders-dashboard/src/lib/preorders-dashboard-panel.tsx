@@ -1,5 +1,5 @@
-import { TypographyListGroup } from '@org/shop-ui-typography-list';
-import { LayoutBadge } from '@org/shop-ui-layout-badge';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { PreordersDashboardItem } from './preorders-dashboard.model';
 import { PREORDERS_DASHBOARD_FEATURE } from './preorders-dashboard.routes';
 import { describePreordersDashboardItem } from './preorders-dashboard.utils';
@@ -40,7 +40,7 @@ export function PreordersDashboardPanel({
       <p className="feature-panel-description">
         {describePreordersDashboardItem(selected)}
       </p>
-      <TypographyListGroup
+      <LayoutStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function PreordersDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutBadge
-          label="Layout Badge"
+        <FeedbackBanner
+          label="Feedback Banner"
           value={selected.product.rating}
           size="sm"
         />

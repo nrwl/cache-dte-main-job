@@ -1,4 +1,4 @@
-import { DataHeader } from '@org/shop-ui-data-header';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { CartListItem } from './cart-list.model';
 import { CART_LIST_FEATURE } from './cart-list.routes';
 import { formatCartListAmount, cartListStatusTone } from './cart-list.utils';
@@ -55,7 +55,7 @@ export function CartListTable({
             <td>{formatCartListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataHeader
+              <ChartsBanner
                 label={item.status}
                 tone={cartListStatusTone(item.status)}
                 size="sm"

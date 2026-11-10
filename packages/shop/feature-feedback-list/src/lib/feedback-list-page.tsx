@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { PaymentsDetailsSummary } from '@org/shop-feature-payments-details';
 import { FeedbackListFilters } from './feedback-list-filters';
 import { FeedbackListHeader } from './feedback-list-header';
 import { FeedbackListPanel } from './feedback-list-panel';
@@ -50,6 +51,7 @@ export function FeedbackListPage() {
         </div>
         <div className="feature-side">
           <FeedbackListPanel selected={selected} onClear={() => select(null)} />
+          <PaymentsDetailsSummary compact />
         </div>
       </div>
     </section>

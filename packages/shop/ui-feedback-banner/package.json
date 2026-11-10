@@ -19,8 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-math-phone": "*",
-    "@org/shop-util-i18n-name": "*",
-    "@org/shop-util-storage-address": "*"
+    "@org/shop-util-format-phone": "*"
   }
 }

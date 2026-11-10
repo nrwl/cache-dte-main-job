@@ -1,6 +1,5 @@
-import { CorePanelGroup } from '@org/shop-ui-core-panel';
-import { FormsBadge } from '@org/shop-ui-forms-badge';
-import { CommerceList } from '@org/shop-ui-commerce-list';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { ReturnsDetailsItem } from './returns-details.model';
 import { RETURNS_DETAILS_FEATURE } from './returns-details.routes';
 import { describeReturnsDetailsItem } from './returns-details.utils';
@@ -41,7 +40,7 @@ export function ReturnsDetailsPanel({
       <p className="feature-panel-description">
         {describeReturnsDetailsItem(selected)}
       </p>
-      <CorePanelGroup
+      <InputsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function ReturnsDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsBadge
-          label="Forms Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <CommerceList
-          label="Commerce List"
+        <MarketingBadge
+          label="Marketing Badge"
           value={selected.product.rating}
           size="sm"
         />

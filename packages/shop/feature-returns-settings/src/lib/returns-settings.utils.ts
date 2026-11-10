@@ -1,5 +1,6 @@
-import { collectionPhone } from '@org/shop-util-collection-phone';
-import { storageText } from '@org/shop-util-storage-text';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyReturnsSettingsTotals,
   type ReturnsSettingsItem,
@@ -72,13 +73,13 @@ export function sortReturnsSettings(
 }
 
 export function describeReturnsSettingsItem(item: ReturnsSettingsItem): string {
-  const amount = collectionPhone(item.amount);
-  const name = storageText(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = validateText(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReturnsSettingsAmount(amount: number): string {
-  return collectionPhone(amount);
+  return formatCurrency(amount);
 }
 
 export function returnsSettingsStatusTone(

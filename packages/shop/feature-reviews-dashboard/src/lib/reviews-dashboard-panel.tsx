@@ -1,4 +1,4 @@
-import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
 import type { ReviewsDashboardItem } from './reviews-dashboard.model';
 import { REVIEWS_DASHBOARD_FEATURE } from './reviews-dashboard.routes';
 import { describeReviewsDashboardItem } from './reviews-dashboard.utils';
@@ -39,7 +39,7 @@ export function ReviewsDashboardPanel({
       <p className="feature-panel-description">
         {describeReviewsDashboardItem(selected)}
       </p>
-      <CommerceToolbarGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

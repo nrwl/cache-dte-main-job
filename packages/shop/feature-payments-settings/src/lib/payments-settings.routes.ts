@@ -19,7 +19,7 @@ export const PAYMENTS_SETTINGS_FEATURE: FeatureMeta = {
   testId: PAYMENTS_SETTINGS_TEST_ID,
   domain: 'payments',
   kind: 'settings',
-  itemCount: 11,
+  itemCount: 5,
 };
 
 export function paymentsSettingsItemPath(itemId: string): string {

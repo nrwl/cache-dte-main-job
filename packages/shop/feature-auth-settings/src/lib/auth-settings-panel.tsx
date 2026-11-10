@@ -1,5 +1,6 @@
-import { OverlayChipGroup } from '@org/shop-ui-overlay-chip';
-import { FeedbackHeader } from '@org/shop-ui-feedback-header';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { AuthSettingsItem } from './auth-settings.model';
 import { AUTH_SETTINGS_FEATURE } from './auth-settings.routes';
 import { describeAuthSettingsItem } from './auth-settings.utils';
@@ -40,7 +41,7 @@ export function AuthSettingsPanel({
       <p className="feature-panel-description">
         {describeAuthSettingsItem(selected)}
       </p>
-      <OverlayChipGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function AuthSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackHeader
-          label="Feedback Header"
+        <MarketingBadge
+          label="Marketing Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <InputsPanel
+          label="Inputs Panel"
           value={selected.product.rating}
           size="sm"
         />

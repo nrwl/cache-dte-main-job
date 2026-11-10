@@ -1,4 +1,5 @@
-import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { AnalyticsDashboardItem } from './analytics-dashboard.model';
 import { ANALYTICS_DASHBOARD_FEATURE } from './analytics-dashboard.routes';
 import { describeAnalyticsDashboardItem } from './analytics-dashboard.utils';
@@ -39,7 +40,7 @@ export function AnalyticsDashboardPanel({
       <p className="feature-panel-description">
         {describeAnalyticsDashboardItem(selected)}
       </p>
-      <FeedbackBannerGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function AnalyticsDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <MediaToolbar
+          label="Media Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

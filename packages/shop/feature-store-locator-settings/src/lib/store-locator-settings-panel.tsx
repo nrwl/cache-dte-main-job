@@ -1,4 +1,4 @@
-import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import type { StoreLocatorSettingsItem } from './store-locator-settings.model';
 import { STORE_LOCATOR_SETTINGS_FEATURE } from './store-locator-settings.routes';
 import { describeStoreLocatorSettingsItem } from './store-locator-settings.utils';
@@ -39,7 +39,7 @@ export function StoreLocatorSettingsPanel({
       <p className="feature-panel-description">
         {describeStoreLocatorSettingsItem(selected)}
       </p>
-      <LayoutStatGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

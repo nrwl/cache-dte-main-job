@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { CartDashboardSummary } from '@org/shop-feature-cart-dashboard';
 import { AnalyticsDashboardFilters } from './analytics-dashboard-filters';
 import { AnalyticsDashboardHeader } from './analytics-dashboard-header';
 import { AnalyticsDashboardPanel } from './analytics-dashboard-panel';
@@ -53,6 +54,7 @@ export function AnalyticsDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <CartDashboardSummary compact />
         </div>
       </div>
     </section>

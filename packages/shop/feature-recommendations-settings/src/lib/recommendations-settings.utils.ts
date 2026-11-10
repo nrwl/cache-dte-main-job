@@ -1,5 +1,6 @@
-import { storageAddress } from '@org/shop-util-storage-address';
-import { formatPercent } from '@org/shop-util-format-percent';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyRecommendationsSettingsTotals,
   type RecommendationsSettingsItem,
@@ -77,13 +78,13 @@ export function sortRecommendationsSettings(
 export function describeRecommendationsSettingsItem(
   item: RecommendationsSettingsItem,
 ): string {
-  const amount = storageAddress(item.amount);
-  const name = formatPercent(item.name);
+  const amount = formatPhone(item.amount);
+  const name = mathName(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatRecommendationsSettingsAmount(amount: number): string {
-  return storageAddress(amount);
+  return formatPhone(amount);
 }
 
 export function recommendationsSettingsStatusTone(

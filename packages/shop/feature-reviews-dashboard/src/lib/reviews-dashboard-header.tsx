@@ -1,4 +1,4 @@
-import { FormsHeader } from '@org/shop-ui-forms-header';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import { REVIEWS_DASHBOARD_FEATURE } from './reviews-dashboard.routes';
 
 export interface ReviewsDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function ReviewsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsHeader label="Items" value={count} tone="info" />
-        <FormsHeader label="Total" value={total} tone="success" />
+        <MediaToolbar label="Items" value={count} tone="info" />
+        <MediaToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

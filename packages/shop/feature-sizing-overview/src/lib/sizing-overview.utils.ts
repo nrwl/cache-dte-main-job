@@ -1,5 +1,5 @@
-import { formatPercent } from '@org/shop-util-format-percent';
-import { formatText } from '@org/shop-util-format-text';
+import { asyncName } from '@org/shop-util-async-name';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptySizingOverviewTotals,
   type SizingOverviewItem,
@@ -72,13 +72,13 @@ export function sortSizingOverview(
 }
 
 export function describeSizingOverviewItem(item: SizingOverviewItem): string {
-  const amount = formatPercent(item.amount);
-  const name = formatText(item.name);
+  const amount = asyncName(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingOverviewAmount(amount: number): string {
-  return formatPercent(amount);
+  return asyncName(amount);
 }
 
 export function sizingOverviewStatusTone(

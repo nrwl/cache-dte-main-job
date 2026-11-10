@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { ReviewsHistorySummary } from '@org/shop-feature-reviews-history';
 import { StoreLocatorSettingsFilters } from './store-locator-settings-filters';
 import { StoreLocatorSettingsHeader } from './store-locator-settings-header';
 import { StoreLocatorSettingsPanel } from './store-locator-settings-panel';
@@ -54,7 +53,6 @@ export function StoreLocatorSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <ReviewsHistorySummary compact />
         </div>
       </div>
     </section>

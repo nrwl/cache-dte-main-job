@@ -19,7 +19,7 @@ export const PREORDERS_DASHBOARD_FEATURE: FeatureMeta = {
   testId: PREORDERS_DASHBOARD_TEST_ID,
   domain: 'preorders',
   kind: 'dashboard',
-  itemCount: 5,
+  itemCount: 6,
 };
 
 export function preordersDashboardItemPath(itemId: string): string {

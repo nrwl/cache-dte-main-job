@@ -1,4 +1,4 @@
-import { DataBadge } from '@org/shop-ui-data-badge';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { RecommendationsSettingsItem } from './recommendations-settings.model';
 import { RECOMMENDATIONS_SETTINGS_FEATURE } from './recommendations-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function RecommendationsSettingsTable({
             <td>{formatRecommendationsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataBadge
+              <MediaToolbar
                 label={item.status}
                 tone={recommendationsSettingsStatusTone(item.status)}
                 size="sm"

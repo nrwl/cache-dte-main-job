@@ -1,4 +1,4 @@
-import { storageCurrency } from '@org/shop-util-storage-currency';
+import { formatPhone } from '@org/shop-util-format-phone';
 import type { CommerceToolbarProps } from './commerce-toolbar.types';
 import { resolveCommerceToolbarStyle } from './commerce-toolbar-variants';
 
@@ -11,7 +11,7 @@ export function CommerceToolbar({
   onSelect,
   children,
 }: CommerceToolbarProps) {
-  const formatted = value === undefined ? '' : storageCurrency(value);
+  const formatted = value === undefined ? '' : formatPhone(value);
   const style = resolveCommerceToolbarStyle(tone, size);
   const ariaLabel = label;
 

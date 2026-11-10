@@ -21,7 +21,7 @@ export interface GiftCardsListTotals {
   archived: number;
 }
 
-export const GIFT_CARDS_LIST_ITEM_COUNT = 7;
+export const GIFT_CARDS_LIST_ITEM_COUNT = 9;
 
 export const GIFT_CARDS_LIST_STATUSES: ReadonlyArray<GiftCardsListStatus> = [
   'active',

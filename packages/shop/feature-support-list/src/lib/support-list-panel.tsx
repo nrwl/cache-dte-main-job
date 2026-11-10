@@ -1,6 +1,6 @@
-import { FormsChipGroup } from '@org/shop-ui-forms-chip';
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { SupportListItem } from './support-list.model';
 import { SUPPORT_LIST_FEATURE } from './support-list.routes';
 import { describeSupportListItem } from './support-list.utils';
@@ -38,7 +38,7 @@ export function SupportListPanel({ selected, onClear }: SupportListPanelProps) {
       <p className="feature-panel-description">
         {describeSupportListItem(selected)}
       </p>
-      <FormsChipGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,13 +49,13 @@ export function SupportListPanel({ selected, onClear }: SupportListPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackStat
-          label="Feedback Stat"
+        <CommerceBadge
+          label="Commerce Badge"
           value={selected.product.rating}
           size="sm"
         />
-        <FormsBadge
-          label="Forms Badge"
+        <FeedbackBanner
+          label="Feedback Banner"
           value={selected.product.rating}
           size="sm"
         />

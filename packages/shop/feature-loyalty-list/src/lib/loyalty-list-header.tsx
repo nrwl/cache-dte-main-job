@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import { LOYALTY_LIST_FEATURE } from './loyalty-list.routes';
 
 export interface LoyaltyListHeaderProps {
@@ -26,8 +26,8 @@ export function LoyaltyListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyToolbar label="Items" value={count} tone="info" />
-        <TypographyToolbar label="Total" value={total} tone="success" />
+        <InputsPanel label="Items" value={count} tone="info" />
+        <InputsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

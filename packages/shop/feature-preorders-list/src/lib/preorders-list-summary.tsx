@@ -1,4 +1,4 @@
-import { FeedbackTileGroup } from '@org/shop-ui-feedback-tile';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildPreordersListItems } from './preorders-list.model';
 import { PREORDERS_LIST_FEATURE } from './preorders-list.routes';
 import {
@@ -29,7 +29,7 @@ export function PreordersListSummary({
       data-testid={`${PREORDERS_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{PREORDERS_LIST_FEATURE.title}</h3>
-      <FeedbackTileGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

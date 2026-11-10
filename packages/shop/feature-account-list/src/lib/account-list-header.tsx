@@ -1,4 +1,4 @@
-import { CoreTile } from '@org/shop-ui-core-tile';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import { ACCOUNT_LIST_FEATURE } from './account-list.routes';
 
 export interface AccountListHeaderProps {
@@ -26,8 +26,8 @@ export function AccountListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreTile label="Items" value={count} tone="info" />
-        <CoreTile label="Total" value={total} tone="success" />
+        <CoreToolbar label="Items" value={count} tone="info" />
+        <CoreToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

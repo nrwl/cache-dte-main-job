@@ -1,4 +1,6 @@
-import { mathSlug } from '@org/shop-util-math-slug';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyCompareDetailsTotals,
   type CompareDetailsItem,
@@ -71,13 +73,13 @@ export function sortCompareDetails(
 }
 
 export function describeCompareDetailsItem(item: CompareDetailsItem): string {
-  const amount = mathSlug(item.amount);
-  const name = mathSlug(item.name);
+  const amount = asyncNumber(item.amount);
+  const name = collectionText(formatCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCompareDetailsAmount(amount: number): string {
-  return mathSlug(amount);
+  return asyncNumber(amount);
 }
 
 export function compareDetailsStatusTone(

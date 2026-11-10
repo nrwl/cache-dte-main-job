@@ -1,4 +1,4 @@
-import { ChartsHeader } from '@org/shop-ui-charts-header';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { CHECKOUT_DETAILS_FEATURE } from './checkout-details.routes';
 
 export interface CheckoutDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function CheckoutDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsHeader label="Items" value={count} tone="info" />
-        <ChartsHeader label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

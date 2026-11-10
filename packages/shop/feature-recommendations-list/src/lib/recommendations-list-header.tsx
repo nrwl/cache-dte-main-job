@@ -1,4 +1,4 @@
-import { FeedbackList } from '@org/shop-ui-feedback-list';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import { RECOMMENDATIONS_LIST_FEATURE } from './recommendations-list.routes';
 
 export interface RecommendationsListHeaderProps {
@@ -27,8 +27,8 @@ export function RecommendationsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackList label="Items" value={count} tone="info" />
-        <FeedbackList label="Total" value={total} tone="success" />
+        <ChartsBanner label="Items" value={count} tone="info" />
+        <ChartsBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,5 +1,6 @@
-import { collectionNumber } from '@org/shop-util-collection-number';
-import { validateText } from '@org/shop-util-validate-text';
+import { collectionText } from '@org/shop-util-collection-text';
+import { asyncName } from '@org/shop-util-async-name';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyCartDetailsTotals,
   type CartDetailsItem,
@@ -71,13 +72,13 @@ export function sortCartDetails(
 }
 
 export function describeCartDetailsItem(item: CartDetailsItem): string {
-  const amount = collectionNumber(item.amount);
-  const name = validateText(item.name);
+  const amount = collectionText(item.amount);
+  const name = asyncNumber(asyncName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCartDetailsAmount(amount: number): string {
-  return collectionNumber(amount);
+  return collectionText(amount);
 }
 
 export function cartDetailsStatusTone(

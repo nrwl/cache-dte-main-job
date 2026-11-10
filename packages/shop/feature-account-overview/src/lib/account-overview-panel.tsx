@@ -1,4 +1,5 @@
-import { TypographyHeaderGroup } from '@org/shop-ui-typography-header';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { AccountOverviewItem } from './account-overview.model';
 import { ACCOUNT_OVERVIEW_FEATURE } from './account-overview.routes';
 import { describeAccountOverviewItem } from './account-overview.utils';
@@ -39,7 +40,7 @@ export function AccountOverviewPanel({
       <p className="feature-panel-description">
         {describeAccountOverviewItem(selected)}
       </p>
-      <TypographyHeaderGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function AccountOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <NavigationPanel
+          label="Navigation Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

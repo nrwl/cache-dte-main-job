@@ -1,5 +1,6 @@
-import { FormsCardGroup } from '@org/shop-ui-forms-card';
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { AuthOverviewItem } from './auth-overview.model';
 import { AUTH_OVERVIEW_FEATURE } from './auth-overview.routes';
 import { describeAuthOverviewItem } from './auth-overview.utils';
@@ -40,7 +41,7 @@ export function AuthOverviewPanel({
       <p className="feature-panel-description">
         {describeAuthOverviewItem(selected)}
       </p>
-      <FormsCardGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function AuthOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsBadge
-          label="Forms Badge"
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <TypographyBanner
+          label="Typography Banner"
           value={selected.product.rating}
           size="sm"
         />

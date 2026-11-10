@@ -1,6 +1,4 @@
-import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
-import { CoreBadge } from '@org/shop-ui-core-badge';
-import { LayoutChip } from '@org/shop-ui-layout-chip';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import type { AddressesDetailsItem } from './addresses-details.model';
 import { ADDRESSES_DETAILS_FEATURE } from './addresses-details.routes';
 import { describeAddressesDetailsItem } from './addresses-details.utils';
@@ -41,7 +39,7 @@ export function AddressesDetailsPanel({
       <p className="feature-panel-description">
         {describeAddressesDetailsItem(selected)}
       </p>
-      <NavigationPanelGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function AddressesDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CoreBadge
-          label="Core Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <LayoutChip
-          label="Layout Chip"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

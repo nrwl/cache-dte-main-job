@@ -1,4 +1,4 @@
-import { FeedbackCardGroup } from '@org/shop-ui-feedback-card';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import { buildStoreLocatorDetailsItems } from './store-locator-details.model';
 import { STORE_LOCATOR_DETAILS_FEATURE } from './store-locator-details.routes';
 import {
@@ -31,7 +31,7 @@ export function StoreLocatorDetailsSummary({
       <h3 className="feature-summary-title">
         {STORE_LOCATOR_DETAILS_FEATURE.title}
       </h3>
-      <FeedbackCardGroup
+      <InputsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

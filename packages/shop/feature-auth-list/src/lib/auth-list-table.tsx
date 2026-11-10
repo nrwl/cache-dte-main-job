@@ -1,4 +1,4 @@
-import { TypographyTile } from '@org/shop-ui-typography-tile';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { AuthListItem } from './auth-list.model';
 import { AUTH_LIST_FEATURE } from './auth-list.routes';
 import { formatAuthListAmount, authListStatusTone } from './auth-list.utils';
@@ -55,7 +55,7 @@ export function AuthListTable({
             <td>{formatAuthListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyTile
+              <DataPanel
                 label={item.status}
                 tone={authListStatusTone(item.status)}
                 size="sm"

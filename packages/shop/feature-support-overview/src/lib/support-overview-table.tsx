@@ -1,4 +1,4 @@
-import { NavigationStat } from '@org/shop-ui-navigation-stat';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { SupportOverviewItem } from './support-overview.model';
 import { SUPPORT_OVERVIEW_FEATURE } from './support-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function SupportOverviewTable({
             <td>{formatSupportOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationStat
+              <OverlayStat
                 label={item.status}
                 tone={supportOverviewStatusTone(item.status)}
                 size="sm"

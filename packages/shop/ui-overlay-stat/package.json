@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-format-number": "*"
+    "@org/shop-util-storage-phone": "*",
+    "@org/shop-ui-core-badge": "*"
   }
 }

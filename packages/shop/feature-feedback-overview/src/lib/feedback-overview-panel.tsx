@@ -1,5 +1,6 @@
-import { DataTileGroup } from '@org/shop-ui-data-tile';
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { FeedbackOverviewItem } from './feedback-overview.model';
 import { FEEDBACK_OVERVIEW_FEATURE } from './feedback-overview.routes';
 import { describeFeedbackOverviewItem } from './feedback-overview.utils';
@@ -40,7 +41,7 @@ export function FeedbackOverviewPanel({
       <p className="feature-panel-description">
         {describeFeedbackOverviewItem(selected)}
       </p>
-      <DataTileGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function FeedbackOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CorePanel
-          label="Core Panel"
+        <InputsPanel
+          label="Inputs Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <FeedbackBanner
+          label="Feedback Banner"
           value={selected.product.rating}
           size="sm"
         />

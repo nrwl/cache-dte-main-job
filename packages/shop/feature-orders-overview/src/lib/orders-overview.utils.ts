@@ -1,5 +1,4 @@
-import { formatText } from '@org/shop-util-format-text';
-import { mathPercent } from '@org/shop-util-math-percent';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyOrdersOverviewTotals,
   type OrdersOverviewItem,
@@ -72,13 +71,13 @@ export function sortOrdersOverview(
 }
 
 export function describeOrdersOverviewItem(item: OrdersOverviewItem): string {
-  const amount = formatText(item.amount);
-  const name = mathPercent(item.name);
+  const amount = mathName(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersOverviewAmount(amount: number): string {
-  return formatText(amount);
+  return mathName(amount);
 }
 
 export function ordersOverviewStatusTone(

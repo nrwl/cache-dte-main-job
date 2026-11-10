@@ -1,4 +1,4 @@
-import { MarketingChip } from '@org/shop-ui-marketing-chip';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import { COMPARE_DASHBOARD_FEATURE } from './compare-dashboard.routes';
 
 export interface CompareDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function CompareDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingChip label="Items" value={count} tone="info" />
-        <MarketingChip label="Total" value={total} tone="success" />
+        <LayoutStat label="Items" value={count} tone="info" />
+        <LayoutStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

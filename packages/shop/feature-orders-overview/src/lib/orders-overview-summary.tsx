@@ -1,4 +1,4 @@
-import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
 import { buildOrdersOverviewItems } from './orders-overview.model';
 import { ORDERS_OVERVIEW_FEATURE } from './orders-overview.routes';
 import {
@@ -29,7 +29,7 @@ export function OrdersOverviewSummary({
       data-testid={`${ORDERS_OVERVIEW_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{ORDERS_OVERVIEW_FEATURE.title}</h3>
-      <TypographyToolbarGroup
+      <LayoutStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

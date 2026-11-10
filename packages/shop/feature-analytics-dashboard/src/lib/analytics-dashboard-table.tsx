@@ -1,4 +1,4 @@
-import { MediaBadge } from '@org/shop-ui-media-badge';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { AnalyticsDashboardItem } from './analytics-dashboard.model';
 import { ANALYTICS_DASHBOARD_FEATURE } from './analytics-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function AnalyticsDashboardTable({
             <td>{formatAnalyticsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaBadge
+              <CommerceBadge
                 label={item.status}
                 tone={analyticsDashboardStatusTone(item.status)}
                 size="sm"

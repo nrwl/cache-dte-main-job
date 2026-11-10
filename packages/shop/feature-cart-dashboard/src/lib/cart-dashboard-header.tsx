@@ -1,4 +1,4 @@
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import { CART_DASHBOARD_FEATURE } from './cart-dashboard.routes';
 
 export interface CartDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function CartDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackStat label="Items" value={count} tone="info" />
-        <FeedbackStat label="Total" value={total} tone="success" />
+        <InputsPanel label="Items" value={count} tone="info" />
+        <InputsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

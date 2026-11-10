@@ -1,4 +1,4 @@
-import { OverlayChip } from '@org/shop-ui-overlay-chip';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import { CATALOG_DASHBOARD_FEATURE } from './catalog-dashboard.routes';
 
 export interface CatalogDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function CatalogDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <OverlayChip label="Items" value={count} tone="info" />
-        <OverlayChip label="Total" value={total} tone="success" />
+        <MediaToolbar label="Items" value={count} tone="info" />
+        <MediaToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

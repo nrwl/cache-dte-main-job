@@ -1,4 +1,4 @@
-import { TypographyChip } from '@org/shop-ui-typography-chip';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { NOTIFICATIONS_DASHBOARD_FEATURE } from './notifications-dashboard.routes';
 
 export interface NotificationsDashboardHeaderProps {
@@ -29,8 +29,8 @@ export function NotificationsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyChip label="Items" value={count} tone="info" />
-        <TypographyChip label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

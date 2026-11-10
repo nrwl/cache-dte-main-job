@@ -1,4 +1,4 @@
-import { TypographyChip } from '@org/shop-ui-typography-chip';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { GIFT_CARDS_OVERVIEW_FEATURE } from './gift-cards-overview.routes';
 
 export interface GiftCardsOverviewHeaderProps {
@@ -27,8 +27,8 @@ export function GiftCardsOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyChip label="Items" value={count} tone="info" />
-        <TypographyChip label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

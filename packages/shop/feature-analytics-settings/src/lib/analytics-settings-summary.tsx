@@ -1,4 +1,4 @@
-import { CoreHeaderGroup } from '@org/shop-ui-core-header';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import { buildAnalyticsSettingsItems } from './analytics-settings.model';
 import { ANALYTICS_SETTINGS_FEATURE } from './analytics-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function AnalyticsSettingsSummary({
       <h3 className="feature-summary-title">
         {ANALYTICS_SETTINGS_FEATURE.title}
       </h3>
-      <CoreHeaderGroup
+      <FeedbackBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

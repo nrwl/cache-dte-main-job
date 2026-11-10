@@ -21,9 +21,10 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-media-tile": "*",
-    "@org/shop-ui-marketing-list": "*",
-    "@org/shop-ui-forms-list": "*",
-    "@org/shop-util-math-address": "*"
+    "@org/shop-ui-core-toolbar": "*",
+    "@org/shop-ui-forms-stat": "*",
+    "@org/shop-ui-commerce-badge": "*",
+    "@org/shop-util-format-phone": "*",
+    "@org/shop-util-async-name": "*"
   }
 }

@@ -1,6 +1,5 @@
-import { InputsTileGroup } from '@org/shop-ui-inputs-tile';
-import { OverlayToolbar } from '@org/shop-ui-overlay-toolbar';
-import { ChartsTile } from '@org/shop-ui-charts-tile';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { SupportOverviewItem } from './support-overview.model';
 import { SUPPORT_OVERVIEW_FEATURE } from './support-overview.routes';
 import { describeSupportOverviewItem } from './support-overview.utils';
@@ -41,7 +40,7 @@ export function SupportOverviewPanel({
       <p className="feature-panel-description">
         {describeSupportOverviewItem(selected)}
       </p>
-      <InputsTileGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function SupportOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <OverlayToolbar
-          label="Overlay Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <ChartsTile
-          label="Charts Tile"
+        <CoreToolbar
+          label="Core Toolbar"
           value={selected.product.rating}
           size="sm"
         />

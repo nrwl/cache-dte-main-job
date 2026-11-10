@@ -1,5 +1,6 @@
-import { mathPhone } from '@org/shop-util-math-phone';
-import { i18nSlug } from '@org/shop-util-i18n-slug';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyAuthSettingsTotals,
   type AuthSettingsItem,
@@ -71,13 +72,13 @@ export function sortAuthSettings(
 }
 
 export function describeAuthSettingsItem(item: AuthSettingsItem): string {
-  const amount = mathPhone(item.amount);
-  const name = i18nSlug(item.name);
+  const amount = mathCurrency(item.amount);
+  const name = mathName(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAuthSettingsAmount(amount: number): string {
-  return mathPhone(amount);
+  return mathCurrency(amount);
 }
 
 export function authSettingsStatusTone(

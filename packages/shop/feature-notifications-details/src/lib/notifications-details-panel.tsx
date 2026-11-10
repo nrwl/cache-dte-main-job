@@ -1,5 +1,6 @@
-import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
-import { ChartsToolbar } from '@org/shop-ui-charts-toolbar';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { NotificationsDetailsItem } from './notifications-details.model';
 import { NOTIFICATIONS_DETAILS_FEATURE } from './notifications-details.routes';
 import { describeNotificationsDetailsItem } from './notifications-details.utils';
@@ -40,7 +41,7 @@ export function NotificationsDetailsPanel({
       <p className="feature-panel-description">
         {describeNotificationsDetailsItem(selected)}
       </p>
-      <NavigationBadgeGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function NotificationsDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <ChartsToolbar
-          label="Charts Toolbar"
+        <TypographyBanner
+          label="Typography Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <LayoutStat
+          label="Layout Stat"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,6 +1,5 @@
-import { CoreTileGroup } from '@org/shop-ui-core-tile';
-import { InputsList } from '@org/shop-ui-inputs-list';
-import { FormsChip } from '@org/shop-ui-forms-chip';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { OrdersDashboardItem } from './orders-dashboard.model';
 import { ORDERS_DASHBOARD_FEATURE } from './orders-dashboard.routes';
 import { describeOrdersDashboardItem } from './orders-dashboard.utils';
@@ -41,7 +40,7 @@ export function OrdersDashboardPanel({
       <p className="feature-panel-description">
         {describeOrdersDashboardItem(selected)}
       </p>
-      <CoreTileGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function OrdersDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsList
-          label="Inputs List"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FormsChip
-          label="Forms Chip"
+        <InputsPanel
+          label="Inputs Panel"
           value={selected.product.rating}
           size="sm"
         />

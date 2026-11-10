@@ -1,4 +1,4 @@
-import { OverlayHeader } from '@org/shop-ui-overlay-header';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { InventoryDashboardItem } from './inventory-dashboard.model';
 import { INVENTORY_DASHBOARD_FEATURE } from './inventory-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function InventoryDashboardTable({
             <td>{formatInventoryDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayHeader
+              <MediaToolbar
                 label={item.status}
                 tone={inventoryDashboardStatusTone(item.status)}
                 size="sm"

@@ -1,5 +1,4 @@
-import { CoreListGroup } from '@org/shop-ui-core-list';
-import { FormsBanner } from '@org/shop-ui-forms-banner';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import type { InventoryDetailsItem } from './inventory-details.model';
 import { INVENTORY_DETAILS_FEATURE } from './inventory-details.routes';
 import { describeInventoryDetailsItem } from './inventory-details.utils';
@@ -40,7 +39,7 @@ export function InventoryDetailsPanel({
       <p className="feature-panel-description">
         {describeInventoryDetailsItem(selected)}
       </p>
-      <CoreListGroup
+      <InputsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function InventoryDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <FormsBanner
-          label="Forms Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

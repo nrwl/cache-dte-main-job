@@ -19,7 +19,7 @@ export const WISHLIST_LIST_FEATURE: FeatureMeta = {
   testId: WISHLIST_LIST_TEST_ID,
   domain: 'wishlist',
   kind: 'list',
-  itemCount: 7,
+  itemCount: 8,
 };
 
 export function wishlistListItemPath(itemId: string): string {

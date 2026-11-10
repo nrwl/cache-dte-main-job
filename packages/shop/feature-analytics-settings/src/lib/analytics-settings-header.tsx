@@ -1,4 +1,4 @@
-import { CoreHeader } from '@org/shop-ui-core-header';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { ANALYTICS_SETTINGS_FEATURE } from './analytics-settings.routes';
 
 export interface AnalyticsSettingsHeaderProps {
@@ -27,8 +27,8 @@ export function AnalyticsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreHeader label="Items" value={count} tone="info" />
-        <CoreHeader label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

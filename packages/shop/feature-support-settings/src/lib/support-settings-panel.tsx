@@ -1,5 +1,5 @@
-import { MarketingCardGroup } from '@org/shop-ui-marketing-card';
-import { CommerceCard } from '@org/shop-ui-commerce-card';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { SupportSettingsItem } from './support-settings.model';
 import { SUPPORT_SETTINGS_FEATURE } from './support-settings.routes';
 import { describeSupportSettingsItem } from './support-settings.utils';
@@ -40,7 +40,7 @@ export function SupportSettingsPanel({
       <p className="feature-panel-description">
         {describeSupportSettingsItem(selected)}
       </p>
-      <MarketingCardGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function SupportSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceCard
-          label="Commerce Card"
+        <CommerceBadge
+          label="Commerce Badge"
           value={selected.product.rating}
           size="sm"
         />

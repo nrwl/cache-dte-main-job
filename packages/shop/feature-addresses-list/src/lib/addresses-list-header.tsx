@@ -1,4 +1,4 @@
-import { CoreCard } from '@org/shop-ui-core-card';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { ADDRESSES_LIST_FEATURE } from './addresses-list.routes';
 
 export interface AddressesListHeaderProps {
@@ -26,8 +26,8 @@ export function AddressesListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreCard label="Items" value={count} tone="info" />
-        <CoreCard label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

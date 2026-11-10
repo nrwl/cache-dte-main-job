@@ -1,4 +1,4 @@
-import { InputsChip } from '@org/shop-ui-inputs-chip';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { AuthSettingsItem } from './auth-settings.model';
 import { AUTH_SETTINGS_FEATURE } from './auth-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function AuthSettingsTable({
             <td>{formatAuthSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsChip
+              <FeedbackBanner
                 label={item.status}
                 tone={authSettingsStatusTone(item.status)}
                 size="sm"

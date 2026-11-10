@@ -1,4 +1,4 @@
-import { LayoutPanel } from '@org/shop-ui-layout-panel';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import { NOTIFICATIONS_DETAILS_FEATURE } from './notifications-details.routes';
 
 export interface NotificationsDetailsHeaderProps {
@@ -27,8 +27,8 @@ export function NotificationsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutPanel label="Items" value={count} tone="info" />
-        <LayoutPanel label="Total" value={total} tone="success" />
+        <MarketingBadge label="Items" value={count} tone="info" />
+        <MarketingBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,5 +1,4 @@
-import { storageName } from '@org/shop-util-storage-name';
-import { i18nSlug } from '@org/shop-util-i18n-slug';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import type { LayoutStatProps } from './layout-stat.types';
 import { resolveLayoutStatStyle } from './layout-stat-variants';
 
@@ -12,9 +11,9 @@ export function LayoutStat({
   onSelect,
   children,
 }: LayoutStatProps) {
-  const formatted = value === undefined ? '' : storageName(value);
+  const formatted = value === undefined ? '' : i18nNumber(value);
   const style = resolveLayoutStatStyle(tone, size);
-  const ariaLabel = i18nSlug(label);
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {

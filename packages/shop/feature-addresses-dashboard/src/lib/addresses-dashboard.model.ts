@@ -21,7 +21,7 @@ export interface AddressesDashboardTotals {
   archived: number;
 }
 
-export const ADDRESSES_DASHBOARD_ITEM_COUNT = 12;
+export const ADDRESSES_DASHBOARD_ITEM_COUNT = 9;
 
 export const ADDRESSES_DASHBOARD_STATUSES: ReadonlyArray<AddressesDashboardStatus> =
   ['active', 'pending', 'archived'];

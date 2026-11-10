@@ -1,4 +1,4 @@
-import { MediaTile } from '@org/shop-ui-media-tile';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import { INVENTORY_DASHBOARD_FEATURE } from './inventory-dashboard.routes';
 
 export interface InventoryDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function InventoryDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaTile label="Items" value={count} tone="info" />
-        <MediaTile label="Total" value={total} tone="success" />
+        <InputsPanel label="Items" value={count} tone="info" />
+        <InputsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { CommerceStatGroup } from '@org/shop-ui-commerce-stat';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import { buildSizingDashboardItems } from './sizing-dashboard.model';
 import { SIZING_DASHBOARD_FEATURE } from './sizing-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function SizingDashboardSummary({
       <h3 className="feature-summary-title">
         {SIZING_DASHBOARD_FEATURE.title}
       </h3>
-      <CommerceStatGroup
+      <CommerceToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

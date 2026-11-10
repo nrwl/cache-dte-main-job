@@ -1,5 +1,6 @@
-import { InputsHeaderGroup } from '@org/shop-ui-inputs-header';
-import { InputsPanel } from '@org/shop-ui-inputs-panel';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { SubscriptionsSettingsItem } from './subscriptions-settings.model';
 import { SUBSCRIPTIONS_SETTINGS_FEATURE } from './subscriptions-settings.routes';
 import { describeSubscriptionsSettingsItem } from './subscriptions-settings.utils';
@@ -40,7 +41,7 @@ export function SubscriptionsSettingsPanel({
       <p className="feature-panel-description">
         {describeSubscriptionsSettingsItem(selected)}
       </p>
-      <InputsHeaderGroup
+      <CoreToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function SubscriptionsSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsPanel
-          label="Inputs Panel"
+        <LayoutStat
+          label="Layout Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <ChartsBanner
+          label="Charts Banner"
           value={selected.product.rating}
           size="sm"
         />

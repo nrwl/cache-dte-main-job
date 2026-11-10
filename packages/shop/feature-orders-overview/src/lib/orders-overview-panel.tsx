@@ -1,5 +1,4 @@
-import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
-import { MarketingList } from '@org/shop-ui-marketing-list';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import type { OrdersOverviewItem } from './orders-overview.model';
 import { ORDERS_OVERVIEW_FEATURE } from './orders-overview.routes';
 import { describeOrdersOverviewItem } from './orders-overview.utils';
@@ -40,7 +39,7 @@ export function OrdersOverviewPanel({
       <p className="feature-panel-description">
         {describeOrdersOverviewItem(selected)}
       </p>
-      <OverlayStatGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function OrdersOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MarketingList
-          label="Marketing List"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

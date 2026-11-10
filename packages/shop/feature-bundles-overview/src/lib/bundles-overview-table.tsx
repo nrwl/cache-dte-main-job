@@ -1,4 +1,4 @@
-import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { BundlesOverviewItem } from './bundles-overview.model';
 import { BUNDLES_OVERVIEW_FEATURE } from './bundles-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function BundlesOverviewTable({
             <td>{formatBundlesOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceToolbar
+              <ChartsBanner
                 label={item.status}
                 tone={bundlesOverviewStatusTone(item.status)}
                 size="sm"

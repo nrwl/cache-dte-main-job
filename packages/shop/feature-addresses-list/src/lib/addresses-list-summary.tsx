@@ -1,4 +1,4 @@
-import { CoreCardGroup } from '@org/shop-ui-core-card';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildAddressesListItems } from './addresses-list.model';
 import { ADDRESSES_LIST_FEATURE } from './addresses-list.routes';
 import {
@@ -29,7 +29,7 @@ export function AddressesListSummary({
       data-testid={`${ADDRESSES_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{ADDRESSES_LIST_FEATURE.title}</h3>
-      <CoreCardGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

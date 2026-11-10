@@ -1,4 +1,4 @@
-import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
 import { buildPaymentsSettingsItems } from './payments-settings.model';
 import { PAYMENTS_SETTINGS_FEATURE } from './payments-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function PaymentsSettingsSummary({
       <h3 className="feature-summary-title">
         {PAYMENTS_SETTINGS_FEATURE.title}
       </h3>
-      <ChartsBadgeGroup
+      <MarketingBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

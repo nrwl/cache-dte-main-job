@@ -1,4 +1,4 @@
-import { OverlayToolbarGroup } from '@org/shop-ui-overlay-toolbar';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildAddressesDetailsItems } from './addresses-details.model';
 import { ADDRESSES_DETAILS_FEATURE } from './addresses-details.routes';
 import {
@@ -31,7 +31,7 @@ export function AddressesDetailsSummary({
       <h3 className="feature-summary-title">
         {ADDRESSES_DETAILS_FEATURE.title}
       </h3>
-      <OverlayToolbarGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

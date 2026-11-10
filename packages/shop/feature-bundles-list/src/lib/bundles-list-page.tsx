@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { AddressesWizardSummary } from '@org/shop-feature-addresses-wizard';
 import { BundlesListFilters } from './bundles-list-filters';
 import { BundlesListHeader } from './bundles-list-header';
 import { BundlesListPanel } from './bundles-list-panel';
@@ -48,7 +47,6 @@ export function BundlesListPage() {
         </div>
         <div className="feature-side">
           <BundlesListPanel selected={selected} onClear={() => select(null)} />
-          <AddressesWizardSummary compact />
         </div>
       </div>
     </section>

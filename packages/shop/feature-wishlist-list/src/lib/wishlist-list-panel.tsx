@@ -1,4 +1,6 @@
-import { InputsListGroup } from '@org/shop-ui-inputs-list';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { DataPanel } from '@org/shop-ui-data-panel';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { WishlistListItem } from './wishlist-list.model';
 import { WISHLIST_LIST_FEATURE } from './wishlist-list.routes';
 import { describeWishlistListItem } from './wishlist-list.utils';
@@ -39,7 +41,7 @@ export function WishlistListPanel({
       <p className="feature-panel-description">
         {describeWishlistListItem(selected)}
       </p>
-      <InputsListGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function WishlistListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <LayoutStat
+          label="Layout Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

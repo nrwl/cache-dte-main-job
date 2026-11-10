@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { WishlistHistorySummary } from '@org/shop-feature-wishlist-history';
 import { WishlistListFilters } from './wishlist-list-filters';
 import { WishlistListHeader } from './wishlist-list-header';
 import { WishlistListPanel } from './wishlist-list-panel';
@@ -51,7 +50,6 @@ export function WishlistListPage() {
         </div>
         <div className="feature-side">
           <WishlistListPanel selected={selected} onClear={() => select(null)} />
-          <WishlistHistorySummary compact />
         </div>
       </div>
     </section>

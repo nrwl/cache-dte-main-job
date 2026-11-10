@@ -1,4 +1,6 @@
-import { OverlayChipGroup } from '@org/shop-ui-overlay-chip';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { AddressesOverviewItem } from './addresses-overview.model';
 import { ADDRESSES_OVERVIEW_FEATURE } from './addresses-overview.routes';
 import { describeAddressesOverviewItem } from './addresses-overview.utils';
@@ -39,7 +41,7 @@ export function AddressesOverviewPanel({
       <p className="feature-panel-description">
         {describeAddressesOverviewItem(selected)}
       </p>
-      <OverlayChipGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function AddressesOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <MediaToolbar
+          label="Media Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

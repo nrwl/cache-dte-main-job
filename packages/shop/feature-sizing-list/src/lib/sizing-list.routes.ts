@@ -19,7 +19,7 @@ export const SIZING_LIST_FEATURE: FeatureMeta = {
   testId: SIZING_LIST_TEST_ID,
   domain: 'sizing',
   kind: 'list',
-  itemCount: 10,
+  itemCount: 5,
 };
 
 export function sizingListItemPath(itemId: string): string {

@@ -1,4 +1,5 @@
-import { formatNumber } from '@org/shop-util-format-number';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { OverlayStatProps } from './overlay-stat.types';
 import { resolveOverlayStatStyle } from './overlay-stat-variants';
 
@@ -11,7 +12,7 @@ export function OverlayStat({
   onSelect,
   children,
 }: OverlayStatProps) {
-  const formatted = value === undefined ? '' : formatNumber(value);
+  const formatted = value === undefined ? '' : storagePhone(value);
   const style = resolveOverlayStatStyle(tone, size);
   const ariaLabel = label;
 
@@ -36,6 +37,7 @@ export function OverlayStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <CoreBadge label="Core Badge" value={value} tone={tone} size="sm" />
     </div>
   );
 }

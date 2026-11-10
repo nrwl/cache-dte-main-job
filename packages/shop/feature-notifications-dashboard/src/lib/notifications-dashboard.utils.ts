@@ -1,5 +1,4 @@
-import { validateCode } from '@org/shop-util-validate-code';
-import { validatePercent } from '@org/shop-util-validate-percent';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyNotificationsDashboardTotals,
   type NotificationsDashboardItem,
@@ -77,13 +76,13 @@ export function sortNotificationsDashboard(
 export function describeNotificationsDashboardItem(
   item: NotificationsDashboardItem,
 ): string {
-  const amount = validateCode(item.amount);
-  const name = validatePercent(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatNotificationsDashboardAmount(amount: number): string {
-  return validateCode(amount);
+  return formatCurrency(amount);
 }
 
 export function notificationsDashboardStatusTone(

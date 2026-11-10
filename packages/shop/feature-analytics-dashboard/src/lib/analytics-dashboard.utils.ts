@@ -1,6 +1,5 @@
-import { collectionAddress } from '@org/shop-util-collection-address';
-import { asyncSlug } from '@org/shop-util-async-slug';
-import { mathNumber } from '@org/shop-util-math-number';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyAnalyticsDashboardTotals,
   type AnalyticsDashboardItem,
@@ -75,13 +74,13 @@ export function sortAnalyticsDashboard(
 export function describeAnalyticsDashboardItem(
   item: AnalyticsDashboardItem,
 ): string {
-  const amount = collectionAddress(item.amount);
-  const name = mathNumber(asyncSlug(item.name));
+  const amount = collectionText(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAnalyticsDashboardAmount(amount: number): string {
-  return collectionAddress(amount);
+  return collectionText(amount);
 }
 
 export function analyticsDashboardStatusTone(

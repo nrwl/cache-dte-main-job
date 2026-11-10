@@ -1,4 +1,4 @@
-import { MarketingHeaderGroup } from '@org/shop-ui-marketing-header';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
 import { buildFeedbackListItems } from './feedback-list.model';
 import { FEEDBACK_LIST_FEATURE } from './feedback-list.routes';
 import {
@@ -29,7 +29,7 @@ export function FeedbackListSummary({
       data-testid={`${FEEDBACK_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{FEEDBACK_LIST_FEATURE.title}</h3>
-      <MarketingHeaderGroup
+      <ChartsBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

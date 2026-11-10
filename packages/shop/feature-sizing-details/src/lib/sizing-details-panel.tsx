@@ -1,4 +1,5 @@
-import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { SizingDetailsItem } from './sizing-details.model';
 import { SIZING_DETAILS_FEATURE } from './sizing-details.routes';
 import { describeSizingDetailsItem } from './sizing-details.utils';
@@ -39,7 +40,7 @@ export function SizingDetailsPanel({
       <p className="feature-panel-description">
         {describeSizingDetailsItem(selected)}
       </p>
-      <FeedbackBannerGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function SizingDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

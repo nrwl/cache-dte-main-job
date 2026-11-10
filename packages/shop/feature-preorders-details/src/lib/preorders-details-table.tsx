@@ -1,4 +1,4 @@
-import { FeedbackChip } from '@org/shop-ui-feedback-chip';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { PreordersDetailsItem } from './preorders-details.model';
 import { PREORDERS_DETAILS_FEATURE } from './preorders-details.routes';
 import {
@@ -58,7 +58,7 @@ export function PreordersDetailsTable({
             <td>{formatPreordersDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackChip
+              <NavigationPanel
                 label={item.status}
                 tone={preordersDetailsStatusTone(item.status)}
                 size="sm"

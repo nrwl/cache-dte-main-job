@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { PaymentsDashboardSummary } from '@org/shop-feature-payments-dashboard';
 import { SizingListFilters } from './sizing-list-filters';
 import { SizingListHeader } from './sizing-list-header';
 import { SizingListPanel } from './sizing-list-panel';
@@ -47,6 +48,7 @@ export function SizingListPage() {
         </div>
         <div className="feature-side">
           <SizingListPanel selected={selected} onClear={() => select(null)} />
+          <PaymentsDashboardSummary compact />
         </div>
       </div>
     </section>

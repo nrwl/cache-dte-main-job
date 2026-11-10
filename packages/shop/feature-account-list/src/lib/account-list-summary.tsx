@@ -1,4 +1,4 @@
-import { CoreTileGroup } from '@org/shop-ui-core-tile';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import { buildAccountListItems } from './account-list.model';
 import { ACCOUNT_LIST_FEATURE } from './account-list.routes';
 import {
@@ -29,7 +29,7 @@ export function AccountListSummary({
       data-testid={`${ACCOUNT_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{ACCOUNT_LIST_FEATURE.title}</h3>
-      <CoreTileGroup
+      <CoreToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

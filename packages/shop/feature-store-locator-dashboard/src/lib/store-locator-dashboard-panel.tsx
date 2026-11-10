@@ -1,6 +1,5 @@
-import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
-import { FormsStat } from '@org/shop-ui-forms-stat';
-import { FeedbackCard } from '@org/shop-ui-feedback-card';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { StoreLocatorDashboardItem } from './store-locator-dashboard.model';
 import { STORE_LOCATOR_DASHBOARD_FEATURE } from './store-locator-dashboard.routes';
 import { describeStoreLocatorDashboardItem } from './store-locator-dashboard.utils';
@@ -41,7 +40,7 @@ export function StoreLocatorDashboardPanel({
       <p className="feature-panel-description">
         {describeStoreLocatorDashboardItem(selected)}
       </p>
-      <FeedbackPanelGroup
+      <ChartsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function StoreLocatorDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsStat
-          label="Forms Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FeedbackCard
-          label="Feedback Card"
+        <CoreToolbar
+          label="Core Toolbar"
           value={selected.product.rating}
           size="sm"
         />

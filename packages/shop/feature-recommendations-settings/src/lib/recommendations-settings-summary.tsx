@@ -1,4 +1,4 @@
-import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
 import { buildRecommendationsSettingsItems } from './recommendations-settings.model';
 import { RECOMMENDATIONS_SETTINGS_FEATURE } from './recommendations-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function RecommendationsSettingsSummary({
       <h3 className="feature-summary-title">
         {RECOMMENDATIONS_SETTINGS_FEATURE.title}
       </h3>
-      <TypographyBannerGroup
+      <FormsStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

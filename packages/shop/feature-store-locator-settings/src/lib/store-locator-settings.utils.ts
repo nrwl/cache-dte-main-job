@@ -1,5 +1,4 @@
-import { formatDate } from '@org/shop-util-format-date';
-import { validateSlug } from '@org/shop-util-validate-slug';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyStoreLocatorSettingsTotals,
   type StoreLocatorSettingsItem,
@@ -77,13 +76,13 @@ export function sortStoreLocatorSettings(
 export function describeStoreLocatorSettingsItem(
   item: StoreLocatorSettingsItem,
 ): string {
-  const amount = formatDate(item.amount);
-  const name = validateSlug(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatStoreLocatorSettingsAmount(amount: number): string {
-  return formatDate(amount);
+  return asyncName(amount);
 }
 
 export function storeLocatorSettingsStatusTone(

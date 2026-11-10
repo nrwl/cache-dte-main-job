@@ -1,4 +1,4 @@
-import { OverlayToolbar } from '@org/shop-ui-overlay-toolbar';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { ADDRESSES_DETAILS_FEATURE } from './addresses-details.routes';
 
 export interface AddressesDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function AddressesDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <OverlayToolbar label="Items" value={count} tone="info" />
-        <OverlayToolbar label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

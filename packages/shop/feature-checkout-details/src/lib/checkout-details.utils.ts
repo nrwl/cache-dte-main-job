@@ -1,4 +1,6 @@
-import { validateDate } from '@org/shop-util-validate-date';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { storagePhone } from '@org/shop-util-storage-phone';
 import {
   emptyCheckoutDetailsTotals,
   type CheckoutDetailsItem,
@@ -71,13 +73,13 @@ export function sortCheckoutDetails(
 }
 
 export function describeCheckoutDetailsItem(item: CheckoutDetailsItem): string {
-  const amount = validateDate(item.amount);
-  const name = validateDate(item.name);
+  const amount = i18nNumber(item.amount);
+  const name = storagePhone(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCheckoutDetailsAmount(amount: number): string {
-  return validateDate(amount);
+  return i18nNumber(amount);
 }
 
 export function checkoutDetailsStatusTone(

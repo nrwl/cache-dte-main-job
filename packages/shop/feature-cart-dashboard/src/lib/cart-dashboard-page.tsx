@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { CartOverviewSummary } from '@org/shop-feature-cart-overview';
 import { CartDashboardFilters } from './cart-dashboard-filters';
 import { CartDashboardHeader } from './cart-dashboard-header';
 import { CartDashboardPanel } from './cart-dashboard-panel';
@@ -53,6 +54,7 @@ export function CartDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <CartOverviewSummary compact />
         </div>
       </div>
     </section>

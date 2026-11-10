@@ -1,6 +1,6 @@
-import { CommerceListGroup } from '@org/shop-ui-commerce-list';
-import { NavigationBadge } from '@org/shop-ui-navigation-badge';
-import { OverlayBadge } from '@org/shop-ui-overlay-badge';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { ProfileDashboardItem } from './profile-dashboard.model';
 import { PROFILE_DASHBOARD_FEATURE } from './profile-dashboard.routes';
 import { describeProfileDashboardItem } from './profile-dashboard.utils';
@@ -41,7 +41,7 @@ export function ProfileDashboardPanel({
       <p className="feature-panel-description">
         {describeProfileDashboardItem(selected)}
       </p>
-      <CommerceListGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function ProfileDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <NavigationBadge
-          label="Navigation Badge"
+        <CommerceToolbar
+          label="Commerce Toolbar"
           value={selected.product.rating}
           size="sm"
         />
-        <OverlayBadge
-          label="Overlay Badge"
+        <CommerceBadge
+          label="Commerce Badge"
           value={selected.product.rating}
           size="sm"
         />

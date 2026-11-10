@@ -1,4 +1,4 @@
-import { LayoutPanel } from '@org/shop-ui-layout-panel';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { SubscriptionsDetailsItem } from './subscriptions-details.model';
 import { SUBSCRIPTIONS_DETAILS_FEATURE } from './subscriptions-details.routes';
 import {
@@ -58,7 +58,7 @@ export function SubscriptionsDetailsTable({
             <td>{formatSubscriptionsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutPanel
+              <CommerceBadge
                 label={item.status}
                 tone={subscriptionsDetailsStatusTone(item.status)}
                 size="sm"

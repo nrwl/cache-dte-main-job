@@ -1,5 +1,6 @@
 import type { Product } from '@org/models';
-import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { mathName } from '@org/shop-util-math-name';
 import { clampLength, hashString, normalizeInput } from './async-name-helpers';
 
 export interface AsyncNameOptions {
@@ -27,7 +28,7 @@ export const ASYNC_NAME_DEFAULTS: Required<AsyncNameOptions> = {
 export const ASYNC_NAME_KIND = 'async-name' as const;
 
 /**
- * Formats a raw value using the "upper" strategy.
+ * Formats a raw value using the "prefixed" strategy.
  */
 export function asyncName(
   value: string | number,
@@ -41,11 +42,11 @@ export function asyncName(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [collectionCurrency].reduce<string>(
+  const staged = [formatCurrency, mathName].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );
-  const transformed = staged.toUpperCase();
+  const transformed = '#' + staged;
   return clampLength(transformed, opts.maxLength);
 }
 

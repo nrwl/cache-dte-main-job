@@ -1,4 +1,4 @@
-import { InputsChip } from '@org/shop-ui-inputs-chip';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { ShippingOverviewItem } from './shipping-overview.model';
 import { SHIPPING_OVERVIEW_FEATURE } from './shipping-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function ShippingOverviewTable({
             <td>{formatShippingOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsChip
+              <CoreToolbar
                 label={item.status}
                 tone={shippingOverviewStatusTone(item.status)}
                 size="sm"

@@ -1,5 +1,5 @@
-import { i18nNumber } from '@org/shop-util-i18n-number';
-import { validateNumber } from '@org/shop-util-validate-number';
+import { asyncName } from '@org/shop-util-async-name';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyRecommendationsOverviewTotals,
   type RecommendationsOverviewItem,
@@ -77,13 +77,13 @@ export function sortRecommendationsOverview(
 export function describeRecommendationsOverviewItem(
   item: RecommendationsOverviewItem,
 ): string {
-  const amount = i18nNumber(item.amount);
-  const name = validateNumber(item.name);
+  const amount = asyncName(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatRecommendationsOverviewAmount(amount: number): string {
-  return i18nNumber(amount);
+  return asyncName(amount);
 }
 
 export function recommendationsOverviewStatusTone(

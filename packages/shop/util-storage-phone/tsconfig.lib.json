@@ -25,7 +25,7 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-storage-text/tsconfig.lib.json"
+      "path": "../util-async-name/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

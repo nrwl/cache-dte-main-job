@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { SearchDetailsSummary } from '@org/shop-feature-search-details';
 import { OrdersDashboardFilters } from './orders-dashboard-filters';
 import { OrdersDashboardHeader } from './orders-dashboard-header';
 import { OrdersDashboardPanel } from './orders-dashboard-panel';
@@ -53,6 +54,7 @@ export function OrdersDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <SearchDetailsSummary compact />
         </div>
       </div>
     </section>

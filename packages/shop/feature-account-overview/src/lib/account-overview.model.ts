@@ -21,7 +21,7 @@ export interface AccountOverviewTotals {
   archived: number;
 }
 
-export const ACCOUNT_OVERVIEW_ITEM_COUNT = 12;
+export const ACCOUNT_OVERVIEW_ITEM_COUNT = 6;
 
 export const ACCOUNT_OVERVIEW_STATUSES: ReadonlyArray<AccountOverviewStatus> = [
   'active',

@@ -1,5 +1,6 @@
-import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
-import { CommerceTile } from '@org/shop-ui-commerce-tile';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { OrdersDetailsItem } from './orders-details.model';
 import { ORDERS_DETAILS_FEATURE } from './orders-details.routes';
 import { describeOrdersDetailsItem } from './orders-details.utils';
@@ -40,7 +41,7 @@ export function OrdersDetailsPanel({
       <p className="feature-panel-description">
         {describeOrdersDetailsItem(selected)}
       </p>
-      <FeedbackPanelGroup
+      <InputsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function OrdersDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceTile
-          label="Commerce Tile"
+        <LayoutStat
+          label="Layout Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <OverlayStat
+          label="Overlay Stat"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,6 +1,4 @@
-import { InputsListGroup } from '@org/shop-ui-inputs-list';
-import { ChartsBadge } from '@org/shop-ui-charts-badge';
-import { NavigationStat } from '@org/shop-ui-navigation-stat';
+import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
 import type { LoyaltyDashboardItem } from './loyalty-dashboard.model';
 import { LOYALTY_DASHBOARD_FEATURE } from './loyalty-dashboard.routes';
 import { describeLoyaltyDashboardItem } from './loyalty-dashboard.utils';
@@ -41,7 +39,7 @@ export function LoyaltyDashboardPanel({
       <p className="feature-panel-description">
         {describeLoyaltyDashboardItem(selected)}
       </p>
-      <InputsListGroup
+      <CommerceBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function LoyaltyDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <ChartsBadge
-          label="Charts Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <NavigationStat
-          label="Navigation Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import { SEARCH_SETTINGS_FEATURE } from './search-settings.routes';
 
 export interface SearchSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function SearchSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyToolbar label="Items" value={count} tone="info" />
-        <TypographyToolbar label="Total" value={total} tone="success" />
+        <FormsStat label="Items" value={count} tone="info" />
+        <FormsStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

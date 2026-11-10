@@ -1,4 +1,5 @@
-import { validateName } from '@org/shop-util-validate-name';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyPromotionsDetailsTotals,
   type PromotionsDetailsItem,
@@ -73,13 +74,13 @@ export function sortPromotionsDetails(
 export function describePromotionsDetailsItem(
   item: PromotionsDetailsItem,
 ): string {
-  const amount = validateName(item.amount);
-  const name = validateName(item.name);
+  const amount = formatPhone(item.amount);
+  const name = i18nNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPromotionsDetailsAmount(amount: number): string {
-  return validateName(amount);
+  return formatPhone(amount);
 }
 
 export function promotionsDetailsStatusTone(

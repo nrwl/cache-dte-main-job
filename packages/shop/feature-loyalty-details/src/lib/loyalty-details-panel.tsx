@@ -1,4 +1,4 @@
-import { FeedbackTileGroup } from '@org/shop-ui-feedback-tile';
+import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
 import type { LoyaltyDetailsItem } from './loyalty-details.model';
 import { LOYALTY_DETAILS_FEATURE } from './loyalty-details.routes';
 import { describeLoyaltyDetailsItem } from './loyalty-details.utils';
@@ -39,7 +39,7 @@ export function LoyaltyDetailsPanel({
       <p className="feature-panel-description">
         {describeLoyaltyDetailsItem(selected)}
       </p>
-      <FeedbackTileGroup
+      <TypographyBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

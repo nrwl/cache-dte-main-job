@@ -19,7 +19,7 @@ export const BUNDLES_SETTINGS_FEATURE: FeatureMeta = {
   testId: BUNDLES_SETTINGS_TEST_ID,
   domain: 'bundles',
   kind: 'settings',
-  itemCount: 9,
+  itemCount: 10,
 };
 
 export function bundlesSettingsItemPath(itemId: string): string {

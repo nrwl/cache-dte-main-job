@@ -1,4 +1,4 @@
-import { TypographyHeader } from '@org/shop-ui-typography-header';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import { PROMOTIONS_DETAILS_FEATURE } from './promotions-details.routes';
 
 export interface PromotionsDetailsHeaderProps {
@@ -27,8 +27,8 @@ export function PromotionsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyHeader label="Items" value={count} tone="info" />
-        <TypographyHeader label="Total" value={total} tone="success" />
+        <LayoutStat label="Items" value={count} tone="info" />
+        <LayoutStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { FeedbackCard } from '@org/shop-ui-feedback-card';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import { STORE_LOCATOR_DETAILS_FEATURE } from './store-locator-details.routes';
 
 export interface StoreLocatorDetailsHeaderProps {
@@ -27,8 +27,8 @@ export function StoreLocatorDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackCard label="Items" value={count} tone="info" />
-        <FeedbackCard label="Total" value={total} tone="success" />
+        <InputsPanel label="Items" value={count} tone="info" />
+        <InputsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

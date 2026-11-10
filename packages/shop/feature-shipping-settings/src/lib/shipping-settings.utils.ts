@@ -1,4 +1,5 @@
-import { i18nName } from '@org/shop-util-i18n-name';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyShippingSettingsTotals,
   type ShippingSettingsItem,
@@ -73,13 +74,13 @@ export function sortShippingSettings(
 export function describeShippingSettingsItem(
   item: ShippingSettingsItem,
 ): string {
-  const amount = i18nName(item.amount);
-  const name = i18nName(item.name);
+  const amount = formatPhone(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatShippingSettingsAmount(amount: number): string {
-  return i18nName(amount);
+  return formatPhone(amount);
 }
 
 export function shippingSettingsStatusTone(

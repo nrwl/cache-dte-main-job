@@ -1,6 +1,6 @@
-import { MarketingTileGroup } from '@org/shop-ui-marketing-tile';
-import { FormsList } from '@org/shop-ui-forms-list';
-import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { ProfileListItem } from './profile-list.model';
 import { PROFILE_LIST_FEATURE } from './profile-list.routes';
 import { describeProfileListItem } from './profile-list.utils';
@@ -38,7 +38,7 @@ export function ProfileListPanel({ selected, onClear }: ProfileListPanelProps) {
       <p className="feature-panel-description">
         {describeProfileListItem(selected)}
       </p>
-      <MarketingTileGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,13 +49,13 @@ export function ProfileListPanel({ selected, onClear }: ProfileListPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsList
-          label="Forms List"
+        <LayoutStat
+          label="Layout Stat"
           value={selected.product.rating}
           size="sm"
         />
-        <FeedbackBadge
-          label="Feedback Badge"
+        <CoreBadge
+          label="Core Badge"
           value={selected.product.rating}
           size="sm"
         />

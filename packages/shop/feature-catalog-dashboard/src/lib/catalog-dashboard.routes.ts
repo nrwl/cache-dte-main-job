@@ -19,7 +19,7 @@ export const CATALOG_DASHBOARD_FEATURE: FeatureMeta = {
   testId: CATALOG_DASHBOARD_TEST_ID,
   domain: 'catalog',
   kind: 'dashboard',
-  itemCount: 9,
+  itemCount: 11,
 };
 
 export function catalogDashboardItemPath(itemId: string): string {

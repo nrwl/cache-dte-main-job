@@ -1,5 +1,5 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { formatText } from '@org/shop-util-format-text';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyReviewsDashboardTotals,
   type ReviewsDashboardItem,
@@ -74,13 +74,13 @@ export function sortReviewsDashboard(
 export function describeReviewsDashboardItem(
   item: ReviewsDashboardItem,
 ): string {
-  const amount = validatePhone(item.amount);
-  const name = formatText(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReviewsDashboardAmount(amount: number): string {
-  return validatePhone(amount);
+  return formatCurrency(amount);
 }
 
 export function reviewsDashboardStatusTone(

@@ -1,4 +1,4 @@
-import { TypographyBanner } from '@org/shop-ui-typography-banner';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { CompareListItem } from './compare-list.model';
 import { COMPARE_LIST_FEATURE } from './compare-list.routes';
 import {
@@ -58,7 +58,7 @@ export function CompareListTable({
             <td>{formatCompareListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyBanner
+              <InputsPanel
                 label={item.status}
                 tone={compareListStatusTone(item.status)}
                 size="sm"

@@ -21,7 +21,7 @@ export interface TrackingSettingsTotals {
   archived: number;
 }
 
-export const TRACKING_SETTINGS_ITEM_COUNT = 8;
+export const TRACKING_SETTINGS_ITEM_COUNT = 5;
 
 export const TRACKING_SETTINGS_STATUSES: ReadonlyArray<TrackingSettingsStatus> =
   ['active', 'pending', 'archived'];

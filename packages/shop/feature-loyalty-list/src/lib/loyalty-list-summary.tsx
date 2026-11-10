@@ -1,4 +1,4 @@
-import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import { buildLoyaltyListItems } from './loyalty-list.model';
 import { LOYALTY_LIST_FEATURE } from './loyalty-list.routes';
 import {
@@ -29,7 +29,7 @@ export function LoyaltyListSummary({
       data-testid={`${LOYALTY_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{LOYALTY_LIST_FEATURE.title}</h3>
-      <TypographyToolbarGroup
+      <InputsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

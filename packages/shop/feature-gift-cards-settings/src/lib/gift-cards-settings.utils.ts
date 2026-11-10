@@ -1,6 +1,5 @@
-import { storageCurrency } from '@org/shop-util-storage-currency';
-import { asyncName } from '@org/shop-util-async-name';
-import { collectionDate } from '@org/shop-util-collection-date';
+import { collectionText } from '@org/shop-util-collection-text';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyGiftCardsSettingsTotals,
   type GiftCardsSettingsItem,
@@ -75,13 +74,13 @@ export function sortGiftCardsSettings(
 export function describeGiftCardsSettingsItem(
   item: GiftCardsSettingsItem,
 ): string {
-  const amount = storageCurrency(item.amount);
-  const name = collectionDate(asyncName(item.name));
+  const amount = collectionText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatGiftCardsSettingsAmount(amount: number): string {
-  return storageCurrency(amount);
+  return collectionText(amount);
 }
 
 export function giftCardsSettingsStatusTone(

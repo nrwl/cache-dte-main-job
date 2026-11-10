@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { ShippingListSummary } from '@org/shop-feature-shipping-list';
 import { PromotionsSettingsFilters } from './promotions-settings-filters';
 import { PromotionsSettingsHeader } from './promotions-settings-header';
 import { PromotionsSettingsPanel } from './promotions-settings-panel';
@@ -53,6 +54,7 @@ export function PromotionsSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <ShippingListSummary compact />
         </div>
       </div>
     </section>

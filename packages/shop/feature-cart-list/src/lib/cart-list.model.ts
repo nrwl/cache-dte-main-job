@@ -21,7 +21,7 @@ export interface CartListTotals {
   archived: number;
 }
 
-export const CART_LIST_ITEM_COUNT = 10;
+export const CART_LIST_ITEM_COUNT = 5;
 
 export const CART_LIST_STATUSES: ReadonlyArray<CartListStatus> = [
   'active',

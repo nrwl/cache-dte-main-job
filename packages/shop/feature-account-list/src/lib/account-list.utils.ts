@@ -1,4 +1,4 @@
-import { asyncNumber } from '@org/shop-util-async-number';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyAccountListTotals,
   type AccountListItem,
@@ -70,13 +70,13 @@ export function sortAccountList(
 }
 
 export function describeAccountListItem(item: AccountListItem): string {
-  const amount = asyncNumber(item.amount);
-  const name = asyncNumber(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAccountListAmount(amount: number): string {
-  return asyncNumber(amount);
+  return formatCurrency(amount);
 }
 
 export function accountListStatusTone(

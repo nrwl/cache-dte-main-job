@@ -1,4 +1,4 @@
-import { MediaBanner } from '@org/shop-ui-media-banner';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { OrdersDetailsItem } from './orders-details.model';
 import { ORDERS_DETAILS_FEATURE } from './orders-details.routes';
 import {
@@ -58,7 +58,7 @@ export function OrdersDetailsTable({
             <td>{formatOrdersDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaBanner
+              <MarketingBadge
                 label={item.status}
                 tone={ordersDetailsStatusTone(item.status)}
                 size="sm"

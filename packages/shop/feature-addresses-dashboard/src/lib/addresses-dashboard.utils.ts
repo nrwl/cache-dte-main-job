@@ -1,5 +1,6 @@
-import { storageSlug } from '@org/shop-util-storage-slug';
-import { mathSlug } from '@org/shop-util-math-slug';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { collectionText } from '@org/shop-util-collection-text';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyAddressesDashboardTotals,
   type AddressesDashboardItem,
@@ -74,13 +75,13 @@ export function sortAddressesDashboard(
 export function describeAddressesDashboardItem(
   item: AddressesDashboardItem,
 ): string {
-  const amount = storageSlug(item.amount);
-  const name = mathSlug(item.name);
+  const amount = formatPhone(item.amount);
+  const name = formatCurrency(collectionText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesDashboardAmount(amount: number): string {
-  return storageSlug(amount);
+  return formatPhone(amount);
 }
 
 export function addressesDashboardStatusTone(

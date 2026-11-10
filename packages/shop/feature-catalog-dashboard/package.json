@@ -21,11 +21,11 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-overlay-chip": "*",
-    "@org/shop-ui-charts-chip": "*",
-    "@org/shop-ui-overlay-list": "*",
-    "@org/shop-ui-forms-card": "*",
-    "@org/shop-util-async-phone": "*",
-    "@org/shop-util-async-address": "*"
+    "@org/shop-ui-media-toolbar": "*",
+    "@org/shop-ui-forms-stat": "*",
+    "@org/shop-ui-data-panel": "*",
+    "@org/shop-util-collection-text": "*",
+    "@org/shop-util-math-currency": "*",
+    "@org/shop-util-storage-phone": "*"
   }
 }

@@ -1,4 +1,4 @@
-import { MarketingCard } from '@org/shop-ui-marketing-card';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import { CHECKOUT_DASHBOARD_FEATURE } from './checkout-dashboard.routes';
 
 export interface CheckoutDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function CheckoutDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingCard label="Items" value={count} tone="info" />
-        <MarketingCard label="Total" value={total} tone="success" />
+        <ChartsBanner label="Items" value={count} tone="info" />
+        <ChartsBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

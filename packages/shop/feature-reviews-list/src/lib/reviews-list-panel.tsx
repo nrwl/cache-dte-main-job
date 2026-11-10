@@ -1,4 +1,4 @@
-import { MarketingListGroup } from '@org/shop-ui-marketing-list';
+import { FormsStatGroup } from '@org/shop-ui-forms-stat';
 import type { ReviewsListItem } from './reviews-list.model';
 import { REVIEWS_LIST_FEATURE } from './reviews-list.routes';
 import { describeReviewsListItem } from './reviews-list.utils';
@@ -36,7 +36,7 @@ export function ReviewsListPanel({ selected, onClear }: ReviewsListPanelProps) {
       <p className="feature-panel-description">
         {describeReviewsListItem(selected)}
       </p>
-      <MarketingListGroup
+      <FormsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

@@ -1,4 +1,4 @@
-import { MediaChip } from '@org/shop-ui-media-chip';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { PaymentsSettingsItem } from './payments-settings.model';
 import { PAYMENTS_SETTINGS_FEATURE } from './payments-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function PaymentsSettingsTable({
             <td>{formatPaymentsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaChip
+              <OverlayStat
                 label={item.status}
                 tone={paymentsSettingsStatusTone(item.status)}
                 size="sm"

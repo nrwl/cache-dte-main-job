@@ -1,6 +1,5 @@
-import { mathSlug } from '@org/shop-util-math-slug';
-import { i18nAddress } from '@org/shop-util-i18n-address';
-import { storageDate } from '@org/shop-util-storage-date';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { asyncName } from '@org/shop-util-async-name';
 import type { ChartsBannerProps } from './charts-banner.types';
 import { resolveChartsBannerStyle } from './charts-banner-variants';
 
@@ -13,9 +12,9 @@ export function ChartsBanner({
   onSelect,
   children,
 }: ChartsBannerProps) {
-  const formatted = value === undefined ? '' : mathSlug(value);
+  const formatted = value === undefined ? '' : formatPhone(value);
   const style = resolveChartsBannerStyle(tone, size);
-  const ariaLabel = storageDate(i18nAddress(label));
+  const ariaLabel = asyncName(label);
 
   const handleClick = () => {
     if (onSelect) {

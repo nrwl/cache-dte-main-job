@@ -1,4 +1,6 @@
-import { DataBannerGroup } from '@org/shop-ui-data-banner';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { TrackingListItem } from './tracking-list.model';
 import { TRACKING_LIST_FEATURE } from './tracking-list.routes';
 import { describeTrackingListItem } from './tracking-list.utils';
@@ -39,7 +41,7 @@ export function TrackingListPanel({
       <p className="feature-panel-description">
         {describeTrackingListItem(selected)}
       </p>
-      <DataBannerGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function TrackingListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CommerceToolbar
+          label="Commerce Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

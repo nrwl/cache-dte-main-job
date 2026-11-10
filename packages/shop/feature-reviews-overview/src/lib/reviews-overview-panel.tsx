@@ -1,4 +1,4 @@
-import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
 import type { ReviewsOverviewItem } from './reviews-overview.model';
 import { REVIEWS_OVERVIEW_FEATURE } from './reviews-overview.routes';
 import { describeReviewsOverviewItem } from './reviews-overview.utils';
@@ -39,7 +39,7 @@ export function ReviewsOverviewPanel({
       <p className="feature-panel-description">
         {describeReviewsOverviewItem(selected)}
       </p>
-      <TypographyPanelGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

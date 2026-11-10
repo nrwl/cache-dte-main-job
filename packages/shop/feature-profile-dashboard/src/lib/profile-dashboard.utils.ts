@@ -1,4 +1,6 @@
-import { formatNumber } from '@org/shop-util-format-number';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyProfileDashboardTotals,
   type ProfileDashboardItem,
@@ -73,13 +75,13 @@ export function sortProfileDashboard(
 export function describeProfileDashboardItem(
   item: ProfileDashboardItem,
 ): string {
-  const amount = formatNumber(item.amount);
-  const name = formatNumber(item.name);
+  const amount = i18nNumber(item.amount);
+  const name = mathCurrency(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileDashboardAmount(amount: number): string {
-  return formatNumber(amount);
+  return i18nNumber(amount);
 }
 
 export function profileDashboardStatusTone(

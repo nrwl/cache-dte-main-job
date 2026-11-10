@@ -1,4 +1,4 @@
-import { MarketingHeaderGroup } from '@org/shop-ui-marketing-header';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import type { ReviewsDetailsItem } from './reviews-details.model';
 import { REVIEWS_DETAILS_FEATURE } from './reviews-details.routes';
 import { describeReviewsDetailsItem } from './reviews-details.utils';
@@ -39,7 +39,7 @@ export function ReviewsDetailsPanel({
       <p className="feature-panel-description">
         {describeReviewsDetailsItem(selected)}
       </p>
-      <MarketingHeaderGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

@@ -1,6 +1,4 @@
-import { FeedbackToolbarGroup } from '@org/shop-ui-feedback-toolbar';
-import { MediaStat } from '@org/shop-ui-media-stat';
-import { OverlayChip } from '@org/shop-ui-overlay-chip';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import type { CartDetailsItem } from './cart-details.model';
 import { CART_DETAILS_FEATURE } from './cart-details.routes';
 import { describeCartDetailsItem } from './cart-details.utils';
@@ -38,7 +36,7 @@ export function CartDetailsPanel({ selected, onClear }: CartDetailsPanelProps) {
       <p className="feature-panel-description">
         {describeCartDetailsItem(selected)}
       </p>
-      <FeedbackToolbarGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -48,18 +46,7 @@ export function CartDetailsPanel({ selected, onClear }: CartDetailsPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MediaStat
-          label="Media Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <OverlayChip
-          label="Overlay Chip"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

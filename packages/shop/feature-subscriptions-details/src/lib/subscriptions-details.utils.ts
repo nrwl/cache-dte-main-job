@@ -1,5 +1,6 @@
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { asyncNumber } from '@org/shop-util-async-number';
 import { formatPhone } from '@org/shop-util-format-phone';
-import { i18nDate } from '@org/shop-util-i18n-date';
 import {
   emptySubscriptionsDetailsTotals,
   type SubscriptionsDetailsItem,
@@ -77,13 +78,13 @@ export function sortSubscriptionsDetails(
 export function describeSubscriptionsDetailsItem(
   item: SubscriptionsDetailsItem,
 ): string {
-  const amount = formatPhone(item.amount);
-  const name = i18nDate(item.name);
+  const amount = storagePhone(item.amount);
+  const name = formatPhone(asyncNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSubscriptionsDetailsAmount(amount: number): string {
-  return formatPhone(amount);
+  return storagePhone(amount);
 }
 
 export function subscriptionsDetailsStatusTone(

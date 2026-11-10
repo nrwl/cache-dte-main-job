@@ -1,4 +1,4 @@
-import { CommercePanel } from '@org/shop-ui-commerce-panel';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { AccountOverviewItem } from './account-overview.model';
 import { ACCOUNT_OVERVIEW_FEATURE } from './account-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function AccountOverviewTable({
             <td>{formatAccountOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommercePanel
+              <MarketingBadge
                 label={item.status}
                 tone={accountOverviewStatusTone(item.status)}
                 size="sm"

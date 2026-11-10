@@ -1,4 +1,4 @@
-import { OverlayChipGroup } from '@org/shop-ui-overlay-chip';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildCatalogDashboardItems } from './catalog-dashboard.model';
 import { CATALOG_DASHBOARD_FEATURE } from './catalog-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function CatalogDashboardSummary({
       <h3 className="feature-summary-title">
         {CATALOG_DASHBOARD_FEATURE.title}
       </h3>
-      <OverlayChipGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

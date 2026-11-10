@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { LoyaltyOverviewSummary } from '@org/shop-feature-loyalty-overview';
 import { SupportOverviewFilters } from './support-overview-filters';
 import { SupportOverviewHeader } from './support-overview-header';
 import { SupportOverviewPanel } from './support-overview-panel';
@@ -53,6 +54,7 @@ export function SupportOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <LoyaltyOverviewSummary compact />
         </div>
       </div>
     </section>

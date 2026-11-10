@@ -19,7 +19,7 @@ export const SEARCH_DETAILS_FEATURE: FeatureMeta = {
   testId: SEARCH_DETAILS_TEST_ID,
   domain: 'search',
   kind: 'details',
-  itemCount: 7,
+  itemCount: 10,
 };
 
 export function searchDetailsItemPath(itemId: string): string {

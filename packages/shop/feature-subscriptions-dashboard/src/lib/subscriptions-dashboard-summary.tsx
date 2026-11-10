@@ -1,4 +1,4 @@
-import { DataStatGroup } from '@org/shop-ui-data-stat';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
 import { buildSubscriptionsDashboardItems } from './subscriptions-dashboard.model';
 import { SUBSCRIPTIONS_DASHBOARD_FEATURE } from './subscriptions-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function SubscriptionsDashboardSummary({
       <h3 className="feature-summary-title">
         {SUBSCRIPTIONS_DASHBOARD_FEATURE.title}
       </h3>
-      <DataStatGroup
+      <FeedbackBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

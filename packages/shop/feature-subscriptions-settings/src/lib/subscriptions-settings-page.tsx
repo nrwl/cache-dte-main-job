@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { SubscriptionsHistorySummary } from '@org/shop-feature-subscriptions-history';
 import { SubscriptionsSettingsFilters } from './subscriptions-settings-filters';
 import { SubscriptionsSettingsHeader } from './subscriptions-settings-header';
 import { SubscriptionsSettingsPanel } from './subscriptions-settings-panel';
@@ -54,7 +53,6 @@ export function SubscriptionsSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <SubscriptionsHistorySummary compact />
         </div>
       </div>
     </section>

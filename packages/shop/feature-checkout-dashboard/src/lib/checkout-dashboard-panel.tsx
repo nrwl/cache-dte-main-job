@@ -1,5 +1,5 @@
-import { ChartsTileGroup } from '@org/shop-ui-charts-tile';
-import { MarketingStat } from '@org/shop-ui-marketing-stat';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { CheckoutDashboardItem } from './checkout-dashboard.model';
 import { CHECKOUT_DASHBOARD_FEATURE } from './checkout-dashboard.routes';
 import { describeCheckoutDashboardItem } from './checkout-dashboard.utils';
@@ -40,7 +40,7 @@ export function CheckoutDashboardPanel({
       <p className="feature-panel-description">
         {describeCheckoutDashboardItem(selected)}
       </p>
-      <ChartsTileGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function CheckoutDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <MarketingStat
-          label="Marketing Stat"
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />

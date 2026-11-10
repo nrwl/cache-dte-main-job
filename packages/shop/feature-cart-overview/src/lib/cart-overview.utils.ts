@@ -1,6 +1,5 @@
-import { mathNumber } from '@org/shop-util-math-number';
-import { validatePercent } from '@org/shop-util-validate-percent';
-import { validateName } from '@org/shop-util-validate-name';
+import { mathName } from '@org/shop-util-math-name';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyCartOverviewTotals,
   type CartOverviewItem,
@@ -72,13 +71,13 @@ export function sortCartOverview(
 }
 
 export function describeCartOverviewItem(item: CartOverviewItem): string {
-  const amount = mathNumber(item.amount);
-  const name = validateName(validatePercent(item.name));
+  const amount = mathName(item.amount);
+  const name = mathCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCartOverviewAmount(amount: number): string {
-  return mathNumber(amount);
+  return mathName(amount);
 }
 
 export function cartOverviewStatusTone(

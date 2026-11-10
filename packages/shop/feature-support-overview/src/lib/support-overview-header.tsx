@@ -1,4 +1,4 @@
-import { LayoutTile } from '@org/shop-ui-layout-tile';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import { SUPPORT_OVERVIEW_FEATURE } from './support-overview.routes';
 
 export interface SupportOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function SupportOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutTile label="Items" value={count} tone="info" />
-        <LayoutTile label="Total" value={total} tone="success" />
+        <LayoutStat label="Items" value={count} tone="info" />
+        <LayoutStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

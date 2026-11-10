@@ -1,6 +1,5 @@
-import { MediaBadgeGroup } from '@org/shop-ui-media-badge';
-import { MarketingStat } from '@org/shop-ui-marketing-stat';
-import { MarketingList } from '@org/shop-ui-marketing-list';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { CartListItem } from './cart-list.model';
 import { CART_LIST_FEATURE } from './cart-list.routes';
 import { describeCartListItem } from './cart-list.utils';
@@ -38,7 +37,7 @@ export function CartListPanel({ selected, onClear }: CartListPanelProps) {
       <p className="feature-panel-description">
         {describeCartListItem(selected)}
       </p>
-      <MediaBadgeGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,13 +48,8 @@ export function CartListPanel({ selected, onClear }: CartListPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <MarketingStat
-          label="Marketing Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <MarketingList
-          label="Marketing List"
+        <CoreBadge
+          label="Core Badge"
           value={selected.product.rating}
           size="sm"
         />

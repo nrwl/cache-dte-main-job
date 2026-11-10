@@ -1,6 +1,6 @@
-import { MarketingBannerGroup } from '@org/shop-ui-marketing-banner';
-import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
-import { CoreCard } from '@org/shop-ui-core-card';
+import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { InventoryListItem } from './inventory-list.model';
 import { INVENTORY_LIST_FEATURE } from './inventory-list.routes';
 import { describeInventoryListItem } from './inventory-list.utils';
@@ -41,7 +41,7 @@ export function InventoryListPanel({
       <p className="feature-panel-description">
         {describeInventoryListItem(selected)}
       </p>
-      <MarketingBannerGroup
+      <FeedbackBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,12 +52,16 @@ export function InventoryListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackPanel
-          label="Feedback Panel"
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />
-        <CoreCard label="Core Card" value={selected.product.rating} size="sm" />
+        <OverlayStat
+          label="Overlay Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
       </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (

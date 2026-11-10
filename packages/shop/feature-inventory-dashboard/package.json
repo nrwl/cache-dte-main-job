@@ -21,11 +21,13 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-media-tile": "*",
-    "@org/shop-ui-inputs-stat": "*",
-    "@org/shop-ui-overlay-header": "*",
-    "@org/shop-ui-media-list": "*",
-    "@org/shop-ui-commerce-badge": "*",
-    "@org/shop-util-validate-percent": "*"
+    "@org/shop-ui-inputs-panel": "*",
+    "@org/shop-ui-marketing-badge": "*",
+    "@org/shop-ui-media-toolbar": "*",
+    "@org/shop-ui-charts-banner": "*",
+    "@org/shop-ui-typography-banner": "*",
+    "@org/shop-util-async-number": "*",
+    "@org/shop-util-format-phone": "*",
+    "@org/shop-util-collection-text": "*"
   }
 }

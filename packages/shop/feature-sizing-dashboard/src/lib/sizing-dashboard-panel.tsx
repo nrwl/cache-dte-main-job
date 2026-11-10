@@ -1,6 +1,6 @@
-import { OverlayBadgeGroup } from '@org/shop-ui-overlay-badge';
-import { LayoutList } from '@org/shop-ui-layout-list';
-import { MarketingChip } from '@org/shop-ui-marketing-chip';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { SizingDashboardItem } from './sizing-dashboard.model';
 import { SIZING_DASHBOARD_FEATURE } from './sizing-dashboard.routes';
 import { describeSizingDashboardItem } from './sizing-dashboard.utils';
@@ -41,7 +41,7 @@ export function SizingDashboardPanel({
       <p className="feature-panel-description">
         {describeSizingDashboardItem(selected)}
       </p>
-      <OverlayBadgeGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function SizingDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutList
-          label="Layout List"
+        <FeedbackBanner
+          label="Feedback Banner"
           value={selected.product.rating}
           size="sm"
         />
-        <MarketingChip
-          label="Marketing Chip"
+        <MediaToolbar
+          label="Media Toolbar"
           value={selected.product.rating}
           size="sm"
         />

@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-validate-name": "*",
-    "@org/shop-util-format-currency": "*"
+    "@org/shop-util-format-phone": "*"
   }
 }

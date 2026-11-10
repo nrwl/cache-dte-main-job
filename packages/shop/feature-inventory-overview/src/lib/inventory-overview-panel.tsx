@@ -1,6 +1,5 @@
-import { DataStatGroup } from '@org/shop-ui-data-stat';
-import { FormsTile } from '@org/shop-ui-forms-tile';
-import { NavigationList } from '@org/shop-ui-navigation-list';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { InventoryOverviewItem } from './inventory-overview.model';
 import { INVENTORY_OVERVIEW_FEATURE } from './inventory-overview.routes';
 import { describeInventoryOverviewItem } from './inventory-overview.utils';
@@ -41,7 +40,7 @@ export function InventoryOverviewPanel({
       <p className="feature-panel-description">
         {describeInventoryOverviewItem(selected)}
       </p>
-      <DataStatGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function InventoryOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsTile
-          label="Forms Tile"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <NavigationList
-          label="Navigation List"
+        <NavigationPanel
+          label="Navigation Panel"
           value={selected.product.rating}
           size="sm"
         />

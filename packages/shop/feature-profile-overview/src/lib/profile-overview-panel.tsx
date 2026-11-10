@@ -1,5 +1,5 @@
-import { NavigationHeaderGroup } from '@org/shop-ui-navigation-header';
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { ProfileOverviewItem } from './profile-overview.model';
 import { PROFILE_OVERVIEW_FEATURE } from './profile-overview.routes';
 import { describeProfileOverviewItem } from './profile-overview.utils';
@@ -40,7 +40,7 @@ export function ProfileOverviewPanel({
       <p className="feature-panel-description">
         {describeProfileOverviewItem(selected)}
       </p>
-      <NavigationHeaderGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function ProfileOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutBanner
-          label="Layout Banner"
+        <FormsStat
+          label="Forms Stat"
           value={selected.product.rating}
           size="sm"
         />

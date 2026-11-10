@@ -1,4 +1,4 @@
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import { REVIEWS_OVERVIEW_FEATURE } from './reviews-overview.routes';
 
 export interface ReviewsOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function ReviewsOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceBadge label="Items" value={count} tone="info" />
-        <CommerceBadge label="Total" value={total} tone="success" />
+        <LayoutStat label="Items" value={count} tone="info" />
+        <LayoutStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,5 +1,4 @@
-import { validateText } from '@org/shop-util-validate-text';
-import { i18nSlug } from '@org/shop-util-i18n-slug';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptySupportSettingsTotals,
   type SupportSettingsItem,
@@ -72,13 +71,13 @@ export function sortSupportSettings(
 }
 
 export function describeSupportSettingsItem(item: SupportSettingsItem): string {
-  const amount = validateText(item.amount);
-  const name = i18nSlug(item.name);
+  const amount = i18nNumber(item.amount);
+  const name = i18nNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSupportSettingsAmount(amount: number): string {
-  return validateText(amount);
+  return i18nNumber(amount);
 }
 
 export function supportSettingsStatusTone(

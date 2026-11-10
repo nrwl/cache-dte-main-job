@@ -1,4 +1,4 @@
-import { CoreStat } from '@org/shop-ui-core-stat';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { SizingDashboardItem } from './sizing-dashboard.model';
 import { SIZING_DASHBOARD_FEATURE } from './sizing-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function SizingDashboardTable({
             <td>{formatSizingDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreStat
+              <LayoutStat
                 label={item.status}
                 tone={sizingDashboardStatusTone(item.status)}
                 size="sm"

@@ -1,4 +1,4 @@
-import { CoreHeaderGroup } from '@org/shop-ui-core-header';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import { buildSearchDashboardItems } from './search-dashboard.model';
 import { SEARCH_DASHBOARD_FEATURE } from './search-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function SearchDashboardSummary({
       <h3 className="feature-summary-title">
         {SEARCH_DASHBOARD_FEATURE.title}
       </h3>
-      <CoreHeaderGroup
+      <CoreToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

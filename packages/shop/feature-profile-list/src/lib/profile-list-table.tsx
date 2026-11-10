@@ -1,4 +1,4 @@
-import { MediaBadge } from '@org/shop-ui-media-badge';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { ProfileListItem } from './profile-list.model';
 import { PROFILE_LIST_FEATURE } from './profile-list.routes';
 import {
@@ -58,7 +58,7 @@ export function ProfileListTable({
             <td>{formatProfileListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaBadge
+              <InputsPanel
                 label={item.status}
                 tone={profileListStatusTone(item.status)}
                 size="sm"

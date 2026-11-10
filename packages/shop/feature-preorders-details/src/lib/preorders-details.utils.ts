@@ -1,6 +1,5 @@
-import { storageCurrency } from '@org/shop-util-storage-currency';
-import { collectionName } from '@org/shop-util-collection-name';
-import { mathNumber } from '@org/shop-util-math-number';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyPreordersDetailsTotals,
   type PreordersDetailsItem,
@@ -75,13 +74,13 @@ export function sortPreordersDetails(
 export function describePreordersDetailsItem(
   item: PreordersDetailsItem,
 ): string {
-  const amount = storageCurrency(item.amount);
-  const name = mathNumber(collectionName(item.name));
+  const amount = formatPhone(item.amount);
+  const name = collectionText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPreordersDetailsAmount(amount: number): string {
-  return storageCurrency(amount);
+  return formatPhone(amount);
 }
 
 export function preordersDetailsStatusTone(

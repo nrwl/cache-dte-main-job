@@ -1,4 +1,4 @@
-import { MediaHeader } from '@org/shop-ui-media-header';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { WishlistListItem } from './wishlist-list.model';
 import { WISHLIST_LIST_FEATURE } from './wishlist-list.routes';
 import {
@@ -58,7 +58,7 @@ export function WishlistListTable({
             <td>{formatWishlistListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaHeader
+              <MarketingBadge
                 label={item.status}
                 tone={wishlistListStatusTone(item.status)}
                 size="sm"

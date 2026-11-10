@@ -1,4 +1,4 @@
-import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildReviewsDetailsItems } from './reviews-details.model';
 import { REVIEWS_DETAILS_FEATURE } from './reviews-details.routes';
 import {
@@ -29,7 +29,7 @@ export function ReviewsDetailsSummary({
       data-testid={`${REVIEWS_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{REVIEWS_DETAILS_FEATURE.title}</h3>
-      <CoreBadgeGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

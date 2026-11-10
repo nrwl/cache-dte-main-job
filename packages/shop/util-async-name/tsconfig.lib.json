@@ -25,7 +25,10 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-collection-currency/tsconfig.lib.json"
+      "path": "../util-math-name/tsconfig.lib.json"
+    },
+    {
+      "path": "../util-format-currency/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

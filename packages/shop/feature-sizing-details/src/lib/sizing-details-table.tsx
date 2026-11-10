@@ -1,4 +1,4 @@
-import { DataToolbar } from '@org/shop-ui-data-toolbar';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { SizingDetailsItem } from './sizing-details.model';
 import { SIZING_DETAILS_FEATURE } from './sizing-details.routes';
 import {
@@ -58,7 +58,7 @@ export function SizingDetailsTable({
             <td>{formatSizingDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataToolbar
+              <LayoutStat
                 label={item.status}
                 tone={sizingDetailsStatusTone(item.status)}
                 size="sm"

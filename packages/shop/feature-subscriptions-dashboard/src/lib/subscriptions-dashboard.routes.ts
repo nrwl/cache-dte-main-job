@@ -21,7 +21,7 @@ export const SUBSCRIPTIONS_DASHBOARD_FEATURE: FeatureMeta = {
   testId: SUBSCRIPTIONS_DASHBOARD_TEST_ID,
   domain: 'subscriptions',
   kind: 'dashboard',
-  itemCount: 9,
+  itemCount: 8,
 };
 
 export function subscriptionsDashboardItemPath(itemId: string): string {

@@ -1,4 +1,4 @@
-import { TypographyTileGroup } from '@org/shop-ui-typography-tile';
+import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
 import { buildSubscriptionsSettingsItems } from './subscriptions-settings.model';
 import { SUBSCRIPTIONS_SETTINGS_FEATURE } from './subscriptions-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function SubscriptionsSettingsSummary({
       <h3 className="feature-summary-title">
         {SUBSCRIPTIONS_SETTINGS_FEATURE.title}
       </h3>
-      <TypographyTileGroup
+      <CommerceBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

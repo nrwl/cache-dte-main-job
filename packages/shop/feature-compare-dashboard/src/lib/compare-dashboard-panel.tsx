@@ -1,4 +1,6 @@
-import { InputsBadgeGroup } from '@org/shop-ui-inputs-badge';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import type { CompareDashboardItem } from './compare-dashboard.model';
 import { COMPARE_DASHBOARD_FEATURE } from './compare-dashboard.routes';
 import { describeCompareDashboardItem } from './compare-dashboard.utils';
@@ -39,7 +41,7 @@ export function CompareDashboardPanel({
       <p className="feature-panel-description">
         {describeCompareDashboardItem(selected)}
       </p>
-      <InputsBadgeGroup
+      <CoreBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function CompareDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CoreToolbar
+          label="Core Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CommerceToolbar
+          label="Commerce Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">
