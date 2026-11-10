@@ -35,9 +35,6 @@ jobs:
         run: npx nx-cloud start-workers
       - name: Run all checks concurrently
         run: |
-          # Build once before starting the browser suite and the other checks.
-          npx nx run @org/shop:build
-
           pids=()
           npx nx-cloud record -- nx format:check & pids+=($!)
           npx nx-cloud record -- nx sync:check & pids+=($!)
