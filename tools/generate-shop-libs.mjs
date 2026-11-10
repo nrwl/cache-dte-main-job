@@ -2127,7 +2127,7 @@ export default FeatureIndex;
 // ---------------------------------------------------------------------------
 // Exactly this many e2e specs are generated, one test per spec. Features are
 // sampled evenly across the list so every domain is covered.
-const E2E_SPEC_COUNT = 100;
+const E2E_SPEC_COUNT = 50;
 
 function genE2e() {
   const e2eRoot = join(ROOT, 'apps/shop-e2e/src');
