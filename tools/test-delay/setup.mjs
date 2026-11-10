@@ -11,8 +11,9 @@
  */
 import { burnCpu, envNumber, sleep, UNITS_PER_SECOND } from './burn.mjs';
 
-const cpuSeconds = envNumber('UNIT_TEST_CPU_SECONDS', 5);
-const sleepMs = envNumber('UNIT_TEST_SLEEP_MS', 7_300);
+// Keep the assertions, but remove synthetic load for the single-runner CI.
+const cpuSeconds = envNumber('UNIT_TEST_CPU_SECONDS', 0);
+const sleepMs = envNumber('UNIT_TEST_SLEEP_MS', 0);
 const unitsPerSecond = envNumber(
   'UNIT_TEST_UNITS_PER_SECOND',
   UNITS_PER_SECOND,

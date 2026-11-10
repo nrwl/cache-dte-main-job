@@ -8,7 +8,7 @@
  *   - 300 feature libraries packages/shop/feature-*   (@org/shop-feature-*)
  *   - apps/shop/src/app/feature-routes.tsx wiring every feature into the app
  *   - apps/shop-e2e/src/features/*.spec.ts  (E2E_SPEC_COUNT specs, one test each,
- *     every test padded to ~27s by apps/shop-e2e/src/support/pacing.ts)
+ *     every test padded to ~6s by apps/shop-e2e/src/support/pacing.ts)
  *
  * The dependency graph is acyclic by construction: util -> ui -> feature, and a
  * library only ever depends on libraries with a lower index in the same tier.
@@ -2197,7 +2197,7 @@ const e2eSpecCount = genE2e();
 console.log(
   `generated ${utils.length} util libs, ${uis.length} ui libs, ${features.length} feature libs`,
 );
-console.log(`generated ${e2eSpecCount} e2e specs (one ~25s test each)`);
+console.log(`generated ${e2eSpecCount} e2e specs (one ~6s test each)`);
 
 if (!process.argv.includes('--no-format')) {
   console.log('formatting generated files with prettier…');

@@ -19,7 +19,7 @@ export default defineConfig({
   /*
    * The benchmark runs e2e tests strictly one at a time: a single Playwright
    * worker and no intra-file parallelism. Every generated test is padded to
-   * E2E_TEST_DURATION_MS (25s) by src/support/pacing.ts, so the timeout must
+   * E2E_TEST_DURATION_MS (6s) by src/support/pacing.ts, so the timeout must
    * comfortably exceed that.
    */
   workers: 1,
