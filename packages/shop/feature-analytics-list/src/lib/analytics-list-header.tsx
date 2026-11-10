@@ -1,4 +1,4 @@
-import { CoreChip } from '@org/shop-ui-core-chip';
+import { FeedbackStat } from '@org/shop-ui-feedback-stat';
 import { ANALYTICS_LIST_FEATURE } from './analytics-list.routes';
 
 export interface AnalyticsListHeaderProps {
@@ -26,8 +26,8 @@ export function AnalyticsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreChip label="Items" value={count} tone="info" />
-        <CoreChip label="Total" value={total} tone="success" />
+        <FeedbackStat label="Items" value={count} tone="info" />
+        <FeedbackStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

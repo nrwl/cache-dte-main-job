@@ -1,4 +1,4 @@
-import { TypographyBanner } from '@org/shop-ui-typography-banner';
+import { CommerceBanner } from '@org/shop-ui-commerce-banner';
 import type { AccountDashboardItem } from './account-dashboard.model';
 import { ACCOUNT_DASHBOARD_FEATURE } from './account-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function AccountDashboardTable({
             <td>{formatAccountDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyBanner
+              <CommerceBanner
                 label={item.status}
                 tone={accountDashboardStatusTone(item.status)}
                 size="sm"

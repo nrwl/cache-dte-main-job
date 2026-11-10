@@ -1,5 +1,4 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { formatText } from '@org/shop-util-format-text';
+import { i18nName } from '@org/shop-util-i18n-name';
 import {
   emptyReviewsDashboardTotals,
   type ReviewsDashboardItem,
@@ -74,13 +73,13 @@ export function sortReviewsDashboard(
 export function describeReviewsDashboardItem(
   item: ReviewsDashboardItem,
 ): string {
-  const amount = validatePhone(item.amount);
-  const name = formatText(item.name);
+  const amount = i18nName(item.amount);
+  const name = i18nName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReviewsDashboardAmount(amount: number): string {
-  return validatePhone(amount);
+  return i18nName(amount);
 }
 
 export function reviewsDashboardStatusTone(

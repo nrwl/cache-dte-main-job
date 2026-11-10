@@ -1,4 +1,6 @@
-import { LayoutBadgeGroup } from '@org/shop-ui-layout-badge';
+import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
+import { MediaBanner } from '@org/shop-ui-media-banner';
 import type { SearchOverviewItem } from './search-overview.model';
 import { SEARCH_OVERVIEW_FEATURE } from './search-overview.routes';
 import { describeSearchOverviewItem } from './search-overview.utils';
@@ -39,7 +41,7 @@ export function SearchOverviewPanel({
       <p className="feature-panel-description">
         {describeSearchOverviewItem(selected)}
       </p>
-      <LayoutBadgeGroup
+      <FeedbackPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function SearchOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CommerceToolbar
+          label="Commerce Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <MediaBanner
+          label="Media Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -19,7 +19,7 @@ export const SUPPORT_DASHBOARD_FEATURE: FeatureMeta = {
   testId: SUPPORT_DASHBOARD_TEST_ID,
   domain: 'support',
   kind: 'dashboard',
-  itemCount: 11,
+  itemCount: 5,
 };
 
 export function supportDashboardItemPath(itemId: string): string {

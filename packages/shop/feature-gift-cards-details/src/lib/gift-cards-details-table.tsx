@@ -1,4 +1,4 @@
-import { MediaHeader } from '@org/shop-ui-media-header';
+import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
 import type { GiftCardsDetailsItem } from './gift-cards-details.model';
 import { GIFT_CARDS_DETAILS_FEATURE } from './gift-cards-details.routes';
 import {
@@ -58,7 +58,7 @@ export function GiftCardsDetailsTable({
             <td>{formatGiftCardsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaHeader
+              <FeedbackPanel
                 label={item.status}
                 tone={giftCardsDetailsStatusTone(item.status)}
                 size="sm"

@@ -19,7 +19,7 @@ export const STORE_LOCATOR_LIST_FEATURE: FeatureMeta = {
   testId: STORE_LOCATOR_LIST_TEST_ID,
   domain: 'store-locator',
   kind: 'list',
-  itemCount: 11,
+  itemCount: 12,
 };
 
 export function storeLocatorListItemPath(itemId: string): string {

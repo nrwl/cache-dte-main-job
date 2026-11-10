@@ -1,5 +1,6 @@
-import { collectionPhone } from '@org/shop-util-collection-phone';
-import { mathDate } from '@org/shop-util-math-date';
+import { validatePhone } from '@org/shop-util-validate-phone';
+import { collectionName } from '@org/shop-util-collection-name';
+import { storageCurrency } from '@org/shop-util-storage-currency';
 import {
   emptySizingListTotals,
   type SizingListItem,
@@ -71,13 +72,13 @@ export function sortSizingList(
 }
 
 export function describeSizingListItem(item: SizingListItem): string {
-  const amount = collectionPhone(item.amount);
-  const name = mathDate(item.name);
+  const amount = validatePhone(item.amount);
+  const name = storageCurrency(collectionName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingListAmount(amount: number): string {
-  return collectionPhone(amount);
+  return validatePhone(amount);
 }
 
 export function sizingListStatusTone(

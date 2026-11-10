@@ -1,4 +1,4 @@
-import { CoreCard } from '@org/shop-ui-core-card';
+import { ChartsToolbar } from '@org/shop-ui-charts-toolbar';
 import { SIZING_LIST_FEATURE } from './sizing-list.routes';
 
 export interface SizingListHeaderProps {
@@ -26,8 +26,8 @@ export function SizingListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreCard label="Items" value={count} tone="info" />
-        <CoreCard label="Total" value={total} tone="success" />
+        <ChartsToolbar label="Items" value={count} tone="info" />
+        <ChartsToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

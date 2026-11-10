@@ -1,4 +1,4 @@
-import { MediaStatGroup } from '@org/shop-ui-media-stat';
+import { CorePanelGroup } from '@org/shop-ui-core-panel';
 import { buildNotificationsOverviewItems } from './notifications-overview.model';
 import { NOTIFICATIONS_OVERVIEW_FEATURE } from './notifications-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function NotificationsOverviewSummary({
       <h3 className="feature-summary-title">
         {NOTIFICATIONS_OVERVIEW_FEATURE.title}
       </h3>
-      <MediaStatGroup
+      <CorePanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

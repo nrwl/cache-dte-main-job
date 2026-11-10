@@ -1,5 +1,5 @@
-import { formatDate } from '@org/shop-util-format-date';
-import { validateSlug } from '@org/shop-util-validate-slug';
+import { collectionPhone } from '@org/shop-util-collection-phone';
+import { mathNumber } from '@org/shop-util-math-number';
 import {
   emptyStoreLocatorSettingsTotals,
   type StoreLocatorSettingsItem,
@@ -77,13 +77,13 @@ export function sortStoreLocatorSettings(
 export function describeStoreLocatorSettingsItem(
   item: StoreLocatorSettingsItem,
 ): string {
-  const amount = formatDate(item.amount);
-  const name = validateSlug(item.name);
+  const amount = collectionPhone(item.amount);
+  const name = mathNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatStoreLocatorSettingsAmount(amount: number): string {
-  return formatDate(amount);
+  return collectionPhone(amount);
 }
 
 export function storeLocatorSettingsStatusTone(

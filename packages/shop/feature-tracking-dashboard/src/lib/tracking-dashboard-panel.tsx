@@ -1,5 +1,4 @@
-import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { InputsBannerGroup } from '@org/shop-ui-inputs-banner';
 import type { TrackingDashboardItem } from './tracking-dashboard.model';
 import { TRACKING_DASHBOARD_FEATURE } from './tracking-dashboard.routes';
 import { describeTrackingDashboardItem } from './tracking-dashboard.utils';
@@ -40,7 +39,7 @@ export function TrackingDashboardPanel({
       <p className="feature-panel-description">
         {describeTrackingDashboardItem(selected)}
       </p>
-      <FeedbackBannerGroup
+      <InputsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function TrackingDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <FormsBadge
-          label="Forms Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { PreordersDashboardItem } from './preorders-dashboard.model';
 import { PREORDERS_DASHBOARD_FEATURE } from './preorders-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function PreordersDashboardTable({
             <td>{formatPreordersDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CorePanel
+              <DataPanel
                 label={item.status}
                 tone={preordersDashboardStatusTone(item.status)}
                 size="sm"

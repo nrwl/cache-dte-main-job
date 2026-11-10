@@ -1,6 +1,6 @@
-import { i18nPhone } from '@org/shop-util-i18n-phone';
-import { asyncDate } from '@org/shop-util-async-date';
-import { i18nText } from '@org/shop-util-i18n-text';
+import { asyncCurrency } from '@org/shop-util-async-currency';
+import { validateNumber } from '@org/shop-util-validate-number';
+import { validateCurrency } from '@org/shop-util-validate-currency';
 import type { MarketingBannerProps } from './marketing-banner.types';
 import { resolveMarketingBannerStyle } from './marketing-banner-variants';
 
@@ -13,9 +13,9 @@ export function MarketingBanner({
   onSelect,
   children,
 }: MarketingBannerProps) {
-  const formatted = value === undefined ? '' : i18nPhone(value);
+  const formatted = value === undefined ? '' : asyncCurrency(value);
   const style = resolveMarketingBannerStyle(tone, size);
-  const ariaLabel = i18nText(asyncDate(label));
+  const ariaLabel = validateCurrency(validateNumber(label));
 
   const handleClick = () => {
     if (onSelect) {

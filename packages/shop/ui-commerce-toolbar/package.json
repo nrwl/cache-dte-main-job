@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-storage-currency": "*"
+    "@org/shop-util-async-phone": "*",
+    "@org/shop-ui-data-stat": "*"
   }
 }

@@ -1,9 +1,10 @@
 import type { Product } from '@org/models';
-import { formatPercent } from '@org/shop-util-format-percent';
+import { collectionNumber } from '@org/shop-util-collection-number';
 import {
   clampLength,
   hashString,
   normalizeInput,
+  reverseText,
 } from './storage-number-helpers';
 
 export interface StorageNumberOptions {
@@ -31,7 +32,7 @@ export const STORAGE_NUMBER_DEFAULTS: Required<StorageNumberOptions> = {
 export const STORAGE_NUMBER_KIND = 'storage-number' as const;
 
 /**
- * Formats a raw value using the "upper" strategy.
+ * Formats a raw value using the "reverse" strategy.
  */
 export function storageNumber(
   value: string | number,
@@ -45,11 +46,11 @@ export function storageNumber(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatPercent].reduce<string>(
+  const staged = [collectionNumber].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );
-  const transformed = staged.toUpperCase();
+  const transformed = reverseText(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

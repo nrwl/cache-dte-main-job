@@ -1,4 +1,4 @@
-import { CoreStat } from '@org/shop-ui-core-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { SUBSCRIPTIONS_OVERVIEW_FEATURE } from './subscriptions-overview.routes';
 
 export interface SubscriptionsOverviewHeaderProps {
@@ -29,8 +29,8 @@ export function SubscriptionsOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreStat label="Items" value={count} tone="info" />
-        <CoreStat label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

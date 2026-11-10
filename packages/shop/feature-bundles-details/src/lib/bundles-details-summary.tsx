@@ -1,4 +1,4 @@
-import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { MarketingBannerGroup } from '@org/shop-ui-marketing-banner';
 import { buildBundlesDetailsItems } from './bundles-details.model';
 import { BUNDLES_DETAILS_FEATURE } from './bundles-details.routes';
 import {
@@ -29,7 +29,7 @@ export function BundlesDetailsSummary({
       data-testid={`${BUNDLES_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{BUNDLES_DETAILS_FEATURE.title}</h3>
-      <MarketingBadgeGroup
+      <MarketingBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

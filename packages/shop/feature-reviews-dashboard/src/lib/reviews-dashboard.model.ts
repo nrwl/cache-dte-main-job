@@ -21,7 +21,7 @@ export interface ReviewsDashboardTotals {
   archived: number;
 }
 
-export const REVIEWS_DASHBOARD_ITEM_COUNT = 9;
+export const REVIEWS_DASHBOARD_ITEM_COUNT = 7;
 
 export const REVIEWS_DASHBOARD_STATUSES: ReadonlyArray<ReviewsDashboardStatus> =
   ['active', 'pending', 'archived'];

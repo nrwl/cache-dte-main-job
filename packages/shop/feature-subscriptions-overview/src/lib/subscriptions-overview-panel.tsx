@@ -1,5 +1,4 @@
-import { MarketingListGroup } from '@org/shop-ui-marketing-list';
-import { OverlayToolbar } from '@org/shop-ui-overlay-toolbar';
+import { LayoutBadgeGroup } from '@org/shop-ui-layout-badge';
 import type { SubscriptionsOverviewItem } from './subscriptions-overview.model';
 import { SUBSCRIPTIONS_OVERVIEW_FEATURE } from './subscriptions-overview.routes';
 import { describeSubscriptionsOverviewItem } from './subscriptions-overview.utils';
@@ -40,7 +39,7 @@ export function SubscriptionsOverviewPanel({
       <p className="feature-panel-description">
         {describeSubscriptionsOverviewItem(selected)}
       </p>
-      <MarketingListGroup
+      <LayoutBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function SubscriptionsOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <OverlayToolbar
-          label="Overlay Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

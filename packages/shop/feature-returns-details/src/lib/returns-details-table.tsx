@@ -1,4 +1,4 @@
-import { InputsTile } from '@org/shop-ui-inputs-tile';
+import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
 import type { ReturnsDetailsItem } from './returns-details.model';
 import { RETURNS_DETAILS_FEATURE } from './returns-details.routes';
 import {
@@ -58,7 +58,7 @@ export function ReturnsDetailsTable({
             <td>{formatReturnsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsTile
+              <MarketingToolbar
                 label={item.status}
                 tone={returnsDetailsStatusTone(item.status)}
                 size="sm"

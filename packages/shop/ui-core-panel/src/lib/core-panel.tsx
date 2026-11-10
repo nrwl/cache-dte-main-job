@@ -1,6 +1,6 @@
-import { asyncNumber } from '@org/shop-util-async-number';
-import { mathSlug } from '@org/shop-util-math-slug';
-import { validateAddress } from '@org/shop-util-validate-address';
+import { formatNumber } from '@org/shop-util-format-number';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { mathPhone } from '@org/shop-util-math-phone';
 import type { CorePanelProps } from './core-panel.types';
 import { resolveCorePanelStyle } from './core-panel-variants';
 
@@ -13,9 +13,9 @@ export function CorePanel({
   onSelect,
   children,
 }: CorePanelProps) {
-  const formatted = value === undefined ? '' : asyncNumber(value);
+  const formatted = value === undefined ? '' : formatNumber(value);
   const style = resolveCorePanelStyle(tone, size);
-  const ariaLabel = validateAddress(mathSlug(label));
+  const ariaLabel = mathPhone(collectionCurrency(label));
 
   const handleClick = () => {
     if (onSelect) {

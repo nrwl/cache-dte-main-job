@@ -1,4 +1,4 @@
-import { TypographyTile } from '@org/shop-ui-typography-tile';
+import { TypographyBadge } from '@org/shop-ui-typography-badge';
 import type { SearchDetailsItem } from './search-details.model';
 import { SEARCH_DETAILS_FEATURE } from './search-details.routes';
 import {
@@ -58,7 +58,7 @@ export function SearchDetailsTable({
             <td>{formatSearchDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyTile
+              <TypographyBadge
                 label={item.status}
                 tone={searchDetailsStatusTone(item.status)}
                 size="sm"

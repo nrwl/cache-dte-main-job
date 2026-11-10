@@ -1,4 +1,4 @@
-import { FormsPanel } from '@org/shop-ui-forms-panel';
+import { InputsStat } from '@org/shop-ui-inputs-stat';
 import { SEARCH_DETAILS_FEATURE } from './search-details.routes';
 
 export interface SearchDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function SearchDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsPanel label="Items" value={count} tone="info" />
-        <FormsPanel label="Total" value={total} tone="success" />
+        <InputsStat label="Items" value={count} tone="info" />
+        <InputsStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

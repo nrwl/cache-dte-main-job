@@ -1,4 +1,4 @@
-import { CoreHeader } from '@org/shop-ui-core-header';
+import { MediaPanel } from '@org/shop-ui-media-panel';
 import { ACCOUNT_DETAILS_FEATURE } from './account-details.routes';
 
 export interface AccountDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function AccountDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreHeader label="Items" value={count} tone="info" />
-        <CoreHeader label="Total" value={total} tone="success" />
+        <MediaPanel label="Items" value={count} tone="info" />
+        <MediaPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

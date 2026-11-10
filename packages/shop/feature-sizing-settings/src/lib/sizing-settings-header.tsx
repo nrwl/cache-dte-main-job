@@ -1,4 +1,4 @@
-import { MediaBadge } from '@org/shop-ui-media-badge';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import { SIZING_SETTINGS_FEATURE } from './sizing-settings.routes';
 
 export interface SizingSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function SizingSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaBadge label="Items" value={count} tone="info" />
-        <MediaBadge label="Total" value={total} tone="success" />
+        <LayoutPanel label="Items" value={count} tone="info" />
+        <LayoutPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

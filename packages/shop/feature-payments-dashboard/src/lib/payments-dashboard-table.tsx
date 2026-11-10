@@ -1,4 +1,4 @@
-import { MarketingCard } from '@org/shop-ui-marketing-card';
+import { DataBanner } from '@org/shop-ui-data-banner';
 import type { PaymentsDashboardItem } from './payments-dashboard.model';
 import { PAYMENTS_DASHBOARD_FEATURE } from './payments-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function PaymentsDashboardTable({
             <td>{formatPaymentsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingCard
+              <DataBanner
                 label={item.status}
                 tone={paymentsDashboardStatusTone(item.status)}
                 size="sm"

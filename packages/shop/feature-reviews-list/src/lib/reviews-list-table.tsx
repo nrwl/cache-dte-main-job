@@ -1,4 +1,4 @@
-import { FormsList } from '@org/shop-ui-forms-list';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { ReviewsListItem } from './reviews-list.model';
 import { REVIEWS_LIST_FEATURE } from './reviews-list.routes';
 import {
@@ -58,7 +58,7 @@ export function ReviewsListTable({
             <td>{formatReviewsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsList
+              <OverlayStat
                 label={item.status}
                 tone={reviewsListStatusTone(item.status)}
                 size="sm"

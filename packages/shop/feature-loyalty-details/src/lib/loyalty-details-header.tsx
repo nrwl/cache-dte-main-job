@@ -1,4 +1,4 @@
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { DataStat } from '@org/shop-ui-data-stat';
 import { LOYALTY_DETAILS_FEATURE } from './loyalty-details.routes';
 
 export interface LoyaltyDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function LoyaltyDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceBadge label="Items" value={count} tone="info" />
-        <CommerceBadge label="Total" value={total} tone="success" />
+        <DataStat label="Items" value={count} tone="info" />
+        <DataStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

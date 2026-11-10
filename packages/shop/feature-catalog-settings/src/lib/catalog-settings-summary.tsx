@@ -1,4 +1,4 @@
-import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { CoreBannerGroup } from '@org/shop-ui-core-banner';
 import { buildCatalogSettingsItems } from './catalog-settings.model';
 import { CATALOG_SETTINGS_FEATURE } from './catalog-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function CatalogSettingsSummary({
       <h3 className="feature-summary-title">
         {CATALOG_SETTINGS_FEATURE.title}
       </h3>
-      <CoreBadgeGroup
+      <CoreBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

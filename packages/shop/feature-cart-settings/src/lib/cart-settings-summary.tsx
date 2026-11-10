@@ -1,4 +1,4 @@
-import { FeedbackCardGroup } from '@org/shop-ui-feedback-card';
+import { CoreStatGroup } from '@org/shop-ui-core-stat';
 import { buildCartSettingsItems } from './cart-settings.model';
 import { CART_SETTINGS_FEATURE } from './cart-settings.routes';
 import {
@@ -29,7 +29,7 @@ export function CartSettingsSummary({
       data-testid={`${CART_SETTINGS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{CART_SETTINGS_FEATURE.title}</h3>
-      <FeedbackCardGroup
+      <CoreStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

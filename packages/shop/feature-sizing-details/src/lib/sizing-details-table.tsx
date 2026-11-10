@@ -1,4 +1,4 @@
-import { DataToolbar } from '@org/shop-ui-data-toolbar';
+import { OverlayPanel } from '@org/shop-ui-overlay-panel';
 import type { SizingDetailsItem } from './sizing-details.model';
 import { SIZING_DETAILS_FEATURE } from './sizing-details.routes';
 import {
@@ -58,7 +58,7 @@ export function SizingDetailsTable({
             <td>{formatSizingDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataToolbar
+              <OverlayPanel
                 label={item.status}
                 tone={sizingDetailsStatusTone(item.status)}
                 size="sm"

@@ -3,7 +3,6 @@ import {
   clampLength,
   hashString,
   normalizeInput,
-  onlyDigits,
 } from './storage-currency-helpers';
 
 export interface StorageCurrencyOptions {
@@ -31,7 +30,7 @@ export const STORAGE_CURRENCY_DEFAULTS: Required<StorageCurrencyOptions> = {
 export const STORAGE_CURRENCY_KIND = 'storage-currency' as const;
 
 /**
- * Formats a raw value using the "digits" strategy.
+ * Formats a raw value using the "lower" strategy.
  */
 export function storageCurrency(
   value: string | number,
@@ -46,7 +45,7 @@ export function storageCurrency(
     return opts.fallback;
   }
   const staged = normalized;
-  const transformed = onlyDigits(staged) || staged;
+  const transformed = staged.toLowerCase();
   return clampLength(transformed, opts.maxLength);
 }
 

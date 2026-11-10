@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { ReviewsDetailsSummary } from '@org/shop-feature-reviews-details';
 import { SearchListFilters } from './search-list-filters';
 import { SearchListHeader } from './search-list-header';
 import { SearchListPanel } from './search-list-panel';
@@ -47,6 +48,7 @@ export function SearchListPage() {
         </div>
         <div className="feature-side">
           <SearchListPanel selected={selected} onClear={() => select(null)} />
+          <ReviewsDetailsSummary compact />
         </div>
       </div>
     </section>

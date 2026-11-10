@@ -1,4 +1,4 @@
-import { FormsTileGroup } from '@org/shop-ui-forms-tile';
+import { MarketingPanelGroup } from '@org/shop-ui-marketing-panel';
 import { buildStoreLocatorOverviewItems } from './store-locator-overview.model';
 import { STORE_LOCATOR_OVERVIEW_FEATURE } from './store-locator-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function StoreLocatorOverviewSummary({
       <h3 className="feature-summary-title">
         {STORE_LOCATOR_OVERVIEW_FEATURE.title}
       </h3>
-      <FormsTileGroup
+      <MarketingPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

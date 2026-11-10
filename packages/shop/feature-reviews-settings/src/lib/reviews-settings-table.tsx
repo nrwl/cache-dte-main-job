@@ -1,4 +1,4 @@
-import { NavigationPanel } from '@org/shop-ui-navigation-panel';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { ReviewsSettingsItem } from './reviews-settings.model';
 import { REVIEWS_SETTINGS_FEATURE } from './reviews-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function ReviewsSettingsTable({
             <td>{formatReviewsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationPanel
+              <MarketingBadge
                 label={item.status}
                 tone={reviewsSettingsStatusTone(item.status)}
                 size="sm"

@@ -1,5 +1,5 @@
-import { InputsHeaderGroup } from '@org/shop-ui-inputs-header';
-import { InputsPanel } from '@org/shop-ui-inputs-panel';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
+import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
 import type { SubscriptionsSettingsItem } from './subscriptions-settings.model';
 import { SUBSCRIPTIONS_SETTINGS_FEATURE } from './subscriptions-settings.routes';
 import { describeSubscriptionsSettingsItem } from './subscriptions-settings.utils';
@@ -40,7 +40,7 @@ export function SubscriptionsSettingsPanel({
       <p className="feature-panel-description">
         {describeSubscriptionsSettingsItem(selected)}
       </p>
-      <InputsHeaderGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function SubscriptionsSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsPanel
-          label="Inputs Panel"
+        <FeedbackToolbar
+          label="Feedback Toolbar"
           value={selected.product.rating}
           size="sm"
         />

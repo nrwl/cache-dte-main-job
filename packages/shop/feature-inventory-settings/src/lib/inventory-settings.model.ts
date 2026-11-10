@@ -21,7 +21,7 @@ export interface InventorySettingsTotals {
   archived: number;
 }
 
-export const INVENTORY_SETTINGS_ITEM_COUNT = 11;
+export const INVENTORY_SETTINGS_ITEM_COUNT = 8;
 
 export const INVENTORY_SETTINGS_STATUSES: ReadonlyArray<InventorySettingsStatus> =
   ['active', 'pending', 'archived'];

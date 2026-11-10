@@ -1,4 +1,6 @@
-import { formatNumber } from '@org/shop-util-format-number';
+import { mathNumber } from '@org/shop-util-math-number';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { validatePhone } from '@org/shop-util-validate-phone';
 import {
   emptyProfileDashboardTotals,
   type ProfileDashboardItem,
@@ -73,13 +75,13 @@ export function sortProfileDashboard(
 export function describeProfileDashboardItem(
   item: ProfileDashboardItem,
 ): string {
-  const amount = formatNumber(item.amount);
-  const name = formatNumber(item.name);
+  const amount = mathNumber(item.amount);
+  const name = validatePhone(validateCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileDashboardAmount(amount: number): string {
-  return formatNumber(amount);
+  return mathNumber(amount);
 }
 
 export function profileDashboardStatusTone(

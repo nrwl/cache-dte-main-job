@@ -1,4 +1,4 @@
-import { TypographyChipGroup } from '@org/shop-ui-typography-chip';
+import { DataBannerGroup } from '@org/shop-ui-data-banner';
 import { buildNotificationsDashboardItems } from './notifications-dashboard.model';
 import { NOTIFICATIONS_DASHBOARD_FEATURE } from './notifications-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function NotificationsDashboardSummary({
       <h3 className="feature-summary-title">
         {NOTIFICATIONS_DASHBOARD_FEATURE.title}
       </h3>
-      <TypographyChipGroup
+      <DataBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

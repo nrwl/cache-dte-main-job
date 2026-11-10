@@ -1,5 +1,4 @@
-import { CommercePanelGroup } from '@org/shop-ui-commerce-panel';
-import { OverlayCard } from '@org/shop-ui-overlay-card';
+import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
 import type { AnalyticsDetailsItem } from './analytics-details.model';
 import { ANALYTICS_DETAILS_FEATURE } from './analytics-details.routes';
 import { describeAnalyticsDetailsItem } from './analytics-details.utils';
@@ -40,7 +39,7 @@ export function AnalyticsDetailsPanel({
       <p className="feature-panel-description">
         {describeAnalyticsDetailsItem(selected)}
       </p>
-      <CommercePanelGroup
+      <OverlayBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function AnalyticsDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <OverlayCard
-          label="Overlay Card"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,6 +1,7 @@
-import { asyncCurrency } from '@org/shop-util-async-currency';
-import { validateNumber } from '@org/shop-util-validate-number';
-import { validateDate } from '@org/shop-util-validate-date';
+import { collectionName } from '@org/shop-util-collection-name';
+import { formatNumber } from '@org/shop-util-format-number';
+import { storageText } from '@org/shop-util-storage-text';
+import { CoreBanner } from '@org/shop-ui-core-banner';
 import type { NavigationPanelProps } from './navigation-panel.types';
 import { resolveNavigationPanelStyle } from './navigation-panel-variants';
 
@@ -13,9 +14,9 @@ export function NavigationPanel({
   onSelect,
   children,
 }: NavigationPanelProps) {
-  const formatted = value === undefined ? '' : asyncCurrency(value);
+  const formatted = value === undefined ? '' : collectionName(value);
   const style = resolveNavigationPanelStyle(tone, size);
-  const ariaLabel = validateDate(validateNumber(label));
+  const ariaLabel = storageText(formatNumber(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,6 +39,7 @@ export function NavigationPanel({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <CoreBanner label="Core Banner" value={value} tone={tone} size="sm" />
     </div>
   );
 }

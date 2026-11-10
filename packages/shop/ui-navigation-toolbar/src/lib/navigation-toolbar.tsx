@@ -1,6 +1,4 @@
-import { storageCurrency } from '@org/shop-util-storage-currency';
-import { formatCode } from '@org/shop-util-format-code';
-import { FormsBanner } from '@org/shop-ui-forms-banner';
+import { validatePhone } from '@org/shop-util-validate-phone';
 import type { NavigationToolbarProps } from './navigation-toolbar.types';
 import { resolveNavigationToolbarStyle } from './navigation-toolbar-variants';
 
@@ -13,9 +11,9 @@ export function NavigationToolbar({
   onSelect,
   children,
 }: NavigationToolbarProps) {
-  const formatted = value === undefined ? '' : storageCurrency(value);
+  const formatted = value === undefined ? '' : validatePhone(value);
   const style = resolveNavigationToolbarStyle(tone, size);
-  const ariaLabel = formatCode(label);
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +36,6 @@ export function NavigationToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FormsBanner label="Forms Banner" value={value} tone={tone} size="sm" />
     </div>
   );
 }

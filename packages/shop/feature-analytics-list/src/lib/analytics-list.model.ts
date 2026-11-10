@@ -21,7 +21,7 @@ export interface AnalyticsListTotals {
   archived: number;
 }
 
-export const ANALYTICS_LIST_ITEM_COUNT = 9;
+export const ANALYTICS_LIST_ITEM_COUNT = 7;
 
 export const ANALYTICS_LIST_STATUSES: ReadonlyArray<AnalyticsListStatus> = [
   'active',

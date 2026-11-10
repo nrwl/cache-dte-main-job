@@ -1,4 +1,4 @@
-import { MarketingTile } from '@org/shop-ui-marketing-tile';
+import { MediaStat } from '@org/shop-ui-media-stat';
 import { INVENTORY_OVERVIEW_FEATURE } from './inventory-overview.routes';
 
 export interface InventoryOverviewHeaderProps {
@@ -27,8 +27,8 @@ export function InventoryOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingTile label="Items" value={count} tone="info" />
-        <MarketingTile label="Total" value={total} tone="success" />
+        <MediaStat label="Items" value={count} tone="info" />
+        <MediaStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

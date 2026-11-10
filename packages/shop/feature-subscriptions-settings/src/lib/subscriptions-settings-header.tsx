@@ -1,4 +1,4 @@
-import { TypographyTile } from '@org/shop-ui-typography-tile';
+import { FormsPanel } from '@org/shop-ui-forms-panel';
 import { SUBSCRIPTIONS_SETTINGS_FEATURE } from './subscriptions-settings.routes';
 
 export interface SubscriptionsSettingsHeaderProps {
@@ -29,8 +29,8 @@ export function SubscriptionsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyTile label="Items" value={count} tone="info" />
-        <TypographyTile label="Total" value={total} tone="success" />
+        <FormsPanel label="Items" value={count} tone="info" />
+        <FormsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

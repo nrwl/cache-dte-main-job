@@ -19,7 +19,7 @@ export const INVENTORY_SETTINGS_FEATURE: FeatureMeta = {
   testId: INVENTORY_SETTINGS_TEST_ID,
   domain: 'inventory',
   kind: 'settings',
-  itemCount: 11,
+  itemCount: 8,
 };
 
 export function inventorySettingsItemPath(itemId: string): string {

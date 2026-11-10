@@ -1,5 +1,6 @@
-import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
-import { CommerceTile } from '@org/shop-ui-commerce-tile';
+import { CoreBannerGroup } from '@org/shop-ui-core-banner';
+import { CoreBadge } from '@org/shop-ui-core-badge';
+import { CommercePanel } from '@org/shop-ui-commerce-panel';
 import type { OrdersDetailsItem } from './orders-details.model';
 import { ORDERS_DETAILS_FEATURE } from './orders-details.routes';
 import { describeOrdersDetailsItem } from './orders-details.utils';
@@ -40,7 +41,7 @@ export function OrdersDetailsPanel({
       <p className="feature-panel-description">
         {describeOrdersDetailsItem(selected)}
       </p>
-      <FeedbackPanelGroup
+      <CoreBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function OrdersDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceTile
-          label="Commerce Tile"
+        <CoreBadge
+          label="Core Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CommercePanel
+          label="Commerce Panel"
           value={selected.product.rating}
           size="sm"
         />

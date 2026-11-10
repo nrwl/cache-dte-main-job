@@ -1,4 +1,4 @@
-import { MarketingChipGroup } from '@org/shop-ui-marketing-chip';
+import { DataBannerGroup } from '@org/shop-ui-data-banner';
 import { buildCompareDashboardItems } from './compare-dashboard.model';
 import { COMPARE_DASHBOARD_FEATURE } from './compare-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function CompareDashboardSummary({
       <h3 className="feature-summary-title">
         {COMPARE_DASHBOARD_FEATURE.title}
       </h3>
-      <MarketingChipGroup
+      <DataBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

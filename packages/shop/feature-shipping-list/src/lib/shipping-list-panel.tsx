@@ -1,4 +1,5 @@
-import { FeedbackListGroup } from '@org/shop-ui-feedback-list';
+import { MediaBannerGroup } from '@org/shop-ui-media-banner';
+import { LayoutBanner } from '@org/shop-ui-layout-banner';
 import type { ShippingListItem } from './shipping-list.model';
 import { SHIPPING_LIST_FEATURE } from './shipping-list.routes';
 import { describeShippingListItem } from './shipping-list.utils';
@@ -39,7 +40,7 @@ export function ShippingListPanel({
       <p className="feature-panel-description">
         {describeShippingListItem(selected)}
       </p>
-      <FeedbackListGroup
+      <MediaBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function ShippingListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <LayoutBanner
+          label="Layout Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

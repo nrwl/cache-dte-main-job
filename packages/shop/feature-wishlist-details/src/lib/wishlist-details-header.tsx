@@ -1,4 +1,4 @@
-import { DataBadge } from '@org/shop-ui-data-badge';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import { WISHLIST_DETAILS_FEATURE } from './wishlist-details.routes';
 
 export interface WishlistDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function WishlistDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataBadge label="Items" value={count} tone="info" />
-        <DataBadge label="Total" value={total} tone="success" />
+        <MarketingBadge label="Items" value={count} tone="info" />
+        <MarketingBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

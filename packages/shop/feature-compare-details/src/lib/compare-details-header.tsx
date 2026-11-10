@@ -1,4 +1,4 @@
-import { MarketingTile } from '@org/shop-ui-marketing-tile';
+import { MediaPanel } from '@org/shop-ui-media-panel';
 import { COMPARE_DETAILS_FEATURE } from './compare-details.routes';
 
 export interface CompareDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function CompareDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingTile label="Items" value={count} tone="info" />
-        <MarketingTile label="Total" value={total} tone="success" />
+        <MediaPanel label="Items" value={count} tone="info" />
+        <MediaPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

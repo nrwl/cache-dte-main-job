@@ -21,7 +21,7 @@ export interface TrackingDetailsTotals {
   archived: number;
 }
 
-export const TRACKING_DETAILS_ITEM_COUNT = 12;
+export const TRACKING_DETAILS_ITEM_COUNT = 9;
 
 export const TRACKING_DETAILS_STATUSES: ReadonlyArray<TrackingDetailsStatus> = [
   'active',

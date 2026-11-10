@@ -1,6 +1,6 @@
-import { storageAddress } from '@org/shop-util-storage-address';
-import { formatAddress } from '@org/shop-util-format-address';
-import { FormsBanner } from '@org/shop-ui-forms-banner';
+import { asyncPhone } from '@org/shop-util-async-phone';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { DataBadgeProps } from './data-badge.types';
 import { resolveDataBadgeStyle } from './data-badge-variants';
 
@@ -13,9 +13,9 @@ export function DataBadge({
   onSelect,
   children,
 }: DataBadgeProps) {
-  const formatted = value === undefined ? '' : storageAddress(value);
+  const formatted = value === undefined ? '' : asyncPhone(value);
   const style = resolveDataBadgeStyle(tone, size);
-  const ariaLabel = formatAddress(label);
+  const ariaLabel = formatCurrency(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +38,7 @@ export function DataBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FormsBanner label="Forms Banner" value={value} tone={tone} size="sm" />
+      <LayoutPanel label="Layout Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

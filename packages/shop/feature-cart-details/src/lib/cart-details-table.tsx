@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { CartDetailsItem } from './cart-details.model';
 import { CART_DETAILS_FEATURE } from './cart-details.routes';
 import {
@@ -58,7 +58,7 @@ export function CartDetailsTable({
             <td>{formatCartDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyToolbar
+              <FormsStat
                 label={item.status}
                 tone={cartDetailsStatusTone(item.status)}
                 size="sm"

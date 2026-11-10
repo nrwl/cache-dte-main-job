@@ -1,4 +1,6 @@
-import { formatCurrency } from '@org/shop-util-format-currency';
+import { mathText } from '@org/shop-util-math-text';
+import { storageNumber } from '@org/shop-util-storage-number';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyAccountDetailsTotals,
   type AccountDetailsItem,
@@ -71,13 +73,13 @@ export function sortAccountDetails(
 }
 
 export function describeAccountDetailsItem(item: AccountDetailsItem): string {
-  const amount = formatCurrency(item.amount);
-  const name = formatCurrency(item.name);
+  const amount = mathText(item.amount);
+  const name = asyncNumber(storageNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAccountDetailsAmount(amount: number): string {
-  return formatCurrency(amount);
+  return mathText(amount);
 }
 
 export function accountDetailsStatusTone(

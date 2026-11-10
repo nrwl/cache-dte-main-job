@@ -1,4 +1,6 @@
-import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
 import type { CatalogListItem } from './catalog-list.model';
 import { CATALOG_LIST_FEATURE } from './catalog-list.routes';
 import { describeCatalogListItem } from './catalog-list.utils';
@@ -36,7 +38,7 @@ export function CatalogListPanel({ selected, onClear }: CatalogListPanelProps) {
       <p className="feature-panel-description">
         {describeCatalogListItem(selected)}
       </p>
-      <FeedbackPanelGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -46,7 +48,18 @@ export function CatalogListPanel({ selected, onClear }: CatalogListPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <MediaToolbar
+          label="Media Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <FeedbackPanel
+          label="Feedback Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

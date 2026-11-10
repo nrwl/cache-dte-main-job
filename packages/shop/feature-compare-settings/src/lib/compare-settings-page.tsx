@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { OrdersListSummary } from '@org/shop-feature-orders-list';
 import { CompareSettingsFilters } from './compare-settings-filters';
 import { CompareSettingsHeader } from './compare-settings-header';
 import { CompareSettingsPanel } from './compare-settings-panel';
@@ -53,6 +54,7 @@ export function CompareSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <OrdersListSummary compact />
         </div>
       </div>
     </section>

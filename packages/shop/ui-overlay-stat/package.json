@@ -19,6 +19,9 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-format-number": "*"
+    "@org/shop-util-i18n-text": "*",
+    "@org/shop-util-format-name": "*",
+    "@org/shop-util-i18n-name": "*",
+    "@org/shop-ui-overlay-badge": "*"
   }
 }

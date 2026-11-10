@@ -1,6 +1,6 @@
-import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
-import { NavigationTile } from '@org/shop-ui-navigation-tile';
-import { MarketingTile } from '@org/shop-ui-marketing-tile';
+import { DataBadgeGroup } from '@org/shop-ui-data-badge';
+import { OverlayBadge } from '@org/shop-ui-overlay-badge';
+import { MarketingPanel } from '@org/shop-ui-marketing-panel';
 import type { ShippingDashboardItem } from './shipping-dashboard.model';
 import { SHIPPING_DASHBOARD_FEATURE } from './shipping-dashboard.routes';
 import { describeShippingDashboardItem } from './shipping-dashboard.utils';
@@ -41,7 +41,7 @@ export function ShippingDashboardPanel({
       <p className="feature-panel-description">
         {describeShippingDashboardItem(selected)}
       </p>
-      <TypographyPanelGroup
+      <DataBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function ShippingDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <NavigationTile
-          label="Navigation Tile"
+        <OverlayBadge
+          label="Overlay Badge"
           value={selected.product.rating}
           size="sm"
         />
-        <MarketingTile
-          label="Marketing Tile"
+        <MarketingPanel
+          label="Marketing Panel"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,4 +1,6 @@
-import { storageAddress } from '@org/shop-util-storage-address';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
+import { formatName } from '@org/shop-util-format-name';
 import {
   emptySubscriptionsOverviewTotals,
   type SubscriptionsOverviewItem,
@@ -76,13 +78,13 @@ export function sortSubscriptionsOverview(
 export function describeSubscriptionsOverviewItem(
   item: SubscriptionsOverviewItem,
 ): string {
-  const amount = storageAddress(item.amount);
-  const name = storageAddress(item.name);
+  const amount = validateCurrency(item.amount);
+  const name = formatName(i18nCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSubscriptionsOverviewAmount(amount: number): string {
-  return storageAddress(amount);
+  return validateCurrency(amount);
 }
 
 export function subscriptionsOverviewStatusTone(

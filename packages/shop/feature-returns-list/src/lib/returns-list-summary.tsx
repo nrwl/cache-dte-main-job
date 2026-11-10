@@ -1,4 +1,4 @@
-import { MarketingToolbarGroup } from '@org/shop-ui-marketing-toolbar';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
 import { buildReturnsListItems } from './returns-list.model';
 import { RETURNS_LIST_FEATURE } from './returns-list.routes';
 import {
@@ -29,7 +29,7 @@ export function ReturnsListSummary({
       data-testid={`${RETURNS_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{RETURNS_LIST_FEATURE.title}</h3>
-      <MarketingToolbarGroup
+      <OverlayStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

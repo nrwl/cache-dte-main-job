@@ -1,5 +1,5 @@
-import { ChartsChipGroup } from '@org/shop-ui-charts-chip';
-import { FormsCard } from '@org/shop-ui-forms-card';
+import { LayoutBadgeGroup } from '@org/shop-ui-layout-badge';
+import { CoreStat } from '@org/shop-ui-core-stat';
 import type { CatalogDashboardItem } from './catalog-dashboard.model';
 import { CATALOG_DASHBOARD_FEATURE } from './catalog-dashboard.routes';
 import { describeCatalogDashboardItem } from './catalog-dashboard.utils';
@@ -40,7 +40,7 @@ export function CatalogDashboardPanel({
       <p className="feature-panel-description">
         {describeCatalogDashboardItem(selected)}
       </p>
-      <ChartsChipGroup
+      <LayoutBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,11 +51,7 @@ export function CatalogDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsCard
-          label="Forms Card"
-          value={selected.product.rating}
-          size="sm"
-        />
+        <CoreStat label="Core Stat" value={selected.product.rating} size="sm" />
       </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (

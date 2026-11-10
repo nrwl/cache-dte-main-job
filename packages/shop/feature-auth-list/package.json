@@ -21,10 +21,12 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-forms-banner": "*",
-    "@org/shop-ui-marketing-badge": "*",
-    "@org/shop-ui-typography-tile": "*",
-    "@org/shop-ui-layout-tile": "*",
-    "@org/shop-util-validate-slug": "*"
+    "@org/shop-ui-feedback-stat": "*",
+    "@org/shop-ui-core-stat": "*",
+    "@org/shop-ui-charts-badge": "*",
+    "@org/shop-ui-feedback-toolbar": "*",
+    "@org/shop-util-math-number": "*",
+    "@org/shop-util-storage-text": "*",
+    "@org/shop-feature-wishlist-overview": "*"
   }
 }

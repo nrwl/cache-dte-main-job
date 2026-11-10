@@ -30,10 +30,13 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-navigation-list/tsconfig.lib.json"
+      "path": "../util-math-name/tsconfig.lib.json"
     },
     {
-      "path": "../util-async-currency/tsconfig.lib.json"
+      "path": "../util-validate-number/tsconfig.lib.json"
+    },
+    {
+      "path": "../util-async-phone/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

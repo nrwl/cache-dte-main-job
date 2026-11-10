@@ -1,4 +1,4 @@
-import { MarketingHeader } from '@org/shop-ui-marketing-header';
+import { NavigationBanner } from '@org/shop-ui-navigation-banner';
 import { FEEDBACK_LIST_FEATURE } from './feedback-list.routes';
 
 export interface FeedbackListHeaderProps {
@@ -26,8 +26,8 @@ export function FeedbackListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingHeader label="Items" value={count} tone="info" />
-        <MarketingHeader label="Total" value={total} tone="success" />
+        <NavigationBanner label="Items" value={count} tone="info" />
+        <NavigationBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

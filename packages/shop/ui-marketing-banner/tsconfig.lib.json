@@ -30,13 +30,13 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-i18n-text/tsconfig.lib.json"
+      "path": "../util-validate-currency/tsconfig.lib.json"
     },
     {
-      "path": "../util-async-date/tsconfig.lib.json"
+      "path": "../util-validate-number/tsconfig.lib.json"
     },
     {
-      "path": "../util-i18n-phone/tsconfig.lib.json"
+      "path": "../util-async-currency/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

@@ -25,6 +25,12 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
+      "path": "../util-collection-number/tsconfig.lib.json"
+    },
+    {
+      "path": "../util-collection-currency/tsconfig.lib.json"
+    },
+    {
       "path": "../../shared/models/tsconfig.lib.json"
     }
   ]

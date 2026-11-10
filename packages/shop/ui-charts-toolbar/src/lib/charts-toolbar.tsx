@@ -1,5 +1,6 @@
-import { storageText } from '@org/shop-util-storage-text';
-import { CoreTile } from '@org/shop-ui-core-tile';
+import { mathPhone } from '@org/shop-util-math-phone';
+import { i18nName } from '@org/shop-util-i18n-name';
+import { storagePhone } from '@org/shop-util-storage-phone';
 import type { ChartsToolbarProps } from './charts-toolbar.types';
 import { resolveChartsToolbarStyle } from './charts-toolbar-variants';
 
@@ -12,9 +13,9 @@ export function ChartsToolbar({
   onSelect,
   children,
 }: ChartsToolbarProps) {
-  const formatted = value === undefined ? '' : storageText(value);
+  const formatted = value === undefined ? '' : mathPhone(value);
   const style = resolveChartsToolbarStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = storagePhone(i18nName(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,7 +38,6 @@ export function ChartsToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreTile label="Core Tile" value={value} tone={tone} size="sm" />
     </div>
   );
 }

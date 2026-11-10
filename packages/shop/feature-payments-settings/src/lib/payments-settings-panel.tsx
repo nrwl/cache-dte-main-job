@@ -1,4 +1,5 @@
 import { CorePanelGroup } from '@org/shop-ui-core-panel';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { PaymentsSettingsItem } from './payments-settings.model';
 import { PAYMENTS_SETTINGS_FEATURE } from './payments-settings.routes';
 import { describePaymentsSettingsItem } from './payments-settings.utils';
@@ -49,7 +50,13 @@ export function PaymentsSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <ChartsBanner
+          label="Charts Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

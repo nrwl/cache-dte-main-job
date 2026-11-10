@@ -1,4 +1,4 @@
-import { validatePercent } from '@org/shop-util-validate-percent';
+import { storageText } from '@org/shop-util-storage-text';
 import {
   emptyInventoryDashboardTotals,
   type InventoryDashboardItem,
@@ -73,13 +73,13 @@ export function sortInventoryDashboard(
 export function describeInventoryDashboardItem(
   item: InventoryDashboardItem,
 ): string {
-  const amount = validatePercent(item.amount);
-  const name = validatePercent(item.name);
+  const amount = storageText(item.amount);
+  const name = storageText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatInventoryDashboardAmount(amount: number): string {
-  return validatePercent(amount);
+  return storageText(amount);
 }
 
 export function inventoryDashboardStatusTone(

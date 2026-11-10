@@ -1,6 +1,6 @@
-import { DataTileGroup } from '@org/shop-ui-data-tile';
-import { InputsChip } from '@org/shop-ui-inputs-chip';
-import { NavigationCard } from '@org/shop-ui-navigation-card';
+import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
+import { FeedbackStat } from '@org/shop-ui-feedback-stat';
+import { OverlayBanner } from '@org/shop-ui-overlay-banner';
 import type { CheckoutOverviewItem } from './checkout-overview.model';
 import { CHECKOUT_OVERVIEW_FEATURE } from './checkout-overview.routes';
 import { describeCheckoutOverviewItem } from './checkout-overview.utils';
@@ -41,7 +41,7 @@ export function CheckoutOverviewPanel({
       <p className="feature-panel-description">
         {describeCheckoutOverviewItem(selected)}
       </p>
-      <DataTileGroup
+      <ChartsBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function CheckoutOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsChip
-          label="Inputs Chip"
+        <FeedbackStat
+          label="Feedback Stat"
           value={selected.product.rating}
           size="sm"
         />
-        <NavigationCard
-          label="Navigation Card"
+        <OverlayBanner
+          label="Overlay Banner"
           value={selected.product.rating}
           size="sm"
         />

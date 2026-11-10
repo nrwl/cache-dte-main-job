@@ -1,4 +1,4 @@
-import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { MarketingStatGroup } from '@org/shop-ui-marketing-stat';
 import type { CompareDetailsItem } from './compare-details.model';
 import { COMPARE_DETAILS_FEATURE } from './compare-details.routes';
 import { describeCompareDetailsItem } from './compare-details.utils';
@@ -39,7 +39,7 @@ export function CompareDetailsPanel({
       <p className="feature-panel-description">
         {describeCompareDetailsItem(selected)}
       </p>
-      <MarketingBadgeGroup
+      <MarketingStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

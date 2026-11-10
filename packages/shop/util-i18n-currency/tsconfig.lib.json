@@ -25,10 +25,7 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-math-code/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-format-percent/tsconfig.lib.json"
+      "path": "../util-storage-phone/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

@@ -1,4 +1,4 @@
-import { DataStat } from '@org/shop-ui-data-stat';
+import { MediaBadge } from '@org/shop-ui-media-badge';
 import { PROMOTIONS_LIST_FEATURE } from './promotions-list.routes';
 
 export interface PromotionsListHeaderProps {
@@ -26,8 +26,8 @@ export function PromotionsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataStat label="Items" value={count} tone="info" />
-        <DataStat label="Total" value={total} tone="success" />
+        <MediaBadge label="Items" value={count} tone="info" />
+        <MediaBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

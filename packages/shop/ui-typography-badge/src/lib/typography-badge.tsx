@@ -1,5 +1,4 @@
-import { collectionDate } from '@org/shop-util-collection-date';
-import { MediaTile } from '@org/shop-ui-media-tile';
+import { collectionText } from '@org/shop-util-collection-text';
 import type { TypographyBadgeProps } from './typography-badge.types';
 import { resolveTypographyBadgeStyle } from './typography-badge-variants';
 
@@ -12,7 +11,7 @@ export function TypographyBadge({
   onSelect,
   children,
 }: TypographyBadgeProps) {
-  const formatted = value === undefined ? '' : collectionDate(value);
+  const formatted = value === undefined ? '' : collectionText(value);
   const style = resolveTypographyBadgeStyle(tone, size);
   const ariaLabel = label;
 
@@ -37,7 +36,6 @@ export function TypographyBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <MediaTile label="Media Tile" value={value} tone={tone} size="sm" />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { DataCard } from '@org/shop-ui-data-card';
+import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
 import { AUTH_DETAILS_FEATURE } from './auth-details.routes';
 
 export interface AuthDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function AuthDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataCard label="Items" value={count} tone="info" />
-        <DataCard label="Total" value={total} tone="success" />
+        <MarketingToolbar label="Items" value={count} tone="info" />
+        <MarketingToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

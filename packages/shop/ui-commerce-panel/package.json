@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-validate-percent": "*",
-    "@org/shop-util-i18n-number": "*"
+    "@org/shop-util-async-number": "*",
+    "@org/shop-ui-data-toolbar": "*"
   }
 }

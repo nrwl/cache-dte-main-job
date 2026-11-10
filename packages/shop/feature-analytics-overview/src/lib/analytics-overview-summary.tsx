@@ -1,4 +1,4 @@
-import { CommerceListGroup } from '@org/shop-ui-commerce-list';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildAnalyticsOverviewItems } from './analytics-overview.model';
 import { ANALYTICS_OVERVIEW_FEATURE } from './analytics-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function AnalyticsOverviewSummary({
       <h3 className="feature-summary-title">
         {ANALYTICS_OVERVIEW_FEATURE.title}
       </h3>
-      <CommerceListGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

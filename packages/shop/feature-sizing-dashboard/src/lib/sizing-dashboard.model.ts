@@ -21,7 +21,7 @@ export interface SizingDashboardTotals {
   archived: number;
 }
 
-export const SIZING_DASHBOARD_ITEM_COUNT = 9;
+export const SIZING_DASHBOARD_ITEM_COUNT = 12;
 
 export const SIZING_DASHBOARD_STATUSES: ReadonlyArray<SizingDashboardStatus> = [
   'active',

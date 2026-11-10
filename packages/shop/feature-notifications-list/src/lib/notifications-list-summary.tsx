@@ -1,4 +1,4 @@
-import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
+import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
 import { buildNotificationsListItems } from './notifications-list.model';
 import { NOTIFICATIONS_LIST_FEATURE } from './notifications-list.routes';
 import {
@@ -31,7 +31,7 @@ export function NotificationsListSummary({
       <h3 className="feature-summary-title">
         {NOTIFICATIONS_LIST_FEATURE.title}
       </h3>
-      <NavigationBadgeGroup
+      <TypographyPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

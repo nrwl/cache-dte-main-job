@@ -1,4 +1,4 @@
-import { LayoutTileGroup } from '@org/shop-ui-layout-tile';
+import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
 import { buildSupportOverviewItems } from './support-overview.model';
 import { SUPPORT_OVERVIEW_FEATURE } from './support-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function SupportOverviewSummary({
       <h3 className="feature-summary-title">
         {SUPPORT_OVERVIEW_FEATURE.title}
       </h3>
-      <LayoutTileGroup
+      <CommerceBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

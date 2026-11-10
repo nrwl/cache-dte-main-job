@@ -1,5 +1,7 @@
-import { storageNumber } from '@org/shop-util-storage-number';
-import { FormsChip } from '@org/shop-ui-forms-chip';
+import { collectionPhone } from '@org/shop-util-collection-phone';
+import { storageCurrency } from '@org/shop-util-storage-currency';
+import { formatText } from '@org/shop-util-format-text';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { FeedbackBadgeProps } from './feedback-badge.types';
 import { resolveFeedbackBadgeStyle } from './feedback-badge-variants';
 
@@ -12,9 +14,9 @@ export function FeedbackBadge({
   onSelect,
   children,
 }: FeedbackBadgeProps) {
-  const formatted = value === undefined ? '' : storageNumber(value);
+  const formatted = value === undefined ? '' : collectionPhone(value);
   const style = resolveFeedbackBadgeStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = formatText(storageCurrency(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,7 +39,7 @@ export function FeedbackBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FormsChip label="Forms Chip" value={value} tone={tone} size="sm" />
+      <LayoutPanel label="Layout Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

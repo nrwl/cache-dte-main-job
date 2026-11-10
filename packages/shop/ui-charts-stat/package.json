@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-i18n-date": "*"
+    "@org/shop-util-math-text": "*",
+    "@org/shop-ui-layout-panel": "*"
   }
 }

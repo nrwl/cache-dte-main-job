@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-collection-date": "*",
-    "@org/shop-ui-media-tile": "*"
+    "@org/shop-util-collection-text": "*"
   }
 }

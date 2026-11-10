@@ -21,7 +21,7 @@ export interface OrdersDashboardTotals {
   archived: number;
 }
 
-export const ORDERS_DASHBOARD_ITEM_COUNT = 6;
+export const ORDERS_DASHBOARD_ITEM_COUNT = 12;
 
 export const ORDERS_DASHBOARD_STATUSES: ReadonlyArray<OrdersDashboardStatus> = [
   'active',

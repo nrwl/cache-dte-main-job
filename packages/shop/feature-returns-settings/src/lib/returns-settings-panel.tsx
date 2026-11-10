@@ -1,5 +1,4 @@
-import { LayoutCardGroup } from '@org/shop-ui-layout-card';
-import { CoreList } from '@org/shop-ui-core-list';
+import { OverlayPanelGroup } from '@org/shop-ui-overlay-panel';
 import type { ReturnsSettingsItem } from './returns-settings.model';
 import { RETURNS_SETTINGS_FEATURE } from './returns-settings.routes';
 import { describeReturnsSettingsItem } from './returns-settings.utils';
@@ -40,7 +39,7 @@ export function ReturnsSettingsPanel({
       <p className="feature-panel-description">
         {describeReturnsSettingsItem(selected)}
       </p>
-      <LayoutCardGroup
+      <OverlayPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,9 +49,7 @@ export function ReturnsSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CoreList label="Core List" value={selected.product.rating} size="sm" />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

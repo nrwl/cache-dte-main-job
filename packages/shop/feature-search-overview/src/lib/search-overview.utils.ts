@@ -1,6 +1,5 @@
-import { validateDate } from '@org/shop-util-validate-date';
-import { i18nCurrency } from '@org/shop-util-i18n-currency';
-import { formatName } from '@org/shop-util-format-name';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptySearchOverviewTotals,
   type SearchOverviewItem,
@@ -73,13 +72,13 @@ export function sortSearchOverview(
 }
 
 export function describeSearchOverviewItem(item: SearchOverviewItem): string {
-  const amount = validateDate(item.amount);
-  const name = formatName(i18nCurrency(item.name));
+  const amount = validateCurrency(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSearchOverviewAmount(amount: number): string {
-  return validateDate(amount);
+  return validateCurrency(amount);
 }
 
 export function searchOverviewStatusTone(

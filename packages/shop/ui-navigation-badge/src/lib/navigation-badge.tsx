@@ -1,7 +1,7 @@
+import { formatNumber } from '@org/shop-util-format-number';
+import { asyncName } from '@org/shop-util-async-name';
 import { i18nNumber } from '@org/shop-util-i18n-number';
-import { storageCode } from '@org/shop-util-storage-code';
-import { validateSlug } from '@org/shop-util-validate-slug';
-import { LayoutChip } from '@org/shop-ui-layout-chip';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { NavigationBadgeProps } from './navigation-badge.types';
 import { resolveNavigationBadgeStyle } from './navigation-badge-variants';
 
@@ -14,9 +14,9 @@ export function NavigationBadge({
   onSelect,
   children,
 }: NavigationBadgeProps) {
-  const formatted = value === undefined ? '' : i18nNumber(value);
+  const formatted = value === undefined ? '' : formatNumber(value);
   const style = resolveNavigationBadgeStyle(tone, size);
-  const ariaLabel = validateSlug(storageCode(label));
+  const ariaLabel = i18nNumber(asyncName(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +39,12 @@ export function NavigationBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <LayoutChip label="Layout Chip" value={value} tone={tone} size="sm" />
+      <FeedbackBanner
+        label="Feedback Banner"
+        value={value}
+        tone={tone}
+        size="sm"
+      />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { AccountEditorSummary } from '@org/shop-feature-account-editor';
+import { WishlistDetailsSummary } from '@org/shop-feature-wishlist-details';
 import { AddressesDetailsFilters } from './addresses-details-filters';
 import { AddressesDetailsHeader } from './addresses-details-header';
 import { AddressesDetailsPanel } from './addresses-details-panel';
@@ -54,7 +54,7 @@ export function AddressesDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <AccountEditorSummary compact />
+          <WishlistDetailsSummary compact />
         </div>
       </div>
     </section>

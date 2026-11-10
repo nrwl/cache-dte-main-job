@@ -1,4 +1,4 @@
-import { LayoutCard } from '@org/shop-ui-layout-card';
+import { MediaStat } from '@org/shop-ui-media-stat';
 import type { BundlesDetailsItem } from './bundles-details.model';
 import { BUNDLES_DETAILS_FEATURE } from './bundles-details.routes';
 import {
@@ -58,7 +58,7 @@ export function BundlesDetailsTable({
             <td>{formatBundlesDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutCard
+              <MediaStat
                 label={item.status}
                 tone={bundlesDetailsStatusTone(item.status)}
                 size="sm"

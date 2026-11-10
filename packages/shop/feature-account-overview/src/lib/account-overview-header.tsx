@@ -1,4 +1,4 @@
-import { DataStat } from '@org/shop-ui-data-stat';
+import { FormsBadge } from '@org/shop-ui-forms-badge';
 import { ACCOUNT_OVERVIEW_FEATURE } from './account-overview.routes';
 
 export interface AccountOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function AccountOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataStat label="Items" value={count} tone="info" />
-        <DataStat label="Total" value={total} tone="success" />
+        <FormsBadge label="Items" value={count} tone="info" />
+        <FormsBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { FeedbackCard } from '@org/shop-ui-feedback-card';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { TrackingDetailsItem } from './tracking-details.model';
 import { TRACKING_DETAILS_FEATURE } from './tracking-details.routes';
 import {
@@ -58,7 +58,7 @@ export function TrackingDetailsTable({
             <td>{formatTrackingDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackCard
+              <CommerceBadge
                 label={item.status}
                 tone={trackingDetailsStatusTone(item.status)}
                 size="sm"

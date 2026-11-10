@@ -1,4 +1,4 @@
-import { NavigationHeader } from '@org/shop-ui-navigation-header';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { CatalogOverviewItem } from './catalog-overview.model';
 import { CATALOG_OVERVIEW_FEATURE } from './catalog-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function CatalogOverviewTable({
             <td>{formatCatalogOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationHeader
+              <MediaToolbar
                 label={item.status}
                 tone={catalogOverviewStatusTone(item.status)}
                 size="sm"

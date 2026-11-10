@@ -1,4 +1,4 @@
-import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
+import { OverlayBadgeGroup } from '@org/shop-ui-overlay-badge';
 import { buildOrdersSettingsItems } from './orders-settings.model';
 import { ORDERS_SETTINGS_FEATURE } from './orders-settings.routes';
 import {
@@ -29,7 +29,7 @@ export function OrdersSettingsSummary({
       data-testid={`${ORDERS_SETTINGS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{ORDERS_SETTINGS_FEATURE.title}</h3>
-      <TypographyToolbarGroup
+      <OverlayBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

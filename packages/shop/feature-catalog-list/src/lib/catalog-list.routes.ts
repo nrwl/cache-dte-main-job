@@ -19,7 +19,7 @@ export const CATALOG_LIST_FEATURE: FeatureMeta = {
   testId: CATALOG_LIST_TEST_ID,
   domain: 'catalog',
   kind: 'list',
-  itemCount: 8,
+  itemCount: 5,
 };
 
 export function catalogListItemPath(itemId: string): string {

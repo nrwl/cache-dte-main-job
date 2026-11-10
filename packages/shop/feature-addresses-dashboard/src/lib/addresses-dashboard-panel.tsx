@@ -1,6 +1,6 @@
-import { FeedbackBannerGroup } from '@org/shop-ui-feedback-banner';
-import { OverlayBadge } from '@org/shop-ui-overlay-badge';
-import { DataCard } from '@org/shop-ui-data-card';
+import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
+import { CoreBadge } from '@org/shop-ui-core-badge';
+import { CoreStat } from '@org/shop-ui-core-stat';
 import type { AddressesDashboardItem } from './addresses-dashboard.model';
 import { ADDRESSES_DASHBOARD_FEATURE } from './addresses-dashboard.routes';
 import { describeAddressesDashboardItem } from './addresses-dashboard.utils';
@@ -41,7 +41,7 @@ export function AddressesDashboardPanel({
       <p className="feature-panel-description">
         {describeAddressesDashboardItem(selected)}
       </p>
-      <FeedbackBannerGroup
+      <TypographyPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,12 +52,12 @@ export function AddressesDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <OverlayBadge
-          label="Overlay Badge"
+        <CoreBadge
+          label="Core Badge"
           value={selected.product.rating}
           size="sm"
         />
-        <DataCard label="Data Card" value={selected.product.rating} size="sm" />
+        <CoreStat label="Core Stat" value={selected.product.rating} size="sm" />
       </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (

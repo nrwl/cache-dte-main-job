@@ -1,4 +1,4 @@
-import { storageDate } from '@org/shop-util-storage-date';
+import { asyncText } from '@org/shop-util-async-text';
 import {
   emptyCartDashboardTotals,
   type CartDashboardItem,
@@ -70,13 +70,13 @@ export function sortCartDashboard(
 }
 
 export function describeCartDashboardItem(item: CartDashboardItem): string {
-  const amount = storageDate(item.amount);
-  const name = storageDate(item.name);
+  const amount = asyncText(item.amount);
+  const name = asyncText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCartDashboardAmount(amount: number): string {
-  return storageDate(amount);
+  return asyncText(amount);
 }
 
 export function cartDashboardStatusTone(

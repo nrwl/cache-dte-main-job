@@ -30,25 +30,25 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../feature-shipping-summary/tsconfig.lib.json"
+      "path": "../feature-cart-settings/tsconfig.lib.json"
     },
     {
-      "path": "../util-math-phone/tsconfig.lib.json"
+      "path": "../util-collection-number/tsconfig.lib.json"
     },
     {
-      "path": "../ui-navigation-stat/tsconfig.lib.json"
+      "path": "../util-collection-text/tsconfig.lib.json"
     },
     {
-      "path": "../ui-charts-badge/tsconfig.lib.json"
+      "path": "../ui-commerce-banner/tsconfig.lib.json"
     },
     {
-      "path": "../ui-commerce-list/tsconfig.lib.json"
+      "path": "../ui-commerce-stat/tsconfig.lib.json"
     },
     {
-      "path": "../ui-inputs-list/tsconfig.lib.json"
+      "path": "../ui-commerce-toolbar/tsconfig.lib.json"
     },
     {
-      "path": "../ui-navigation-panel/tsconfig.lib.json"
+      "path": "../ui-data-badge/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

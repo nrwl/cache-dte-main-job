@@ -1,4 +1,4 @@
-import { DataTile } from '@org/shop-ui-data-tile';
+import { TypographyPanel } from '@org/shop-ui-typography-panel';
 import type { CompareSettingsItem } from './compare-settings.model';
 import { COMPARE_SETTINGS_FEATURE } from './compare-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function CompareSettingsTable({
             <td>{formatCompareSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataTile
+              <TypographyPanel
                 label={item.status}
                 tone={compareSettingsStatusTone(item.status)}
                 size="sm"

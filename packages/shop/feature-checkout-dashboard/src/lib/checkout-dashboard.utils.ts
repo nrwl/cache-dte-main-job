@@ -1,6 +1,6 @@
-import { i18nAddress } from '@org/shop-util-i18n-address';
-import { asyncCode } from '@org/shop-util-async-code';
-import { collectionPhone } from '@org/shop-util-collection-phone';
+import { validateName } from '@org/shop-util-validate-name';
+import { validatePhone } from '@org/shop-util-validate-phone';
+import { collectionNumber } from '@org/shop-util-collection-number';
 import {
   emptyCheckoutDashboardTotals,
   type CheckoutDashboardItem,
@@ -75,13 +75,13 @@ export function sortCheckoutDashboard(
 export function describeCheckoutDashboardItem(
   item: CheckoutDashboardItem,
 ): string {
-  const amount = i18nAddress(item.amount);
-  const name = collectionPhone(asyncCode(item.name));
+  const amount = validateName(item.amount);
+  const name = collectionNumber(validatePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCheckoutDashboardAmount(amount: number): string {
-  return i18nAddress(amount);
+  return validateName(amount);
 }
 
 export function checkoutDashboardStatusTone(

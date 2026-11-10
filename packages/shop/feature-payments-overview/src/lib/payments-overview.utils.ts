@@ -1,5 +1,5 @@
-import { i18nPhone } from '@org/shop-util-i18n-phone';
-import { storageNumber } from '@org/shop-util-storage-number';
+import { formatText } from '@org/shop-util-format-text';
+import { storageCurrency } from '@org/shop-util-storage-currency';
 import {
   emptyPaymentsOverviewTotals,
   type PaymentsOverviewItem,
@@ -74,13 +74,13 @@ export function sortPaymentsOverview(
 export function describePaymentsOverviewItem(
   item: PaymentsOverviewItem,
 ): string {
-  const amount = i18nPhone(item.amount);
-  const name = storageNumber(item.name);
+  const amount = formatText(item.amount);
+  const name = storageCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPaymentsOverviewAmount(amount: number): string {
-  return i18nPhone(amount);
+  return formatText(amount);
 }
 
 export function paymentsOverviewStatusTone(

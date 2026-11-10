@@ -1,4 +1,4 @@
-import { LayoutList } from '@org/shop-ui-layout-list';
+import { LayoutBanner } from '@org/shop-ui-layout-banner';
 import { SHIPPING_DETAILS_FEATURE } from './shipping-details.routes';
 
 export interface ShippingDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function ShippingDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutList label="Items" value={count} tone="info" />
-        <LayoutList label="Total" value={total} tone="success" />
+        <LayoutBanner label="Items" value={count} tone="info" />
+        <LayoutBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -21,7 +21,7 @@ export interface CatalogOverviewTotals {
   archived: number;
 }
 
-export const CATALOG_OVERVIEW_ITEM_COUNT = 11;
+export const CATALOG_OVERVIEW_ITEM_COUNT = 6;
 
 export const CATALOG_OVERVIEW_STATUSES: ReadonlyArray<CatalogOverviewStatus> = [
   'active',

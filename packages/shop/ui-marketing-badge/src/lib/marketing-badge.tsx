@@ -1,7 +1,7 @@
-import { formatPhone } from '@org/shop-util-format-phone';
-import { validateAddress } from '@org/shop-util-validate-address';
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { storageName } from '@org/shop-util-storage-name';
+import { validateText } from '@org/shop-util-validate-text';
+import { MediaStat } from '@org/shop-ui-media-stat';
 import type { MarketingBadgeProps } from './marketing-badge.types';
 import { resolveMarketingBadgeStyle } from './marketing-badge-variants';
 
@@ -14,9 +14,9 @@ export function MarketingBadge({
   onSelect,
   children,
 }: MarketingBadgeProps) {
-  const formatted = value === undefined ? '' : formatPhone(value);
+  const formatted = value === undefined ? '' : i18nNumber(value);
   const style = resolveMarketingBadgeStyle(tone, size);
-  const ariaLabel = validatePhone(validateAddress(label));
+  const ariaLabel = validateText(storageName(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +39,7 @@ export function MarketingBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CommerceStat label="Commerce Stat" value={value} tone={tone} size="sm" />
+      <MediaStat label="Media Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

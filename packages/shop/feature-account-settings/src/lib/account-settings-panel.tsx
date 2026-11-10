@@ -1,6 +1,4 @@
-import { CommerceChipGroup } from '@org/shop-ui-commerce-chip';
-import { MediaToolbar } from '@org/shop-ui-media-toolbar';
-import { MediaHeader } from '@org/shop-ui-media-header';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
 import type { AccountSettingsItem } from './account-settings.model';
 import { ACCOUNT_SETTINGS_FEATURE } from './account-settings.routes';
 import { describeAccountSettingsItem } from './account-settings.utils';
@@ -41,7 +39,7 @@ export function AccountSettingsPanel({
       <p className="feature-panel-description">
         {describeAccountSettingsItem(selected)}
       </p>
-      <CommerceChipGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function AccountSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MediaToolbar
-          label="Media Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <MediaHeader
-          label="Media Header"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

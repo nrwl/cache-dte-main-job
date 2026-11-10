@@ -1,5 +1,5 @@
-import { formatPercent } from '@org/shop-util-format-percent';
-import { collectionName } from '@org/shop-util-collection-name';
+import { validatePhone } from '@org/shop-util-validate-phone';
+import { asyncText } from '@org/shop-util-async-text';
 import {
   emptySupportDashboardTotals,
   type SupportDashboardItem,
@@ -74,13 +74,13 @@ export function sortSupportDashboard(
 export function describeSupportDashboardItem(
   item: SupportDashboardItem,
 ): string {
-  const amount = formatPercent(item.amount);
-  const name = collectionName(item.name);
+  const amount = validatePhone(item.amount);
+  const name = asyncText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSupportDashboardAmount(amount: number): string {
-  return formatPercent(amount);
+  return validatePhone(amount);
 }
 
 export function supportDashboardStatusTone(

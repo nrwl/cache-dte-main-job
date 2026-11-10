@@ -1,4 +1,5 @@
-import { DataBannerGroup } from '@org/shop-ui-data-banner';
+import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
+import { MarketingStat } from '@org/shop-ui-marketing-stat';
 import type { TrackingListItem } from './tracking-list.model';
 import { TRACKING_LIST_FEATURE } from './tracking-list.routes';
 import { describeTrackingListItem } from './tracking-list.utils';
@@ -39,7 +40,7 @@ export function TrackingListPanel({
       <p className="feature-panel-description">
         {describeTrackingListItem(selected)}
       </p>
-      <DataBannerGroup
+      <NavigationBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function TrackingListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <MarketingStat
+          label="Marketing Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

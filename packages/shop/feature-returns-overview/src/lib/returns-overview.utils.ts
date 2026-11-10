@@ -1,5 +1,5 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
-import { storageDate } from '@org/shop-util-storage-date';
+import { mathPhone } from '@org/shop-util-math-phone';
+import { i18nName } from '@org/shop-util-i18n-name';
 import {
   emptyReturnsOverviewTotals,
   type ReturnsOverviewItem,
@@ -72,13 +72,13 @@ export function sortReturnsOverview(
 }
 
 export function describeReturnsOverviewItem(item: ReturnsOverviewItem): string {
-  const amount = validateCurrency(item.amount);
-  const name = storageDate(item.name);
+  const amount = mathPhone(item.amount);
+  const name = i18nName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReturnsOverviewAmount(amount: number): string {
-  return validateCurrency(amount);
+  return mathPhone(amount);
 }
 
 export function returnsOverviewStatusTone(

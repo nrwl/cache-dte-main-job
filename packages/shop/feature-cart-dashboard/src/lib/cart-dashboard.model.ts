@@ -21,7 +21,7 @@ export interface CartDashboardTotals {
   archived: number;
 }
 
-export const CART_DASHBOARD_ITEM_COUNT = 6;
+export const CART_DASHBOARD_ITEM_COUNT = 5;
 
 export const CART_DASHBOARD_STATUSES: ReadonlyArray<CartDashboardStatus> = [
   'active',

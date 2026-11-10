@@ -1,4 +1,4 @@
-import { FeedbackCard } from '@org/shop-ui-feedback-card';
+import { DataBanner } from '@org/shop-ui-data-banner';
 import type { AuthDetailsItem } from './auth-details.model';
 import { AUTH_DETAILS_FEATURE } from './auth-details.routes';
 import {
@@ -58,7 +58,7 @@ export function AuthDetailsTable({
             <td>{formatAuthDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackCard
+              <DataBanner
                 label={item.status}
                 tone={authDetailsStatusTone(item.status)}
                 size="sm"

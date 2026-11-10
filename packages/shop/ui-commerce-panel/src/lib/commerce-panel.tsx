@@ -1,5 +1,5 @@
-import { validatePercent } from '@org/shop-util-validate-percent';
-import { i18nNumber } from '@org/shop-util-i18n-number';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { DataToolbar } from '@org/shop-ui-data-toolbar';
 import type { CommercePanelProps } from './commerce-panel.types';
 import { resolveCommercePanelStyle } from './commerce-panel-variants';
 
@@ -12,9 +12,9 @@ export function CommercePanel({
   onSelect,
   children,
 }: CommercePanelProps) {
-  const formatted = value === undefined ? '' : validatePercent(value);
+  const formatted = value === undefined ? '' : asyncNumber(value);
   const style = resolveCommercePanelStyle(tone, size);
-  const ariaLabel = i18nNumber(label);
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,6 +37,7 @@ export function CommercePanel({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <DataToolbar label="Data Toolbar" value={value} tone={tone} size="sm" />
     </div>
   );
 }

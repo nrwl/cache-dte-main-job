@@ -1,4 +1,7 @@
-import { formatNumber } from '@org/shop-util-format-number';
+import { i18nText } from '@org/shop-util-i18n-text';
+import { formatName } from '@org/shop-util-format-name';
+import { i18nName } from '@org/shop-util-i18n-name';
+import { OverlayBadge } from '@org/shop-ui-overlay-badge';
 import type { OverlayStatProps } from './overlay-stat.types';
 import { resolveOverlayStatStyle } from './overlay-stat-variants';
 
@@ -11,9 +14,9 @@ export function OverlayStat({
   onSelect,
   children,
 }: OverlayStatProps) {
-  const formatted = value === undefined ? '' : formatNumber(value);
+  const formatted = value === undefined ? '' : i18nText(value);
   const style = resolveOverlayStatStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = i18nName(formatName(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -36,6 +39,7 @@ export function OverlayStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <OverlayBadge label="Overlay Badge" value={value} tone={tone} size="sm" />
     </div>
   );
 }

@@ -1,5 +1,5 @@
-import { storageCurrency } from '@org/shop-util-storage-currency';
-import { asyncPhone } from '@org/shop-util-async-phone';
+import { validateNumber } from '@org/shop-util-validate-number';
+import { asyncCurrency } from '@org/shop-util-async-currency';
 import {
   emptyBundlesDetailsTotals,
   type BundlesDetailsItem,
@@ -72,13 +72,13 @@ export function sortBundlesDetails(
 }
 
 export function describeBundlesDetailsItem(item: BundlesDetailsItem): string {
-  const amount = storageCurrency(item.amount);
-  const name = asyncPhone(item.name);
+  const amount = validateNumber(item.amount);
+  const name = asyncCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatBundlesDetailsAmount(amount: number): string {
-  return storageCurrency(amount);
+  return validateNumber(amount);
 }
 
 export function bundlesDetailsStatusTone(

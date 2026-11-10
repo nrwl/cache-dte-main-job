@@ -1,6 +1,6 @@
-import { i18nPercent } from '@org/shop-util-i18n-percent';
-import { formatPhone } from '@org/shop-util-format-phone';
-import { i18nDate } from '@org/shop-util-i18n-date';
+import { mathName } from '@org/shop-util-math-name';
+import { validateNumber } from '@org/shop-util-validate-number';
+import { storageText } from '@org/shop-util-storage-text';
 import type { CoreBadgeProps } from './core-badge.types';
 import { resolveCoreBadgeStyle } from './core-badge-variants';
 
@@ -13,9 +13,9 @@ export function CoreBadge({
   onSelect,
   children,
 }: CoreBadgeProps) {
-  const formatted = value === undefined ? '' : i18nPercent(value);
+  const formatted = value === undefined ? '' : mathName(value);
   const style = resolveCoreBadgeStyle(tone, size);
-  const ariaLabel = i18nDate(formatPhone(label));
+  const ariaLabel = storageText(validateNumber(label));
 
   const handleClick = () => {
     if (onSelect) {

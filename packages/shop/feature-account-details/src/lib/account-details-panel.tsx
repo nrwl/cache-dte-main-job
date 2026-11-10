@@ -1,6 +1,6 @@
-import { MediaStatGroup } from '@org/shop-ui-media-stat';
-import { FormsToolbar } from '@org/shop-ui-forms-toolbar';
-import { NavigationCard } from '@org/shop-ui-navigation-card';
+import { CoreStatGroup } from '@org/shop-ui-core-stat';
+import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { CommerceStat } from '@org/shop-ui-commerce-stat';
 import type { AccountDetailsItem } from './account-details.model';
 import { ACCOUNT_DETAILS_FEATURE } from './account-details.routes';
 import { describeAccountDetailsItem } from './account-details.utils';
@@ -41,7 +41,7 @@ export function AccountDetailsPanel({
       <p className="feature-panel-description">
         {describeAccountDetailsItem(selected)}
       </p>
-      <MediaStatGroup
+      <CoreStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function AccountDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsToolbar
-          label="Forms Toolbar"
+        <LayoutBanner
+          label="Layout Banner"
           value={selected.product.rating}
           size="sm"
         />
-        <NavigationCard
-          label="Navigation Card"
+        <CommerceStat
+          label="Commerce Stat"
           value={selected.product.rating}
           size="sm"
         />

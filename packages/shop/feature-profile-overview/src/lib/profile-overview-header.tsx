@@ -1,4 +1,4 @@
-import { InputsChip } from '@org/shop-ui-inputs-chip';
+import { DataStat } from '@org/shop-ui-data-stat';
 import { PROFILE_OVERVIEW_FEATURE } from './profile-overview.routes';
 
 export interface ProfileOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function ProfileOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <InputsChip label="Items" value={count} tone="info" />
-        <InputsChip label="Total" value={total} tone="success" />
+        <DataStat label="Items" value={count} tone="info" />
+        <DataStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

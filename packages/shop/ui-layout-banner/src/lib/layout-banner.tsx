@@ -1,6 +1,6 @@
-import { formatDate } from '@org/shop-util-format-date';
-import { collectionAddress } from '@org/shop-util-collection-address';
-import { formatText } from '@org/shop-util-format-text';
+import { storageName } from '@org/shop-util-storage-name';
+import { storageText } from '@org/shop-util-storage-text';
+import { CoreStat } from '@org/shop-ui-core-stat';
 import type { LayoutBannerProps } from './layout-banner.types';
 import { resolveLayoutBannerStyle } from './layout-banner-variants';
 
@@ -13,9 +13,9 @@ export function LayoutBanner({
   onSelect,
   children,
 }: LayoutBannerProps) {
-  const formatted = value === undefined ? '' : formatDate(value);
+  const formatted = value === undefined ? '' : storageName(value);
   const style = resolveLayoutBannerStyle(tone, size);
-  const ariaLabel = formatText(collectionAddress(label));
+  const ariaLabel = storageText(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,6 +38,7 @@ export function LayoutBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <CoreStat label="Core Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

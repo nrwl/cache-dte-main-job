@@ -1,4 +1,5 @@
-import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
+import { FormsBannerGroup } from '@org/shop-ui-forms-banner';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { SubscriptionsListItem } from './subscriptions-list.model';
 import { SUBSCRIPTIONS_LIST_FEATURE } from './subscriptions-list.routes';
 import { describeSubscriptionsListItem } from './subscriptions-list.utils';
@@ -39,7 +40,7 @@ export function SubscriptionsListPanel({
       <p className="feature-panel-description">
         {describeSubscriptionsListItem(selected)}
       </p>
-      <TypographyPanelGroup
+      <FormsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function SubscriptionsListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <InputsPanel
+          label="Inputs Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

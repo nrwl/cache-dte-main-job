@@ -1,4 +1,4 @@
-import { CoreStat } from '@org/shop-ui-core-stat';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { NotificationsDetailsItem } from './notifications-details.model';
 import { NOTIFICATIONS_DETAILS_FEATURE } from './notifications-details.routes';
 import {
@@ -58,7 +58,7 @@ export function NotificationsDetailsTable({
             <td>{formatNotificationsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreStat
+              <MediaToolbar
                 label={item.status}
                 tone={notificationsDetailsStatusTone(item.status)}
                 size="sm"

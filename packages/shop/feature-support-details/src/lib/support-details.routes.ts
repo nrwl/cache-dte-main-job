@@ -19,7 +19,7 @@ export const SUPPORT_DETAILS_FEATURE: FeatureMeta = {
   testId: SUPPORT_DETAILS_TEST_ID,
   domain: 'support',
   kind: 'details',
-  itemCount: 6,
+  itemCount: 7,
 };
 
 export function supportDetailsItemPath(itemId: string): string {

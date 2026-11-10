@@ -1,5 +1,4 @@
-import { collectionNumber } from '@org/shop-util-collection-number';
-import { validateText } from '@org/shop-util-validate-text';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyCartDetailsTotals,
   type CartDetailsItem,
@@ -71,13 +70,13 @@ export function sortCartDetails(
 }
 
 export function describeCartDetailsItem(item: CartDetailsItem): string {
-  const amount = collectionNumber(item.amount);
-  const name = validateText(item.name);
+  const amount = mathName(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCartDetailsAmount(amount: number): string {
-  return collectionNumber(amount);
+  return mathName(amount);
 }
 
 export function cartDetailsStatusTone(

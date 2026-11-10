@@ -1,4 +1,4 @@
-import { CoreBadge } from '@org/shop-ui-core-badge';
+import { MarketingBanner } from '@org/shop-ui-marketing-banner';
 import { REVIEWS_DETAILS_FEATURE } from './reviews-details.routes';
 
 export interface ReviewsDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function ReviewsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreBadge label="Items" value={count} tone="info" />
-        <CoreBadge label="Total" value={total} tone="success" />
+        <MarketingBanner label="Items" value={count} tone="info" />
+        <MarketingBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

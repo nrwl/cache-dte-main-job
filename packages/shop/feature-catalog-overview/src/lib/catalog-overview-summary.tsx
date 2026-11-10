@@ -1,4 +1,4 @@
-import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildCatalogOverviewItems } from './catalog-overview.model';
 import { CATALOG_OVERVIEW_FEATURE } from './catalog-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function CatalogOverviewSummary({
       <h3 className="feature-summary-title">
         {CATALOG_OVERVIEW_FEATURE.title}
       </h3>
-      <TypographyBannerGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

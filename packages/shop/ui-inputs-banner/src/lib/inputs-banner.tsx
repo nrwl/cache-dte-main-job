@@ -1,5 +1,5 @@
-import { i18nSlug } from '@org/shop-util-i18n-slug';
-import { storagePercent } from '@org/shop-util-storage-percent';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { MediaBadge } from '@org/shop-ui-media-badge';
 import type { InputsBannerProps } from './inputs-banner.types';
 import { resolveInputsBannerStyle } from './inputs-banner-variants';
 
@@ -12,9 +12,9 @@ export function InputsBanner({
   onSelect,
   children,
 }: InputsBannerProps) {
-  const formatted = value === undefined ? '' : i18nSlug(value);
+  const formatted = value === undefined ? '' : formatPhone(value);
   const style = resolveInputsBannerStyle(tone, size);
-  const ariaLabel = storagePercent(label);
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,6 +37,7 @@ export function InputsBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <MediaBadge label="Media Badge" value={value} tone={tone} size="sm" />
     </div>
   );
 }

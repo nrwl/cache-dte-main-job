@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { PromotionsListSummary } from '@org/shop-feature-promotions-list';
 import { SupportDetailsFilters } from './support-details-filters';
 import { SupportDetailsHeader } from './support-details-header';
 import { SupportDetailsPanel } from './support-details-panel';
@@ -53,6 +54,7 @@ export function SupportDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <PromotionsListSummary compact />
         </div>
       </div>
     </section>

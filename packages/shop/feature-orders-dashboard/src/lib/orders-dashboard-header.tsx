@@ -1,4 +1,4 @@
-import { OverlayBadge } from '@org/shop-ui-overlay-badge';
+import { NavigationBadge } from '@org/shop-ui-navigation-badge';
 import { ORDERS_DASHBOARD_FEATURE } from './orders-dashboard.routes';
 
 export interface OrdersDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function OrdersDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <OverlayBadge label="Items" value={count} tone="info" />
-        <OverlayBadge label="Total" value={total} tone="success" />
+        <NavigationBadge label="Items" value={count} tone="info" />
+        <NavigationBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

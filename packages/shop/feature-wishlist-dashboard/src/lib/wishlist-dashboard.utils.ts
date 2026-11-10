@@ -1,5 +1,6 @@
-import { asyncSlug } from '@org/shop-util-async-slug';
-import { formatName } from '@org/shop-util-format-name';
+import { formatNumber } from '@org/shop-util-format-number';
+import { formatText } from '@org/shop-util-format-text';
+import { validateName } from '@org/shop-util-validate-name';
 import {
   emptyWishlistDashboardTotals,
   type WishlistDashboardItem,
@@ -74,13 +75,13 @@ export function sortWishlistDashboard(
 export function describeWishlistDashboardItem(
   item: WishlistDashboardItem,
 ): string {
-  const amount = asyncSlug(item.amount);
-  const name = formatName(item.name);
+  const amount = formatNumber(item.amount);
+  const name = validateName(formatText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatWishlistDashboardAmount(amount: number): string {
-  return asyncSlug(amount);
+  return formatNumber(amount);
 }
 
 export function wishlistDashboardStatusTone(

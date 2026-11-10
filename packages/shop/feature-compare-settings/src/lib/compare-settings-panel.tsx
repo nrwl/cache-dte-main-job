@@ -1,5 +1,6 @@
-import { FormsChipGroup } from '@org/shop-ui-forms-chip';
-import { NavigationStat } from '@org/shop-ui-navigation-stat';
+import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
+import { NavigationBadge } from '@org/shop-ui-navigation-badge';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { CompareSettingsItem } from './compare-settings.model';
 import { COMPARE_SETTINGS_FEATURE } from './compare-settings.routes';
 import { describeCompareSettingsItem } from './compare-settings.utils';
@@ -40,7 +41,7 @@ export function CompareSettingsPanel({
       <p className="feature-panel-description">
         {describeCompareSettingsItem(selected)}
       </p>
-      <FormsChipGroup
+      <ChartsToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function CompareSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <NavigationStat
-          label="Navigation Stat"
+        <NavigationBadge
+          label="Navigation Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <OverlayStat
+          label="Overlay Stat"
           value={selected.product.rating}
           size="sm"
         />

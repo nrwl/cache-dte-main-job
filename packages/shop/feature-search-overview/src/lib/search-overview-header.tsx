@@ -1,4 +1,4 @@
-import { DataPanel } from '@org/shop-ui-data-panel';
+import { FormsBadge } from '@org/shop-ui-forms-badge';
 import { SEARCH_OVERVIEW_FEATURE } from './search-overview.routes';
 
 export interface SearchOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function SearchOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataPanel label="Items" value={count} tone="info" />
-        <DataPanel label="Total" value={total} tone="success" />
+        <FormsBadge label="Items" value={count} tone="info" />
+        <FormsBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

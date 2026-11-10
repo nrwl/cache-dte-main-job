@@ -1,4 +1,6 @@
-import { formatDate } from '@org/shop-util-format-date';
+import { formatText } from '@org/shop-util-format-text';
+import { collectionName } from '@org/shop-util-collection-name';
+import { validatePhone } from '@org/shop-util-validate-phone';
 import {
   emptyCatalogListTotals,
   type CatalogListItem,
@@ -70,13 +72,13 @@ export function sortCatalogList(
 }
 
 export function describeCatalogListItem(item: CatalogListItem): string {
-  const amount = formatDate(item.amount);
-  const name = formatDate(item.name);
+  const amount = formatText(item.amount);
+  const name = validatePhone(collectionName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCatalogListAmount(amount: number): string {
-  return formatDate(amount);
+  return formatText(amount);
 }
 
 export function catalogListStatusTone(

@@ -21,7 +21,7 @@ export interface OrdersSettingsTotals {
   archived: number;
 }
 
-export const ORDERS_SETTINGS_ITEM_COUNT = 11;
+export const ORDERS_SETTINGS_ITEM_COUNT = 12;
 
 export const ORDERS_SETTINGS_STATUSES: ReadonlyArray<OrdersSettingsStatus> = [
   'active',

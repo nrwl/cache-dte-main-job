@@ -1,4 +1,4 @@
-import { MarketingBadge } from '@org/shop-ui-marketing-badge';
+import { MarketingBanner } from '@org/shop-ui-marketing-banner';
 import { BUNDLES_DETAILS_FEATURE } from './bundles-details.routes';
 
 export interface BundlesDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function BundlesDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingBadge label="Items" value={count} tone="info" />
-        <MarketingBadge label="Total" value={total} tone="success" />
+        <MarketingBanner label="Items" value={count} tone="info" />
+        <MarketingBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

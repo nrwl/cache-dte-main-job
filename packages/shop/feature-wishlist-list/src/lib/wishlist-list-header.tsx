@@ -1,4 +1,4 @@
-import { ChartsBadge } from '@org/shop-ui-charts-badge';
+import { NavigationStat } from '@org/shop-ui-navigation-stat';
 import { WISHLIST_LIST_FEATURE } from './wishlist-list.routes';
 
 export interface WishlistListHeaderProps {
@@ -26,8 +26,8 @@ export function WishlistListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsBadge label="Items" value={count} tone="info" />
-        <ChartsBadge label="Total" value={total} tone="success" />
+        <NavigationStat label="Items" value={count} tone="info" />
+        <NavigationStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

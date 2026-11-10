@@ -1,4 +1,4 @@
-import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { DataToolbarGroup } from '@org/shop-ui-data-toolbar';
 import { buildAuthSettingsItems } from './auth-settings.model';
 import { AUTH_SETTINGS_FEATURE } from './auth-settings.routes';
 import {
@@ -29,7 +29,7 @@ export function AuthSettingsSummary({
       data-testid={`${AUTH_SETTINGS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{AUTH_SETTINGS_FEATURE.title}</h3>
-      <MarketingBadgeGroup
+      <DataToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

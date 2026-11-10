@@ -1,6 +1,6 @@
-import { storagePercent } from '@org/shop-util-storage-percent';
-import { asyncPercent } from '@org/shop-util-async-percent';
-import { DataPanel } from '@org/shop-ui-data-panel';
+import { validateText } from '@org/shop-util-validate-text';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { CommerceBadgeProps } from './commerce-badge.types';
 import { resolveCommerceBadgeStyle } from './commerce-badge-variants';
 
@@ -13,9 +13,9 @@ export function CommerceBadge({
   onSelect,
   children,
 }: CommerceBadgeProps) {
-  const formatted = value === undefined ? '' : storagePercent(value);
+  const formatted = value === undefined ? '' : validateText(value);
   const style = resolveCommerceBadgeStyle(tone, size);
-  const ariaLabel = asyncPercent(label);
+  const ariaLabel = formatCurrency(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +38,12 @@ export function CommerceBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <DataPanel label="Data Panel" value={value} tone={tone} size="sm" />
+      <FeedbackBanner
+        label="Feedback Banner"
+        value={value}
+        tone={tone}
+        size="sm"
+      />
     </div>
   );
 }

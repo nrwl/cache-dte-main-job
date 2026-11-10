@@ -1,6 +1,6 @@
-import { CoreTileGroup } from '@org/shop-ui-core-tile';
-import { InputsList } from '@org/shop-ui-inputs-list';
-import { FormsChip } from '@org/shop-ui-forms-chip';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { MediaPanel } from '@org/shop-ui-media-panel';
+import { CoreBanner } from '@org/shop-ui-core-banner';
 import type { OrdersDashboardItem } from './orders-dashboard.model';
 import { ORDERS_DASHBOARD_FEATURE } from './orders-dashboard.routes';
 import { describeOrdersDashboardItem } from './orders-dashboard.utils';
@@ -41,7 +41,7 @@ export function OrdersDashboardPanel({
       <p className="feature-panel-description">
         {describeOrdersDashboardItem(selected)}
       </p>
-      <CoreTileGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function OrdersDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsList
-          label="Inputs List"
+        <MediaPanel
+          label="Media Panel"
           value={selected.product.rating}
           size="sm"
         />
-        <FormsChip
-          label="Forms Chip"
+        <CoreBanner
+          label="Core Banner"
           value={selected.product.rating}
           size="sm"
         />

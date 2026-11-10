@@ -1,4 +1,4 @@
-import { ChartsTile } from '@org/shop-ui-charts-tile';
+import { OverlayBanner } from '@org/shop-ui-overlay-banner';
 import { PAYMENTS_DASHBOARD_FEATURE } from './payments-dashboard.routes';
 
 export interface PaymentsDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function PaymentsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsTile label="Items" value={count} tone="info" />
-        <ChartsTile label="Total" value={total} tone="success" />
+        <OverlayBanner label="Items" value={count} tone="info" />
+        <OverlayBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

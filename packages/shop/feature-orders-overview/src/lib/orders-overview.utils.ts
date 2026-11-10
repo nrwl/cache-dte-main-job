@@ -1,5 +1,6 @@
-import { formatText } from '@org/shop-util-format-text';
-import { mathPercent } from '@org/shop-util-math-percent';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { mathName } from '@org/shop-util-math-name';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyOrdersOverviewTotals,
   type OrdersOverviewItem,
@@ -72,13 +73,13 @@ export function sortOrdersOverview(
 }
 
 export function describeOrdersOverviewItem(item: OrdersOverviewItem): string {
-  const amount = formatText(item.amount);
-  const name = mathPercent(item.name);
+  const amount = storagePhone(item.amount);
+  const name = i18nNumber(mathName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersOverviewAmount(amount: number): string {
-  return formatText(amount);
+  return storagePhone(amount);
 }
 
 export function ordersOverviewStatusTone(

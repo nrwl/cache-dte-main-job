@@ -1,6 +1,4 @@
-import { FormsBadgeGroup } from '@org/shop-ui-forms-badge';
-import { MarketingChip } from '@org/shop-ui-marketing-chip';
-import { NavigationCard } from '@org/shop-ui-navigation-card';
+import { MarketingStatGroup } from '@org/shop-ui-marketing-stat';
 import type { StoreLocatorListItem } from './store-locator-list.model';
 import { STORE_LOCATOR_LIST_FEATURE } from './store-locator-list.routes';
 import { describeStoreLocatorListItem } from './store-locator-list.utils';
@@ -41,7 +39,7 @@ export function StoreLocatorListPanel({
       <p className="feature-panel-description">
         {describeStoreLocatorListItem(selected)}
       </p>
-      <FormsBadgeGroup
+      <MarketingStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function StoreLocatorListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MarketingChip
-          label="Marketing Chip"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <NavigationCard
-          label="Navigation Card"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

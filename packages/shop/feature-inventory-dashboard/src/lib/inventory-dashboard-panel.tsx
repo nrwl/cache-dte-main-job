@@ -1,6 +1,5 @@
-import { InputsStatGroup } from '@org/shop-ui-inputs-stat';
-import { MediaList } from '@org/shop-ui-media-list';
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { LayoutBannerGroup } from '@org/shop-ui-layout-banner';
+import { InputsBanner } from '@org/shop-ui-inputs-banner';
 import type { InventoryDashboardItem } from './inventory-dashboard.model';
 import { INVENTORY_DASHBOARD_FEATURE } from './inventory-dashboard.routes';
 import { describeInventoryDashboardItem } from './inventory-dashboard.utils';
@@ -41,7 +40,7 @@ export function InventoryDashboardPanel({
       <p className="feature-panel-description">
         {describeInventoryDashboardItem(selected)}
       </p>
-      <InputsStatGroup
+      <LayoutBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function InventoryDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <MediaList
-          label="Media List"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <CommerceBadge
-          label="Commerce Badge"
+        <InputsBanner
+          label="Inputs Banner"
           value={selected.product.rating}
           size="sm"
         />

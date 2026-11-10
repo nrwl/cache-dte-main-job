@@ -1,9 +1,10 @@
 import type { Product } from '@org/models';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   clampLength,
   hashString,
+  kebabCase,
   normalizeInput,
-  titleCase,
 } from './format-number-helpers';
 
 export interface FormatNumberOptions {
@@ -31,7 +32,7 @@ export const FORMAT_NUMBER_DEFAULTS: Required<FormatNumberOptions> = {
 export const FORMAT_NUMBER_KIND = 'format-number' as const;
 
 /**
- * Formats a raw value using the "title" strategy.
+ * Formats a raw value using the "kebab" strategy.
  */
 export function formatNumber(
   value: string | number,
@@ -45,8 +46,11 @@ export function formatNumber(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = normalized;
-  const transformed = titleCase(staged);
+  const staged = [formatCurrency].reduce<string>(
+    (acc, fn) => fn(acc),
+    normalized,
+  );
+  const transformed = kebabCase(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

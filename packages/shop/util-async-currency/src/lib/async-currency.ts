@@ -2,8 +2,8 @@ import type { Product } from '@org/models';
 import {
   clampLength,
   hashString,
+  kebabCase,
   normalizeInput,
-  titleCase,
 } from './async-currency-helpers';
 
 export interface AsyncCurrencyOptions {
@@ -31,7 +31,7 @@ export const ASYNC_CURRENCY_DEFAULTS: Required<AsyncCurrencyOptions> = {
 export const ASYNC_CURRENCY_KIND = 'async-currency' as const;
 
 /**
- * Formats a raw value using the "title" strategy.
+ * Formats a raw value using the "kebab" strategy.
  */
 export function asyncCurrency(
   value: string | number,
@@ -46,7 +46,7 @@ export function asyncCurrency(
     return opts.fallback;
   }
   const staged = normalized;
-  const transformed = titleCase(staged);
+  const transformed = kebabCase(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

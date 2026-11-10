@@ -21,7 +21,7 @@ export interface FeedbackDashboardTotals {
   archived: number;
 }
 
-export const FEEDBACK_DASHBOARD_ITEM_COUNT = 10;
+export const FEEDBACK_DASHBOARD_ITEM_COUNT = 8;
 
 export const FEEDBACK_DASHBOARD_STATUSES: ReadonlyArray<FeedbackDashboardStatus> =
   ['active', 'pending', 'archived'];

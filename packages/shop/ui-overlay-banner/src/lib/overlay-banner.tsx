@@ -1,7 +1,7 @@
-import { i18nName } from '@org/shop-util-i18n-name';
-import { validateSlug } from '@org/shop-util-validate-slug';
-import { storageCurrency } from '@org/shop-util-storage-currency';
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { asyncText } from '@org/shop-util-async-text';
+import { asyncPhone } from '@org/shop-util-async-phone';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { OverlayBannerProps } from './overlay-banner.types';
 import { resolveOverlayBannerStyle } from './overlay-banner-variants';
 
@@ -14,9 +14,9 @@ export function OverlayBanner({
   onSelect,
   children,
 }: OverlayBannerProps) {
-  const formatted = value === undefined ? '' : i18nName(value);
+  const formatted = value === undefined ? '' : mathCurrency(value);
   const style = resolveOverlayBannerStyle(tone, size);
-  const ariaLabel = storageCurrency(validateSlug(label));
+  const ariaLabel = asyncPhone(asyncText(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +39,7 @@ export function OverlayBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreBanner label="Core Banner" value={value} tone={tone} size="sm" />
+      <LayoutPanel label="Layout Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

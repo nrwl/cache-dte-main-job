@@ -1,4 +1,4 @@
-import { LayoutList } from '@org/shop-ui-layout-list';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { StoreLocatorListItem } from './store-locator-list.model';
 import { STORE_LOCATOR_LIST_FEATURE } from './store-locator-list.routes';
 import {
@@ -58,7 +58,7 @@ export function StoreLocatorListTable({
             <td>{formatStoreLocatorListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutList
+              <MediaToolbar
                 label={item.status}
                 tone={storeLocatorListStatusTone(item.status)}
                 size="sm"

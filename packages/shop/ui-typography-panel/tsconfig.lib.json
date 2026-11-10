@@ -30,13 +30,10 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-i18n-date/tsconfig.lib.json"
+      "path": "../util-i18n-text/tsconfig.lib.json"
     },
     {
-      "path": "../util-math-name/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-collection-code/tsconfig.lib.json"
+      "path": "../util-storage-name/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

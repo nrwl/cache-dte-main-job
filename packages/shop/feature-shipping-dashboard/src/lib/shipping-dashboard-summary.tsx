@@ -1,4 +1,4 @@
-import { FeedbackBadgeGroup } from '@org/shop-ui-feedback-badge';
+import { MediaPanelGroup } from '@org/shop-ui-media-panel';
 import { buildShippingDashboardItems } from './shipping-dashboard.model';
 import { SHIPPING_DASHBOARD_FEATURE } from './shipping-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function ShippingDashboardSummary({
       <h3 className="feature-summary-title">
         {SHIPPING_DASHBOARD_FEATURE.title}
       </h3>
-      <FeedbackBadgeGroup
+      <MediaPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,4 +1,5 @@
-import { collectionName } from '@org/shop-util-collection-name';
+import { i18nName } from '@org/shop-util-i18n-name';
+import { storageNumber } from '@org/shop-util-storage-number';
 import {
   emptyCartSettingsTotals,
   type CartSettingsItem,
@@ -70,13 +71,13 @@ export function sortCartSettings(
 }
 
 export function describeCartSettingsItem(item: CartSettingsItem): string {
-  const amount = collectionName(item.amount);
-  const name = collectionName(item.name);
+  const amount = i18nName(item.amount);
+  const name = storageNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCartSettingsAmount(amount: number): string {
-  return collectionName(amount);
+  return i18nName(amount);
 }
 
 export function cartSettingsStatusTone(

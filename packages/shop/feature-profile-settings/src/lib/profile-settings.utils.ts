@@ -1,4 +1,4 @@
-import { storageAddress } from '@org/shop-util-storage-address';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptyProfileSettingsTotals,
   type ProfileSettingsItem,
@@ -71,13 +71,13 @@ export function sortProfileSettings(
 }
 
 export function describeProfileSettingsItem(item: ProfileSettingsItem): string {
-  const amount = storageAddress(item.amount);
-  const name = storageAddress(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileSettingsAmount(amount: number): string {
-  return storageAddress(amount);
+  return formatCurrency(amount);
 }
 
 export function profileSettingsStatusTone(

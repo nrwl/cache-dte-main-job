@@ -1,4 +1,4 @@
-import { validateSlug } from '@org/shop-util-validate-slug';
+import { storageCurrency } from '@org/shop-util-storage-currency';
 import {
   emptyWishlistDetailsTotals,
   type WishlistDetailsItem,
@@ -71,13 +71,13 @@ export function sortWishlistDetails(
 }
 
 export function describeWishlistDetailsItem(item: WishlistDetailsItem): string {
-  const amount = validateSlug(item.amount);
-  const name = validateSlug(item.name);
+  const amount = storageCurrency(item.amount);
+  const name = storageCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatWishlistDetailsAmount(amount: number): string {
-  return validateSlug(amount);
+  return storageCurrency(amount);
 }
 
 export function wishlistDetailsStatusTone(

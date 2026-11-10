@@ -1,4 +1,6 @@
-import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
+import { NavigationStatGroup } from '@org/shop-ui-navigation-stat';
+import { MediaBanner } from '@org/shop-ui-media-banner';
+import { CoreBanner } from '@org/shop-ui-core-banner';
 import type { BundlesDetailsItem } from './bundles-details.model';
 import { BUNDLES_DETAILS_FEATURE } from './bundles-details.routes';
 import { describeBundlesDetailsItem } from './bundles-details.utils';
@@ -39,7 +41,7 @@ export function BundlesDetailsPanel({
       <p className="feature-panel-description">
         {describeBundlesDetailsItem(selected)}
       </p>
-      <ChartsBannerGroup
+      <NavigationStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function BundlesDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <MediaBanner
+          label="Media Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CoreBanner
+          label="Core Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

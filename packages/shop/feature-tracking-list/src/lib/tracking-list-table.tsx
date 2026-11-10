@@ -1,4 +1,4 @@
-import { CoreList } from '@org/shop-ui-core-list';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { TrackingListItem } from './tracking-list.model';
 import { TRACKING_LIST_FEATURE } from './tracking-list.routes';
 import {
@@ -58,7 +58,7 @@ export function TrackingListTable({
             <td>{formatTrackingListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreList
+              <FormsStat
                 label={item.status}
                 tone={trackingListStatusTone(item.status)}
                 size="sm"

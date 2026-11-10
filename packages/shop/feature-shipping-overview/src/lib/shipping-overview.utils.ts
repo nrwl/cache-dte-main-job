@@ -1,6 +1,5 @@
-import { mathPercent } from '@org/shop-util-math-percent';
-import { formatCode } from '@org/shop-util-format-code';
-import { i18nDate } from '@org/shop-util-i18n-date';
+import { storageText } from '@org/shop-util-storage-text';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyShippingOverviewTotals,
   type ShippingOverviewItem,
@@ -75,13 +74,13 @@ export function sortShippingOverview(
 export function describeShippingOverviewItem(
   item: ShippingOverviewItem,
 ): string {
-  const amount = mathPercent(item.amount);
-  const name = i18nDate(formatCode(item.name));
+  const amount = storageText(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatShippingOverviewAmount(amount: number): string {
-  return mathPercent(amount);
+  return storageText(amount);
 }
 
 export function shippingOverviewStatusTone(

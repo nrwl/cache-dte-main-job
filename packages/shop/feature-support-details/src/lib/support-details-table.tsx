@@ -1,4 +1,4 @@
-import { FeedbackList } from '@org/shop-ui-feedback-list';
+import { TypographyBadge } from '@org/shop-ui-typography-badge';
 import type { SupportDetailsItem } from './support-details.model';
 import { SUPPORT_DETAILS_FEATURE } from './support-details.routes';
 import {
@@ -58,7 +58,7 @@ export function SupportDetailsTable({
             <td>{formatSupportDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackList
+              <TypographyBadge
                 label={item.status}
                 tone={supportDetailsStatusTone(item.status)}
                 size="sm"

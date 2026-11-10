@@ -19,7 +19,7 @@ export const FEEDBACK_DASHBOARD_FEATURE: FeatureMeta = {
   testId: FEEDBACK_DASHBOARD_TEST_ID,
   domain: 'feedback',
   kind: 'dashboard',
-  itemCount: 10,
+  itemCount: 8,
 };
 
 export function feedbackDashboardItemPath(itemId: string): string {

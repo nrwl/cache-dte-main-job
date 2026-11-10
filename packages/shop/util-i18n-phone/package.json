@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-i18n-currency": "*",
-    "@org/shop-util-async-address": "*"
+    "@org/shop-util-validate-currency": "*"
   }
 }

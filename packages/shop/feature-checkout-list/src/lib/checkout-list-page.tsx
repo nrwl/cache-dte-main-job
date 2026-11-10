@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CheckoutSettingsSummary } from '@org/shop-feature-checkout-settings';
+import { CheckoutDetailsSummary } from '@org/shop-feature-checkout-details';
 import { CheckoutListFilters } from './checkout-list-filters';
 import { CheckoutListHeader } from './checkout-list-header';
 import { CheckoutListPanel } from './checkout-list-panel';
@@ -51,7 +51,7 @@ export function CheckoutListPage() {
         </div>
         <div className="feature-side">
           <CheckoutListPanel selected={selected} onClear={() => select(null)} />
-          <CheckoutSettingsSummary compact />
+          <CheckoutDetailsSummary compact />
         </div>
       </div>
     </section>

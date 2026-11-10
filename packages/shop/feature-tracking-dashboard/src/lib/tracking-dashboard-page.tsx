@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { ReturnsDetailsSummary } from '@org/shop-feature-returns-details';
 import { TrackingDashboardFilters } from './tracking-dashboard-filters';
 import { TrackingDashboardHeader } from './tracking-dashboard-header';
 import { TrackingDashboardPanel } from './tracking-dashboard-panel';
@@ -53,6 +54,7 @@ export function TrackingDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <ReturnsDetailsSummary compact />
         </div>
       </div>
     </section>

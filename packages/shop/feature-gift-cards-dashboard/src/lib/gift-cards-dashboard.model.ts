@@ -21,7 +21,7 @@ export interface GiftCardsDashboardTotals {
   archived: number;
 }
 
-export const GIFT_CARDS_DASHBOARD_ITEM_COUNT = 9;
+export const GIFT_CARDS_DASHBOARD_ITEM_COUNT = 11;
 
 export const GIFT_CARDS_DASHBOARD_STATUSES: ReadonlyArray<GiftCardsDashboardStatus> =
   ['active', 'pending', 'archived'];

@@ -21,7 +21,7 @@ export interface SearchDetailsTotals {
   archived: number;
 }
 
-export const SEARCH_DETAILS_ITEM_COUNT = 7;
+export const SEARCH_DETAILS_ITEM_COUNT = 10;
 
 export const SEARCH_DETAILS_STATUSES: ReadonlyArray<SearchDetailsStatus> = [
   'active',

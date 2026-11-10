@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { RecommendationsSummarySummary } from '@org/shop-feature-recommendations-summary';
 import { RecommendationsDashboardFilters } from './recommendations-dashboard-filters';
 import { RecommendationsDashboardHeader } from './recommendations-dashboard-header';
 import { RecommendationsDashboardPanel } from './recommendations-dashboard-panel';
@@ -54,7 +53,6 @@ export function RecommendationsDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <RecommendationsSummarySummary compact />
         </div>
       </div>
     </section>

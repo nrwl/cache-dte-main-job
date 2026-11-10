@@ -1,4 +1,4 @@
-import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import { BUNDLES_DASHBOARD_FEATURE } from './bundles-dashboard.routes';
 
 export interface BundlesDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function BundlesDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceToolbar label="Items" value={count} tone="info" />
-        <CommerceToolbar label="Total" value={total} tone="success" />
+        <MarketingBadge label="Items" value={count} tone="info" />
+        <MarketingBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

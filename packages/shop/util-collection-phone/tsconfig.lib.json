@@ -25,12 +25,6 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-validate-phone/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-math-text/tsconfig.lib.json"
-    },
-    {
       "path": "../../shared/models/tsconfig.lib.json"
     }
   ]

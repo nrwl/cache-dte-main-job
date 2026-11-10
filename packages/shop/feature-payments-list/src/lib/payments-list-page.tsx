@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { RecommendationsSummarySummary } from '@org/shop-feature-recommendations-summary';
+import { PaymentsDetailsSummary } from '@org/shop-feature-payments-details';
 import { PaymentsListFilters } from './payments-list-filters';
 import { PaymentsListHeader } from './payments-list-header';
 import { PaymentsListPanel } from './payments-list-panel';
@@ -51,7 +51,7 @@ export function PaymentsListPage() {
         </div>
         <div className="feature-side">
           <PaymentsListPanel selected={selected} onClear={() => select(null)} />
-          <RecommendationsSummarySummary compact />
+          <PaymentsDetailsSummary compact />
         </div>
       </div>
     </section>

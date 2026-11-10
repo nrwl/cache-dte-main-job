@@ -1,5 +1,6 @@
-import { CorePanelGroup } from '@org/shop-ui-core-panel';
-import { CommerceCard } from '@org/shop-ui-commerce-card';
+import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
+import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { PreordersSettingsItem } from './preorders-settings.model';
 import { PREORDERS_SETTINGS_FEATURE } from './preorders-settings.routes';
 import { describePreordersSettingsItem } from './preorders-settings.utils';
@@ -40,7 +41,7 @@ export function PreordersSettingsPanel({
       <p className="feature-panel-description">
         {describePreordersSettingsItem(selected)}
       </p>
-      <CorePanelGroup
+      <NavigationBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function PreordersSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceCard
-          label="Commerce Card"
+        <FeedbackPanel
+          label="Feedback Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <FormsStat
+          label="Forms Stat"
           value={selected.product.rating}
           size="sm"
         />

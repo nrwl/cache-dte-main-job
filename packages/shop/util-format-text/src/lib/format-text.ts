@@ -1,9 +1,10 @@
 import type { Product } from '@org/models';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   clampLength,
   hashString,
   normalizeInput,
-  reverseText,
+  titleCase,
 } from './format-text-helpers';
 
 export interface FormatTextOptions {
@@ -31,7 +32,7 @@ export const FORMAT_TEXT_DEFAULTS: Required<FormatTextOptions> = {
 export const FORMAT_TEXT_KIND = 'format-text' as const;
 
 /**
- * Formats a raw value using the "reverse" strategy.
+ * Formats a raw value using the "title" strategy.
  */
 export function formatText(
   value: string | number,
@@ -45,8 +46,11 @@ export function formatText(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = normalized;
-  const transformed = reverseText(staged);
+  const staged = [formatCurrency].reduce<string>(
+    (acc, fn) => fn(acc),
+    normalized,
+  );
+  const transformed = titleCase(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

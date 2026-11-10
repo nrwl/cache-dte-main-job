@@ -21,7 +21,7 @@ export interface InventoryDashboardTotals {
   archived: number;
 }
 
-export const INVENTORY_DASHBOARD_ITEM_COUNT = 6;
+export const INVENTORY_DASHBOARD_ITEM_COUNT = 12;
 
 export const INVENTORY_DASHBOARD_STATUSES: ReadonlyArray<InventoryDashboardStatus> =
   ['active', 'pending', 'archived'];

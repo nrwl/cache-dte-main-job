@@ -21,7 +21,7 @@ export interface NotificationsDashboardTotals {
   archived: number;
 }
 
-export const NOTIFICATIONS_DASHBOARD_ITEM_COUNT = 7;
+export const NOTIFICATIONS_DASHBOARD_ITEM_COUNT = 8;
 
 export const NOTIFICATIONS_DASHBOARD_STATUSES: ReadonlyArray<NotificationsDashboardStatus> =
   ['active', 'pending', 'archived'];

@@ -1,4 +1,4 @@
-import { InputsTileGroup } from '@org/shop-ui-inputs-tile';
+import { MediaPanelGroup } from '@org/shop-ui-media-panel';
 import { buildReviewsSettingsItems } from './reviews-settings.model';
 import { REVIEWS_SETTINGS_FEATURE } from './reviews-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function ReviewsSettingsSummary({
       <h3 className="feature-summary-title">
         {REVIEWS_SETTINGS_FEATURE.title}
       </h3>
-      <InputsTileGroup
+      <MediaPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,4 +1,6 @@
-import { formatAddress } from '@org/shop-util-format-address';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { storageNumber } from '@org/shop-util-storage-number';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
 import {
   emptyCompareSettingsTotals,
   type CompareSettingsItem,
@@ -71,13 +73,13 @@ export function sortCompareSettings(
 }
 
 export function describeCompareSettingsItem(item: CompareSettingsItem): string {
-  const amount = formatAddress(item.amount);
-  const name = formatAddress(item.name);
+  const amount = mathCurrency(item.amount);
+  const name = collectionCurrency(storageNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCompareSettingsAmount(amount: number): string {
-  return formatAddress(amount);
+  return mathCurrency(amount);
 }
 
 export function compareSettingsStatusTone(

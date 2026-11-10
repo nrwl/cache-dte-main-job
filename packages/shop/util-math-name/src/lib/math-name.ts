@@ -1,10 +1,7 @@
 import type { Product } from '@org/models';
-import {
-  clampLength,
-  hashString,
-  kebabCase,
-  normalizeInput,
-} from './math-name-helpers';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { formatName } from '@org/shop-util-format-name';
+import { clampLength, hashString, normalizeInput } from './math-name-helpers';
 
 export interface MathNameOptions {
   /** BCP-47 locale used for locale-aware operations. */
@@ -31,7 +28,7 @@ export const MATH_NAME_DEFAULTS: Required<MathNameOptions> = {
 export const MATH_NAME_KIND = 'math-name' as const;
 
 /**
- * Formats a raw value using the "kebab" strategy.
+ * Formats a raw value using the "prefixed" strategy.
  */
 export function mathName(
   value: string | number,
@@ -42,8 +39,11 @@ export function mathName(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = normalized;
-  const transformed = kebabCase(staged);
+  const staged = [formatPhone, formatName].reduce<string>(
+    (acc, fn) => fn(acc),
+    normalized,
+  );
+  const transformed = '#' + staged;
   return clampLength(transformed, opts.maxLength);
 }
 

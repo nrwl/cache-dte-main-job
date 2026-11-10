@@ -1,4 +1,4 @@
-import { FeedbackStatGroup } from '@org/shop-ui-feedback-stat';
+import { FeedbackBadgeGroup } from '@org/shop-ui-feedback-badge';
 import { buildCompareSettingsItems } from './compare-settings.model';
 import { COMPARE_SETTINGS_FEATURE } from './compare-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function CompareSettingsSummary({
       <h3 className="feature-summary-title">
         {COMPARE_SETTINGS_FEATURE.title}
       </h3>
-      <FeedbackStatGroup
+      <FeedbackBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

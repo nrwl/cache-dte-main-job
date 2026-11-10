@@ -21,7 +21,7 @@ export interface WishlistDashboardTotals {
   archived: number;
 }
 
-export const WISHLIST_DASHBOARD_ITEM_COUNT = 6;
+export const WISHLIST_DASHBOARD_ITEM_COUNT = 10;
 
 export const WISHLIST_DASHBOARD_STATUSES: ReadonlyArray<WishlistDashboardStatus> =
   ['active', 'pending', 'archived'];

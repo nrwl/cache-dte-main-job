@@ -1,5 +1,5 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { FormsToolbar } from '@org/shop-ui-forms-toolbar';
+import { collectionPhone } from '@org/shop-util-collection-phone';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { DataBannerProps } from './data-banner.types';
 import { resolveDataBannerStyle } from './data-banner-variants';
 
@@ -12,7 +12,7 @@ export function DataBanner({
   onSelect,
   children,
 }: DataBannerProps) {
-  const formatted = value === undefined ? '' : validatePhone(value);
+  const formatted = value === undefined ? '' : collectionPhone(value);
   const style = resolveDataBannerStyle(tone, size);
   const ariaLabel = label;
 
@@ -37,7 +37,7 @@ export function DataBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FormsToolbar label="Forms Toolbar" value={value} tone={tone} size="sm" />
+      <LayoutPanel label="Layout Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

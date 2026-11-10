@@ -1,6 +1,6 @@
-import { collectionCurrency } from '@org/shop-util-collection-currency';
-import { mathText } from '@org/shop-util-math-text';
-import { asyncText } from '@org/shop-util-async-text';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { validateName } from '@org/shop-util-validate-name';
+import { i18nName } from '@org/shop-util-i18n-name';
 import {
   emptyStoreLocatorDetailsTotals,
   type StoreLocatorDetailsItem,
@@ -76,13 +76,13 @@ export function sortStoreLocatorDetails(
 export function describeStoreLocatorDetailsItem(
   item: StoreLocatorDetailsItem,
 ): string {
-  const amount = collectionCurrency(item.amount);
-  const name = asyncText(mathText(item.name));
+  const amount = validateCurrency(item.amount);
+  const name = i18nName(validateName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatStoreLocatorDetailsAmount(amount: number): string {
-  return collectionCurrency(amount);
+  return validateCurrency(amount);
 }
 
 export function storeLocatorDetailsStatusTone(

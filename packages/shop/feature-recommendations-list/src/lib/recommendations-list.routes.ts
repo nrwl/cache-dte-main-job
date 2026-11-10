@@ -19,7 +19,7 @@ export const RECOMMENDATIONS_LIST_FEATURE: FeatureMeta = {
   testId: RECOMMENDATIONS_LIST_TEST_ID,
   domain: 'recommendations',
   kind: 'list',
-  itemCount: 12,
+  itemCount: 6,
 };
 
 export function recommendationsListItemPath(itemId: string): string {

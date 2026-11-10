@@ -21,7 +21,7 @@ export interface TrackingDashboardTotals {
   archived: number;
 }
 
-export const TRACKING_DASHBOARD_ITEM_COUNT = 6;
+export const TRACKING_DASHBOARD_ITEM_COUNT = 10;
 
 export const TRACKING_DASHBOARD_STATUSES: ReadonlyArray<TrackingDashboardStatus> =
   ['active', 'pending', 'archived'];

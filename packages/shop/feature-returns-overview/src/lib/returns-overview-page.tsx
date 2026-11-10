@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { SearchDetailsSummary } from '@org/shop-feature-search-details';
 import { ReturnsOverviewFilters } from './returns-overview-filters';
 import { ReturnsOverviewHeader } from './returns-overview-header';
 import { ReturnsOverviewPanel } from './returns-overview-panel';
@@ -54,7 +53,6 @@ export function ReturnsOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <SearchDetailsSummary compact />
         </div>
       </div>
     </section>

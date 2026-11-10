@@ -1,5 +1,6 @@
-import { asyncAddress } from '@org/shop-util-async-address';
-import { collectionName } from '@org/shop-util-collection-name';
+import { storageName } from '@org/shop-util-storage-name';
+import { asyncName } from '@org/shop-util-async-name';
+import { validatePhone } from '@org/shop-util-validate-phone';
 import {
   emptyOrdersSettingsTotals,
   type OrdersSettingsItem,
@@ -72,13 +73,13 @@ export function sortOrdersSettings(
 }
 
 export function describeOrdersSettingsItem(item: OrdersSettingsItem): string {
-  const amount = asyncAddress(item.amount);
-  const name = collectionName(item.name);
+  const amount = storageName(item.amount);
+  const name = validatePhone(asyncName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersSettingsAmount(amount: number): string {
-  return asyncAddress(amount);
+  return storageName(amount);
 }
 
 export function ordersSettingsStatusTone(

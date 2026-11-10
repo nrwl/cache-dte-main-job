@@ -1,4 +1,4 @@
-import { OverlayChip } from '@org/shop-ui-overlay-chip';
+import { CommercePanel } from '@org/shop-ui-commerce-panel';
 import type { ShippingSettingsItem } from './shipping-settings.model';
 import { SHIPPING_SETTINGS_FEATURE } from './shipping-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function ShippingSettingsTable({
             <td>{formatShippingSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayChip
+              <CommercePanel
                 label={item.status}
                 tone={shippingSettingsStatusTone(item.status)}
                 size="sm"

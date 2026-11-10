@@ -1,4 +1,4 @@
-import { asyncNumber } from '@org/shop-util-async-number';
+import { storageText } from '@org/shop-util-storage-text';
 import {
   emptyAccountListTotals,
   type AccountListItem,
@@ -70,13 +70,13 @@ export function sortAccountList(
 }
 
 export function describeAccountListItem(item: AccountListItem): string {
-  const amount = asyncNumber(item.amount);
-  const name = asyncNumber(item.name);
+  const amount = storageText(item.amount);
+  const name = storageText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAccountListAmount(amount: number): string {
-  return asyncNumber(amount);
+  return storageText(amount);
 }
 
 export function accountListStatusTone(

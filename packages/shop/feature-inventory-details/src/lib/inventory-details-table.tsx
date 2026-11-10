@@ -1,4 +1,4 @@
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { NavigationStat } from '@org/shop-ui-navigation-stat';
 import type { InventoryDetailsItem } from './inventory-details.model';
 import { INVENTORY_DETAILS_FEATURE } from './inventory-details.routes';
 import {
@@ -58,7 +58,7 @@ export function InventoryDetailsTable({
             <td>{formatInventoryDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsBadge
+              <NavigationStat
                 label={item.status}
                 tone={inventoryDetailsStatusTone(item.status)}
                 size="sm"

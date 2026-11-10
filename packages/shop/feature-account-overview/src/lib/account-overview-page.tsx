@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { SearchOverviewSummary } from '@org/shop-feature-search-overview';
 import { AccountOverviewFilters } from './account-overview-filters';
 import { AccountOverviewHeader } from './account-overview-header';
 import { AccountOverviewPanel } from './account-overview-panel';
@@ -53,6 +54,7 @@ export function AccountOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <SearchOverviewSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { OverlayBadgeGroup } from '@org/shop-ui-overlay-badge';
+import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
 import { buildOrdersDashboardItems } from './orders-dashboard.model';
 import { ORDERS_DASHBOARD_FEATURE } from './orders-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function OrdersDashboardSummary({
       <h3 className="feature-summary-title">
         {ORDERS_DASHBOARD_FEATURE.title}
       </h3>
-      <OverlayBadgeGroup
+      <NavigationBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

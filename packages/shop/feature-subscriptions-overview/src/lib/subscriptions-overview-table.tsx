@@ -1,4 +1,4 @@
-import { MediaHeader } from '@org/shop-ui-media-header';
+import { TypographyBadge } from '@org/shop-ui-typography-badge';
 import type { SubscriptionsOverviewItem } from './subscriptions-overview.model';
 import { SUBSCRIPTIONS_OVERVIEW_FEATURE } from './subscriptions-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function SubscriptionsOverviewTable({
             <td>{formatSubscriptionsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaHeader
+              <TypographyBadge
                 label={item.status}
                 tone={subscriptionsOverviewStatusTone(item.status)}
                 size="sm"

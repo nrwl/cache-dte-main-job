@@ -1,4 +1,5 @@
-import { mathSlug } from '@org/shop-util-math-slug';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyNotificationsSettingsTotals,
   type NotificationsSettingsItem,
@@ -76,13 +77,13 @@ export function sortNotificationsSettings(
 export function describeNotificationsSettingsItem(
   item: NotificationsSettingsItem,
 ): string {
-  const amount = mathSlug(item.amount);
-  const name = mathSlug(item.name);
+  const amount = validateCurrency(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatNotificationsSettingsAmount(amount: number): string {
-  return mathSlug(amount);
+  return validateCurrency(amount);
 }
 
 export function notificationsSettingsStatusTone(

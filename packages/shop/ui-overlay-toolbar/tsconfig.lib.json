@@ -30,16 +30,13 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-data-toolbar/tsconfig.lib.json"
+      "path": "../util-format-text/tsconfig.lib.json"
     },
     {
-      "path": "../util-format-address/tsconfig.lib.json"
+      "path": "../util-collection-phone/tsconfig.lib.json"
     },
     {
-      "path": "../util-storage-text/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-storage-slug/tsconfig.lib.json"
+      "path": "../util-format-currency/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

@@ -1,4 +1,4 @@
-import { FeedbackListGroup } from '@org/shop-ui-feedback-list';
+import { LayoutBadgeGroup } from '@org/shop-ui-layout-badge';
 import { buildRecommendationsListItems } from './recommendations-list.model';
 import { RECOMMENDATIONS_LIST_FEATURE } from './recommendations-list.routes';
 import {
@@ -31,7 +31,7 @@ export function RecommendationsListSummary({
       <h3 className="feature-summary-title">
         {RECOMMENDATIONS_LIST_FEATURE.title}
       </h3>
-      <FeedbackListGroup
+      <LayoutBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

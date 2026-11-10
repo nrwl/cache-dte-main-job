@@ -1,6 +1,11 @@
 import type { Product } from '@org/models';
-import { asyncPercent } from '@org/shop-util-async-percent';
-import { clampLength, hashString, normalizeInput } from './async-phone-helpers';
+import { formatName } from '@org/shop-util-format-name';
+import {
+  clampLength,
+  hashString,
+  kebabCase,
+  normalizeInput,
+} from './async-phone-helpers';
 
 export interface AsyncPhoneOptions {
   /** BCP-47 locale used for locale-aware operations. */
@@ -27,7 +32,7 @@ export const ASYNC_PHONE_DEFAULTS: Required<AsyncPhoneOptions> = {
 export const ASYNC_PHONE_KIND = 'async-phone' as const;
 
 /**
- * Formats a raw value using the "upper" strategy.
+ * Formats a raw value using the "kebab" strategy.
  */
 export function asyncPhone(
   value: string | number,
@@ -41,11 +46,8 @@ export function asyncPhone(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [asyncPercent].reduce<string>(
-    (acc, fn) => fn(acc),
-    normalized,
-  );
-  const transformed = staged.toUpperCase();
+  const staged = [formatName].reduce<string>((acc, fn) => fn(acc), normalized);
+  const transformed = kebabCase(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

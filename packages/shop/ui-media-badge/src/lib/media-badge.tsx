@@ -1,5 +1,6 @@
-import { formatCurrency } from '@org/shop-util-format-currency';
-import { validateText } from '@org/shop-util-validate-text';
+import { collectionNumber } from '@org/shop-util-collection-number';
+import { mathText } from '@org/shop-util-math-text';
+import { CorePanel } from '@org/shop-ui-core-panel';
 import type { MediaBadgeProps } from './media-badge.types';
 import { resolveMediaBadgeStyle } from './media-badge-variants';
 
@@ -12,9 +13,9 @@ export function MediaBadge({
   onSelect,
   children,
 }: MediaBadgeProps) {
-  const formatted = value === undefined ? '' : formatCurrency(value);
+  const formatted = value === undefined ? '' : collectionNumber(value);
   const style = resolveMediaBadgeStyle(tone, size);
-  const ariaLabel = validateText(label);
+  const ariaLabel = mathText(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,6 +38,7 @@ export function MediaBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <CorePanel label="Core Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

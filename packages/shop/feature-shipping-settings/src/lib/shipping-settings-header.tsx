@@ -1,4 +1,4 @@
-import { LayoutCard } from '@org/shop-ui-layout-card';
+import { CommerceBanner } from '@org/shop-ui-commerce-banner';
 import { SHIPPING_SETTINGS_FEATURE } from './shipping-settings.routes';
 
 export interface ShippingSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function ShippingSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutCard label="Items" value={count} tone="info" />
-        <LayoutCard label="Total" value={total} tone="success" />
+        <CommerceBanner label="Items" value={count} tone="info" />
+        <CommerceBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { OverlayBadge } from '@org/shop-ui-overlay-badge';
 import { ORDERS_SETTINGS_FEATURE } from './orders-settings.routes';
 
 export interface OrdersSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function OrdersSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyToolbar label="Items" value={count} tone="info" />
-        <TypographyToolbar label="Total" value={total} tone="success" />
+        <OverlayBadge label="Items" value={count} tone="info" />
+        <OverlayBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

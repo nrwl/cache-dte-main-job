@@ -1,4 +1,4 @@
-import { TypographyHeader } from '@org/shop-ui-typography-header';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { ReturnsDashboardItem } from './returns-dashboard.model';
 import { RETURNS_DASHBOARD_FEATURE } from './returns-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function ReturnsDashboardTable({
             <td>{formatReturnsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyHeader
+              <LayoutPanel
                 label={item.status}
                 tone={returnsDashboardStatusTone(item.status)}
                 size="sm"

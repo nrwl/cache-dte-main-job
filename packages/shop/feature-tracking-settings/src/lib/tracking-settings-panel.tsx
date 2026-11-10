@@ -1,5 +1,5 @@
-import { MarketingCardGroup } from '@org/shop-ui-marketing-card';
-import { MarketingStat } from '@org/shop-ui-marketing-stat';
+import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
+import { CommercePanel } from '@org/shop-ui-commerce-panel';
 import type { TrackingSettingsItem } from './tracking-settings.model';
 import { TRACKING_SETTINGS_FEATURE } from './tracking-settings.routes';
 import { describeTrackingSettingsItem } from './tracking-settings.utils';
@@ -40,7 +40,7 @@ export function TrackingSettingsPanel({
       <p className="feature-panel-description">
         {describeTrackingSettingsItem(selected)}
       </p>
-      <MarketingCardGroup
+      <FeedbackPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function TrackingSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <MarketingStat
-          label="Marketing Stat"
+        <CommercePanel
+          label="Commerce Panel"
           value={selected.product.rating}
           size="sm"
         />

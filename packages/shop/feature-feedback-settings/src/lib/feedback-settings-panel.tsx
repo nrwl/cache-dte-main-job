@@ -1,5 +1,6 @@
-import { CommerceBannerGroup } from '@org/shop-ui-commerce-banner';
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
+import { CoreBadge } from '@org/shop-ui-core-badge';
+import { LayoutBanner } from '@org/shop-ui-layout-banner';
 import type { FeedbackSettingsItem } from './feedback-settings.model';
 import { FEEDBACK_SETTINGS_FEATURE } from './feedback-settings.routes';
 import { describeFeedbackSettingsItem } from './feedback-settings.utils';
@@ -40,7 +41,7 @@ export function FeedbackSettingsPanel({
       <p className="feature-panel-description">
         {describeFeedbackSettingsItem(selected)}
       </p>
-      <CommerceBannerGroup
+      <NavigationBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function FeedbackSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceStat
-          label="Commerce Stat"
+        <CoreBadge
+          label="Core Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <LayoutBanner
+          label="Layout Banner"
           value={selected.product.rating}
           size="sm"
         />

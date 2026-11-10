@@ -1,4 +1,4 @@
-import { OverlayToolbar } from '@org/shop-ui-overlay-toolbar';
+import { DataStat } from '@org/shop-ui-data-stat';
 import type { CartSettingsItem } from './cart-settings.model';
 import { CART_SETTINGS_FEATURE } from './cart-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function CartSettingsTable({
             <td>{formatCartSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayToolbar
+              <DataStat
                 label={item.status}
                 tone={cartSettingsStatusTone(item.status)}
                 size="sm"

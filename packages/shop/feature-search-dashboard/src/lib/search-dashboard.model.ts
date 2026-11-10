@@ -21,7 +21,7 @@ export interface SearchDashboardTotals {
   archived: number;
 }
 
-export const SEARCH_DASHBOARD_ITEM_COUNT = 9;
+export const SEARCH_DASHBOARD_ITEM_COUNT = 5;
 
 export const SEARCH_DASHBOARD_STATUSES: ReadonlyArray<SearchDashboardStatus> = [
   'active',

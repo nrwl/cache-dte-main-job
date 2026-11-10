@@ -21,7 +21,7 @@ export interface NotificationsListTotals {
   archived: number;
 }
 
-export const NOTIFICATIONS_LIST_ITEM_COUNT = 12;
+export const NOTIFICATIONS_LIST_ITEM_COUNT = 10;
 
 export const NOTIFICATIONS_LIST_STATUSES: ReadonlyArray<NotificationsListStatus> =
   ['active', 'pending', 'archived'];

@@ -1,4 +1,4 @@
-import { TypographyBadge } from '@org/shop-ui-typography-badge';
+import { MediaPanel } from '@org/shop-ui-media-panel';
 import { CHECKOUT_SETTINGS_FEATURE } from './checkout-settings.routes';
 
 export interface CheckoutSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function CheckoutSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyBadge label="Items" value={count} tone="info" />
-        <TypographyBadge label="Total" value={total} tone="success" />
+        <MediaPanel label="Items" value={count} tone="info" />
+        <MediaPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

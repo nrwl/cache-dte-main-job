@@ -19,8 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-i18n-date": "*",
-    "@org/shop-util-async-code": "*",
-    "@org/shop-ui-core-card": "*"
+    "@org/shop-util-math-number": "*",
+    "@org/shop-ui-forms-stat": "*"
   }
 }

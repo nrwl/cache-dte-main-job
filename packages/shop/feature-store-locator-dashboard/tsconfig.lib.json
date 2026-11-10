@@ -30,28 +30,19 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-i18n-percent/tsconfig.lib.json"
+      "path": "../util-storage-text/tsconfig.lib.json"
     },
     {
-      "path": "../util-collection-slug/tsconfig.lib.json"
+      "path": "../util-math-name/tsconfig.lib.json"
     },
     {
-      "path": "../util-i18n-number/tsconfig.lib.json"
+      "path": "../ui-commerce-panel/tsconfig.lib.json"
     },
     {
-      "path": "../ui-feedback-card/tsconfig.lib.json"
+      "path": "../ui-core-panel/tsconfig.lib.json"
     },
     {
-      "path": "../ui-forms-stat/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-forms-banner/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-feedback-panel/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-layout-chip/tsconfig.lib.json"
+      "path": "../ui-navigation-stat/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

@@ -1,4 +1,4 @@
-import { FeedbackChipGroup } from '@org/shop-ui-feedback-chip';
+import { InputsStatGroup } from '@org/shop-ui-inputs-stat';
 import { buildAccountSettingsItems } from './account-settings.model';
 import { ACCOUNT_SETTINGS_FEATURE } from './account-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function AccountSettingsSummary({
       <h3 className="feature-summary-title">
         {ACCOUNT_SETTINGS_FEATURE.title}
       </h3>
-      <FeedbackChipGroup
+      <InputsStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

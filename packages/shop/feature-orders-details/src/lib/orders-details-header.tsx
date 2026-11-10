@@ -1,4 +1,4 @@
-import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import { ORDERS_DETAILS_FEATURE } from './orders-details.routes';
 
 export interface OrdersDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function OrdersDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationToolbar label="Items" value={count} tone="info" />
-        <NavigationToolbar label="Total" value={total} tone="success" />
+        <LayoutStat label="Items" value={count} tone="info" />
+        <LayoutStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

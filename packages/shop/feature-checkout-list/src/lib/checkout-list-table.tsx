@@ -1,4 +1,4 @@
-import { FeedbackTile } from '@org/shop-ui-feedback-tile';
+import { DataBanner } from '@org/shop-ui-data-banner';
 import type { CheckoutListItem } from './checkout-list.model';
 import { CHECKOUT_LIST_FEATURE } from './checkout-list.routes';
 import {
@@ -58,7 +58,7 @@ export function CheckoutListTable({
             <td>{formatCheckoutListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackTile
+              <DataBanner
                 label={item.status}
                 tone={checkoutListStatusTone(item.status)}
                 size="sm"

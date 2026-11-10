@@ -1,4 +1,6 @@
-import { MarketingHeaderGroup } from '@org/shop-ui-marketing-header';
+import { InputsBadgeGroup } from '@org/shop-ui-inputs-badge';
+import { DataBanner } from '@org/shop-ui-data-banner';
+import { FormsBadge } from '@org/shop-ui-forms-badge';
 import type { ReviewsDetailsItem } from './reviews-details.model';
 import { REVIEWS_DETAILS_FEATURE } from './reviews-details.routes';
 import { describeReviewsDetailsItem } from './reviews-details.utils';
@@ -39,7 +41,7 @@ export function ReviewsDetailsPanel({
       <p className="feature-panel-description">
         {describeReviewsDetailsItem(selected)}
       </p>
-      <MarketingHeaderGroup
+      <InputsBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function ReviewsDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <DataBanner
+          label="Data Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <FormsBadge
+          label="Forms Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

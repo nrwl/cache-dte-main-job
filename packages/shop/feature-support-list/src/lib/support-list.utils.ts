@@ -1,4 +1,6 @@
-import { collectionSlug } from '@org/shop-util-collection-slug';
+import { i18nPhone } from '@org/shop-util-i18n-phone';
+import { storageText } from '@org/shop-util-storage-text';
+import { collectionPhone } from '@org/shop-util-collection-phone';
 import {
   emptySupportListTotals,
   type SupportListItem,
@@ -70,13 +72,13 @@ export function sortSupportList(
 }
 
 export function describeSupportListItem(item: SupportListItem): string {
-  const amount = collectionSlug(item.amount);
-  const name = collectionSlug(item.name);
+  const amount = i18nPhone(item.amount);
+  const name = collectionPhone(storageText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSupportListAmount(amount: number): string {
-  return collectionSlug(amount);
+  return i18nPhone(amount);
 }
 
 export function supportListStatusTone(

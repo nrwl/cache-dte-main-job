@@ -19,7 +19,7 @@ export const PREORDERS_SETTINGS_FEATURE: FeatureMeta = {
   testId: PREORDERS_SETTINGS_TEST_ID,
   domain: 'preorders',
   kind: 'settings',
-  itemCount: 7,
+  itemCount: 9,
 };
 
 export function preordersSettingsItemPath(itemId: string): string {

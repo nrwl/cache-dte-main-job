@@ -1,4 +1,4 @@
-import { TypographyCard } from '@org/shop-ui-typography-card';
+import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
 import type { SearchOverviewItem } from './search-overview.model';
 import { SEARCH_OVERVIEW_FEATURE } from './search-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function SearchOverviewTable({
             <td>{formatSearchOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <TypographyCard
+              <FeedbackBadge
                 label={item.status}
                 tone={searchOverviewStatusTone(item.status)}
                 size="sm"

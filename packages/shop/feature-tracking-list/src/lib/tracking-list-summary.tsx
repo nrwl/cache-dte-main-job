@@ -1,4 +1,4 @@
-import { DataListGroup } from '@org/shop-ui-data-list';
+import { MediaStatGroup } from '@org/shop-ui-media-stat';
 import { buildTrackingListItems } from './tracking-list.model';
 import { TRACKING_LIST_FEATURE } from './tracking-list.routes';
 import {
@@ -29,7 +29,7 @@ export function TrackingListSummary({
       data-testid={`${TRACKING_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{TRACKING_LIST_FEATURE.title}</h3>
-      <DataListGroup
+      <MediaStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,6 +1,6 @@
-import { MarketingBannerGroup } from '@org/shop-ui-marketing-banner';
-import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
-import { CoreCard } from '@org/shop-ui-core-card';
+import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { InventoryListItem } from './inventory-list.model';
 import { INVENTORY_LIST_FEATURE } from './inventory-list.routes';
 import { describeInventoryListItem } from './inventory-list.utils';
@@ -41,7 +41,7 @@ export function InventoryListPanel({
       <p className="feature-panel-description">
         {describeInventoryListItem(selected)}
       </p>
-      <MarketingBannerGroup
+      <ChartsToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,12 +52,16 @@ export function InventoryListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackPanel
-          label="Feedback Panel"
+        <LayoutPanel
+          label="Layout Panel"
           value={selected.product.rating}
           size="sm"
         />
-        <CoreCard label="Core Card" value={selected.product.rating} size="sm" />
+        <TypographyBanner
+          label="Typography Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
       </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (

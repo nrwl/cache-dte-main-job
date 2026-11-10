@@ -1,4 +1,4 @@
-import { FeedbackChipGroup } from '@org/shop-ui-feedback-chip';
+import { DataBannerGroup } from '@org/shop-ui-data-banner';
 import { buildSubscriptionsListItems } from './subscriptions-list.model';
 import { SUBSCRIPTIONS_LIST_FEATURE } from './subscriptions-list.routes';
 import {
@@ -31,7 +31,7 @@ export function SubscriptionsListSummary({
       <h3 className="feature-summary-title">
         {SUBSCRIPTIONS_LIST_FEATURE.title}
       </h3>
-      <FeedbackChipGroup
+      <DataBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

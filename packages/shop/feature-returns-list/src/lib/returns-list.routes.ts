@@ -19,7 +19,7 @@ export const RETURNS_LIST_FEATURE: FeatureMeta = {
   testId: RETURNS_LIST_TEST_ID,
   domain: 'returns',
   kind: 'list',
-  itemCount: 11,
+  itemCount: 10,
 };
 
 export function returnsListItemPath(itemId: string): string {

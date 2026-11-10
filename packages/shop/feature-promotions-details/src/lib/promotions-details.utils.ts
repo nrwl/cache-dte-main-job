@@ -1,4 +1,6 @@
-import { validateName } from '@org/shop-util-validate-name';
+import { collectionNumber } from '@org/shop-util-collection-number';
+import { mathText } from '@org/shop-util-math-text';
+import { asyncText } from '@org/shop-util-async-text';
 import {
   emptyPromotionsDetailsTotals,
   type PromotionsDetailsItem,
@@ -73,13 +75,13 @@ export function sortPromotionsDetails(
 export function describePromotionsDetailsItem(
   item: PromotionsDetailsItem,
 ): string {
-  const amount = validateName(item.amount);
-  const name = validateName(item.name);
+  const amount = collectionNumber(item.amount);
+  const name = asyncText(mathText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPromotionsDetailsAmount(amount: number): string {
-  return validateName(amount);
+  return collectionNumber(amount);
 }
 
 export function promotionsDetailsStatusTone(

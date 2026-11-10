@@ -1,4 +1,4 @@
-import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
 import type { SubscriptionsDashboardItem } from './subscriptions-dashboard.model';
 import { SUBSCRIPTIONS_DASHBOARD_FEATURE } from './subscriptions-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function SubscriptionsDashboardTable({
             <td>{formatSubscriptionsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaToolbar
+              <FeedbackBadge
                 label={item.status}
                 tone={subscriptionsDashboardStatusTone(item.status)}
                 size="sm"

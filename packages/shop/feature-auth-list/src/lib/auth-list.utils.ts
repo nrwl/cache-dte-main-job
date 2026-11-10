@@ -1,4 +1,5 @@
-import { validateSlug } from '@org/shop-util-validate-slug';
+import { mathNumber } from '@org/shop-util-math-number';
+import { storageText } from '@org/shop-util-storage-text';
 import {
   emptyAuthListTotals,
   type AuthListItem,
@@ -70,13 +71,13 @@ export function sortAuthList(
 }
 
 export function describeAuthListItem(item: AuthListItem): string {
-  const amount = validateSlug(item.amount);
-  const name = validateSlug(item.name);
+  const amount = mathNumber(item.amount);
+  const name = storageText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAuthListAmount(amount: number): string {
-  return validateSlug(amount);
+  return mathNumber(amount);
 }
 
 export function authListStatusTone(

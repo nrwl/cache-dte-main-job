@@ -1,4 +1,4 @@
-import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
+import { DataStatGroup } from '@org/shop-ui-data-stat';
 import { buildLoyaltyDetailsItems } from './loyalty-details.model';
 import { LOYALTY_DETAILS_FEATURE } from './loyalty-details.routes';
 import {
@@ -29,7 +29,7 @@ export function LoyaltyDetailsSummary({
       data-testid={`${LOYALTY_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{LOYALTY_DETAILS_FEATURE.title}</h3>
-      <CommerceBadgeGroup
+      <DataStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

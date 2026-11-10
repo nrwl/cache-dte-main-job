@@ -1,6 +1,6 @@
-import { CoreListGroup } from '@org/shop-ui-core-list';
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
-import { TypographyTile } from '@org/shop-ui-typography-tile';
+import { TypographyStatGroup } from '@org/shop-ui-typography-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
+import { CommerceStat } from '@org/shop-ui-commerce-stat';
 import type { PaymentsListItem } from './payments-list.model';
 import { PAYMENTS_LIST_FEATURE } from './payments-list.routes';
 import { describePaymentsListItem } from './payments-list.utils';
@@ -41,7 +41,7 @@ export function PaymentsListPanel({
       <p className="feature-panel-description">
         {describePaymentsListItem(selected)}
       </p>
-      <CoreListGroup
+      <TypographyStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function PaymentsListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackStat
-          label="Feedback Stat"
+        <DataPanel
+          label="Data Panel"
           value={selected.product.rating}
           size="sm"
         />
-        <TypographyTile
-          label="Typography Tile"
+        <CommerceStat
+          label="Commerce Stat"
           value={selected.product.rating}
           size="sm"
         />

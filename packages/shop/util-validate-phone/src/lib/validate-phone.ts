@@ -1,6 +1,5 @@
 import type { Product } from '@org/models';
-import { formatName } from '@org/shop-util-format-name';
-import { formatDate } from '@org/shop-util-format-date';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   clampLength,
   hashString,
@@ -47,7 +46,7 @@ export function validatePhone(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatName, formatDate].reduce<string>(
+  const staged = [validateText].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );

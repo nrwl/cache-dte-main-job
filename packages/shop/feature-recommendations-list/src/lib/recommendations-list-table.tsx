@@ -1,4 +1,4 @@
-import { LayoutPanel } from '@org/shop-ui-layout-panel';
+import { CommerceStat } from '@org/shop-ui-commerce-stat';
 import type { RecommendationsListItem } from './recommendations-list.model';
 import { RECOMMENDATIONS_LIST_FEATURE } from './recommendations-list.routes';
 import {
@@ -58,7 +58,7 @@ export function RecommendationsListTable({
             <td>{formatRecommendationsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutPanel
+              <CommerceStat
                 label={item.status}
                 tone={recommendationsListStatusTone(item.status)}
                 size="sm"

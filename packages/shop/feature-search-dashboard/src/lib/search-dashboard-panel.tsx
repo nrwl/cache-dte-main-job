@@ -1,4 +1,4 @@
-import { MarketingToolbarGroup } from '@org/shop-ui-marketing-toolbar';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import type { SearchDashboardItem } from './search-dashboard.model';
 import { SEARCH_DASHBOARD_FEATURE } from './search-dashboard.routes';
 import { describeSearchDashboardItem } from './search-dashboard.utils';
@@ -39,7 +39,7 @@ export function SearchDashboardPanel({
       <p className="feature-panel-description">
         {describeSearchDashboardItem(selected)}
       </p>
-      <MarketingToolbarGroup
+      <CoreToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

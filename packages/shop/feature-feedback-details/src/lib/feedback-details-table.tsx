@@ -1,4 +1,4 @@
-import { MarketingList } from '@org/shop-ui-marketing-list';
+import { MarketingBanner } from '@org/shop-ui-marketing-banner';
 import type { FeedbackDetailsItem } from './feedback-details.model';
 import { FEEDBACK_DETAILS_FEATURE } from './feedback-details.routes';
 import {
@@ -58,7 +58,7 @@ export function FeedbackDetailsTable({
             <td>{formatFeedbackDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingList
+              <MarketingBanner
                 label={item.status}
                 tone={feedbackDetailsStatusTone(item.status)}
                 size="sm"

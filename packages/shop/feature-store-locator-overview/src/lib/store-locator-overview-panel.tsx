@@ -1,4 +1,4 @@
-import { DataCardGroup } from '@org/shop-ui-data-card';
+import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
 import type { StoreLocatorOverviewItem } from './store-locator-overview.model';
 import { STORE_LOCATOR_OVERVIEW_FEATURE } from './store-locator-overview.routes';
 import { describeStoreLocatorOverviewItem } from './store-locator-overview.utils';
@@ -39,7 +39,7 @@ export function StoreLocatorOverviewPanel({
       <p className="feature-panel-description">
         {describeStoreLocatorOverviewItem(selected)}
       </p>
-      <DataCardGroup
+      <FeedbackPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

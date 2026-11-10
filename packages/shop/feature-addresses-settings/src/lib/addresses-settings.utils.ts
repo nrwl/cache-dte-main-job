@@ -1,4 +1,6 @@
-import { storageCode } from '@org/shop-util-storage-code';
+import { i18nPhone } from '@org/shop-util-i18n-phone';
+import { collectionName } from '@org/shop-util-collection-name';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyAddressesSettingsTotals,
   type AddressesSettingsItem,
@@ -73,13 +75,13 @@ export function sortAddressesSettings(
 export function describeAddressesSettingsItem(
   item: AddressesSettingsItem,
 ): string {
-  const amount = storageCode(item.amount);
-  const name = storageCode(item.name);
+  const amount = i18nPhone(item.amount);
+  const name = asyncNumber(collectionName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesSettingsAmount(amount: number): string {
-  return storageCode(amount);
+  return i18nPhone(amount);
 }
 
 export function addressesSettingsStatusTone(

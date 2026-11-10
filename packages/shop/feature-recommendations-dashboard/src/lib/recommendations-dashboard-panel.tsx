@@ -1,4 +1,6 @@
-import { MarketingStatGroup } from '@org/shop-ui-marketing-stat';
+import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
+import { NavigationBadge } from '@org/shop-ui-navigation-badge';
+import { MarketingBanner } from '@org/shop-ui-marketing-banner';
 import type { RecommendationsDashboardItem } from './recommendations-dashboard.model';
 import { RECOMMENDATIONS_DASHBOARD_FEATURE } from './recommendations-dashboard.routes';
 import { describeRecommendationsDashboardItem } from './recommendations-dashboard.utils';
@@ -39,7 +41,7 @@ export function RecommendationsDashboardPanel({
       <p className="feature-panel-description">
         {describeRecommendationsDashboardItem(selected)}
       </p>
-      <MarketingStatGroup
+      <TypographyPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function RecommendationsDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <NavigationBadge
+          label="Navigation Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <MarketingBanner
+          label="Marketing Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

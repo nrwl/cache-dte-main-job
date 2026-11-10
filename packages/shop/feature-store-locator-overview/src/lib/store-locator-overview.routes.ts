@@ -19,7 +19,7 @@ export const STORE_LOCATOR_OVERVIEW_FEATURE: FeatureMeta = {
   testId: STORE_LOCATOR_OVERVIEW_TEST_ID,
   domain: 'store-locator',
   kind: 'overview',
-  itemCount: 12,
+  itemCount: 8,
 };
 
 export function storeLocatorOverviewItemPath(itemId: string): string {

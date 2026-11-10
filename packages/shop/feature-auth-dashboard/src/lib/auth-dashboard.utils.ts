@@ -1,5 +1,6 @@
-import { formatCode } from '@org/shop-util-format-code';
-import { validateName } from '@org/shop-util-validate-name';
+import { mathName } from '@org/shop-util-math-name';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
+import { i18nName } from '@org/shop-util-i18n-name';
 import {
   emptyAuthDashboardTotals,
   type AuthDashboardItem,
@@ -71,13 +72,13 @@ export function sortAuthDashboard(
 }
 
 export function describeAuthDashboardItem(item: AuthDashboardItem): string {
-  const amount = formatCode(item.amount);
-  const name = validateName(item.name);
+  const amount = mathName(item.amount);
+  const name = i18nName(i18nCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAuthDashboardAmount(amount: number): string {
-  return formatCode(amount);
+  return mathName(amount);
 }
 
 export function authDashboardStatusTone(

@@ -1,4 +1,4 @@
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import { SIZING_DASHBOARD_FEATURE } from './sizing-dashboard.routes';
 
 export interface SizingDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function SizingDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceStat label="Items" value={count} tone="info" />
-        <CommerceStat label="Total" value={total} tone="success" />
+        <TypographyBanner label="Items" value={count} tone="info" />
+        <TypographyBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

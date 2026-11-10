@@ -19,6 +19,9 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-validate-address": "*"
+    "@org/shop-util-i18n-text": "*",
+    "@org/shop-util-async-text": "*",
+    "@org/shop-util-async-currency": "*",
+    "@org/shop-ui-core-badge": "*"
   }
 }

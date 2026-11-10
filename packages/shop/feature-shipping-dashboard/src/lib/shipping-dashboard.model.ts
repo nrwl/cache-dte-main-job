@@ -21,7 +21,7 @@ export interface ShippingDashboardTotals {
   archived: number;
 }
 
-export const SHIPPING_DASHBOARD_ITEM_COUNT = 12;
+export const SHIPPING_DASHBOARD_ITEM_COUNT = 7;
 
 export const SHIPPING_DASHBOARD_STATUSES: ReadonlyArray<ShippingDashboardStatus> =
   ['active', 'pending', 'archived'];

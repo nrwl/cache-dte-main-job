@@ -1,5 +1,5 @@
-import { storagePhone } from '@org/shop-util-storage-phone';
-import { i18nName } from '@org/shop-util-i18n-name';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
 import {
   emptyNotificationsDetailsTotals,
   type NotificationsDetailsItem,
@@ -77,13 +77,13 @@ export function sortNotificationsDetails(
 export function describeNotificationsDetailsItem(
   item: NotificationsDetailsItem,
 ): string {
-  const amount = storagePhone(item.amount);
-  const name = i18nName(item.name);
+  const amount = validateCurrency(item.amount);
+  const name = collectionCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatNotificationsDetailsAmount(amount: number): string {
-  return storagePhone(amount);
+  return validateCurrency(amount);
 }
 
 export function notificationsDetailsStatusTone(

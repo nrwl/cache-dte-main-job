@@ -1,5 +1,5 @@
 import { mathNumber } from '@org/shop-util-math-number';
-import { storageSlug } from '@org/shop-util-storage-slug';
+import { collectionNumber } from '@org/shop-util-collection-number';
 import {
   emptyReturnsDashboardTotals,
   type ReturnsDashboardItem,
@@ -75,7 +75,7 @@ export function describeReturnsDashboardItem(
   item: ReturnsDashboardItem,
 ): string {
   const amount = mathNumber(item.amount);
-  const name = storageSlug(item.name);
+  const name = collectionNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 

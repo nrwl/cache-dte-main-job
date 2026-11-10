@@ -21,7 +21,7 @@ export interface SubscriptionsListTotals {
   archived: number;
 }
 
-export const SUBSCRIPTIONS_LIST_ITEM_COUNT = 6;
+export const SUBSCRIPTIONS_LIST_ITEM_COUNT = 10;
 
 export const SUBSCRIPTIONS_LIST_STATUSES: ReadonlyArray<SubscriptionsListStatus> =
   ['active', 'pending', 'archived'];

@@ -1,4 +1,5 @@
-import { validateDate } from '@org/shop-util-validate-date';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { mathText } from '@org/shop-util-math-text';
 import {
   emptyCheckoutDetailsTotals,
   type CheckoutDetailsItem,
@@ -71,13 +72,13 @@ export function sortCheckoutDetails(
 }
 
 export function describeCheckoutDetailsItem(item: CheckoutDetailsItem): string {
-  const amount = validateDate(item.amount);
-  const name = validateDate(item.name);
+  const amount = validateCurrency(item.amount);
+  const name = mathText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCheckoutDetailsAmount(amount: number): string {
-  return validateDate(amount);
+  return validateCurrency(amount);
 }
 
 export function checkoutDetailsStatusTone(

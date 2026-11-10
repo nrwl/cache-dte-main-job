@@ -1,6 +1,4 @@
-import { CommerceCardGroup } from '@org/shop-ui-commerce-card';
-import { OverlayHeader } from '@org/shop-ui-overlay-header';
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { InputsToolbarGroup } from '@org/shop-ui-inputs-toolbar';
 import type { NotificationsOverviewItem } from './notifications-overview.model';
 import { NOTIFICATIONS_OVERVIEW_FEATURE } from './notifications-overview.routes';
 import { describeNotificationsOverviewItem } from './notifications-overview.utils';
@@ -41,7 +39,7 @@ export function NotificationsOverviewPanel({
       <p className="feature-panel-description">
         {describeNotificationsOverviewItem(selected)}
       </p>
-      <CommerceCardGroup
+      <InputsToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function NotificationsOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <OverlayHeader
-          label="Overlay Header"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FormsBadge
-          label="Forms Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

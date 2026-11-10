@@ -1,5 +1,6 @@
-import { collectionPhone } from '@org/shop-util-collection-phone';
-import { storageText } from '@org/shop-util-storage-text';
+import { asyncPhone } from '@org/shop-util-async-phone';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyReturnsSettingsTotals,
   type ReturnsSettingsItem,
@@ -72,13 +73,13 @@ export function sortReturnsSettings(
 }
 
 export function describeReturnsSettingsItem(item: ReturnsSettingsItem): string {
-  const amount = collectionPhone(item.amount);
-  const name = storageText(item.name);
+  const amount = asyncPhone(item.amount);
+  const name = collectionText(storagePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReturnsSettingsAmount(amount: number): string {
-  return collectionPhone(amount);
+  return asyncPhone(amount);
 }
 
 export function returnsSettingsStatusTone(

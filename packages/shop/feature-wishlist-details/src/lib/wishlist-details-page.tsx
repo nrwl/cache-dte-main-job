@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CartOverviewSummary } from '@org/shop-feature-cart-overview';
 import { WishlistDetailsFilters } from './wishlist-details-filters';
 import { WishlistDetailsHeader } from './wishlist-details-header';
 import { WishlistDetailsPanel } from './wishlist-details-panel';
@@ -54,7 +53,6 @@ export function WishlistDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CartOverviewSummary compact />
         </div>
       </div>
     </section>

@@ -21,11 +21,13 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-core-card": "*",
-    "@org/shop-ui-layout-toolbar": "*",
-    "@org/shop-ui-navigation-banner": "*",
-    "@org/shop-ui-inputs-card": "*",
-    "@org/shop-util-collection-phone": "*",
-    "@org/shop-util-math-date": "*"
+    "@org/shop-ui-charts-toolbar": "*",
+    "@org/shop-ui-layout-stat": "*",
+    "@org/shop-ui-navigation-badge": "*",
+    "@org/shop-ui-data-badge": "*",
+    "@org/shop-util-validate-phone": "*",
+    "@org/shop-util-collection-name": "*",
+    "@org/shop-util-storage-currency": "*",
+    "@org/shop-feature-account-settings": "*"
   }
 }

@@ -1,4 +1,4 @@
-import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
 import { buildBundlesDashboardItems } from './bundles-dashboard.model';
 import { BUNDLES_DASHBOARD_FEATURE } from './bundles-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function BundlesDashboardSummary({
       <h3 className="feature-summary-title">
         {BUNDLES_DASHBOARD_FEATURE.title}
       </h3>
-      <CommerceToolbarGroup
+      <MarketingBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

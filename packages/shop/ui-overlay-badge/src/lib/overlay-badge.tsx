@@ -1,7 +1,6 @@
-import { asyncCode } from '@org/shop-util-async-code';
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { asyncText } from '@org/shop-util-async-text';
-import { LayoutHeader } from '@org/shop-ui-layout-header';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
+import { asyncName } from '@org/shop-util-async-name';
+import { CoreStat } from '@org/shop-ui-core-stat';
 import type { OverlayBadgeProps } from './overlay-badge.types';
 import { resolveOverlayBadgeStyle } from './overlay-badge-variants';
 
@@ -14,9 +13,9 @@ export function OverlayBadge({
   onSelect,
   children,
 }: OverlayBadgeProps) {
-  const formatted = value === undefined ? '' : asyncCode(value);
+  const formatted = value === undefined ? '' : i18nCurrency(value);
   const style = resolveOverlayBadgeStyle(tone, size);
-  const ariaLabel = asyncText(validatePhone(label));
+  const ariaLabel = asyncName(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +38,7 @@ export function OverlayBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <LayoutHeader label="Layout Header" value={value} tone={tone} size="sm" />
+      <CoreStat label="Core Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

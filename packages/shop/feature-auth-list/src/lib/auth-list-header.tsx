@@ -1,4 +1,4 @@
-import { FormsBanner } from '@org/shop-ui-forms-banner';
+import { FeedbackStat } from '@org/shop-ui-feedback-stat';
 import { AUTH_LIST_FEATURE } from './auth-list.routes';
 
 export interface AuthListHeaderProps {
@@ -26,8 +26,8 @@ export function AuthListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsBanner label="Items" value={count} tone="info" />
-        <FormsBanner label="Total" value={total} tone="success" />
+        <FeedbackStat label="Items" value={count} tone="info" />
+        <FeedbackStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

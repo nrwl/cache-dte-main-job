@@ -1,5 +1,6 @@
-import { asyncPhone } from '@org/shop-util-async-phone';
-import { CorePanel } from '@org/shop-ui-core-panel';
+import { collectionText } from '@org/shop-util-collection-text';
+import { storageName } from '@org/shop-util-storage-name';
+import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
 import type { NavigationStatProps } from './navigation-stat.types';
 import { resolveNavigationStatStyle } from './navigation-stat-variants';
 
@@ -12,9 +13,9 @@ export function NavigationStat({
   onSelect,
   children,
 }: NavigationStatProps) {
-  const formatted = value === undefined ? '' : asyncPhone(value);
+  const formatted = value === undefined ? '' : collectionText(value);
   const style = resolveNavigationStatStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = storageName(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,7 +38,12 @@ export function NavigationStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CorePanel label="Core Panel" value={value} tone={tone} size="sm" />
+      <FeedbackBadge
+        label="Feedback Badge"
+        value={value}
+        tone={tone}
+        size="sm"
+      />
     </div>
   );
 }

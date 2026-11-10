@@ -1,4 +1,4 @@
-import { FeedbackStatGroup } from '@org/shop-ui-feedback-stat';
+import { DataBadgeGroup } from '@org/shop-ui-data-badge';
 import { buildAccountDashboardItems } from './account-dashboard.model';
 import { ACCOUNT_DASHBOARD_FEATURE } from './account-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function AccountDashboardSummary({
       <h3 className="feature-summary-title">
         {ACCOUNT_DASHBOARD_FEATURE.title}
       </h3>
-      <FeedbackStatGroup
+      <DataBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

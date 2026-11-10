@@ -21,7 +21,7 @@ export interface SupportDashboardTotals {
   archived: number;
 }
 
-export const SUPPORT_DASHBOARD_ITEM_COUNT = 11;
+export const SUPPORT_DASHBOARD_ITEM_COUNT = 5;
 
 export const SUPPORT_DASHBOARD_STATUSES: ReadonlyArray<SupportDashboardStatus> =
   ['active', 'pending', 'archived'];

@@ -1,4 +1,4 @@
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { TypographyPanel } from '@org/shop-ui-typography-panel';
 import type { CatalogDetailsItem } from './catalog-details.model';
 import { CATALOG_DETAILS_FEATURE } from './catalog-details.routes';
 import {
@@ -58,7 +58,7 @@ export function CatalogDetailsTable({
             <td>{formatCatalogDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutBanner
+              <TypographyPanel
                 label={item.status}
                 tone={catalogDetailsStatusTone(item.status)}
                 size="sm"

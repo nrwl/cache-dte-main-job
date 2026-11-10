@@ -1,6 +1,4 @@
-import { NavigationChipGroup } from '@org/shop-ui-navigation-chip';
-import { DataHeader } from '@org/shop-ui-data-header';
-import { OverlayStat } from '@org/shop-ui-overlay-stat';
+import { LayoutBannerGroup } from '@org/shop-ui-layout-banner';
 import type { PaymentsDashboardItem } from './payments-dashboard.model';
 import { PAYMENTS_DASHBOARD_FEATURE } from './payments-dashboard.routes';
 import { describePaymentsDashboardItem } from './payments-dashboard.utils';
@@ -41,7 +39,7 @@ export function PaymentsDashboardPanel({
       <p className="feature-panel-description">
         {describePaymentsDashboardItem(selected)}
       </p>
-      <NavigationChipGroup
+      <LayoutBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function PaymentsDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <DataHeader
-          label="Data Header"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <OverlayStat
-          label="Overlay Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

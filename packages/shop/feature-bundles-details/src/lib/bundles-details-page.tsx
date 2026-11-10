@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { OrdersWizardSummary } from '@org/shop-feature-orders-wizard';
 import { BundlesDetailsFilters } from './bundles-details-filters';
 import { BundlesDetailsHeader } from './bundles-details-header';
 import { BundlesDetailsPanel } from './bundles-details-panel';
@@ -54,7 +53,6 @@ export function BundlesDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <OrdersWizardSummary compact />
         </div>
       </div>
     </section>

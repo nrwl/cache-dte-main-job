@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { ReviewsListSummary } from '@org/shop-feature-reviews-list';
 import { AnalyticsListFilters } from './analytics-list-filters';
 import { AnalyticsListHeader } from './analytics-list-header';
 import { AnalyticsListPanel } from './analytics-list-panel';
@@ -53,6 +54,7 @@ export function AnalyticsListPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <ReviewsListSummary compact />
         </div>
       </div>
     </section>

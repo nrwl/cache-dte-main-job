@@ -30,7 +30,10 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-format-number/tsconfig.lib.json"
+      "path": "../util-collection-number/tsconfig.lib.json"
+    },
+    {
+      "path": "../util-storage-currency/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

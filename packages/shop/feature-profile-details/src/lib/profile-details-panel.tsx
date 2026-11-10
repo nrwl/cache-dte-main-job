@@ -1,5 +1,4 @@
-import { CommerceListGroup } from '@org/shop-ui-commerce-list';
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { TypographyStatGroup } from '@org/shop-ui-typography-stat';
 import type { ProfileDetailsItem } from './profile-details.model';
 import { PROFILE_DETAILS_FEATURE } from './profile-details.routes';
 import { describeProfileDetailsItem } from './profile-details.utils';
@@ -40,7 +39,7 @@ export function ProfileDetailsPanel({
       <p className="feature-panel-description">
         {describeProfileDetailsItem(selected)}
       </p>
-      <CommerceListGroup
+      <TypographyStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function ProfileDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <LayoutBanner
-          label="Layout Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

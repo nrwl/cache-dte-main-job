@@ -1,4 +1,4 @@
-import { OverlayChip } from '@org/shop-ui-overlay-chip';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { AnalyticsOverviewItem } from './analytics-overview.model';
 import { ANALYTICS_OVERVIEW_FEATURE } from './analytics-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function AnalyticsOverviewTable({
             <td>{formatAnalyticsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayChip
+              <ChartsBanner
                 label={item.status}
                 tone={analyticsOverviewStatusTone(item.status)}
                 size="sm"

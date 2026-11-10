@@ -1,4 +1,4 @@
-import { MediaStat } from '@org/shop-ui-media-stat';
+import { CorePanel } from '@org/shop-ui-core-panel';
 import type { PromotionsOverviewItem } from './promotions-overview.model';
 import { PROMOTIONS_OVERVIEW_FEATURE } from './promotions-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function PromotionsOverviewTable({
             <td>{formatPromotionsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaStat
+              <CorePanel
                 label={item.status}
                 tone={promotionsOverviewStatusTone(item.status)}
                 size="sm"

@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { PromotionsListSummary } from '@org/shop-feature-promotions-list';
 import { PreordersSettingsFilters } from './preorders-settings-filters';
 import { PreordersSettingsHeader } from './preorders-settings-header';
 import { PreordersSettingsPanel } from './preorders-settings-panel';
@@ -54,7 +53,6 @@ export function PreordersSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <PromotionsListSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { ChartsBadge } from '@org/shop-ui-charts-badge';
+import { MarketingStat } from '@org/shop-ui-marketing-stat';
 import { PAYMENTS_LIST_FEATURE } from './payments-list.routes';
 
 export interface PaymentsListHeaderProps {
@@ -26,8 +26,8 @@ export function PaymentsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsBadge label="Items" value={count} tone="info" />
-        <ChartsBadge label="Total" value={total} tone="success" />
+        <MarketingStat label="Items" value={count} tone="info" />
+        <MarketingStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

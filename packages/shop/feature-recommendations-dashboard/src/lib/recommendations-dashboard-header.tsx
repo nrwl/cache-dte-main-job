@@ -1,4 +1,4 @@
-import { MarketingPanel } from '@org/shop-ui-marketing-panel';
+import { CommerceStat } from '@org/shop-ui-commerce-stat';
 import { RECOMMENDATIONS_DASHBOARD_FEATURE } from './recommendations-dashboard.routes';
 
 export interface RecommendationsDashboardHeaderProps {
@@ -29,8 +29,8 @@ export function RecommendationsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingPanel label="Items" value={count} tone="info" />
-        <MarketingPanel label="Total" value={total} tone="success" />
+        <CommerceStat label="Items" value={count} tone="info" />
+        <CommerceStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

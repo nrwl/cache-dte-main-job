@@ -19,7 +19,7 @@ export const SIZING_SETTINGS_FEATURE: FeatureMeta = {
   testId: SIZING_SETTINGS_TEST_ID,
   domain: 'sizing',
   kind: 'settings',
-  itemCount: 10,
+  itemCount: 5,
 };
 
 export function sizingSettingsItemPath(itemId: string): string {

@@ -1,4 +1,4 @@
-import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { FeedbackDashboardItem } from './feedback-dashboard.model';
 import { FEEDBACK_DASHBOARD_FEATURE } from './feedback-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function FeedbackDashboardTable({
             <td>{formatFeedbackDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingToolbar
+              <LayoutStat
                 label={item.status}
                 tone={feedbackDashboardStatusTone(item.status)}
                 size="sm"

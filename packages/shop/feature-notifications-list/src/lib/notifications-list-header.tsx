@@ -1,4 +1,4 @@
-import { NavigationBadge } from '@org/shop-ui-navigation-badge';
+import { TypographyPanel } from '@org/shop-ui-typography-panel';
 import { NOTIFICATIONS_LIST_FEATURE } from './notifications-list.routes';
 
 export interface NotificationsListHeaderProps {
@@ -27,8 +27,8 @@ export function NotificationsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationBadge label="Items" value={count} tone="info" />
-        <NavigationBadge label="Total" value={total} tone="success" />
+        <TypographyPanel label="Items" value={count} tone="info" />
+        <TypographyPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

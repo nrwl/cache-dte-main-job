@@ -1,6 +1,4 @@
-import { formatText } from '@org/shop-util-format-text';
-import { collectionName } from '@org/shop-util-collection-name';
-import { mathName } from '@org/shop-util-math-name';
+import { i18nNumber } from '@org/shop-util-i18n-number';
 import {
   emptyBundlesDashboardTotals,
   type BundlesDashboardItem,
@@ -75,13 +73,13 @@ export function sortBundlesDashboard(
 export function describeBundlesDashboardItem(
   item: BundlesDashboardItem,
 ): string {
-  const amount = formatText(item.amount);
-  const name = mathName(collectionName(item.name));
+  const amount = i18nNumber(item.amount);
+  const name = i18nNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatBundlesDashboardAmount(amount: number): string {
-  return formatText(amount);
+  return i18nNumber(amount);
 }
 
 export function bundlesDashboardStatusTone(

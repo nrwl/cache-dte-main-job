@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { OrdersDetailsSummary } from '@org/shop-feature-orders-details';
 import { NotificationsListFilters } from './notifications-list-filters';
 import { NotificationsListHeader } from './notifications-list-header';
 import { NotificationsListPanel } from './notifications-list-panel';
@@ -53,6 +54,7 @@ export function NotificationsListPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <OrdersDetailsSummary compact />
         </div>
       </div>
     </section>

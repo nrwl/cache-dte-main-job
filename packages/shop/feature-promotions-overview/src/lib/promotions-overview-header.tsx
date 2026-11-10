@@ -1,4 +1,4 @@
-import { MarketingBanner } from '@org/shop-ui-marketing-banner';
+import { ChartsStat } from '@org/shop-ui-charts-stat';
 import { PROMOTIONS_OVERVIEW_FEATURE } from './promotions-overview.routes';
 
 export interface PromotionsOverviewHeaderProps {
@@ -27,8 +27,8 @@ export function PromotionsOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingBanner label="Items" value={count} tone="info" />
-        <MarketingBanner label="Total" value={total} tone="success" />
+        <ChartsStat label="Items" value={count} tone="info" />
+        <ChartsStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

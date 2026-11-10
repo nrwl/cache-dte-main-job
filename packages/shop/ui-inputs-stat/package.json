@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-i18n-address": "*"
+    "@org/shop-util-storage-currency": "*",
+    "@org/shop-ui-layout-panel": "*"
   }
 }

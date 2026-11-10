@@ -21,7 +21,7 @@ export interface AuthDashboardTotals {
   archived: number;
 }
 
-export const AUTH_DASHBOARD_ITEM_COUNT = 12;
+export const AUTH_DASHBOARD_ITEM_COUNT = 9;
 
 export const AUTH_DASHBOARD_STATUSES: ReadonlyArray<AuthDashboardStatus> = [
   'active',

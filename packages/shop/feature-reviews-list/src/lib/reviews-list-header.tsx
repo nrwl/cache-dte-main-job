@@ -1,4 +1,4 @@
-import { MediaTile } from '@org/shop-ui-media-tile';
+import { FormsPanel } from '@org/shop-ui-forms-panel';
 import { REVIEWS_LIST_FEATURE } from './reviews-list.routes';
 
 export interface ReviewsListHeaderProps {
@@ -26,8 +26,8 @@ export function ReviewsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaTile label="Items" value={count} tone="info" />
-        <MediaTile label="Total" value={total} tone="success" />
+        <FormsPanel label="Items" value={count} tone="info" />
+        <FormsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

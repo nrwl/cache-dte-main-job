@@ -1,4 +1,4 @@
-import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import { RETURNS_LIST_FEATURE } from './returns-list.routes';
 
 export interface ReturnsListHeaderProps {
@@ -26,8 +26,8 @@ export function ReturnsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingToolbar label="Items" value={count} tone="info" />
-        <MarketingToolbar label="Total" value={total} tone="success" />
+        <OverlayStat label="Items" value={count} tone="info" />
+        <OverlayStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

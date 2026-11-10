@@ -1,4 +1,4 @@
-import { ChartsTileGroup } from '@org/shop-ui-charts-tile';
+import { MediaStatGroup } from '@org/shop-ui-media-stat';
 import { buildFeedbackDetailsItems } from './feedback-details.model';
 import { FEEDBACK_DETAILS_FEATURE } from './feedback-details.routes';
 import {
@@ -31,7 +31,7 @@ export function FeedbackDetailsSummary({
       <h3 className="feature-summary-title">
         {FEEDBACK_DETAILS_FEATURE.title}
       </h3>
-      <ChartsTileGroup
+      <MediaStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

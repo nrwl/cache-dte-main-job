@@ -1,4 +1,6 @@
-import { InputsListGroup } from '@org/shop-ui-inputs-list';
+import { MarketingBannerGroup } from '@org/shop-ui-marketing-banner';
+import { InputsBadge } from '@org/shop-ui-inputs-badge';
+import { DataToolbar } from '@org/shop-ui-data-toolbar';
 import type { WishlistListItem } from './wishlist-list.model';
 import { WISHLIST_LIST_FEATURE } from './wishlist-list.routes';
 import { describeWishlistListItem } from './wishlist-list.utils';
@@ -39,7 +41,7 @@ export function WishlistListPanel({
       <p className="feature-panel-description">
         {describeWishlistListItem(selected)}
       </p>
-      <InputsListGroup
+      <MarketingBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function WishlistListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <InputsBadge
+          label="Inputs Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <DataToolbar
+          label="Data Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -19,7 +19,7 @@ export const PROFILE_SETTINGS_FEATURE: FeatureMeta = {
   testId: PROFILE_SETTINGS_TEST_ID,
   domain: 'profile',
   kind: 'settings',
-  itemCount: 9,
+  itemCount: 11,
 };
 
 export function profileSettingsItemPath(itemId: string): string {

@@ -1,6 +1,4 @@
-import { MediaChipGroup } from '@org/shop-ui-media-chip';
-import { DataBanner } from '@org/shop-ui-data-banner';
-import { DataStat } from '@org/shop-ui-data-stat';
+import { DataBadgeGroup } from '@org/shop-ui-data-badge';
 import type { CheckoutListItem } from './checkout-list.model';
 import { CHECKOUT_LIST_FEATURE } from './checkout-list.routes';
 import { describeCheckoutListItem } from './checkout-list.utils';
@@ -41,7 +39,7 @@ export function CheckoutListPanel({
       <p className="feature-panel-description">
         {describeCheckoutListItem(selected)}
       </p>
-      <MediaChipGroup
+      <DataBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,14 +49,7 @@ export function CheckoutListPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <DataBanner
-          label="Data Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

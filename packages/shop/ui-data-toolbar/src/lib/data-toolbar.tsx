@@ -1,6 +1,7 @@
-import { asyncCurrency } from '@org/shop-util-async-currency';
-import { asyncSlug } from '@org/shop-util-async-slug';
-import { NavigationBadge } from '@org/shop-ui-navigation-badge';
+import { storageText } from '@org/shop-util-storage-text';
+import { storagePhone } from '@org/shop-util-storage-phone';
+import { validateText } from '@org/shop-util-validate-text';
+import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
 import type { DataToolbarProps } from './data-toolbar.types';
 import { resolveDataToolbarStyle } from './data-toolbar-variants';
 
@@ -13,9 +14,9 @@ export function DataToolbar({
   onSelect,
   children,
 }: DataToolbarProps) {
-  const formatted = value === undefined ? '' : asyncCurrency(value);
+  const formatted = value === undefined ? '' : storageText(value);
   const style = resolveDataToolbarStyle(tone, size);
-  const ariaLabel = asyncSlug(label);
+  const ariaLabel = validateText(storagePhone(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,8 +39,8 @@ export function DataToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <NavigationBadge
-        label="Navigation Badge"
+      <LayoutToolbar
+        label="Layout Toolbar"
         value={value}
         tone={tone}
         size="sm"

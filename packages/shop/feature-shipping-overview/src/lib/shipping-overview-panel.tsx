@@ -1,5 +1,6 @@
-import { MediaBannerGroup } from '@org/shop-ui-media-banner';
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
+import { TypographyBannerGroup } from '@org/shop-ui-typography-banner';
+import { CommerceBanner } from '@org/shop-ui-commerce-banner';
+import { ChartsPanel } from '@org/shop-ui-charts-panel';
 import type { ShippingOverviewItem } from './shipping-overview.model';
 import { SHIPPING_OVERVIEW_FEATURE } from './shipping-overview.routes';
 import { describeShippingOverviewItem } from './shipping-overview.utils';
@@ -40,7 +41,7 @@ export function ShippingOverviewPanel({
       <p className="feature-panel-description">
         {describeShippingOverviewItem(selected)}
       </p>
-      <MediaBannerGroup
+      <TypographyBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function ShippingOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceBadge
-          label="Commerce Badge"
+        <CommerceBanner
+          label="Commerce Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <ChartsPanel
+          label="Charts Panel"
           value={selected.product.rating}
           size="sm"
         />

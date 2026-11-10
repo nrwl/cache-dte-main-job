@@ -1,6 +1,6 @@
-import { formatPercent } from '@org/shop-util-format-percent';
-import { collectionNumber } from '@org/shop-util-collection-number';
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { formatName } from '@org/shop-util-format-name';
+import { validateText } from '@org/shop-util-validate-text';
+import { CoreStat } from '@org/shop-ui-core-stat';
 import type { OverlayPanelProps } from './overlay-panel.types';
 import { resolveOverlayPanelStyle } from './overlay-panel-variants';
 
@@ -13,9 +13,9 @@ export function OverlayPanel({
   onSelect,
   children,
 }: OverlayPanelProps) {
-  const formatted = value === undefined ? '' : formatPercent(value);
+  const formatted = value === undefined ? '' : formatName(value);
   const style = resolveOverlayPanelStyle(tone, size);
-  const ariaLabel = collectionNumber(label);
+  const ariaLabel = validateText(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +38,7 @@ export function OverlayPanel({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreBanner label="Core Banner" value={value} tone={tone} size="sm" />
+      <CoreStat label="Core Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

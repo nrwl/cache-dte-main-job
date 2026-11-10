@@ -1,6 +1,5 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
-import { asyncCurrency } from '@org/shop-util-async-currency';
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { i18nText } from '@org/shop-util-i18n-text';
 import {
   emptyPreordersListTotals,
   type PreordersListItem,
@@ -72,13 +71,13 @@ export function sortPreordersList(
 }
 
 export function describePreordersListItem(item: PreordersListItem): string {
-  const amount = i18nDate(item.amount);
-  const name = validatePhone(asyncCurrency(item.name));
+  const amount = formatCurrency(item.amount);
+  const name = i18nText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPreordersListAmount(amount: number): string {
-  return i18nDate(amount);
+  return formatCurrency(amount);
 }
 
 export function preordersListStatusTone(

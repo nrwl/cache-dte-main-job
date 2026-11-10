@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-collection-currency": "*"
+    "@org/shop-util-math-text": "*",
+    "@org/shop-util-math-number": "*"
   }
 }

@@ -1,4 +1,4 @@
-import { CoreBadge } from '@org/shop-ui-core-badge';
+import { CommercePanel } from '@org/shop-ui-commerce-panel';
 import type { PromotionsListItem } from './promotions-list.model';
 import { PROMOTIONS_LIST_FEATURE } from './promotions-list.routes';
 import {
@@ -58,7 +58,7 @@ export function PromotionsListTable({
             <td>{formatPromotionsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreBadge
+              <CommercePanel
                 label={item.status}
                 tone={promotionsListStatusTone(item.status)}
                 size="sm"

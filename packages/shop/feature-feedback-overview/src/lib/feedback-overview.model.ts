@@ -21,7 +21,7 @@ export interface FeedbackOverviewTotals {
   archived: number;
 }
 
-export const FEEDBACK_OVERVIEW_ITEM_COUNT = 10;
+export const FEEDBACK_OVERVIEW_ITEM_COUNT = 5;
 
 export const FEEDBACK_OVERVIEW_STATUSES: ReadonlyArray<FeedbackOverviewStatus> =
   ['active', 'pending', 'archived'];

@@ -1,4 +1,4 @@
-import { MediaHeader } from '@org/shop-ui-media-header';
+import { TypographyStat } from '@org/shop-ui-typography-stat';
 import type { WishlistListItem } from './wishlist-list.model';
 import { WISHLIST_LIST_FEATURE } from './wishlist-list.routes';
 import {
@@ -58,7 +58,7 @@ export function WishlistListTable({
             <td>{formatWishlistListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaHeader
+              <TypographyStat
                 label={item.status}
                 tone={wishlistListStatusTone(item.status)}
                 size="sm"

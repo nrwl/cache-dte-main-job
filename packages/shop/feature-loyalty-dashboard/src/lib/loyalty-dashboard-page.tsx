@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { ShippingSummarySummary } from '@org/shop-feature-shipping-summary';
+import { CartSettingsSummary } from '@org/shop-feature-cart-settings';
 import { LoyaltyDashboardFilters } from './loyalty-dashboard-filters';
 import { LoyaltyDashboardHeader } from './loyalty-dashboard-header';
 import { LoyaltyDashboardPanel } from './loyalty-dashboard-panel';
@@ -54,7 +54,7 @@ export function LoyaltyDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <ShippingSummarySummary compact />
+          <CartSettingsSummary compact />
         </div>
       </div>
     </section>

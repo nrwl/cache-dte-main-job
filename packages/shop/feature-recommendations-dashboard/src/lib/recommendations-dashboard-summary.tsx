@@ -1,4 +1,4 @@
-import { MarketingPanelGroup } from '@org/shop-ui-marketing-panel';
+import { CommerceStatGroup } from '@org/shop-ui-commerce-stat';
 import { buildRecommendationsDashboardItems } from './recommendations-dashboard.model';
 import { RECOMMENDATIONS_DASHBOARD_FEATURE } from './recommendations-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function RecommendationsDashboardSummary({
       <h3 className="feature-summary-title">
         {RECOMMENDATIONS_DASHBOARD_FEATURE.title}
       </h3>
-      <MarketingPanelGroup
+      <CommerceStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

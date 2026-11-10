@@ -1,4 +1,4 @@
-import { MarketingTile } from '@org/shop-ui-marketing-tile';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { ProfileDetailsItem } from './profile-details.model';
 import { PROFILE_DETAILS_FEATURE } from './profile-details.routes';
 import {
@@ -58,7 +58,7 @@ export function ProfileDetailsTable({
             <td>{formatProfileDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingTile
+              <LayoutPanel
                 label={item.status}
                 tone={profileDetailsStatusTone(item.status)}
                 size="sm"

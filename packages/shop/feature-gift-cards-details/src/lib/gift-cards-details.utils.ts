@@ -1,6 +1,4 @@
-import { i18nName } from '@org/shop-util-i18n-name';
-import { validatePercent } from '@org/shop-util-validate-percent';
-import { asyncName } from '@org/shop-util-async-name';
+import { mathText } from '@org/shop-util-math-text';
 import {
   emptyGiftCardsDetailsTotals,
   type GiftCardsDetailsItem,
@@ -75,13 +73,13 @@ export function sortGiftCardsDetails(
 export function describeGiftCardsDetailsItem(
   item: GiftCardsDetailsItem,
 ): string {
-  const amount = i18nName(item.amount);
-  const name = asyncName(validatePercent(item.name));
+  const amount = mathText(item.amount);
+  const name = mathText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatGiftCardsDetailsAmount(amount: number): string {
-  return i18nName(amount);
+  return mathText(amount);
 }
 
 export function giftCardsDetailsStatusTone(

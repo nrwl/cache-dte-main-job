@@ -1,5 +1,6 @@
-import { MediaBannerGroup } from '@org/shop-ui-media-banner';
-import { CoreList } from '@org/shop-ui-core-list';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
+import { InputsBanner } from '@org/shop-ui-inputs-banner';
+import { NavigationBadge } from '@org/shop-ui-navigation-badge';
 import type { PromotionsOverviewItem } from './promotions-overview.model';
 import { PROMOTIONS_OVERVIEW_FEATURE } from './promotions-overview.routes';
 import { describePromotionsOverviewItem } from './promotions-overview.utils';
@@ -40,7 +41,7 @@ export function PromotionsOverviewPanel({
       <p className="feature-panel-description">
         {describePromotionsOverviewItem(selected)}
       </p>
-      <MediaBannerGroup
+      <DataPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,7 +52,16 @@ export function PromotionsOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CoreList label="Core List" value={selected.product.rating} size="sm" />
+        <InputsBanner
+          label="Inputs Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <NavigationBadge
+          label="Navigation Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
       </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (

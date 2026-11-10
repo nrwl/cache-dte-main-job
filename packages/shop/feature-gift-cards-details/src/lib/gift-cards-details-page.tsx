@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { ShippingDetailsSummary } from '@org/shop-feature-shipping-details';
+import { LoyaltyDashboardSummary } from '@org/shop-feature-loyalty-dashboard';
 import { GiftCardsDetailsFilters } from './gift-cards-details-filters';
 import { GiftCardsDetailsHeader } from './gift-cards-details-header';
 import { GiftCardsDetailsPanel } from './gift-cards-details-panel';
@@ -54,7 +54,7 @@ export function GiftCardsDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <ShippingDetailsSummary compact />
+          <LoyaltyDashboardSummary compact />
         </div>
       </div>
     </section>

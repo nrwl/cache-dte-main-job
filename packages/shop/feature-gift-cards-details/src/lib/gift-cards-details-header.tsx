@@ -1,4 +1,4 @@
-import { MarketingPanel } from '@org/shop-ui-marketing-panel';
+import { LayoutBadge } from '@org/shop-ui-layout-badge';
 import { GIFT_CARDS_DETAILS_FEATURE } from './gift-cards-details.routes';
 
 export interface GiftCardsDetailsHeaderProps {
@@ -27,8 +27,8 @@ export function GiftCardsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingPanel label="Items" value={count} tone="info" />
-        <MarketingPanel label="Total" value={total} tone="success" />
+        <LayoutBadge label="Items" value={count} tone="info" />
+        <LayoutBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

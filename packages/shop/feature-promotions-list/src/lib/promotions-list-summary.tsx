@@ -1,4 +1,4 @@
-import { DataStatGroup } from '@org/shop-ui-data-stat';
+import { MediaBadgeGroup } from '@org/shop-ui-media-badge';
 import { buildPromotionsListItems } from './promotions-list.model';
 import { PROMOTIONS_LIST_FEATURE } from './promotions-list.routes';
 import {
@@ -29,7 +29,7 @@ export function PromotionsListSummary({
       data-testid={`${PROMOTIONS_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{PROMOTIONS_LIST_FEATURE.title}</h3>
-      <DataStatGroup
+      <MediaBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

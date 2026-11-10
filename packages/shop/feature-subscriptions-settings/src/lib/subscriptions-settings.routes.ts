@@ -19,7 +19,7 @@ export const SUBSCRIPTIONS_SETTINGS_FEATURE: FeatureMeta = {
   testId: SUBSCRIPTIONS_SETTINGS_TEST_ID,
   domain: 'subscriptions',
   kind: 'settings',
-  itemCount: 5,
+  itemCount: 7,
 };
 
 export function subscriptionsSettingsItemPath(itemId: string): string {

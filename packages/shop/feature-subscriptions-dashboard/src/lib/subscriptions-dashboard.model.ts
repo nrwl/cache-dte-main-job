@@ -21,7 +21,7 @@ export interface SubscriptionsDashboardTotals {
   archived: number;
 }
 
-export const SUBSCRIPTIONS_DASHBOARD_ITEM_COUNT = 9;
+export const SUBSCRIPTIONS_DASHBOARD_ITEM_COUNT = 6;
 
 export const SUBSCRIPTIONS_DASHBOARD_STATUSES: ReadonlyArray<SubscriptionsDashboardStatus> =
   ['active', 'pending', 'archived'];

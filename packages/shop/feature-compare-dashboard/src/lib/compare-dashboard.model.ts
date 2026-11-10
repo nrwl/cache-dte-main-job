@@ -21,7 +21,7 @@ export interface CompareDashboardTotals {
   archived: number;
 }
 
-export const COMPARE_DASHBOARD_ITEM_COUNT = 11;
+export const COMPARE_DASHBOARD_ITEM_COUNT = 7;
 
 export const COMPARE_DASHBOARD_STATUSES: ReadonlyArray<CompareDashboardStatus> =
   ['active', 'pending', 'archived'];

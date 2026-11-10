@@ -1,4 +1,4 @@
-import { CommerceHeaderGroup } from '@org/shop-ui-commerce-header';
+import { FeedbackToolbarGroup } from '@org/shop-ui-feedback-toolbar';
 import { buildAddressesSettingsItems } from './addresses-settings.model';
 import { ADDRESSES_SETTINGS_FEATURE } from './addresses-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function AddressesSettingsSummary({
       <h3 className="feature-summary-title">
         {ADDRESSES_SETTINGS_FEATURE.title}
       </h3>
-      <CommerceHeaderGroup
+      <FeedbackToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

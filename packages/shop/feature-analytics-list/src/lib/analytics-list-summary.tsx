@@ -1,4 +1,4 @@
-import { CoreChipGroup } from '@org/shop-ui-core-chip';
+import { FeedbackStatGroup } from '@org/shop-ui-feedback-stat';
 import { buildAnalyticsListItems } from './analytics-list.model';
 import { ANALYTICS_LIST_FEATURE } from './analytics-list.routes';
 import {
@@ -29,7 +29,7 @@ export function AnalyticsListSummary({
       data-testid={`${ANALYTICS_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{ANALYTICS_LIST_FEATURE.title}</h3>
-      <CoreChipGroup
+      <FeedbackStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

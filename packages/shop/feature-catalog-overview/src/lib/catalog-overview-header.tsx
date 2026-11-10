@@ -1,4 +1,4 @@
-import { TypographyBanner } from '@org/shop-ui-typography-banner';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { CATALOG_OVERVIEW_FEATURE } from './catalog-overview.routes';
 
 export interface CatalogOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function CatalogOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyBanner label="Items" value={count} tone="info" />
-        <TypographyBanner label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

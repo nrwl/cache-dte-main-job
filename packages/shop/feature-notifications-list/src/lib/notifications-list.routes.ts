@@ -19,7 +19,7 @@ export const NOTIFICATIONS_LIST_FEATURE: FeatureMeta = {
   testId: NOTIFICATIONS_LIST_TEST_ID,
   domain: 'notifications',
   kind: 'list',
-  itemCount: 12,
+  itemCount: 10,
 };
 
 export function notificationsListItemPath(itemId: string): string {

@@ -1,6 +1,5 @@
-import { FeedbackToolbarGroup } from '@org/shop-ui-feedback-toolbar';
-import { MediaStat } from '@org/shop-ui-media-stat';
-import { OverlayChip } from '@org/shop-ui-overlay-chip';
+import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
+import { CommerceStat } from '@org/shop-ui-commerce-stat';
 import type { CartDetailsItem } from './cart-details.model';
 import { CART_DETAILS_FEATURE } from './cart-details.routes';
 import { describeCartDetailsItem } from './cart-details.utils';
@@ -38,7 +37,7 @@ export function CartDetailsPanel({ selected, onClear }: CartDetailsPanelProps) {
       <p className="feature-panel-description">
         {describeCartDetailsItem(selected)}
       </p>
-      <FeedbackToolbarGroup
+      <TypographyToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,13 +48,8 @@ export function CartDetailsPanel({ selected, onClear }: CartDetailsPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <MediaStat
-          label="Media Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <OverlayChip
-          label="Overlay Chip"
+        <CommerceStat
+          label="Commerce Stat"
           value={selected.product.rating}
           size="sm"
         />

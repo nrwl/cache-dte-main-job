@@ -1,6 +1,5 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
-import { asyncCode } from '@org/shop-util-async-code';
-import { CoreCard } from '@org/shop-ui-core-card';
+import { mathNumber } from '@org/shop-util-math-number';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { LayoutBadgeProps } from './layout-badge.types';
 import { resolveLayoutBadgeStyle } from './layout-badge-variants';
 
@@ -13,9 +12,9 @@ export function LayoutBadge({
   onSelect,
   children,
 }: LayoutBadgeProps) {
-  const formatted = value === undefined ? '' : i18nDate(value);
+  const formatted = value === undefined ? '' : mathNumber(value);
   const style = resolveLayoutBadgeStyle(tone, size);
-  const ariaLabel = asyncCode(label);
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +37,7 @@ export function LayoutBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreCard label="Core Card" value={value} tone={tone} size="sm" />
+      <FormsStat label="Forms Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

@@ -1,5 +1,5 @@
-import { formatNumber } from '@org/shop-util-format-number';
-import { mathDate } from '@org/shop-util-math-date';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
+import { storageText } from '@org/shop-util-storage-text';
 import {
   emptySupportOverviewTotals,
   type SupportOverviewItem,
@@ -72,13 +72,13 @@ export function sortSupportOverview(
 }
 
 export function describeSupportOverviewItem(item: SupportOverviewItem): string {
-  const amount = formatNumber(item.amount);
-  const name = mathDate(item.name);
+  const amount = i18nCurrency(item.amount);
+  const name = storageText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSupportOverviewAmount(amount: number): string {
-  return formatNumber(amount);
+  return i18nCurrency(amount);
 }
 
 export function supportOverviewStatusTone(

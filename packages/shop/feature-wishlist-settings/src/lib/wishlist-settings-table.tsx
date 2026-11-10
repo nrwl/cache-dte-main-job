@@ -1,4 +1,4 @@
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
 import type { WishlistSettingsItem } from './wishlist-settings.model';
 import { WISHLIST_SETTINGS_FEATURE } from './wishlist-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function WishlistSettingsTable({
             <td>{formatWishlistSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreBanner
+              <FeedbackToolbar
                 label={item.status}
                 tone={wishlistSettingsStatusTone(item.status)}
                 size="sm"

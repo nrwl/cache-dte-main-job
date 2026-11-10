@@ -1,6 +1,6 @@
-import { CoreStatGroup } from '@org/shop-ui-core-stat';
-import { DataTile } from '@org/shop-ui-data-tile';
-import { InputsHeader } from '@org/shop-ui-inputs-header';
+import { FormsPanelGroup } from '@org/shop-ui-forms-panel';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { ChartsBadge } from '@org/shop-ui-charts-badge';
 import type { OrdersListItem } from './orders-list.model';
 import { ORDERS_LIST_FEATURE } from './orders-list.routes';
 import { describeOrdersListItem } from './orders-list.utils';
@@ -38,7 +38,7 @@ export function OrdersListPanel({ selected, onClear }: OrdersListPanelProps) {
       <p className="feature-panel-description">
         {describeOrdersListItem(selected)}
       </p>
-      <CoreStatGroup
+      <FormsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,9 +49,13 @@ export function OrdersListPanel({ selected, onClear }: OrdersListPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <DataTile label="Data Tile" value={selected.product.rating} size="sm" />
-        <InputsHeader
-          label="Inputs Header"
+        <LayoutStat
+          label="Layout Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <ChartsBadge
+          label="Charts Badge"
           value={selected.product.rating}
           size="sm"
         />

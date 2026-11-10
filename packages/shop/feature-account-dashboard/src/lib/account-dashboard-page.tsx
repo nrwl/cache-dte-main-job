@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CheckoutSummarySummary } from '@org/shop-feature-checkout-summary';
+import { CheckoutListSummary } from '@org/shop-feature-checkout-list';
 import { AccountDashboardFilters } from './account-dashboard-filters';
 import { AccountDashboardHeader } from './account-dashboard-header';
 import { AccountDashboardPanel } from './account-dashboard-panel';
@@ -54,7 +54,7 @@ export function AccountDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CheckoutSummarySummary compact />
+          <CheckoutListSummary compact />
         </div>
       </div>
     </section>

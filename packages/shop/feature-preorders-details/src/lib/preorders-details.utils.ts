@@ -1,6 +1,5 @@
-import { storageCurrency } from '@org/shop-util-storage-currency';
-import { collectionName } from '@org/shop-util-collection-name';
-import { mathNumber } from '@org/shop-util-math-number';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
 import {
   emptyPreordersDetailsTotals,
   type PreordersDetailsItem,
@@ -75,13 +74,13 @@ export function sortPreordersDetails(
 export function describePreordersDetailsItem(
   item: PreordersDetailsItem,
 ): string {
-  const amount = storageCurrency(item.amount);
-  const name = mathNumber(collectionName(item.name));
+  const amount = i18nCurrency(item.amount);
+  const name = collectionCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPreordersDetailsAmount(amount: number): string {
-  return storageCurrency(amount);
+  return i18nCurrency(amount);
 }
 
 export function preordersDetailsStatusTone(

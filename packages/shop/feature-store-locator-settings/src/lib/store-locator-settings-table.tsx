@@ -1,4 +1,4 @@
-import { LayoutList } from '@org/shop-ui-layout-list';
+import { DataBanner } from '@org/shop-ui-data-banner';
 import type { StoreLocatorSettingsItem } from './store-locator-settings.model';
 import { STORE_LOCATOR_SETTINGS_FEATURE } from './store-locator-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function StoreLocatorSettingsTable({
             <td>{formatStoreLocatorSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutList
+              <DataBanner
                 label={item.status}
                 tone={storeLocatorSettingsStatusTone(item.status)}
                 size="sm"

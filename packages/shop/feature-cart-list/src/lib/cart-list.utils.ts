@@ -1,4 +1,4 @@
-import { mathCurrency } from '@org/shop-util-math-currency';
+import { formatName } from '@org/shop-util-format-name';
 import {
   emptyCartListTotals,
   type CartListItem,
@@ -70,13 +70,13 @@ export function sortCartList(
 }
 
 export function describeCartListItem(item: CartListItem): string {
-  const amount = mathCurrency(item.amount);
-  const name = mathCurrency(item.name);
+  const amount = formatName(item.amount);
+  const name = formatName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCartListAmount(amount: number): string {
-  return mathCurrency(amount);
+  return formatName(amount);
 }
 
 export function cartListStatusTone(

@@ -1,6 +1,5 @@
-import { OverlayTileGroup } from '@org/shop-ui-overlay-tile';
-import { InputsHeader } from '@org/shop-ui-inputs-header';
-import { MarketingBadge } from '@org/shop-ui-marketing-badge';
+import { FormsBannerGroup } from '@org/shop-ui-forms-banner';
+import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
 import type { CartOverviewItem } from './cart-overview.model';
 import { CART_OVERVIEW_FEATURE } from './cart-overview.routes';
 import { describeCartOverviewItem } from './cart-overview.utils';
@@ -41,7 +40,7 @@ export function CartOverviewPanel({
       <p className="feature-panel-description">
         {describeCartOverviewItem(selected)}
       </p>
-      <OverlayTileGroup
+      <FormsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function CartOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsHeader
-          label="Inputs Header"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <MarketingBadge
-          label="Marketing Badge"
+        <MarketingToolbar
+          label="Marketing Toolbar"
           value={selected.product.rating}
           size="sm"
         />

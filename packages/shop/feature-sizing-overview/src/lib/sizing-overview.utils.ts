@@ -1,5 +1,5 @@
-import { formatPercent } from '@org/shop-util-format-percent';
-import { formatText } from '@org/shop-util-format-text';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { validateNumber } from '@org/shop-util-validate-number';
 import {
   emptySizingOverviewTotals,
   type SizingOverviewItem,
@@ -72,13 +72,13 @@ export function sortSizingOverview(
 }
 
 export function describeSizingOverviewItem(item: SizingOverviewItem): string {
-  const amount = formatPercent(item.amount);
-  const name = formatText(item.name);
+  const amount = i18nNumber(item.amount);
+  const name = validateNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingOverviewAmount(amount: number): string {
-  return formatPercent(amount);
+  return i18nNumber(amount);
 }
 
 export function sizingOverviewStatusTone(

@@ -1,11 +1,10 @@
 import type { Product } from '@org/models';
-import { formatPercent } from '@org/shop-util-format-percent';
-import { mathCode } from '@org/shop-util-math-code';
+import { storagePhone } from '@org/shop-util-storage-phone';
 import {
   clampLength,
   hashString,
+  kebabCase,
   normalizeInput,
-  reverseText,
 } from './i18n-currency-helpers';
 
 export interface I18nCurrencyOptions {
@@ -33,7 +32,7 @@ export const I18N_CURRENCY_DEFAULTS: Required<I18nCurrencyOptions> = {
 export const I18N_CURRENCY_KIND = 'i18n-currency' as const;
 
 /**
- * Formats a raw value using the "reverse" strategy.
+ * Formats a raw value using the "kebab" strategy.
  */
 export function i18nCurrency(
   value: string | number,
@@ -47,11 +46,11 @@ export function i18nCurrency(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatPercent, mathCode].reduce<string>(
+  const staged = [storagePhone].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );
-  const transformed = reverseText(staged);
+  const transformed = kebabCase(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

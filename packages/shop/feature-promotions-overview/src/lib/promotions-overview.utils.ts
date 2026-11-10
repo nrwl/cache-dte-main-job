@@ -1,6 +1,4 @@
-import { validateText } from '@org/shop-util-validate-text';
-import { collectionPhone } from '@org/shop-util-collection-phone';
-import { validateCode } from '@org/shop-util-validate-code';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyPromotionsOverviewTotals,
   type PromotionsOverviewItem,
@@ -75,13 +73,13 @@ export function sortPromotionsOverview(
 export function describePromotionsOverviewItem(
   item: PromotionsOverviewItem,
 ): string {
-  const amount = validateText(item.amount);
-  const name = validateCode(collectionPhone(item.name));
+  const amount = mathCurrency(item.amount);
+  const name = mathCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPromotionsOverviewAmount(amount: number): string {
-  return validateText(amount);
+  return mathCurrency(amount);
 }
 
 export function promotionsOverviewStatusTone(

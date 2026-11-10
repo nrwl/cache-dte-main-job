@@ -1,4 +1,4 @@
-import { LayoutChip } from '@org/shop-ui-layout-chip';
+import { ChartsToolbar } from '@org/shop-ui-charts-toolbar';
 import { GIFT_CARDS_DASHBOARD_FEATURE } from './gift-cards-dashboard.routes';
 
 export interface GiftCardsDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function GiftCardsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutChip label="Items" value={count} tone="info" />
-        <LayoutChip label="Total" value={total} tone="success" />
+        <ChartsToolbar label="Items" value={count} tone="info" />
+        <ChartsToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

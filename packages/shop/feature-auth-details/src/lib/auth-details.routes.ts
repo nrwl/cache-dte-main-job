@@ -19,7 +19,7 @@ export const AUTH_DETAILS_FEATURE: FeatureMeta = {
   testId: AUTH_DETAILS_TEST_ID,
   domain: 'auth',
   kind: 'details',
-  itemCount: 9,
+  itemCount: 5,
 };
 
 export function authDetailsItemPath(itemId: string): string {

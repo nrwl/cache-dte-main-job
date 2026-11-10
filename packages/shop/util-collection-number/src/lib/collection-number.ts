@@ -1,6 +1,4 @@
 import type { Product } from '@org/models';
-import { validateSlug } from '@org/shop-util-validate-slug';
-import { validatePercent } from '@org/shop-util-validate-percent';
 import {
   clampLength,
   hashString,
@@ -47,10 +45,7 @@ export function collectionNumber(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [validateSlug, validatePercent].reduce<string>(
-    (acc, fn) => fn(acc),
-    normalized,
-  );
+  const staged = normalized;
   const transformed = titleCase(staged);
   return clampLength(transformed, opts.maxLength);
 }

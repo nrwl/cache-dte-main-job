@@ -1,5 +1,5 @@
-import { MediaHeaderGroup } from '@org/shop-ui-media-header';
-import { DataToolbar } from '@org/shop-ui-data-toolbar';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
+import { MarketingBanner } from '@org/shop-ui-marketing-banner';
 import type { GiftCardsDashboardItem } from './gift-cards-dashboard.model';
 import { GIFT_CARDS_DASHBOARD_FEATURE } from './gift-cards-dashboard.routes';
 import { describeGiftCardsDashboardItem } from './gift-cards-dashboard.utils';
@@ -40,7 +40,7 @@ export function GiftCardsDashboardPanel({
       <p className="feature-panel-description">
         {describeGiftCardsDashboardItem(selected)}
       </p>
-      <MediaHeaderGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function GiftCardsDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <DataToolbar
-          label="Data Toolbar"
+        <MarketingBanner
+          label="Marketing Banner"
           value={selected.product.rating}
           size="sm"
         />

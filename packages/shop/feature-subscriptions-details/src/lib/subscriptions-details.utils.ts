@@ -1,5 +1,6 @@
-import { formatPhone } from '@org/shop-util-format-phone';
-import { i18nDate } from '@org/shop-util-i18n-date';
+import { collectionPhone } from '@org/shop-util-collection-phone';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptySubscriptionsDetailsTotals,
   type SubscriptionsDetailsItem,
@@ -77,13 +78,13 @@ export function sortSubscriptionsDetails(
 export function describeSubscriptionsDetailsItem(
   item: SubscriptionsDetailsItem,
 ): string {
-  const amount = formatPhone(item.amount);
-  const name = i18nDate(item.name);
+  const amount = collectionPhone(item.amount);
+  const name = mathName(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSubscriptionsDetailsAmount(amount: number): string {
-  return formatPhone(amount);
+  return collectionPhone(amount);
 }
 
 export function subscriptionsDetailsStatusTone(

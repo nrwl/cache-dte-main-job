@@ -1,5 +1,4 @@
-import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
-import { ChartsToolbar } from '@org/shop-ui-charts-toolbar';
+import { InputsStatGroup } from '@org/shop-ui-inputs-stat';
 import type { NotificationsDetailsItem } from './notifications-details.model';
 import { NOTIFICATIONS_DETAILS_FEATURE } from './notifications-details.routes';
 import { describeNotificationsDetailsItem } from './notifications-details.utils';
@@ -40,7 +39,7 @@ export function NotificationsDetailsPanel({
       <p className="feature-panel-description">
         {describeNotificationsDetailsItem(selected)}
       </p>
-      <NavigationBadgeGroup
+      <InputsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function NotificationsDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <ChartsToolbar
-          label="Charts Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

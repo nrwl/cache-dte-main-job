@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { OrdersListSummary } from '@org/shop-feature-orders-list';
+import { ReviewsSettingsSummary } from '@org/shop-feature-reviews-settings';
 import { PaymentsDetailsFilters } from './payments-details-filters';
 import { PaymentsDetailsHeader } from './payments-details-header';
 import { PaymentsDetailsPanel } from './payments-details-panel';
@@ -54,7 +54,7 @@ export function PaymentsDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <OrdersListSummary compact />
+          <ReviewsSettingsSummary compact />
         </div>
       </div>
     </section>

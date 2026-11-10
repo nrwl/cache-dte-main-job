@@ -1,4 +1,4 @@
-import { FeedbackCard } from '@org/shop-ui-feedback-card';
+import { CoreStat } from '@org/shop-ui-core-stat';
 import { CART_SETTINGS_FEATURE } from './cart-settings.routes';
 
 export interface CartSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function CartSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackCard label="Items" value={count} tone="info" />
-        <FeedbackCard label="Total" value={total} tone="success" />
+        <CoreStat label="Items" value={count} tone="info" />
+        <CoreStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

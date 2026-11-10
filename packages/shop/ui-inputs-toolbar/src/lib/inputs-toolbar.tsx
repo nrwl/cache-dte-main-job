@@ -1,6 +1,6 @@
-import { formatName } from '@org/shop-util-format-name';
-import { validateCode } from '@org/shop-util-validate-code';
-import { i18nPercent } from '@org/shop-util-i18n-percent';
+import { asyncPhone } from '@org/shop-util-async-phone';
+import { formatNumber } from '@org/shop-util-format-number';
+import { CorePanel } from '@org/shop-ui-core-panel';
 import type { InputsToolbarProps } from './inputs-toolbar.types';
 import { resolveInputsToolbarStyle } from './inputs-toolbar-variants';
 
@@ -13,9 +13,9 @@ export function InputsToolbar({
   onSelect,
   children,
 }: InputsToolbarProps) {
-  const formatted = value === undefined ? '' : formatName(value);
+  const formatted = value === undefined ? '' : asyncPhone(value);
   const style = resolveInputsToolbarStyle(tone, size);
-  const ariaLabel = i18nPercent(validateCode(label));
+  const ariaLabel = formatNumber(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,6 +38,7 @@ export function InputsToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <CorePanel label="Core Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

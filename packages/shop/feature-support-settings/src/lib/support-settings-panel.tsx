@@ -1,5 +1,4 @@
-import { MarketingCardGroup } from '@org/shop-ui-marketing-card';
-import { CommerceCard } from '@org/shop-ui-commerce-card';
+import { MarketingToolbarGroup } from '@org/shop-ui-marketing-toolbar';
 import type { SupportSettingsItem } from './support-settings.model';
 import { SUPPORT_SETTINGS_FEATURE } from './support-settings.routes';
 import { describeSupportSettingsItem } from './support-settings.utils';
@@ -40,7 +39,7 @@ export function SupportSettingsPanel({
       <p className="feature-panel-description">
         {describeSupportSettingsItem(selected)}
       </p>
-      <MarketingCardGroup
+      <MarketingToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function SupportSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CommerceCard
-          label="Commerce Card"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

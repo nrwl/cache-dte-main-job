@@ -1,4 +1,4 @@
-import { ChartsList } from '@org/shop-ui-charts-list';
+import { ChartsPanel } from '@org/shop-ui-charts-panel';
 import { CHECKOUT_OVERVIEW_FEATURE } from './checkout-overview.routes';
 
 export interface CheckoutOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function CheckoutOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsList label="Items" value={count} tone="info" />
-        <ChartsList label="Total" value={total} tone="success" />
+        <ChartsPanel label="Items" value={count} tone="info" />
+        <ChartsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

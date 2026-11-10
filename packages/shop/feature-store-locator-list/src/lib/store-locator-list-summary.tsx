@@ -1,4 +1,4 @@
-import { CoreTileGroup } from '@org/shop-ui-core-tile';
+import { MarketingPanelGroup } from '@org/shop-ui-marketing-panel';
 import { buildStoreLocatorListItems } from './store-locator-list.model';
 import { STORE_LOCATOR_LIST_FEATURE } from './store-locator-list.routes';
 import {
@@ -31,7 +31,7 @@ export function StoreLocatorListSummary({
       <h3 className="feature-summary-title">
         {STORE_LOCATOR_LIST_FEATURE.title}
       </h3>
-      <CoreTileGroup
+      <MarketingPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

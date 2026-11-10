@@ -1,5 +1,5 @@
-import { asyncPhone } from '@org/shop-util-async-phone';
-import { asyncAddress } from '@org/shop-util-async-address';
+import { collectionPhone } from '@org/shop-util-collection-phone';
+import { storageText } from '@org/shop-util-storage-text';
 import {
   emptyCatalogDashboardTotals,
   type CatalogDashboardItem,
@@ -74,13 +74,13 @@ export function sortCatalogDashboard(
 export function describeCatalogDashboardItem(
   item: CatalogDashboardItem,
 ): string {
-  const amount = asyncPhone(item.amount);
-  const name = asyncAddress(item.name);
+  const amount = collectionPhone(item.amount);
+  const name = storageText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCatalogDashboardAmount(amount: number): string {
-  return asyncPhone(amount);
+  return collectionPhone(amount);
 }
 
 export function catalogDashboardStatusTone(

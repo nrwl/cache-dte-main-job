@@ -1,4 +1,4 @@
-import { MarketingList } from '@org/shop-ui-marketing-list';
+import { ChartsPanel } from '@org/shop-ui-charts-panel';
 import type { ReturnsSettingsItem } from './returns-settings.model';
 import { RETURNS_SETTINGS_FEATURE } from './returns-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function ReturnsSettingsTable({
             <td>{formatReturnsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingList
+              <ChartsPanel
                 label={item.status}
                 tone={returnsSettingsStatusTone(item.status)}
                 size="sm"

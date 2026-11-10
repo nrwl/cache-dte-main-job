@@ -1,4 +1,4 @@
-import { ChartsList } from '@org/shop-ui-charts-list';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { ReviewsDetailsItem } from './reviews-details.model';
 import { REVIEWS_DETAILS_FEATURE } from './reviews-details.routes';
 import {
@@ -58,7 +58,7 @@ export function ReviewsDetailsTable({
             <td>{formatReviewsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <ChartsList
+              <MediaToolbar
                 label={item.status}
                 tone={reviewsDetailsStatusTone(item.status)}
                 size="sm"

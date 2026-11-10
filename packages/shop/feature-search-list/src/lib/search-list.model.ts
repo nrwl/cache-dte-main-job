@@ -21,7 +21,7 @@ export interface SearchListTotals {
   archived: number;
 }
 
-export const SEARCH_LIST_ITEM_COUNT = 9;
+export const SEARCH_LIST_ITEM_COUNT = 11;
 
 export const SEARCH_LIST_STATUSES: ReadonlyArray<SearchListStatus> = [
   'active',

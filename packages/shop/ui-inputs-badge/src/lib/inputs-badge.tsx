@@ -1,5 +1,6 @@
-import { asyncCurrency } from '@org/shop-util-async-currency';
-import { NavigationList } from '@org/shop-ui-navigation-list';
+import { asyncPhone } from '@org/shop-util-async-phone';
+import { validateNumber } from '@org/shop-util-validate-number';
+import { mathName } from '@org/shop-util-math-name';
 import type { InputsBadgeProps } from './inputs-badge.types';
 import { resolveInputsBadgeStyle } from './inputs-badge-variants';
 
@@ -12,9 +13,9 @@ export function InputsBadge({
   onSelect,
   children,
 }: InputsBadgeProps) {
-  const formatted = value === undefined ? '' : asyncCurrency(value);
+  const formatted = value === undefined ? '' : asyncPhone(value);
   const style = resolveInputsBadgeStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = mathName(validateNumber(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,12 +38,6 @@ export function InputsBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <NavigationList
-        label="Navigation List"
-        value={value}
-        tone={tone}
-        size="sm"
-      />
     </div>
   );
 }

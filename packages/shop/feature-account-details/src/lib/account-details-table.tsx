@@ -1,4 +1,4 @@
-import { LayoutBadge } from '@org/shop-ui-layout-badge';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { AccountDetailsItem } from './account-details.model';
 import { ACCOUNT_DETAILS_FEATURE } from './account-details.routes';
 import {
@@ -58,7 +58,7 @@ export function AccountDetailsTable({
             <td>{formatAccountDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutBadge
+              <LayoutPanel
                 label={item.status}
                 tone={accountDetailsStatusTone(item.status)}
                 size="sm"

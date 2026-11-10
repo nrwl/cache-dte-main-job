@@ -19,7 +19,7 @@ export const CART_DASHBOARD_FEATURE: FeatureMeta = {
   testId: CART_DASHBOARD_TEST_ID,
   domain: 'cart',
   kind: 'dashboard',
-  itemCount: 6,
+  itemCount: 5,
 };
 
 export function cartDashboardItemPath(itemId: string): string {

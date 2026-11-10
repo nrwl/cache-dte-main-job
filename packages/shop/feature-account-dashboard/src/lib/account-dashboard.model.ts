@@ -21,7 +21,7 @@ export interface AccountDashboardTotals {
   archived: number;
 }
 
-export const ACCOUNT_DASHBOARD_ITEM_COUNT = 5;
+export const ACCOUNT_DASHBOARD_ITEM_COUNT = 7;
 
 export const ACCOUNT_DASHBOARD_STATUSES: ReadonlyArray<AccountDashboardStatus> =
   ['active', 'pending', 'archived'];

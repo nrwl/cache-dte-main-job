@@ -1,4 +1,4 @@
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { SupportDashboardItem } from './support-dashboard.model';
 import { SUPPORT_DASHBOARD_FEATURE } from './support-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function SupportDashboardTable({
             <td>{formatSupportDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutBanner
+              <NavigationPanel
                 label={item.status}
                 tone={supportDashboardStatusTone(item.status)}
                 size="sm"

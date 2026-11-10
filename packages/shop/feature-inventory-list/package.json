@@ -22,10 +22,12 @@
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
     "@org/shop-ui-marketing-panel": "*",
-    "@org/shop-ui-marketing-banner": "*",
-    "@org/shop-ui-core-header": "*",
-    "@org/shop-ui-feedback-panel": "*",
-    "@org/shop-ui-core-card": "*",
-    "@org/shop-util-validate-percent": "*"
+    "@org/shop-ui-charts-toolbar": "*",
+    "@org/shop-ui-core-panel": "*",
+    "@org/shop-ui-layout-panel": "*",
+    "@org/shop-ui-typography-banner": "*",
+    "@org/shop-util-format-currency": "*",
+    "@org/shop-util-validate-phone": "*",
+    "@org/shop-util-collection-name": "*"
   }
 }

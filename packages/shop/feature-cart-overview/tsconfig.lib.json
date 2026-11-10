@@ -30,28 +30,25 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-validate-name/tsconfig.lib.json"
+      "path": "../util-format-currency/tsconfig.lib.json"
     },
     {
-      "path": "../util-validate-percent/tsconfig.lib.json"
+      "path": "../util-async-text/tsconfig.lib.json"
     },
     {
-      "path": "../util-math-number/tsconfig.lib.json"
+      "path": "../util-validate-phone/tsconfig.lib.json"
     },
     {
-      "path": "../ui-marketing-badge/tsconfig.lib.json"
+      "path": "../ui-marketing-toolbar/tsconfig.lib.json"
     },
     {
-      "path": "../ui-inputs-header/tsconfig.lib.json"
+      "path": "../ui-layout-stat/tsconfig.lib.json"
     },
     {
-      "path": "../ui-feedback-toolbar/tsconfig.lib.json"
+      "path": "../ui-forms-banner/tsconfig.lib.json"
     },
     {
-      "path": "../ui-overlay-tile/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-layout-chip/tsconfig.lib.json"
+      "path": "../ui-navigation-stat/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

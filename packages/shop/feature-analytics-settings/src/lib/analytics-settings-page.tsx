@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CompareHistorySummary } from '@org/shop-feature-compare-history';
 import { AnalyticsSettingsFilters } from './analytics-settings-filters';
 import { AnalyticsSettingsHeader } from './analytics-settings-header';
 import { AnalyticsSettingsPanel } from './analytics-settings-panel';
@@ -54,7 +53,6 @@ export function AnalyticsSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CompareHistorySummary compact />
         </div>
       </div>
     </section>

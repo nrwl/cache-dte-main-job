@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { ORDERS_OVERVIEW_FEATURE } from './orders-overview.routes';
 
 export interface OrdersOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function OrdersOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyToolbar label="Items" value={count} tone="info" />
-        <TypographyToolbar label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

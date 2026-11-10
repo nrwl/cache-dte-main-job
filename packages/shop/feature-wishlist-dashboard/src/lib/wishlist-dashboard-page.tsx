@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CheckoutOverviewSummary } from '@org/shop-feature-checkout-overview';
 import { WishlistDashboardFilters } from './wishlist-dashboard-filters';
 import { WishlistDashboardHeader } from './wishlist-dashboard-header';
 import { WishlistDashboardPanel } from './wishlist-dashboard-panel';
@@ -54,7 +53,6 @@ export function WishlistDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CheckoutOverviewSummary compact />
         </div>
       </div>
     </section>

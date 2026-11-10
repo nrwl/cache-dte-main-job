@@ -1,4 +1,4 @@
-import { MarketingPanelGroup } from '@org/shop-ui-marketing-panel';
+import { LayoutBadgeGroup } from '@org/shop-ui-layout-badge';
 import { buildGiftCardsDetailsItems } from './gift-cards-details.model';
 import { GIFT_CARDS_DETAILS_FEATURE } from './gift-cards-details.routes';
 import {
@@ -31,7 +31,7 @@ export function GiftCardsDetailsSummary({
       <h3 className="feature-summary-title">
         {GIFT_CARDS_DETAILS_FEATURE.title}
       </h3>
-      <MarketingPanelGroup
+      <LayoutBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

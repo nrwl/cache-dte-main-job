@@ -1,4 +1,4 @@
-import { CommercePanelGroup } from '@org/shop-ui-commerce-panel';
+import { ChartsStatGroup } from '@org/shop-ui-charts-stat';
 import { buildCatalogDetailsItems } from './catalog-details.model';
 import { CATALOG_DETAILS_FEATURE } from './catalog-details.routes';
 import {
@@ -29,7 +29,7 @@ export function CatalogDetailsSummary({
       data-testid={`${CATALOG_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{CATALOG_DETAILS_FEATURE.title}</h3>
-      <CommercePanelGroup
+      <ChartsStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

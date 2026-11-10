@@ -1,6 +1,5 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
-import { storagePhone } from '@org/shop-util-storage-phone';
-import { validateAddress } from '@org/shop-util-validate-address';
+import { formatText } from '@org/shop-util-format-text';
+import { mathNumber } from '@org/shop-util-math-number';
 import {
   emptyTrackingOverviewTotals,
   type TrackingOverviewItem,
@@ -75,13 +74,13 @@ export function sortTrackingOverview(
 export function describeTrackingOverviewItem(
   item: TrackingOverviewItem,
 ): string {
-  const amount = validateCurrency(item.amount);
-  const name = validateAddress(storagePhone(item.name));
+  const amount = formatText(item.amount);
+  const name = mathNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatTrackingOverviewAmount(amount: number): string {
-  return validateCurrency(amount);
+  return formatText(amount);
 }
 
 export function trackingOverviewStatusTone(

@@ -1,4 +1,6 @@
-import { FormsHeaderGroup } from '@org/shop-ui-forms-header';
+import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
+import { OverlayPanel } from '@org/shop-ui-overlay-panel';
+import { FormsBanner } from '@org/shop-ui-forms-banner';
 import type { AddressesSettingsItem } from './addresses-settings.model';
 import { ADDRESSES_SETTINGS_FEATURE } from './addresses-settings.routes';
 import { describeAddressesSettingsItem } from './addresses-settings.utils';
@@ -39,7 +41,7 @@ export function AddressesSettingsPanel({
       <p className="feature-panel-description">
         {describeAddressesSettingsItem(selected)}
       </p>
-      <FormsHeaderGroup
+      <OverlayBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function AddressesSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <OverlayPanel
+          label="Overlay Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <FormsBanner
+          label="Forms Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

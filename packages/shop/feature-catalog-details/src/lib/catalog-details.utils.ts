@@ -1,5 +1,4 @@
-import { asyncText } from '@org/shop-util-async-text';
-import { storageText } from '@org/shop-util-storage-text';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
 import {
   emptyCatalogDetailsTotals,
   type CatalogDetailsItem,
@@ -72,13 +71,13 @@ export function sortCatalogDetails(
 }
 
 export function describeCatalogDetailsItem(item: CatalogDetailsItem): string {
-  const amount = asyncText(item.amount);
-  const name = storageText(item.name);
+  const amount = collectionCurrency(item.amount);
+  const name = collectionCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCatalogDetailsAmount(amount: number): string {
-  return asyncText(amount);
+  return collectionCurrency(amount);
 }
 
 export function catalogDetailsStatusTone(

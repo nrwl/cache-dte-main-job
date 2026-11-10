@@ -1,4 +1,6 @@
-import { validateSlug } from '@org/shop-util-validate-slug';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { asyncPhone } from '@org/shop-util-async-phone';
+import { validateName } from '@org/shop-util-validate-name';
 import {
   emptyStoreLocatorListTotals,
   type StoreLocatorListItem,
@@ -73,13 +75,13 @@ export function sortStoreLocatorList(
 export function describeStoreLocatorListItem(
   item: StoreLocatorListItem,
 ): string {
-  const amount = validateSlug(item.amount);
-  const name = validateSlug(item.name);
+  const amount = formatPhone(item.amount);
+  const name = validateName(asyncPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatStoreLocatorListAmount(amount: number): string {
-  return validateSlug(amount);
+  return formatPhone(amount);
 }
 
 export function storeLocatorListStatusTone(

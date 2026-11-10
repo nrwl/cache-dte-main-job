@@ -1,12 +1,6 @@
 import type { Product } from '@org/models';
-import { validateCode } from '@org/shop-util-validate-code';
-import { mathCurrency } from '@org/shop-util-math-currency';
-import {
-  clampLength,
-  hashString,
-  normalizeInput,
-  padCode,
-} from './math-number-helpers';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { clampLength, hashString, normalizeInput } from './math-number-helpers';
 
 export interface MathNumberOptions {
   /** BCP-47 locale used for locale-aware operations. */
@@ -33,7 +27,7 @@ export const MATH_NUMBER_DEFAULTS: Required<MathNumberOptions> = {
 export const MATH_NUMBER_KIND = 'math-number' as const;
 
 /**
- * Formats a raw value using the "padded" strategy.
+ * Formats a raw value using the "upper" strategy.
  */
 export function mathNumber(
   value: string | number,
@@ -47,11 +41,11 @@ export function mathNumber(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [validateCode, mathCurrency].reduce<string>(
+  const staged = [formatCurrency].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );
-  const transformed = padCode(staged, 4);
+  const transformed = staged.toUpperCase();
   return clampLength(transformed, opts.maxLength);
 }
 

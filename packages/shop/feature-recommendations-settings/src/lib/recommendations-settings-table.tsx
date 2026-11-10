@@ -1,4 +1,4 @@
-import { DataBadge } from '@org/shop-ui-data-badge';
+import { CorePanel } from '@org/shop-ui-core-panel';
 import type { RecommendationsSettingsItem } from './recommendations-settings.model';
 import { RECOMMENDATIONS_SETTINGS_FEATURE } from './recommendations-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function RecommendationsSettingsTable({
             <td>{formatRecommendationsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataBadge
+              <CorePanel
                 label={item.status}
                 tone={recommendationsSettingsStatusTone(item.status)}
                 size="sm"

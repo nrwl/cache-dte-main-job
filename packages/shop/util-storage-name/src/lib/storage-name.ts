@@ -1,9 +1,10 @@
 import type { Product } from '@org/models';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { collectionNumber } from '@org/shop-util-collection-number';
 import {
   clampLength,
   hashString,
   normalizeInput,
-  titleCase,
 } from './storage-name-helpers';
 
 export interface StorageNameOptions {
@@ -31,7 +32,7 @@ export const STORAGE_NAME_DEFAULTS: Required<StorageNameOptions> = {
 export const STORAGE_NAME_KIND = 'storage-name' as const;
 
 /**
- * Formats a raw value using the "title" strategy.
+ * Formats a raw value using the "upper" strategy.
  */
 export function storageName(
   value: string | number,
@@ -45,8 +46,11 @@ export function storageName(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = normalized;
-  const transformed = titleCase(staged);
+  const staged = [collectionCurrency, collectionNumber].reduce<string>(
+    (acc, fn) => fn(acc),
+    normalized,
+  );
+  const transformed = staged.toUpperCase();
   return clampLength(transformed, opts.maxLength);
 }
 

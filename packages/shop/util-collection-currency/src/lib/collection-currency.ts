@@ -1,5 +1,5 @@
 import type { Product } from '@org/models';
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   clampLength,
   hashString,
@@ -47,10 +47,7 @@ export function collectionCurrency(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [validatePhone].reduce<string>(
-    (acc, fn) => fn(acc),
-    normalized,
-  );
+  const staged = [formatPhone].reduce<string>((acc, fn) => fn(acc), normalized);
   const transformed = kebabCase(staged);
   return clampLength(transformed, opts.maxLength);
 }

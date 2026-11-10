@@ -1,4 +1,4 @@
-import { FormsToolbar } from '@org/shop-ui-forms-toolbar';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import { AUTH_OVERVIEW_FEATURE } from './auth-overview.routes';
 
 export interface AuthOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function AuthOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsToolbar label="Items" value={count} tone="info" />
-        <FormsToolbar label="Total" value={total} tone="success" />
+        <OverlayStat label="Items" value={count} tone="info" />
+        <OverlayStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,5 +1,4 @@
-import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
-import { InputsTile } from '@org/shop-ui-inputs-tile';
+import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
 import type { WishlistSettingsItem } from './wishlist-settings.model';
 import { WISHLIST_SETTINGS_FEATURE } from './wishlist-settings.routes';
 import { describeWishlistSettingsItem } from './wishlist-settings.utils';
@@ -40,7 +39,7 @@ export function WishlistSettingsPanel({
       <p className="feature-panel-description">
         {describeWishlistSettingsItem(selected)}
       </p>
-      <LayoutStatGroup
+      <TypographyToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function WishlistSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <InputsTile
-          label="Inputs Tile"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

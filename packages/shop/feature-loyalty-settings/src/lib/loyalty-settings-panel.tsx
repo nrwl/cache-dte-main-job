@@ -1,4 +1,4 @@
-import { MediaTileGroup } from '@org/shop-ui-media-tile';
+import { ChartsPanelGroup } from '@org/shop-ui-charts-panel';
 import type { LoyaltySettingsItem } from './loyalty-settings.model';
 import { LOYALTY_SETTINGS_FEATURE } from './loyalty-settings.routes';
 import { describeLoyaltySettingsItem } from './loyalty-settings.utils';
@@ -39,7 +39,7 @@ export function LoyaltySettingsPanel({
       <p className="feature-panel-description">
         {describeLoyaltySettingsItem(selected)}
       </p>
-      <MediaTileGroup
+      <ChartsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

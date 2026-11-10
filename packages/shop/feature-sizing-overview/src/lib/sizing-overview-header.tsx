@@ -1,4 +1,4 @@
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { SIZING_OVERVIEW_FEATURE } from './sizing-overview.routes';
 
 export interface SizingOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function SizingOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsBadge label="Items" value={count} tone="info" />
-        <FormsBadge label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

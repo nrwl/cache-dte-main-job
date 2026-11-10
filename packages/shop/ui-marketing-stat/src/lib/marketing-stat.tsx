@@ -1,5 +1,5 @@
-import { validateCode } from '@org/shop-util-validate-code';
-import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
+import { i18nPhone } from '@org/shop-util-i18n-phone';
+import { MarketingBanner } from '@org/shop-ui-marketing-banner';
 import type { MarketingStatProps } from './marketing-stat.types';
 import { resolveMarketingStatStyle } from './marketing-stat-variants';
 
@@ -12,7 +12,7 @@ export function MarketingStat({
   onSelect,
   children,
 }: MarketingStatProps) {
-  const formatted = value === undefined ? '' : validateCode(value);
+  const formatted = value === undefined ? '' : i18nPhone(value);
   const style = resolveMarketingStatStyle(tone, size);
   const ariaLabel = label;
 
@@ -37,8 +37,8 @@ export function MarketingStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <NavigationToolbar
-        label="Navigation Toolbar"
+      <MarketingBanner
+        label="Marketing Banner"
         value={value}
         tone={tone}
         size="sm"

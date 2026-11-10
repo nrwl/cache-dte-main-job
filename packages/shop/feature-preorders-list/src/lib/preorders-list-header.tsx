@@ -1,4 +1,4 @@
-import { FeedbackTile } from '@org/shop-ui-feedback-tile';
+import { OverlayBadge } from '@org/shop-ui-overlay-badge';
 import { PREORDERS_LIST_FEATURE } from './preorders-list.routes';
 
 export interface PreordersListHeaderProps {
@@ -26,8 +26,8 @@ export function PreordersListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackTile label="Items" value={count} tone="info" />
-        <FeedbackTile label="Total" value={total} tone="success" />
+        <OverlayBadge label="Items" value={count} tone="info" />
+        <OverlayBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

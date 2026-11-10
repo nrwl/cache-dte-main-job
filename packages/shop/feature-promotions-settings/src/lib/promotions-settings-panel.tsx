@@ -1,4 +1,5 @@
-import { DataTileGroup } from '@org/shop-ui-data-tile';
+import { MediaStatGroup } from '@org/shop-ui-media-stat';
+import { DataStat } from '@org/shop-ui-data-stat';
 import type { PromotionsSettingsItem } from './promotions-settings.model';
 import { PROMOTIONS_SETTINGS_FEATURE } from './promotions-settings.routes';
 import { describePromotionsSettingsItem } from './promotions-settings.utils';
@@ -39,7 +40,7 @@ export function PromotionsSettingsPanel({
       <p className="feature-panel-description">
         {describePromotionsSettingsItem(selected)}
       </p>
-      <DataTileGroup
+      <MediaStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,9 @@ export function PromotionsSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

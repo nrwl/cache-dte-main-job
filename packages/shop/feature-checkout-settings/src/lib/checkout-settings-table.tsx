@@ -1,4 +1,4 @@
-import { CoreCard } from '@org/shop-ui-core-card';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { CheckoutSettingsItem } from './checkout-settings.model';
 import { CHECKOUT_SETTINGS_FEATURE } from './checkout-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function CheckoutSettingsTable({
             <td>{formatCheckoutSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreCard
+              <InputsPanel
                 label={item.status}
                 tone={checkoutSettingsStatusTone(item.status)}
                 size="sm"

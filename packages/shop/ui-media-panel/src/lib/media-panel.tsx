@@ -1,7 +1,6 @@
+import { mathCurrency } from '@org/shop-util-math-currency';
 import { storageCurrency } from '@org/shop-util-storage-currency';
-import { asyncCurrency } from '@org/shop-util-async-currency';
-import { storageCode } from '@org/shop-util-storage-code';
-import { FormsTile } from '@org/shop-ui-forms-tile';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { MediaPanelProps } from './media-panel.types';
 import { resolveMediaPanelStyle } from './media-panel-variants';
 
@@ -14,9 +13,9 @@ export function MediaPanel({
   onSelect,
   children,
 }: MediaPanelProps) {
-  const formatted = value === undefined ? '' : storageCurrency(value);
+  const formatted = value === undefined ? '' : mathCurrency(value);
   const style = resolveMediaPanelStyle(tone, size);
-  const ariaLabel = storageCode(asyncCurrency(label));
+  const ariaLabel = storageCurrency(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +38,7 @@ export function MediaPanel({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FormsTile label="Forms Tile" value={value} tone={tone} size="sm" />
+      <DataPanel label="Data Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

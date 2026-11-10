@@ -1,4 +1,4 @@
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
+import { CoreBanner } from '@org/shop-ui-core-banner';
 import { CART_DASHBOARD_FEATURE } from './cart-dashboard.routes';
 
 export interface CartDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function CartDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackStat label="Items" value={count} tone="info" />
-        <FeedbackStat label="Total" value={total} tone="success" />
+        <CoreBanner label="Items" value={count} tone="info" />
+        <CoreBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

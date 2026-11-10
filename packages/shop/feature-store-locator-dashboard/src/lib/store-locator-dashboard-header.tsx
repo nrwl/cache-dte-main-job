@@ -1,4 +1,4 @@
-import { LayoutChip } from '@org/shop-ui-layout-chip';
+import { NavigationStat } from '@org/shop-ui-navigation-stat';
 import { STORE_LOCATOR_DASHBOARD_FEATURE } from './store-locator-dashboard.routes';
 
 export interface StoreLocatorDashboardHeaderProps {
@@ -29,8 +29,8 @@ export function StoreLocatorDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutChip label="Items" value={count} tone="info" />
-        <LayoutChip label="Total" value={total} tone="success" />
+        <NavigationStat label="Items" value={count} tone="info" />
+        <NavigationStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,5 +1,5 @@
-import { asyncAddress } from '@org/shop-util-async-address';
-import { FormsCard } from '@org/shop-ui-forms-card';
+import { storageText } from '@org/shop-util-storage-text';
+import { storageName } from '@org/shop-util-storage-name';
 import type { FormsBannerProps } from './forms-banner.types';
 import { resolveFormsBannerStyle } from './forms-banner-variants';
 
@@ -12,9 +12,9 @@ export function FormsBanner({
   onSelect,
   children,
 }: FormsBannerProps) {
-  const formatted = value === undefined ? '' : asyncAddress(value);
+  const formatted = value === undefined ? '' : storageText(value);
   const style = resolveFormsBannerStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = storageName(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,7 +37,6 @@ export function FormsBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FormsCard label="Forms Card" value={value} tone={tone} size="sm" />
     </div>
   );
 }

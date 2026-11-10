@@ -30,7 +30,7 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-validate-currency/tsconfig.lib.json"
+      "path": "../util-validate-text/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

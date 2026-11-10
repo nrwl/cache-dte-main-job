@@ -1,4 +1,4 @@
-import { FormsHeader } from '@org/shop-ui-forms-header';
+import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
 import type { InventoryOverviewItem } from './inventory-overview.model';
 import { INVENTORY_OVERVIEW_FEATURE } from './inventory-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function InventoryOverviewTable({
             <td>{formatInventoryOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsHeader
+              <LayoutToolbar
                 label={item.status}
                 tone={inventoryOverviewStatusTone(item.status)}
                 size="sm"

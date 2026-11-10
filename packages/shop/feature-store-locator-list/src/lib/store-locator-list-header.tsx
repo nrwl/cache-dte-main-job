@@ -1,4 +1,4 @@
-import { CoreTile } from '@org/shop-ui-core-tile';
+import { MarketingPanel } from '@org/shop-ui-marketing-panel';
 import { STORE_LOCATOR_LIST_FEATURE } from './store-locator-list.routes';
 
 export interface StoreLocatorListHeaderProps {
@@ -27,8 +27,8 @@ export function StoreLocatorListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreTile label="Items" value={count} tone="info" />
-        <CoreTile label="Total" value={total} tone="success" />
+        <MarketingPanel label="Items" value={count} tone="info" />
+        <MarketingPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

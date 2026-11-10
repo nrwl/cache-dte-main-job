@@ -1,4 +1,4 @@
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
+import { DataStat } from '@org/shop-ui-data-stat';
 import { RETURNS_DASHBOARD_FEATURE } from './returns-dashboard.routes';
 
 export interface ReturnsDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function ReturnsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackStat label="Items" value={count} tone="info" />
-        <FeedbackStat label="Total" value={total} tone="success" />
+        <DataStat label="Items" value={count} tone="info" />
+        <DataStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

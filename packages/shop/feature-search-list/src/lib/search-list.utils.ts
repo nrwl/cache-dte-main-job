@@ -1,5 +1,6 @@
-import { validatePercent } from '@org/shop-util-validate-percent';
-import { collectionCode } from '@org/shop-util-collection-code';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { i18nNumber } from '@org/shop-util-i18n-number';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptySearchListTotals,
   type SearchListItem,
@@ -71,13 +72,13 @@ export function sortSearchList(
 }
 
 export function describeSearchListItem(item: SearchListItem): string {
-  const amount = validatePercent(item.amount);
-  const name = collectionCode(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = mathName(i18nNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSearchListAmount(amount: number): string {
-  return validatePercent(amount);
+  return formatCurrency(amount);
 }
 
 export function searchListStatusTone(

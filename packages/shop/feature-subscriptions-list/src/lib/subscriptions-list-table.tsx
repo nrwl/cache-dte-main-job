@@ -1,4 +1,4 @@
-import { FormsHeader } from '@org/shop-ui-forms-header';
+import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
 import type { SubscriptionsListItem } from './subscriptions-list.model';
 import { SUBSCRIPTIONS_LIST_FEATURE } from './subscriptions-list.routes';
 import {
@@ -58,7 +58,7 @@ export function SubscriptionsListTable({
             <td>{formatSubscriptionsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsHeader
+              <FeedbackBadge
                 label={item.status}
                 tone={subscriptionsListStatusTone(item.status)}
                 size="sm"

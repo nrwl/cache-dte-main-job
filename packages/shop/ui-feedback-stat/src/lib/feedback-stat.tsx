@@ -1,6 +1,6 @@
-import { formatPercent } from '@org/shop-util-format-percent';
-import { mathSlug } from '@org/shop-util-math-slug';
-import { CoreStat } from '@org/shop-ui-core-stat';
+import { validateNumber } from '@org/shop-util-validate-number';
+import { storageName } from '@org/shop-util-storage-name';
+import { collectionName } from '@org/shop-util-collection-name';
 import type { FeedbackStatProps } from './feedback-stat.types';
 import { resolveFeedbackStatStyle } from './feedback-stat-variants';
 
@@ -13,9 +13,9 @@ export function FeedbackStat({
   onSelect,
   children,
 }: FeedbackStatProps) {
-  const formatted = value === undefined ? '' : formatPercent(value);
+  const formatted = value === undefined ? '' : validateNumber(value);
   const style = resolveFeedbackStatStyle(tone, size);
-  const ariaLabel = mathSlug(label);
+  const ariaLabel = collectionName(storageName(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +38,6 @@ export function FeedbackStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreStat label="Core Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

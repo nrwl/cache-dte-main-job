@@ -1,6 +1,6 @@
-import { mathPercent } from '@org/shop-util-math-percent';
-import { validateDate } from '@org/shop-util-validate-date';
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { asyncText } from '@org/shop-util-async-text';
+import { storageName } from '@org/shop-util-storage-name';
+import { validateNumber } from '@org/shop-util-validate-number';
 import {
   emptyAccountSettingsTotals,
   type AccountSettingsItem,
@@ -73,13 +73,13 @@ export function sortAccountSettings(
 }
 
 export function describeAccountSettingsItem(item: AccountSettingsItem): string {
-  const amount = mathPercent(item.amount);
-  const name = validatePhone(validateDate(item.name));
+  const amount = asyncText(item.amount);
+  const name = validateNumber(storageName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAccountSettingsAmount(amount: number): string {
-  return mathPercent(amount);
+  return asyncText(amount);
 }
 
 export function accountSettingsStatusTone(

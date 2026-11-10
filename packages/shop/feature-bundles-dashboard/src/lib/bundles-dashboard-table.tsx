@@ -1,4 +1,4 @@
-import { MediaCard } from '@org/shop-ui-media-card';
+import { InputsBanner } from '@org/shop-ui-inputs-banner';
 import type { BundlesDashboardItem } from './bundles-dashboard.model';
 import { BUNDLES_DASHBOARD_FEATURE } from './bundles-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function BundlesDashboardTable({
             <td>{formatBundlesDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaCard
+              <InputsBanner
                 label={item.status}
                 tone={bundlesDashboardStatusTone(item.status)}
                 size="sm"

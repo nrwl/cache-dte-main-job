@@ -1,5 +1,5 @@
-import { LayoutToolbarGroup } from '@org/shop-ui-layout-toolbar';
-import { InputsCard } from '@org/shop-ui-inputs-card';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
+import { DataBadge } from '@org/shop-ui-data-badge';
 import type { SizingListItem } from './sizing-list.model';
 import { SIZING_LIST_FEATURE } from './sizing-list.routes';
 import { describeSizingListItem } from './sizing-list.utils';
@@ -37,7 +37,7 @@ export function SizingListPanel({ selected, onClear }: SizingListPanelProps) {
       <p className="feature-panel-description">
         {describeSizingListItem(selected)}
       </p>
-      <LayoutToolbarGroup
+      <LayoutStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -48,8 +48,8 @@ export function SizingListPanel({ selected, onClear }: SizingListPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsCard
-          label="Inputs Card"
+        <DataBadge
+          label="Data Badge"
           value={selected.product.rating}
           size="sm"
         />

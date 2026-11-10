@@ -1,6 +1,6 @@
-import { formatText } from '@org/shop-util-format-text';
-import { asyncCode } from '@org/shop-util-async-code';
-import { asyncPhone } from '@org/shop-util-async-phone';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { i18nPhone } from '@org/shop-util-i18n-phone';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyFeedbackDetailsTotals,
   type FeedbackDetailsItem,
@@ -73,13 +73,13 @@ export function sortFeedbackDetails(
 }
 
 export function describeFeedbackDetailsItem(item: FeedbackDetailsItem): string {
-  const amount = formatText(item.amount);
-  const name = asyncPhone(asyncCode(item.name));
+  const amount = validateCurrency(item.amount);
+  const name = asyncNumber(i18nPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatFeedbackDetailsAmount(amount: number): string {
-  return formatText(amount);
+  return validateCurrency(amount);
 }
 
 export function feedbackDetailsStatusTone(

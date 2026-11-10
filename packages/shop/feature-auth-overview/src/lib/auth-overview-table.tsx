@@ -1,4 +1,4 @@
-import { InputsTile } from '@org/shop-ui-inputs-tile';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { AuthOverviewItem } from './auth-overview.model';
 import { AUTH_OVERVIEW_FEATURE } from './auth-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function AuthOverviewTable({
             <td>{formatAuthOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsTile
+              <MarketingBadge
                 label={item.status}
                 tone={authOverviewStatusTone(item.status)}
                 size="sm"

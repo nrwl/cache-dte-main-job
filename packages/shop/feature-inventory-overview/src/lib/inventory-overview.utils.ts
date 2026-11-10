@@ -1,5 +1,6 @@
-import { storageCode } from '@org/shop-util-storage-code';
-import { i18nText } from '@org/shop-util-i18n-text';
+import { validatePhone } from '@org/shop-util-validate-phone';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { i18nName } from '@org/shop-util-i18n-name';
 import {
   emptyInventoryOverviewTotals,
   type InventoryOverviewItem,
@@ -74,13 +75,13 @@ export function sortInventoryOverview(
 export function describeInventoryOverviewItem(
   item: InventoryOverviewItem,
 ): string {
-  const amount = storageCode(item.amount);
-  const name = i18nText(item.name);
+  const amount = validatePhone(item.amount);
+  const name = i18nName(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatInventoryOverviewAmount(amount: number): string {
-  return storageCode(amount);
+  return validatePhone(amount);
 }
 
 export function inventoryOverviewStatusTone(

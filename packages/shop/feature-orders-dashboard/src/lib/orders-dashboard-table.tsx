@@ -1,4 +1,4 @@
-import { CommerceTile } from '@org/shop-ui-commerce-tile';
+import { TypographyStat } from '@org/shop-ui-typography-stat';
 import type { OrdersDashboardItem } from './orders-dashboard.model';
 import { ORDERS_DASHBOARD_FEATURE } from './orders-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function OrdersDashboardTable({
             <td>{formatOrdersDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceTile
+              <TypographyStat
                 label={item.status}
                 tone={ordersDashboardStatusTone(item.status)}
                 size="sm"

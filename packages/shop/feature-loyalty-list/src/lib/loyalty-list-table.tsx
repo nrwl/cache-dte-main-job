@@ -1,4 +1,4 @@
-import { MediaBadge } from '@org/shop-ui-media-badge';
+import { TypographyPanel } from '@org/shop-ui-typography-panel';
 import type { LoyaltyListItem } from './loyalty-list.model';
 import { LOYALTY_LIST_FEATURE } from './loyalty-list.routes';
 import {
@@ -58,7 +58,7 @@ export function LoyaltyListTable({
             <td>{formatLoyaltyListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaBadge
+              <TypographyPanel
                 label={item.status}
                 tone={loyaltyListStatusTone(item.status)}
                 size="sm"

@@ -1,4 +1,6 @@
-import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
+import { OverlayToolbarGroup } from '@org/shop-ui-overlay-toolbar';
+import { NavigationBanner } from '@org/shop-ui-navigation-banner';
+import { FormsPanel } from '@org/shop-ui-forms-panel';
 import type { WishlistDashboardItem } from './wishlist-dashboard.model';
 import { WISHLIST_DASHBOARD_FEATURE } from './wishlist-dashboard.routes';
 import { describeWishlistDashboardItem } from './wishlist-dashboard.utils';
@@ -39,7 +41,7 @@ export function WishlistDashboardPanel({
       <p className="feature-panel-description">
         {describeWishlistDashboardItem(selected)}
       </p>
-      <ChartsBannerGroup
+      <OverlayToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function WishlistDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <NavigationBanner
+          label="Navigation Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <FormsPanel
+          label="Forms Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { ReviewsSettingsSummary } from '@org/shop-feature-reviews-settings';
 import { PaymentsOverviewFilters } from './payments-overview-filters';
 import { PaymentsOverviewHeader } from './payments-overview-header';
 import { PaymentsOverviewPanel } from './payments-overview-panel';
@@ -54,7 +53,6 @@ export function PaymentsOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <ReviewsSettingsSummary compact />
         </div>
       </div>
     </section>

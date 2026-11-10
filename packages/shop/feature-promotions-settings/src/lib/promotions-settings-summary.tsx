@@ -1,4 +1,4 @@
-import { MediaCardGroup } from '@org/shop-ui-media-card';
+import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
 import { buildPromotionsSettingsItems } from './promotions-settings.model';
 import { PROMOTIONS_SETTINGS_FEATURE } from './promotions-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function PromotionsSettingsSummary({
       <h3 className="feature-summary-title">
         {PROMOTIONS_SETTINGS_FEATURE.title}
       </h3>
-      <MediaCardGroup
+      <ChartsToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

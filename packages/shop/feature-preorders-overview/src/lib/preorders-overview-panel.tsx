@@ -1,6 +1,6 @@
-import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
-import { FormsTile } from '@org/shop-ui-forms-tile';
-import { TypographyBanner } from '@org/shop-ui-typography-banner';
+import { MediaBadgeGroup } from '@org/shop-ui-media-badge';
+import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
+import { ChartsStat } from '@org/shop-ui-charts-stat';
 import type { PreordersOverviewItem } from './preorders-overview.model';
 import { PREORDERS_OVERVIEW_FEATURE } from './preorders-overview.routes';
 import { describePreordersOverviewItem } from './preorders-overview.utils';
@@ -41,7 +41,7 @@ export function PreordersOverviewPanel({
       <p className="feature-panel-description">
         {describePreordersOverviewItem(selected)}
       </p>
-      <ChartsBadgeGroup
+      <MediaBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function PreordersOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsTile
-          label="Forms Tile"
+        <NavigationToolbar
+          label="Navigation Toolbar"
           value={selected.product.rating}
           size="sm"
         />
-        <TypographyBanner
-          label="Typography Banner"
+        <ChartsStat
+          label="Charts Stat"
           value={selected.product.rating}
           size="sm"
         />

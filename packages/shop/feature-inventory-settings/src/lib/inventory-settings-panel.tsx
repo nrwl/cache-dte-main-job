@@ -1,4 +1,6 @@
-import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
+import { DataStatGroup } from '@org/shop-ui-data-stat';
+import { CommerceBanner } from '@org/shop-ui-commerce-banner';
+import { InputsStat } from '@org/shop-ui-inputs-stat';
 import type { InventorySettingsItem } from './inventory-settings.model';
 import { INVENTORY_SETTINGS_FEATURE } from './inventory-settings.routes';
 import { describeInventorySettingsItem } from './inventory-settings.utils';
@@ -39,7 +41,7 @@ export function InventorySettingsPanel({
       <p className="feature-panel-description">
         {describeInventorySettingsItem(selected)}
       </p>
-      <NavigationBadgeGroup
+      <DataStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function InventorySettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CommerceBanner
+          label="Commerce Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <InputsStat
+          label="Inputs Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

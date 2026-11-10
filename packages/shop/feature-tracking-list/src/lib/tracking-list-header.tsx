@@ -1,4 +1,4 @@
-import { DataList } from '@org/shop-ui-data-list';
+import { MediaStat } from '@org/shop-ui-media-stat';
 import { TRACKING_LIST_FEATURE } from './tracking-list.routes';
 
 export interface TrackingListHeaderProps {
@@ -26,8 +26,8 @@ export function TrackingListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataList label="Items" value={count} tone="info" />
-        <DataList label="Total" value={total} tone="success" />
+        <MediaStat label="Items" value={count} tone="info" />
+        <MediaStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { CommerceStatGroup } from '@org/shop-ui-commerce-stat';
+import { MediaBannerGroup } from '@org/shop-ui-media-banner';
 import { buildFeedbackOverviewItems } from './feedback-overview.model';
 import { FEEDBACK_OVERVIEW_FEATURE } from './feedback-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function FeedbackOverviewSummary({
       <h3 className="feature-summary-title">
         {FEEDBACK_OVERVIEW_FEATURE.title}
       </h3>
-      <CommerceStatGroup
+      <MediaBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

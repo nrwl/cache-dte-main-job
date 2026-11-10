@@ -19,7 +19,8 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-format-date": "*",
-    "@org/shop-util-format-code": "*"
+    "@org/shop-util-math-currency": "*",
+    "@org/shop-util-collection-name": "*",
+    "@org/shop-ui-feedback-stat": "*"
   }
 }

@@ -1,10 +1,9 @@
 import type { Product } from '@org/models';
+import { validateNumber } from '@org/shop-util-validate-number';
 import { validateName } from '@org/shop-util-validate-name';
-import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   clampLength,
   hashString,
-  kebabCase,
   normalizeInput,
 } from './math-currency-helpers';
 
@@ -33,7 +32,7 @@ export const MATH_CURRENCY_DEFAULTS: Required<MathCurrencyOptions> = {
 export const MATH_CURRENCY_KIND = 'math-currency' as const;
 
 /**
- * Formats a raw value using the "kebab" strategy.
+ * Formats a raw value using the "lower" strategy.
  */
 export function mathCurrency(
   value: string | number,
@@ -47,11 +46,11 @@ export function mathCurrency(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [validateName, formatCurrency].reduce<string>(
+  const staged = [validateNumber, validateName].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );
-  const transformed = kebabCase(staged);
+  const transformed = staged.toLowerCase();
   return clampLength(transformed, opts.maxLength);
 }
 

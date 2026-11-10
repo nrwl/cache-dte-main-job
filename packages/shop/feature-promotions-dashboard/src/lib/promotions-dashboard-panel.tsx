@@ -1,6 +1,6 @@
 import { MediaBannerGroup } from '@org/shop-ui-media-banner';
-import { FormsHeader } from '@org/shop-ui-forms-header';
-import { OverlayChip } from '@org/shop-ui-overlay-chip';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { PromotionsDashboardItem } from './promotions-dashboard.model';
 import { PROMOTIONS_DASHBOARD_FEATURE } from './promotions-dashboard.routes';
 import { describePromotionsDashboardItem } from './promotions-dashboard.utils';
@@ -52,13 +52,13 @@ export function PromotionsDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsHeader
-          label="Forms Header"
+        <NavigationPanel
+          label="Navigation Panel"
           value={selected.product.rating}
           size="sm"
         />
-        <OverlayChip
-          label="Overlay Chip"
+        <FormsStat
+          label="Forms Stat"
           value={selected.product.rating}
           size="sm"
         />

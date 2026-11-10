@@ -1,4 +1,4 @@
-import { FormsChip } from '@org/shop-ui-forms-chip';
+import { OverlayBadge } from '@org/shop-ui-overlay-badge';
 import type { ReviewsDashboardItem } from './reviews-dashboard.model';
 import { REVIEWS_DASHBOARD_FEATURE } from './reviews-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function ReviewsDashboardTable({
             <td>{formatReviewsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsChip
+              <OverlayBadge
                 label={item.status}
                 tone={reviewsDashboardStatusTone(item.status)}
                 size="sm"

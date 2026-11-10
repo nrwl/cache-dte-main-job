@@ -1,6 +1,6 @@
-import { asyncPercent } from '@org/shop-util-async-percent';
-import { mathSlug } from '@org/shop-util-math-slug';
-import { validateDate } from '@org/shop-util-validate-date';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { storageName } from '@org/shop-util-storage-name';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
 import {
   emptyReturnsDetailsTotals,
   type ReturnsDetailsItem,
@@ -73,13 +73,13 @@ export function sortReturnsDetails(
 }
 
 export function describeReturnsDetailsItem(item: ReturnsDetailsItem): string {
-  const amount = asyncPercent(item.amount);
-  const name = validateDate(mathSlug(item.name));
+  const amount = validateCurrency(item.amount);
+  const name = i18nCurrency(storageName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReturnsDetailsAmount(amount: number): string {
-  return asyncPercent(amount);
+  return validateCurrency(amount);
 }
 
 export function returnsDetailsStatusTone(

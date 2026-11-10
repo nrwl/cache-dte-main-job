@@ -1,4 +1,4 @@
-import { LayoutBadge } from '@org/shop-ui-layout-badge';
+import { FeedbackStat } from '@org/shop-ui-feedback-stat';
 import { CHECKOUT_LIST_FEATURE } from './checkout-list.routes';
 
 export interface CheckoutListHeaderProps {
@@ -26,8 +26,8 @@ export function CheckoutListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutBadge label="Items" value={count} tone="info" />
-        <LayoutBadge label="Total" value={total} tone="success" />
+        <FeedbackStat label="Items" value={count} tone="info" />
+        <FeedbackStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

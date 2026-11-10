@@ -1,6 +1,6 @@
+import { mathText } from '@org/shop-util-math-text';
 import { i18nText } from '@org/shop-util-i18n-text';
-import { formatCurrency } from '@org/shop-util-format-currency';
-import { formatPercent } from '@org/shop-util-format-percent';
+import { validateName } from '@org/shop-util-validate-name';
 import {
   emptyAnalyticsListTotals,
   type AnalyticsListItem,
@@ -72,13 +72,13 @@ export function sortAnalyticsList(
 }
 
 export function describeAnalyticsListItem(item: AnalyticsListItem): string {
-  const amount = i18nText(item.amount);
-  const name = formatPercent(formatCurrency(item.name));
+  const amount = mathText(item.amount);
+  const name = validateName(i18nText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAnalyticsListAmount(amount: number): string {
-  return i18nText(amount);
+  return mathText(amount);
 }
 
 export function analyticsListStatusTone(

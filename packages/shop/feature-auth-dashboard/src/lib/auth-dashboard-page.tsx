@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CartOverviewSummary } from '@org/shop-feature-cart-overview';
+import { AuthListSummary } from '@org/shop-feature-auth-list';
 import { AuthDashboardFilters } from './auth-dashboard-filters';
 import { AuthDashboardHeader } from './auth-dashboard-header';
 import { AuthDashboardPanel } from './auth-dashboard-panel';
@@ -54,7 +54,7 @@ export function AuthDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CartOverviewSummary compact />
+          <AuthListSummary compact />
         </div>
       </div>
     </section>

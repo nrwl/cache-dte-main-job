@@ -21,7 +21,7 @@ export interface ShippingListTotals {
   archived: number;
 }
 
-export const SHIPPING_LIST_ITEM_COUNT = 11;
+export const SHIPPING_LIST_ITEM_COUNT = 10;
 
 export const SHIPPING_LIST_STATUSES: ReadonlyArray<ShippingListStatus> = [
   'active',

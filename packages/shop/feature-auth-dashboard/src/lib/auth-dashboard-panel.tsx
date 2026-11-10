@@ -1,4 +1,5 @@
-import { MediaListGroup } from '@org/shop-ui-media-list';
+import { CoreStatGroup } from '@org/shop-ui-core-stat';
+import { InputsBadge } from '@org/shop-ui-inputs-badge';
 import type { AuthDashboardItem } from './auth-dashboard.model';
 import { AUTH_DASHBOARD_FEATURE } from './auth-dashboard.routes';
 import { describeAuthDashboardItem } from './auth-dashboard.utils';
@@ -39,7 +40,7 @@ export function AuthDashboardPanel({
       <p className="feature-panel-description">
         {describeAuthDashboardItem(selected)}
       </p>
-      <MediaListGroup
+      <CoreStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function AuthDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <InputsBadge
+          label="Inputs Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-validate-phone": "*"
+    "@org/shop-util-format-phone": "*"
   }
 }

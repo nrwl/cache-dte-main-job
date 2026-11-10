@@ -1,4 +1,5 @@
-import { mathCode } from '@org/shop-util-math-code';
+import { collectionPhone } from '@org/shop-util-collection-phone';
+import { mathNumber } from '@org/shop-util-math-number';
 import {
   emptyReviewsDetailsTotals,
   type ReviewsDetailsItem,
@@ -71,13 +72,13 @@ export function sortReviewsDetails(
 }
 
 export function describeReviewsDetailsItem(item: ReviewsDetailsItem): string {
-  const amount = mathCode(item.amount);
-  const name = mathCode(item.name);
+  const amount = collectionPhone(item.amount);
+  const name = mathNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReviewsDetailsAmount(amount: number): string {
-  return mathCode(amount);
+  return collectionPhone(amount);
 }
 
 export function reviewsDetailsStatusTone(

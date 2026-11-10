@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { WishlistListSummary } from '@org/shop-feature-wishlist-list';
 import { ProfileOverviewFilters } from './profile-overview-filters';
 import { ProfileOverviewHeader } from './profile-overview-header';
 import { ProfileOverviewPanel } from './profile-overview-panel';
@@ -54,7 +53,6 @@ export function ProfileOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <WishlistListSummary compact />
         </div>
       </div>
     </section>

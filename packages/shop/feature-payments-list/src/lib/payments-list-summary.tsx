@@ -1,4 +1,4 @@
-import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
+import { MarketingStatGroup } from '@org/shop-ui-marketing-stat';
 import { buildPaymentsListItems } from './payments-list.model';
 import { PAYMENTS_LIST_FEATURE } from './payments-list.routes';
 import {
@@ -29,7 +29,7 @@ export function PaymentsListSummary({
       data-testid={`${PAYMENTS_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{PAYMENTS_LIST_FEATURE.title}</h3>
-      <ChartsBadgeGroup
+      <MarketingStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

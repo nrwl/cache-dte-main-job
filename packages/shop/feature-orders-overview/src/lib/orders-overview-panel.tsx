@@ -1,5 +1,6 @@
-import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
-import { MarketingList } from '@org/shop-ui-marketing-list';
+import { NavigationBannerGroup } from '@org/shop-ui-navigation-banner';
+import { CommerceBanner } from '@org/shop-ui-commerce-banner';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { OrdersOverviewItem } from './orders-overview.model';
 import { ORDERS_OVERVIEW_FEATURE } from './orders-overview.routes';
 import { describeOrdersOverviewItem } from './orders-overview.utils';
@@ -40,7 +41,7 @@ export function OrdersOverviewPanel({
       <p className="feature-panel-description">
         {describeOrdersOverviewItem(selected)}
       </p>
-      <OverlayStatGroup
+      <NavigationBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function OrdersOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <MarketingList
-          label="Marketing List"
+        <CommerceBanner
+          label="Commerce Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <ChartsBanner
+          label="Charts Banner"
           value={selected.product.rating}
           size="sm"
         />

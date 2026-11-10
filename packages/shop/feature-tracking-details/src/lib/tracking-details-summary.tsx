@@ -1,4 +1,4 @@
-import { CommerceStatGroup } from '@org/shop-ui-commerce-stat';
+import { ChartsStatGroup } from '@org/shop-ui-charts-stat';
 import { buildTrackingDetailsItems } from './tracking-details.model';
 import { TRACKING_DETAILS_FEATURE } from './tracking-details.routes';
 import {
@@ -31,7 +31,7 @@ export function TrackingDetailsSummary({
       <h3 className="feature-summary-title">
         {TRACKING_DETAILS_FEATURE.title}
       </h3>
-      <CommerceStatGroup
+      <ChartsStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

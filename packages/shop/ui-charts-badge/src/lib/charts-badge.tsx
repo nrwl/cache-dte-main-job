@@ -1,6 +1,5 @@
-import { formatNumber } from '@org/shop-util-format-number';
-import { i18nSlug } from '@org/shop-util-i18n-slug';
-import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
+import { storageNumber } from '@org/shop-util-storage-number';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { ChartsBadgeProps } from './charts-badge.types';
 import { resolveChartsBadgeStyle } from './charts-badge-variants';
 
@@ -13,9 +12,9 @@ export function ChartsBadge({
   onSelect,
   children,
 }: ChartsBadgeProps) {
-  const formatted = value === undefined ? '' : formatNumber(value);
+  const formatted = value === undefined ? '' : storageNumber(value);
   const style = resolveChartsBadgeStyle(tone, size);
-  const ariaLabel = i18nSlug(label);
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,12 +37,7 @@ export function ChartsBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FeedbackToolbar
-        label="Feedback Toolbar"
-        value={value}
-        tone={tone}
-        size="sm"
-      />
+      <DataPanel label="Data Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

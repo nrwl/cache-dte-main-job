@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { ReviewsSettingsSummary } from '@org/shop-feature-reviews-settings';
 import { RecommendationsOverviewFilters } from './recommendations-overview-filters';
 import { RecommendationsOverviewHeader } from './recommendations-overview-header';
 import { RecommendationsOverviewPanel } from './recommendations-overview-panel';
@@ -53,6 +54,7 @@ export function RecommendationsOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <ReviewsSettingsSummary compact />
         </div>
       </div>
     </section>

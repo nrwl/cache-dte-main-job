@@ -1,12 +1,5 @@
 import type { Product } from '@org/models';
-import { formatCode } from '@org/shop-util-format-code';
-import { validateAddress } from '@org/shop-util-validate-address';
-import {
-  clampLength,
-  hashString,
-  normalizeInput,
-  onlyDigits,
-} from './i18n-number-helpers';
+import { clampLength, hashString, normalizeInput } from './i18n-number-helpers';
 
 export interface I18nNumberOptions {
   /** BCP-47 locale used for locale-aware operations. */
@@ -33,7 +26,7 @@ export const I18N_NUMBER_DEFAULTS: Required<I18nNumberOptions> = {
 export const I18N_NUMBER_KIND = 'i18n-number' as const;
 
 /**
- * Formats a raw value using the "digits" strategy.
+ * Formats a raw value using the "prefixed" strategy.
  */
 export function i18nNumber(
   value: string | number,
@@ -47,11 +40,8 @@ export function i18nNumber(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatCode, validateAddress].reduce<string>(
-    (acc, fn) => fn(acc),
-    normalized,
-  );
-  const transformed = onlyDigits(staged) || staged;
+  const staged = normalized;
+  const transformed = '#' + staged;
   return clampLength(transformed, opts.maxLength);
 }
 

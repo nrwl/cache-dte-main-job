@@ -30,13 +30,10 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-core-chip/tsconfig.lib.json"
+      "path": "../util-async-text/tsconfig.lib.json"
     },
     {
-      "path": "../util-format-currency/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-validate-slug/tsconfig.lib.json"
+      "path": "../util-math-text/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

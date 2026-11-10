@@ -1,4 +1,4 @@
-import { MarketingCard } from '@org/shop-ui-marketing-card';
+import { FeedbackStat } from '@org/shop-ui-feedback-stat';
 import { CATALOG_LIST_FEATURE } from './catalog-list.routes';
 
 export interface CatalogListHeaderProps {
@@ -26,8 +26,8 @@ export function CatalogListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingCard label="Items" value={count} tone="info" />
-        <MarketingCard label="Total" value={total} tone="success" />
+        <FeedbackStat label="Items" value={count} tone="info" />
+        <FeedbackStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

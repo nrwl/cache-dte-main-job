@@ -1,4 +1,6 @@
-import { ChartsCardGroup } from '@org/shop-ui-charts-card';
+import { FeedbackStatGroup } from '@org/shop-ui-feedback-stat';
+import { CoreBanner } from '@org/shop-ui-core-banner';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { BundlesOverviewItem } from './bundles-overview.model';
 import { BUNDLES_OVERVIEW_FEATURE } from './bundles-overview.routes';
 import { describeBundlesOverviewItem } from './bundles-overview.utils';
@@ -39,7 +41,7 @@ export function BundlesOverviewPanel({
       <p className="feature-panel-description">
         {describeBundlesOverviewItem(selected)}
       </p>
-      <ChartsCardGroup
+      <FeedbackStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function BundlesOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <CoreBanner
+          label="Core Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <LayoutStat
+          label="Layout Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

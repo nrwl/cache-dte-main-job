@@ -1,4 +1,4 @@
-import { MediaHeader } from '@org/shop-ui-media-header';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import { SUPPORT_DASHBOARD_FEATURE } from './support-dashboard.routes';
 
 export interface SupportDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function SupportDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaHeader label="Items" value={count} tone="info" />
-        <MediaHeader label="Total" value={total} tone="success" />
+        <InputsPanel label="Items" value={count} tone="info" />
+        <InputsPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

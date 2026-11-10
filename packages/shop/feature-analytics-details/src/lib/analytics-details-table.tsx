@@ -1,4 +1,4 @@
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import type { AnalyticsDetailsItem } from './analytics-details.model';
 import { ANALYTICS_DETAILS_FEATURE } from './analytics-details.routes';
 import {
@@ -58,7 +58,7 @@ export function AnalyticsDetailsTable({
             <td>{formatAnalyticsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutBanner
+              <FeedbackBanner
                 label={item.status}
                 tone={analyticsDetailsStatusTone(item.status)}
                 size="sm"

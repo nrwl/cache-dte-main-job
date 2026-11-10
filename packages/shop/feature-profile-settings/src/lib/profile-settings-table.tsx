@@ -1,4 +1,4 @@
-import { NavigationHeader } from '@org/shop-ui-navigation-header';
+import { LayoutBadge } from '@org/shop-ui-layout-badge';
 import type { ProfileSettingsItem } from './profile-settings.model';
 import { PROFILE_SETTINGS_FEATURE } from './profile-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function ProfileSettingsTable({
             <td>{formatProfileSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationHeader
+              <LayoutBadge
                 label={item.status}
                 tone={profileSettingsStatusTone(item.status)}
                 size="sm"

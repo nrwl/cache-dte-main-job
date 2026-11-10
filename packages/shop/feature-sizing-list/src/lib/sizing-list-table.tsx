@@ -1,4 +1,4 @@
-import { NavigationBanner } from '@org/shop-ui-navigation-banner';
+import { NavigationBadge } from '@org/shop-ui-navigation-badge';
 import type { SizingListItem } from './sizing-list.model';
 import { SIZING_LIST_FEATURE } from './sizing-list.routes';
 import {
@@ -58,7 +58,7 @@ export function SizingListTable({
             <td>{formatSizingListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationBanner
+              <NavigationBadge
                 label={item.status}
                 tone={sizingListStatusTone(item.status)}
                 size="sm"

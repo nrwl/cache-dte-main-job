@@ -1,5 +1,5 @@
-import { storageSlug } from '@org/shop-util-storage-slug';
-import { mathSlug } from '@org/shop-util-math-slug';
+import { validateNumber } from '@org/shop-util-validate-number';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyAddressesDashboardTotals,
   type AddressesDashboardItem,
@@ -74,13 +74,13 @@ export function sortAddressesDashboard(
 export function describeAddressesDashboardItem(
   item: AddressesDashboardItem,
 ): string {
-  const amount = storageSlug(item.amount);
-  const name = mathSlug(item.name);
+  const amount = validateNumber(item.amount);
+  const name = collectionText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesDashboardAmount(amount: number): string {
-  return storageSlug(amount);
+  return validateNumber(amount);
 }
 
 export function addressesDashboardStatusTone(

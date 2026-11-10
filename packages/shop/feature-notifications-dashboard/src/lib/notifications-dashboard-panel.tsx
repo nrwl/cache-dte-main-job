@@ -1,6 +1,6 @@
-import { OverlayToolbarGroup } from '@org/shop-ui-overlay-toolbar';
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
-import { TypographyCard } from '@org/shop-ui-typography-card';
+import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
+import { TypographyStat } from '@org/shop-ui-typography-stat';
+import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
 import type { NotificationsDashboardItem } from './notifications-dashboard.model';
 import { NOTIFICATIONS_DASHBOARD_FEATURE } from './notifications-dashboard.routes';
 import { describeNotificationsDashboardItem } from './notifications-dashboard.utils';
@@ -41,7 +41,7 @@ export function NotificationsDashboardPanel({
       <p className="feature-panel-description">
         {describeNotificationsDashboardItem(selected)}
       </p>
-      <OverlayToolbarGroup
+      <ChartsBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function NotificationsDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceBadge
-          label="Commerce Badge"
+        <TypographyStat
+          label="Typography Stat"
           value={selected.product.rating}
           size="sm"
         />
-        <TypographyCard
-          label="Typography Card"
+        <FeedbackPanel
+          label="Feedback Panel"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,5 +1,4 @@
-import { storageAddress } from '@org/shop-util-storage-address';
-import { formatPercent } from '@org/shop-util-format-percent';
+import { validateNumber } from '@org/shop-util-validate-number';
 import {
   emptyRecommendationsSettingsTotals,
   type RecommendationsSettingsItem,
@@ -77,13 +76,13 @@ export function sortRecommendationsSettings(
 export function describeRecommendationsSettingsItem(
   item: RecommendationsSettingsItem,
 ): string {
-  const amount = storageAddress(item.amount);
-  const name = formatPercent(item.name);
+  const amount = validateNumber(item.amount);
+  const name = validateNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatRecommendationsSettingsAmount(amount: number): string {
-  return storageAddress(amount);
+  return validateNumber(amount);
 }
 
 export function recommendationsSettingsStatusTone(

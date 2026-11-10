@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { ProfileDetailsSummary } from '@org/shop-feature-profile-details';
 import { FeedbackSettingsFilters } from './feedback-settings-filters';
 import { FeedbackSettingsHeader } from './feedback-settings-header';
 import { FeedbackSettingsPanel } from './feedback-settings-panel';
@@ -53,6 +54,7 @@ export function FeedbackSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <ProfileDetailsSummary compact />
         </div>
       </div>
     </section>

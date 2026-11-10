@@ -1,4 +1,6 @@
-import { mathPhone } from '@org/shop-util-math-phone';
+import { asyncPhone } from '@org/shop-util-async-phone';
+import { formatName } from '@org/shop-util-format-name';
+import { asyncCurrency } from '@org/shop-util-async-currency';
 import {
   emptySearchDetailsTotals,
   type SearchDetailsItem,
@@ -70,13 +72,13 @@ export function sortSearchDetails(
 }
 
 export function describeSearchDetailsItem(item: SearchDetailsItem): string {
-  const amount = mathPhone(item.amount);
-  const name = mathPhone(item.name);
+  const amount = asyncPhone(item.amount);
+  const name = asyncCurrency(formatName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSearchDetailsAmount(amount: number): string {
-  return mathPhone(amount);
+  return asyncPhone(amount);
 }
 
 export function searchDetailsStatusTone(

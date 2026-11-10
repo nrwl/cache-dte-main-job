@@ -1,5 +1,4 @@
-import { asyncText } from '@org/shop-util-async-text';
-import { formatText } from '@org/shop-util-format-text';
+import { validateCurrency } from '@org/shop-util-validate-currency';
 import {
   emptyPromotionsSettingsTotals,
   type PromotionsSettingsItem,
@@ -74,13 +73,13 @@ export function sortPromotionsSettings(
 export function describePromotionsSettingsItem(
   item: PromotionsSettingsItem,
 ): string {
-  const amount = asyncText(item.amount);
-  const name = formatText(item.name);
+  const amount = validateCurrency(item.amount);
+  const name = validateCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPromotionsSettingsAmount(amount: number): string {
-  return asyncText(amount);
+  return validateCurrency(amount);
 }
 
 export function promotionsSettingsStatusTone(

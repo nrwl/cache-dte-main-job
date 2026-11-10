@@ -1,6 +1,6 @@
-import { formatCode } from '@org/shop-util-format-code';
-import { storageText } from '@org/shop-util-storage-text';
-import { FeedbackHeader } from '@org/shop-ui-feedback-header';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { mathText } from '@org/shop-util-math-text';
+import { validatePhone } from '@org/shop-util-validate-phone';
 import type { NavigationBannerProps } from './navigation-banner.types';
 import { resolveNavigationBannerStyle } from './navigation-banner-variants';
 
@@ -13,9 +13,9 @@ export function NavigationBanner({
   onSelect,
   children,
 }: NavigationBannerProps) {
-  const formatted = value === undefined ? '' : formatCode(value);
+  const formatted = value === undefined ? '' : asyncNumber(value);
   const style = resolveNavigationBannerStyle(tone, size);
-  const ariaLabel = storageText(label);
+  const ariaLabel = validatePhone(mathText(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,12 +38,6 @@ export function NavigationBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FeedbackHeader
-        label="Feedback Header"
-        value={value}
-        tone={tone}
-        size="sm"
-      />
     </div>
   );
 }

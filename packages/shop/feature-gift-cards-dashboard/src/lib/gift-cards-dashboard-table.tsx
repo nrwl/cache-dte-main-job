@@ -1,4 +1,4 @@
-import { CoreHeader } from '@org/shop-ui-core-header';
+import { FormsToolbar } from '@org/shop-ui-forms-toolbar';
 import type { GiftCardsDashboardItem } from './gift-cards-dashboard.model';
 import { GIFT_CARDS_DASHBOARD_FEATURE } from './gift-cards-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function GiftCardsDashboardTable({
             <td>{formatGiftCardsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreHeader
+              <FormsToolbar
                 label={item.status}
                 tone={giftCardsDashboardStatusTone(item.status)}
                 size="sm"

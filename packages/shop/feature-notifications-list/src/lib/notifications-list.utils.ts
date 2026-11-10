@@ -1,5 +1,5 @@
-import { collectionCurrency } from '@org/shop-util-collection-currency';
-import { mathName } from '@org/shop-util-math-name';
+import { asyncText } from '@org/shop-util-async-text';
+import { formatName } from '@org/shop-util-format-name';
 import {
   emptyNotificationsListTotals,
   type NotificationsListItem,
@@ -74,13 +74,13 @@ export function sortNotificationsList(
 export function describeNotificationsListItem(
   item: NotificationsListItem,
 ): string {
-  const amount = collectionCurrency(item.amount);
-  const name = mathName(item.name);
+  const amount = asyncText(item.amount);
+  const name = formatName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatNotificationsListAmount(amount: number): string {
-  return collectionCurrency(amount);
+  return asyncText(amount);
 }
 
 export function notificationsListStatusTone(

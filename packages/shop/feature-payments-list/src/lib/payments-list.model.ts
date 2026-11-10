@@ -21,7 +21,7 @@ export interface PaymentsListTotals {
   archived: number;
 }
 
-export const PAYMENTS_LIST_ITEM_COUNT = 7;
+export const PAYMENTS_LIST_ITEM_COUNT = 11;
 
 export const PAYMENTS_LIST_STATUSES: ReadonlyArray<PaymentsListStatus> = [
   'active',

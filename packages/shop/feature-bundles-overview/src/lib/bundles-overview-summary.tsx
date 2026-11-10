@@ -1,4 +1,4 @@
-import { MediaStatGroup } from '@org/shop-ui-media-stat';
+import { FormsBadgeGroup } from '@org/shop-ui-forms-badge';
 import { buildBundlesOverviewItems } from './bundles-overview.model';
 import { BUNDLES_OVERVIEW_FEATURE } from './bundles-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function BundlesOverviewSummary({
       <h3 className="feature-summary-title">
         {BUNDLES_OVERVIEW_FEATURE.title}
       </h3>
-      <MediaStatGroup
+      <FormsBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

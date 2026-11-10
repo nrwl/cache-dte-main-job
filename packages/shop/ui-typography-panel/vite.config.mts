@@ -10,7 +10,8 @@ export default defineConfig(() => ({
     watch: false,
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./src/test-setup.ts', '../../../tools/test-delay/setup.mjs'],
+    setupFiles: ['./src/test-setup.ts'],
+    globalSetup: ['../../../tools/test-delay/setup.mjs'],
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     reporters: ['default'],
     // Spec files run one at a time so Nx owns concurrency and each CPU burn

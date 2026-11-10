@@ -1,4 +1,4 @@
-import { OverlayChip } from '@org/shop-ui-overlay-chip';
+import { TypographyBanner } from '@org/shop-ui-typography-banner';
 import type { AnalyticsListItem } from './analytics-list.model';
 import { ANALYTICS_LIST_FEATURE } from './analytics-list.routes';
 import {
@@ -58,7 +58,7 @@ export function AnalyticsListTable({
             <td>{formatAnalyticsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayChip
+              <TypographyBanner
                 label={item.status}
                 tone={analyticsListStatusTone(item.status)}
                 size="sm"

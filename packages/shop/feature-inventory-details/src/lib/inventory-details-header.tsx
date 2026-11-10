@@ -1,4 +1,4 @@
-import { FormsTile } from '@org/shop-ui-forms-tile';
+import { DataBanner } from '@org/shop-ui-data-banner';
 import { INVENTORY_DETAILS_FEATURE } from './inventory-details.routes';
 
 export interface InventoryDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function InventoryDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsTile label="Items" value={count} tone="info" />
-        <FormsTile label="Total" value={total} tone="success" />
+        <DataBanner label="Items" value={count} tone="info" />
+        <DataBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

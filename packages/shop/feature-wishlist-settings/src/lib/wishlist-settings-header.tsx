@@ -1,4 +1,4 @@
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
 import { WISHLIST_SETTINGS_FEATURE } from './wishlist-settings.routes';
 
 export interface WishlistSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function WishlistSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceStat label="Items" value={count} tone="info" />
-        <CommerceStat label="Total" value={total} tone="success" />
+        <LayoutToolbar label="Items" value={count} tone="info" />
+        <LayoutToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

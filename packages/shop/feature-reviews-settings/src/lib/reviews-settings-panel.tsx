@@ -1,6 +1,4 @@
-import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
-import { MarketingList } from '@org/shop-ui-marketing-list';
-import { InputsCard } from '@org/shop-ui-inputs-card';
+import { NavigationPanelGroup } from '@org/shop-ui-navigation-panel';
 import type { ReviewsSettingsItem } from './reviews-settings.model';
 import { REVIEWS_SETTINGS_FEATURE } from './reviews-settings.routes';
 import { describeReviewsSettingsItem } from './reviews-settings.utils';
@@ -41,7 +39,7 @@ export function ReviewsSettingsPanel({
       <p className="feature-panel-description">
         {describeReviewsSettingsItem(selected)}
       </p>
-      <LayoutStatGroup
+      <NavigationPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function ReviewsSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MarketingList
-          label="Marketing List"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <InputsCard
-          label="Inputs Card"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

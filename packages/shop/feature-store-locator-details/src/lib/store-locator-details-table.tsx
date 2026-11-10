@@ -1,4 +1,4 @@
-import { LayoutHeader } from '@org/shop-ui-layout-header';
+import { LayoutBadge } from '@org/shop-ui-layout-badge';
 import type { StoreLocatorDetailsItem } from './store-locator-details.model';
 import { STORE_LOCATOR_DETAILS_FEATURE } from './store-locator-details.routes';
 import {
@@ -58,7 +58,7 @@ export function StoreLocatorDetailsTable({
             <td>{formatStoreLocatorDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutHeader
+              <LayoutBadge
                 label={item.status}
                 tone={storeLocatorDetailsStatusTone(item.status)}
                 size="sm"

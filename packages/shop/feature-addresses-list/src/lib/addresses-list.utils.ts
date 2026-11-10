@@ -1,6 +1,6 @@
-import { i18nAddress } from '@org/shop-util-i18n-address';
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { asyncPercent } from '@org/shop-util-async-percent';
+import { collectionName } from '@org/shop-util-collection-name';
+import { asyncText } from '@org/shop-util-async-text';
+import { i18nText } from '@org/shop-util-i18n-text';
 import {
   emptyAddressesListTotals,
   type AddressesListItem,
@@ -72,13 +72,13 @@ export function sortAddressesList(
 }
 
 export function describeAddressesListItem(item: AddressesListItem): string {
-  const amount = i18nAddress(item.amount);
-  const name = asyncPercent(validatePhone(item.name));
+  const amount = collectionName(item.amount);
+  const name = i18nText(asyncText(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesListAmount(amount: number): string {
-  return i18nAddress(amount);
+  return collectionName(amount);
 }
 
 export function addressesListStatusTone(

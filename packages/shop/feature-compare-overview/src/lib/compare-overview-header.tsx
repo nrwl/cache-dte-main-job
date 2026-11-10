@@ -1,4 +1,4 @@
-import { LayoutHeader } from '@org/shop-ui-layout-header';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import { COMPARE_OVERVIEW_FEATURE } from './compare-overview.routes';
 
 export interface CompareOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function CompareOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutHeader label="Items" value={count} tone="info" />
-        <LayoutHeader label="Total" value={total} tone="success" />
+        <OverlayStat label="Items" value={count} tone="info" />
+        <OverlayStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

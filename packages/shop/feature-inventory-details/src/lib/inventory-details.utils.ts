@@ -1,4 +1,6 @@
-import { validateDate } from '@org/shop-util-validate-date';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { mathName } from '@org/shop-util-math-name';
+import { validateName } from '@org/shop-util-validate-name';
 import {
   emptyInventoryDetailsTotals,
   type InventoryDetailsItem,
@@ -73,13 +75,13 @@ export function sortInventoryDetails(
 export function describeInventoryDetailsItem(
   item: InventoryDetailsItem,
 ): string {
-  const amount = validateDate(item.amount);
-  const name = validateDate(item.name);
+  const amount = asyncNumber(item.amount);
+  const name = validateName(mathName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatInventoryDetailsAmount(amount: number): string {
-  return validateDate(amount);
+  return asyncNumber(amount);
 }
 
 export function inventoryDetailsStatusTone(

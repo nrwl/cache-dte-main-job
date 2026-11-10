@@ -1,5 +1,6 @@
-import { ChartsPanelGroup } from '@org/shop-ui-charts-panel';
-import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
+import { ChartsPanel } from '@org/shop-ui-charts-panel';
+import { CommerceBadge } from '@org/shop-ui-commerce-badge';
 import type { AnalyticsSettingsItem } from './analytics-settings.model';
 import { ANALYTICS_SETTINGS_FEATURE } from './analytics-settings.routes';
 import { describeAnalyticsSettingsItem } from './analytics-settings.utils';
@@ -40,7 +41,7 @@ export function AnalyticsSettingsPanel({
       <p className="feature-panel-description">
         {describeAnalyticsSettingsItem(selected)}
       </p>
-      <ChartsPanelGroup
+      <InputsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function AnalyticsSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <NavigationToolbar
-          label="Navigation Toolbar"
+        <ChartsPanel
+          label="Charts Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CommerceBadge
+          label="Commerce Badge"
           value={selected.product.rating}
           size="sm"
         />

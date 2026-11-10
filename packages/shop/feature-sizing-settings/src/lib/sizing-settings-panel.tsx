@@ -1,6 +1,4 @@
-import { CommerceBadgeGroup } from '@org/shop-ui-commerce-badge';
-import { ChartsList } from '@org/shop-ui-charts-list';
-import { NavigationBanner } from '@org/shop-ui-navigation-banner';
+import { OverlayToolbarGroup } from '@org/shop-ui-overlay-toolbar';
 import type { SizingSettingsItem } from './sizing-settings.model';
 import { SIZING_SETTINGS_FEATURE } from './sizing-settings.routes';
 import { describeSizingSettingsItem } from './sizing-settings.utils';
@@ -41,7 +39,7 @@ export function SizingSettingsPanel({
       <p className="feature-panel-description">
         {describeSizingSettingsItem(selected)}
       </p>
-      <CommerceBadgeGroup
+      <OverlayToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function SizingSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <ChartsList
-          label="Charts List"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <NavigationBanner
-          label="Navigation Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

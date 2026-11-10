@@ -1,4 +1,4 @@
-import { MediaList } from '@org/shop-ui-media-list';
+import { DataToolbar } from '@org/shop-ui-data-toolbar';
 import { SUPPORT_DETAILS_FEATURE } from './support-details.routes';
 
 export interface SupportDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function SupportDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaList label="Items" value={count} tone="info" />
-        <MediaList label="Total" value={total} tone="success" />
+        <DataToolbar label="Items" value={count} tone="info" />
+        <DataToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

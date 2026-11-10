@@ -1,6 +1,5 @@
-import { MarketingStatGroup } from '@org/shop-ui-marketing-stat';
-import { FeedbackHeader } from '@org/shop-ui-feedback-header';
-import { NavigationChip } from '@org/shop-ui-navigation-chip';
+import { OverlayToolbarGroup } from '@org/shop-ui-overlay-toolbar';
+import { MarketingBanner } from '@org/shop-ui-marketing-banner';
 import type { AnalyticsOverviewItem } from './analytics-overview.model';
 import { ANALYTICS_OVERVIEW_FEATURE } from './analytics-overview.routes';
 import { describeAnalyticsOverviewItem } from './analytics-overview.utils';
@@ -41,7 +40,7 @@ export function AnalyticsOverviewPanel({
       <p className="feature-panel-description">
         {describeAnalyticsOverviewItem(selected)}
       </p>
-      <MarketingStatGroup
+      <OverlayToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function AnalyticsOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FeedbackHeader
-          label="Feedback Header"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <NavigationChip
-          label="Navigation Chip"
+        <MarketingBanner
+          label="Marketing Banner"
           value={selected.product.rating}
           size="sm"
         />

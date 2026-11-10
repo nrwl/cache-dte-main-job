@@ -1,5 +1,6 @@
+import { i18nName } from '@org/shop-util-i18n-name';
 import { formatName } from '@org/shop-util-format-name';
-import { asyncCode } from '@org/shop-util-async-code';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyLoyaltyDetailsTotals,
   type LoyaltyDetailsItem,
@@ -72,13 +73,13 @@ export function sortLoyaltyDetails(
 }
 
 export function describeLoyaltyDetailsItem(item: LoyaltyDetailsItem): string {
-  const amount = formatName(item.amount);
-  const name = asyncCode(item.name);
+  const amount = i18nName(item.amount);
+  const name = mathCurrency(formatName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatLoyaltyDetailsAmount(amount: number): string {
-  return formatName(amount);
+  return i18nName(amount);
 }
 
 export function loyaltyDetailsStatusTone(

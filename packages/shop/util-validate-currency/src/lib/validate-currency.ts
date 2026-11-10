@@ -1,5 +1,5 @@
 import type { Product } from '@org/models';
-import { formatPhone } from '@org/shop-util-format-phone';
+import { formatNumber } from '@org/shop-util-format-number';
 import {
   clampLength,
   hashString,
@@ -31,7 +31,7 @@ export const VALIDATE_CURRENCY_DEFAULTS: Required<ValidateCurrencyOptions> = {
 export const VALIDATE_CURRENCY_KIND = 'validate-currency' as const;
 
 /**
- * Formats a raw value using the "lower" strategy.
+ * Formats a raw value using the "upper" strategy.
  */
 export function validateCurrency(
   value: string | number,
@@ -45,8 +45,11 @@ export function validateCurrency(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatPhone].reduce<string>((acc, fn) => fn(acc), normalized);
-  const transformed = staged.toLowerCase();
+  const staged = [formatNumber].reduce<string>(
+    (acc, fn) => fn(acc),
+    normalized,
+  );
+  const transformed = staged.toUpperCase();
   return clampLength(transformed, opts.maxLength);
 }
 

@@ -21,7 +21,7 @@ export interface SearchOverviewTotals {
   archived: number;
 }
 
-export const SEARCH_OVERVIEW_ITEM_COUNT = 9;
+export const SEARCH_OVERVIEW_ITEM_COUNT = 6;
 
 export const SEARCH_OVERVIEW_STATUSES: ReadonlyArray<SearchOverviewStatus> = [
   'active',

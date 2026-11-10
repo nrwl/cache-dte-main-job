@@ -1,4 +1,4 @@
-import { MarketingBannerGroup } from '@org/shop-ui-marketing-banner';
+import { DataBadgeGroup } from '@org/shop-ui-data-badge';
 import { buildSearchListItems } from './search-list.model';
 import { SEARCH_LIST_FEATURE } from './search-list.routes';
 import { pickSearchListHighlights, totalSearchList } from './search-list.utils';
@@ -26,7 +26,7 @@ export function SearchListSummary({
       data-testid={`${SEARCH_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SEARCH_LIST_FEATURE.title}</h3>
-      <MarketingBannerGroup
+      <DataBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,4 +1,4 @@
-import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
+import { OverlayBadge } from '@org/shop-ui-overlay-badge';
 import type { PaymentsListItem } from './payments-list.model';
 import { PAYMENTS_LIST_FEATURE } from './payments-list.routes';
 import {
@@ -58,7 +58,7 @@ export function PaymentsListTable({
             <td>{formatPaymentsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutToolbar
+              <OverlayBadge
                 label={item.status}
                 tone={paymentsListStatusTone(item.status)}
                 size="sm"

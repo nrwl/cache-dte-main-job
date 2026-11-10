@@ -1,4 +1,4 @@
-import { TypographyPanel } from '@org/shop-ui-typography-panel';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import { GIFT_CARDS_SETTINGS_FEATURE } from './gift-cards-settings.routes';
 
 export interface GiftCardsSettingsHeaderProps {
@@ -27,8 +27,8 @@ export function GiftCardsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyPanel label="Items" value={count} tone="info" />
-        <TypographyPanel label="Total" value={total} tone="success" />
+        <CommerceToolbar label="Items" value={count} tone="info" />
+        <CommerceToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

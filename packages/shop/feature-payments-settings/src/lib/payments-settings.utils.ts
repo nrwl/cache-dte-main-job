@@ -1,5 +1,4 @@
-import { validateSlug } from '@org/shop-util-validate-slug';
-import { i18nName } from '@org/shop-util-i18n-name';
+import { validateCurrency } from '@org/shop-util-validate-currency';
 import {
   emptyPaymentsSettingsTotals,
   type PaymentsSettingsItem,
@@ -74,13 +73,13 @@ export function sortPaymentsSettings(
 export function describePaymentsSettingsItem(
   item: PaymentsSettingsItem,
 ): string {
-  const amount = validateSlug(item.amount);
-  const name = i18nName(item.name);
+  const amount = validateCurrency(item.amount);
+  const name = validateCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPaymentsSettingsAmount(amount: number): string {
-  return validateSlug(amount);
+  return validateCurrency(amount);
 }
 
 export function paymentsSettingsStatusTone(

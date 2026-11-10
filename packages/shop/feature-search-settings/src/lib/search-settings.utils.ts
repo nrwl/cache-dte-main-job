@@ -1,4 +1,5 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
+import { i18nText } from '@org/shop-util-i18n-text';
+import { i18nName } from '@org/shop-util-i18n-name';
 import {
   emptySearchSettingsTotals,
   type SearchSettingsItem,
@@ -71,13 +72,13 @@ export function sortSearchSettings(
 }
 
 export function describeSearchSettingsItem(item: SearchSettingsItem): string {
-  const amount = validatePhone(item.amount);
-  const name = validatePhone(item.name);
+  const amount = i18nText(item.amount);
+  const name = i18nName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSearchSettingsAmount(amount: number): string {
-  return validatePhone(amount);
+  return i18nText(amount);
 }
 
 export function searchSettingsStatusTone(

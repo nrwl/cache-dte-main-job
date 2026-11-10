@@ -1,5 +1,4 @@
-import { formatPercent } from '@org/shop-util-format-percent';
-import { validateCode } from '@org/shop-util-validate-code';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyShippingListTotals,
   type ShippingListItem,
@@ -71,13 +70,13 @@ export function sortShippingList(
 }
 
 export function describeShippingListItem(item: ShippingListItem): string {
-  const amount = formatPercent(item.amount);
-  const name = validateCode(item.name);
+  const amount = collectionText(item.amount);
+  const name = collectionText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatShippingListAmount(amount: number): string {
-  return formatPercent(amount);
+  return collectionText(amount);
 }
 
 export function shippingListStatusTone(

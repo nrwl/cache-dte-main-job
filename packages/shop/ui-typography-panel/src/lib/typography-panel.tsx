@@ -1,6 +1,5 @@
-import { collectionCode } from '@org/shop-util-collection-code';
-import { mathName } from '@org/shop-util-math-name';
-import { i18nDate } from '@org/shop-util-i18n-date';
+import { storageName } from '@org/shop-util-storage-name';
+import { i18nText } from '@org/shop-util-i18n-text';
 import type { TypographyPanelProps } from './typography-panel.types';
 import { resolveTypographyPanelStyle } from './typography-panel-variants';
 
@@ -13,9 +12,9 @@ export function TypographyPanel({
   onSelect,
   children,
 }: TypographyPanelProps) {
-  const formatted = value === undefined ? '' : collectionCode(value);
+  const formatted = value === undefined ? '' : storageName(value);
   const style = resolveTypographyPanelStyle(tone, size);
-  const ariaLabel = i18nDate(mathName(label));
+  const ariaLabel = i18nText(label);
 
   const handleClick = () => {
     if (onSelect) {

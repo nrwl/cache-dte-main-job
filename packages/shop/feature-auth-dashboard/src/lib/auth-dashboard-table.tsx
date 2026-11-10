@@ -1,4 +1,4 @@
-import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
+import { MarketingBanner } from '@org/shop-ui-marketing-banner';
 import type { AuthDashboardItem } from './auth-dashboard.model';
 import { AUTH_DASHBOARD_FEATURE } from './auth-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function AuthDashboardTable({
             <td>{formatAuthDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingToolbar
+              <MarketingBanner
                 label={item.status}
                 tone={authDashboardStatusTone(item.status)}
                 size="sm"

@@ -1,4 +1,4 @@
-import { formatAddress } from '@org/shop-util-format-address';
+import { validateText } from '@org/shop-util-validate-text';
 import {
   emptyInventorySettingsTotals,
   type InventorySettingsItem,
@@ -73,13 +73,13 @@ export function sortInventorySettings(
 export function describeInventorySettingsItem(
   item: InventorySettingsItem,
 ): string {
-  const amount = formatAddress(item.amount);
-  const name = formatAddress(item.name);
+  const amount = validateText(item.amount);
+  const name = validateText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatInventorySettingsAmount(amount: number): string {
-  return formatAddress(amount);
+  return validateText(amount);
 }
 
 export function inventorySettingsStatusTone(

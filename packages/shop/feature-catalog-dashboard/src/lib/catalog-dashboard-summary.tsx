@@ -1,4 +1,4 @@
-import { OverlayChipGroup } from '@org/shop-ui-overlay-chip';
+import { FeedbackToolbarGroup } from '@org/shop-ui-feedback-toolbar';
 import { buildCatalogDashboardItems } from './catalog-dashboard.model';
 import { CATALOG_DASHBOARD_FEATURE } from './catalog-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function CatalogDashboardSummary({
       <h3 className="feature-summary-title">
         {CATALOG_DASHBOARD_FEATURE.title}
       </h3>
-      <OverlayChipGroup
+      <FeedbackToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

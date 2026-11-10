@@ -1,4 +1,6 @@
-import { i18nSlug } from '@org/shop-util-i18n-slug';
+import { mathNumber } from '@org/shop-util-math-number';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { validateName } from '@org/shop-util-validate-name';
 import {
   emptyStoreLocatorOverviewTotals,
   type StoreLocatorOverviewItem,
@@ -76,13 +78,13 @@ export function sortStoreLocatorOverview(
 export function describeStoreLocatorOverviewItem(
   item: StoreLocatorOverviewItem,
 ): string {
-  const amount = i18nSlug(item.amount);
-  const name = i18nSlug(item.name);
+  const amount = mathNumber(item.amount);
+  const name = validateName(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatStoreLocatorOverviewAmount(amount: number): string {
-  return i18nSlug(amount);
+  return mathNumber(amount);
 }
 
 export function storeLocatorOverviewStatusTone(

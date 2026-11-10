@@ -21,11 +21,9 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-media-badge": "*",
-    "@org/shop-ui-commerce-badge": "*",
-    "@org/shop-ui-navigation-stat": "*",
-    "@org/shop-ui-charts-list": "*",
-    "@org/shop-ui-navigation-banner": "*",
-    "@org/shop-util-storage-code": "*"
+    "@org/shop-ui-layout-panel": "*",
+    "@org/shop-ui-overlay-toolbar": "*",
+    "@org/shop-ui-overlay-panel": "*",
+    "@org/shop-util-i18n-currency": "*"
   }
 }

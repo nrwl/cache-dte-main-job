@@ -1,4 +1,4 @@
-import { MediaList } from '@org/shop-ui-media-list';
+import { TypographyStat } from '@org/shop-ui-typography-stat';
 import type { SearchListItem } from './search-list.model';
 import { SEARCH_LIST_FEATURE } from './search-list.routes';
 import {
@@ -58,7 +58,7 @@ export function SearchListTable({
             <td>{formatSearchListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaList
+              <TypographyStat
                 label={item.status}
                 tone={searchListStatusTone(item.status)}
                 size="sm"

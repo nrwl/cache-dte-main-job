@@ -1,4 +1,6 @@
-import { NavigationToolbarGroup } from '@org/shop-ui-navigation-toolbar';
+import { MediaBannerGroup } from '@org/shop-ui-media-banner';
+import { DataBanner } from '@org/shop-ui-data-banner';
+import { DataStat } from '@org/shop-ui-data-stat';
 import type { GiftCardsDetailsItem } from './gift-cards-details.model';
 import { GIFT_CARDS_DETAILS_FEATURE } from './gift-cards-details.routes';
 import { describeGiftCardsDetailsItem } from './gift-cards-details.utils';
@@ -39,7 +41,7 @@ export function GiftCardsDetailsPanel({
       <p className="feature-panel-description">
         {describeGiftCardsDetailsItem(selected)}
       </p>
-      <NavigationToolbarGroup
+      <MediaBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,14 @@ export function GiftCardsDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <DataBanner
+          label="Data Banner"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

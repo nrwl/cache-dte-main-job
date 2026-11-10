@@ -1,5 +1,4 @@
-import { asyncText } from '@org/shop-util-async-text';
-import { mathSlug } from '@org/shop-util-math-slug';
+import { formatText } from '@org/shop-util-format-text';
 import {
   emptySearchDashboardTotals,
   type SearchDashboardItem,
@@ -72,13 +71,13 @@ export function sortSearchDashboard(
 }
 
 export function describeSearchDashboardItem(item: SearchDashboardItem): string {
-  const amount = asyncText(item.amount);
-  const name = mathSlug(item.name);
+  const amount = formatText(item.amount);
+  const name = formatText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSearchDashboardAmount(amount: number): string {
-  return asyncText(amount);
+  return formatText(amount);
 }
 
 export function searchDashboardStatusTone(

@@ -1,4 +1,4 @@
-import { InputsBadge } from '@org/shop-ui-inputs-badge';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import { ORDERS_LIST_FEATURE } from './orders-list.routes';
 
 export interface OrdersListHeaderProps {
@@ -26,8 +26,8 @@ export function OrdersListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <InputsBadge label="Items" value={count} tone="info" />
-        <InputsBadge label="Total" value={total} tone="success" />
+        <CommerceToolbar label="Items" value={count} tone="info" />
+        <CommerceToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

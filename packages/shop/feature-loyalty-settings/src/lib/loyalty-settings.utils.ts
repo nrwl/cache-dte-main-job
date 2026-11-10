@@ -1,4 +1,4 @@
-import { validateAddress } from '@org/shop-util-validate-address';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyLoyaltySettingsTotals,
   type LoyaltySettingsItem,
@@ -71,13 +71,13 @@ export function sortLoyaltySettings(
 }
 
 export function describeLoyaltySettingsItem(item: LoyaltySettingsItem): string {
-  const amount = validateAddress(item.amount);
-  const name = validateAddress(item.name);
+  const amount = mathCurrency(item.amount);
+  const name = mathCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatLoyaltySettingsAmount(amount: number): string {
-  return validateAddress(amount);
+  return mathCurrency(amount);
 }
 
 export function loyaltySettingsStatusTone(

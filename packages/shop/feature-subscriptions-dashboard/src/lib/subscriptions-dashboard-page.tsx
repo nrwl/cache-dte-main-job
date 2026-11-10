@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CartOverviewSummary } from '@org/shop-feature-cart-overview';
 import { SubscriptionsDashboardFilters } from './subscriptions-dashboard-filters';
 import { SubscriptionsDashboardHeader } from './subscriptions-dashboard-header';
 import { SubscriptionsDashboardPanel } from './subscriptions-dashboard-panel';
@@ -54,7 +53,6 @@ export function SubscriptionsDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CartOverviewSummary compact />
         </div>
       </div>
     </section>

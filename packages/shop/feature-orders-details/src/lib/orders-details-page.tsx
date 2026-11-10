@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CheckoutEditorSummary } from '@org/shop-feature-checkout-editor';
 import { OrdersDetailsFilters } from './orders-details-filters';
 import { OrdersDetailsHeader } from './orders-details-header';
 import { OrdersDetailsPanel } from './orders-details-panel';
@@ -54,7 +53,6 @@ export function OrdersDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CheckoutEditorSummary compact />
         </div>
       </div>
     </section>

@@ -1,5 +1,4 @@
-import { i18nCode } from '@org/shop-util-i18n-code';
-import { validateText } from '@org/shop-util-validate-text';
+import { formatCurrency } from '@org/shop-util-format-currency';
 import {
   emptySubscriptionsListTotals,
   type SubscriptionsListItem,
@@ -74,13 +73,13 @@ export function sortSubscriptionsList(
 export function describeSubscriptionsListItem(
   item: SubscriptionsListItem,
 ): string {
-  const amount = i18nCode(item.amount);
-  const name = validateText(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = formatCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSubscriptionsListAmount(amount: number): string {
-  return i18nCode(amount);
+  return formatCurrency(amount);
 }
 
 export function subscriptionsListStatusTone(

@@ -21,7 +21,7 @@ export interface RecommendationsDashboardTotals {
   archived: number;
 }
 
-export const RECOMMENDATIONS_DASHBOARD_ITEM_COUNT = 8;
+export const RECOMMENDATIONS_DASHBOARD_ITEM_COUNT = 10;
 
 export const RECOMMENDATIONS_DASHBOARD_STATUSES: ReadonlyArray<RecommendationsDashboardStatus> =
   ['active', 'pending', 'archived'];

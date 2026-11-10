@@ -1,11 +1,6 @@
 import type { Product } from '@org/models';
-import { validateCode } from '@org/shop-util-validate-code';
-import {
-  clampLength,
-  hashString,
-  normalizeInput,
-  reverseText,
-} from './math-phone-helpers';
+import { mathNumber } from '@org/shop-util-math-number';
+import { clampLength, hashString, normalizeInput } from './math-phone-helpers';
 
 export interface MathPhoneOptions {
   /** BCP-47 locale used for locale-aware operations. */
@@ -32,7 +27,7 @@ export const MATH_PHONE_DEFAULTS: Required<MathPhoneOptions> = {
 export const MATH_PHONE_KIND = 'math-phone' as const;
 
 /**
- * Formats a raw value using the "reverse" strategy.
+ * Formats a raw value using the "lower" strategy.
  */
 export function mathPhone(
   value: string | number,
@@ -46,11 +41,8 @@ export function mathPhone(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [validateCode].reduce<string>(
-    (acc, fn) => fn(acc),
-    normalized,
-  );
-  const transformed = reverseText(staged);
+  const staged = [mathNumber].reduce<string>((acc, fn) => fn(acc), normalized);
+  const transformed = staged.toLowerCase();
   return clampLength(transformed, opts.maxLength);
 }
 

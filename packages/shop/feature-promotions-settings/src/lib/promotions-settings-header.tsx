@@ -1,4 +1,4 @@
-import { MediaCard } from '@org/shop-ui-media-card';
+import { ChartsToolbar } from '@org/shop-ui-charts-toolbar';
 import { PROMOTIONS_SETTINGS_FEATURE } from './promotions-settings.routes';
 
 export interface PromotionsSettingsHeaderProps {
@@ -27,8 +27,8 @@ export function PromotionsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaCard label="Items" value={count} tone="info" />
-        <MediaCard label="Total" value={total} tone="success" />
+        <ChartsToolbar label="Items" value={count} tone="info" />
+        <ChartsToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

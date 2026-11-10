@@ -1,4 +1,4 @@
-import { MediaPanel } from '@org/shop-ui-media-panel';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { CatalogSettingsItem } from './catalog-settings.model';
 import { CATALOG_SETTINGS_FEATURE } from './catalog-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function CatalogSettingsTable({
             <td>{formatCatalogSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaPanel
+              <InputsPanel
                 label={item.status}
                 tone={catalogSettingsStatusTone(item.status)}
                 size="sm"

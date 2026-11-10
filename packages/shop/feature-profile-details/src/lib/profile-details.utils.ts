@@ -1,5 +1,4 @@
-import { storageText } from '@org/shop-util-storage-text';
-import { i18nPercent } from '@org/shop-util-i18n-percent';
+import { asyncName } from '@org/shop-util-async-name';
 import {
   emptyProfileDetailsTotals,
   type ProfileDetailsItem,
@@ -72,13 +71,13 @@ export function sortProfileDetails(
 }
 
 export function describeProfileDetailsItem(item: ProfileDetailsItem): string {
-  const amount = storageText(item.amount);
-  const name = i18nPercent(item.name);
+  const amount = asyncName(item.amount);
+  const name = asyncName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileDetailsAmount(amount: number): string {
-  return storageText(amount);
+  return asyncName(amount);
 }
 
 export function profileDetailsStatusTone(

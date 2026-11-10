@@ -1,4 +1,4 @@
-import { FormsPanelGroup } from '@org/shop-ui-forms-panel';
+import { InputsStatGroup } from '@org/shop-ui-inputs-stat';
 import { buildSearchDetailsItems } from './search-details.model';
 import { SEARCH_DETAILS_FEATURE } from './search-details.routes';
 import {
@@ -29,7 +29,7 @@ export function SearchDetailsSummary({
       data-testid={`${SEARCH_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SEARCH_DETAILS_FEATURE.title}</h3>
-      <FormsPanelGroup
+      <InputsStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

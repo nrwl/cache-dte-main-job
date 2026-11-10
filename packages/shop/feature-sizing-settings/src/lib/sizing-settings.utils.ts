@@ -1,4 +1,4 @@
-import { storageCode } from '@org/shop-util-storage-code';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
 import {
   emptySizingSettingsTotals,
   type SizingSettingsItem,
@@ -71,13 +71,13 @@ export function sortSizingSettings(
 }
 
 export function describeSizingSettingsItem(item: SizingSettingsItem): string {
-  const amount = storageCode(item.amount);
-  const name = storageCode(item.name);
+  const amount = i18nCurrency(item.amount);
+  const name = i18nCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingSettingsAmount(amount: number): string {
-  return storageCode(amount);
+  return i18nCurrency(amount);
 }
 
 export function sizingSettingsStatusTone(

@@ -1,5 +1,10 @@
 import type { Product } from '@org/models';
-import { clampLength, hashString, normalizeInput } from './i18n-name-helpers';
+import {
+  clampLength,
+  hashString,
+  normalizeInput,
+  onlyDigits,
+} from './i18n-name-helpers';
 
 export interface I18nNameOptions {
   /** BCP-47 locale used for locale-aware operations. */
@@ -26,7 +31,7 @@ export const I18N_NAME_DEFAULTS: Required<I18nNameOptions> = {
 export const I18N_NAME_KIND = 'i18n-name' as const;
 
 /**
- * Formats a raw value using the "prefixed" strategy.
+ * Formats a raw value using the "digits" strategy.
  */
 export function i18nName(
   value: string | number,
@@ -38,7 +43,7 @@ export function i18nName(
     return opts.fallback;
   }
   const staged = normalized;
-  const transformed = '#' + staged;
+  const transformed = onlyDigits(staged) || staged;
   return clampLength(transformed, opts.maxLength);
 }
 

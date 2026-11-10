@@ -1,6 +1,5 @@
-import { InputsListGroup } from '@org/shop-ui-inputs-list';
-import { ChartsBadge } from '@org/shop-ui-charts-badge';
-import { NavigationStat } from '@org/shop-ui-navigation-stat';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
+import { CommerceBanner } from '@org/shop-ui-commerce-banner';
 import type { LoyaltyDashboardItem } from './loyalty-dashboard.model';
 import { LOYALTY_DASHBOARD_FEATURE } from './loyalty-dashboard.routes';
 import { describeLoyaltyDashboardItem } from './loyalty-dashboard.utils';
@@ -41,7 +40,7 @@ export function LoyaltyDashboardPanel({
       <p className="feature-panel-description">
         {describeLoyaltyDashboardItem(selected)}
       </p>
-      <InputsListGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function LoyaltyDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <ChartsBadge
-          label="Charts Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <NavigationStat
-          label="Navigation Stat"
+        <CommerceBanner
+          label="Commerce Banner"
           value={selected.product.rating}
           size="sm"
         />

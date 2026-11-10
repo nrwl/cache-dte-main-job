@@ -1,4 +1,4 @@
-import { FormsPanel } from '@org/shop-ui-forms-panel';
+import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
 import type { WishlistDetailsItem } from './wishlist-details.model';
 import { WISHLIST_DETAILS_FEATURE } from './wishlist-details.routes';
 import {
@@ -58,7 +58,7 @@ export function WishlistDetailsTable({
             <td>{formatWishlistDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsPanel
+              <NavigationToolbar
                 label={item.status}
                 tone={wishlistDetailsStatusTone(item.status)}
                 size="sm"

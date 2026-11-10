@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { InventoryDetailsSummary } from '@org/shop-feature-inventory-details';
 import { CatalogOverviewFilters } from './catalog-overview-filters';
 import { CatalogOverviewHeader } from './catalog-overview-header';
 import { CatalogOverviewPanel } from './catalog-overview-panel';
@@ -53,6 +54,7 @@ export function CatalogOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <InventoryDetailsSummary compact />
         </div>
       </div>
     </section>

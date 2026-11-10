@@ -1,4 +1,4 @@
-import { NavigationBadge } from '@org/shop-ui-navigation-badge';
+import { OverlayToolbar } from '@org/shop-ui-overlay-toolbar';
 import { FEEDBACK_SETTINGS_FEATURE } from './feedback-settings.routes';
 
 export interface FeedbackSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function FeedbackSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <NavigationBadge label="Items" value={count} tone="info" />
-        <NavigationBadge label="Total" value={total} tone="success" />
+        <OverlayToolbar label="Items" value={count} tone="info" />
+        <OverlayToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

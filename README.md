@@ -12,8 +12,13 @@ startup overhead of 100 separate `e2e-ci` tasks.
 The target for the checks command after setup is 10–12 minutes on a cold run,
 not a guaranteed duration. Checkout, Node/npm setup, and browser installation
 are outside that budget; the shop build is included.
-All test assertions and projects are retained. Synthetic unit-test CPU work and
-sleep are disabled, and each end-to-end test is paced to six seconds with no
+The generated workspace is reduced from 500 to 250 libraries: 35 utilities,
+65 UI libraries, and 150 feature libraries spanning all 30 feature domains.
+Handwritten application and support projects are retained. Each library's unit-test
+task adds two calibrated seconds of CPU work and three seconds of waiting, once
+per library via Vitest `globalSetup`, not once per spec file. Actual CPU time
+varies with hardware; test execution and process startup add overhead.
+Each end-to-end test is paced to six seconds with no
 extra CPU burn. The serial browser suite therefore takes about 10 minutes, plus
 server startup, while the other checks run concurrently. Cached runs
 can finish much sooner. The job times out after 25 minutes to allow for runner

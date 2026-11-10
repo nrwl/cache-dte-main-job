@@ -21,7 +21,7 @@ export const RECOMMENDATIONS_DASHBOARD_FEATURE: FeatureMeta = {
   testId: RECOMMENDATIONS_DASHBOARD_TEST_ID,
   domain: 'recommendations',
   kind: 'dashboard',
-  itemCount: 8,
+  itemCount: 10,
 };
 
 export function recommendationsDashboardItemPath(itemId: string): string {

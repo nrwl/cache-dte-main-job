@@ -1,5 +1,6 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { asyncText } from '@org/shop-util-async-text';
+import { i18nPhone } from '@org/shop-util-i18n-phone';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyReviewsSettingsTotals,
   type ReviewsSettingsItem,
@@ -72,13 +73,13 @@ export function sortReviewsSettings(
 }
 
 export function describeReviewsSettingsItem(item: ReviewsSettingsItem): string {
-  const amount = validatePhone(item.amount);
-  const name = asyncText(item.name);
+  const amount = i18nPhone(item.amount);
+  const name = collectionText(mathCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReviewsSettingsAmount(amount: number): string {
-  return validatePhone(amount);
+  return i18nPhone(amount);
 }
 
 export function reviewsSettingsStatusTone(

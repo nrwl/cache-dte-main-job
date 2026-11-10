@@ -1,4 +1,4 @@
-import { MediaHeaderGroup } from '@org/shop-ui-media-header';
+import { InputsPanelGroup } from '@org/shop-ui-inputs-panel';
 import { buildSupportDashboardItems } from './support-dashboard.model';
 import { SUPPORT_DASHBOARD_FEATURE } from './support-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function SupportDashboardSummary({
       <h3 className="feature-summary-title">
         {SUPPORT_DASHBOARD_FEATURE.title}
       </h3>
-      <MediaHeaderGroup
+      <InputsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,7 +1,12 @@
 import type { Product } from '@org/models';
-import { asyncText } from '@org/shop-util-async-text';
-import { validateDate } from '@org/shop-util-validate-date';
-import { clampLength, hashString, normalizeInput } from './i18n-text-helpers';
+import { collectionText } from '@org/shop-util-collection-text';
+import { formatText } from '@org/shop-util-format-text';
+import {
+  clampLength,
+  hashString,
+  normalizeInput,
+  titleCase,
+} from './i18n-text-helpers';
 
 export interface I18nTextOptions {
   /** BCP-47 locale used for locale-aware operations. */
@@ -28,7 +33,7 @@ export const I18N_TEXT_DEFAULTS: Required<I18nTextOptions> = {
 export const I18N_TEXT_KIND = 'i18n-text' as const;
 
 /**
- * Formats a raw value using the "lower" strategy.
+ * Formats a raw value using the "title" strategy.
  */
 export function i18nText(
   value: string | number,
@@ -39,11 +44,11 @@ export function i18nText(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [asyncText, validateDate].reduce<string>(
+  const staged = [collectionText, formatText].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );
-  const transformed = staged.toLowerCase();
+  const transformed = titleCase(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

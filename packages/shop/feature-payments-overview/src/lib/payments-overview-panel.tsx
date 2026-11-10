@@ -1,6 +1,6 @@
-import { InputsChipGroup } from '@org/shop-ui-inputs-chip';
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
-import { FormsPanel } from '@org/shop-ui-forms-panel';
+import { LayoutPanelGroup } from '@org/shop-ui-layout-panel';
+import { DataStat } from '@org/shop-ui-data-stat';
+import { NavigationBadge } from '@org/shop-ui-navigation-badge';
 import type { PaymentsOverviewItem } from './payments-overview.model';
 import { PAYMENTS_OVERVIEW_FEATURE } from './payments-overview.routes';
 import { describePaymentsOverviewItem } from './payments-overview.utils';
@@ -41,7 +41,7 @@ export function PaymentsOverviewPanel({
       <p className="feature-panel-description">
         {describePaymentsOverviewItem(selected)}
       </p>
-      <InputsChipGroup
+      <LayoutPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,9 @@ export function PaymentsOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceBadge
-          label="Commerce Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FormsPanel
-          label="Forms Panel"
+        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
+        <NavigationBadge
+          label="Navigation Badge"
           value={selected.product.rating}
           size="sm"
         />

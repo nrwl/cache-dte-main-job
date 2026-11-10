@@ -1,5 +1,5 @@
-import { validateCode } from '@org/shop-util-validate-code';
-import { validatePercent } from '@org/shop-util-validate-percent';
+import { collectionNumber } from '@org/shop-util-collection-number';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyNotificationsDashboardTotals,
   type NotificationsDashboardItem,
@@ -77,13 +77,13 @@ export function sortNotificationsDashboard(
 export function describeNotificationsDashboardItem(
   item: NotificationsDashboardItem,
 ): string {
-  const amount = validateCode(item.amount);
-  const name = validatePercent(item.name);
+  const amount = collectionNumber(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatNotificationsDashboardAmount(amount: number): string {
-  return validateCode(amount);
+  return collectionNumber(amount);
 }
 
 export function notificationsDashboardStatusTone(

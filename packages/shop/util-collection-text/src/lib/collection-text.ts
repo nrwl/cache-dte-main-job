@@ -1,10 +1,11 @@
 import type { Product } from '@org/models';
-import { mathAddress } from '@org/shop-util-math-address';
+import { mathNumber } from '@org/shop-util-math-number';
+import { formatName } from '@org/shop-util-format-name';
 import {
   clampLength,
   hashString,
   normalizeInput,
-  onlyDigits,
+  reverseText,
 } from './collection-text-helpers';
 
 export interface CollectionTextOptions {
@@ -32,7 +33,7 @@ export const COLLECTION_TEXT_DEFAULTS: Required<CollectionTextOptions> = {
 export const COLLECTION_TEXT_KIND = 'collection-text' as const;
 
 /**
- * Formats a raw value using the "digits" strategy.
+ * Formats a raw value using the "reverse" strategy.
  */
 export function collectionText(
   value: string | number,
@@ -46,8 +47,11 @@ export function collectionText(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [mathAddress].reduce<string>((acc, fn) => fn(acc), normalized);
-  const transformed = onlyDigits(staged) || staged;
+  const staged = [mathNumber, formatName].reduce<string>(
+    (acc, fn) => fn(acc),
+    normalized,
+  );
+  const transformed = reverseText(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

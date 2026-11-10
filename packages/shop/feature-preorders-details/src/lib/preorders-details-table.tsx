@@ -1,4 +1,4 @@
-import { FeedbackChip } from '@org/shop-ui-feedback-chip';
+import { ChartsBadge } from '@org/shop-ui-charts-badge';
 import type { PreordersDetailsItem } from './preorders-details.model';
 import { PREORDERS_DETAILS_FEATURE } from './preorders-details.routes';
 import {
@@ -58,7 +58,7 @@ export function PreordersDetailsTable({
             <td>{formatPreordersDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackChip
+              <ChartsBadge
                 label={item.status}
                 tone={preordersDetailsStatusTone(item.status)}
                 size="sm"

@@ -1,4 +1,4 @@
-import { FeedbackList } from '@org/shop-ui-feedback-list';
+import { LayoutBadge } from '@org/shop-ui-layout-badge';
 import { RECOMMENDATIONS_LIST_FEATURE } from './recommendations-list.routes';
 
 export interface RecommendationsListHeaderProps {
@@ -27,8 +27,8 @@ export function RecommendationsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackList label="Items" value={count} tone="info" />
-        <FeedbackList label="Total" value={total} tone="success" />
+        <LayoutBadge label="Items" value={count} tone="info" />
+        <LayoutBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

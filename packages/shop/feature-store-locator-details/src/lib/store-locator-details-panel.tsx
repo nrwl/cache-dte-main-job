@@ -1,4 +1,6 @@
-import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
+import { OverlayPanelGroup } from '@org/shop-ui-overlay-panel';
+import { InputsToolbar } from '@org/shop-ui-inputs-toolbar';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { StoreLocatorDetailsItem } from './store-locator-details.model';
 import { STORE_LOCATOR_DETAILS_FEATURE } from './store-locator-details.routes';
 import { describeStoreLocatorDetailsItem } from './store-locator-details.utils';
@@ -39,7 +41,7 @@ export function StoreLocatorDetailsPanel({
       <p className="feature-panel-description">
         {describeStoreLocatorDetailsItem(selected)}
       </p>
-      <CoreBadgeGroup
+      <OverlayPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function StoreLocatorDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <InputsToolbar
+          label="Inputs Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <DataPanel
+          label="Data Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

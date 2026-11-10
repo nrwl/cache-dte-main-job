@@ -1,6 +1,6 @@
+import { asyncNumber } from '@org/shop-util-async-number';
 import { formatPhone } from '@org/shop-util-format-phone';
-import { asyncAddress } from '@org/shop-util-async-address';
-import { validateCode } from '@org/shop-util-validate-code';
+import { asyncCurrency } from '@org/shop-util-async-currency';
 import {
   emptyRecommendationsDashboardTotals,
   type RecommendationsDashboardItem,
@@ -78,13 +78,13 @@ export function sortRecommendationsDashboard(
 export function describeRecommendationsDashboardItem(
   item: RecommendationsDashboardItem,
 ): string {
-  const amount = formatPhone(item.amount);
-  const name = validateCode(asyncAddress(item.name));
+  const amount = asyncNumber(item.amount);
+  const name = asyncCurrency(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatRecommendationsDashboardAmount(amount: number): string {
-  return formatPhone(amount);
+  return asyncNumber(amount);
 }
 
 export function recommendationsDashboardStatusTone(

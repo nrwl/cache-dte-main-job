@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { LoyaltySettingsSummary } from '@org/shop-feature-loyalty-settings';
+import { RecommendationsSettingsSummary } from '@org/shop-feature-recommendations-settings';
 import { AnalyticsOverviewFilters } from './analytics-overview-filters';
 import { AnalyticsOverviewHeader } from './analytics-overview-header';
 import { AnalyticsOverviewPanel } from './analytics-overview-panel';
@@ -54,7 +54,7 @@ export function AnalyticsOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <LoyaltySettingsSummary compact />
+          <RecommendationsSettingsSummary compact />
         </div>
       </div>
     </section>

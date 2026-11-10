@@ -1,4 +1,4 @@
-import { MarketingCardGroup } from '@org/shop-ui-marketing-card';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import { buildCheckoutDashboardItems } from './checkout-dashboard.model';
 import { CHECKOUT_DASHBOARD_FEATURE } from './checkout-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function CheckoutDashboardSummary({
       <h3 className="feature-summary-title">
         {CHECKOUT_DASHBOARD_FEATURE.title}
       </h3>
-      <MarketingCardGroup
+      <MediaToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

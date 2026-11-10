@@ -1,4 +1,5 @@
-import { collectionPercent } from '@org/shop-util-collection-percent';
+import { validatePhone } from '@org/shop-util-validate-phone';
+import { formatText } from '@org/shop-util-format-text';
 import {
   emptyShippingDashboardTotals,
   type ShippingDashboardItem,
@@ -73,13 +74,13 @@ export function sortShippingDashboard(
 export function describeShippingDashboardItem(
   item: ShippingDashboardItem,
 ): string {
-  const amount = collectionPercent(item.amount);
-  const name = collectionPercent(item.name);
+  const amount = validatePhone(item.amount);
+  const name = formatText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatShippingDashboardAmount(amount: number): string {
-  return collectionPercent(amount);
+  return validatePhone(amount);
 }
 
 export function shippingDashboardStatusTone(

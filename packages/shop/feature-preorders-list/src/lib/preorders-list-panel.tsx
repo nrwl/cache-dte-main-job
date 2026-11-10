@@ -1,6 +1,6 @@
-import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
-import { MarketingStat } from '@org/shop-ui-marketing-stat';
-import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
+import { CorePanelGroup } from '@org/shop-ui-core-panel';
+import { InputsStat } from '@org/shop-ui-inputs-stat';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { PreordersListItem } from './preorders-list.model';
 import { PREORDERS_LIST_FEATURE } from './preorders-list.routes';
 import { describePreordersListItem } from './preorders-list.utils';
@@ -41,7 +41,7 @@ export function PreordersListPanel({
       <p className="feature-panel-description">
         {describePreordersListItem(selected)}
       </p>
-      <NavigationBadgeGroup
+      <CorePanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function PreordersListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <MarketingStat
-          label="Marketing Stat"
+        <InputsStat
+          label="Inputs Stat"
           value={selected.product.rating}
           size="sm"
         />
-        <MarketingToolbar
-          label="Marketing Toolbar"
+        <FormsStat
+          label="Forms Stat"
           value={selected.product.rating}
           size="sm"
         />

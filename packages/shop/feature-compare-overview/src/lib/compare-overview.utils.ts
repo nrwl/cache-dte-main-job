@@ -1,5 +1,5 @@
-import { mathCode } from '@org/shop-util-math-code';
-import { i18nAddress } from '@org/shop-util-i18n-address';
+import { mathPhone } from '@org/shop-util-math-phone';
+import { formatName } from '@org/shop-util-format-name';
 import {
   emptyCompareOverviewTotals,
   type CompareOverviewItem,
@@ -72,13 +72,13 @@ export function sortCompareOverview(
 }
 
 export function describeCompareOverviewItem(item: CompareOverviewItem): string {
-  const amount = mathCode(item.amount);
-  const name = i18nAddress(item.name);
+  const amount = mathPhone(item.amount);
+  const name = formatName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCompareOverviewAmount(amount: number): string {
-  return mathCode(amount);
+  return mathPhone(amount);
 }
 
 export function compareOverviewStatusTone(

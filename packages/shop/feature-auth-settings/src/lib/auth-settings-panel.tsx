@@ -1,5 +1,4 @@
-import { OverlayChipGroup } from '@org/shop-ui-overlay-chip';
-import { FeedbackHeader } from '@org/shop-ui-feedback-header';
+import { CommerceBannerGroup } from '@org/shop-ui-commerce-banner';
 import type { AuthSettingsItem } from './auth-settings.model';
 import { AUTH_SETTINGS_FEATURE } from './auth-settings.routes';
 import { describeAuthSettingsItem } from './auth-settings.utils';
@@ -40,7 +39,7 @@ export function AuthSettingsPanel({
       <p className="feature-panel-description">
         {describeAuthSettingsItem(selected)}
       </p>
-      <OverlayChipGroup
+      <CommerceBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function AuthSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <FeedbackHeader
-          label="Feedback Header"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

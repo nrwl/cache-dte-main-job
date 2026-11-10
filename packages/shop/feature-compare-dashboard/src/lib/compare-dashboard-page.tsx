@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { RecommendationsDashboardSummary } from '@org/shop-feature-recommendations-dashboard';
 import { CompareDashboardFilters } from './compare-dashboard-filters';
 import { CompareDashboardHeader } from './compare-dashboard-header';
 import { CompareDashboardPanel } from './compare-dashboard-panel';
@@ -53,6 +54,7 @@ export function CompareDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <RecommendationsDashboardSummary compact />
         </div>
       </div>
     </section>

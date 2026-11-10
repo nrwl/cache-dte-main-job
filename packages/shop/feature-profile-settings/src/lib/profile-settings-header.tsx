@@ -1,4 +1,4 @@
-import { LayoutHeader } from '@org/shop-ui-layout-header';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import { PROFILE_SETTINGS_FEATURE } from './profile-settings.routes';
 
 export interface ProfileSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function ProfileSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutHeader label="Items" value={count} tone="info" />
-        <LayoutHeader label="Total" value={total} tone="success" />
+        <CoreToolbar label="Items" value={count} tone="info" />
+        <CoreToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,6 @@
-import { formatName } from '@org/shop-util-format-name';
+import { mathName } from '@org/shop-util-math-name';
+import { formatNumber } from '@org/shop-util-format-number';
+import { mathPhone } from '@org/shop-util-math-phone';
 import {
   emptyPreordersSettingsTotals,
   type PreordersSettingsItem,
@@ -73,13 +75,13 @@ export function sortPreordersSettings(
 export function describePreordersSettingsItem(
   item: PreordersSettingsItem,
 ): string {
-  const amount = formatName(item.amount);
-  const name = formatName(item.name);
+  const amount = mathName(item.amount);
+  const name = mathPhone(formatNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPreordersSettingsAmount(amount: number): string {
-  return formatName(amount);
+  return mathName(amount);
 }
 
 export function preordersSettingsStatusTone(

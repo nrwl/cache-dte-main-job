@@ -1,4 +1,4 @@
-import { LayoutChipGroup } from '@org/shop-ui-layout-chip';
+import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
 import { buildGiftCardsDashboardItems } from './gift-cards-dashboard.model';
 import { GIFT_CARDS_DASHBOARD_FEATURE } from './gift-cards-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function GiftCardsDashboardSummary({
       <h3 className="feature-summary-title">
         {GIFT_CARDS_DASHBOARD_FEATURE.title}
       </h3>
-      <LayoutChipGroup
+      <ChartsToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

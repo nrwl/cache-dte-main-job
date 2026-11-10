@@ -1,6 +1,6 @@
-import { OverlayPanelGroup } from '@org/shop-ui-overlay-panel';
-import { InputsHeader } from '@org/shop-ui-inputs-header';
-import { DataPanel } from '@org/shop-ui-data-panel';
+import { InputsBannerGroup } from '@org/shop-ui-inputs-banner';
+import { DataStat } from '@org/shop-ui-data-stat';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { RecommendationsListItem } from './recommendations-list.model';
 import { RECOMMENDATIONS_LIST_FEATURE } from './recommendations-list.routes';
 import { describeRecommendationsListItem } from './recommendations-list.utils';
@@ -41,7 +41,7 @@ export function RecommendationsListPanel({
       <p className="feature-panel-description">
         {describeRecommendationsListItem(selected)}
       </p>
-      <OverlayPanelGroup
+      <InputsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,9 @@ export function RecommendationsListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsHeader
-          label="Inputs Header"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <DataPanel
-          label="Data Panel"
+        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
+        <NavigationPanel
+          label="Navigation Panel"
           value={selected.product.rating}
           size="sm"
         />

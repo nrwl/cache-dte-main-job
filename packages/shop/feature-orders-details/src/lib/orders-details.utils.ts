@@ -1,5 +1,4 @@
-import { i18nAddress } from '@org/shop-util-i18n-address';
-import { i18nSlug } from '@org/shop-util-i18n-slug';
+import { validateNumber } from '@org/shop-util-validate-number';
 import {
   emptyOrdersDetailsTotals,
   type OrdersDetailsItem,
@@ -71,13 +70,13 @@ export function sortOrdersDetails(
 }
 
 export function describeOrdersDetailsItem(item: OrdersDetailsItem): string {
-  const amount = i18nAddress(item.amount);
-  const name = i18nSlug(item.name);
+  const amount = validateNumber(item.amount);
+  const name = validateNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersDetailsAmount(amount: number): string {
-  return i18nAddress(amount);
+  return validateNumber(amount);
 }
 
 export function ordersDetailsStatusTone(

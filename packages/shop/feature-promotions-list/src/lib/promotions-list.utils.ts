@@ -1,4 +1,5 @@
-import { formatCode } from '@org/shop-util-format-code';
+import { storageText } from '@org/shop-util-storage-text';
+import { collectionName } from '@org/shop-util-collection-name';
 import {
   emptyPromotionsListTotals,
   type PromotionsListItem,
@@ -71,13 +72,13 @@ export function sortPromotionsList(
 }
 
 export function describePromotionsListItem(item: PromotionsListItem): string {
-  const amount = formatCode(item.amount);
-  const name = formatCode(item.name);
+  const amount = storageText(item.amount);
+  const name = collectionName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPromotionsListAmount(amount: number): string {
-  return formatCode(amount);
+  return storageText(amount);
 }
 
 export function promotionsListStatusTone(

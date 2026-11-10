@@ -1,4 +1,4 @@
-import { OverlayBanner } from '@org/shop-ui-overlay-banner';
+import { MarketingPanel } from '@org/shop-ui-marketing-panel';
 import type { FeedbackListItem } from './feedback-list.model';
 import { FEEDBACK_LIST_FEATURE } from './feedback-list.routes';
 import {
@@ -58,7 +58,7 @@ export function FeedbackListTable({
             <td>{formatFeedbackListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayBanner
+              <MarketingPanel
                 label={item.status}
                 tone={feedbackListStatusTone(item.status)}
                 size="sm"

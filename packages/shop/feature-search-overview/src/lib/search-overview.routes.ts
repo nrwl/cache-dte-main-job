@@ -19,7 +19,7 @@ export const SEARCH_OVERVIEW_FEATURE: FeatureMeta = {
   testId: SEARCH_OVERVIEW_TEST_ID,
   domain: 'search',
   kind: 'overview',
-  itemCount: 9,
+  itemCount: 6,
 };
 
 export function searchOverviewItemPath(itemId: string): string {

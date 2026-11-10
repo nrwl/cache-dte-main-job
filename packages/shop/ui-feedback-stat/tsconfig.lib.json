@@ -30,13 +30,13 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-core-stat/tsconfig.lib.json"
+      "path": "../util-collection-name/tsconfig.lib.json"
     },
     {
-      "path": "../util-math-slug/tsconfig.lib.json"
+      "path": "../util-storage-name/tsconfig.lib.json"
     },
     {
-      "path": "../util-format-percent/tsconfig.lib.json"
+      "path": "../util-validate-number/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

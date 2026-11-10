@@ -1,4 +1,4 @@
-import { FormsTile } from '@org/shop-ui-forms-tile';
+import { MarketingPanel } from '@org/shop-ui-marketing-panel';
 import { STORE_LOCATOR_OVERVIEW_FEATURE } from './store-locator-overview.routes';
 
 export interface StoreLocatorOverviewHeaderProps {
@@ -29,8 +29,8 @@ export function StoreLocatorOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsTile label="Items" value={count} tone="info" />
-        <FormsTile label="Total" value={total} tone="success" />
+        <MarketingPanel label="Items" value={count} tone="info" />
+        <MarketingPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

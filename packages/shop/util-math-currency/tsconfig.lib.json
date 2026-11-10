@@ -25,10 +25,10 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-format-currency/tsconfig.lib.json"
+      "path": "../util-validate-name/tsconfig.lib.json"
     },
     {
-      "path": "../util-validate-name/tsconfig.lib.json"
+      "path": "../util-validate-number/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

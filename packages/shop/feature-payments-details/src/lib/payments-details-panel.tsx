@@ -1,4 +1,5 @@
-import { CorePanelGroup } from '@org/shop-ui-core-panel';
+import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { PaymentsDetailsItem } from './payments-details.model';
 import { PAYMENTS_DETAILS_FEATURE } from './payments-details.routes';
 import { describePaymentsDetailsItem } from './payments-details.utils';
@@ -39,7 +40,7 @@ export function PaymentsDetailsPanel({
       <p className="feature-panel-description">
         {describePaymentsDetailsItem(selected)}
       </p>
-      <CorePanelGroup
+      <FeedbackPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function PaymentsDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <NavigationPanel
+          label="Navigation Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

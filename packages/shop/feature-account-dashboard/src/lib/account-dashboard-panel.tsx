@@ -1,6 +1,5 @@
-import { OverlayTileGroup } from '@org/shop-ui-overlay-tile';
-import { TypographyCard } from '@org/shop-ui-typography-card';
-import { LayoutChip } from '@org/shop-ui-layout-chip';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
+import { FormsBadge } from '@org/shop-ui-forms-badge';
 import type { AccountDashboardItem } from './account-dashboard.model';
 import { ACCOUNT_DASHBOARD_FEATURE } from './account-dashboard.routes';
 import { describeAccountDashboardItem } from './account-dashboard.utils';
@@ -41,7 +40,7 @@ export function AccountDashboardPanel({
       <p className="feature-panel-description">
         {describeAccountDashboardItem(selected)}
       </p>
-      <OverlayTileGroup
+      <ChartsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function AccountDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <TypographyCard
-          label="Typography Card"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <LayoutChip
-          label="Layout Chip"
+        <FormsBadge
+          label="Forms Badge"
           value={selected.product.rating}
           size="sm"
         />

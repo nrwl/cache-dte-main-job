@@ -1,4 +1,5 @@
-import { TypographyTileGroup } from '@org/shop-ui-typography-tile';
+import { DataBadgeGroup } from '@org/shop-ui-data-badge';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { RecommendationsOverviewItem } from './recommendations-overview.model';
 import { RECOMMENDATIONS_OVERVIEW_FEATURE } from './recommendations-overview.routes';
 import { describeRecommendationsOverviewItem } from './recommendations-overview.utils';
@@ -39,7 +40,7 @@ export function RecommendationsOverviewPanel({
       <p className="feature-panel-description">
         {describeRecommendationsOverviewItem(selected)}
       </p>
-      <TypographyTileGroup
+      <DataBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function RecommendationsOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <FormsStat
+          label="Forms Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

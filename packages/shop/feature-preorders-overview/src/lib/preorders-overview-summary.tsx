@@ -1,4 +1,4 @@
-import { DataTileGroup } from '@org/shop-ui-data-tile';
+import { CorePanelGroup } from '@org/shop-ui-core-panel';
 import { buildPreordersOverviewItems } from './preorders-overview.model';
 import { PREORDERS_OVERVIEW_FEATURE } from './preorders-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function PreordersOverviewSummary({
       <h3 className="feature-summary-title">
         {PREORDERS_OVERVIEW_FEATURE.title}
       </h3>
-      <DataTileGroup
+      <CorePanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

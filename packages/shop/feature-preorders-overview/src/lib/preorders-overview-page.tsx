@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { ReturnsListSummary } from '@org/shop-feature-returns-list';
 import { PreordersOverviewFilters } from './preorders-overview-filters';
 import { PreordersOverviewHeader } from './preorders-overview-header';
 import { PreordersOverviewPanel } from './preorders-overview-panel';
@@ -54,7 +53,6 @@ export function PreordersOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <ReturnsListSummary compact />
         </div>
       </div>
     </section>

@@ -1,6 +1,4 @@
 import type { Product } from '@org/models';
-import { mathText } from '@org/shop-util-math-text';
-import { validatePhone } from '@org/shop-util-validate-phone';
 import {
   clampLength,
   hashString,
@@ -47,10 +45,7 @@ export function collectionPhone(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [mathText, validatePhone].reduce<string>(
-    (acc, fn) => fn(acc),
-    normalized,
-  );
+  const staged = normalized;
   const transformed = titleCase(staged);
   return clampLength(transformed, opts.maxLength);
 }

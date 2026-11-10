@@ -1,5 +1,5 @@
-import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
-import { CommerceChip } from '@org/shop-ui-commerce-chip';
+import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { TrackingDetailsItem } from './tracking-details.model';
 import { TRACKING_DETAILS_FEATURE } from './tracking-details.routes';
 import { describeTrackingDetailsItem } from './tracking-details.utils';
@@ -40,7 +40,7 @@ export function TrackingDetailsPanel({
       <p className="feature-panel-description">
         {describeTrackingDetailsItem(selected)}
       </p>
-      <CommerceToolbarGroup
+      <TypographyPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function TrackingDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceChip
-          label="Commerce Chip"
+        <OverlayStat
+          label="Overlay Stat"
           value={selected.product.rating}
           size="sm"
         />

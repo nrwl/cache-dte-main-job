@@ -1,4 +1,4 @@
-import { TypographyBadgeGroup } from '@org/shop-ui-typography-badge';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildSupportSettingsItems } from './support-settings.model';
 import { SUPPORT_SETTINGS_FEATURE } from './support-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function SupportSettingsSummary({
       <h3 className="feature-summary-title">
         {SUPPORT_SETTINGS_FEATURE.title}
       </h3>
-      <TypographyBadgeGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

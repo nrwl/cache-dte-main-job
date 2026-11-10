@@ -1,7 +1,6 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
-import { asyncNumber } from '@org/shop-util-async-number';
-import { collectionCurrency } from '@org/shop-util-collection-currency';
-import { NavigationCard } from '@org/shop-ui-navigation-card';
+import { formatNumber } from '@org/shop-util-format-number';
+import { mathPhone } from '@org/shop-util-math-phone';
+import { LayoutBadge } from '@org/shop-ui-layout-badge';
 import type { InputsPanelProps } from './inputs-panel.types';
 import { resolveInputsPanelStyle } from './inputs-panel-variants';
 
@@ -14,9 +13,9 @@ export function InputsPanel({
   onSelect,
   children,
 }: InputsPanelProps) {
-  const formatted = value === undefined ? '' : i18nDate(value);
+  const formatted = value === undefined ? '' : formatNumber(value);
   const style = resolveInputsPanelStyle(tone, size);
-  const ariaLabel = collectionCurrency(asyncNumber(label));
+  const ariaLabel = mathPhone(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,12 +38,7 @@ export function InputsPanel({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <NavigationCard
-        label="Navigation Card"
-        value={value}
-        tone={tone}
-        size="sm"
-      />
+      <LayoutBadge label="Layout Badge" value={value} tone={tone} size="sm" />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { TypographyBanner } from '@org/shop-ui-typography-banner';
+import { OverlayBadge } from '@org/shop-ui-overlay-badge';
 import { RECOMMENDATIONS_SETTINGS_FEATURE } from './recommendations-settings.routes';
 
 export interface RecommendationsSettingsHeaderProps {
@@ -29,8 +29,8 @@ export function RecommendationsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyBanner label="Items" value={count} tone="info" />
-        <TypographyBanner label="Total" value={total} tone="success" />
+        <OverlayBadge label="Items" value={count} tone="info" />
+        <OverlayBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

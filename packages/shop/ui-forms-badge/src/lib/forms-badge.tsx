@@ -1,6 +1,5 @@
-import { validateSlug } from '@org/shop-util-validate-slug';
-import { formatCurrency } from '@org/shop-util-format-currency';
-import { CoreChip } from '@org/shop-ui-core-chip';
+import { mathText } from '@org/shop-util-math-text';
+import { asyncText } from '@org/shop-util-async-text';
 import type { FormsBadgeProps } from './forms-badge.types';
 import { resolveFormsBadgeStyle } from './forms-badge-variants';
 
@@ -13,9 +12,9 @@ export function FormsBadge({
   onSelect,
   children,
 }: FormsBadgeProps) {
-  const formatted = value === undefined ? '' : validateSlug(value);
+  const formatted = value === undefined ? '' : mathText(value);
   const style = resolveFormsBadgeStyle(tone, size);
-  const ariaLabel = formatCurrency(label);
+  const ariaLabel = asyncText(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +37,6 @@ export function FormsBadge({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreChip label="Core Chip" value={value} tone={tone} size="sm" />
     </div>
   );
 }

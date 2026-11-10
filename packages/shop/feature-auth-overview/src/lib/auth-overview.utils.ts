@@ -1,6 +1,4 @@
-import { formatName } from '@org/shop-util-format-name';
-import { formatDate } from '@org/shop-util-format-date';
-import { i18nAddress } from '@org/shop-util-i18n-address';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
 import {
   emptyAuthOverviewTotals,
   type AuthOverviewItem,
@@ -72,13 +70,13 @@ export function sortAuthOverview(
 }
 
 export function describeAuthOverviewItem(item: AuthOverviewItem): string {
-  const amount = formatName(item.amount);
-  const name = i18nAddress(formatDate(item.name));
+  const amount = i18nCurrency(item.amount);
+  const name = i18nCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAuthOverviewAmount(amount: number): string {
-  return formatName(amount);
+  return i18nCurrency(amount);
 }
 
 export function authOverviewStatusTone(

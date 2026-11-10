@@ -21,7 +21,7 @@ export interface CompareSettingsTotals {
   archived: number;
 }
 
-export const COMPARE_SETTINGS_ITEM_COUNT = 11;
+export const COMPARE_SETTINGS_ITEM_COUNT = 10;
 
 export const COMPARE_SETTINGS_STATUSES: ReadonlyArray<CompareSettingsStatus> = [
   'active',

@@ -1,4 +1,4 @@
-import { MarketingBanner } from '@org/shop-ui-marketing-banner';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { PromotionsDashboardItem } from './promotions-dashboard.model';
 import { PROMOTIONS_DASHBOARD_FEATURE } from './promotions-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function PromotionsDashboardTable({
             <td>{formatPromotionsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingBanner
+              <CoreBadge
                 label={item.status}
                 tone={promotionsDashboardStatusTone(item.status)}
                 size="sm"

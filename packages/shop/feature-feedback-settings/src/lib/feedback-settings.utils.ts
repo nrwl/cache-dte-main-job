@@ -1,5 +1,6 @@
-import { mathPercent } from '@org/shop-util-math-percent';
-import { formatNumber } from '@org/shop-util-format-number';
+import { collectionName } from '@org/shop-util-collection-name';
+import { formatPhone } from '@org/shop-util-format-phone';
+import { asyncCurrency } from '@org/shop-util-async-currency';
 import {
   emptyFeedbackSettingsTotals,
   type FeedbackSettingsItem,
@@ -74,13 +75,13 @@ export function sortFeedbackSettings(
 export function describeFeedbackSettingsItem(
   item: FeedbackSettingsItem,
 ): string {
-  const amount = mathPercent(item.amount);
-  const name = formatNumber(item.name);
+  const amount = collectionName(item.amount);
+  const name = asyncCurrency(formatPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatFeedbackSettingsAmount(amount: number): string {
-  return mathPercent(amount);
+  return collectionName(amount);
 }
 
 export function feedbackSettingsStatusTone(

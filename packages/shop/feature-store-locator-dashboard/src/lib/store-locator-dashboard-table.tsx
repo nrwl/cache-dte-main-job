@@ -1,4 +1,4 @@
-import { FormsBanner } from '@org/shop-ui-forms-banner';
+import { CommercePanel } from '@org/shop-ui-commerce-panel';
 import type { StoreLocatorDashboardItem } from './store-locator-dashboard.model';
 import { STORE_LOCATOR_DASHBOARD_FEATURE } from './store-locator-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function StoreLocatorDashboardTable({
             <td>{formatStoreLocatorDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsBanner
+              <CommercePanel
                 label={item.status}
                 tone={storeLocatorDashboardStatusTone(item.status)}
                 size="sm"

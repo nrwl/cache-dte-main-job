@@ -1,4 +1,4 @@
-import { CommerceHeader } from '@org/shop-ui-commerce-header';
+import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
 import { ADDRESSES_SETTINGS_FEATURE } from './addresses-settings.routes';
 
 export interface AddressesSettingsHeaderProps {
@@ -27,8 +27,8 @@ export function AddressesSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceHeader label="Items" value={count} tone="info" />
-        <CommerceHeader label="Total" value={total} tone="success" />
+        <FeedbackToolbar label="Items" value={count} tone="info" />
+        <FeedbackToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

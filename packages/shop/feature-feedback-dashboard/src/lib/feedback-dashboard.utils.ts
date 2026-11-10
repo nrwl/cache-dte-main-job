@@ -1,4 +1,4 @@
-import { asyncPhone } from '@org/shop-util-async-phone';
+import { storageName } from '@org/shop-util-storage-name';
 import {
   emptyFeedbackDashboardTotals,
   type FeedbackDashboardItem,
@@ -73,13 +73,13 @@ export function sortFeedbackDashboard(
 export function describeFeedbackDashboardItem(
   item: FeedbackDashboardItem,
 ): string {
-  const amount = asyncPhone(item.amount);
-  const name = asyncPhone(item.name);
+  const amount = storageName(item.amount);
+  const name = storageName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatFeedbackDashboardAmount(amount: number): string {
-  return asyncPhone(amount);
+  return storageName(amount);
 }
 
 export function feedbackDashboardStatusTone(

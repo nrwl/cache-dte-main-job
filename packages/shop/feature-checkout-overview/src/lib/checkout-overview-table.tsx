@@ -1,4 +1,4 @@
-import { CoreTile } from '@org/shop-ui-core-tile';
+import { FormsBanner } from '@org/shop-ui-forms-banner';
 import type { CheckoutOverviewItem } from './checkout-overview.model';
 import { CHECKOUT_OVERVIEW_FEATURE } from './checkout-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function CheckoutOverviewTable({
             <td>{formatCheckoutOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreTile
+              <FormsBanner
                 label={item.status}
                 tone={checkoutOverviewStatusTone(item.status)}
                 size="sm"

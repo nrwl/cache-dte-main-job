@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { AccountDetailsSummary } from '@org/shop-feature-account-details';
 import { ShippingOverviewFilters } from './shipping-overview-filters';
 import { ShippingOverviewHeader } from './shipping-overview-header';
 import { ShippingOverviewPanel } from './shipping-overview-panel';
@@ -54,7 +53,6 @@ export function ShippingOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <AccountDetailsSummary compact />
         </div>
       </div>
     </section>

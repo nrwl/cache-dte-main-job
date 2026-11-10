@@ -1,4 +1,4 @@
-import { FeedbackList } from '@org/shop-ui-feedback-list';
+import { InputsBanner } from '@org/shop-ui-inputs-banner';
 import { ADDRESSES_DASHBOARD_FEATURE } from './addresses-dashboard.routes';
 
 export interface AddressesDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function AddressesDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackList label="Items" value={count} tone="info" />
-        <FeedbackList label="Total" value={total} tone="success" />
+        <InputsBanner label="Items" value={count} tone="info" />
+        <InputsBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

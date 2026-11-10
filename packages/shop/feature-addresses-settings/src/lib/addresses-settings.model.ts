@@ -21,7 +21,7 @@ export interface AddressesSettingsTotals {
   archived: number;
 }
 
-export const ADDRESSES_SETTINGS_ITEM_COUNT = 10;
+export const ADDRESSES_SETTINGS_ITEM_COUNT = 9;
 
 export const ADDRESSES_SETTINGS_STATUSES: ReadonlyArray<AddressesSettingsStatus> =
   ['active', 'pending', 'archived'];

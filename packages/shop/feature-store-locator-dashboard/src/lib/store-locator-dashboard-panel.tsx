@@ -1,6 +1,4 @@
-import { FeedbackPanelGroup } from '@org/shop-ui-feedback-panel';
-import { FormsStat } from '@org/shop-ui-forms-stat';
-import { FeedbackCard } from '@org/shop-ui-feedback-card';
+import { CorePanelGroup } from '@org/shop-ui-core-panel';
 import type { StoreLocatorDashboardItem } from './store-locator-dashboard.model';
 import { STORE_LOCATOR_DASHBOARD_FEATURE } from './store-locator-dashboard.routes';
 import { describeStoreLocatorDashboardItem } from './store-locator-dashboard.utils';
@@ -41,7 +39,7 @@ export function StoreLocatorDashboardPanel({
       <p className="feature-panel-description">
         {describeStoreLocatorDashboardItem(selected)}
       </p>
-      <FeedbackPanelGroup
+      <CorePanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function StoreLocatorDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <FormsStat
-          label="Forms Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FeedbackCard
-          label="Feedback Card"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

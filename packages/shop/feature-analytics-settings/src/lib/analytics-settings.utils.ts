@@ -1,6 +1,4 @@
-import { i18nNumber } from '@org/shop-util-i18n-number';
-import { i18nText } from '@org/shop-util-i18n-text';
-import { i18nSlug } from '@org/shop-util-i18n-slug';
+import { collectionNumber } from '@org/shop-util-collection-number';
 import {
   emptyAnalyticsSettingsTotals,
   type AnalyticsSettingsItem,
@@ -75,13 +73,13 @@ export function sortAnalyticsSettings(
 export function describeAnalyticsSettingsItem(
   item: AnalyticsSettingsItem,
 ): string {
-  const amount = i18nNumber(item.amount);
-  const name = i18nSlug(i18nText(item.name));
+  const amount = collectionNumber(item.amount);
+  const name = collectionNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAnalyticsSettingsAmount(amount: number): string {
-  return i18nNumber(amount);
+  return collectionNumber(amount);
 }
 
 export function analyticsSettingsStatusTone(

@@ -1,7 +1,6 @@
-import { formatCurrency } from '@org/shop-util-format-currency';
-import { i18nNumber } from '@org/shop-util-i18n-number';
-import { mathName } from '@org/shop-util-math-name';
-import { TypographyPanel } from '@org/shop-ui-typography-panel';
+import { formatName } from '@org/shop-util-format-name';
+import { storageText } from '@org/shop-util-storage-text';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { MarketingToolbarProps } from './marketing-toolbar.types';
 import { resolveMarketingToolbarStyle } from './marketing-toolbar-variants';
 
@@ -14,9 +13,9 @@ export function MarketingToolbar({
   onSelect,
   children,
 }: MarketingToolbarProps) {
-  const formatted = value === undefined ? '' : formatCurrency(value);
+  const formatted = value === undefined ? '' : formatName(value);
   const style = resolveMarketingToolbarStyle(tone, size);
-  const ariaLabel = mathName(i18nNumber(label));
+  const ariaLabel = storageText(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,12 +38,7 @@ export function MarketingToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <TypographyPanel
-        label="Typography Panel"
-        value={value}
-        tone={tone}
-        size="sm"
-      />
+      <InputsPanel label="Inputs Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

@@ -1,5 +1,4 @@
-import { collectionText } from '@org/shop-util-collection-text';
-import { storagePercent } from '@org/shop-util-storage-percent';
+import { asyncPhone } from '@org/shop-util-async-phone';
 import {
   emptyTrackingDetailsTotals,
   type TrackingDetailsItem,
@@ -72,13 +71,13 @@ export function sortTrackingDetails(
 }
 
 export function describeTrackingDetailsItem(item: TrackingDetailsItem): string {
-  const amount = collectionText(item.amount);
-  const name = storagePercent(item.name);
+  const amount = asyncPhone(item.amount);
+  const name = asyncPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatTrackingDetailsAmount(amount: number): string {
-  return collectionText(amount);
+  return asyncPhone(amount);
 }
 
 export function trackingDetailsStatusTone(

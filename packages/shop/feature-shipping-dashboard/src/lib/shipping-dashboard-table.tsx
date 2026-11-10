@@ -1,4 +1,4 @@
-import { MarketingCard } from '@org/shop-ui-marketing-card';
+import { TypographyPanel } from '@org/shop-ui-typography-panel';
 import type { ShippingDashboardItem } from './shipping-dashboard.model';
 import { SHIPPING_DASHBOARD_FEATURE } from './shipping-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function ShippingDashboardTable({
             <td>{formatShippingDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingCard
+              <TypographyPanel
                 label={item.status}
                 tone={shippingDashboardStatusTone(item.status)}
                 size="sm"

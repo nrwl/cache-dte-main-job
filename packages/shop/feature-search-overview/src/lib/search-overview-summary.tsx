@@ -1,4 +1,4 @@
-import { DataPanelGroup } from '@org/shop-ui-data-panel';
+import { FormsBadgeGroup } from '@org/shop-ui-forms-badge';
 import { buildSearchOverviewItems } from './search-overview.model';
 import { SEARCH_OVERVIEW_FEATURE } from './search-overview.routes';
 import {
@@ -29,7 +29,7 @@ export function SearchOverviewSummary({
       data-testid={`${SEARCH_OVERVIEW_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SEARCH_OVERVIEW_FEATURE.title}</h3>
-      <DataPanelGroup
+      <FormsBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

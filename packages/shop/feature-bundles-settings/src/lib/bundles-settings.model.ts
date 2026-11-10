@@ -21,7 +21,7 @@ export interface BundlesSettingsTotals {
   archived: number;
 }
 
-export const BUNDLES_SETTINGS_ITEM_COUNT = 9;
+export const BUNDLES_SETTINGS_ITEM_COUNT = 10;
 
 export const BUNDLES_SETTINGS_STATUSES: ReadonlyArray<BundlesSettingsStatus> = [
   'active',

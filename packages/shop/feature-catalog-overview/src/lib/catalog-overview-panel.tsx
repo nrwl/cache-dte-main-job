@@ -1,6 +1,6 @@
-import { TypographyStatGroup } from '@org/shop-ui-typography-stat';
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
-import { OverlayTile } from '@org/shop-ui-overlay-tile';
+import { OverlayToolbarGroup } from '@org/shop-ui-overlay-toolbar';
+import { DataStat } from '@org/shop-ui-data-stat';
+import { OverlayBanner } from '@org/shop-ui-overlay-banner';
 import type { CatalogOverviewItem } from './catalog-overview.model';
 import { CATALOG_OVERVIEW_FEATURE } from './catalog-overview.routes';
 import { describeCatalogOverviewItem } from './catalog-overview.utils';
@@ -41,7 +41,7 @@ export function CatalogOverviewPanel({
       <p className="feature-panel-description">
         {describeCatalogOverviewItem(selected)}
       </p>
-      <TypographyStatGroup
+      <OverlayToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,9 @@ export function CatalogOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <TypographyToolbar
-          label="Typography Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <OverlayTile
-          label="Overlay Tile"
+        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
+        <OverlayBanner
+          label="Overlay Banner"
           value={selected.product.rating}
           size="sm"
         />

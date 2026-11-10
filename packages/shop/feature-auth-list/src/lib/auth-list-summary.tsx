@@ -1,4 +1,4 @@
-import { FormsBannerGroup } from '@org/shop-ui-forms-banner';
+import { FeedbackStatGroup } from '@org/shop-ui-feedback-stat';
 import { buildAuthListItems } from './auth-list.model';
 import { AUTH_LIST_FEATURE } from './auth-list.routes';
 import { pickAuthListHighlights, totalAuthList } from './auth-list.utils';
@@ -26,7 +26,7 @@ export function AuthListSummary({
       data-testid={`${AUTH_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{AUTH_LIST_FEATURE.title}</h3>
-      <FormsBannerGroup
+      <FeedbackStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

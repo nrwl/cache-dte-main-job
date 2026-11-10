@@ -1,4 +1,4 @@
-import { FeedbackList } from '@org/shop-ui-feedback-list';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { PROFILE_DASHBOARD_FEATURE } from './profile-dashboard.routes';
 
 export interface ProfileDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function ProfileDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackList label="Items" value={count} tone="info" />
-        <FeedbackList label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { FeedbackList } from '@org/shop-ui-feedback-list';
+import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
 import { TRACKING_SETTINGS_FEATURE } from './tracking-settings.routes';
 
 export interface TrackingSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function TrackingSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackList label="Items" value={count} tone="info" />
-        <FeedbackList label="Total" value={total} tone="success" />
+        <NavigationToolbar label="Items" value={count} tone="info" />
+        <NavigationToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

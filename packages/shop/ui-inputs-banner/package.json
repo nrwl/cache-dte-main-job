@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-i18n-slug": "*",
-    "@org/shop-util-storage-percent": "*"
+    "@org/shop-util-format-phone": "*",
+    "@org/shop-ui-media-badge": "*"
   }
 }

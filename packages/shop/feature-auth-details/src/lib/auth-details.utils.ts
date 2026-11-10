@@ -1,6 +1,5 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
-import { asyncName } from '@org/shop-util-async-name';
-import { asyncPhone } from '@org/shop-util-async-phone';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathText } from '@org/shop-util-math-text';
 import {
   emptyAuthDetailsTotals,
   type AuthDetailsItem,
@@ -72,13 +71,13 @@ export function sortAuthDetails(
 }
 
 export function describeAuthDetailsItem(item: AuthDetailsItem): string {
-  const amount = i18nDate(item.amount);
-  const name = asyncPhone(asyncName(item.name));
+  const amount = collectionText(item.amount);
+  const name = mathText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAuthDetailsAmount(amount: number): string {
-  return i18nDate(amount);
+  return collectionText(amount);
 }
 
 export function authDetailsStatusTone(

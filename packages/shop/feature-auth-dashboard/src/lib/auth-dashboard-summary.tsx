@@ -1,4 +1,4 @@
-import { DataCardGroup } from '@org/shop-ui-data-card';
+import { TypographyBadgeGroup } from '@org/shop-ui-typography-badge';
 import { buildAuthDashboardItems } from './auth-dashboard.model';
 import { AUTH_DASHBOARD_FEATURE } from './auth-dashboard.routes';
 import {
@@ -29,7 +29,7 @@ export function AuthDashboardSummary({
       data-testid={`${AUTH_DASHBOARD_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{AUTH_DASHBOARD_FEATURE.title}</h3>
-      <DataCardGroup
+      <TypographyBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

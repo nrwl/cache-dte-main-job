@@ -1,4 +1,4 @@
-import { TypographyTile } from '@org/shop-ui-typography-tile';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import { WISHLIST_DASHBOARD_FEATURE } from './wishlist-dashboard.routes';
 
 export interface WishlistDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function WishlistDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyTile label="Items" value={count} tone="info" />
-        <TypographyTile label="Total" value={total} tone="success" />
+        <CoreBadge label="Items" value={count} tone="info" />
+        <CoreBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

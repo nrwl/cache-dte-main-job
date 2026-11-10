@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-async-code": "*",
-    "@org/shop-ui-navigation-tile": "*"
+    "@org/shop-util-validate-phone": "*"
   }
 }

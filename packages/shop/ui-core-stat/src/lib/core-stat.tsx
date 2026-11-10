@@ -1,7 +1,6 @@
-import { validateCode } from '@org/shop-util-validate-code';
-import { asyncCode } from '@org/shop-util-async-code';
-import { collectionCurrency } from '@org/shop-util-collection-currency';
-import { CoreChip } from '@org/shop-ui-core-chip';
+import { storageNumber } from '@org/shop-util-storage-number';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
+import { CoreBadge } from '@org/shop-ui-core-badge';
 import type { CoreStatProps } from './core-stat.types';
 import { resolveCoreStatStyle } from './core-stat-variants';
 
@@ -14,9 +13,9 @@ export function CoreStat({
   onSelect,
   children,
 }: CoreStatProps) {
-  const formatted = value === undefined ? '' : validateCode(value);
+  const formatted = value === undefined ? '' : storageNumber(value);
   const style = resolveCoreStatStyle(tone, size);
-  const ariaLabel = collectionCurrency(asyncCode(label));
+  const ariaLabel = i18nCurrency(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +38,7 @@ export function CoreStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreChip label="Core Chip" value={value} tone={tone} size="sm" />
+      <CoreBadge label="Core Badge" value={value} tone={tone} size="sm" />
     </div>
   );
 }

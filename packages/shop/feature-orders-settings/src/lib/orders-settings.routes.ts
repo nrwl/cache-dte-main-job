@@ -19,7 +19,7 @@ export const ORDERS_SETTINGS_FEATURE: FeatureMeta = {
   testId: ORDERS_SETTINGS_TEST_ID,
   domain: 'orders',
   kind: 'settings',
-  itemCount: 11,
+  itemCount: 12,
 };
 
 export function ordersSettingsItemPath(itemId: string): string {

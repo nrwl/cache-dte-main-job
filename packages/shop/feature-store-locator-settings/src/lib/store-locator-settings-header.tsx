@@ -1,4 +1,4 @@
-import { MediaCard } from '@org/shop-ui-media-card';
+import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
 import { STORE_LOCATOR_SETTINGS_FEATURE } from './store-locator-settings.routes';
 
 export interface StoreLocatorSettingsHeaderProps {
@@ -29,8 +29,8 @@ export function StoreLocatorSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaCard label="Items" value={count} tone="info" />
-        <MediaCard label="Total" value={total} tone="success" />
+        <FeedbackPanel label="Items" value={count} tone="info" />
+        <FeedbackPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

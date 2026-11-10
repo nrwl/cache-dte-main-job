@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { ShippingListSummary } from '@org/shop-feature-shipping-list';
 import { GiftCardsDashboardFilters } from './gift-cards-dashboard-filters';
 import { GiftCardsDashboardHeader } from './gift-cards-dashboard-header';
 import { GiftCardsDashboardPanel } from './gift-cards-dashboard-panel';
@@ -53,6 +54,7 @@ export function GiftCardsDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <ShippingListSummary compact />
         </div>
       </div>
     </section>

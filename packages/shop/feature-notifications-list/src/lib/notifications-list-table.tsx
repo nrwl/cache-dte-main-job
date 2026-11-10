@@ -1,4 +1,4 @@
-import { MarketingToolbar } from '@org/shop-ui-marketing-toolbar';
+import { FormsStat } from '@org/shop-ui-forms-stat';
 import type { NotificationsListItem } from './notifications-list.model';
 import { NOTIFICATIONS_LIST_FEATURE } from './notifications-list.routes';
 import {
@@ -58,7 +58,7 @@ export function NotificationsListTable({
             <td>{formatNotificationsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MarketingToolbar
+              <FormsStat
                 label={item.status}
                 tone={notificationsListStatusTone(item.status)}
                 size="sm"

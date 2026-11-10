@@ -1,6 +1,6 @@
-import { formatPhone } from '@org/shop-util-format-phone';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { storageCurrency } from '@org/shop-util-storage-currency';
 import { asyncPhone } from '@org/shop-util-async-phone';
-import { storageDate } from '@org/shop-util-storage-date';
 import {
   emptyTrackingListTotals,
   type TrackingListItem,
@@ -72,13 +72,13 @@ export function sortTrackingList(
 }
 
 export function describeTrackingListItem(item: TrackingListItem): string {
-  const amount = formatPhone(item.amount);
-  const name = storageDate(asyncPhone(item.name));
+  const amount = collectionCurrency(item.amount);
+  const name = asyncPhone(storageCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatTrackingListAmount(amount: number): string {
-  return formatPhone(amount);
+  return collectionCurrency(amount);
 }
 
 export function trackingListStatusTone(

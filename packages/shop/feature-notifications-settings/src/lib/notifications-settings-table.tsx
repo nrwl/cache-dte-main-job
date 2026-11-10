@@ -1,4 +1,4 @@
-import { ChartsStat } from '@org/shop-ui-charts-stat';
+import { FeedbackStat } from '@org/shop-ui-feedback-stat';
 import type { NotificationsSettingsItem } from './notifications-settings.model';
 import { NOTIFICATIONS_SETTINGS_FEATURE } from './notifications-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function NotificationsSettingsTable({
             <td>{formatNotificationsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <ChartsStat
+              <FeedbackStat
                 label={item.status}
                 tone={notificationsSettingsStatusTone(item.status)}
                 size="sm"

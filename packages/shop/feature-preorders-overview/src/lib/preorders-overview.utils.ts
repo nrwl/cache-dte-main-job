@@ -1,6 +1,5 @@
-import { storageNumber } from '@org/shop-util-storage-number';
-import { validateCurrency } from '@org/shop-util-validate-currency';
-import { asyncName } from '@org/shop-util-async-name';
+import { asyncText } from '@org/shop-util-async-text';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyPreordersOverviewTotals,
   type PreordersOverviewItem,
@@ -75,13 +74,13 @@ export function sortPreordersOverview(
 export function describePreordersOverviewItem(
   item: PreordersOverviewItem,
 ): string {
-  const amount = storageNumber(item.amount);
-  const name = asyncName(validateCurrency(item.name));
+  const amount = asyncText(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPreordersOverviewAmount(amount: number): string {
-  return storageNumber(amount);
+  return asyncText(amount);
 }
 
 export function preordersOverviewStatusTone(

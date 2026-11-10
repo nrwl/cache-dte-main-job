@@ -1,4 +1,4 @@
-import { NavigationPanel } from '@org/shop-ui-navigation-panel';
+import { MediaPanel } from '@org/shop-ui-media-panel';
 import type { NotificationsDashboardItem } from './notifications-dashboard.model';
 import { NOTIFICATIONS_DASHBOARD_FEATURE } from './notifications-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function NotificationsDashboardTable({
             <td>{formatNotificationsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationPanel
+              <MediaPanel
                 label={item.status}
                 tone={notificationsDashboardStatusTone(item.status)}
                 size="sm"

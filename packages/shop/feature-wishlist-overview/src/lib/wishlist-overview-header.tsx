@@ -1,4 +1,4 @@
-import { MediaList } from '@org/shop-ui-media-list';
+import { InputsStat } from '@org/shop-ui-inputs-stat';
 import { WISHLIST_OVERVIEW_FEATURE } from './wishlist-overview.routes';
 
 export interface WishlistOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function WishlistOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaList label="Items" value={count} tone="info" />
-        <MediaList label="Total" value={total} tone="success" />
+        <InputsStat label="Items" value={count} tone="info" />
+        <InputsStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

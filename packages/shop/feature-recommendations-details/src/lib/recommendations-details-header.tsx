@@ -1,4 +1,4 @@
-import { LayoutTile } from '@org/shop-ui-layout-tile';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import { RECOMMENDATIONS_DETAILS_FEATURE } from './recommendations-details.routes';
 
 export interface RecommendationsDetailsHeaderProps {
@@ -29,8 +29,8 @@ export function RecommendationsDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutTile label="Items" value={count} tone="info" />
-        <LayoutTile label="Total" value={total} tone="success" />
+        <DataPanel label="Items" value={count} tone="info" />
+        <DataPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

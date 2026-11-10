@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { WishlistDetailsSummary } from '@org/shop-feature-wishlist-details';
 import { AccountSettingsFilters } from './account-settings-filters';
 import { AccountSettingsHeader } from './account-settings-header';
 import { AccountSettingsPanel } from './account-settings-panel';
@@ -53,6 +54,7 @@ export function AccountSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <WishlistDetailsSummary compact />
         </div>
       </div>
     </section>

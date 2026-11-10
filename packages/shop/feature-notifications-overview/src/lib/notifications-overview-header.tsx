@@ -1,4 +1,4 @@
-import { MediaStat } from '@org/shop-ui-media-stat';
+import { CorePanel } from '@org/shop-ui-core-panel';
 import { NOTIFICATIONS_OVERVIEW_FEATURE } from './notifications-overview.routes';
 
 export interface NotificationsOverviewHeaderProps {
@@ -29,8 +29,8 @@ export function NotificationsOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaStat label="Items" value={count} tone="info" />
-        <MediaStat label="Total" value={total} tone="success" />
+        <CorePanel label="Items" value={count} tone="info" />
+        <CorePanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

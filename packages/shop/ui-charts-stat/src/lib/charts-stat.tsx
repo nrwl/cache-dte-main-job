@@ -1,4 +1,5 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
+import { mathText } from '@org/shop-util-math-text';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { ChartsStatProps } from './charts-stat.types';
 import { resolveChartsStatStyle } from './charts-stat-variants';
 
@@ -11,7 +12,7 @@ export function ChartsStat({
   onSelect,
   children,
 }: ChartsStatProps) {
-  const formatted = value === undefined ? '' : i18nDate(value);
+  const formatted = value === undefined ? '' : mathText(value);
   const style = resolveChartsStatStyle(tone, size);
   const ariaLabel = label;
 
@@ -36,6 +37,7 @@ export function ChartsStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <LayoutPanel label="Layout Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

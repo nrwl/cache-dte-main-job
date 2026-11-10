@@ -1,4 +1,4 @@
-import { LayoutTile } from '@org/shop-ui-layout-tile';
+import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
 import { CART_LIST_FEATURE } from './cart-list.routes';
 
 export interface CartListHeaderProps {
@@ -26,8 +26,8 @@ export function CartListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutTile label="Items" value={count} tone="info" />
-        <LayoutTile label="Total" value={total} tone="success" />
+        <LayoutToolbar label="Items" value={count} tone="info" />
+        <LayoutToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,5 @@
-import { collectionCode } from '@org/shop-util-collection-code';
+import { collectionText } from '@org/shop-util-collection-text';
+import { mathName } from '@org/shop-util-math-name';
 import {
   emptyAddressesOverviewTotals,
   type AddressesOverviewItem,
@@ -73,13 +74,13 @@ export function sortAddressesOverview(
 export function describeAddressesOverviewItem(
   item: AddressesOverviewItem,
 ): string {
-  const amount = collectionCode(item.amount);
-  const name = collectionCode(item.name);
+  const amount = collectionText(item.amount);
+  const name = mathName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesOverviewAmount(amount: number): string {
-  return collectionCode(amount);
+  return collectionText(amount);
 }
 
 export function addressesOverviewStatusTone(

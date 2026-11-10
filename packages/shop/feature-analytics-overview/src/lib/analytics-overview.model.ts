@@ -21,7 +21,7 @@ export interface AnalyticsOverviewTotals {
   archived: number;
 }
 
-export const ANALYTICS_OVERVIEW_ITEM_COUNT = 12;
+export const ANALYTICS_OVERVIEW_ITEM_COUNT = 6;
 
 export const ANALYTICS_OVERVIEW_STATUSES: ReadonlyArray<AnalyticsOverviewStatus> =
   ['active', 'pending', 'archived'];

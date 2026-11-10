@@ -1,4 +1,4 @@
-import { LayoutListGroup } from '@org/shop-ui-layout-list';
+import { LayoutBannerGroup } from '@org/shop-ui-layout-banner';
 import { buildShippingDetailsItems } from './shipping-details.model';
 import { SHIPPING_DETAILS_FEATURE } from './shipping-details.routes';
 import {
@@ -31,7 +31,7 @@ export function ShippingDetailsSummary({
       <h3 className="feature-summary-title">
         {SHIPPING_DETAILS_FEATURE.title}
       </h3>
-      <LayoutListGroup
+      <LayoutBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

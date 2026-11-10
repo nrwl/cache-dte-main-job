@@ -1,11 +1,11 @@
 import type { Product } from '@org/models';
+import { formatNumber } from '@org/shop-util-format-number';
 import { formatText } from '@org/shop-util-format-text';
-import { formatPercent } from '@org/shop-util-format-percent';
 import {
   clampLength,
   hashString,
   normalizeInput,
-  titleCase,
+  reverseText,
 } from './format-name-helpers';
 
 export interface FormatNameOptions {
@@ -33,7 +33,7 @@ export const FORMAT_NAME_DEFAULTS: Required<FormatNameOptions> = {
 export const FORMAT_NAME_KIND = 'format-name' as const;
 
 /**
- * Formats a raw value using the "title" strategy.
+ * Formats a raw value using the "reverse" strategy.
  */
 export function formatName(
   value: string | number,
@@ -47,11 +47,11 @@ export function formatName(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatText, formatPercent].reduce<string>(
+  const staged = [formatNumber, formatText].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );
-  const transformed = titleCase(staged);
+  const transformed = reverseText(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

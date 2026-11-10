@@ -19,7 +19,7 @@ export const FEEDBACK_LIST_FEATURE: FeatureMeta = {
   testId: FEEDBACK_LIST_TEST_ID,
   domain: 'feedback',
   kind: 'list',
-  itemCount: 8,
+  itemCount: 7,
 };
 
 export function feedbackListItemPath(itemId: string): string {

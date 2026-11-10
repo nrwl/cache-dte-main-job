@@ -1,4 +1,4 @@
-import { MediaPanel } from '@org/shop-ui-media-panel';
+import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
 import type { TrackingDashboardItem } from './tracking-dashboard.model';
 import { TRACKING_DASHBOARD_FEATURE } from './tracking-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function TrackingDashboardTable({
             <td>{formatTrackingDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaPanel
+              <FeedbackToolbar
                 label={item.status}
                 tone={trackingDashboardStatusTone(item.status)}
                 size="sm"

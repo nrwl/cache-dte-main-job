@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { ShippingEditorSummary } from '@org/shop-feature-shipping-editor';
 import { TrackingDetailsFilters } from './tracking-details-filters';
 import { TrackingDetailsHeader } from './tracking-details-header';
 import { TrackingDetailsPanel } from './tracking-details-panel';
@@ -54,7 +53,6 @@ export function TrackingDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <ShippingEditorSummary compact />
         </div>
       </div>
     </section>

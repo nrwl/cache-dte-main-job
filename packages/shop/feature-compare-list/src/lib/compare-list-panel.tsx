@@ -1,4 +1,4 @@
-import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import type { CompareListItem } from './compare-list.model';
 import { COMPARE_LIST_FEATURE } from './compare-list.routes';
 import { describeCompareListItem } from './compare-list.utils';
@@ -36,7 +36,7 @@ export function CompareListPanel({ selected, onClear }: CompareListPanelProps) {
       <p className="feature-panel-description">
         {describeCompareListItem(selected)}
       </p>
-      <ChartsToolbarGroup
+      <CommerceToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

@@ -1,4 +1,4 @@
-import { FormsPanel } from '@org/shop-ui-forms-panel';
+import { NavigationBadge } from '@org/shop-ui-navigation-badge';
 import type { StoreLocatorOverviewItem } from './store-locator-overview.model';
 import { STORE_LOCATOR_OVERVIEW_FEATURE } from './store-locator-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function StoreLocatorOverviewTable({
             <td>{formatStoreLocatorOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsPanel
+              <NavigationBadge
                 label={item.status}
                 tone={storeLocatorOverviewStatusTone(item.status)}
                 size="sm"

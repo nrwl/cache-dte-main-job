@@ -1,6 +1,4 @@
-import { TypographyTileGroup } from '@org/shop-ui-typography-tile';
-import { FeedbackChip } from '@org/shop-ui-feedback-chip';
-import { DataPanel } from '@org/shop-ui-data-panel';
+import { CoreBannerGroup } from '@org/shop-ui-core-banner';
 import type { SubscriptionsDashboardItem } from './subscriptions-dashboard.model';
 import { SUBSCRIPTIONS_DASHBOARD_FEATURE } from './subscriptions-dashboard.routes';
 import { describeSubscriptionsDashboardItem } from './subscriptions-dashboard.utils';
@@ -41,7 +39,7 @@ export function SubscriptionsDashboardPanel({
       <p className="feature-panel-description">
         {describeSubscriptionsDashboardItem(selected)}
       </p>
-      <TypographyTileGroup
+      <CoreBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function SubscriptionsDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <FeedbackChip
-          label="Feedback Chip"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <DataPanel
-          label="Data Panel"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

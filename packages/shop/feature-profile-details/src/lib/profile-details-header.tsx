@@ -1,4 +1,4 @@
-import { MediaCard } from '@org/shop-ui-media-card';
+import { FeedbackBanner } from '@org/shop-ui-feedback-banner';
 import { PROFILE_DETAILS_FEATURE } from './profile-details.routes';
 
 export interface ProfileDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function ProfileDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MediaCard label="Items" value={count} tone="info" />
-        <MediaCard label="Total" value={total} tone="success" />
+        <FeedbackBanner label="Items" value={count} tone="info" />
+        <FeedbackBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

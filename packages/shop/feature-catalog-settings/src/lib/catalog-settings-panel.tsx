@@ -1,4 +1,6 @@
-import { FormsToolbarGroup } from '@org/shop-ui-forms-toolbar';
+import { CorePanelGroup } from '@org/shop-ui-core-panel';
+import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import type { CatalogSettingsItem } from './catalog-settings.model';
 import { CATALOG_SETTINGS_FEATURE } from './catalog-settings.routes';
 import { describeCatalogSettingsItem } from './catalog-settings.utils';
@@ -39,7 +41,7 @@ export function CatalogSettingsPanel({
       <p className="feature-panel-description">
         {describeCatalogSettingsItem(selected)}
       </p>
-      <FormsToolbarGroup
+      <CorePanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function CatalogSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <FormsBadge
+          label="Forms Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <CommerceToolbar
+          label="Commerce Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

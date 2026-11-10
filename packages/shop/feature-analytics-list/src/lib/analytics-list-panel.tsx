@@ -1,6 +1,6 @@
-import { MarketingStatGroup } from '@org/shop-ui-marketing-stat';
-import { NavigationTile } from '@org/shop-ui-navigation-tile';
-import { MarketingHeader } from '@org/shop-ui-marketing-header';
+import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
+import { TypographyBadge } from '@org/shop-ui-typography-badge';
+import { LayoutBanner } from '@org/shop-ui-layout-banner';
 import type { AnalyticsListItem } from './analytics-list.model';
 import { ANALYTICS_LIST_FEATURE } from './analytics-list.routes';
 import { describeAnalyticsListItem } from './analytics-list.utils';
@@ -41,7 +41,7 @@ export function AnalyticsListPanel({
       <p className="feature-panel-description">
         {describeAnalyticsListItem(selected)}
       </p>
-      <MarketingStatGroup
+      <OverlayBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function AnalyticsListPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <NavigationTile
-          label="Navigation Tile"
+        <TypographyBadge
+          label="Typography Badge"
           value={selected.product.rating}
           size="sm"
         />
-        <MarketingHeader
-          label="Marketing Header"
+        <LayoutBanner
+          label="Layout Banner"
           value={selected.product.rating}
           size="sm"
         />

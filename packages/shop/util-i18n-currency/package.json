@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-format-percent": "*",
-    "@org/shop-util-math-code": "*"
+    "@org/shop-util-storage-phone": "*"
   }
 }

@@ -19,6 +19,9 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-i18n-currency": "*"
+    "@org/shop-util-format-currency": "*",
+    "@org/shop-util-collection-text": "*",
+    "@org/shop-util-validate-number": "*",
+    "@org/shop-ui-forms-stat": "*"
   }
 }

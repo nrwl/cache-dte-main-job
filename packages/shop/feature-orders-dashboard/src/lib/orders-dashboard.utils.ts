@@ -1,5 +1,4 @@
-import { formatDate } from '@org/shop-util-format-date';
-import { i18nSlug } from '@org/shop-util-i18n-slug';
+import { i18nText } from '@org/shop-util-i18n-text';
 import {
   emptyOrdersDashboardTotals,
   type OrdersDashboardItem,
@@ -72,13 +71,13 @@ export function sortOrdersDashboard(
 }
 
 export function describeOrdersDashboardItem(item: OrdersDashboardItem): string {
-  const amount = formatDate(item.amount);
-  const name = i18nSlug(item.name);
+  const amount = i18nText(item.amount);
+  const name = i18nText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatOrdersDashboardAmount(amount: number): string {
-  return formatDate(amount);
+  return i18nText(amount);
 }
 
 export function ordersDashboardStatusTone(

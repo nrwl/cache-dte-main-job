@@ -1,4 +1,4 @@
-import { CoreStatGroup } from '@org/shop-ui-core-stat';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildSubscriptionsOverviewItems } from './subscriptions-overview.model';
 import { SUBSCRIPTIONS_OVERVIEW_FEATURE } from './subscriptions-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function SubscriptionsOverviewSummary({
       <h3 className="feature-summary-title">
         {SUBSCRIPTIONS_OVERVIEW_FEATURE.title}
       </h3>
-      <CoreStatGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

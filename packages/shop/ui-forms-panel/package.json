@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-math-date": "*",
-    "@org/shop-util-collection-address": "*",
-    "@org/shop-ui-core-list": "*"
+    "@org/shop-util-math-name": "*",
+    "@org/shop-util-format-number": "*",
+    "@org/shop-ui-core-toolbar": "*"
   }
 }

@@ -1,5 +1,5 @@
-import { collectionText } from '@org/shop-util-collection-text';
-import { mathSlug } from '@org/shop-util-math-slug';
+import { storageText } from '@org/shop-util-storage-text';
+import { formatPhone } from '@org/shop-util-format-phone';
 import {
   emptyReturnsListTotals,
   type ReturnsListItem,
@@ -71,13 +71,13 @@ export function sortReturnsList(
 }
 
 export function describeReturnsListItem(item: ReturnsListItem): string {
-  const amount = collectionText(item.amount);
-  const name = mathSlug(item.name);
+  const amount = storageText(item.amount);
+  const name = formatPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReturnsListAmount(amount: number): string {
-  return collectionText(amount);
+  return storageText(amount);
 }
 
 export function returnsListStatusTone(

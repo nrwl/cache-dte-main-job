@@ -30,25 +30,25 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-collection-phone/tsconfig.lib.json"
+      "path": "../feature-cart-overview/tsconfig.lib.json"
     },
     {
-      "path": "../util-async-code/tsconfig.lib.json"
+      "path": "../util-collection-number/tsconfig.lib.json"
     },
     {
-      "path": "../util-i18n-address/tsconfig.lib.json"
+      "path": "../util-validate-phone/tsconfig.lib.json"
     },
     {
-      "path": "../ui-marketing-stat/tsconfig.lib.json"
+      "path": "../util-validate-name/tsconfig.lib.json"
     },
     {
-      "path": "../ui-overlay-tile/tsconfig.lib.json"
+      "path": "../ui-charts-banner/tsconfig.lib.json"
     },
     {
-      "path": "../ui-charts-tile/tsconfig.lib.json"
+      "path": "../ui-charts-badge/tsconfig.lib.json"
     },
     {
-      "path": "../ui-marketing-card/tsconfig.lib.json"
+      "path": "../ui-media-toolbar/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

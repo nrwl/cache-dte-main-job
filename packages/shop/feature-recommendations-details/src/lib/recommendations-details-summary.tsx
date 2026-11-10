@@ -1,4 +1,4 @@
-import { LayoutTileGroup } from '@org/shop-ui-layout-tile';
+import { DataPanelGroup } from '@org/shop-ui-data-panel';
 import { buildRecommendationsDetailsItems } from './recommendations-details.model';
 import { RECOMMENDATIONS_DETAILS_FEATURE } from './recommendations-details.routes';
 import {
@@ -31,7 +31,7 @@ export function RecommendationsDetailsSummary({
       <h3 className="feature-summary-title">
         {RECOMMENDATIONS_DETAILS_FEATURE.title}
       </h3>
-      <LayoutTileGroup
+      <DataPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

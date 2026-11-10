@@ -21,7 +21,7 @@ export interface BundlesListTotals {
   archived: number;
 }
 
-export const BUNDLES_LIST_ITEM_COUNT = 7;
+export const BUNDLES_LIST_ITEM_COUNT = 5;
 
 export const BUNDLES_LIST_STATUSES: ReadonlyArray<BundlesListStatus> = [
   'active',

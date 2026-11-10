@@ -1,4 +1,4 @@
-import { MediaChip } from '@org/shop-ui-media-chip';
+import { ChartsStat } from '@org/shop-ui-charts-stat';
 import type { SupportSettingsItem } from './support-settings.model';
 import { SUPPORT_SETTINGS_FEATURE } from './support-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function SupportSettingsTable({
             <td>{formatSupportSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaChip
+              <ChartsStat
                 label={item.status}
                 tone={supportSettingsStatusTone(item.status)}
                 size="sm"

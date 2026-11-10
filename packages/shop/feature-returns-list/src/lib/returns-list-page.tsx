@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { ReviewsSettingsSummary } from '@org/shop-feature-reviews-settings';
 import { ReturnsListFilters } from './returns-list-filters';
 import { ReturnsListHeader } from './returns-list-header';
 import { ReturnsListPanel } from './returns-list-panel';
@@ -47,6 +48,7 @@ export function ReturnsListPage() {
         </div>
         <div className="feature-side">
           <ReturnsListPanel selected={selected} onClear={() => select(null)} />
+          <ReviewsSettingsSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { CoreCard } from '@org/shop-ui-core-card';
+import { NavigationBadge } from '@org/shop-ui-navigation-badge';
 import { RETURNS_OVERVIEW_FEATURE } from './returns-overview.routes';
 
 export interface ReturnsOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function ReturnsOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreCard label="Items" value={count} tone="info" />
-        <CoreCard label="Total" value={total} tone="success" />
+        <NavigationBadge label="Items" value={count} tone="info" />
+        <NavigationBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { MediaBadge } from '@org/shop-ui-media-badge';
+import { DataPanel } from '@org/shop-ui-data-panel';
 import type { AnalyticsDashboardItem } from './analytics-dashboard.model';
 import { ANALYTICS_DASHBOARD_FEATURE } from './analytics-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function AnalyticsDashboardTable({
             <td>{formatAnalyticsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaBadge
+              <DataPanel
                 label={item.status}
                 tone={analyticsDashboardStatusTone(item.status)}
                 size="sm"

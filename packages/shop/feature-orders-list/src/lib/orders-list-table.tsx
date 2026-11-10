@@ -1,4 +1,4 @@
-import { ChartsBadge } from '@org/shop-ui-charts-badge';
+import { DataBadge } from '@org/shop-ui-data-badge';
 import type { OrdersListItem } from './orders-list.model';
 import { ORDERS_LIST_FEATURE } from './orders-list.routes';
 import {
@@ -58,7 +58,7 @@ export function OrdersListTable({
             <td>{formatOrdersListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <ChartsBadge
+              <DataBadge
                 label={item.status}
                 tone={ordersListStatusTone(item.status)}
                 size="sm"

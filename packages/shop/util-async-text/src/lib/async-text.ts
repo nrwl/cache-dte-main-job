@@ -1,9 +1,10 @@
 import type { Product } from '@org/models';
+import { validateNumber } from '@org/shop-util-validate-number';
 import {
   clampLength,
   hashString,
   normalizeInput,
-  reverseText,
+  padCode,
 } from './async-text-helpers';
 
 export interface AsyncTextOptions {
@@ -31,7 +32,7 @@ export const ASYNC_TEXT_DEFAULTS: Required<AsyncTextOptions> = {
 export const ASYNC_TEXT_KIND = 'async-text' as const;
 
 /**
- * Formats a raw value using the "reverse" strategy.
+ * Formats a raw value using the "padded" strategy.
  */
 export function asyncText(
   value: string | number,
@@ -45,8 +46,11 @@ export function asyncText(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = normalized;
-  const transformed = reverseText(staged);
+  const staged = [validateNumber].reduce<string>(
+    (acc, fn) => fn(acc),
+    normalized,
+  );
+  const transformed = padCode(staged, 4);
   return clampLength(transformed, opts.maxLength);
 }
 

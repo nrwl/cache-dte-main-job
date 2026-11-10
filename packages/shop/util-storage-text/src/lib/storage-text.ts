@@ -3,7 +3,6 @@ import {
   clampLength,
   hashString,
   normalizeInput,
-  reverseText,
 } from './storage-text-helpers';
 
 export interface StorageTextOptions {
@@ -31,7 +30,7 @@ export const STORAGE_TEXT_DEFAULTS: Required<StorageTextOptions> = {
 export const STORAGE_TEXT_KIND = 'storage-text' as const;
 
 /**
- * Formats a raw value using the "reverse" strategy.
+ * Formats a raw value using the "lower" strategy.
  */
 export function storageText(
   value: string | number,
@@ -46,7 +45,7 @@ export function storageText(
     return opts.fallback;
   }
   const staged = normalized;
-  const transformed = reverseText(staged);
+  const transformed = staged.toLowerCase();
   return clampLength(transformed, opts.maxLength);
 }
 

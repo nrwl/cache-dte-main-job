@@ -3,9 +3,9 @@
  * Deterministic generator for the large shop workspace.
  *
  * Produces:
- *   - 70  util libraries    packages/shop/util-*      (@org/shop-util-*)
- *   - 130 ui libraries      packages/shop/ui-*        (@org/shop-ui-*)
- *   - 300 feature libraries packages/shop/feature-*   (@org/shop-feature-*)
+ *   - 35  util libraries    packages/shop/util-*      (@org/shop-util-*)
+ *   - 65  ui libraries      packages/shop/ui-*        (@org/shop-ui-*)
+ *   - 150 feature libraries packages/shop/feature-*   (@org/shop-feature-*)
  *   - apps/shop/src/app/feature-routes.tsx wiring every feature into the app
  *   - apps/shop-e2e/src/features/*.spec.ts  (E2E_SPEC_COUNT specs, one test each,
  *     every test padded to ~6s by apps/shop-e2e/src/support/pacing.ts)
@@ -109,18 +109,7 @@ const FEATURE_DOMAINS = [
   'analytics',
   'feedback',
 ];
-const FEATURE_KINDS = [
-  'overview',
-  'summary',
-  'details',
-  'history',
-  'settings',
-  'editor',
-  'list',
-  'wizard',
-  'dashboard',
-  'insights',
-];
+const FEATURE_KINDS = ['overview', 'details', 'settings', 'list', 'dashboard'];
 const UI_GROUPS = [
   'core',
   'forms',
@@ -136,18 +125,7 @@ const UI_GROUPS = [
   'inputs',
   'marketing',
 ];
-const UI_KINDS = [
-  'badge',
-  'card',
-  'panel',
-  'tile',
-  'banner',
-  'chip',
-  'stat',
-  'list',
-  'toolbar',
-  'header',
-];
+const UI_KINDS = ['badge', 'panel', 'banner', 'stat', 'toolbar'];
 const UTIL_GROUPS = [
   'format',
   'validate',
@@ -157,18 +135,7 @@ const UTIL_GROUPS = [
   'storage',
   'i18n',
 ];
-const UTIL_KINDS = [
-  'currency',
-  'date',
-  'number',
-  'percent',
-  'text',
-  'slug',
-  'phone',
-  'address',
-  'name',
-  'code',
-];
+const UTIL_KINDS = ['currency', 'number', 'text', 'phone', 'name'];
 const TRANSFORMS = [
   'upper',
   'lower',
@@ -394,7 +361,7 @@ export default defineConfig(() => ({
     watch: false,
     globals: true,
     environment: '${react ? 'jsdom' : 'node'}',
-    setupFiles: [${react ? "'./src/test-setup.ts', " : ''}'../../../tools/test-delay/setup.mjs'],
+    ${react ? "setupFiles: ['./src/test-setup.ts'],\n    " : ''}globalSetup: ['../../../tools/test-delay/setup.mjs'],
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     reporters: ['default'],
     // Spec files run one at a time so Nx owns concurrency and each CPU burn

@@ -1,5 +1,4 @@
-import { TypographyListGroup } from '@org/shop-ui-typography-list';
-import { LayoutBadge } from '@org/shop-ui-layout-badge';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
 import type { PreordersDashboardItem } from './preorders-dashboard.model';
 import { PREORDERS_DASHBOARD_FEATURE } from './preorders-dashboard.routes';
 import { describePreordersDashboardItem } from './preorders-dashboard.utils';
@@ -40,7 +39,7 @@ export function PreordersDashboardPanel({
       <p className="feature-panel-description">
         {describePreordersDashboardItem(selected)}
       </p>
-      <TypographyListGroup
+      <MarketingBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function PreordersDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <LayoutBadge
-          label="Layout Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

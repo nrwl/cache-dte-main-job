@@ -1,6 +1,5 @@
-import { i18nNumber } from '@org/shop-util-i18n-number';
-import { collectionSlug } from '@org/shop-util-collection-slug';
-import { i18nPercent } from '@org/shop-util-i18n-percent';
+import { mathName } from '@org/shop-util-math-name';
+import { storageText } from '@org/shop-util-storage-text';
 import {
   emptyStoreLocatorDashboardTotals,
   type StoreLocatorDashboardItem,
@@ -78,13 +77,13 @@ export function sortStoreLocatorDashboard(
 export function describeStoreLocatorDashboardItem(
   item: StoreLocatorDashboardItem,
 ): string {
-  const amount = i18nNumber(item.amount);
-  const name = i18nPercent(collectionSlug(item.name));
+  const amount = mathName(item.amount);
+  const name = storageText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatStoreLocatorDashboardAmount(amount: number): string {
-  return i18nNumber(amount);
+  return mathName(amount);
 }
 
 export function storeLocatorDashboardStatusTone(

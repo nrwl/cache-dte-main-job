@@ -21,7 +21,7 @@ export interface WishlistListTotals {
   archived: number;
 }
 
-export const WISHLIST_LIST_ITEM_COUNT = 7;
+export const WISHLIST_LIST_ITEM_COUNT = 9;
 
 export const WISHLIST_LIST_STATUSES: ReadonlyArray<WishlistListStatus> = [
   'active',

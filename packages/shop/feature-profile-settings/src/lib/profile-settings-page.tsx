@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { BundlesListSummary } from '@org/shop-feature-bundles-list';
 import { ProfileSettingsFilters } from './profile-settings-filters';
 import { ProfileSettingsHeader } from './profile-settings-header';
 import { ProfileSettingsPanel } from './profile-settings-panel';
@@ -54,7 +53,6 @@ export function ProfileSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <BundlesListSummary compact />
         </div>
       </div>
     </section>

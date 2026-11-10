@@ -1,4 +1,6 @@
-import { mathText } from '@org/shop-util-math-text';
+import { mathName } from '@org/shop-util-math-name';
+import { mathPhone } from '@org/shop-util-math-phone';
+import { mathCurrency } from '@org/shop-util-math-currency';
 import {
   emptyCheckoutListTotals,
   type CheckoutListItem,
@@ -70,13 +72,13 @@ export function sortCheckoutList(
 }
 
 export function describeCheckoutListItem(item: CheckoutListItem): string {
-  const amount = mathText(item.amount);
-  const name = mathText(item.name);
+  const amount = mathName(item.amount);
+  const name = mathCurrency(mathPhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCheckoutListAmount(amount: number): string {
-  return mathText(amount);
+  return mathName(amount);
 }
 
 export function checkoutListStatusTone(

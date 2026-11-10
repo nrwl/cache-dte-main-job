@@ -1,4 +1,4 @@
-import { LayoutHeader } from '@org/shop-ui-layout-header';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import { SHIPPING_OVERVIEW_FEATURE } from './shipping-overview.routes';
 
 export interface ShippingOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function ShippingOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutHeader label="Items" value={count} tone="info" />
-        <LayoutHeader label="Total" value={total} tone="success" />
+        <ChartsBanner label="Items" value={count} tone="info" />
+        <ChartsBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { ChartsPanelGroup } from '@org/shop-ui-charts-panel';
+import { CommerceBannerGroup } from '@org/shop-ui-commerce-banner';
 import type { PromotionsListItem } from './promotions-list.model';
 import { PROMOTIONS_LIST_FEATURE } from './promotions-list.routes';
 import { describePromotionsListItem } from './promotions-list.utils';
@@ -39,7 +39,7 @@ export function PromotionsListPanel({
       <p className="feature-panel-description">
         {describePromotionsListItem(selected)}
       </p>
-      <ChartsPanelGroup
+      <CommerceBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

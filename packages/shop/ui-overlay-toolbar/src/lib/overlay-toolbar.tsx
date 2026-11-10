@@ -1,7 +1,6 @@
-import { storageSlug } from '@org/shop-util-storage-slug';
-import { storageText } from '@org/shop-util-storage-text';
-import { formatAddress } from '@org/shop-util-format-address';
-import { DataToolbar } from '@org/shop-ui-data-toolbar';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { collectionPhone } from '@org/shop-util-collection-phone';
+import { formatText } from '@org/shop-util-format-text';
 import type { OverlayToolbarProps } from './overlay-toolbar.types';
 import { resolveOverlayToolbarStyle } from './overlay-toolbar-variants';
 
@@ -14,9 +13,9 @@ export function OverlayToolbar({
   onSelect,
   children,
 }: OverlayToolbarProps) {
-  const formatted = value === undefined ? '' : storageSlug(value);
+  const formatted = value === undefined ? '' : formatCurrency(value);
   const style = resolveOverlayToolbarStyle(tone, size);
-  const ariaLabel = formatAddress(storageText(label));
+  const ariaLabel = formatText(collectionPhone(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +38,6 @@ export function OverlayToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <DataToolbar label="Data Toolbar" value={value} tone={tone} size="sm" />
     </div>
   );
 }

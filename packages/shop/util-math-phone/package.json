@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-validate-code": "*"
+    "@org/shop-util-math-number": "*"
   }
 }

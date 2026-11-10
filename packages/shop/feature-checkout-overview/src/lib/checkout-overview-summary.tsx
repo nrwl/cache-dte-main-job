@@ -1,4 +1,4 @@
-import { ChartsListGroup } from '@org/shop-ui-charts-list';
+import { ChartsPanelGroup } from '@org/shop-ui-charts-panel';
 import { buildCheckoutOverviewItems } from './checkout-overview.model';
 import { CHECKOUT_OVERVIEW_FEATURE } from './checkout-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function CheckoutOverviewSummary({
       <h3 className="feature-summary-title">
         {CHECKOUT_OVERVIEW_FEATURE.title}
       </h3>
-      <ChartsListGroup
+      <ChartsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

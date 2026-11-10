@@ -1,6 +1,7 @@
-import { validatePhone } from '@org/shop-util-validate-phone';
-import { i18nAddress } from '@org/shop-util-i18n-address';
+import { validateName } from '@org/shop-util-validate-name';
 import { asyncName } from '@org/shop-util-async-name';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { NavigationBanner } from '@org/shop-ui-navigation-banner';
 import type { DataPanelProps } from './data-panel.types';
 import { resolveDataPanelStyle } from './data-panel-variants';
 
@@ -13,9 +14,9 @@ export function DataPanel({
   onSelect,
   children,
 }: DataPanelProps) {
-  const formatted = value === undefined ? '' : validatePhone(value);
+  const formatted = value === undefined ? '' : validateName(value);
   const style = resolveDataPanelStyle(tone, size);
-  const ariaLabel = asyncName(i18nAddress(label));
+  const ariaLabel = collectionCurrency(asyncName(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,6 +39,12 @@ export function DataPanel({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <NavigationBanner
+        label="Navigation Banner"
+        value={value}
+        tone={tone}
+        size="sm"
+      />
     </div>
   );
 }

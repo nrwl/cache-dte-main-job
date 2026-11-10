@@ -1,4 +1,4 @@
-import { FeedbackChip } from '@org/shop-ui-feedback-chip';
+import { DataBanner } from '@org/shop-ui-data-banner';
 import { SUBSCRIPTIONS_LIST_FEATURE } from './subscriptions-list.routes';
 
 export interface SubscriptionsListHeaderProps {
@@ -27,8 +27,8 @@ export function SubscriptionsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackChip label="Items" value={count} tone="info" />
-        <FeedbackChip label="Total" value={total} tone="success" />
+        <DataBanner label="Items" value={count} tone="info" />
+        <DataBanner label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

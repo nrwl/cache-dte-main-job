@@ -1,4 +1,6 @@
-import { LayoutChipGroup } from '@org/shop-ui-layout-chip';
+import { OverlayPanelGroup } from '@org/shop-ui-overlay-panel';
+import { InputsToolbar } from '@org/shop-ui-inputs-toolbar';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { ShippingDetailsItem } from './shipping-details.model';
 import { SHIPPING_DETAILS_FEATURE } from './shipping-details.routes';
 import { describeShippingDetailsItem } from './shipping-details.utils';
@@ -39,7 +41,7 @@ export function ShippingDetailsPanel({
       <p className="feature-panel-description">
         {describeShippingDetailsItem(selected)}
       </p>
-      <LayoutChipGroup
+      <OverlayPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function ShippingDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <InputsToolbar
+          label="Inputs Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <MarketingBadge
+          label="Marketing Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

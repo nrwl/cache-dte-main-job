@@ -21,7 +21,7 @@ export interface CheckoutListTotals {
   archived: number;
 }
 
-export const CHECKOUT_LIST_ITEM_COUNT = 8;
+export const CHECKOUT_LIST_ITEM_COUNT = 10;
 
 export const CHECKOUT_LIST_STATUSES: ReadonlyArray<CheckoutListStatus> = [
   'active',

@@ -1,6 +1,4 @@
-import { collectionCode } from '@org/shop-util-collection-code';
-import { storagePercent } from '@org/shop-util-storage-percent';
-import { validateText } from '@org/shop-util-validate-text';
+import { collectionName } from '@org/shop-util-collection-name';
 import {
   emptySupportDetailsTotals,
   type SupportDetailsItem,
@@ -73,13 +71,13 @@ export function sortSupportDetails(
 }
 
 export function describeSupportDetailsItem(item: SupportDetailsItem): string {
-  const amount = collectionCode(item.amount);
-  const name = validateText(storagePercent(item.name));
+  const amount = collectionName(item.amount);
+  const name = collectionName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSupportDetailsAmount(amount: number): string {
-  return collectionCode(amount);
+  return collectionName(amount);
 }
 
 export function supportDetailsStatusTone(

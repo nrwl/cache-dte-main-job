@@ -21,7 +21,7 @@ export interface FeedbackSettingsTotals {
   archived: number;
 }
 
-export const FEEDBACK_SETTINGS_ITEM_COUNT = 9;
+export const FEEDBACK_SETTINGS_ITEM_COUNT = 8;
 
 export const FEEDBACK_SETTINGS_STATUSES: ReadonlyArray<FeedbackSettingsStatus> =
   ['active', 'pending', 'archived'];

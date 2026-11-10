@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-format-percent": "*"
+    "@org/shop-util-collection-number": "*"
   }
 }

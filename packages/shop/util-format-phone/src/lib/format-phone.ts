@@ -1,5 +1,5 @@
 import type { Product } from '@org/models';
-import { formatDate } from '@org/shop-util-format-date';
+import { formatNumber } from '@org/shop-util-format-number';
 import {
   clampLength,
   hashString,
@@ -46,7 +46,10 @@ export function formatPhone(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [formatDate].reduce<string>((acc, fn) => fn(acc), normalized);
+  const staged = [formatNumber].reduce<string>(
+    (acc, fn) => fn(acc),
+    normalized,
+  );
   const transformed = titleCase(staged);
   return clampLength(transformed, opts.maxLength);
 }

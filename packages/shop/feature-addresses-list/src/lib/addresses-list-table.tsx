@@ -1,4 +1,4 @@
-import { LayoutList } from '@org/shop-ui-layout-list';
+import { ChartsPanel } from '@org/shop-ui-charts-panel';
 import type { AddressesListItem } from './addresses-list.model';
 import { ADDRESSES_LIST_FEATURE } from './addresses-list.routes';
 import {
@@ -58,7 +58,7 @@ export function AddressesListTable({
             <td>{formatAddressesListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutList
+              <ChartsPanel
                 label={item.status}
                 tone={addressesListStatusTone(item.status)}
                 size="sm"

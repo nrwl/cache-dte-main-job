@@ -1,4 +1,6 @@
-import { InputsBannerGroup } from '@org/shop-ui-inputs-banner';
+import { CoreBannerGroup } from '@org/shop-ui-core-banner';
+import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
+import { DataStat } from '@org/shop-ui-data-stat';
 import type { OrdersSettingsItem } from './orders-settings.model';
 import { ORDERS_SETTINGS_FEATURE } from './orders-settings.routes';
 import { describeOrdersSettingsItem } from './orders-settings.utils';
@@ -39,7 +41,7 @@ export function OrdersSettingsPanel({
       <p className="feature-panel-description">
         {describeOrdersSettingsItem(selected)}
       </p>
-      <InputsBannerGroup
+      <CoreBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,14 @@ export function OrdersSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <FeedbackPanel
+          label="Feedback Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <DataStat label="Data Stat" value={selected.product.rating} size="sm" />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

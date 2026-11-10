@@ -1,4 +1,4 @@
-import { TypographyTileGroup } from '@org/shop-ui-typography-tile';
+import { CoreBadgeGroup } from '@org/shop-ui-core-badge';
 import { buildWishlistDashboardItems } from './wishlist-dashboard.model';
 import { WISHLIST_DASHBOARD_FEATURE } from './wishlist-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function WishlistDashboardSummary({
       <h3 className="feature-summary-title">
         {WISHLIST_DASHBOARD_FEATURE.title}
       </h3>
-      <TypographyTileGroup
+      <CoreBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,4 +1,4 @@
-import { validateCurrency } from '@org/shop-util-validate-currency';
+import { validateText } from '@org/shop-util-validate-text';
 import type { TypographyToolbarProps } from './typography-toolbar.types';
 import { resolveTypographyToolbarStyle } from './typography-toolbar-variants';
 
@@ -11,7 +11,7 @@ export function TypographyToolbar({
   onSelect,
   children,
 }: TypographyToolbarProps) {
-  const formatted = value === undefined ? '' : validateCurrency(value);
+  const formatted = value === undefined ? '' : validateText(value);
   const style = resolveTypographyToolbarStyle(tone, size);
   const ariaLabel = label;
 

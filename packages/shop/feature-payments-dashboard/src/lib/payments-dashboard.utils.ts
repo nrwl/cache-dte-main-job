@@ -1,5 +1,6 @@
-import { storageNumber } from '@org/shop-util-storage-number';
-import { storageAddress } from '@org/shop-util-storage-address';
+import { collectionName } from '@org/shop-util-collection-name';
+import { mathName } from '@org/shop-util-math-name';
+import { storageName } from '@org/shop-util-storage-name';
 import {
   emptyPaymentsDashboardTotals,
   type PaymentsDashboardItem,
@@ -74,13 +75,13 @@ export function sortPaymentsDashboard(
 export function describePaymentsDashboardItem(
   item: PaymentsDashboardItem,
 ): string {
-  const amount = storageNumber(item.amount);
-  const name = storageAddress(item.name);
+  const amount = collectionName(item.amount);
+  const name = storageName(mathName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPaymentsDashboardAmount(amount: number): string {
-  return storageNumber(amount);
+  return collectionName(amount);
 }
 
 export function paymentsDashboardStatusTone(

@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { SearchListSummary } from '@org/shop-feature-search-list';
 import { RecommendationsDetailsFilters } from './recommendations-details-filters';
 import { RecommendationsDetailsHeader } from './recommendations-details-header';
 import { RecommendationsDetailsPanel } from './recommendations-details-panel';
@@ -53,6 +54,7 @@ export function RecommendationsDetailsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <SearchListSummary compact />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
 import type { ReviewsOverviewItem } from './reviews-overview.model';
 import { REVIEWS_OVERVIEW_FEATURE } from './reviews-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function ReviewsOverviewTable({
             <td>{formatReviewsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaToolbar
+              <FeedbackBadge
                 label={item.status}
                 tone={reviewsOverviewStatusTone(item.status)}
                 size="sm"

@@ -1,4 +1,4 @@
-import { mathCurrency } from '@org/shop-util-math-currency';
+import { storageCurrency } from '@org/shop-util-storage-currency';
 import {
   emptyCheckoutOverviewTotals,
   type CheckoutOverviewItem,
@@ -73,13 +73,13 @@ export function sortCheckoutOverview(
 export function describeCheckoutOverviewItem(
   item: CheckoutOverviewItem,
 ): string {
-  const amount = mathCurrency(item.amount);
-  const name = mathCurrency(item.name);
+  const amount = storageCurrency(item.amount);
+  const name = storageCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCheckoutOverviewAmount(amount: number): string {
-  return mathCurrency(amount);
+  return storageCurrency(amount);
 }
 
 export function checkoutOverviewStatusTone(

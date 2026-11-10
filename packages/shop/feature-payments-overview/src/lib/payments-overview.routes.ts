@@ -19,7 +19,7 @@ export const PAYMENTS_OVERVIEW_FEATURE: FeatureMeta = {
   testId: PAYMENTS_OVERVIEW_TEST_ID,
   domain: 'payments',
   kind: 'overview',
-  itemCount: 7,
+  itemCount: 11,
 };
 
 export function paymentsOverviewItemPath(itemId: string): string {

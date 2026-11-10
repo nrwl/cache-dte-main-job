@@ -1,6 +1,4 @@
-import { CorePanelGroup } from '@org/shop-ui-core-panel';
-import { FormsBadge } from '@org/shop-ui-forms-badge';
-import { CommerceList } from '@org/shop-ui-commerce-list';
+import { LayoutBannerGroup } from '@org/shop-ui-layout-banner';
 import type { ReturnsDetailsItem } from './returns-details.model';
 import { RETURNS_DETAILS_FEATURE } from './returns-details.routes';
 import { describeReturnsDetailsItem } from './returns-details.utils';
@@ -41,7 +39,7 @@ export function ReturnsDetailsPanel({
       <p className="feature-panel-description">
         {describeReturnsDetailsItem(selected)}
       </p>
-      <CorePanelGroup
+      <LayoutBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function ReturnsDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <FormsBadge
-          label="Forms Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <CommerceList
-          label="Commerce List"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

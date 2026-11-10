@@ -1,5 +1,5 @@
-import { i18nCode } from '@org/shop-util-i18n-code';
-import { formatPhone } from '@org/shop-util-format-phone';
+import { validateText } from '@org/shop-util-validate-text';
+import { asyncText } from '@org/shop-util-async-text';
 import {
   emptySizingDetailsTotals,
   type SizingDetailsItem,
@@ -71,13 +71,13 @@ export function sortSizingDetails(
 }
 
 export function describeSizingDetailsItem(item: SizingDetailsItem): string {
-  const amount = i18nCode(item.amount);
-  const name = formatPhone(item.name);
+  const amount = validateText(item.amount);
+  const name = asyncText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatSizingDetailsAmount(amount: number): string {
-  return i18nCode(amount);
+  return validateText(amount);
 }
 
 export function sizingDetailsStatusTone(

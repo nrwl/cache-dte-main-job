@@ -1,4 +1,4 @@
-import { CommerceList } from '@org/shop-ui-commerce-list';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import { ANALYTICS_OVERVIEW_FEATURE } from './analytics-overview.routes';
 
 export interface AnalyticsOverviewHeaderProps {
@@ -27,8 +27,8 @@ export function AnalyticsOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceList label="Items" value={count} tone="info" />
-        <CommerceList label="Total" value={total} tone="success" />
+        <MediaToolbar label="Items" value={count} tone="info" />
+        <MediaToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

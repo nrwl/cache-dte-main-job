@@ -1,4 +1,4 @@
-import { ChartsHeader } from '@org/shop-ui-charts-header';
+import { NavigationBanner } from '@org/shop-ui-navigation-banner';
 import type { PaymentsOverviewItem } from './payments-overview.model';
 import { PAYMENTS_OVERVIEW_FEATURE } from './payments-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function PaymentsOverviewTable({
             <td>{formatPaymentsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <ChartsHeader
+              <NavigationBanner
                 label={item.status}
                 tone={paymentsOverviewStatusTone(item.status)}
                 size="sm"

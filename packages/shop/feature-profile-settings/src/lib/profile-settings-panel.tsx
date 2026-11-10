@@ -1,5 +1,6 @@
-import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
-import { CoreTile } from '@org/shop-ui-core-tile';
+import { MediaStatGroup } from '@org/shop-ui-media-stat';
+import { FormsToolbar } from '@org/shop-ui-forms-toolbar';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { ProfileSettingsItem } from './profile-settings.model';
 import { PROFILE_SETTINGS_FEATURE } from './profile-settings.routes';
 import { describeProfileSettingsItem } from './profile-settings.utils';
@@ -40,7 +41,7 @@ export function ProfileSettingsPanel({
       <p className="feature-panel-description">
         {describeProfileSettingsItem(selected)}
       </p>
-      <ChartsToolbarGroup
+      <MediaStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,7 +52,16 @@ export function ProfileSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CoreTile label="Core Tile" value={selected.product.rating} size="sm" />
+        <FormsToolbar
+          label="Forms Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <NavigationPanel
+          label="Navigation Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
       </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (

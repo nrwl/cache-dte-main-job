@@ -1,4 +1,4 @@
-import { OverlayBadge } from '@org/shop-ui-overlay-badge';
+import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
 import type { RecommendationsDashboardItem } from './recommendations-dashboard.model';
 import { RECOMMENDATIONS_DASHBOARD_FEATURE } from './recommendations-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function RecommendationsDashboardTable({
             <td>{formatRecommendationsDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayBadge
+              <FeedbackToolbar
                 label={item.status}
                 tone={recommendationsDashboardStatusTone(item.status)}
                 size="sm"

@@ -1,6 +1,4 @@
-import { mathSlug } from '@org/shop-util-math-slug';
-import { i18nSlug } from '@org/shop-util-i18n-slug';
-import { validateCode } from '@org/shop-util-validate-code';
+import { storageText } from '@org/shop-util-storage-text';
 import {
   emptyAccountDashboardTotals,
   type AccountDashboardItem,
@@ -75,13 +73,13 @@ export function sortAccountDashboard(
 export function describeAccountDashboardItem(
   item: AccountDashboardItem,
 ): string {
-  const amount = mathSlug(item.amount);
-  const name = validateCode(i18nSlug(item.name));
+  const amount = storageText(item.amount);
+  const name = storageText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAccountDashboardAmount(amount: number): string {
-  return mathSlug(amount);
+  return storageText(amount);
 }
 
 export function accountDashboardStatusTone(

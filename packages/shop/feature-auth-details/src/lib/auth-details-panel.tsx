@@ -1,6 +1,4 @@
-import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
-import { CoreChip } from '@org/shop-ui-core-chip';
-import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
+import { NavigationToolbarGroup } from '@org/shop-ui-navigation-toolbar';
 import type { AuthDetailsItem } from './auth-details.model';
 import { AUTH_DETAILS_FEATURE } from './auth-details.routes';
 import { describeAuthDetailsItem } from './auth-details.utils';
@@ -38,7 +36,7 @@ export function AuthDetailsPanel({ selected, onClear }: AuthDetailsPanelProps) {
       <p className="feature-panel-description">
         {describeAuthDetailsItem(selected)}
       </p>
-      <CommerceToolbarGroup
+      <NavigationToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -48,14 +46,7 @@ export function AuthDetailsPanel({ selected, onClear }: AuthDetailsPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CoreChip label="Core Chip" value={selected.product.rating} size="sm" />
-        <FeedbackBadge
-          label="Feedback Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

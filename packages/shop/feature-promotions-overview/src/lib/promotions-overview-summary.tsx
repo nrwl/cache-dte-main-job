@@ -1,4 +1,4 @@
-import { MarketingBannerGroup } from '@org/shop-ui-marketing-banner';
+import { ChartsStatGroup } from '@org/shop-ui-charts-stat';
 import { buildPromotionsOverviewItems } from './promotions-overview.model';
 import { PROMOTIONS_OVERVIEW_FEATURE } from './promotions-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function PromotionsOverviewSummary({
       <h3 className="feature-summary-title">
         {PROMOTIONS_OVERVIEW_FEATURE.title}
       </h3>
-      <MarketingBannerGroup
+      <ChartsStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

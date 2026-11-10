@@ -1,4 +1,4 @@
-import { InputsTile } from '@org/shop-ui-inputs-tile';
+import { MediaPanel } from '@org/shop-ui-media-panel';
 import { REVIEWS_SETTINGS_FEATURE } from './reviews-settings.routes';
 
 export interface ReviewsSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function ReviewsSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <InputsTile label="Items" value={count} tone="info" />
-        <InputsTile label="Total" value={total} tone="success" />
+        <MediaPanel label="Items" value={count} tone="info" />
+        <MediaPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

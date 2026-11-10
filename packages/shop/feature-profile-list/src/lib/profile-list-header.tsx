@@ -1,4 +1,4 @@
-import { FormsCard } from '@org/shop-ui-forms-card';
+import { ChartsToolbar } from '@org/shop-ui-charts-toolbar';
 import { PROFILE_LIST_FEATURE } from './profile-list.routes';
 
 export interface ProfileListHeaderProps {
@@ -26,8 +26,8 @@ export function ProfileListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsCard label="Items" value={count} tone="info" />
-        <FormsCard label="Total" value={total} tone="success" />
+        <ChartsToolbar label="Items" value={count} tone="info" />
+        <ChartsToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

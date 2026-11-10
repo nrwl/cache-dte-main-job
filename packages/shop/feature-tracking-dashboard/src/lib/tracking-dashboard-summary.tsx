@@ -1,4 +1,4 @@
-import { TypographyTileGroup } from '@org/shop-ui-typography-tile';
+import { TypographyToolbarGroup } from '@org/shop-ui-typography-toolbar';
 import { buildTrackingDashboardItems } from './tracking-dashboard.model';
 import { TRACKING_DASHBOARD_FEATURE } from './tracking-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function TrackingDashboardSummary({
       <h3 className="feature-summary-title">
         {TRACKING_DASHBOARD_FEATURE.title}
       </h3>
-      <TypographyTileGroup
+      <TypographyToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

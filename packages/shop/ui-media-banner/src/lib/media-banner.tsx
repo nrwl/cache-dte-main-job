@@ -1,4 +1,5 @@
-import { formatNumber } from '@org/shop-util-format-number';
+import { storageCurrency } from '@org/shop-util-storage-currency';
+import { collectionNumber } from '@org/shop-util-collection-number';
 import type { MediaBannerProps } from './media-banner.types';
 import { resolveMediaBannerStyle } from './media-banner-variants';
 
@@ -11,9 +12,9 @@ export function MediaBanner({
   onSelect,
   children,
 }: MediaBannerProps) {
-  const formatted = value === undefined ? '' : formatNumber(value);
+  const formatted = value === undefined ? '' : storageCurrency(value);
   const style = resolveMediaBannerStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = collectionNumber(label);
 
   const handleClick = () => {
     if (onSelect) {

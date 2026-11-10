@@ -1,4 +1,4 @@
-import { NavigationStat } from '@org/shop-ui-navigation-stat';
+import { OverlayPanel } from '@org/shop-ui-overlay-panel';
 import type { SizingSettingsItem } from './sizing-settings.model';
 import { SIZING_SETTINGS_FEATURE } from './sizing-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function SizingSettingsTable({
             <td>{formatSizingSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationStat
+              <OverlayPanel
                 label={item.status}
                 tone={sizingSettingsStatusTone(item.status)}
                 size="sm"

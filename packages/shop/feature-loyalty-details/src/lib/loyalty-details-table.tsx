@@ -1,4 +1,4 @@
-import { MediaToolbar } from '@org/shop-ui-media-toolbar';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { LoyaltyDetailsItem } from './loyalty-details.model';
 import { LOYALTY_DETAILS_FEATURE } from './loyalty-details.routes';
 import {
@@ -58,7 +58,7 @@ export function LoyaltyDetailsTable({
             <td>{formatLoyaltyDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaToolbar
+              <LayoutPanel
                 label={item.status}
                 tone={loyaltyDetailsStatusTone(item.status)}
                 size="sm"

@@ -1,6 +1,5 @@
-import { mathPhone } from '@org/shop-util-math-phone';
-import { i18nName } from '@org/shop-util-i18n-name';
-import { storageAddress } from '@org/shop-util-storage-address';
+import { validateName } from '@org/shop-util-validate-name';
+import { LayoutBanner } from '@org/shop-ui-layout-banner';
 import type { FeedbackBannerProps } from './feedback-banner.types';
 import { resolveFeedbackBannerStyle } from './feedback-banner-variants';
 
@@ -13,9 +12,9 @@ export function FeedbackBanner({
   onSelect,
   children,
 }: FeedbackBannerProps) {
-  const formatted = value === undefined ? '' : mathPhone(value);
+  const formatted = value === undefined ? '' : validateName(value);
   const style = resolveFeedbackBannerStyle(tone, size);
-  const ariaLabel = storageAddress(i18nName(label));
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,6 +37,7 @@ export function FeedbackBanner({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <LayoutBanner label="Layout Banner" value={value} tone={tone} size="sm" />
     </div>
   );
 }

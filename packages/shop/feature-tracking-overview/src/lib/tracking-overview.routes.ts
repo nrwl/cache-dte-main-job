@@ -19,7 +19,7 @@ export const TRACKING_OVERVIEW_FEATURE: FeatureMeta = {
   testId: TRACKING_OVERVIEW_TEST_ID,
   domain: 'tracking',
   kind: 'overview',
-  itemCount: 11,
+  itemCount: 10,
 };
 
 export function trackingOverviewItemPath(itemId: string): string {

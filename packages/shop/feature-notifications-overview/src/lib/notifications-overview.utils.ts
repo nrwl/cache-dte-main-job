@@ -1,4 +1,5 @@
-import { collectionSlug } from '@org/shop-util-collection-slug';
+import { storageText } from '@org/shop-util-storage-text';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyNotificationsOverviewTotals,
   type NotificationsOverviewItem,
@@ -76,13 +77,13 @@ export function sortNotificationsOverview(
 export function describeNotificationsOverviewItem(
   item: NotificationsOverviewItem,
 ): string {
-  const amount = collectionSlug(item.amount);
-  const name = collectionSlug(item.name);
+  const amount = storageText(item.amount);
+  const name = collectionText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatNotificationsOverviewAmount(amount: number): string {
-  return collectionSlug(amount);
+  return storageText(amount);
 }
 
 export function notificationsOverviewStatusTone(

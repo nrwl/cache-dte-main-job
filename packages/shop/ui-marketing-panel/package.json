@@ -20,7 +20,6 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-util-i18n-number": "*",
-    "@org/shop-util-i18n-code": "*",
-    "@org/shop-util-async-code": "*"
+    "@org/shop-util-storage-number": "*"
   }
 }

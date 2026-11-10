@@ -19,7 +19,9 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-math-phone": "*",
-    "@org/shop-ui-overlay-card": "*"
+    "@org/shop-util-i18n-number": "*",
+    "@org/shop-util-format-currency": "*",
+    "@org/shop-util-math-currency": "*",
+    "@org/shop-ui-feedback-stat": "*"
   }
 }

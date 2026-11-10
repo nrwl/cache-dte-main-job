@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { SubscriptionsInsightsSummary } from '@org/shop-feature-subscriptions-insights';
 import { StoreLocatorOverviewFilters } from './store-locator-overview-filters';
 import { StoreLocatorOverviewHeader } from './store-locator-overview-header';
 import { StoreLocatorOverviewPanel } from './store-locator-overview-panel';
@@ -54,7 +53,6 @@ export function StoreLocatorOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <SubscriptionsInsightsSummary compact />
         </div>
       </div>
     </section>

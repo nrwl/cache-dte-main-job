@@ -1,6 +1,5 @@
 import { i18nNumber } from '@org/shop-util-i18n-number';
-import { i18nCode } from '@org/shop-util-i18n-code';
-import { asyncCode } from '@org/shop-util-async-code';
+import { storageNumber } from '@org/shop-util-storage-number';
 import type { MarketingPanelProps } from './marketing-panel.types';
 import { resolveMarketingPanelStyle } from './marketing-panel-variants';
 
@@ -15,7 +14,7 @@ export function MarketingPanel({
 }: MarketingPanelProps) {
   const formatted = value === undefined ? '' : i18nNumber(value);
   const style = resolveMarketingPanelStyle(tone, size);
-  const ariaLabel = asyncCode(i18nCode(label));
+  const ariaLabel = storageNumber(label);
 
   const handleClick = () => {
     if (onSelect) {

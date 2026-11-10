@@ -1,4 +1,4 @@
-import { DataChip } from '@org/shop-ui-data-chip';
+import { NavigationBanner } from '@org/shop-ui-navigation-banner';
 import type { ReturnsListItem } from './returns-list.model';
 import { RETURNS_LIST_FEATURE } from './returns-list.routes';
 import {
@@ -58,7 +58,7 @@ export function ReturnsListTable({
             <td>{formatReturnsListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataChip
+              <NavigationBanner
                 label={item.status}
                 tone={returnsListStatusTone(item.status)}
                 size="sm"

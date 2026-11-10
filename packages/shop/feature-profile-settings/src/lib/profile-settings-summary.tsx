@@ -1,4 +1,4 @@
-import { LayoutHeaderGroup } from '@org/shop-ui-layout-header';
+import { CoreToolbarGroup } from '@org/shop-ui-core-toolbar';
 import { buildProfileSettingsItems } from './profile-settings.model';
 import { PROFILE_SETTINGS_FEATURE } from './profile-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function ProfileSettingsSummary({
       <h3 className="feature-summary-title">
         {PROFILE_SETTINGS_FEATURE.title}
       </h3>
-      <LayoutHeaderGroup
+      <CoreToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

@@ -1,4 +1,5 @@
-import { i18nAddress } from '@org/shop-util-i18n-address';
+import { storageCurrency } from '@org/shop-util-storage-currency';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { InputsStatProps } from './inputs-stat.types';
 import { resolveInputsStatStyle } from './inputs-stat-variants';
 
@@ -11,7 +12,7 @@ export function InputsStat({
   onSelect,
   children,
 }: InputsStatProps) {
-  const formatted = value === undefined ? '' : i18nAddress(value);
+  const formatted = value === undefined ? '' : storageCurrency(value);
   const style = resolveInputsStatStyle(tone, size);
   const ariaLabel = label;
 
@@ -36,6 +37,7 @@ export function InputsStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <LayoutPanel label="Layout Panel" value={value} tone={tone} size="sm" />
     </div>
   );
 }

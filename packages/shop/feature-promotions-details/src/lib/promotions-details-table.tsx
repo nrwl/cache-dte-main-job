@@ -1,4 +1,4 @@
-import { OverlayList } from '@org/shop-ui-overlay-list';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { PromotionsDetailsItem } from './promotions-details.model';
 import { PROMOTIONS_DETAILS_FEATURE } from './promotions-details.routes';
 import {
@@ -58,7 +58,7 @@ export function PromotionsDetailsTable({
             <td>{formatPromotionsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayList
+              <LayoutPanel
                 label={item.status}
                 tone={promotionsDetailsStatusTone(item.status)}
                 size="sm"

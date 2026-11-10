@@ -1,4 +1,4 @@
-import { CoreList } from '@org/shop-ui-core-list';
+import { MediaBadge } from '@org/shop-ui-media-badge';
 import type { AnalyticsSettingsItem } from './analytics-settings.model';
 import { ANALYTICS_SETTINGS_FEATURE } from './analytics-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function AnalyticsSettingsTable({
             <td>{formatAnalyticsSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CoreList
+              <MediaBadge
                 label={item.status}
                 tone={analyticsSettingsStatusTone(item.status)}
                 size="sm"

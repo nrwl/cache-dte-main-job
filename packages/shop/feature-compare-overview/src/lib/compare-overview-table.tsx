@@ -1,4 +1,4 @@
-import { FormsStat } from '@org/shop-ui-forms-stat';
+import { MediaBanner } from '@org/shop-ui-media-banner';
 import type { CompareOverviewItem } from './compare-overview.model';
 import { COMPARE_OVERVIEW_FEATURE } from './compare-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function CompareOverviewTable({
             <td>{formatCompareOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsStat
+              <MediaBanner
                 label={item.status}
                 tone={compareOverviewStatusTone(item.status)}
                 size="sm"

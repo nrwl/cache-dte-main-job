@@ -1,4 +1,4 @@
-import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import { GIFT_CARDS_LIST_FEATURE } from './gift-cards-list.routes';
 
 export interface GiftCardsListHeaderProps {
@@ -26,8 +26,8 @@ export function GiftCardsListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceToolbar label="Items" value={count} tone="info" />
-        <CommerceToolbar label="Total" value={total} tone="success" />
+        <MarketingBadge label="Items" value={count} tone="info" />
+        <MarketingBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

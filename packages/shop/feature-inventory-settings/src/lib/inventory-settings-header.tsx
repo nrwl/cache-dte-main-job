@@ -1,4 +1,4 @@
-import { TypographyHeader } from '@org/shop-ui-typography-header';
+import { DataBadge } from '@org/shop-ui-data-badge';
 import { INVENTORY_SETTINGS_FEATURE } from './inventory-settings.routes';
 
 export interface InventorySettingsHeaderProps {
@@ -27,8 +27,8 @@ export function InventorySettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyHeader label="Items" value={count} tone="info" />
-        <TypographyHeader label="Total" value={total} tone="success" />
+        <DataBadge label="Items" value={count} tone="info" />
+        <DataBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { FeedbackChip } from '@org/shop-ui-feedback-chip';
+import { MediaBanner } from '@org/shop-ui-media-banner';
 import type { TrackingSettingsItem } from './tracking-settings.model';
 import { TRACKING_SETTINGS_FEATURE } from './tracking-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function TrackingSettingsTable({
             <td>{formatTrackingSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackChip
+              <MediaBanner
                 label={item.status}
                 tone={trackingSettingsStatusTone(item.status)}
                 size="sm"

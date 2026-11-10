@@ -21,7 +21,7 @@ export interface FeedbackDetailsTotals {
   archived: number;
 }
 
-export const FEEDBACK_DETAILS_ITEM_COUNT = 10;
+export const FEEDBACK_DETAILS_ITEM_COUNT = 5;
 
 export const FEEDBACK_DETAILS_STATUSES: ReadonlyArray<FeedbackDetailsStatus> = [
   'active',

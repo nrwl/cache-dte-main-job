@@ -1,4 +1,4 @@
-import { TypographyTileGroup } from '@org/shop-ui-typography-tile';
+import { CorePanelGroup } from '@org/shop-ui-core-panel';
 import { buildLoyaltySettingsItems } from './loyalty-settings.model';
 import { LOYALTY_SETTINGS_FEATURE } from './loyalty-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function LoyaltySettingsSummary({
       <h3 className="feature-summary-title">
         {LOYALTY_SETTINGS_FEATURE.title}
       </h3>
-      <TypographyTileGroup
+      <CorePanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

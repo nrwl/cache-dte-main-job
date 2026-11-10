@@ -1,4 +1,4 @@
-import { CoreStatGroup } from '@org/shop-ui-core-stat';
+import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
 import type { NotificationsListItem } from './notifications-list.model';
 import { NOTIFICATIONS_LIST_FEATURE } from './notifications-list.routes';
 import { describeNotificationsListItem } from './notifications-list.utils';
@@ -39,7 +39,7 @@ export function NotificationsListPanel({
       <p className="feature-panel-description">
         {describeNotificationsListItem(selected)}
       </p>
-      <CoreStatGroup
+      <ChartsBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

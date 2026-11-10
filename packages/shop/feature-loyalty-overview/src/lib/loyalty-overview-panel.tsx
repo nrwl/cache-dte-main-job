@@ -1,6 +1,6 @@
-import { ChartsBannerGroup } from '@org/shop-ui-charts-banner';
-import { FormsChip } from '@org/shop-ui-forms-chip';
-import { MarketingBadge } from '@org/shop-ui-marketing-badge';
+import { MediaPanelGroup } from '@org/shop-ui-media-panel';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { LoyaltyOverviewItem } from './loyalty-overview.model';
 import { LOYALTY_OVERVIEW_FEATURE } from './loyalty-overview.routes';
 import { describeLoyaltyOverviewItem } from './loyalty-overview.utils';
@@ -41,7 +41,7 @@ export function LoyaltyOverviewPanel({
       <p className="feature-panel-description">
         {describeLoyaltyOverviewItem(selected)}
       </p>
-      <ChartsBannerGroup
+      <MediaPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function LoyaltyOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsChip
-          label="Forms Chip"
+        <LayoutStat
+          label="Layout Stat"
           value={selected.product.rating}
           size="sm"
         />
-        <MarketingBadge
-          label="Marketing Badge"
+        <CoreToolbar
+          label="Core Toolbar"
           value={selected.product.rating}
           size="sm"
         />

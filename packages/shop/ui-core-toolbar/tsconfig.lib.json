@@ -33,13 +33,7 @@
       "path": "../ui-core-panel/tsconfig.lib.json"
     },
     {
-      "path": "../util-validate-date/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-collection-text/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-format-currency/tsconfig.lib.json"
+      "path": "../util-async-currency/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

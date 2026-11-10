@@ -1,4 +1,4 @@
-import { TypographyTile } from '@org/shop-ui-typography-tile';
+import { CorePanel } from '@org/shop-ui-core-panel';
 import { LOYALTY_SETTINGS_FEATURE } from './loyalty-settings.routes';
 
 export interface LoyaltySettingsHeaderProps {
@@ -26,8 +26,8 @@ export function LoyaltySettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyTile label="Items" value={count} tone="info" />
-        <TypographyTile label="Total" value={total} tone="success" />
+        <CorePanel label="Items" value={count} tone="info" />
+        <CorePanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { CommerceBanner } from '@org/shop-ui-commerce-banner';
+import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
 import type { ShippingDetailsItem } from './shipping-details.model';
 import { SHIPPING_DETAILS_FEATURE } from './shipping-details.routes';
 import {
@@ -58,7 +58,7 @@ export function ShippingDetailsTable({
             <td>{formatShippingDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceBanner
+              <FeedbackToolbar
                 label={item.status}
                 tone={shippingDetailsStatusTone(item.status)}
                 size="sm"

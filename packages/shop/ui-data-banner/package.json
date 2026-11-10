@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-validate-phone": "*",
-    "@org/shop-ui-forms-toolbar": "*"
+    "@org/shop-util-collection-phone": "*",
+    "@org/shop-ui-layout-panel": "*"
   }
 }

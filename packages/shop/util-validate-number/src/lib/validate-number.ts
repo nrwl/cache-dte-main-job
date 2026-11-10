@@ -3,6 +3,7 @@ import {
   clampLength,
   hashString,
   normalizeInput,
+  titleCase,
 } from './validate-number-helpers';
 
 export interface ValidateNumberOptions {
@@ -30,7 +31,7 @@ export const VALIDATE_NUMBER_DEFAULTS: Required<ValidateNumberOptions> = {
 export const VALIDATE_NUMBER_KIND = 'validate-number' as const;
 
 /**
- * Formats a raw value using the "prefixed" strategy.
+ * Formats a raw value using the "title" strategy.
  */
 export function validateNumber(
   value: string | number,
@@ -45,7 +46,7 @@ export function validateNumber(
     return opts.fallback;
   }
   const staged = normalized;
-  const transformed = '#' + staged;
+  const transformed = titleCase(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

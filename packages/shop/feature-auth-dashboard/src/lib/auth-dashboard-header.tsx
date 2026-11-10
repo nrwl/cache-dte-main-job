@@ -1,4 +1,4 @@
-import { DataCard } from '@org/shop-ui-data-card';
+import { TypographyBadge } from '@org/shop-ui-typography-badge';
 import { AUTH_DASHBOARD_FEATURE } from './auth-dashboard.routes';
 
 export interface AuthDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function AuthDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataCard label="Items" value={count} tone="info" />
-        <DataCard label="Total" value={total} tone="success" />
+        <TypographyBadge label="Items" value={count} tone="info" />
+        <TypographyBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { InputsCard } from '@org/shop-ui-inputs-card';
+import { CommerceToolbar } from '@org/shop-ui-commerce-toolbar';
 import { FEEDBACK_DASHBOARD_FEATURE } from './feedback-dashboard.routes';
 
 export interface FeedbackDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function FeedbackDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <InputsCard label="Items" value={count} tone="info" />
-        <InputsCard label="Total" value={total} tone="success" />
+        <CommerceToolbar label="Items" value={count} tone="info" />
+        <CommerceToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

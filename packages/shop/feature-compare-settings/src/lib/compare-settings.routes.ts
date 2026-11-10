@@ -19,7 +19,7 @@ export const COMPARE_SETTINGS_FEATURE: FeatureMeta = {
   testId: COMPARE_SETTINGS_TEST_ID,
   domain: 'compare',
   kind: 'settings',
-  itemCount: 11,
+  itemCount: 10,
 };
 
 export function compareSettingsItemPath(itemId: string): string {

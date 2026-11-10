@@ -1,6 +1,6 @@
-import { mathDate } from '@org/shop-util-math-date';
-import { collectionAddress } from '@org/shop-util-collection-address';
-import { CoreList } from '@org/shop-ui-core-list';
+import { mathName } from '@org/shop-util-math-name';
+import { formatNumber } from '@org/shop-util-format-number';
+import { CoreToolbar } from '@org/shop-ui-core-toolbar';
 import type { FormsPanelProps } from './forms-panel.types';
 import { resolveFormsPanelStyle } from './forms-panel-variants';
 
@@ -13,9 +13,9 @@ export function FormsPanel({
   onSelect,
   children,
 }: FormsPanelProps) {
-  const formatted = value === undefined ? '' : mathDate(value);
+  const formatted = value === undefined ? '' : mathName(value);
   const style = resolveFormsPanelStyle(tone, size);
-  const ariaLabel = collectionAddress(label);
+  const ariaLabel = formatNumber(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +38,7 @@ export function FormsPanel({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreList label="Core List" value={value} tone={tone} size="sm" />
+      <CoreToolbar label="Core Toolbar" value={value} tone={tone} size="sm" />
     </div>
   );
 }

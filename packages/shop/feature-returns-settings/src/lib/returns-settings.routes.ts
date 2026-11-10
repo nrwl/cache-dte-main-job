@@ -19,7 +19,7 @@ export const RETURNS_SETTINGS_FEATURE: FeatureMeta = {
   testId: RETURNS_SETTINGS_TEST_ID,
   domain: 'returns',
   kind: 'settings',
-  itemCount: 6,
+  itemCount: 11,
 };
 
 export function returnsSettingsItemPath(itemId: string): string {

@@ -1,5 +1,5 @@
-import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
-import { LayoutTile } from '@org/shop-ui-layout-tile';
+import { CoreStatGroup } from '@org/shop-ui-core-stat';
+import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
 import type { AuthListItem } from './auth-list.model';
 import { AUTH_LIST_FEATURE } from './auth-list.routes';
 import { describeAuthListItem } from './auth-list.utils';
@@ -37,7 +37,7 @@ export function AuthListPanel({ selected, onClear }: AuthListPanelProps) {
       <p className="feature-panel-description">
         {describeAuthListItem(selected)}
       </p>
-      <MarketingBadgeGroup
+      <CoreStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -48,8 +48,8 @@ export function AuthListPanel({ selected, onClear }: AuthListPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <LayoutTile
-          label="Layout Tile"
+        <FeedbackToolbar
+          label="Feedback Toolbar"
           value={selected.product.rating}
           size="sm"
         />

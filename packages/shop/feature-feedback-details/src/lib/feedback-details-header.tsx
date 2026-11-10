@@ -1,4 +1,4 @@
-import { ChartsTile } from '@org/shop-ui-charts-tile';
+import { MediaStat } from '@org/shop-ui-media-stat';
 import { FEEDBACK_DETAILS_FEATURE } from './feedback-details.routes';
 
 export interface FeedbackDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function FeedbackDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <ChartsTile label="Items" value={count} tone="info" />
-        <ChartsTile label="Total" value={total} tone="success" />
+        <MediaStat label="Items" value={count} tone="info" />
+        <MediaStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

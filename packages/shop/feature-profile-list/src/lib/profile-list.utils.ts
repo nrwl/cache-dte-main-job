@@ -1,4 +1,6 @@
-import { collectionPercent } from '@org/shop-util-collection-percent';
+import { formatNumber } from '@org/shop-util-format-number';
+import { storageName } from '@org/shop-util-storage-name';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
 import {
   emptyProfileListTotals,
   type ProfileListItem,
@@ -70,13 +72,13 @@ export function sortProfileList(
 }
 
 export function describeProfileListItem(item: ProfileListItem): string {
-  const amount = collectionPercent(item.amount);
-  const name = collectionPercent(item.name);
+  const amount = formatNumber(item.amount);
+  const name = collectionCurrency(storageName(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatProfileListAmount(amount: number): string {
-  return collectionPercent(amount);
+  return formatNumber(amount);
 }
 
 export function profileListStatusTone(

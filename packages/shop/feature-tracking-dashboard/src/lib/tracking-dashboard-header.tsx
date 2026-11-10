@@ -1,4 +1,4 @@
-import { TypographyTile } from '@org/shop-ui-typography-tile';
+import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
 import { TRACKING_DASHBOARD_FEATURE } from './tracking-dashboard.routes';
 
 export interface TrackingDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function TrackingDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyTile label="Items" value={count} tone="info" />
-        <TypographyTile label="Total" value={total} tone="success" />
+        <TypographyToolbar label="Items" value={count} tone="info" />
+        <TypographyToolbar label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

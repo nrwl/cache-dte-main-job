@@ -1,4 +1,4 @@
-import { MediaListGroup } from '@org/shop-ui-media-list';
+import { DataToolbarGroup } from '@org/shop-ui-data-toolbar';
 import { buildSupportDetailsItems } from './support-details.model';
 import { SUPPORT_DETAILS_FEATURE } from './support-details.routes';
 import {
@@ -29,7 +29,7 @@ export function SupportDetailsSummary({
       data-testid={`${SUPPORT_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{SUPPORT_DETAILS_FEATURE.title}</h3>
-      <MediaListGroup
+      <DataToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

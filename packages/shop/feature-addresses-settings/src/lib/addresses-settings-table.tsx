@@ -1,4 +1,4 @@
-import { LayoutChip } from '@org/shop-ui-layout-chip';
+import { ChartsStat } from '@org/shop-ui-charts-stat';
 import type { AddressesSettingsItem } from './addresses-settings.model';
 import { ADDRESSES_SETTINGS_FEATURE } from './addresses-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function AddressesSettingsTable({
             <td>{formatAddressesSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <LayoutChip
+              <ChartsStat
                 label={item.status}
                 tone={addressesSettingsStatusTone(item.status)}
                 size="sm"

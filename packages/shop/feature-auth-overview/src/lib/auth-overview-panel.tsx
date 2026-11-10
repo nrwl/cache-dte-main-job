@@ -1,5 +1,4 @@
-import { FormsCardGroup } from '@org/shop-ui-forms-card';
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { FeedbackToolbarGroup } from '@org/shop-ui-feedback-toolbar';
 import type { AuthOverviewItem } from './auth-overview.model';
 import { AUTH_OVERVIEW_FEATURE } from './auth-overview.routes';
 import { describeAuthOverviewItem } from './auth-overview.utils';
@@ -40,7 +39,7 @@ export function AuthOverviewPanel({
       <p className="feature-panel-description">
         {describeAuthOverviewItem(selected)}
       </p>
-      <FormsCardGroup
+      <FeedbackToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function AuthOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <FormsBadge
-          label="Forms Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

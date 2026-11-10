@@ -1,4 +1,4 @@
-import { InputsCardGroup } from '@org/shop-ui-inputs-card';
+import { CommerceToolbarGroup } from '@org/shop-ui-commerce-toolbar';
 import { buildFeedbackDashboardItems } from './feedback-dashboard.model';
 import { FEEDBACK_DASHBOARD_FEATURE } from './feedback-dashboard.routes';
 import {
@@ -31,7 +31,7 @@ export function FeedbackDashboardSummary({
       <h3 className="feature-summary-title">
         {FEEDBACK_DASHBOARD_FEATURE.title}
       </h3>
-      <InputsCardGroup
+      <CommerceToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

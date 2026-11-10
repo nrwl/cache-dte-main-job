@@ -1,4 +1,4 @@
-import { FeedbackChipGroup } from '@org/shop-ui-feedback-chip';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
 import { buildPaymentsOverviewItems } from './payments-overview.model';
 import { PAYMENTS_OVERVIEW_FEATURE } from './payments-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function PaymentsOverviewSummary({
       <h3 className="feature-summary-title">
         {PAYMENTS_OVERVIEW_FEATURE.title}
       </h3>
-      <FeedbackChipGroup
+      <OverlayStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

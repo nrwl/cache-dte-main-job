@@ -1,4 +1,4 @@
-import { CoreCardGroup } from '@org/shop-ui-core-card';
+import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
 import { buildReturnsOverviewItems } from './returns-overview.model';
 import { RETURNS_OVERVIEW_FEATURE } from './returns-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function ReturnsOverviewSummary({
       <h3 className="feature-summary-title">
         {RETURNS_OVERVIEW_FEATURE.title}
       </h3>
-      <CoreCardGroup
+      <NavigationBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

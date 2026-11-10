@@ -1,4 +1,5 @@
-import { InputsBadgeGroup } from '@org/shop-ui-inputs-badge';
+import { OverlayStatGroup } from '@org/shop-ui-overlay-stat';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { CompareDashboardItem } from './compare-dashboard.model';
 import { COMPARE_DASHBOARD_FEATURE } from './compare-dashboard.routes';
 import { describeCompareDashboardItem } from './compare-dashboard.utils';
@@ -39,7 +40,7 @@ export function CompareDashboardPanel({
       <p className="feature-panel-description">
         {describeCompareDashboardItem(selected)}
       </p>
-      <InputsBadgeGroup
+      <OverlayStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function CompareDashboardPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <LayoutStat
+          label="Layout Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,4 +1,4 @@
-import { FormsList } from '@org/shop-ui-forms-list';
+import { NavigationBadge } from '@org/shop-ui-navigation-badge';
 import type { WishlistDashboardItem } from './wishlist-dashboard.model';
 import { WISHLIST_DASHBOARD_FEATURE } from './wishlist-dashboard.routes';
 import {
@@ -58,7 +58,7 @@ export function WishlistDashboardTable({
             <td>{formatWishlistDashboardAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FormsList
+              <NavigationBadge
                 label={item.status}
                 tone={wishlistDashboardStatusTone(item.status)}
                 size="sm"

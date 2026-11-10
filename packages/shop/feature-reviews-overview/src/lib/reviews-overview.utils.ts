@@ -1,5 +1,4 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
-import { storageSlug } from '@org/shop-util-storage-slug';
+import { validateCurrency } from '@org/shop-util-validate-currency';
 import {
   emptyReviewsOverviewTotals,
   type ReviewsOverviewItem,
@@ -72,13 +71,13 @@ export function sortReviewsOverview(
 }
 
 export function describeReviewsOverviewItem(item: ReviewsOverviewItem): string {
-  const amount = i18nDate(item.amount);
-  const name = storageSlug(item.name);
+  const amount = validateCurrency(item.amount);
+  const name = validateCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatReviewsOverviewAmount(amount: number): string {
-  return i18nDate(amount);
+  return validateCurrency(amount);
 }
 
 export function reviewsOverviewStatusTone(

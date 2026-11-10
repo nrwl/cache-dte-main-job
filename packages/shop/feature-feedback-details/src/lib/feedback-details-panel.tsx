@@ -1,5 +1,4 @@
-import { TypographyCardGroup } from '@org/shop-ui-typography-card';
-import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
+import { ChartsStatGroup } from '@org/shop-ui-charts-stat';
 import type { FeedbackDetailsItem } from './feedback-details.model';
 import { FEEDBACK_DETAILS_FEATURE } from './feedback-details.routes';
 import { describeFeedbackDetailsItem } from './feedback-details.utils';
@@ -40,7 +39,7 @@ export function FeedbackDetailsPanel({
       <p className="feature-panel-description">
         {describeFeedbackDetailsItem(selected)}
       </p>
-      <TypographyCardGroup
+      <ChartsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function FeedbackDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <LayoutToolbar
-          label="Layout Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

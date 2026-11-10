@@ -19,8 +19,9 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-async-currency": "*",
-    "@org/shop-util-async-slug": "*",
-    "@org/shop-ui-navigation-badge": "*"
+    "@org/shop-util-storage-text": "*",
+    "@org/shop-util-storage-phone": "*",
+    "@org/shop-util-validate-text": "*",
+    "@org/shop-ui-layout-toolbar": "*"
   }
 }

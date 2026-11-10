@@ -1,4 +1,4 @@
-import { DataBadgeGroup } from '@org/shop-ui-data-badge';
+import { MarketingBadgeGroup } from '@org/shop-ui-marketing-badge';
 import { buildWishlistDetailsItems } from './wishlist-details.model';
 import { WISHLIST_DETAILS_FEATURE } from './wishlist-details.routes';
 import {
@@ -31,7 +31,7 @@ export function WishlistDetailsSummary({
       <h3 className="feature-summary-title">
         {WISHLIST_DETAILS_FEATURE.title}
       </h3>
-      <DataBadgeGroup
+      <MarketingBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

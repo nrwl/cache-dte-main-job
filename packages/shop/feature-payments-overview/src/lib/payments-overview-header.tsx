@@ -1,4 +1,4 @@
-import { FeedbackChip } from '@org/shop-ui-feedback-chip';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import { PAYMENTS_OVERVIEW_FEATURE } from './payments-overview.routes';
 
 export interface PaymentsOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function PaymentsOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackChip label="Items" value={count} tone="info" />
-        <FeedbackChip label="Total" value={total} tone="success" />
+        <OverlayStat label="Items" value={count} tone="info" />
+        <OverlayStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

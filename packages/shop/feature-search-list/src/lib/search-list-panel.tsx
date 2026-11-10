@@ -1,6 +1,5 @@
-import { NavigationListGroup } from '@org/shop-ui-navigation-list';
-import { MediaStat } from '@org/shop-ui-media-stat';
-import { CoreChip } from '@org/shop-ui-core-chip';
+import { LayoutBannerGroup } from '@org/shop-ui-layout-banner';
+import { ChartsPanel } from '@org/shop-ui-charts-panel';
 import type { SearchListItem } from './search-list.model';
 import { SEARCH_LIST_FEATURE } from './search-list.routes';
 import { describeSearchListItem } from './search-list.utils';
@@ -38,7 +37,7 @@ export function SearchListPanel({ selected, onClear }: SearchListPanelProps) {
       <p className="feature-panel-description">
         {describeSearchListItem(selected)}
       </p>
-      <NavigationListGroup
+      <LayoutBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,12 +48,11 @@ export function SearchListPanel({ selected, onClear }: SearchListPanelProps) {
         ]}
       />
       <div className="feature-panel-extra">
-        <MediaStat
-          label="Media Stat"
+        <ChartsPanel
+          label="Charts Panel"
           value={selected.product.rating}
           size="sm"
         />
-        <CoreChip label="Core Chip" value={selected.product.rating} size="sm" />
       </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (

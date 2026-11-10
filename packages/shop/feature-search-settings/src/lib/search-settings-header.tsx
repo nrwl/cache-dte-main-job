@@ -1,4 +1,4 @@
-import { TypographyToolbar } from '@org/shop-ui-typography-toolbar';
+import { MarketingPanel } from '@org/shop-ui-marketing-panel';
 import { SEARCH_SETTINGS_FEATURE } from './search-settings.routes';
 
 export interface SearchSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function SearchSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <TypographyToolbar label="Items" value={count} tone="info" />
-        <TypographyToolbar label="Total" value={total} tone="success" />
+        <MarketingPanel label="Items" value={count} tone="info" />
+        <MarketingPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

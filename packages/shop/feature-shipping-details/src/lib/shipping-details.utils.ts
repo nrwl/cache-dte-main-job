@@ -1,4 +1,6 @@
-import { collectionPhone } from '@org/shop-util-collection-phone';
+import { mathNumber } from '@org/shop-util-math-number';
+import { validateNumber } from '@org/shop-util-validate-number';
+import { validateName } from '@org/shop-util-validate-name';
 import {
   emptyShippingDetailsTotals,
   type ShippingDetailsItem,
@@ -71,13 +73,13 @@ export function sortShippingDetails(
 }
 
 export function describeShippingDetailsItem(item: ShippingDetailsItem): string {
-  const amount = collectionPhone(item.amount);
-  const name = collectionPhone(item.name);
+  const amount = mathNumber(item.amount);
+  const name = validateName(validateNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatShippingDetailsAmount(amount: number): string {
-  return collectionPhone(amount);
+  return mathNumber(amount);
 }
 
 export function shippingDetailsStatusTone(

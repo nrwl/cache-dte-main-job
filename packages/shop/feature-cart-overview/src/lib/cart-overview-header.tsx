@@ -1,4 +1,4 @@
-import { LayoutChip } from '@org/shop-ui-layout-chip';
+import { NavigationStat } from '@org/shop-ui-navigation-stat';
 import { CART_OVERVIEW_FEATURE } from './cart-overview.routes';
 
 export interface CartOverviewHeaderProps {
@@ -26,8 +26,8 @@ export function CartOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <LayoutChip label="Items" value={count} tone="info" />
-        <LayoutChip label="Total" value={total} tone="success" />
+        <NavigationStat label="Items" value={count} tone="info" />
+        <NavigationStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,4 +1,4 @@
-import { TypographyHeaderGroup } from '@org/shop-ui-typography-header';
+import { CommerceStatGroup } from '@org/shop-ui-commerce-stat';
 import type { AccountOverviewItem } from './account-overview.model';
 import { ACCOUNT_OVERVIEW_FEATURE } from './account-overview.routes';
 import { describeAccountOverviewItem } from './account-overview.utils';
@@ -39,7 +39,7 @@ export function AccountOverviewPanel({
       <p className="feature-panel-description">
         {describeAccountOverviewItem(selected)}
       </p>
-      <TypographyHeaderGroup
+      <CommerceStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

@@ -1,6 +1,6 @@
-import { mathNumber } from '@org/shop-util-math-number';
-import { mathName } from '@org/shop-util-math-name';
-import { validateCurrency } from '@org/shop-util-validate-currency';
+import { asyncPhone } from '@org/shop-util-async-phone';
+import { collectionCurrency } from '@org/shop-util-collection-currency';
+import { formatName } from '@org/shop-util-format-name';
 import {
   emptyPaymentsListTotals,
   type PaymentsListItem,
@@ -72,13 +72,13 @@ export function sortPaymentsList(
 }
 
 export function describePaymentsListItem(item: PaymentsListItem): string {
-  const amount = mathNumber(item.amount);
-  const name = validateCurrency(mathName(item.name));
+  const amount = asyncPhone(item.amount);
+  const name = formatName(collectionCurrency(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPaymentsListAmount(amount: number): string {
-  return mathNumber(amount);
+  return asyncPhone(amount);
 }
 
 export function paymentsListStatusTone(

@@ -30,22 +30,16 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-storage-code/tsconfig.lib.json"
+      "path": "../util-i18n-currency/tsconfig.lib.json"
     },
     {
-      "path": "../ui-navigation-banner/tsconfig.lib.json"
+      "path": "../ui-overlay-panel/tsconfig.lib.json"
     },
     {
-      "path": "../ui-charts-list/tsconfig.lib.json"
+      "path": "../ui-overlay-toolbar/tsconfig.lib.json"
     },
     {
-      "path": "../ui-navigation-stat/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-commerce-badge/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-media-badge/tsconfig.lib.json"
+      "path": "../ui-layout-panel/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

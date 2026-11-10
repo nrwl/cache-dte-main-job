@@ -1,4 +1,4 @@
-import { FormsTileGroup } from '@org/shop-ui-forms-tile';
+import { FormsToolbarGroup } from '@org/shop-ui-forms-toolbar';
 import type { FeedbackDashboardItem } from './feedback-dashboard.model';
 import { FEEDBACK_DASHBOARD_FEATURE } from './feedback-dashboard.routes';
 import { describeFeedbackDashboardItem } from './feedback-dashboard.utils';
@@ -39,7 +39,7 @@ export function FeedbackDashboardPanel({
       <p className="feature-panel-description">
         {describeFeedbackDashboardItem(selected)}
       </p>
-      <FormsTileGroup
+      <FormsToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

@@ -1,4 +1,4 @@
-import { DataCardGroup } from '@org/shop-ui-data-card';
+import { MarketingToolbarGroup } from '@org/shop-ui-marketing-toolbar';
 import { buildAuthDetailsItems } from './auth-details.model';
 import { AUTH_DETAILS_FEATURE } from './auth-details.routes';
 import {
@@ -29,7 +29,7 @@ export function AuthDetailsSummary({
       data-testid={`${AUTH_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{AUTH_DETAILS_FEATURE.title}</h3>
-      <DataCardGroup
+      <MarketingToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

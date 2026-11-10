@@ -30,19 +30,31 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-format-address/tsconfig.lib.json"
+      "path": "../feature-orders-list/tsconfig.lib.json"
     },
     {
-      "path": "../ui-navigation-stat/tsconfig.lib.json"
+      "path": "../util-collection-currency/tsconfig.lib.json"
     },
     {
-      "path": "../ui-data-tile/tsconfig.lib.json"
+      "path": "../util-storage-number/tsconfig.lib.json"
     },
     {
-      "path": "../ui-forms-chip/tsconfig.lib.json"
+      "path": "../util-math-currency/tsconfig.lib.json"
     },
     {
-      "path": "../ui-feedback-stat/tsconfig.lib.json"
+      "path": "../ui-overlay-stat/tsconfig.lib.json"
+    },
+    {
+      "path": "../ui-navigation-badge/tsconfig.lib.json"
+    },
+    {
+      "path": "../ui-typography-panel/tsconfig.lib.json"
+    },
+    {
+      "path": "../ui-charts-toolbar/tsconfig.lib.json"
+    },
+    {
+      "path": "../ui-feedback-badge/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

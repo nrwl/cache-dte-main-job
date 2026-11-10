@@ -1,5 +1,4 @@
-import { NavigationHeaderGroup } from '@org/shop-ui-navigation-header';
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { ChartsBadgeGroup } from '@org/shop-ui-charts-badge';
 import type { ProfileOverviewItem } from './profile-overview.model';
 import { PROFILE_OVERVIEW_FEATURE } from './profile-overview.routes';
 import { describeProfileOverviewItem } from './profile-overview.utils';
@@ -40,7 +39,7 @@ export function ProfileOverviewPanel({
       <p className="feature-panel-description">
         {describeProfileOverviewItem(selected)}
       </p>
-      <NavigationHeaderGroup
+      <ChartsBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function ProfileOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <LayoutBanner
-          label="Layout Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,6 +1,4 @@
-import { FormsChipGroup } from '@org/shop-ui-forms-chip';
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { DataToolbarGroup } from '@org/shop-ui-data-toolbar';
 import type { SupportListItem } from './support-list.model';
 import { SUPPORT_LIST_FEATURE } from './support-list.routes';
 import { describeSupportListItem } from './support-list.utils';
@@ -38,7 +36,7 @@ export function SupportListPanel({ selected, onClear }: SupportListPanelProps) {
       <p className="feature-panel-description">
         {describeSupportListItem(selected)}
       </p>
-      <FormsChipGroup
+      <DataToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -48,18 +46,7 @@ export function SupportListPanel({ selected, onClear }: SupportListPanelProps) {
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <FeedbackStat
-          label="Feedback Stat"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FormsBadge
-          label="Forms Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

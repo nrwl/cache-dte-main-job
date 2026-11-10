@@ -30,22 +30,16 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-validate-number/tsconfig.lib.json"
+      "path": "../util-validate-phone/tsconfig.lib.json"
     },
     {
-      "path": "../util-i18n-address/tsconfig.lib.json"
+      "path": "../ui-marketing-panel/tsconfig.lib.json"
     },
     {
-      "path": "../ui-charts-tile/tsconfig.lib.json"
+      "path": "../ui-data-toolbar/tsconfig.lib.json"
     },
     {
-      "path": "../ui-overlay-banner/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-data-card/tsconfig.lib.json"
-    },
-    {
-      "path": "../ui-marketing-header/tsconfig.lib.json"
+      "path": "../ui-navigation-banner/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

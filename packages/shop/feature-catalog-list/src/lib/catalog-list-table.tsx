@@ -1,4 +1,4 @@
-import { InputsToolbar } from '@org/shop-ui-inputs-toolbar';
+import { FormsPanel } from '@org/shop-ui-forms-panel';
 import type { CatalogListItem } from './catalog-list.model';
 import { CATALOG_LIST_FEATURE } from './catalog-list.routes';
 import {
@@ -58,7 +58,7 @@ export function CatalogListTable({
             <td>{formatCatalogListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsToolbar
+              <FormsPanel
                 label={item.status}
                 tone={catalogListStatusTone(item.status)}
                 size="sm"

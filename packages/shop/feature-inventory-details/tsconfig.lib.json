@@ -30,22 +30,28 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../feature-reviews-history/tsconfig.lib.json"
+      "path": "../util-validate-name/tsconfig.lib.json"
     },
     {
-      "path": "../util-validate-date/tsconfig.lib.json"
+      "path": "../util-math-name/tsconfig.lib.json"
     },
     {
-      "path": "../ui-forms-banner/tsconfig.lib.json"
+      "path": "../util-async-number/tsconfig.lib.json"
     },
     {
-      "path": "../ui-forms-badge/tsconfig.lib.json"
+      "path": "../ui-layout-banner/tsconfig.lib.json"
     },
     {
-      "path": "../ui-core-list/tsconfig.lib.json"
+      "path": "../ui-media-badge/tsconfig.lib.json"
     },
     {
-      "path": "../ui-forms-tile/tsconfig.lib.json"
+      "path": "../ui-navigation-stat/tsconfig.lib.json"
+    },
+    {
+      "path": "../ui-media-panel/tsconfig.lib.json"
+    },
+    {
+      "path": "../ui-data-banner/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

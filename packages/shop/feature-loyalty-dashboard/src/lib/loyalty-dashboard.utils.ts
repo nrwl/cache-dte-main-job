@@ -1,4 +1,5 @@
-import { mathPhone } from '@org/shop-util-math-phone';
+import { collectionText } from '@org/shop-util-collection-text';
+import { collectionNumber } from '@org/shop-util-collection-number';
 import {
   emptyLoyaltyDashboardTotals,
   type LoyaltyDashboardItem,
@@ -73,13 +74,13 @@ export function sortLoyaltyDashboard(
 export function describeLoyaltyDashboardItem(
   item: LoyaltyDashboardItem,
 ): string {
-  const amount = mathPhone(item.amount);
-  const name = mathPhone(item.name);
+  const amount = collectionText(item.amount);
+  const name = collectionNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatLoyaltyDashboardAmount(amount: number): string {
-  return mathPhone(amount);
+  return collectionText(amount);
 }
 
 export function loyaltyDashboardStatusTone(

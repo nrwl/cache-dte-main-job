@@ -1,4 +1,4 @@
-import { FeedbackHeader } from '@org/shop-ui-feedback-header';
+import { CommercePanel } from '@org/shop-ui-commerce-panel';
 import type { OrdersSettingsItem } from './orders-settings.model';
 import { ORDERS_SETTINGS_FEATURE } from './orders-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function OrdersSettingsTable({
             <td>{formatOrdersSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackHeader
+              <CommercePanel
                 label={item.status}
                 tone={ordersSettingsStatusTone(item.status)}
                 size="sm"

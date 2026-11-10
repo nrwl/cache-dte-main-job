@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-format-date": "*",
-    "@org/shop-ui-layout-banner": "*"
+    "@org/shop-util-async-text": "*",
+    "@org/shop-util-validate-text": "*"
   }
 }

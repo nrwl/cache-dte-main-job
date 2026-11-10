@@ -25,10 +25,7 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../util-async-address/tsconfig.lib.json"
-    },
-    {
-      "path": "../util-i18n-currency/tsconfig.lib.json"
+      "path": "../util-validate-currency/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

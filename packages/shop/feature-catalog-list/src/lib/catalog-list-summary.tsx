@@ -1,4 +1,4 @@
-import { MarketingCardGroup } from '@org/shop-ui-marketing-card';
+import { FeedbackStatGroup } from '@org/shop-ui-feedback-stat';
 import { buildCatalogListItems } from './catalog-list.model';
 import { CATALOG_LIST_FEATURE } from './catalog-list.routes';
 import {
@@ -29,7 +29,7 @@ export function CatalogListSummary({
       data-testid={`${CATALOG_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{CATALOG_LIST_FEATURE.title}</h3>
-      <MarketingCardGroup
+      <FeedbackStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

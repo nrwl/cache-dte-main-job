@@ -1,4 +1,4 @@
-import { TypographyBadgeGroup } from '@org/shop-ui-typography-badge';
+import { MediaPanelGroup } from '@org/shop-ui-media-panel';
 import { buildCheckoutSettingsItems } from './checkout-settings.model';
 import { CHECKOUT_SETTINGS_FEATURE } from './checkout-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function CheckoutSettingsSummary({
       <h3 className="feature-summary-title">
         {CHECKOUT_SETTINGS_FEATURE.title}
       </h3>
-      <TypographyBadgeGroup
+      <MediaPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

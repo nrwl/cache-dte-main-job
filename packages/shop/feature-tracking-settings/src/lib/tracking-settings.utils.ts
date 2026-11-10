@@ -1,4 +1,5 @@
-import { formatCurrency } from '@org/shop-util-format-currency';
+import { i18nPhone } from '@org/shop-util-i18n-phone';
+import { i18nText } from '@org/shop-util-i18n-text';
 import {
   emptyTrackingSettingsTotals,
   type TrackingSettingsItem,
@@ -73,13 +74,13 @@ export function sortTrackingSettings(
 export function describeTrackingSettingsItem(
   item: TrackingSettingsItem,
 ): string {
-  const amount = formatCurrency(item.amount);
-  const name = formatCurrency(item.name);
+  const amount = i18nPhone(item.amount);
+  const name = i18nText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatTrackingSettingsAmount(amount: number): string {
-  return formatCurrency(amount);
+  return i18nPhone(amount);
 }
 
 export function trackingSettingsStatusTone(

@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { AccountDashboardSummary } from '@org/shop-feature-account-dashboard';
 import { CompareOverviewFilters } from './compare-overview-filters';
 import { CompareOverviewHeader } from './compare-overview-header';
 import { CompareOverviewPanel } from './compare-overview-panel';
@@ -53,6 +54,7 @@ export function CompareOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <AccountDashboardSummary compact />
         </div>
       </div>
     </section>

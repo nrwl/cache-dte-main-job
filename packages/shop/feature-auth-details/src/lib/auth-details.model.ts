@@ -21,7 +21,7 @@ export interface AuthDetailsTotals {
   archived: number;
 }
 
-export const AUTH_DETAILS_ITEM_COUNT = 9;
+export const AUTH_DETAILS_ITEM_COUNT = 5;
 
 export const AUTH_DETAILS_STATUSES: ReadonlyArray<AuthDetailsStatus> = [
   'active',

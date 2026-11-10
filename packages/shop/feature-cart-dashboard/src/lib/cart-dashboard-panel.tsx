@@ -1,4 +1,4 @@
-import { CommercePanelGroup } from '@org/shop-ui-commerce-panel';
+import { ChartsStatGroup } from '@org/shop-ui-charts-stat';
 import type { CartDashboardItem } from './cart-dashboard.model';
 import { CART_DASHBOARD_FEATURE } from './cart-dashboard.routes';
 import { describeCartDashboardItem } from './cart-dashboard.utils';
@@ -39,7 +39,7 @@ export function CartDashboardPanel({
       <p className="feature-panel-description">
         {describeCartDashboardItem(selected)}
       </p>
-      <CommercePanelGroup
+      <ChartsStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

@@ -1,4 +1,4 @@
-import { CommerceStat } from '@org/shop-ui-commerce-stat';
+import { ChartsStat } from '@org/shop-ui-charts-stat';
 import { TRACKING_DETAILS_FEATURE } from './tracking-details.routes';
 
 export interface TrackingDetailsHeaderProps {
@@ -26,8 +26,8 @@ export function TrackingDetailsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CommerceStat label="Items" value={count} tone="info" />
-        <CommerceStat label="Total" value={total} tone="success" />
+        <ChartsStat label="Items" value={count} tone="info" />
+        <ChartsStat label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

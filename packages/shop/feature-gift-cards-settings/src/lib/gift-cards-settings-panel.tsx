@@ -1,4 +1,5 @@
-import { DataTileGroup } from '@org/shop-ui-data-tile';
+import { FormsPanelGroup } from '@org/shop-ui-forms-panel';
+import { TypographyPanel } from '@org/shop-ui-typography-panel';
 import type { GiftCardsSettingsItem } from './gift-cards-settings.model';
 import { GIFT_CARDS_SETTINGS_FEATURE } from './gift-cards-settings.routes';
 import { describeGiftCardsSettingsItem } from './gift-cards-settings.utils';
@@ -39,7 +40,7 @@ export function GiftCardsSettingsPanel({
       <p className="feature-panel-description">
         {describeGiftCardsSettingsItem(selected)}
       </p>
-      <DataTileGroup
+      <FormsPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +50,13 @@ export function GiftCardsSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <TypographyPanel
+          label="Typography Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

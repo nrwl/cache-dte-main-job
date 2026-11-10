@@ -30,10 +30,10 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-forms-card/tsconfig.lib.json"
+      "path": "../util-storage-name/tsconfig.lib.json"
     },
     {
-      "path": "../util-async-address/tsconfig.lib.json"
+      "path": "../util-storage-text/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

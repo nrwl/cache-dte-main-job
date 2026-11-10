@@ -1,4 +1,4 @@
-import { FormsTileGroup } from '@org/shop-ui-forms-tile';
+import { DataBannerGroup } from '@org/shop-ui-data-banner';
 import { buildInventoryDetailsItems } from './inventory-details.model';
 import { INVENTORY_DETAILS_FEATURE } from './inventory-details.routes';
 import {
@@ -31,7 +31,7 @@ export function InventoryDetailsSummary({
       <h3 className="feature-summary-title">
         {INVENTORY_DETAILS_FEATURE.title}
       </h3>
-      <FormsTileGroup
+      <DataBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

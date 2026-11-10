@@ -1,6 +1,5 @@
-import { asyncNumber } from '@org/shop-util-async-number';
-import { formatText } from '@org/shop-util-format-text';
-import { asyncCode } from '@org/shop-util-async-code';
+import { validateNumber } from '@org/shop-util-validate-number';
+import { validateName } from '@org/shop-util-validate-name';
 import {
   emptyAnalyticsOverviewTotals,
   type AnalyticsOverviewItem,
@@ -75,13 +74,13 @@ export function sortAnalyticsOverview(
 export function describeAnalyticsOverviewItem(
   item: AnalyticsOverviewItem,
 ): string {
-  const amount = asyncNumber(item.amount);
-  const name = asyncCode(formatText(item.name));
+  const amount = validateNumber(item.amount);
+  const name = validateName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAnalyticsOverviewAmount(amount: number): string {
-  return asyncNumber(amount);
+  return validateNumber(amount);
 }
 
 export function analyticsOverviewStatusTone(

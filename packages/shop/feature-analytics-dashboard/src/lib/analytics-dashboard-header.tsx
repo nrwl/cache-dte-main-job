@@ -1,4 +1,4 @@
-import { FormsBadge } from '@org/shop-ui-forms-badge';
+import { LayoutBadge } from '@org/shop-ui-layout-badge';
 import { ANALYTICS_DASHBOARD_FEATURE } from './analytics-dashboard.routes';
 
 export interface AnalyticsDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function AnalyticsDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FormsBadge label="Items" value={count} tone="info" />
-        <FormsBadge label="Total" value={total} tone="success" />
+        <LayoutBadge label="Items" value={count} tone="info" />
+        <LayoutBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

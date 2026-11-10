@@ -19,8 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-format-number": "*",
-    "@org/shop-util-i18n-slug": "*",
-    "@org/shop-ui-feedback-toolbar": "*"
+    "@org/shop-util-storage-number": "*",
+    "@org/shop-ui-data-panel": "*"
   }
 }

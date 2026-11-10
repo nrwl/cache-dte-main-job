@@ -1,6 +1,5 @@
-import { OverlayListGroup } from '@org/shop-ui-overlay-list';
-import { DataList } from '@org/shop-ui-data-list';
-import { OverlayBanner } from '@org/shop-ui-overlay-banner';
+import { LayoutBadgeGroup } from '@org/shop-ui-layout-badge';
+import { ChartsStat } from '@org/shop-ui-charts-stat';
 import type { ReturnsOverviewItem } from './returns-overview.model';
 import { RETURNS_OVERVIEW_FEATURE } from './returns-overview.routes';
 import { describeReturnsOverviewItem } from './returns-overview.utils';
@@ -41,7 +40,7 @@ export function ReturnsOverviewPanel({
       <p className="feature-panel-description">
         {describeReturnsOverviewItem(selected)}
       </p>
-      <OverlayListGroup
+      <LayoutBadgeGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,9 +51,8 @@ export function ReturnsOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <DataList label="Data List" value={selected.product.rating} size="sm" />
-        <OverlayBanner
-          label="Overlay Banner"
+        <ChartsStat
+          label="Charts Stat"
           value={selected.product.rating}
           size="sm"
         />

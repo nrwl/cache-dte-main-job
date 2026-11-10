@@ -1,4 +1,4 @@
-import { FeedbackHeaderGroup } from '@org/shop-ui-feedback-header';
+import { CoreBannerGroup } from '@org/shop-ui-core-banner';
 import { buildReturnsSettingsItems } from './returns-settings.model';
 import { RETURNS_SETTINGS_FEATURE } from './returns-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function ReturnsSettingsSummary({
       <h3 className="feature-summary-title">
         {RETURNS_SETTINGS_FEATURE.title}
       </h3>
-      <FeedbackHeaderGroup
+      <CoreBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

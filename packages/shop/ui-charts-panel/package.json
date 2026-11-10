@@ -19,7 +19,9 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-storage-percent": "*",
-    "@org/shop-ui-feedback-stat": "*"
+    "@org/shop-util-i18n-phone": "*",
+    "@org/shop-util-i18n-name": "*",
+    "@org/shop-util-math-number": "*",
+    "@org/shop-ui-overlay-badge": "*"
   }
 }

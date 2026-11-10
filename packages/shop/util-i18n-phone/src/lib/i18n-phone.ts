@@ -1,11 +1,10 @@
 import type { Product } from '@org/models';
-import { i18nCurrency } from '@org/shop-util-i18n-currency';
-import { asyncAddress } from '@org/shop-util-async-address';
+import { validateCurrency } from '@org/shop-util-validate-currency';
 import {
   clampLength,
   hashString,
+  kebabCase,
   normalizeInput,
-  titleCase,
 } from './i18n-phone-helpers';
 
 export interface I18nPhoneOptions {
@@ -33,7 +32,7 @@ export const I18N_PHONE_DEFAULTS: Required<I18nPhoneOptions> = {
 export const I18N_PHONE_KIND = 'i18n-phone' as const;
 
 /**
- * Formats a raw value using the "title" strategy.
+ * Formats a raw value using the "kebab" strategy.
  */
 export function i18nPhone(
   value: string | number,
@@ -47,11 +46,11 @@ export function i18nPhone(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = [i18nCurrency, asyncAddress].reduce<string>(
+  const staged = [validateCurrency].reduce<string>(
     (acc, fn) => fn(acc),
     normalized,
   );
-  const transformed = titleCase(staged);
+  const transformed = kebabCase(staged);
   return clampLength(transformed, opts.maxLength);
 }
 

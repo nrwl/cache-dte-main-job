@@ -30,25 +30,25 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../feature-promotions-editor/tsconfig.lib.json"
+      "path": "../feature-bundles-overview/tsconfig.lib.json"
     },
     {
-      "path": "../util-validate-slug/tsconfig.lib.json"
+      "path": "../util-validate-name/tsconfig.lib.json"
     },
     {
-      "path": "../ui-navigation-card/tsconfig.lib.json"
+      "path": "../util-async-phone/tsconfig.lib.json"
     },
     {
-      "path": "../ui-marketing-chip/tsconfig.lib.json"
+      "path": "../util-format-phone/tsconfig.lib.json"
     },
     {
-      "path": "../ui-layout-list/tsconfig.lib.json"
+      "path": "../ui-media-toolbar/tsconfig.lib.json"
     },
     {
-      "path": "../ui-forms-badge/tsconfig.lib.json"
+      "path": "../ui-marketing-stat/tsconfig.lib.json"
     },
     {
-      "path": "../ui-core-tile/tsconfig.lib.json"
+      "path": "../ui-marketing-panel/tsconfig.lib.json"
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"

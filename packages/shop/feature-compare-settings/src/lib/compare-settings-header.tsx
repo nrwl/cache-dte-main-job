@@ -1,4 +1,4 @@
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
+import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
 import { COMPARE_SETTINGS_FEATURE } from './compare-settings.routes';
 
 export interface CompareSettingsHeaderProps {
@@ -26,8 +26,8 @@ export function CompareSettingsHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackStat label="Items" value={count} tone="info" />
-        <FeedbackStat label="Total" value={total} tone="success" />
+        <FeedbackBadge label="Items" value={count} tone="info" />
+        <FeedbackBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

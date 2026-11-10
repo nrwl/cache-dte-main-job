@@ -1,5 +1,7 @@
+import { i18nText } from '@org/shop-util-i18n-text';
 import { storageCurrency } from '@org/shop-util-storage-currency';
-import { CoreList } from '@org/shop-ui-core-list';
+import { validateText } from '@org/shop-util-validate-text';
+import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
 import type { FeedbackToolbarProps } from './feedback-toolbar.types';
 import { resolveFeedbackToolbarStyle } from './feedback-toolbar-variants';
 
@@ -12,9 +14,9 @@ export function FeedbackToolbar({
   onSelect,
   children,
 }: FeedbackToolbarProps) {
-  const formatted = value === undefined ? '' : storageCurrency(value);
+  const formatted = value === undefined ? '' : i18nText(value);
   const style = resolveFeedbackToolbarStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = validateText(storageCurrency(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -37,7 +39,12 @@ export function FeedbackToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <CoreList label="Core List" value={value} tone={tone} size="sm" />
+      <LayoutToolbar
+        label="Layout Toolbar"
+        value={value}
+        tone={tone}
+        size="sm"
+      />
     </div>
   );
 }

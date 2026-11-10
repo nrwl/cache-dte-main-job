@@ -1,5 +1,6 @@
-import { ChartsStatGroup } from '@org/shop-ui-charts-stat';
-import { CoreBanner } from '@org/shop-ui-core-banner';
+import { LayoutStatGroup } from '@org/shop-ui-layout-stat';
+import { MarketingStat } from '@org/shop-ui-marketing-stat';
+import { ChartsToolbar } from '@org/shop-ui-charts-toolbar';
 import type { SupportDashboardItem } from './support-dashboard.model';
 import { SUPPORT_DASHBOARD_FEATURE } from './support-dashboard.routes';
 import { describeSupportDashboardItem } from './support-dashboard.utils';
@@ -40,7 +41,7 @@ export function SupportDashboardPanel({
       <p className="feature-panel-description">
         {describeSupportDashboardItem(selected)}
       </p>
-      <ChartsStatGroup
+      <LayoutStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function SupportDashboardPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CoreBanner
-          label="Core Banner"
+        <MarketingStat
+          label="Marketing Stat"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <ChartsToolbar
+          label="Charts Toolbar"
           value={selected.product.rating}
           size="sm"
         />

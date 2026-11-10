@@ -1,5 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { PromotionsEditorSummary } from '@org/shop-feature-promotions-editor';
+import { BundlesOverviewSummary } from '@org/shop-feature-bundles-overview';
 import { StoreLocatorListFilters } from './store-locator-list-filters';
 import { StoreLocatorListHeader } from './store-locator-list-header';
 import { StoreLocatorListPanel } from './store-locator-list-panel';
@@ -54,7 +54,7 @@ export function StoreLocatorListPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <PromotionsEditorSummary compact />
+          <BundlesOverviewSummary compact />
         </div>
       </div>
     </section>

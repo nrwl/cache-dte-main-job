@@ -1,6 +1,4 @@
-import { collectionCode } from '@org/shop-util-collection-code';
-import { formatPhone } from '@org/shop-util-format-phone';
-import { asyncCurrency } from '@org/shop-util-async-currency';
+import { i18nCurrency } from '@org/shop-util-i18n-currency';
 import {
   emptyAddressesDetailsTotals,
   type AddressesDetailsItem,
@@ -75,13 +73,13 @@ export function sortAddressesDetails(
 export function describeAddressesDetailsItem(
   item: AddressesDetailsItem,
 ): string {
-  const amount = collectionCode(item.amount);
-  const name = asyncCurrency(formatPhone(item.name));
+  const amount = i18nCurrency(item.amount);
+  const name = i18nCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAddressesDetailsAmount(amount: number): string {
-  return collectionCode(amount);
+  return i18nCurrency(amount);
 }
 
 export function addressesDetailsStatusTone(

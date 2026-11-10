@@ -1,6 +1,6 @@
-import { OverlayPanelGroup } from '@org/shop-ui-overlay-panel';
-import { NavigationHeader } from '@org/shop-ui-navigation-header';
-import { TypographyStat } from '@org/shop-ui-typography-stat';
+import { CoreStatGroup } from '@org/shop-ui-core-stat';
+import { DataPanel } from '@org/shop-ui-data-panel';
+import { InputsToolbar } from '@org/shop-ui-inputs-toolbar';
 import type { PreordersDetailsItem } from './preorders-details.model';
 import { PREORDERS_DETAILS_FEATURE } from './preorders-details.routes';
 import { describePreordersDetailsItem } from './preorders-details.utils';
@@ -41,7 +41,7 @@ export function PreordersDetailsPanel({
       <p className="feature-panel-description">
         {describePreordersDetailsItem(selected)}
       </p>
-      <OverlayPanelGroup
+      <CoreStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,13 @@ export function PreordersDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <NavigationHeader
-          label="Navigation Header"
+        <DataPanel
+          label="Data Panel"
           value={selected.product.rating}
           size="sm"
         />
-        <TypographyStat
-          label="Typography Stat"
+        <InputsToolbar
+          label="Inputs Toolbar"
           value={selected.product.rating}
           size="sm"
         />

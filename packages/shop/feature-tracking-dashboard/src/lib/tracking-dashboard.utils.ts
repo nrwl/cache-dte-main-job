@@ -1,6 +1,5 @@
-import { mathPhone } from '@org/shop-util-math-phone';
-import { i18nAddress } from '@org/shop-util-i18n-address';
-import { i18nSlug } from '@org/shop-util-i18n-slug';
+import { asyncPhone } from '@org/shop-util-async-phone';
+import { collectionName } from '@org/shop-util-collection-name';
 import {
   emptyTrackingDashboardTotals,
   type TrackingDashboardItem,
@@ -75,13 +74,13 @@ export function sortTrackingDashboard(
 export function describeTrackingDashboardItem(
   item: TrackingDashboardItem,
 ): string {
-  const amount = mathPhone(item.amount);
-  const name = i18nSlug(i18nAddress(item.name));
+  const amount = asyncPhone(item.amount);
+  const name = collectionName(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatTrackingDashboardAmount(amount: number): string {
-  return mathPhone(amount);
+  return asyncPhone(amount);
 }
 
 export function trackingDashboardStatusTone(

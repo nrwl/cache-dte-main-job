@@ -30,10 +30,13 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-core-tile/tsconfig.lib.json"
+      "path": "../util-storage-phone/tsconfig.lib.json"
     },
     {
-      "path": "../util-storage-text/tsconfig.lib.json"
+      "path": "../util-i18n-name/tsconfig.lib.json"
+    },
+    {
+      "path": "../util-math-phone/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

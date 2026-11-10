@@ -1,5 +1,5 @@
-import { LayoutListGroup } from '@org/shop-ui-layout-list';
-import { InputsToolbar } from '@org/shop-ui-inputs-toolbar';
+import { DataBannerGroup } from '@org/shop-ui-data-banner';
+import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
 import type { SupportDetailsItem } from './support-details.model';
 import { SUPPORT_DETAILS_FEATURE } from './support-details.routes';
 import { describeSupportDetailsItem } from './support-details.utils';
@@ -40,7 +40,7 @@ export function SupportDetailsPanel({
       <p className="feature-panel-description">
         {describeSupportDetailsItem(selected)}
       </p>
-      <LayoutListGroup
+      <DataBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +51,8 @@ export function SupportDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <InputsToolbar
-          label="Inputs Toolbar"
+        <FeedbackToolbar
+          label="Feedback Toolbar"
           value={selected.product.rating}
           size="sm"
         />

@@ -1,4 +1,4 @@
-import { NavigationToolbar } from '@org/shop-ui-navigation-toolbar';
+import { LayoutPanel } from '@org/shop-ui-layout-panel';
 import type { LoyaltySettingsItem } from './loyalty-settings.model';
 import { LOYALTY_SETTINGS_FEATURE } from './loyalty-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function LoyaltySettingsTable({
             <td>{formatLoyaltySettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationToolbar
+              <LayoutPanel
                 label={item.status}
                 tone={loyaltySettingsStatusTone(item.status)}
                 size="sm"

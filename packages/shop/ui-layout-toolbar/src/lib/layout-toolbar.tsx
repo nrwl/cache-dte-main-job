@@ -1,7 +1,5 @@
-import { formatCurrency } from '@org/shop-util-format-currency';
-import { mathPercent } from '@org/shop-util-math-percent';
-import { validateCode } from '@org/shop-util-validate-code';
-import { LayoutBanner } from '@org/shop-ui-layout-banner';
+import { mathCurrency } from '@org/shop-util-math-currency';
+import { LayoutStat } from '@org/shop-ui-layout-stat';
 import type { LayoutToolbarProps } from './layout-toolbar.types';
 import { resolveLayoutToolbarStyle } from './layout-toolbar-variants';
 
@@ -14,9 +12,9 @@ export function LayoutToolbar({
   onSelect,
   children,
 }: LayoutToolbarProps) {
-  const formatted = value === undefined ? '' : formatCurrency(value);
+  const formatted = value === undefined ? '' : mathCurrency(value);
   const style = resolveLayoutToolbarStyle(tone, size);
-  const ariaLabel = validateCode(mathPercent(label));
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {
@@ -39,7 +37,7 @@ export function LayoutToolbar({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <LayoutBanner label="Layout Banner" value={value} tone={tone} size="sm" />
+      <LayoutStat label="Layout Stat" value={value} tone={tone} size="sm" />
     </div>
   );
 }

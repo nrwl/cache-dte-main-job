@@ -1,4 +1,4 @@
-import { OverlayBadge } from '@org/shop-ui-overlay-badge';
+import { ChartsBanner } from '@org/shop-ui-charts-banner';
 import type { ReturnsOverviewItem } from './returns-overview.model';
 import { RETURNS_OVERVIEW_FEATURE } from './returns-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function ReturnsOverviewTable({
             <td>{formatReturnsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayBadge
+              <ChartsBanner
                 label={item.status}
                 tone={returnsOverviewStatusTone(item.status)}
                 size="sm"

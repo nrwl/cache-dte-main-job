@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-format-phone": "*",
-    "@org/shop-util-validate-address": "*",
-    "@org/shop-util-validate-phone": "*",
-    "@org/shop-ui-commerce-stat": "*"
+    "@org/shop-util-i18n-number": "*",
+    "@org/shop-util-storage-name": "*",
+    "@org/shop-util-validate-text": "*",
+    "@org/shop-ui-media-stat": "*"
   }
 }

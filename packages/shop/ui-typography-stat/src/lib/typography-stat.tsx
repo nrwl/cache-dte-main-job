@@ -1,4 +1,7 @@
-import { asyncNumber } from '@org/shop-util-async-number';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { mathText } from '@org/shop-util-math-text';
+import { validateName } from '@org/shop-util-validate-name';
+import { OverlayBanner } from '@org/shop-ui-overlay-banner';
 import type { TypographyStatProps } from './typography-stat.types';
 import { resolveTypographyStatStyle } from './typography-stat-variants';
 
@@ -11,9 +14,9 @@ export function TypographyStat({
   onSelect,
   children,
 }: TypographyStatProps) {
-  const formatted = value === undefined ? '' : asyncNumber(value);
+  const formatted = value === undefined ? '' : formatCurrency(value);
   const style = resolveTypographyStatStyle(tone, size);
-  const ariaLabel = label;
+  const ariaLabel = validateName(mathText(label));
 
   const handleClick = () => {
     if (onSelect) {
@@ -36,6 +39,12 @@ export function TypographyStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
+      <OverlayBanner
+        label="Overlay Banner"
+        value={value}
+        tone={tone}
+        size="sm"
+      />
     </div>
   );
 }

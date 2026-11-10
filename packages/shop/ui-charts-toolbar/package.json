@@ -19,7 +19,8 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-storage-text": "*",
-    "@org/shop-ui-core-tile": "*"
+    "@org/shop-util-math-phone": "*",
+    "@org/shop-util-i18n-name": "*",
+    "@org/shop-util-storage-phone": "*"
   }
 }

@@ -21,7 +21,7 @@ export interface PaymentsDashboardTotals {
   archived: number;
 }
 
-export const PAYMENTS_DASHBOARD_ITEM_COUNT = 12;
+export const PAYMENTS_DASHBOARD_ITEM_COUNT = 7;
 
 export const PAYMENTS_DASHBOARD_STATUSES: ReadonlyArray<PaymentsDashboardStatus> =
   ['active', 'pending', 'archived'];

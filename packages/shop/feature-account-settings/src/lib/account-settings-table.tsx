@@ -1,4 +1,4 @@
-import { DataCard } from '@org/shop-ui-data-card';
+import { NavigationStat } from '@org/shop-ui-navigation-stat';
 import type { AccountSettingsItem } from './account-settings.model';
 import { ACCOUNT_SETTINGS_FEATURE } from './account-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function AccountSettingsTable({
             <td>{formatAccountSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <DataCard
+              <NavigationStat
                 label={item.status}
                 tone={accountSettingsStatusTone(item.status)}
                 size="sm"

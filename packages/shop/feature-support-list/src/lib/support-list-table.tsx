@@ -1,4 +1,4 @@
-import { NavigationCard } from '@org/shop-ui-navigation-card';
+import { TypographyStat } from '@org/shop-ui-typography-stat';
 import type { SupportListItem } from './support-list.model';
 import { SUPPORT_LIST_FEATURE } from './support-list.routes';
 import {
@@ -58,7 +58,7 @@ export function SupportListTable({
             <td>{formatSupportListAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationCard
+              <TypographyStat
                 label={item.status}
                 tone={supportListStatusTone(item.status)}
                 size="sm"

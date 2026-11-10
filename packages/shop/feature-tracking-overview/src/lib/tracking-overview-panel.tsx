@@ -1,6 +1,5 @@
-import { NavigationBadgeGroup } from '@org/shop-ui-navigation-badge';
-import { OverlayList } from '@org/shop-ui-overlay-list';
-import { NavigationBanner } from '@org/shop-ui-navigation-banner';
+import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
+import { MarketingStat } from '@org/shop-ui-marketing-stat';
 import type { TrackingOverviewItem } from './tracking-overview.model';
 import { TRACKING_OVERVIEW_FEATURE } from './tracking-overview.routes';
 import { describeTrackingOverviewItem } from './tracking-overview.utils';
@@ -41,7 +40,7 @@ export function TrackingOverviewPanel({
       <p className="feature-panel-description">
         {describeTrackingOverviewItem(selected)}
       </p>
-      <NavigationBadgeGroup
+      <OverlayBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function TrackingOverviewPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <OverlayList
-          label="Overlay List"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <NavigationBanner
-          label="Navigation Banner"
+        <MarketingStat
+          label="Marketing Stat"
           value={selected.product.rating}
           size="sm"
         />

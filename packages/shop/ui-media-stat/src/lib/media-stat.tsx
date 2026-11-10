@@ -1,6 +1,5 @@
-import { storageSlug } from '@org/shop-util-storage-slug';
-import { collectionCode } from '@org/shop-util-collection-code';
-import { FormsCard } from '@org/shop-ui-forms-card';
+import { storageNumber } from '@org/shop-util-storage-number';
+import { formatNumber } from '@org/shop-util-format-number';
 import type { MediaStatProps } from './media-stat.types';
 import { resolveMediaStatStyle } from './media-stat-variants';
 
@@ -13,9 +12,9 @@ export function MediaStat({
   onSelect,
   children,
 }: MediaStatProps) {
-  const formatted = value === undefined ? '' : storageSlug(value);
+  const formatted = value === undefined ? '' : storageNumber(value);
   const style = resolveMediaStatStyle(tone, size);
-  const ariaLabel = collectionCode(label);
+  const ariaLabel = formatNumber(label);
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,7 +37,6 @@ export function MediaStat({
       <span className="ui-label">{label}</span>
       {formatted ? <span className="ui-value">{formatted}</span> : null}
       {children ? <div className="ui-content">{children}</div> : null}
-      <FormsCard label="Forms Card" value={value} tone={tone} size="sm" />
     </div>
   );
 }

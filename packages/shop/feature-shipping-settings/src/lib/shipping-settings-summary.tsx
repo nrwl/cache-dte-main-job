@@ -1,4 +1,4 @@
-import { LayoutCardGroup } from '@org/shop-ui-layout-card';
+import { CommerceBannerGroup } from '@org/shop-ui-commerce-banner';
 import { buildShippingSettingsItems } from './shipping-settings.model';
 import { SHIPPING_SETTINGS_FEATURE } from './shipping-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function ShippingSettingsSummary({
       <h3 className="feature-summary-title">
         {SHIPPING_SETTINGS_FEATURE.title}
       </h3>
-      <LayoutCardGroup
+      <CommerceBannerGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

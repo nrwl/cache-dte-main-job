@@ -1,4 +1,4 @@
-import { MarketingBanner } from '@org/shop-ui-marketing-banner';
+import { DataBadge } from '@org/shop-ui-data-badge';
 import { SEARCH_LIST_FEATURE } from './search-list.routes';
 
 export interface SearchListHeaderProps {
@@ -26,8 +26,8 @@ export function SearchListHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <MarketingBanner label="Items" value={count} tone="info" />
-        <MarketingBanner label="Total" value={total} tone="success" />
+        <DataBadge label="Items" value={count} tone="info" />
+        <DataBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

@@ -1,6 +1,4 @@
-import { DataStatGroup } from '@org/shop-ui-data-stat';
-import { CommerceBanner } from '@org/shop-ui-commerce-banner';
-import { InputsList } from '@org/shop-ui-inputs-list';
+import { CommerceStatGroup } from '@org/shop-ui-commerce-stat';
 import type { WishlistDetailsItem } from './wishlist-details.model';
 import { WISHLIST_DETAILS_FEATURE } from './wishlist-details.routes';
 import { describeWishlistDetailsItem } from './wishlist-details.utils';
@@ -41,7 +39,7 @@ export function WishlistDetailsPanel({
       <p className="feature-panel-description">
         {describeWishlistDetailsItem(selected)}
       </p>
-      <DataStatGroup
+      <CommerceStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function WishlistDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <CommerceBanner
-          label="Commerce Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <InputsList
-          label="Inputs List"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

@@ -1,5 +1,5 @@
-import { asyncNumber } from '@org/shop-util-async-number';
-import { i18nCode } from '@org/shop-util-i18n-code';
+import { storageCurrency } from '@org/shop-util-storage-currency';
+import { collectionPhone } from '@org/shop-util-collection-phone';
 import {
   emptyPaymentsDetailsTotals,
   type PaymentsDetailsItem,
@@ -72,13 +72,13 @@ export function sortPaymentsDetails(
 }
 
 export function describePaymentsDetailsItem(item: PaymentsDetailsItem): string {
-  const amount = asyncNumber(item.amount);
-  const name = i18nCode(item.name);
+  const amount = storageCurrency(item.amount);
+  const name = collectionPhone(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatPaymentsDetailsAmount(amount: number): string {
-  return asyncNumber(amount);
+  return storageCurrency(amount);
 }
 
 export function paymentsDetailsStatusTone(

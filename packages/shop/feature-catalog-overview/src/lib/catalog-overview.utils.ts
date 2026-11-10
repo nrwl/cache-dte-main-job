@@ -1,6 +1,5 @@
-import { mathCode } from '@org/shop-util-math-code';
-import { asyncPercent } from '@org/shop-util-async-percent';
-import { validatePercent } from '@org/shop-util-validate-percent';
+import { validateCurrency } from '@org/shop-util-validate-currency';
+import { storageCurrency } from '@org/shop-util-storage-currency';
 import {
   emptyCatalogOverviewTotals,
   type CatalogOverviewItem,
@@ -73,13 +72,13 @@ export function sortCatalogOverview(
 }
 
 export function describeCatalogOverviewItem(item: CatalogOverviewItem): string {
-  const amount = mathCode(item.amount);
-  const name = validatePercent(asyncPercent(item.name));
+  const amount = validateCurrency(item.amount);
+  const name = storageCurrency(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatCatalogOverviewAmount(amount: number): string {
-  return mathCode(amount);
+  return validateCurrency(amount);
 }
 
 export function catalogOverviewStatusTone(

@@ -1,4 +1,4 @@
-import { NavigationHeaderGroup } from '@org/shop-ui-navigation-header';
+import { MediaToolbarGroup } from '@org/shop-ui-media-toolbar';
 import type { ReturnsListItem } from './returns-list.model';
 import { RETURNS_LIST_FEATURE } from './returns-list.routes';
 import { describeReturnsListItem } from './returns-list.utils';
@@ -36,7 +36,7 @@ export function ReturnsListPanel({ selected, onClear }: ReturnsListPanelProps) {
       <p className="feature-panel-description">
         {describeReturnsListItem(selected)}
       </p>
-      <NavigationHeaderGroup
+      <MediaToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

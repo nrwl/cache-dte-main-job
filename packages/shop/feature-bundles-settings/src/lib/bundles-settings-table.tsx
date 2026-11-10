@@ -1,4 +1,4 @@
-import { MediaChip } from '@org/shop-ui-media-chip';
+import { NavigationPanel } from '@org/shop-ui-navigation-panel';
 import type { BundlesSettingsItem } from './bundles-settings.model';
 import { BUNDLES_SETTINGS_FEATURE } from './bundles-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function BundlesSettingsTable({
             <td>{formatBundlesSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaChip
+              <NavigationPanel
                 label={item.status}
                 tone={bundlesSettingsStatusTone(item.status)}
                 size="sm"

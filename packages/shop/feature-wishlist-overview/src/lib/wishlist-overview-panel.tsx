@@ -1,5 +1,4 @@
-import { ChartsToolbarGroup } from '@org/shop-ui-charts-toolbar';
-import { LayoutList } from '@org/shop-ui-layout-list';
+import { OverlayBannerGroup } from '@org/shop-ui-overlay-banner';
 import type { WishlistOverviewItem } from './wishlist-overview.model';
 import { WISHLIST_OVERVIEW_FEATURE } from './wishlist-overview.routes';
 import { describeWishlistOverviewItem } from './wishlist-overview.utils';
@@ -40,7 +39,7 @@ export function WishlistOverviewPanel({
       <p className="feature-panel-description">
         {describeWishlistOverviewItem(selected)}
       </p>
-      <ChartsToolbarGroup
+      <OverlayBannerGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function WishlistOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <LayoutList
-          label="Layout List"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

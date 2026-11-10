@@ -1,4 +1,4 @@
-import { i18nDate } from '@org/shop-util-i18n-date';
+import { i18nText } from '@org/shop-util-i18n-text';
 import {
   emptyRecommendationsDetailsTotals,
   type RecommendationsDetailsItem,
@@ -76,13 +76,13 @@ export function sortRecommendationsDetails(
 export function describeRecommendationsDetailsItem(
   item: RecommendationsDetailsItem,
 ): string {
-  const amount = i18nDate(item.amount);
-  const name = i18nDate(item.name);
+  const amount = i18nText(item.amount);
+  const name = i18nText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatRecommendationsDetailsAmount(amount: number): string {
-  return i18nDate(amount);
+  return i18nText(amount);
 }
 
 export function recommendationsDetailsStatusTone(

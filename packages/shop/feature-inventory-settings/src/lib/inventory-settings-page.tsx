@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { CartDetailsSummary } from '@org/shop-feature-cart-details';
 import { InventorySettingsFilters } from './inventory-settings-filters';
 import { InventorySettingsHeader } from './inventory-settings-header';
 import { InventorySettingsPanel } from './inventory-settings-panel';
@@ -53,6 +54,7 @@ export function InventorySettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <CartDetailsSummary compact />
         </div>
       </div>
     </section>

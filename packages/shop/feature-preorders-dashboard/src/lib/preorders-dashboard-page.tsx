@@ -1,4 +1,5 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
+import { OrdersOverviewSummary } from '@org/shop-feature-orders-overview';
 import { PreordersDashboardFilters } from './preorders-dashboard-filters';
 import { PreordersDashboardHeader } from './preorders-dashboard-header';
 import { PreordersDashboardPanel } from './preorders-dashboard-panel';
@@ -53,6 +54,7 @@ export function PreordersDashboardPage() {
             selected={selected}
             onClear={() => select(null)}
           />
+          <OrdersOverviewSummary compact />
         </div>
       </div>
     </section>

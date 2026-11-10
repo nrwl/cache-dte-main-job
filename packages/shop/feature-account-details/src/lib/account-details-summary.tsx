@@ -1,4 +1,4 @@
-import { CoreHeaderGroup } from '@org/shop-ui-core-header';
+import { MediaPanelGroup } from '@org/shop-ui-media-panel';
 import { buildAccountDetailsItems } from './account-details.model';
 import { ACCOUNT_DETAILS_FEATURE } from './account-details.routes';
 import {
@@ -29,7 +29,7 @@ export function AccountDetailsSummary({
       data-testid={`${ACCOUNT_DETAILS_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{ACCOUNT_DETAILS_FEATURE.title}</h3>
-      <CoreHeaderGroup
+      <MediaPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

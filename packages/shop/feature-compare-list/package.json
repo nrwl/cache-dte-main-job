@@ -21,10 +21,10 @@
   "devDependencies": {
     "@org/models": "*",
     "@org/shop-shared-ui": "*",
-    "@org/shop-ui-commerce-panel": "*",
-    "@org/shop-ui-charts-toolbar": "*",
-    "@org/shop-ui-typography-banner": "*",
-    "@org/shop-util-collection-code": "*",
-    "@org/shop-util-validate-name": "*"
+    "@org/shop-ui-forms-toolbar": "*",
+    "@org/shop-ui-commerce-toolbar": "*",
+    "@org/shop-ui-forms-banner": "*",
+    "@org/shop-util-validate-phone": "*",
+    "@org/shop-util-format-text": "*"
   }
 }

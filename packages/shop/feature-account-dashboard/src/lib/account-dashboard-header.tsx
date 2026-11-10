@@ -1,4 +1,4 @@
-import { FeedbackStat } from '@org/shop-ui-feedback-stat';
+import { DataBadge } from '@org/shop-ui-data-badge';
 import { ACCOUNT_DASHBOARD_FEATURE } from './account-dashboard.routes';
 
 export interface AccountDashboardHeaderProps {
@@ -26,8 +26,8 @@ export function AccountDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackStat label="Items" value={count} tone="info" />
-        <FeedbackStat label="Total" value={total} tone="success" />
+        <DataBadge label="Items" value={count} tone="info" />
+        <DataBadge label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

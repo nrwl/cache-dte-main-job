@@ -21,7 +21,7 @@ export interface PromotionsListTotals {
   archived: number;
 }
 
-export const PROMOTIONS_LIST_ITEM_COUNT = 8;
+export const PROMOTIONS_LIST_ITEM_COUNT = 11;
 
 export const PROMOTIONS_LIST_STATUSES: ReadonlyArray<PromotionsListStatus> = [
   'active',

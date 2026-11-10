@@ -1,4 +1,6 @@
-import { validatePercent } from '@org/shop-util-validate-percent';
+import { formatCurrency } from '@org/shop-util-format-currency';
+import { validatePhone } from '@org/shop-util-validate-phone';
+import { collectionName } from '@org/shop-util-collection-name';
 import {
   emptyInventoryListTotals,
   type InventoryListItem,
@@ -70,13 +72,13 @@ export function sortInventoryList(
 }
 
 export function describeInventoryListItem(item: InventoryListItem): string {
-  const amount = validatePercent(item.amount);
-  const name = validatePercent(item.name);
+  const amount = formatCurrency(item.amount);
+  const name = collectionName(validatePhone(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatInventoryListAmount(amount: number): string {
-  return validatePercent(amount);
+  return formatCurrency(amount);
 }
 
 export function inventoryListStatusTone(

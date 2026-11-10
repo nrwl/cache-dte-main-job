@@ -19,7 +19,7 @@ export const WISHLIST_DASHBOARD_FEATURE: FeatureMeta = {
   testId: WISHLIST_DASHBOARD_TEST_ID,
   domain: 'wishlist',
   kind: 'dashboard',
-  itemCount: 6,
+  itemCount: 10,
 };
 
 export function wishlistDashboardItemPath(itemId: string): string {

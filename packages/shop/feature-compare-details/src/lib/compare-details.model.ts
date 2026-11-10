@@ -21,7 +21,7 @@ export interface CompareDetailsTotals {
   archived: number;
 }
 
-export const COMPARE_DETAILS_ITEM_COUNT = 8;
+export const COMPARE_DETAILS_ITEM_COUNT = 6;
 
 export const COMPARE_DETAILS_STATUSES: ReadonlyArray<CompareDetailsStatus> = [
   'active',

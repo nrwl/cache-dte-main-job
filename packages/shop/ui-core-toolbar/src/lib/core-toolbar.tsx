@@ -1,6 +1,4 @@
-import { formatCurrency } from '@org/shop-util-format-currency';
-import { collectionText } from '@org/shop-util-collection-text';
-import { validateDate } from '@org/shop-util-validate-date';
+import { asyncCurrency } from '@org/shop-util-async-currency';
 import { CorePanel } from '@org/shop-ui-core-panel';
 import type { CoreToolbarProps } from './core-toolbar.types';
 import { resolveCoreToolbarStyle } from './core-toolbar-variants';
@@ -14,9 +12,9 @@ export function CoreToolbar({
   onSelect,
   children,
 }: CoreToolbarProps) {
-  const formatted = value === undefined ? '' : formatCurrency(value);
+  const formatted = value === undefined ? '' : asyncCurrency(value);
   const style = resolveCoreToolbarStyle(tone, size);
-  const ariaLabel = validateDate(collectionText(label));
+  const ariaLabel = label;
 
   const handleClick = () => {
     if (onSelect) {

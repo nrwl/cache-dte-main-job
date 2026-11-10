@@ -1,5 +1,4 @@
-import { FormsBadgeGroup } from '@org/shop-ui-forms-badge';
-import { MarketingPanel } from '@org/shop-ui-marketing-panel';
+import { InputsToolbarGroup } from '@org/shop-ui-inputs-toolbar';
 import type { CartSettingsItem } from './cart-settings.model';
 import { CART_SETTINGS_FEATURE } from './cart-settings.routes';
 import { describeCartSettingsItem } from './cart-settings.utils';
@@ -40,7 +39,7 @@ export function CartSettingsPanel({
       <p className="feature-panel-description">
         {describeCartSettingsItem(selected)}
       </p>
-      <FormsBadgeGroup
+      <InputsToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,13 +49,7 @@ export function CartSettingsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <MarketingPanel
-          label="Marketing Panel"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

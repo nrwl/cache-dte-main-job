@@ -21,7 +21,7 @@ export interface BundlesDashboardTotals {
   archived: number;
 }
 
-export const BUNDLES_DASHBOARD_ITEM_COUNT = 7;
+export const BUNDLES_DASHBOARD_ITEM_COUNT = 10;
 
 export const BUNDLES_DASHBOARD_STATUSES: ReadonlyArray<BundlesDashboardStatus> =
   ['active', 'pending', 'archived'];

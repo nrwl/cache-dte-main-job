@@ -1,4 +1,5 @@
-import { storageSlug } from '@org/shop-util-storage-slug';
+import { formatName } from '@org/shop-util-format-name';
+import { i18nText } from '@org/shop-util-i18n-text';
 import {
   emptyWishlistSettingsTotals,
   type WishlistSettingsItem,
@@ -73,13 +74,13 @@ export function sortWishlistSettings(
 export function describeWishlistSettingsItem(
   item: WishlistSettingsItem,
 ): string {
-  const amount = storageSlug(item.amount);
-  const name = storageSlug(item.name);
+  const amount = formatName(item.amount);
+  const name = i18nText(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatWishlistSettingsAmount(amount: number): string {
-  return storageSlug(amount);
+  return formatName(amount);
 }
 
 export function wishlistSettingsStatusTone(

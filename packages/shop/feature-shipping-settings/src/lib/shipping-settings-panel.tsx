@@ -1,6 +1,6 @@
-import { LayoutChipGroup } from '@org/shop-ui-layout-chip';
-import { CommerceBadge } from '@org/shop-ui-commerce-badge';
-import { FormsTile } from '@org/shop-ui-forms-tile';
+import { MediaPanelGroup } from '@org/shop-ui-media-panel';
+import { CoreStat } from '@org/shop-ui-core-stat';
+import { OverlayStat } from '@org/shop-ui-overlay-stat';
 import type { ShippingSettingsItem } from './shipping-settings.model';
 import { SHIPPING_SETTINGS_FEATURE } from './shipping-settings.routes';
 import { describeShippingSettingsItem } from './shipping-settings.utils';
@@ -41,7 +41,7 @@ export function ShippingSettingsPanel({
       <p className="feature-panel-description">
         {describeShippingSettingsItem(selected)}
       </p>
-      <LayoutChipGroup
+      <MediaPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +52,9 @@ export function ShippingSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <CommerceBadge
-          label="Commerce Badge"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <FormsTile
-          label="Forms Tile"
+        <CoreStat label="Core Stat" value={selected.product.rating} size="sm" />
+        <OverlayStat
+          label="Overlay Stat"
           value={selected.product.rating}
           size="sm"
         />

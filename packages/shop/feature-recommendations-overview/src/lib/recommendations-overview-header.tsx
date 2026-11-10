@@ -1,4 +1,4 @@
-import { CoreCard } from '@org/shop-ui-core-card';
+import { FeedbackPanel } from '@org/shop-ui-feedback-panel';
 import { RECOMMENDATIONS_OVERVIEW_FEATURE } from './recommendations-overview.routes';
 
 export interface RecommendationsOverviewHeaderProps {
@@ -29,8 +29,8 @@ export function RecommendationsOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <CoreCard label="Items" value={count} tone="info" />
-        <CoreCard label="Total" value={total} tone="success" />
+        <FeedbackPanel label="Items" value={count} tone="info" />
+        <FeedbackPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

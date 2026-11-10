@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-async-address": "*",
-    "@org/shop-ui-forms-card": "*"
+    "@org/shop-util-storage-text": "*",
+    "@org/shop-util-storage-name": "*"
   }
 }

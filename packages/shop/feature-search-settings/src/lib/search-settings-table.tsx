@@ -1,4 +1,4 @@
-import { FeedbackCard } from '@org/shop-ui-feedback-card';
+import { MarketingBadge } from '@org/shop-ui-marketing-badge';
 import type { SearchSettingsItem } from './search-settings.model';
 import { SEARCH_SETTINGS_FEATURE } from './search-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function SearchSettingsTable({
             <td>{formatSearchSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <FeedbackCard
+              <MarketingBadge
                 label={item.status}
                 tone={searchSettingsStatusTone(item.status)}
                 size="sm"

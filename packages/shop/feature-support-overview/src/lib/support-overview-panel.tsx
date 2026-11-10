@@ -1,6 +1,4 @@
-import { InputsTileGroup } from '@org/shop-ui-inputs-tile';
-import { OverlayToolbar } from '@org/shop-ui-overlay-toolbar';
-import { ChartsTile } from '@org/shop-ui-charts-tile';
+import { TypographyPanelGroup } from '@org/shop-ui-typography-panel';
 import type { SupportOverviewItem } from './support-overview.model';
 import { SUPPORT_OVERVIEW_FEATURE } from './support-overview.routes';
 import { describeSupportOverviewItem } from './support-overview.utils';
@@ -41,7 +39,7 @@ export function SupportOverviewPanel({
       <p className="feature-panel-description">
         {describeSupportOverviewItem(selected)}
       </p>
-      <InputsTileGroup
+      <TypographyPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,18 +49,7 @@ export function SupportOverviewPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <OverlayToolbar
-          label="Overlay Toolbar"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <ChartsTile
-          label="Charts Tile"
-          value={selected.product.rating}
-          size="sm"
-        />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

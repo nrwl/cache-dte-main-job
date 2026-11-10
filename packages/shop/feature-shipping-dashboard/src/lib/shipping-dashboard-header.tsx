@@ -1,4 +1,4 @@
-import { FeedbackBadge } from '@org/shop-ui-feedback-badge';
+import { MediaPanel } from '@org/shop-ui-media-panel';
 import { SHIPPING_DASHBOARD_FEATURE } from './shipping-dashboard.routes';
 
 export interface ShippingDashboardHeaderProps {
@@ -27,8 +27,8 @@ export function ShippingDashboardHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <FeedbackBadge label="Items" value={count} tone="info" />
-        <FeedbackBadge label="Total" value={total} tone="success" />
+        <MediaPanel label="Items" value={count} tone="info" />
+        <MediaPanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

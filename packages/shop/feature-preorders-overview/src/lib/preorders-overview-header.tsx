@@ -1,4 +1,4 @@
-import { DataTile } from '@org/shop-ui-data-tile';
+import { CorePanel } from '@org/shop-ui-core-panel';
 import { PREORDERS_OVERVIEW_FEATURE } from './preorders-overview.routes';
 
 export interface PreordersOverviewHeaderProps {
@@ -27,8 +27,8 @@ export function PreordersOverviewHeader({
         </p>
       </div>
       <div className="feature-header-actions">
-        <DataTile label="Items" value={count} tone="info" />
-        <DataTile label="Total" value={total} tone="success" />
+        <CorePanel label="Items" value={count} tone="info" />
+        <CorePanel label="Total" value={total} tone="success" />
         <button
           type="button"
           className="feature-button"

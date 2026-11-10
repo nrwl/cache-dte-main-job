@@ -1,4 +1,4 @@
-import { CommerceChip } from '@org/shop-ui-commerce-chip';
+import { MediaBanner } from '@org/shop-ui-media-banner';
 import type { PreordersSettingsItem } from './preorders-settings.model';
 import { PREORDERS_SETTINGS_FEATURE } from './preorders-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function PreordersSettingsTable({
             <td>{formatPreordersSettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <CommerceChip
+              <MediaBanner
                 label={item.status}
                 tone={preordersSettingsStatusTone(item.status)}
                 size="sm"

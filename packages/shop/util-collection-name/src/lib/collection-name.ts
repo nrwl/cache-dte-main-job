@@ -1,8 +1,11 @@
 import type { Product } from '@org/models';
+import { formatText } from '@org/shop-util-format-text';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   clampLength,
   hashString,
   normalizeInput,
+  padCode,
 } from './collection-name-helpers';
 
 export interface CollectionNameOptions {
@@ -30,7 +33,7 @@ export const COLLECTION_NAME_DEFAULTS: Required<CollectionNameOptions> = {
 export const COLLECTION_NAME_KIND = 'collection-name' as const;
 
 /**
- * Formats a raw value using the "upper" strategy.
+ * Formats a raw value using the "padded" strategy.
  */
 export function collectionName(
   value: string | number,
@@ -44,8 +47,11 @@ export function collectionName(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = normalized;
-  const transformed = staged.toUpperCase();
+  const staged = [formatText, collectionText].reduce<string>(
+    (acc, fn) => fn(acc),
+    normalized,
+  );
+  const transformed = padCode(staged, 4);
   return clampLength(transformed, opts.maxLength);
 }
 

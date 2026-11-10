@@ -1,4 +1,4 @@
-import { InputsBanner } from '@org/shop-ui-inputs-banner';
+import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
 import type { NotificationsOverviewItem } from './notifications-overview.model';
 import { NOTIFICATIONS_OVERVIEW_FEATURE } from './notifications-overview.routes';
 import {
@@ -58,7 +58,7 @@ export function NotificationsOverviewTable({
             <td>{formatNotificationsOverviewAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <InputsBanner
+              <LayoutToolbar
                 label={item.status}
                 tone={notificationsOverviewStatusTone(item.status)}
                 size="sm"

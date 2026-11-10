@@ -1,4 +1,4 @@
-import { NavigationCard } from '@org/shop-ui-navigation-card';
+import { ChartsStat } from '@org/shop-ui-charts-stat';
 import type { CheckoutDetailsItem } from './checkout-details.model';
 import { CHECKOUT_DETAILS_FEATURE } from './checkout-details.routes';
 import {
@@ -58,7 +58,7 @@ export function CheckoutDetailsTable({
             <td>{formatCheckoutDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <NavigationCard
+              <ChartsStat
                 label={item.status}
                 tone={checkoutDetailsStatusTone(item.status)}
                 size="sm"

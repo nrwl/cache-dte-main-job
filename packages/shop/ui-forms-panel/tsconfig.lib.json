@@ -30,13 +30,13 @@
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [
     {
-      "path": "../ui-core-list/tsconfig.lib.json"
+      "path": "../ui-core-toolbar/tsconfig.lib.json"
     },
     {
-      "path": "../util-collection-address/tsconfig.lib.json"
+      "path": "../util-format-number/tsconfig.lib.json"
     },
     {
-      "path": "../util-math-date/tsconfig.lib.json"
+      "path": "../util-math-name/tsconfig.lib.json"
     },
     {
       "path": "../../shared/models/tsconfig.lib.json"

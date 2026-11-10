@@ -19,8 +19,7 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-collection-code": "*",
-    "@org/shop-util-math-name": "*",
-    "@org/shop-util-i18n-date": "*"
+    "@org/shop-util-storage-name": "*",
+    "@org/shop-util-i18n-text": "*"
   }
 }

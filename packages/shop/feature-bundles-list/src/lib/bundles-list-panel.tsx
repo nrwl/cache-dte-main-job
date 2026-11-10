@@ -1,4 +1,4 @@
-import { OverlayBadgeGroup } from '@org/shop-ui-overlay-badge';
+import { MarketingToolbarGroup } from '@org/shop-ui-marketing-toolbar';
 import type { BundlesListItem } from './bundles-list.model';
 import { BUNDLES_LIST_FEATURE } from './bundles-list.routes';
 import { describeBundlesListItem } from './bundles-list.utils';
@@ -36,7 +36,7 @@ export function BundlesListPanel({ selected, onClear }: BundlesListPanelProps) {
       <p className="feature-panel-description">
         {describeBundlesListItem(selected)}
       </p>
-      <OverlayBadgeGroup
+      <MarketingToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },

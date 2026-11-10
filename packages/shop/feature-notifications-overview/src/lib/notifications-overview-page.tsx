@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { PaymentsDetailsSummary } from '@org/shop-feature-payments-details';
 import { NotificationsOverviewFilters } from './notifications-overview-filters';
 import { NotificationsOverviewHeader } from './notifications-overview-header';
 import { NotificationsOverviewPanel } from './notifications-overview-panel';
@@ -54,7 +53,6 @@ export function NotificationsOverviewPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <PaymentsDetailsSummary compact />
         </div>
       </div>
     </section>

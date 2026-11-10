@@ -1,4 +1,4 @@
-import { OverlayBanner } from '@org/shop-ui-overlay-banner';
+import { MediaToolbar } from '@org/shop-ui-media-toolbar';
 import type { RecommendationsDetailsItem } from './recommendations-details.model';
 import { RECOMMENDATIONS_DETAILS_FEATURE } from './recommendations-details.routes';
 import {
@@ -58,7 +58,7 @@ export function RecommendationsDetailsTable({
             <td>{formatRecommendationsDetailsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <OverlayBanner
+              <MediaToolbar
                 label={item.status}
                 tone={recommendationsDetailsStatusTone(item.status)}
                 size="sm"

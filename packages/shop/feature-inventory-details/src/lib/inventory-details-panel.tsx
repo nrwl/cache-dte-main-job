@@ -1,5 +1,6 @@
-import { CoreListGroup } from '@org/shop-ui-core-list';
-import { FormsBanner } from '@org/shop-ui-forms-banner';
+import { MediaPanelGroup } from '@org/shop-ui-media-panel';
+import { MediaBadge } from '@org/shop-ui-media-badge';
+import { LayoutBanner } from '@org/shop-ui-layout-banner';
 import type { InventoryDetailsItem } from './inventory-details.model';
 import { INVENTORY_DETAILS_FEATURE } from './inventory-details.routes';
 import { describeInventoryDetailsItem } from './inventory-details.utils';
@@ -40,7 +41,7 @@ export function InventoryDetailsPanel({
       <p className="feature-panel-description">
         {describeInventoryDetailsItem(selected)}
       </p>
-      <CoreListGroup
+      <MediaPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -51,8 +52,13 @@ export function InventoryDetailsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <FormsBanner
-          label="Forms Banner"
+        <MediaBadge
+          label="Media Badge"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <LayoutBanner
+          label="Layout Banner"
           value={selected.product.rating}
           size="sm"
         />

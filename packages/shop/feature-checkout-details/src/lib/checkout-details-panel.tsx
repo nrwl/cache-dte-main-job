@@ -1,5 +1,4 @@
-import { MediaListGroup } from '@org/shop-ui-media-list';
-import { DataList } from '@org/shop-ui-data-list';
+import { CoreStatGroup } from '@org/shop-ui-core-stat';
 import type { CheckoutDetailsItem } from './checkout-details.model';
 import { CHECKOUT_DETAILS_FEATURE } from './checkout-details.routes';
 import { describeCheckoutDetailsItem } from './checkout-details.utils';
@@ -40,7 +39,7 @@ export function CheckoutDetailsPanel({
       <p className="feature-panel-description">
         {describeCheckoutDetailsItem(selected)}
       </p>
-      <MediaListGroup
+      <CoreStatGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -50,9 +49,7 @@ export function CheckoutDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra">
-        <DataList label="Data List" value={selected.product.rating} size="sm" />
-      </div>
+      <div className="feature-panel-extra"></div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

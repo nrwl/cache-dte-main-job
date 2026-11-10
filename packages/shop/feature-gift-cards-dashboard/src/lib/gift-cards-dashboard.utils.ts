@@ -1,5 +1,6 @@
-import { mathDate } from '@org/shop-util-math-date';
-import { collectionAddress } from '@org/shop-util-collection-address';
+import { mathName } from '@org/shop-util-math-name';
+import { asyncNumber } from '@org/shop-util-async-number';
+import { collectionText } from '@org/shop-util-collection-text';
 import {
   emptyGiftCardsDashboardTotals,
   type GiftCardsDashboardItem,
@@ -74,13 +75,13 @@ export function sortGiftCardsDashboard(
 export function describeGiftCardsDashboardItem(
   item: GiftCardsDashboardItem,
 ): string {
-  const amount = mathDate(item.amount);
-  const name = collectionAddress(item.name);
+  const amount = mathName(item.amount);
+  const name = collectionText(asyncNumber(item.name));
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatGiftCardsDashboardAmount(amount: number): string {
-  return mathDate(amount);
+  return mathName(amount);
 }
 
 export function giftCardsDashboardStatusTone(

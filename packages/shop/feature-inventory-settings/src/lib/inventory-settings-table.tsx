@@ -1,4 +1,4 @@
-import { MediaStat } from '@org/shop-ui-media-stat';
+import { FormsBadge } from '@org/shop-ui-forms-badge';
 import type { InventorySettingsItem } from './inventory-settings.model';
 import { INVENTORY_SETTINGS_FEATURE } from './inventory-settings.routes';
 import {
@@ -58,7 +58,7 @@ export function InventorySettingsTable({
             <td>{formatInventorySettingsAmount(item.amount)}</td>
             <td>{item.quantity}</td>
             <td>
-              <MediaStat
+              <FormsBadge
                 label={item.status}
                 tone={inventorySettingsStatusTone(item.status)}
                 size="sm"

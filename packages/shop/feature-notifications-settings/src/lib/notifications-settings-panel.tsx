@@ -1,6 +1,5 @@
-import { DataHeaderGroup } from '@org/shop-ui-data-header';
-import { ChartsBanner } from '@org/shop-ui-charts-banner';
-import { LayoutToolbar } from '@org/shop-ui-layout-toolbar';
+import { DataToolbarGroup } from '@org/shop-ui-data-toolbar';
+import { InputsBanner } from '@org/shop-ui-inputs-banner';
 import type { NotificationsSettingsItem } from './notifications-settings.model';
 import { NOTIFICATIONS_SETTINGS_FEATURE } from './notifications-settings.routes';
 import { describeNotificationsSettingsItem } from './notifications-settings.utils';
@@ -41,7 +40,7 @@ export function NotificationsSettingsPanel({
       <p className="feature-panel-description">
         {describeNotificationsSettingsItem(selected)}
       </p>
-      <DataHeaderGroup
+      <DataToolbarGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -52,13 +51,8 @@ export function NotificationsSettingsPanel({
         ]}
       />
       <div className="feature-panel-extra">
-        <ChartsBanner
-          label="Charts Banner"
-          value={selected.product.rating}
-          size="sm"
-        />
-        <LayoutToolbar
-          label="Layout Toolbar"
+        <InputsBanner
+          label="Inputs Banner"
           value={selected.product.rating}
           size="sm"
         />

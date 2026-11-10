@@ -19,7 +19,7 @@ export const BUNDLES_DASHBOARD_FEATURE: FeatureMeta = {
   testId: BUNDLES_DASHBOARD_TEST_ID,
   domain: 'bundles',
   kind: 'dashboard',
-  itemCount: 7,
+  itemCount: 10,
 };
 
 export function bundlesDashboardItemPath(itemId: string): string {

@@ -1,4 +1,6 @@
-import { CommerceStatGroup } from '@org/shop-ui-commerce-stat';
+import { LayoutPanelGroup } from '@org/shop-ui-layout-panel';
+import { FeedbackToolbar } from '@org/shop-ui-feedback-toolbar';
+import { InputsPanel } from '@org/shop-ui-inputs-panel';
 import type { CatalogDetailsItem } from './catalog-details.model';
 import { CATALOG_DETAILS_FEATURE } from './catalog-details.routes';
 import { describeCatalogDetailsItem } from './catalog-details.utils';
@@ -39,7 +41,7 @@ export function CatalogDetailsPanel({
       <p className="feature-panel-description">
         {describeCatalogDetailsItem(selected)}
       </p>
-      <CommerceStatGroup
+      <LayoutPanelGroup
         title="Details"
         items={[
           { id: 'amount', label: 'Amount', value: selected.amount },
@@ -49,7 +51,18 @@ export function CatalogDetailsPanel({
           { id: 'rating', label: 'Rating', value: selected.product.rating },
         ]}
       />
-      <div className="feature-panel-extra"></div>
+      <div className="feature-panel-extra">
+        <FeedbackToolbar
+          label="Feedback Toolbar"
+          value={selected.product.rating}
+          size="sm"
+        />
+        <InputsPanel
+          label="Inputs Panel"
+          value={selected.product.rating}
+          size="sm"
+        />
+      </div>
       <ul className="feature-tags">
         {selected.tags.map((tag) => (
           <li key={tag} className="feature-tag">

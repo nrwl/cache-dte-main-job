@@ -18,8 +18,6 @@
     ]
   },
   "devDependencies": {
-    "@org/models": "*",
-    "@org/shop-util-format-code": "*",
-    "@org/shop-util-validate-address": "*"
+    "@org/models": "*"
   }
 }

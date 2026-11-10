@@ -19,7 +19,7 @@ export const CHECKOUT_OVERVIEW_FEATURE: FeatureMeta = {
   testId: CHECKOUT_OVERVIEW_TEST_ID,
   domain: 'checkout',
   kind: 'overview',
-  itemCount: 6,
+  itemCount: 10,
 };
 
 export function checkoutOverviewItemPath(itemId: string): string {

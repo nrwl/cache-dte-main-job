@@ -19,7 +19,8 @@
   },
   "devDependencies": {
     "@org/models": "*",
-    "@org/shop-util-format-currency": "*",
-    "@org/shop-util-validate-text": "*"
+    "@org/shop-util-collection-number": "*",
+    "@org/shop-util-math-text": "*",
+    "@org/shop-ui-core-panel": "*"
   }
 }

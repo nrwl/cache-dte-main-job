@@ -1,4 +1,4 @@
-import { TypographyChipGroup } from '@org/shop-ui-typography-chip';
+import { DataToolbarGroup } from '@org/shop-ui-data-toolbar';
 import { buildGiftCardsOverviewItems } from './gift-cards-overview.model';
 import { GIFT_CARDS_OVERVIEW_FEATURE } from './gift-cards-overview.routes';
 import {
@@ -31,7 +31,7 @@ export function GiftCardsOverviewSummary({
       <h3 className="feature-summary-title">
         {GIFT_CARDS_OVERVIEW_FEATURE.title}
       </h3>
-      <TypographyChipGroup
+      <DataToolbarGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

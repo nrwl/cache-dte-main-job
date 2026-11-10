@@ -1,5 +1,4 @@
 import { ErrorMessage, LoadingSpinner } from '@org/shop-shared-ui';
-import { CheckoutInsightsSummary } from '@org/shop-feature-checkout-insights';
 import { OrdersSettingsFilters } from './orders-settings-filters';
 import { OrdersSettingsHeader } from './orders-settings-header';
 import { OrdersSettingsPanel } from './orders-settings-panel';
@@ -54,7 +53,6 @@ export function OrdersSettingsPage() {
             selected={selected}
             onClear={() => select(null)}
           />
-          <CheckoutInsightsSummary compact />
         </div>
       </div>
     </section>

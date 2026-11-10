@@ -1,4 +1,4 @@
-import { LayoutBadgeGroup } from '@org/shop-ui-layout-badge';
+import { FeedbackStatGroup } from '@org/shop-ui-feedback-stat';
 import { buildCheckoutListItems } from './checkout-list.model';
 import { CHECKOUT_LIST_FEATURE } from './checkout-list.routes';
 import {
@@ -29,7 +29,7 @@ export function CheckoutListSummary({
       data-testid={`${CHECKOUT_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{CHECKOUT_LIST_FEATURE.title}</h3>
-      <LayoutBadgeGroup
+      <FeedbackStatGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

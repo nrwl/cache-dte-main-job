@@ -1,4 +1,5 @@
 import type { Product } from '@org/models';
+import { formatName } from '@org/shop-util-format-name';
 import { clampLength, hashString, normalizeInput } from './math-text-helpers';
 
 export interface MathTextOptions {
@@ -37,7 +38,7 @@ export function mathText(
   if (normalized.length === 0) {
     return opts.fallback;
   }
-  const staged = normalized;
+  const staged = [formatName].reduce<string>((acc, fn) => fn(acc), normalized);
   const transformed = '#' + staged;
   return clampLength(transformed, opts.maxLength);
 }

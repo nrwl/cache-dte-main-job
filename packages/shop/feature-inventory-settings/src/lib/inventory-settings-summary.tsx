@@ -1,4 +1,4 @@
-import { TypographyHeaderGroup } from '@org/shop-ui-typography-header';
+import { DataBadgeGroup } from '@org/shop-ui-data-badge';
 import { buildInventorySettingsItems } from './inventory-settings.model';
 import { INVENTORY_SETTINGS_FEATURE } from './inventory-settings.routes';
 import {
@@ -31,7 +31,7 @@ export function InventorySettingsSummary({
       <h3 className="feature-summary-title">
         {INVENTORY_SETTINGS_FEATURE.title}
       </h3>
-      <TypographyHeaderGroup
+      <DataBadgeGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

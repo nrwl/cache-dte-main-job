@@ -1,4 +1,4 @@
-import { MediaTileGroup } from '@org/shop-ui-media-tile';
+import { FormsPanelGroup } from '@org/shop-ui-forms-panel';
 import { buildReviewsListItems } from './reviews-list.model';
 import { REVIEWS_LIST_FEATURE } from './reviews-list.routes';
 import {
@@ -29,7 +29,7 @@ export function ReviewsListSummary({
       data-testid={`${REVIEWS_LIST_FEATURE.testId}-summary`}
     >
       <h3 className="feature-summary-title">{REVIEWS_LIST_FEATURE.title}</h3>
-      <MediaTileGroup
+      <FormsPanelGroup
         size="sm"
         items={[
           { id: 'items', label: 'Items', value: items.length },

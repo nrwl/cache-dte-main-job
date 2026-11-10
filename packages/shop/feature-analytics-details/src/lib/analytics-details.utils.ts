@@ -1,5 +1,4 @@
-import { mathCurrency } from '@org/shop-util-math-currency';
-import { asyncText } from '@org/shop-util-async-text';
+import { asyncNumber } from '@org/shop-util-async-number';
 import {
   emptyAnalyticsDetailsTotals,
   type AnalyticsDetailsItem,
@@ -74,13 +73,13 @@ export function sortAnalyticsDetails(
 export function describeAnalyticsDetailsItem(
   item: AnalyticsDetailsItem,
 ): string {
-  const amount = mathCurrency(item.amount);
-  const name = asyncText(item.name);
+  const amount = asyncNumber(item.amount);
+  const name = asyncNumber(item.name);
   return `${name} · ${amount} · ${item.quantity} pcs · ${item.status}`;
 }
 
 export function formatAnalyticsDetailsAmount(amount: number): string {
-  return mathCurrency(amount);
+  return asyncNumber(amount);
 }
 
 export function analyticsDetailsStatusTone(
