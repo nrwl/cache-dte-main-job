@@ -11,6 +11,7 @@ env:
   NX_BRANCH: ${{ github.event.pull_request.number || github.ref_name }}
   NX_CI_EXECUTION_ID: ${{ github.run_id }}-${{ github.run_attempt }}
   NX_CLOUD_DISABLE_BUFFER_TASK_COMPLETIONS: 'true'
+  NX_CLOUD_LOG_VM_CAPACITY: 'true'
 permissions:
   actions: read
   contents: read
