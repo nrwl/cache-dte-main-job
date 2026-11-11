@@ -30,7 +30,6 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - run: npx nx-cloud upload-worker-metrics
       - name: Start main-job worker
         id: start_workers
         run: npx nx-cloud start-workers
@@ -51,3 +50,6 @@ jobs:
       - name: Stop main-job worker
         if: ${{ always() && steps.start_workers.outcome == 'success' }}
         run: npx nx-cloud stop-all-workers
+      - name: Upload worker metrics
+        if: always()
+        run: npx nx-cloud upload-worker-metrics
