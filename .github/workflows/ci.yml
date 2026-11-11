@@ -10,7 +10,8 @@ env:
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
   NX_BRANCH: ${{ github.event.pull_request.number || github.ref_name }}
   NX_CI_EXECUTION_ID: ${{ github.run_id }}-${{ github.run_attempt }}
-  NX_CLOUD_DISTRIBUTED_EXECUTION: 'false'
+  NX_CLOUD_DISABLE_BUFFER_TASK_COMPLETIONS: 'true'
+  NX_CLOUD_LOG_VM_CAPACITY: 'true'
 permissions:
   actions: read
   contents: read
@@ -30,22 +31,32 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npx playwright install --with-deps chromium
+      - name: Start main-job worker
+        id: start_workers
+        run: npx nx-cloud start-workers
       - name: Run all checks concurrently
         run: |
-          # Build once before starting the browser suite and the other checks.
-          npx nx run @org/shop:build --no-agents
-
           pids=()
           npx nx-cloud record -- nx format:check & pids+=($!)
           npx nx-cloud record -- nx sync:check & pids+=($!)
           npx nx validate --no-agents & pids+=($!)
-          # Start the serial browser suite immediately, alongside three local
-          # check processes, so it does not wait behind the other tasks.
-          npx nx run @org/shop-e2e:e2e --no-agents & pids+=($!)
-          npx nx run-many -t build typecheck lint test --parallel=3 --no-agents & pids+=($!)
+          # Submit the same tasks to the worker running in this main job.
+          npx nx run-many -t build typecheck lint test e2e-ci & pids+=($!)
 
           status=0
           for pid in "${pids[@]}"; do
             wait "$pid" || status=1
           done
           exit $status
+      - name: Stop main-job worker
+        if: ${{ always() && steps.start_workers.outcome == 'success' }}
+        run: npx nx-cloud stop-all-workers
+      - name: Show main-job worker log
+        if: always()
+        run: |
+          if [ -d "$HOME/.nx" ]; then
+            find "$HOME/.nx" -type f -path '*/main-job-workers/*/worker.log' -print -exec cat {} \;
+          fi
+      - name: Upload worker metrics
+        if: always()
+        run: npx nx-cloud upload-worker-metrics
