@@ -51,6 +51,12 @@ jobs:
       - name: Stop main-job worker
         if: ${{ always() && steps.start_workers.outcome == 'success' }}
         run: npx nx-cloud stop-all-workers
+      - name: Show main-job worker log
+        if: always()
+        run: |
+          if [ -d "$HOME/.nx" ]; then
+            find "$HOME/.nx" -type f -path '*/main-job-workers/*/worker.log' -print -exec cat {} \;
+          fi
       - name: Upload worker metrics
         if: always()
         run: npx nx-cloud upload-worker-metrics
